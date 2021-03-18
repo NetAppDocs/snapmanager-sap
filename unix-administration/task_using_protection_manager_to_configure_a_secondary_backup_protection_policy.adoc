@@ -1,0 +1,55 @@
+---
+permalink: unix-administration/task_using_protection_manager_to_configure_a_secondary_backup_protection_policy.html
+sidebar: sidebar
+keywords: 
+summary: 'After configuring the backup schedule, the storage administrator configures a protected backup storage policy in which that schedule is to be included.'
+---
+= Using Protection Manager to configure a secondary backup protection policy
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After configuring the backup schedule, the storage administrator configures a protected backup storage policy in which that schedule is to be included.
+
+Before configuring the protection policy, the storage administrator confers with the DBA partner for the following information:
+
+* Retention duration to specify for secondary storage
+* Type of secondary storage protection required
+
+The protection policy that is created, can be listed in SnapManager for SAP by the DBA partner and assigned to a database profile for the data to be protected.
+
+. Go to Protection Manager's NetApp Management Console.
+. From the menu bar, click *Policies* > *Protection* > *Overview*.
++
+The Overview tab on the Protection Policies window is displayed.
+
+. Click *Add Policy* to start the Add Protection Policy wizard.
+. Complete the wizard with the following steps:
+ .. Specify a descriptive policy name.
++
+For this example, enter *TechCo Payroll Data: Backup* and a description, then click *Next*.
+
+ .. Select a base policy.
++
+For this example, select *Back up* and click *Next*.
+
+ .. In the Primary Data node policy property sheet, accept the default settings and click *Next*.
++
+NOTE: In this example, the local backup schedule that was configured in SnapManager is applied. Any local backup schedule that is specified using this method is ignored.
+
+ .. In the Primary Data to Backup connection property sheet, select a backup schedule.
++
+For this example, select *Payroll Saturday at 1 AM plus daily at 7 PM* as your backup schedule, then click *Next*.
++
+In this example, the schedule that you selected includes both the weekly and daily schedules that you configured earlier.
+
+ .. In the Backup policy property sheet, specify the name for the backup node and the retention times for Daily, Weekly, or Monthly backups.
++
+For this example, specify a Daily backup retention of 10 days and a Weekly backup retention of 52 weeks. After you complete each property sheet, click *Next*.
++
+After all property sheets are completed, the Add Protection Policy wizard displays a summary sheet for the protection policy that you want to create.
+. Click *Finish* to save your changes.
+
+The *TechCo Payroll Data: Backup* protection policy is listed among the other policies configured for Protection Manager.
+
+The DBA partner can now use SnapManager for SAP to list and assign this policy when creating the database profile for the data to be protected.

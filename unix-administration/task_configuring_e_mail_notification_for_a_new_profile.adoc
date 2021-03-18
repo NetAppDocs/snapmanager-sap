@@ -1,0 +1,49 @@
+---
+permalink: unix-administration/task_configuring_e_mail_notification_for_a_new_profile.html
+sidebar: sidebar
+keywords: 
+summary: 'When you are creating a new profile, you can configure to receive an email notification on completion of the database operation.'
+---
+= Configuring email notification for a new profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you are creating a new profile, you can configure to receive an email notification on completion of the database operation.
+
+* You must configure the email address from which the alerts are sent.
+* You must use a comma-separated list for multiple email addresses.
++
+You must ensure that there is no space between the comma and the next email address.
+
+. Enter the following command: `smsap profile create -profileprofile [-profile-passwordprofile_password] -repository-dbnamerepo_service_name-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] -osaccountosaccount-osgrouposgroup [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][-protect [-protection-policypolicy_name ]][-notification [-success-emailemail_address1,email_address2-subjectsubject_pattern] [-failure-emailemail_address1,email_address2-subjectsubject_pattern]]`
++
+Other options for this command are as follows:
++
+[-force]
++
+[quiet | -verbose]
++
+NOTE: SnapManager supports up to 1000 characters for email addresses.
++
+When you create a backup of data files and archive log files together using the profile (for creating separate archive log backups), and the data file backup creation fails, the email notification is sent with the data backup as the operation name instead of data backup and archive logs backup. When the data file and archive log file backup operation is successful, you see the output as follows:
++
+----
+
+Profile Name    : PROF_31
+Operation Name 	: Data Backup and Archive Logs Backup
+Database SID   	: TENDB1
+Database Host 	 : repo1.rtp.org.com
+Start Date 	    : Fri Sep 23 13:37:21 EDT 2011
+End Date 	      : Fri Sep 23 13:45:24 EDT 2011
+Status 	        : SUCCESS
+Error messages 	:
+----
+
+The following example displays the email notification configured while creating a new profile:
+
+----
+
+smsap profile create -profile sales1 -profile-password sales1 -repository -dbname repo2 -host 10.72.197.133 -port 1521 -login -username oba5 -database -dbname DB1 -host 10.72.197.142 -sid DB1 -osaccount oracle
+-osgroup dba -notification -success -email admin1@org.com -subject {profile}_{operation-name}_{db-sid}_{db-host}_{start-date}_{end-date}_{status}
+----

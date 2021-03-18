@@ -1,0 +1,25 @@
+---
+permalink: windows/concept_create_backups_using_snapshot_copies.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager enables you to create backups on the primary \(local\) storage and also on the secondary \(remote\) storage using postprocessing scripts.'
+---
+= Create backups using Snapshot copies
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to create backups on the primary (local) storage and also on the secondary (remote) storage using postprocessing scripts.
+
+Backups created as Snapshot copies are virtual copies of the database and are stored in the same physical medium as the database. Therefore, the backup operation takes less time and requires significantly less space than full, disk-to-disk backups. SnapManager enables you to back up the following:
+
+* All the data files, archive log files, and control files
+* Selected data files or tablespaces, all the archive log files, and control files
+
+SnapManager 3.2 or later enables you to optionally back up the following:
+
+* All the data files and the control files
+* Selected data files or tablespaces along with the control files
+* Archive log files
+
+NOTE: The data files, archive log files, and control files can be located on different storage systems, storage system volumes, or logical unit numbers (LUNs). You can also use SnapManager to back up a database when there are multiple databases on the same volume or LUN.

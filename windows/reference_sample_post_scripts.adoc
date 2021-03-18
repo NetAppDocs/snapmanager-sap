@@ -1,0 +1,397 @@
+---
+permalink: windows/reference_sample_post_scripts.html
+sidebar: sidebar
+keywords: 
+summary: 'You can refer the sample scripts and create customized scripts based on your environment to perform mirroring and vaulting. The sample scripts are available at default_install_directory\\plugins\\backup\\create\\post.'
+---
+= Sample post-scripts
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can refer the sample scripts and create customized scripts based on your environment to perform mirroring and vaulting. The sample scripts are available at default_install_directory\plugins\backup\create\post.
+
+== Mirror_the_backup.cmd
+
+If you are using Data ONTAP operating in 7-Mode, you can use this sample script to mirror the backup. It includes three operations (check, describe, and execute) and executes them at the end of the script. The script also includes error message handling with codes of 0 to 4 and > 4:
+
+----
+@echo off
+REM $Id: //depot/prod/capstan/main/src/plugins/windows/examples/backup/create/post/Mirror_the_backup.cmd#1 $
+REM
+REM Copyright \(c\) 2011 NetApp, Inc.
+REM All rights reserved.
+REM
+REM
+REM This is a sample post-task script to mirror the volumes to the secondary storage after successful backup operation.
+REM|----------------------------------------------------------------------------------------------------------------|
+REM| Pre-requisite/Assumption:                                                                                       |
+REM|   SnapMirror relationship for the requested secondary storage volumes must be configured in Secondary storage. |
+REM|----------------------------------------------------------------------------------------------------------------|
+REM
+REM
+REM This script can be used from the SnapManager graphical user interface (GUI) and command line interface (CLI).
+REM
+REM To execute the post-task script for the backup operation from SnapManager GUI, follow these steps:
+REM  1. From the Backup wizard > Task Specification page > Post-Tasks tab > select the post-task scripts from the Available Scripts section.
+REM
+REM
+REM To execute the post-task script for the backup operation from SnapManager CLI, follow these steps:
+REM  1. create a task specification XML file.
+REM  2. Add the post-script name in the <post-tasks> tag of the XML file.
+REM
+REM Example:
+REM              <post-tasks>
+REM                 <task>
+REM                    <name>Mirror the backup</name>
+REM                      <description>Mirror the backup</description>
+REM                </task>
+REM              <post-tasks>
+REM
+REM
+REM
+REM IMPORTANT NOTE: This script is provided for reference only. It has been tested with SnapDrive 6.3.0 for Windows but may not work in all environments.  Please review and then customize based on your secondary protection requirements.
+REM
+set /a EXIT=0
+set name="Mirror the backup"
+set description="Mirror the backup"
+set parameter=()
+
+
+if /i "%1" == "-check" goto :check
+if /i "%1" == "-execute" goto :execute
+if /i "%1" == "-describe" goto :describe
+
+:usage
+        echo usage: %0 ^{ -check ^| -describe ^| -execute ^}
+        set /a EXIT=99
+        goto :exit
+
+:check
+        set /a EXIT=0
+        goto :exit
+
+:describe
+        echo SM_PI_NAME:%name%
+        echo SM_PI_DESCRIPTION:%description%
+        echo SM_PRIMARY_MOUNT_POINTS : %SM_PRIMARY_MOUNT_POINTS%
+        set /a EXIT=0
+        goto :exit
+
+REM - Split the comma-separated PRIMARY_MOUNT_POINTS and Mirror the PRIMARY_MOUNT_POINTS one-by-one.
+
+:execute
+        set /a EXIT=0
+
+        echo "execution started"
+
+        REM FOR %%G IN (%SM_PRIMARY_MOUNT_POINTS%) DO echo %%G
+
+        FOR %%V IN (%SM_PRIMARY_MOUNT_POINTS%) DO sdcli snap update_mirror -d %%V
+
+        if "%ERRORLEVEL%" NEQ "0" (
+           set /a EXIT=4
+           exit /b %EXIT%
+        )
+
+        echo "execution ended"
+
+        goto :exit
+
+:exit
+        echo Command complete.
+        exit /b %EXIT%
+----
+
+== Vault_the_backup.cmd
+
+If you are using Data ONTAP operating in 7-Mode, you can use this sample script to vault the backup. It includes three operations (check, describe, and execute) and executes them at the end of the script. The script also includes error message handling with codes of 0 to 4 and > 4:
+
+----
+@echo off
+REM $Id: //depot/prod/capstan/main/src/plugins/windows/examples/backup/create/post/Vault_the_backup.cmd#1 $
+REM
+REM Copyright \(c\) 2011 NetApp, Inc.
+REM All rights reserved.
+REM
+REM
+REM This is a sample post-task script to vault the qtrees to the secondary storage after successful backup operation.
+REM|----------------------------------------------------------------------------------------------------------------|
+REM| Pre-requisite/Assumption:                                                                                       |
+REM|   SnapVault relationship for the requested secondary storage qtrees must be configured in Secondary storage. |
+REM|----------------------------------------------------------------------------------------------------------------|
+REM
+REM
+REM This script can be used from the SnapManager graphical user interface (GUI) and command line interface (CLI).
+REM
+REM To execute the post-task script for the backup operation from SnapManager GUI, follow these steps:
+REM  1. From the Backup wizard > Task Specification page > Post-Tasks tab > select the post-task scripts from the Available Scripts section.
+REM
+REM
+REM To execute the post-task script for the backup operation from SnapManager CLI, follow these steps:
+REM  1. create a task specification XML file.
+REM  2. Add the post-script name in the <post-tasks> tag of the XML file.
+REM
+REM Example:
+REM              <post-tasks>
+REM                 <task>
+REM                    <name>Vault the backup</name>
+REM                    <description>Vault the backup</description>
+REM                </task>
+REM              <post-tasks>
+REM
+REM IMPORTANT NOTE: This script is provided for reference only. It has been tested with SnapDrive 6.3.0 for Windows but may not work in all environments.  Please review and then customize based on your secondary protection requirements.
+REM
+REM
+REM
+REM
+REM
+set /a EXIT=0
+set name="Vault the backup"
+set description="Vault the backup"
+set parameter=()
+
+
+
+if /i "%1" == "-check" goto :check
+if /i "%1" == "-execute" goto :execute
+if /i "%1" == "-describe" goto :describe
+
+:usage
+        echo usage: %0 ^{ -check ^| -describe ^| -execute ^}
+        set /a EXIT=99
+        goto :exit
+
+:check
+        set /a EXIT=0
+        goto :exit
+
+:describe
+        echo SM_PI_NAME:%name%
+        echo SM_PI_DESCRIPTION:%description%
+        echo SM_PRIMARY_SNAPSHOTS_AND_MOUNT_POINTS : %SM_PRIMARY_SNAPSHOTS_AND_MOUNT_POINTS%
+        set /a EXIT=0
+        goto :exit
+
+REM Split the colon-separated SM_PRIMARY_SNAPSHOTS_AND_MOUNT_POINTS And SnapVault the mountpoints one-by-one
+
+:execute
+        set /a EXIT=0
+
+        echo "execution started"
+
+        FOR %%A IN (%SM_PRIMARY_SNAPSHOTS_AND_MOUNT_POINTS%) DO FOR /F "tokens=1,2 delims=:" %%B IN ("%%A") DO sdcli snapvault archive  -a %%B -DS %%C %%B
+
+        if "%ERRORLEVEL%" NEQ "0" (
+           set /a EXIT=4
+           exit /b %EXIT%
+        )
+        echo "execution ended"
+
+        goto :exit
+
+:exit
+        echo Command complete.
+        exit /b %EXIT%
+----
+
+== Mirror_the_backup_cDOT.cmd
+
+If you are using clustered Data ONTAP, you can use this sample script to mirror the backup. It includes three operations (check, describe, and execute) and executes them at the end of the script. The script also includes error message handling with codes of 0 to 4 and > 4:
+
+----
+@echo off
+REM $Id: //depot/prod/capstan/main/src/plugins/windows/examples/backup/create/post/Mirror_the_backup_cDOT.cmd#1 $
+REM
+REM  Copyright \(c\) 2011 NetApp, Inc.
+REM All rights reserved.
+REM
+REM
+REM This is a sample post-task script to mirror the volumes to the secondary storage after successful backup operation.
+REM|----------------------------------------------------------------------------------------------------------------|
+REM| Pre-requisite/Assumption:                                                                                       |
+REM|   SnapMirror relationship should be set for the primary volumes and secondary volumes                          |
+REM|----------------------------------------------------------------------------------------------------------------|
+REM
+REM
+REM This script can be used from the SnapManager graphical user interface (GUI) and command line interface (CLI).
+REM
+REM To execute the post-task script for the backup operation from SnapManager GUI, follow these steps:
+REM  1. From the Backup wizard > Task Specification page > Post-Tasks tab > select the post-task scripts from the Available Scripts section.
+REM
+REM
+REM To execute the post-task script for the backup operation from SnapManager CLI, follow these steps:
+REM  1. create a task specification XML file.
+REM  2. Add the post-script name in the <post-tasks> tag of the XML file.
+REM
+REM Example:
+REM             <preposttask-specification xmlns="http://www.netapp.com">
+REM               <task-specification>
+REM                 <post-tasks>
+REM                   <task>
+REM                     <name>"Mirror the backup for cDOT"</name>
+REM                   </task>
+REM                 </post-tasks>
+REM               </task-specification>
+REM             </preposttask-specification>
+REM
+REM
+REM
+REM IMPORTANT NOTE: This script is provided for reference only. It has been tested with SnapDrive 7.0 for Windows but may not work in all environments.  Please review and then customize based on your secondary protection requirements.
+REM
+set /a EXIT=0
+set name="Mirror the backup cDOT"
+set description="Mirror the backup cDOT"
+set parameter=()
+
+
+
+if /i "%1" == "-check" goto :check
+if /i "%1" == "-execute" goto :execute
+if /i "%1" == "-describe" goto :describe
+
+:usage
+        echo usage: %0 ^{ -check ^| -describe ^| -execute ^}
+        set /a EXIT=99
+        goto :exit
+
+:check
+        set /a EXIT=0
+        goto :exit
+
+:describe
+        echo SM_PI_NAME:%name%
+        echo SM_PI_DESCRIPTION:%description%
+        set /a EXIT=0
+        goto :exit
+
+REM - Split the comma-separated SM_PRIMARY_MOUNT_POINTS then Mirror the PRIMARY_MOUNT_POINTS one-by-one.
+
+:execute
+        set /a EXIT=0
+
+        echo "execution started"
+
+        REM FOR %%G IN (%SM_PRIMARY_MOUNT_POINTS%) DO powershell.exe -file "c:\snapmirror.ps1" %%G < CON
+
+        powershell.exe -file "c:\snapmirror.ps1" %SM_PRIMARY_FULL_SNAPSHOT_NAME_FOR_TAG% < CON
+
+
+        if "%ERRORLEVEL%" NEQ "0" (
+           set /a EXIT=4
+           exit /b %EXIT%
+        )
+
+        echo "execution ended"
+
+        goto :exit
+
+:exit
+        echo Command complete.
+        exit /b %EXIT%
+----
+
+== Vault_the_backup_cDOT.cmd
+
+If you are using clustered Data ONTAP, you can use this sample script to vault the backup. It includes three operations (check, describe, and execute) and executes them at the end of the script. The script also includes error message handling with codes of 0 to 4 and > 4:
+
+----
+@echo off
+REM $Id: //depot/prod/capstan/main/src/plugins/windows/examples/backup/create/post/Vault_the_backup_cDOT.cmd#1 $
+REM
+REM  Copyright \(c\) 2011 NetApp, Inc.
+REM All rights reserved.
+REM
+REM
+REM This is a sample post-task script to do vault update to the secondary storage after successful backup operation.
+REM|------------------------------------------------------------------------------------------------------------------|
+REM| Pre-requsite/Assumption:                                                                                         |
+REM|   Vaulting relationship with policy and rule needs to be established between primary and secondary storage volumes |
+REM|------------------------------------------------------------------------------------------------------------------|
+REM
+REM
+REM This script can be used from the SnapManager graphical user interface (GUI) and command line interface (CLI).
+REM
+REM To execute the post-task script for the backup operation from SnapManager GUI, follow these steps:
+REM
+REM  1. From the Backup wizard > Task Specification page > Post-Tasks tab > select the post-task scripts from the Available Scripts section.
+REM  2. You can view the parameters available in the post-task script in the Parameter section of the Task Specification page.
+REM  3. Provide values to the following parameters:
+REM 	SNAPSHOT_LABEL     - Label Name to be set for snapshots before doing the vault update
+REM
+REM FOR WINDOWS ITS ADVISED TO USE THE post-task script FROM THE GUI BY SAVING THE BELOW SPEC XML AND GIVING THIS IN THE GUI LOAD XML FILE .
+REM
+REM To execute the post-task script for the backup operation from SnapManager CLI, follow these steps:
+REM  1. create a task specification XML file.
+REM  2. Add the post-script name in the <post-tasks> tag of the XML file .
+REM Example:
+REM             <preposttask-specification xmlns="http://www.netapp.com">
+REM               <task-specification>
+REM                 <post-tasks>
+REM                   <task>
+REM                     <name>"Vault the backup for cDOT"</name>
+REM                     <parameter>
+REM                     <name>SNAPSHOT_LABEL</name>
+REM                     <value>TST</value>
+REM                     </parameter>
+REM                   </task>
+REM                 </post-tasks>
+REM               </task-specification>
+REM             </preposttask-specification>
+REM
+REM
+REM IMPORTANT NOTE: This script is provided for reference only. It has been tested with SnapDrive 7.0.0 for Windows but may not work in all environments.
+Please review and then customize based on your secondary protection requirements.
+REM
+REM
+REM Need to take care of the parameter variable, its not like shell script array handling, so declare a new variable
+REM for one more argument and set that variable SM_PI_PARAMETER in the describe method. Then only that variable will be
+REM Visible in the GUI task specification wizard else it wont list.
+
+set /a EXIT=0
+set name="Vault the backup for cDOT"
+set description="Vault the backup For cDOT volumes"
+set parameter=SNAPSHOT_LABEL :
+
+if /i "%1" == "-check" goto :check
+if /i "%1" == "-execute" goto :execute
+if /i "%1" == "-describe" goto :describe
+
+:usage
+        echo usage: %0 ^{ -check ^| -describe ^| -execute ^}
+        set /a EXIT=99
+        goto :exit
+
+:check
+        set /a EXIT=0
+        goto :exit
+
+:describe
+        echo SM_PI_NAME:%name%
+        echo SM_PI_DESCRIPTION:%description%
+	echo SM_PI_PARAMETER:%parameter%
+
+        set /a EXIT=0
+        goto :exit
+
+REM Split the colon-separated SM_PRIMARY_SNAPSHOTS_AND_MOUNT_POINTS And SnapVault the mountpoints one-by-one
+
+:execute
+        set /a EXIT=0
+
+	echo "execution started"
+
+	powershell.exe -file "c:\snapvault.ps1" %SM_PRIMARY_FULL_SNAPSHOT_NAME_FOR_TAG%  %SNAPSHOT_LABEL% < CON
+		
+        if "%ERRORLEVEL%" NEQ "0" (
+           set /a EXIT=4
+           exit /b %EXIT%
+        )
+ 	echo "execution ended"
+
+        goto :exit
+
+:exit
+        echo Command complete.
+        exit /b %EXIT%
+----

@@ -1,0 +1,20 @@
+---
+permalink: unix-administration/task_deleting_profile.html
+sidebar: sidebar
+keywords: 
+summary: 'You can delete a profile as long as it does not contain successful backups that are currently used in other operations. You can delete profiles that contain freed or deleted backups.'
+---
+= Deleting a profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can delete a profile as long as it does not contain successful backups that are currently used in other operations. You can delete profiles that contain freed or deleted backups.
+
+. Enter the following command: `smsap profile delete -profileprofile [-quiet | -verbose]`
++
+You can delete a new profile created for the clone split. While deleting, the If you delete the profile, you cannot destroy the profile later warning message is displayed in the SnapManager command-line interface.
+
+----
+smsap profile delete -profile AUTO-REVEN
+----

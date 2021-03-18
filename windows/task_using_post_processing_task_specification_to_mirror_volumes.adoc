@@ -1,0 +1,49 @@
+---
+permalink: windows/task_using_post_processing_task_specification_to_mirror_volumes.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager for SAP enables you to use the script to mirror the volumes after the backup operation occurs in a Windows environment.'
+---
+= Using post-processing task specification to mirror volumes
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager for SAP enables you to use the script to mirror the volumes after the backup operation occurs in a Windows environment.
+
+. Create a task specification XML file.
+. In the XML file, enter the script name as an input parameter.
+. Save the task specification XML file.
+. Create a protected backup of the database to secondary storage using the following command.
++
+While creating the protected backup, you must provide the complete path of the saved task specification XML file after the -taskspec option.
++
+Example: smsapbackup create -profile test_profile -full -online -taskspec "C:\\mirror\\snapmirror.xml"
+
+The following example shows a post-processing task specification structure if you are using Data ONTAP operating in 7-Mode:
+
+----
+#     <post-tasks>
+#               <task>
+#                   <name>Mirror the backup</name>
+#                    <description>Mirror the backup</description>
+#               </task>
+#             <post-tasks>
+----
+
+The following example shows a post-processing task specification structure if you are using clustered Data ONTAP:
+
+----
+# <task-specification>
+#              <post-tasks>
+#                  <task>
+#                   <name>"Vault the backup for cDOT"</name>
+#                    <parameter>
+#                    <name>SNAPSHOT_LABEL</name>
+#                   <value>TST</value>
+#                    </parameter>
+#                  </task>
+#                </post-tasks>
+#              </task-specification>
+#            </preposttask-specification>
+----

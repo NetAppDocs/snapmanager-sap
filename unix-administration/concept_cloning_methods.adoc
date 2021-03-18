@@ -1,0 +1,41 @@
+---
+permalink: unix-administration/concept_cloning_methods.html
+sidebar: sidebar
+keywords: 
+summary: 'You can clone a database using one of two methods. The method you choose affects the clone create operation.'
+---
+= Cloning methods
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can clone a database using one of two methods. The method you choose affects the clone create operation.
+
+The following table describes the cloning methods and their effect on the clone create operation and its -reserve option. A LUN can be cloned using either method.
+
+|===
+| Cloning method
+
+| Description
+
+| clone create -reserve
+
+a|
+LUN cloning
+
+a|
+A new clone LUN is created within the same volume.
+
+a|
+When -reserve for a LUN is set to yes, space is reserved for the full LUN size within the volume.
+
+a|
+Volume cloning
+
+a|
+A new FlexClone is created and the clone LUN exists within the new clone volume. Uses FlexClone technology.
+
+a|
+When -reserve for a volume is set to yes, space is reserved for the full volume size within the aggregate.
+
+|===

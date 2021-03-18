@@ -1,0 +1,20 @@
+---
+permalink: unix-administration/task_stopping_the_clone_split_process.html
+sidebar: sidebar
+keywords: 
+summary: 'You can stop the running clone split process.'
+---
+= Stopping the clone split process
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can stop the running clone split process.
+
+After you stop the split process, you cannot resume it.
+
+. To stop the clone split operation, enter the following command: `smsap clone split-stop -profileprofile [-hosthostname] [-labelsplit-label | -idsplit-id] [-quiet \| -verbose]`
+
+----
+smsap clone split-stop -profile p1 -id 8abc01ec0e78f3e2010e78f3fdd00001
+----

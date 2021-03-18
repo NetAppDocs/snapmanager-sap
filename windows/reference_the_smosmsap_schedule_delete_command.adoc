@@ -1,0 +1,32 @@
+---
+permalink: windows/reference_the_smosmsap_schedule_delete_command.html
+sidebar: sidebar
+keywords: 
+summary: 'This command deletes a backup schedule when it is are no longer necessary.'
+---
+= The smsap schedule delete command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command deletes a backup schedule when it is are no longer necessary.
+
+== Syntax
+
+----
+
+        smsap schedule delete
+-profile profile_name 
+-schedule-name schedule_name
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *-profile profile_name*
++
+Specifies the name of the profile related to the database you want to delete a backup schedule. The profile contains the identifier of the database and other database information.
+
+* *-schedule-name schedule_name*
++
+Specifies the schedule name you provided while creating a backup schedule.

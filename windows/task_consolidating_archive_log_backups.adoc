@@ -1,0 +1,32 @@
+---
+permalink: windows/task_consolidating_archive_log_backups.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager consolidates the archivelog-only backups every time you take a backup by freeing up the duplicate archivelog-only backups. By default, consolidation is enabled.'
+---
+= Consolidating archive log backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager consolidates the archivelog-only backups every time you take a backup by freeing up the duplicate archivelog-only backups. By default, consolidation is enabled.
+
+SnapManager identifies the archivelog-only backups which has archive log files in other backups and frees them to maintain minimum number of archivelog-only backups with unique archive log files.
+
+If the archivelog-only backups are freed by consolidation, then these backups are deleted based on the archive log retention duration.
+
+When the database is in the shutdown or nomount state during archive log consolidation, SnapManager changes the database to the mount state.
+
+If the backup or pruning of archive log files fails, then consolidation will not be done. Consolidation of archivelog-only backups is followed only after successful backups and successful pruning operations.
+
+. To enable consolidation of the archivelog-only backups, modify the configuration parameter consolidation and set the value as true in the SnapManager configuration file (smsap.config).
++
+Once the parameter is set, the archivelog-only backups are consolidated.
++
+If the newly-created archivelog-only backup contains the same archive log files in any of the earlier archivelog-only backups, then the earlier archive-log only backups are freed.
++
+NOTE: SnapManager does not consolidate the archive log backup taken along with the datafiles backup. SnapManager consolidates the archivelog-only backup.
++
+NOTE: SnapManager consolidates the archive log backups even when user manually deletes the archive log files from the archive log destinations or when the archive log files are corrupted and might be included the backup.
+
+. To disable consolidation of the archive log backups, modify the configuration parameter consolidation and set the value as false in the SnapManager configuration file (smsap.config).

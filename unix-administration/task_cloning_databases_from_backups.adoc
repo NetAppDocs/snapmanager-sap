@@ -1,0 +1,57 @@
+---
+permalink: unix-administration/task_cloning_databases_from_backups.html
+sidebar: sidebar
+keywords: 
+summary: 'You can clone a database from a backup by using the clone create command.'
+---
+= Cloning databases from backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can clone a database from a backup by using the clone create command.
+
+You must first create a clone specification file for the database. SnapManager creates the clone based on the information in this specification file.
+
+After you clone a database, you might want to update your tnsnames.ora files on your client machines with the new cloned database connection information. The tnsnames.ora files are used to connect to an Oracle instance without having to specify the full database information. SnapManager does not update the tnsnames.ora files.
+
+SnapManager always creates a backup including archive log files, if you are using the profile created with -include-with-online-backups. SnapManager allows you to clone only the full database backups.
+
+SnapManager (3.2 or later) allows you to clone the backups containing the data files and archive log files.
+
+If the archive log is available from an external location, you can specify the external location during cloning for recovering the cloned database to a consistent state. You must ensure that the external location is accessible by Oracle. Cloning of the archive log-only backups is not supported.
+
+Though the archive log backup is created along with the online partial backup, you cannot create a database clone by using this backup.
+
+You can clone the database backup from the external archive log file location only for a stand-alone database.
+
+The cloning of online database backup of the Real Application Clusters (RAC) database using the external archive log file location fails due to failure in recovery. This is because Oracle database fails to find and apply the archive log files for recovery from the external archive log location while cloning the database backup.
+
+You can specify the -dump option as an optional parameter to collect the dump files after the successful or failed clone create operation.
+
+*Cloning datafile backup without archive log backup*
+
+When the data files backup does not include the archive log backup, SnapManager for SAP clones the database based on the System Change Number (SCN) recorded during the backup. If the cloned database cannot be recovered, the Archived log file for thread <number> and change <SCN> required to complete recovery error message is displayed, even though SnapManager for SAP continues to clone the database, and finally succeeds in creating the clone.
+
+When cloning using the data files backup without including the archive log backup, SnapManager recovers the cloned database until the last archive log SCN, which is recorded during the backup.
+
+. Create a clone specification file.
+. To create a clone, enter the following command: `+smsap clone create-backup-labelbackup_name-newsidnew_sid-labelclone_label-profileprofile_name-clonespecfull_path_to_clonespecfile [-taskspectaskspec] [-recover-from-location] path1 \[,<path2\>...\]] [-dump]+`
+
+*Related information*
+
+xref:task_cloning_databases_in_the_current_state.adoc[Cloning databases in the current state]
+
+xref:concept_considerations_for_cloning_a_database_to_an_alternate_host.adoc[Considerations for cloning a database to an alternate host]
+
+xref:task_creating_clone_specifications.adoc[Creating clone specifications]
+
+xref:reference_the_smosmsapclone_create_command.adoc[The smsap clone create command]
+
+xref:task_creating_pretask_post_task_and_policy_scripts.adoc[Creating pretask, post-task, and policy scripts]
+
+xref:concept_variables_available_in_the_task_scripts_for_clone_operation.adoc[Variables available in the task scripts for clone operation]
+
+xref:task_creating_task_scripts.adoc[Creating task scripts]
+
+xref:task_storing_the_task_scripts.adoc[Storing the task scripts]

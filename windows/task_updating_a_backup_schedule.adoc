@@ -1,0 +1,14 @@
+---
+permalink: windows/task_updating_a_backup_schedule.html
+sidebar: sidebar
+keywords: 
+summary: 'You can view a list of scheduled operations and update them if necessary. You can update the scheduling frequency, the start time of the schedule, cronstring expression, and the user who scheduled the backup.'
+---
+= Updating a backup schedule
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can view a list of scheduled operations and update them if necessary. You can update the scheduling frequency, the start time of the schedule, cronstring expression, and the user who scheduled the backup.
+
+. To update the schedule for a backup, enter this command: `smsap schedule update -profile profile_name-schedule-nameschedulename [-schedule-commentschedule comment] -interval {-hourly | -daily | -weekly | -monthly | -onetimeonly} -start-timestarttime-cronstringcronstring-runasuserrunasuser [-quiet | -verbose]`

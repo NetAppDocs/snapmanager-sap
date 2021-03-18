@@ -1,0 +1,39 @@
+---
+permalink: unix-installation-cmode/concept_prerequisites_for_performing_a_rollback.html
+sidebar: sidebar
+keywords: 
+summary: 'Before performing a rollback, you must ensure that your environment meets certain requirements.'
+---
+= Prerequisites for performing a rollback
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before performing a rollback, you must ensure that your environment meets certain requirements.
+
+* If you are using SnapManager 3.3 or later and want to roll back to a version earlier than SnapManager 3.1, you need to roll back to 3.2 and then to the desired version.
+* External scripts that are used to perform any external data protection or data retention must be backed up.
+* The SnapManager version to which you want to roll back must be installed.
++
+NOTE: If you want to perform a rollback from SnapManager 3.3 or later to a version earlier than SnapManager 3.1, you must first install SnapManager 3.2 and perform a rollback. After rolling back to 3.2, you can then install SnapManager 3.1 or earlier and perform another rollback to that version.
+
+* The SnapDrive for UNIX version supported with the SnapManager version to which you want to roll back must be installed.
++
+For information about installing SnapDrive, see SnapDrive documentation set.
+
+* The repository database must be backed up.
+* If the host to be rolled back is using a repository, SnapManager operations must not be performed on the other hosts that are using the same repository.
++
+The operations that are scheduled or running on the other hosts wait for the rollback to complete.
+
+* Profiles that point to the same repository database, must be created with different names in the SnapManager server hosts.
++
+If you use profiles with the same name, the rollback operation involving that repository database fails without warning.
+
+* SnapManager operations must not be performed on the host which you want to rollback.
++
+If there is an operation running, you must wait until that operation completes and before proceeding with the rollback.
+
+NOTE: The rollback operation runs for a longer time as the cumulative number of backups of the hosts that are being rolled back together increases. The duration of the rollback can vary depending on the number of profiles and backups associated with a given host.
+
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]

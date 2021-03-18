@@ -1,0 +1,19 @@
+---
+permalink: windows/task_creating_post_processing_task_specification_file.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager enables you to create post-processing, task-specification XML files for the backup operation that include the SnapMirror or SnapVault post-scripts. The scripts allow you to mirror or vault the backup to secondary storage.'
+---
+= Creating post-processing, task-specification files
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to create post-processing, task-specification XML files for the backup operation that include the SnapMirror or SnapVault post-scripts. The scripts allow you to mirror or vault the backup to secondary storage.
+
+. Open a new XML file.
++
+You can see the sample task-specification XML file available at default_install_directory\plugins\examples.
+
+. Add the script name as an input parameter.
+. Save the task-specification XML file.

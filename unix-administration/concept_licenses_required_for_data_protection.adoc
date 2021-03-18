@@ -1,0 +1,30 @@
+---
+permalink: unix-administration/concept_licenses_required_for_data_protection.html
+sidebar: sidebar
+keywords: 
+summary: 'You must ensure that licenses required for data protection are installed and enabled on the primary and secondary storage systems.'
+---
+= Licences required for data protection in SnapManager
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must ensure that licenses required for data protection are installed and enabled on the primary and secondary storage systems.
+
+Primary storage systems receive the latest transaction updates for the Oracle database, store the data, and provide local backup protection of the database. The primary storage system also maintains database data files, log files, and control files. Secondary storage systems act as remote storage for the protected backups.
+
+For data protection, the following licenses must be installed and enabled on primary storage systems:
+
+NOTE: If you want to enable data protection on the secondary storage systems, you must also install and enable these licenses on the secondary storage systems.
+
+* Either Data ONTAP operating in 7-Mode (7.3.1 or later) or clustered Data ONTAP (8.2 or later)
+* SnapVault (depending on the protection policy)
+* SnapRestore
+* SnapMirror (depending on the protection policy)
+* FlexClone is required for Network File System (NFS) andcloning.
++
+FlexClone is also, required for Storage Area Network (SAN) only if SnapDrive is configured to use FlexClone in SAN environments.
+
+* The appropriate protocol, for example, NFS, Internet Small Computer System Interface (iSCSI), or Fibre Channel (FC)
+
+SnapVault or SnapMirror should be on the primary and secondary storage systems based on the protection policies used. The basic backup protection policies require only SnapVault installed on the supporting systems. The policies that include mirror protection require SnapMirror installed on the supporting systems. The backup and mirror disaster recovery policies require SnapMirror installed on the supporting systems.

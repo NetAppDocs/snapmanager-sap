@@ -1,0 +1,18 @@
+---
+permalink: windows/task_verifying_profiles.html
+sidebar: sidebar
+keywords: 
+summary: 'You can verify that an existing profile is set up correctly. When you verify a profile, SnapManager checks the environment for the profile you specify and verifies that the profile is set up and the database in this profile is accessible.'
+---
+= Verifying profiles
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can verify that an existing profile is set up correctly. When you verify a profile, SnapManager checks the environment for the profile you specify and verifies that the profile is set up and the database in this profile is accessible.
+
+. To verify if the profile is set up correctly, enter this command: `smsap profile verify -profileprofile_name`
+
+*Related information*
+
+xref:reference_the_smosmsapprofile_verify_command.adoc[The smsap profile verify command]

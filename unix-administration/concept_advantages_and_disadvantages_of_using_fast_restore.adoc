@@ -1,0 +1,28 @@
+---
+permalink: unix-administration/concept_advantages_and_disadvantages_of_using_fast_restore.html
+sidebar: sidebar
+keywords: 
+summary: 'DBAs should be aware of the advantages and disadvantages of using volume-based fast restores.'
+---
+= Advantages and disadvantages of using fast restore
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+DBAs should be aware of the advantages and disadvantages of using volume-based fast restores.
+
+Restoring database backups using fast restores provides the following advantages:
+
+* Volume-based restores reduce the time needed to restore backups.
+* SnapManager provides fast restore eligibility checks. SnapManager analyzes the database backup and displays information about whether it can perform the volume-based restore.
+* You can preview the restore operation and decide whether to continue with the recommended path or override the recommendation with your selected process.
+
+Restoring database backups using fast restores has the following disadvantages:
+
+* The entire file system is reverted, including files that were not considered part of the backup. Other files, file systems, or LUNs on the volume will also be reverted.
+* SnapManager removes all Snapshot copies that were taken after the Snapshot you are reverting to. In effect, you lose the history after the Snapshot copy date. For example, you cannot restore Tuesday's backup if you already restored Monday's backup.
+
+You can avoid the disadvantages by following these recommendations:
+
+* Optimize the database layout according to best practices.
+* Protect backups to secondary storage. However, if you delete Snapshot copies from primary storage, you cannot use fast restores to restore them from secondary storage.

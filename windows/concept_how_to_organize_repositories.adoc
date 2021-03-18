@@ -1,0 +1,27 @@
+---
+permalink: windows/concept_how_to_organize_repositories.html
+sidebar: sidebar
+keywords: 
+summary: 'You can organize the SnapManager repositories to meet your business needs. You can organize them in several ways, including by application type and usage.'
+---
+= How to organize repositories
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can organize the SnapManager repositories to meet your business needs. You can organize them in several ways, including by application type and usage.
+
+You can organize repositories in several ways. Two such ways are as follows:
+
+|===
+| Type| Characteristics
+a|
+By application
+a|
+If you have multiple Oracle databases running different applications, you can create a SnapManager repository for every application type. Each SnapManager repository would have profiles for the databases of a particular application type. All production, development, and testing databases of that application type would be managed by the same SnapManager repository. This option would help group similar databases and ease cloning. However, if you have several application types, then you might have to manage several SnapManager repositories, and if you choose to implement another application type, you will need to create another SnapManager repository. Because these SnapManager repositories will be managing production databases, each of these repositories must be on a server with high availability, which can be expensive. Also, having to manage production databases along with development and test databases of the same type in the same SnapManager repository can be a security issue.
+a|
+By usage
+a|
+You can distribute the databases among the SnapManager repositories based on their usage (for example, production, development, testing, and training). This option limits the number of repositories to the different types of databases that you have. Because all production databases would be managed by a single SnapManager repository, only production database administrators can be given access to this repository. Also, if you choose to deploy another database for a new application type, then you only need to register the database in the corresponding SnapManager repository instead of creating a new repository. High availability can be provided only for the SnapManager repository that holds the profiles of all the production databases.
+|===
+SnapManager for Oracle and SnapManager for SAP should not share the same repository. For SnapManager for Oracle and SnapManager for SAP, you must use a different repository (a different Oracle database user) for each product if you have both in your environment. Using a different repository, either in the same or different databases, provides more flexibility by allowing independent upgrade cycles for each product.

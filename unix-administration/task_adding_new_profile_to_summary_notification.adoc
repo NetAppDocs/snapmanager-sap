@@ -1,0 +1,20 @@
+---
+permalink: unix-administration/task_adding_new_profile_to_summary_notification.html
+sidebar: sidebar
+keywords: 
+summary: 'After you configure a summary email notification for the repository database, you can add a new profile to summary notification by using the summary notification command.'
+---
+= Adding a new profile to summary email notifications
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After you configure a summary email notification for the repository database, you can add a new profile to summary notification by using the summary notification command.
+
+. Enter the following command: `smsap profile create -profileprofile_name [-profile-passwordprofile_password] -repository-dbnamerepo_service_name-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] -osaccountosaccount-osgrouposgroup [-retain [-hourly-countn] [-durationm]] [-daily-countn] [-durationm]] [-weekly-countn] [-durationm]] [-monthly-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][-protect [-protection-policypolicy_name]] [-summary-notification]`
++
+Other options for this command are as follows:
++
+[-force]
++
+[quiet | -verbose]

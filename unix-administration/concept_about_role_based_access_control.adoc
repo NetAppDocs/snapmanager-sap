@@ -1,0 +1,55 @@
+---
+permalink: unix-administration/concept_about_role_based_access_control.html
+sidebar: sidebar
+keywords: 
+summary: 'Role-based access control \(RBAC\) lets you control who has access to SnapManager operations. RBAC allows administrators to manage groups of users by defining roles and assigning users to those roles. You might want to use SnapManager RBAC in environments where RBAC is already in place.'
+---
+= About role-based access control
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Role-based access control (RBAC) lets you control who has access to SnapManager operations. RBAC allows administrators to manage groups of users by defining roles and assigning users to those roles. You might want to use SnapManager RBAC in environments where RBAC is already in place.
+
+RBAC includes the following components:
+
+* Resources: Volumes and LUNs that hold the datafiles that make up your database.
+* Capabilities: Types of operations that can be performed on a resource.
+* Users: People to whom you grant capabilities.
+* Roles: A set of resources and capabilities allowed on resources. You assign a specific role to a user who should perform those capabilities.
+
+You enable RBAC in SnapDrive. You can then configure specific capabilities per role in the Operations Manager Web graphical user interface or command-line interface. RBAC checks occur in the DataFabric Manager server.
+
+The following table lists some roles and their typical tasks, as set in Operations Manager.
+
+|===
+| Role| Typical tasks
+a|
+SAP basis administrator
+a|
+
+* Creating, maintaining, and monitoring an Oracle database that resides on a host
+* Scheduling and creating database backups
+* Ensuring that backups are valid and can be restored
+* Cloning databases
+
+a|
+Server administrator
+a|
+
+* Setting up storage systems and aggregates
+* Monitoring volumes for free space
+* Provisioning storage on requests from users
+* Configuring and monitoring disaster recovery mirroring
+
+a|
+Storage architect
+a|
+
+* Making architectural decisions on storage
+* Planning storage capacity growth
+* Planning disaster recovery strategies
+* Delegating capabilities to members of the team
+
+|===
+If RBAC is in use (meaning that Operations Manager is installed and RBAC is enabled in SnapDrive), the storage administrator needs to assign RBAC permissions on all of the volumes and storage systems for the database files.

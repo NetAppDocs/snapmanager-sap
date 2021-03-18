@@ -1,0 +1,92 @@
+---
+permalink: unix-administration/concept_what_database_backup_scheduling_is.html
+sidebar: sidebar
+keywords: 
+summary: 'You can schedule, update, and monitor backups for databases by using the Schedule tab of the graphical user interface.'
+---
+= What database backup scheduling is
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can schedule, update, and monitor backups for databases by using the Schedule tab of the graphical user interface.
+
+The following table addresses some common scheduling questions:
+
+|===
+| Question| Answer
+a|
+What happens to the scheduled backups when the SnapManager server restarts?
+a|
+When the SnapManager server restarts, it automatically restarts all the schedules. However, SnapManager does not follow-up on any missed occurrences.
+a|
+What happens when two backups are scheduled to occur on two databases at the same time?
+a|
+SnapManager starts backup operations one at a time and then allows the backups to run in parallel. For example, if a database administrator creates six daily backup schedules for six different database profiles to occur at 1:00 a.m., all six backups run in parallel.
+
+If multiple backups are scheduled to occur on a single database profile in a short period of time, the SnapManager server runs only the backup operation with the longest retention duration.
+
+Before starting a backup operation, SnapManager first determines the following:
+
+* Within the last 30 minutes, has another schedule successfully created a backup, with greater retention, for the same profile?
+* Within the next 30 minutes, will another schedule attempt to create a backup, with greater retention, for the same profile?
+
+If the answer to either question is yes, SnapManager skips the backup.
+
+For example, a database administrator might create a daily, weekly, and monthly schedule for a database profile, all of which are scheduled to take backups at 1:00 a.m. On that one day of the month when three backups are scheduled to occur simultaneously at 1:00 a.m., SnapManager runs only the backup operation based on the monthly schedule.
+
+The time window of 30 minutes can be changed in a SnapManager properties file.
+
+a|
+Under which user does the backup operation run?
+a|
+The operation runs under the user who created the schedule. However, you can change this to your own user ID, if you have valid credentials for both the database profile and host. For instance, by launching Scheduled Backup Properties for the backup schedule created by Avida Davis, Stella Morrow can select her user ID in Perform this operation as user to run the scheduled backup.
+a|
+How does the SnapManager scheduler interact with the native operating system scheduler?
+a|
+On the SnapManager server, you cannot view the scheduled backups via the operating system's native scheduler. For instance, after creating a scheduled backup, you do not see any additional entries in cron.
+a|
+What happens if the clocks in the graphical user interface and the server are not in sync?
+a|
+The clocks on the client and server are not synchronized. Therefore, you can schedule a backup in which the start time is in the future on the client but in the past on the server.
+
+For recurring backups, the server still fulfills the request. For instance, if the server receives a request to perform hourly backups starting on 01/30/08 at 3:00 p.m. but the current time is 3:30 p.m. on that day, the server performs its first backup at 4:00 p.m. and continues to perform backups every hour.
+
+However, for one-time only backups, the server handles the request as follows:
+
+* If the start time is within the last five minutes of the current server time, SnapManager immediately begins the backup.
+* If the start time is greater than five minutes, SnapManager does not initiate the backup.
+
+For instance, consider the following scenario:
+
+* The clock in the graphical interface host is three minutes behind the actual time.
+* The current time on the client is 8:58 a.m.
+* You schedule a one-time backup to occur at 9:00 a.m.
+* You schedule another one-time backup to occur at 8:30 a.m.
+
+When the server receives the first request, the time on the server is 9:01 a.m. Although the start time of the backup is in the past, SnapManager immediately performs the backup.
+
+When the server receives the second request, the start time of the backup is more than five minutes in the past. You will receive a message that the schedule request failed because the start time is in the past.
+
+You can change the time of five minutes in a SnapManager properties file.
+
+a|
+What happens to the scheduled backups for a profile when the profile is deleted?
+a|
+When a database profile is deleted, the SnapManager server deletes scheduled backups defined for that profile.
+a|
+How do scheduled backups behave during Daylight Savings Time or when you change the SnapManager server time?
+a|
+SnapManager backup schedules get affected due to Daylight Savings Time or when you change the SnapManager server time.
+
+Consider the following implications when the SnapManager server time is changed:
+
+* After the backup schedule is triggered, if the SnapManager server time falls back, then the backup schedule does not trigger again.
+* If Daylight Savings Time begins before the scheduled start time, the backup schedules are triggered automatically.
+* For example, if you are in the United States and you schedule hourly backups at 4 a.m. that should occur every 4 hours, backups will occur at 4 a.m., 8 a.m., 12 a.m., 4 a.m., 8 p.m., and midnight on the days before and after Daylight Savings Time adjustments in March and November.
+* Note the following if backups are scheduled for 2:30 a.m. every night:
+ ** When the clocks fall back an hour, as the backup is already triggered, the backup does not trigger again.
+ ** When the clocks spring forward an hour, the backup triggers immediately.
+If you are in the United States and want to avoid this issue, you must schedule your backups to start outside the 2:00 a.m. to 3:00 a.m. interval.
+
+|===

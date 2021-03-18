@@ -1,0 +1,21 @@
+---
+permalink: unix-administration/task_disabling_autosupport_in_snapmanager.html
+sidebar: sidebar
+keywords: 
+summary: 'You must disable AutoSupport if you do not want the storage system to receive messages from the SnapManager server for every successful backup operation.'
+---
+= Disabling AutoSupport in SnapManager
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must disable AutoSupport if you do not want the storage system to receive messages from the SnapManager server for every successful backup operation.
+
+By default, AutoSupport is enabled if the configuration file does not contain the auto_support.on parameter. In this scenario, you must add the auto_support.on parameter in the configuration file and set the value to FALSE.
+
+. Stop the SnapManager server.
+. In the smsap.config configuration file, set the value of the auto_support.on parameter to FALSE.
++
+auto_support.on=FALSE
+
+. Restart the SnapManager server.

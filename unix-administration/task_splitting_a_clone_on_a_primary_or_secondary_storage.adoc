@@ -1,0 +1,35 @@
+---
+permalink: unix-administration/task_splitting_a_clone_on_a_primary_or_secondary_storage.html
+sidebar: sidebar
+keywords: 
+summary: 'You can use the clone split command to split the clone. After the clone split is complete, the clone metadata is removed from the repository database and the backup associated with the clone can be deleted or freed.'
+---
+= Splitting a clone on primary or secondary storage
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use the clone split command to split the clone. After the clone split is complete, the clone metadata is removed from the repository database and the backup associated with the clone can be deleted or freed.
+
+The new profile created after the successful split operation is used for managing the split clone. The new profile will be like any other existing profile in SnapManager. You can use this profile to perform backup, restore, and clone operations.
+
+In addition, you can also configure email notification for the new profile. This enables the database administrator to be notified about the status of the database operation performed using the profile.
+
+NOTE: SnapManager supports the splitting operation when performed on a FlexClone only.
+
+If the split operation fails, an appropriate error message with the reason for failure is displayed. The status of multiple operations is also displayed in the operation log. For example:
+
+----
+--[ INFO] The following operations were completed:
+Clone Split : Success
+Profile Create : Failed
+Clone Detach : Success
+----
+
+You can optionally collect the dump files after a successful or failed clone split operation.
+
+NOTE: After you enter the clone split command, you should not stop the SnapManager server until the clone split operation has started.
+
+NOTE: SnapManager generates the profile even if you do not provide any value for the Oracle account (osaccount and osgroup).
+
+. Enter the following command: `smsap clone split -profileclone-profile-hosthostname [-labelclone-label | -idclone-id]-split-labelsplit-operation-label-commentcommentnew-profilenew-profile-name [-profile-passwordnew-profile_password] -repository-dbnamerepo_service_name-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] -osaccountosaccount-osgrouposgroup [-retain [-hourly-countn] [-durationm]] [-daily-countn] [-durationm]] [-weekly-countn] [-durationm]] [-monthly-countn] [-durationm]]] [-profile-commentprofile-comment][-snapname-patternpattern][-protect [-protection-policypolicy_name]] | [-noprotect\]\][-summary-notification] [-notification [-success-emailemail_address1, email_address2-subjectsubject_pattern] [-failure-emailemail_address1, email_address2-subjectsubject_pattern]][-quiet | -verbose]-dump`

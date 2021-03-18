@@ -1,0 +1,16 @@
+---
+permalink: windows/concept_database_version_support_and_configuration_overview.html
+sidebar: sidebar
+keywords: 
+summary: 'You must know the different database versions and configurations supported with SnapManager. You must perform basic database layout and configuration setup to ensure successful operations.'
+---
+= Database version support and configuration overview
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must know the different database versions and configurations supported with SnapManager. You must perform basic database layout and configuration setup to ensure successful operations.
+
+SnapManager for SAP integrates with Oracle versions 10gR2 (10.2.0.5), 11gR2 (11.2.0.1 and 11.2.0.2), and 12__c__; with native Oracle technology such as Recovery Manager (RMAN); and across fibre channel (FC) and Internet Small Computer System Interface (iSCSI) protocols.
+
+NOTE: The Oracle Database 9i is not supported from SnapManager 3.2 and 10g R2 (earlier than 10.2.0.5) is not supported from SnapManager 3.3.1.

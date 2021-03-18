@@ -1,0 +1,54 @@
+---
+permalink: unix-administration/concept_considerations_for_cloning_a_database_to_an_alternate_host.html
+sidebar: sidebar
+keywords: 
+summary: 'Before you can clone to a host other than the one on which the database resides, there are some requirements that must be met.'
+---
+= Considerations for cloning a database to an alternate host
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before you can clone to a host other than the one on which the database resides, there are some requirements that must be met.
+
+The following table shows the source and target host setup requirements:
+
+|===
+| Prerequisite set up| Requirement
+a|
+Architecture
+a|
+Must be the same on both the source and target hosts
+a|
+Operating system and version
+a|
+Must be the same on both the source and target hosts
+a|
+SnapManager for SAP
+
+a|
+Must be installed and running on both the source and target hosts
+a|
+Credentials
+a|
+Must be set for the user to access the target host
+a|
+Oracle
+a|
+The same software version must be installed on both the source and target hosts.
+
+The Oracle Listener must be running on the target host.
+
+a|
+Compatible storage stack
+a|
+Must be the same on both the source and target hosts
+a|
+Protocol used to access data files
+a|
+Must be the same on both the source and target hosts
+a|
+Volume managers
+a|
+Must be configured on both the source and target hosts and must be of compatible versions
+|===
