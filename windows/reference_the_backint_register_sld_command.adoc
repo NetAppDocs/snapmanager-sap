@@ -1,0 +1,58 @@
+---
+permalink: windows/reference_the_backint_register_sld_command.html
+sidebar: sidebar
+keywords: 
+summary: 'If you want to use SAP BR\*Tools, you can run the backint register-sld command with SnapManager for SAP to register the BACKINT interface at your System Landscape Directory \(SLD\). The BACKINT interface is provided by the storage vendor to make the storage system work with the BR\*Tools commands. SnapManager for SAP installs its BACKINT interface file at C:\\Program Files\\NetApp\\SnapManager for SAP\\bin\\.'
+---
+= The backint register-sld command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you want to use SAP BR*Tools, you can run the backint register-sld command with SnapManager for SAP to register the BACKINT interface at your System Landscape Directory (SLD). The BACKINT interface is provided by the storage vendor to make the storage system work with the BR*Tools commands. SnapManager for SAP installs its BACKINT interface file at C:\Program Files\NetApp\SnapManager for SAP\bin\.
+
+== Syntax
+
+----
+
+        backint register-sld
+-host  host_name
+-port  port_id
+-username username
+-password password
+-template template_ID
+----
+
+== Parameters
+
+* *-host host_name*
++
+Specifies the name of the host on which the SAP SLD is running.
+
+* *-port port_id*
++
+Specifies the ID of the port on which the SAP SLD accepts HTTP requests. The ID must be numeric and less than or equal to nine digits.
+
+* *-username username*
++
+Specifies a valid and authorized SAP SLD user name.
+
+* *-password password*
++
+Specifies a valid and authorized SAP SLD user password. This is optional. If you do not set the password by using -password, you will be prompted to enter a password in the following format: `+username@http://host:port+`
++
+If you fail to enter the correct password, after three attempts the command fails and exits.
+
+* *-template template_id*
++
+Specifies the name of the master template XML file, which can be used as a base for your custom file.
+
+== Example command
+
+The following example shows a successful completion of the command:
+
+----
+backint register-sld -host jack12 -port 50100
+-username j2ee_admin -password user123 -template E:\template.xml
+Operation Id [N96f4142a1442b31ee4636841babbc1d7] succeeded.
+----

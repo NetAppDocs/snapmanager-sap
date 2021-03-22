@@ -1,0 +1,70 @@
+---
+permalink: windows/reference_the_smosmsapprofile_sync_command.html
+sidebar: sidebar
+keywords: 
+summary: 'This command loads the profile-to-repository mappings for that repository to a file in your home directory on the local host.'
+---
+= The smsap profile sync command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command loads the profile-to-repository mappings for that repository to a file in your home directory on the local host.
+
+== Syntax
+
+----
+
+        smsap profile sync 
+-repository 
+-dbname repo_service_name 
+-host repo_host 
+-port repo_port 
+-login 
+-username repo_username
+				\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *-repository*
++
+The options that follow -repository specify the details of the database for the repository.
+
+* *-dbname repo_service_name*
++
+Specifies the repository database for the profile to synchronize.
+
+* *-host*
++
+Specifies the database host.
+
+* *-port*
++
+Specifies the port for the host.
+
+* *-login*
++
+Specifies the log in process for the host user.
+
+* *-username*
++
+Specifies the username for the host.
+
+* *-quiet*
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Displays error, warning, and informational messages on the console.
+
+== Example command
+
+The following example shows the result of the command to synchronize the profile-to-repository mappings for the database.
+
+----
+smsap profile sync -repository -dbname smrepo -host Host2 -port 1521 -login -username user2
+SMSAP-12345 [INFO ]: Loading profile mappings for repository "user2@Host2:smrepo" into cache for OS User "admin".
+Operation Id [Nff8080810da9018f010da901a0170001] succeeded.
+----

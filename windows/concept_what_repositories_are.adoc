@@ -1,0 +1,26 @@
+---
+permalink: windows/concept_what_repositories_are.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager organizes information into profiles, which are then associated with repositories. Profiles contain information about the database that is being managed, while the repository contains data about the operations that are performed on profiles.'
+---
+= What repositories are
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager organizes information into profiles, which are then associated with repositories. Profiles contain information about the database that is being managed, while the repository contains data about the operations that are performed on profiles.
+
+The repository records when a backup took place, which files were backed up, and whether a clone was created from the backup. When database administrators restore a database or recover a portion of it, SnapManager queries the repository to determine what was backed up.
+
+Because the repository stores the names of the database Snapshot copies created during backup operations, the repository database cannot exist in the same database and also cannot be a part of the same database that SnapManager is backing up. You must have at least two databases (the SnapManager repository database and the target database being managed by SnapManager) up and running when you execute SnapManager operations.
+
+If you try to open the graphical user interface (GUI) when the repository database is down, the following error message is logged in the sm_gui.log file: [WARN]: SMSAP-01106: Error occurred while querying the repository: No more data to read from socket. Also, SnapManager operations fail when the repository database is down. For more information about the different error messages, see _Troubleshooting known issues_.
+
+You can use any valid host name, service name, or user name to perform operations. For a repository to support SnapManager operations, the repository user name and service name must consist of only the following characters: alphabetic characters (A-Z), digits (0-9), minus sign (-), underscore (_), and period (.).
+
+The repository port can be any valid port number and the repository host name can be any valid host name. The host name must consist of alphabetic characters (A-Z), digits (0-9), minus sign (-), and period (.), but not an underscore (_).
+
+The repository must be created in an Oracle database. The database that SnapManager uses should be set up in accordance with Oracle procedures for database configuration.
+
+A single repository can contain information about multiple profiles; however, each database is normally associated with only one profile. You can have multiple repositories, with each repository containing multiple profiles.

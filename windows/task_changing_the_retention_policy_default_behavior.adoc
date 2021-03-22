@@ -1,0 +1,27 @@
+---
+permalink: windows/task_changing_the_retention_policy_default_behavior.html
+sidebar: sidebar
+keywords: 
+summary: 'When a backup expires based on the retention policy, SnapManager determines whether to delete the backup based on the retention settings. Deletion of backups is the default behavior. You can change this default behavior and choose to free the unprotected backups instead.'
+---
+= Changing the retention policy default behavior
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When a backup expires based on the retention policy, SnapManager determines whether to delete the backup based on the retention settings. Deletion of backups is the default behavior. You can change this default behavior and choose to free the unprotected backups instead.
+
+By default, Snap Manager deletes the backup when they expire.
+
+. Access the following default location:
++
+default smsap installation location\properties\smsap.config
+
+. Edit the smsap.config file.
+. Set the retain.alwaysFreeExpiredBackups property in the smsap.config file to true.
++
+For example, `retain.alwaysFreeExpiredBackups = true`
+
+*Related information*
+
+xref:reference_the_smosmsapbackup_update_command.adoc[The smsap backup update command]

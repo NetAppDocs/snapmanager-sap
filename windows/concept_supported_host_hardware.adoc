@@ -1,0 +1,35 @@
+---
+permalink: windows/concept_supported_host_hardware.html
+sidebar: sidebar
+keywords: 
+summary: 'Consider the memory, disk space, and CPU requirements.'
+---
+= Supported host hardware
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Consider the memory, disk space, and CPU requirements.
+
+SnapManager requires the following configuration:
+
+|===
+| Hardware function| Hardware requirements
+a|
+Memory
+a|
+The SnapManager server requires 128 MB of memory.
+
+The graphical user interfaces requires a minimum 512 MB RAM to run.
+
+Each operation run by the SnapManager server requires 48 MB of additional memory while it is running.
+
+a|
+Disk space
+a|
+128 MB available disk space for the graphical user application (minimum).
+a|
+CPU speed
+a|
+1.0 GHz processor speed (minimum).
+|===

@@ -1,0 +1,14 @@
+---
+permalink: unix-administration/task_restarting_the_snapmanager_unix_host_server.html
+sidebar: sidebar
+keywords: 
+summary: 'You can restart the server on a UNIX host using the CLI.'
+---
+= Restarting the SnapManager UNIX host server
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can restart the server on a UNIX host using the CLI.
+
+. To restart the server, enter the following command: `smsap_server restart`

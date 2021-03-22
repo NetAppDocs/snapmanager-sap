@@ -1,0 +1,32 @@
+---
+permalink: windows/reference_the_smosmsap_schedule_resume_command.html
+sidebar: sidebar
+keywords: 
+summary: 'This command resumes the suspended backup schedule.'
+---
+= The smsap schedule resume command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command resumes the suspended backup schedule.
+
+== Syntax
+
+----
+
+        smsap schedule resume
+-profile profile_name 
+-schedule-name schedule_name
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *-profile profile_name*
++
+Specifies the name of the profile related to the database you want to resume the suspended backup schedule. The profile contains the identifier of the database and other database information.
+
+* *-schedule-name schedule_name*
++
+Specifies the schedule name you provided while creating a backup schedule.

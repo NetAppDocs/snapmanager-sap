@@ -1,0 +1,23 @@
+---
+permalink: unix-administration/task_disabling_email_notification_for_multiple_profiles.html
+sidebar: sidebar
+keywords: 
+summary: 'After you enable the summary email notification for multiple profiles, you can disable them to no longer receive email alerts.'
+---
+= Disabling email notification for multiple profiles
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After you enable the summary email notification for multiple profiles, you can disable them to no longer receive email alerts.
+
+SnapManager enables you to disable the summary email notification for those profile-executed database operations. From the SnapManager CLI, enter the notification remove-summary-notification command to disable the summary email notification for multiple profiles and the name of the repository database for which you do not require email notification.
+
+. To disable summary notification for multiple profiles on a repository database, enter the following command: `smsap notification remove-summary-notification -repository-portrepo_port-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username`
+
+The following example shows summary notification being disabled for multiple profiles on a repository database:
+
+----
+
+smsap notification remove-summary-notification –repository –port 1521 –dbname repo2 –host 10.72.197.133 –login –username oba5
+----

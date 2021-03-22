@@ -1,0 +1,63 @@
+---
+permalink: unix-administration/reference_the_smosmsapprotection_policy_command.html
+sidebar: sidebar
+keywords: 
+summary: 'You can run the protection-policy command to list the protection policies that can be applied to a profile. The protection policy can be applied when a new profile is created or an existing profile is updated. You can also set the protection policy for the profile using the Protection Manager console.'
+---
+= The smsap protection-policy command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can run the protection-policy command to list the protection policies that can be applied to a profile. The protection policy can be applied when a new profile is created or an existing profile is updated. You can also set the protection policy for the profile using the Protection Manager console.
+
+== Syntax
+
+----
+
+        smsap protection-policy list 
+----
+
+NOTE: The Protection Manager and SnapDrive must be installed on the server for you to use this command.
+
+== Parameters
+
+* *list*
++
+Displays the list of protection policies that can be set on a profile.
+
+== Example
+
+The following example lists the protection policies that can be set to a profile:
+
+----
+smsap protection-policy list
+----
+
+----
+
+Back up
+Back up, then mirror
+Chain of two mirrors
+DR Back up
+DR Back up, then mirror
+DR Mirror
+DR Mirror and back up
+DR Mirror and mirror
+DR Mirror, then back up
+DR Mirror, then mirror
+Local backups only
+Mirror
+Mirror and back up
+Mirror to two destinations
+Mirror, then back up
+No protection
+Partial-volume Mirror
+Remote backups only
+----
+
+*Related information*
+
+xref:concept_managing_profiles_for_efficient_backups.adoc[Managing profiles for efficient backups]
+
+xref:concept_about_different_protection_policies.adoc[About different protection policies]

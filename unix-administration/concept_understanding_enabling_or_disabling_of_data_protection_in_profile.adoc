@@ -1,0 +1,63 @@
+---
+permalink: unix-administration/concept_understanding_enabling_or_disabling_of_data_protection_in_profile.html
+sidebar: sidebar
+keywords: 
+summary: 'You can enable or disable data protection while creating or updating a database profile.'
+---
+= Understanding enabling or disabling of data protection in profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can enable or disable data protection while creating or updating a database profile.
+
+To create a protected backup of a database on the secondary storage resources, database administrators and storage administrators perform the following actions.
+
+|===
+| If you want to...| Then...
+a|
+Create or edit a profile
+a|
+To create or edit a profile, perform the following:
+
+* Enable backup protection to the secondary storage.
+* If you are using Data ONTAP operating in 7-Mode and have installed Protection Manager, you can select the policies created by the storage or backup administrator in Protection Manager.
++
+If you are using Data ONTAP operating in 7-Mode and protection is enabled, SnapManager creates a dataset for the database. A dataset consists of a collection of storage sets along with configuration information associated with their data. The storage sets associated with a dataset include a primary storage set used to export data to clients, and the set of replicas and archives that exist on other storage sets. Datasets represent exportable user data. If the administrator disables protection for a database, SnapManager deletes the dataset.
+
+* If you are using ONTAP, you must select either the _SnapManager_cDOT_Mirror_ or _SnapManager_cDOT_Vault_ policy depending on the SnapMirror or SnapVault relationship created.
+
+When you disable backup protection, a warning message is displayed stating that the dataset will be deleted and restoring or cloning backups for this profile will not be possible.
+
+a|
+View the profile
+a|
+Because the storage administrator has not yet assigned storage resources to implement the protection policy, the profile shows up as nonconformant in both the SnapManager graphical user interface and the profile show command output.
+a|
+Assign storage resources in the Protection Manager Management Console
+a|
+In the Protection Manager Management Console, the storage administrator views the unprotected dataset and assigns a resource pool for each node of the dataset that is associated with the profile. The storage administrator then makes sure that secondary volumes are provisioned and protection relationships are initialized.
+a|
+View the conformant profile in SnapManager
+a|
+In SnapManager, the database administrator sees that the profile has changed to conformant state in both the graphical user interface and in the profile show command output, indicating that resources were assigned.
+a|
+Create the backup
+a|
+
+* Select full backup.
+* Also, select whether the backup should be protected and select the primary retention class (for example, hourly or daily).
+* If you are using Data ONTAP operating in 7-Mode and want to protect the backup immediately to secondary storage overriding the Protection Manager protection schedule, specify the -protectnow option.
+* If you are using ONTAP and want to protect the backup immediately to the secondary storage, specify the protect option.
++
+NOTE: The protectnow option is not applicable in clustered Data ONTAP.
+
+a|
+View the backup
+a|
+The new backup is shown as scheduled for protection, but not yet protected (in the SnapManager interface and in the backup show command output). The Protection state is shown as "`Not protected`".
+a|
+View the backup list
+a|
+After the storage administrator verifies that the backup has been copied to secondary storage, SnapManager changes the backup Protection state from "`Not protected`" to "`Protected`".
+|===

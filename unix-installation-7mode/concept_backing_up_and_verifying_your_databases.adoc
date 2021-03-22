@@ -1,0 +1,26 @@
+---
+permalink: unix-installation-7mode/concept_backing_up_and_verifying_your_databases.html
+sidebar: sidebar
+keywords: 
+summary: 'After installing SnapManager, you can create a basic backup of your database and verify that backup to ensure it does not contain any corrupt files.'
+---
+= Backing up and verifying your databases
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After installing SnapManager, you can create a basic backup of your database and verify that backup to ensure it does not contain any corrupt files.
+
+*Related information*
+
+xref:concept_smsap_isg_snapmanager_backup_overview.adoc[SnapManager backup overview]
+
+xref:concept_smsap_isg_defining_a_backup_strategy.adoc[Defining a backup strategy]
+
+xref:task_smsap_isg_creating_a_profile_for_your_database.adoc[Creating a profile for your database]
+
+xref:task_smsap_isg_backing_up_your_database.adoc[Backing up your database]
+
+xref:task_smsap_isg_verifying_database_backups.adoc[Verifying database backups]
+
+xref:task_smsap_isg_scheduling_recurring_backups.adoc[Scheduling recurring backups]

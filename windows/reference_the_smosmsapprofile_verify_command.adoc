@@ -1,0 +1,93 @@
+---
+permalink: windows/reference_the_smosmsapprofile_verify_command.html
+sidebar: sidebar
+keywords: 
+summary: 'You can run the profile verify command to verify the profile set up. You must mount the database before running this command.'
+---
+= The smsap profile verify command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can run the profile verify command to verify the profile set up. You must mount the database before running this command.
+
+== Syntax
+
+----
+
+        smsap profile verify 
+-profile profile_name 
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *-profile*
++
+Specifies the profile to verify. The profile contains the identifier of the database and other database information.
+
+* *-quiet*
++
+Displays only error messages in the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Displays error, warning, and informational messages in the console.
+
+== Example
+
+The following example verifies the profile:
+
+----
+
+smsap profile verify -profile profileA -verbose
+ [ INFO] SMSAP-13505: SnapDrive environment verification passed.
+[ INFO] SMSAP-13507: JDBC verification for "OS authenticated: NEWDB/hostA.rtp.com" passed.
+[ INFO] SMSAP-13506: SQLPlus verification for database SID "NEWDB" passed.  Environment: [ORACLE_HOME=E:\app\Administrator\product\11.2.0\dbhome_1]
+[ INFO] SMSAP-07431: Saving starting state of the database: Database[NEWDB(OPEN)], Service[RUNNING].
+[ INFO] SMSAP-07431: Saving starting state of the database: Database[NEWDB(OPEN)], Service[RUNNING].
+[ INFO] SD-00016: Discovering storage resources for F:\.
+[ INFO] SD-00017: Finished storage discovery for F:\.
+[ INFO] SD-00016: Discovering storage resources for F:\.
+[ INFO] SD-00017: Finished storage discovery for F:\.
+[ INFO] SD-00016: Discovering storage resources for H:\.
+[ INFO] SD-00017: Finished storage discovery for H:\.
+[ INFO] SD-00016: Discovering storage resources for G:\.
+[ INFO] SD-00017: Finished storage discovery for G:\.
+[ INFO] SD-00016: Discovering storage resources for I:\.
+[ INFO] SD-00017: Finished storage discovery for I:\.
+[ WARN] SMSAP-05071: Database profile HADLEY is not eligible for fast restore:  Restore Plan:
+  Preview:
+
+    The following components will be restored completely via: host side file copy restore
+      F:\NEWDB\SYSAUX01.DBF
+      F:\NEWDB\SYSTEM01.DBF
+      F:\NEWDB\UNDOTBS01.DBF
+      F:\NEWDB\USERS01.DBF
+
+  Analysis:
+
+    The following reasons prevent certain components from being restored completely via: storage side file system restore
+      * Files in file system F:\ not part of the restore scope will be reverted.
+    Components not in restore scope:
+      F:\_TESTCLN\CONTROL01.CTL
+      F:\_TESTCLN\REDO_1.LOG
+      F:\_TESTCLN\REDO_2.LOG
+      F:\_TESTCLN\REDO_3.LOG
+    Components to restore:
+      F:\NEWDB\SYSAUX01.DBF
+      F:\NEWDB\SYSTEM01.DBF
+      F:\NEWDB\UNDOTBS01.DBF
+      F:\NEWDB\USERS01.DBF
+
+  * Reasons denoted with an asterisk (*) are overridable.
+
+[ INFO] SMSAP-07433: Returning the database to its initial state: Database [NEWDB(OPEN)], Service[RUNNING].
+[ INFO] SMSAP-13048: Profile Verify Operation Status: SUCCESS
+[ INFO] SMSAP-13049: Elapsed Time: 0:19:06.949
+Operation Id [N5bc18bd5c3be27a795ce3857093a926a] succeeded.
+----
+
+*Related information*
+
+xref:task_verifying_profiles.adoc[Verifying profiles]

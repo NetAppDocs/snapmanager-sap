@@ -1,0 +1,20 @@
+---
+permalink: unix-administration/concept_restoring_protected_backups_from_secondary_storage.html
+sidebar: sidebar
+keywords: 
+summary: 'You can restore protected backups from secondary storage. However, you cannot restore backups from secondary storage if the backup also exists on primary storage.'
+---
+= Restoring protected backups from secondary storage
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can restore protected backups from secondary storage. However, you cannot restore backups from secondary storage if the backup also exists on primary storage.
+
+*Related information*
+
+xref:reference_the_smosmsapbackup_restore_command.adoc[The smsap backup restore command]
+
+xref:task_restoring_backups_from_an_alternate_location.adoc[Restoring backups from an alternate location]
+
+xref:task_creating_restore_specifications.adoc[Creating restore specifications]

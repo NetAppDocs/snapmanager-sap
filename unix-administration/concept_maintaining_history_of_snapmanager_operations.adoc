@@ -1,0 +1,33 @@
+---
+permalink: unix-administration/concept_maintaining_history_of_snapmanager_operations.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager for SAP enables you to maintain the history of SnapManager operations associated with a single profile or multiple profiles. You can maintain the history either from the SnapManager command-line interface \(CLI\) or graphical user interface \(GUI\). You can view the history of the operations as a report, and use the report for audit compliance purposes.'
+---
+= Maintaining history of SnapManager operations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager for SAP enables you to maintain the history of SnapManager operations associated with a single profile or multiple profiles. You can maintain the history either from the SnapManager command-line interface (CLI) or graphical user interface (GUI). You can view the history of the operations as a report, and use the report for audit compliance purposes.
+
+You can maintain history for the following SnapManager operations:
+
+* Backup create
+* Backup verify
+* Backup restore
+* Clone create
+* Clone split
+
+The history information for the SnapManager operations is maintained based on the retention. You can configure different retention classes for each of the supported SnapManager operations.
+
+The following are some retention classes that you can assign:
+
+* Number of days
+* Number of weeks
+* Number of months
+* Number of operations
+
+Based on the retention, SnapManager purges the history automatically. You can also manually purge the history of the SnapManager operations. If you delete or destroy the profile, all the history information associated with the profile is deleted.
+
+NOTE: After rollback of the host, you cannot view the history details or perform any history-related operations associated with the profile that has been configured for history maintenance.

@@ -1,0 +1,58 @@
+---
+permalink: windows/concept_database_backup_management.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager enables the backing up of data on local storage resources by using post-processing scripts.'
+---
+= Backing up databases
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables the backing up of data on local storage resources by using post-processing scripts.
+
+SnapManager provides the following options to back up, restore, and recover the data in your database:
+
+* Back up the entire database or a portion of it.
++
+If you back up a portion of it, specify a group of tablespaces or a group of data files.
+
+* Back up the data files and archive log files separately.
+* Back up databases to primary storage (also called local storage) and protect them by backing them up to secondary by using postprocessing scripts.
+* Schedule routine backups.
+
+*How SnapManager (3.2 or later) differs from earlier SnapManager versions*
+
+SnapManager (3.1 or earlier) enables you to create full database backups that contain data files, control files, and archive log files.
+
+SnapManager (3.1 or earlier) manages only the data files. The archive log files are maintained by using solutions outside SnapManager.
+
+SnapManager (3.1 or earlier) imposes the following constraints in managing database backups:
+
+* Performance impact
++
+When you perform a full, online database backup (when the database is in the backup mode), the performance of the database reduces for the period of time until the backup is created. In SnapManager (3.2 or later), limited database backups and frequent archive log backups can be taken. Taking frequent archive log backups helps in preventing the database from being placed in backup mode.
+
+* Manual restore and recovery
++
+When the required archive log files do not exist in the active file system, database administrators have to identify which backup contains the archive log files, mount the database backups, and recover the restored database. This process is time consuming.
+
+* Space constraints
++
+When a database backup is created, the archive log destinations become full causing the database not to respond until sufficient space is created on the storage. In SnapManager (3.2 or later), the archive log files can be pruned from the active file system to free space periodically.
+
+*Why archive log backups are important*
+
+Archive log files are required to roll the database forward after a restore operation is performed. Every transaction on an Oracle database is captured in the archive log files (if the database is in the archive log mode). Database administrators can restore the database backups by using the archive log files.
+
+*Advantages of archivelog-only backups*
+
+* Provides separate retention duration for archivelog-only backups
++
+You can have less retention duration for the archivelog-only backups that are required for recovery.
+
+* Protects the archivelog-only backups by using post-processing scripts
+* Improves the performance of the database
+* Consolidates archive log backups
++
+SnapManager consolidates the archive log backups every time you take a backup by freeing the duplicate archive log backups.

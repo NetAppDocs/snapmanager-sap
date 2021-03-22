@@ -1,0 +1,49 @@
+---
+permalink: unix-administration/reference_troubleshooting_storage_system_renaming_issue.html
+sidebar: sidebar
+keywords: 
+summary: 'You might face issues when renaming a storage system or after you have successfully renamed the storage system.'
+---
+= Troubleshooting storage system renaming issue
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You might face issues when renaming a storage system or after you have successfully renamed the storage system.
+
+When you try to rename the storage system, the operation might fail with the following error message: SMSAP-05085 No storage controller "fas3020-rtp07New" is found to be associated with the profile
+
+You must enter the IP address or name of the storage system that is listed when you run the smsap storage list command.
+
+After you rename the storage system, SnapManager operations might fail if SnapManager fails to recognize the storage system. You must perform some additional steps in the DataFabric Manager server host and the SnapManager server host to resolve this issue.
+
+Perform the following steps in the DataFabric Manager server host:
+
+. Delete the IP address and host of the earlier storage system in the host file located at /etc/hosts in the DataFabric Manager server host.
+. Add the new IP address and host of the new storage system in the host file located at /etc/hosts in the DataFabric Manager server host.
+. Change the storage host name by entering the following command: `dfm host rename -a old_host_namenew_host_name`
+. Set the new IP address in the host by entering the following command: `dfm host set old_host_name_or_objId hostPrimaryAddress = new_storage_controller_ip_address`
++
+NOTE: You must perform this step only if you have specified the IP address as the new storage system name.
+
+. Update the new storage system name in the DataFabric Manager server host by entering the following command: `dfm host diag old_storage_name`
++
+You can verify that the earlier storage controller name is replaced with new storage controller name by entering the following command: `dfm host discover new_storage_name`
+
+Perform the following steps as a root user in the SnapManager server host.
+
+NOTE: When you enter the new storage controller name, ensure that you use the system alias name and not the fully qualified domain name (FQDN).
+
+. Delete the earlier storage system name by entering the following command: `snapdrive config delete old_storage_name`
++
+NOTE: If you do not delete the earlier storage system name, then all the SnapManager operations fail.
+
+. Delete the IP address and host of the earlier storage system in the host file located at etc/hosts in the target database host.
+. Add the new IP address and host of the new storage system in the host file located at /etc/hosts in the target database host.
+. Add the new storage system name by entering the following command: `snapdrive config set root new_storage_name`
+. Map the earlier and later storage system names by entering the following command: `snapdrive config migrate set old_storage_namenew_storage_name`
+. Delete the management path of the earlier storage system by entering the following command:``snapdrive config delete -mgmtpath old_storage_name``
+. Add the management path for the new storage system by entering the following command: `snapdrive config set -mgmtpath new_storage_name`
+. Update the dataset for both data files and archive log files with the new storage system name by entering the following command: `snapdrive dataset changehostname -dndataset_name-oldnameold_storage_name-newnamenew_storage_name`
+. Update the profile for the new storage system name by entering the following command: `smsap storage rename -profileprofile_name-oldnameold_storage_name-newnamenew_storage_name`
+. Verify the storage system associated with the profile by entering the following command: `smsap storage list -profileprofile_name`

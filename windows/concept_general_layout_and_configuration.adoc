@@ -1,0 +1,36 @@
+---
+permalink: windows/concept_general_layout_and_configuration.html
+sidebar: sidebar
+keywords: 
+summary: 'You can find information about the recommended general database layouts and storage configurations to avoid issues related to disk groups, file types, and tablespaces.'
+---
+= General layout and configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can find information about the recommended general database layouts and storage configurations to avoid issues related to disk groups, file types, and tablespaces.
+
+* Do not include files from more than one type of SAN file system in your database.
++
+All files making up a database must reside on the same type of file system.
+
+* SnapManager requires a multiple of 4K block size.
+
+The following are some guidelines for volume separation:
+
+* Data files for only one database must be in the volume.
+* You must use separate volumes for each of the following file classifications: database binaries, data files, online redo log files, archived redo log files, and control files.
+* You do not need to create a separate volume for temporary database files, because SnapManager does not back up temporary database files.
+
+SAP uses a standard layout for Oracle database installations. In this layout, SAP places copies of the Oracle control file in E:\oracle\SID\origlogA, E:\oracle\SID\origlogB, and E:\oracle\SID\sapdata1 file systems.
+
+NOTE: Because BR*Tools backups include the Oracle and SAP profiles located in the database subdirectory of the Oracle installation, the Oracle installation must be located on storage.
+
+In the case of a new installation, you can modify the location of the control files by using SAPINST and move the control file normally placed in the sapdata1 file system to a file system that does not reside in the same volume as the data files. (SAPINST is the tool that SAP provides for installing SAP systems.)
+
+For more information, see the _SnapManager for SAP Best Practices_.
+
+*Related information*
+
+http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices: media.netapp.com/documents/tr-3823.pdf]

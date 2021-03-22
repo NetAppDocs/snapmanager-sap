@@ -1,0 +1,90 @@
+---
+permalink: windows/reference_the_smosmsap_notification_set_command.html
+sidebar: sidebar
+keywords: 
+summary: 'You can use the notification set command to configure the mail server.'
+---
+= The smsap notification set command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use the notification set command to configure the mail server.
+
+== Syntax
+
+----
+
+        smsap notification set 
+-sender-email email_address 
+-mailhost mailhost 
+-mailport mailport 
+[-authentication 
+-username username 
+-password password] 
+-repository 
+-dbname repo_service_name 
+-port repo_port] 
+-host repo_host 
+-login -username repo_username 
+[-quiet | -verbose]
+----
+
+== Parameters
+
+* *-sender-email email_address*
++
+Specifies the sender's email address from which the email alerts are sent. From SnapManager 3.2 for SAP, you can include a hyphen (-) while specifying the domain name of the email address. For example, you can specify the sender email address as -sender-email07lbfmdatacenter@continental-corporation.com.
+
+* *-mailhost mailhost*
++
+Specifies the name or IP address of the host server that handles email notifications.
+
+* *-mailport mailport*
++
+Specifies the mail server port number.
+
+* *-authentication -username username -password password*
++
+Specifies authentication details for the email address. You must specify the user name and password.
+
+* *-repository*
++
+Specifies the details of the repository database.
+
+* *-port repo_port*
++
+Specifies the Transmission Control Protocol (TCP) port number used to access the repository database.
+
+* *-dbname repo_service_name*
++
+Specifies the name of the repository database. You can use either the global name or the system identifier.
+
+* *-host repo_host*
++
+Specifies the name or IP address of the host where the repository database resides.
+
+* *-login*
++
+Specifies the repository login details. This is optional. If not specified, SnapManager defaults to OS Authentication Connection Mode.
+
+* *-username repo_username*
++
+Specifies the user name required to access the repository database.
+
+* *-quiet*
++
+Displays only error messages in the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Displays error, warning, and informational messages in the console.
+
+== Example
+
+The following example configures the mail server:
+
+----
+smsap notification set -sender-email admin@org.com -mailhost hostname.org.com -mailport 25 authentication -username davis -password davis -repository -port 1521 -dbname SMSAPREPO -host hotspur
+-login -username grabal21 -verbose
+----

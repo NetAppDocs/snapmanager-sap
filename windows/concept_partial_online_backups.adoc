@@ -1,0 +1,30 @@
+---
+permalink: windows/concept_partial_online_backups.html
+sidebar: sidebar
+keywords: 
+summary: 'Instead of a full backup, you can choose to perform a partial backup of the tablespaces in a database. While SnapManager takes a Snapshot copy of volumes for full backups, SnapManager takes a Snapshot copy of each specified tablespace for partial backups.'
+---
+= Partial online backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Instead of a full backup, you can choose to perform a partial backup of the tablespaces in a database. While SnapManager takes a Snapshot copy of volumes for _full_ backups, SnapManager takes a Snapshot copy of each specified tablespace for _partial_ backups.
+
+Because the tablespace level is the lowest level that Oracle allows into backup mode, SnapManager processes backups at the tablespace level, even if you specify a data file in a tablespace.
+
+With a partial backup, each tablespace exists in backup mode for a shorter amount of time compared to a full backup. During an online backup, the database is always available to users; however, the database must perform more work and the host must perform more physical I/O. In addition, because it is taking Snapshot copies of each tablespace specified or each tablespace containing a specified data file instead of the entire volume, SnapManager takes more Snapshot copies.
+
+SnapManager takes Snapshot copies of specific tablespaces or data files. The partial backup algorithm is a loop that SnapManager repeats until it has taken a Snapshot copy of each specified tablespace or data file.
+
+NOTE: Although you can perform a partial backup, it is recommended that you always perform a full backup of the entire database.
+
+During a partial backup, SnapManager performs these actions:
+
+. Places the tablespace containing the data files into backup mode.
+. Takes a Snapshot copy of all the volumes used by the tablespace.
+. Takes the tablespace out of backup mode.
+. Continues this process, until it has taken a Snapshot copy of all the tablespaces or files.
+. Forces a log switch and then archives the log files.
+. Generates backup control files.
+. Takes a Snapshot copy of the log files and the backup control files.

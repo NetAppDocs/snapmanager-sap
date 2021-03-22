@@ -1,0 +1,25 @@
+---
+permalink: windows/task_post_rollback_tasks.html
+sidebar: sidebar
+keywords: 
+summary: 'You must perform some additional steps after you rollback a repository database and downgrade the SnapManager host from SnapManager 3.2 to SnapManager 3.0, to view the schedules created in the earlier version of the repository database.'
+---
+= Post rollback tasks
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must perform some additional steps after you rollback a repository database and downgrade the SnapManager host from SnapManager 3.2 to SnapManager 3.0, to view the schedules created in the earlier version of the repository database.
+
+. Navigate to C:\Program Files\NetApp\SnapManager for Oracle\repositories.
++
+The repositories directory might contain two files for each repository. The file name with the number sign (#) is created using SnapManager 3.1 or later and the file name with the hyphen (-) is created using SnapManager 3.0.
++
+The file names might be as follows:
+
+ ** repository#SMSAP300a#SMSAPREPO1#10.72.197.141#1521
+ ** repository-smsap300a-smsaprepo1-10.72.197.141-1521
+
+. Replace the number sign (#) in the file name with the hyphen (-).
++
+The file name that had the number sign (#), now contains hyphen (-): repository-SMSAP300a-SMSAPREPO1-10.72.197.141-1521.

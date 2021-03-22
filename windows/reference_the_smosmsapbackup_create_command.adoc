@@ -1,0 +1,161 @@
+---
+permalink: windows/reference_the_smosmsapbackup_create_command.html
+sidebar: sidebar
+keywords: 
+summary: 'You can run the backup create command to create database backups on one or more storage systems.'
+---
+= The smsap backup create command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can run the backup create command to create database backups on one or more storage systems.
+
+== Syntax
+
+NOTE: Before you run this command, you must create a database profile by using the profile create command.
+
+----
+
+        smsap backup create
+-profile profile_name 
+{\[-full\{-auto \| -online \| -offline\}\[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\} \[-verify\]  |
+\[-data \[\[-files files \[files\]\] \|  
+\[-tablespaces tablespaces \[tablespaces\]\] \[-label label\] \{-auto \| -online \| -offline\}
+\[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\} \[-verify\] |
+\[-archivelogs \[-label label\]\] \[-comment comment\]}
+
+\[-backup-dest path1 \[ , path2\]\] 
+\[-exclude-dest path1 \[ , path2\]\] 
+\[-prunelogs \{-all \| -until-scn until-scn \| -until-date yyyy-MM-dd:HH:mm:ss\] \| -before \{-months \| -days \| -weeks \| -hours}}
+-prune-dest prune_dest1,\[prune_dest2\]\]
+\[-taskspec taskspec\]
+\[-dump\]
+-force 
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *-profile profile_name*
++
+Specifies the name of the profile related to the database you want to back up. The profile contains the identifier of the database and other database information.
+
+* *-auto option*
++
+If the database is in the mounted or offline state, SnapManager performs an offline backup. If the database is in the open or online state, SnapManager performs an online backup. If you use the -force option with the -offline option, SnapManager forces an offline backup even if the database is currently online.
+
+* *-online option*
++
+Specifies an online database backup.
+
+ ** If the local instance is in the shutdown state and at least one instance is in the open state, you can use the -force option to change the local instance to the mounted state.
+ ** If no instance is in open state, you can use the -force option to change the local instance to open state.
+
+* *-offline option*
++
+Specifies an offline backup while the database is in the shut down state. If the database is in the open or mounted state, the backup fails. If the -force option is used, SnapManager attempts to alter the database state to shut down the database for an offline backup.
+
+* *-full option*
++
+Backs up the entire database. This includes all of the data, archived log, and control files. The archived redo logs and control files are backed up no matter what type of backup you perform. If you want to back up only a portion of the database, use the -files option or -tablespaces option.
+
+* *-data option*
++
+Specifies the data files.
+
+* *-files list*
++
+Backs up only the specified data files plus the archived log and control files. Separate the list of file names with spaces. If the database is in the open state, SnapManager verifies that the appropriate tablespaces are in online backup mode.
+
+* *-tablespaces tablespaces*
++
+Backs up only the specified database tablespaces plus the archived log and control files. Separate the tablespace names with spaces. If the database is in the open state, SnapManager verifies that the appropriate tablespaces are in online backup mode.
+
+* *-label label*
++
+Specifies an optional name for this backup. This name must be unique within the profile. The name can contain letters, numbers, underscores (_), and hyphens (-). It cannot start with a hyphen. If you do not specify a label, SnapManager creates a default label in the scope_type_date format:
+
+ ** Scope is either F to indicate a full backup or P to indicate a partial backup.
+ ** Type is C to indicate an offline (cold) backup, H to indicate an online (hot) backup, or A to indicate auto backup, for example, P_A_20081010060037IST.
+ ** Date is the year, month, day, and time of the backup.
++
+SnapManager uses a 24-hour clock.
+
++
+For example, if you performed a full backup with the database offline on 16th January 2007, at 5:45:16 p.m. Eastern Standard Time, SnapManager would create the label F_C_20070116174516EST.
+
+* *-comment string*
++
+Specifies an optional comment to describe this backup. Enclose the string in single quotation marks (').
++
+NOTE: Some shells strip the quotation marks off. In this case, you must include the quotation mark with a backslash (\). For example, you might need to enter the following: `\' this is a comment\'`.
+
+* *-verify option*
++
+Verifies that the files in the backup are not corrupt by running the Oracle dbv utility.
++
+NOTE: If you specify the -verify option, the backup operation is not completed until the verify operation is complete.
+
+* *-force option*
++
+Forces a state change if the database is not in the correct state. For example, SnapManager might change the state of the database from online to offline, based on the type of backup you specify and the state that the database is in.
+
+ ** If the local instance is in the shutdown state and at least one instance is in the open state, then using the -force option changes the local instance to the mounted state.
+ ** If no instance is in the open state, using the -force option changes the local instance to the open state.
+
+* *-quiet*
++
+Displays only error messages in the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Displays error, warning, and informational messages in the console.
+
+* *-retain { -hourly | -daily | -weekly | -monthly | -unlimited}*
++
+Specifies whether the backup should be retained on an hourly, daily, weekly, monthly, or unlimited basis. If the -retain option is not specified, the retention class defaults to -hourly option. To retain backups forever, use the -unlimited option. The -unlimited option makes the backup ineligible for deletion by the retention policy.
+
+* *-archivelogs option*
++
+Creates archive log backup.
+
+* *-backup-dest path1, [, [path2]]*
++
+Specifies the archive log destinations to be backed up for archive log backup.
+
+* *-exclude-dest path1, [, [path2]]*
++
+Specifies the archive log destinations to be excluded from the backup.
+
+* *-prunelogs {-all | -until-scnuntil-scn | -until-dateyyyy-MM-dd:HH:mm:ss | -before {-months | -days | -weeks | -hours}*
++
+Deletes the archive log files from the archive log destinations based on options provided while creating a backup. The -all option deletes all of the archive log files from the archive log destinations. The -until-scn option deletes the archive log files until a specified System Change Number (SCN). The -until-date option deletes the archive log files until the specified time period. The -before option deletes the archive log files before the specified time period (days, months, weeks, hours).
+
+* *-prune-dest prune_dest1,prune_dest2*
++
+Deletes the archive log files from the archive log destinations while creating the backup.
+
+* *-taskspec taskspec*
++
+Specifies the task specification XML file that can be used for preprocessing activity or post-processing activity of the backup operation. The complete path of the XML file should be provided while giving the -taskspec option.
+
+* *-dump option*
++
+Collects the dump files after a successful or failed database backup operation.
+
+== Example command
+
+The following command creates a full online backup, creates a backup to secondary storage, and sets the retention policy to daily:
+
+----
+smsap backup create -profile SALES1 -full -online
+-label full_backup_sales_May -profile SALESDB -force -retain -daily
+Operation Id [8abc01ec0e79356d010e793581f70001] succeeded.
+----
+
+*Related information*
+
+xref:task_creating_database_backups.adoc[Creating database backups]
+
+xref:reference_the_smosmsapprofile_create_command.adoc[The smsap profile create command]

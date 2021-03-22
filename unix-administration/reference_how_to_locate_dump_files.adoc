@@ -1,0 +1,58 @@
+---
+permalink: unix-administration/reference_how_to_locate_dump_files.html
+sidebar: sidebar
+keywords: 
+summary: 'The dump file is located at the client system for easy access. These files are helpful if you need to troubleshoot a problem related to profile, system, or any operation.'
+---
+= How to locate dump files
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The dump file is located at the client system for easy access. These files are helpful if you need to troubleshoot a problem related to profile, system, or any operation.
+
+The dump file is located in the user's home directory on the client system.
+
+* If you are using the graphical user interface (GUI), the dump file is located at:
++
+----
+user_home/Application Data/NetApp/smsap/3.3.0/smsap_dump dump_file_type_name
+server_host.jar
+----
+
+* If you are using the command-line interface (CLI), the dump file is located at:
++
+----
+user_home/.netapp/smsap/3.3.0/smsap_dump_dump_file_type_name server_host.jar
+----
+
+The dump file contains the output of the dump command. The name of the file depends on the information supplied. The following table shows the types of dump operations and the resulting file names:
+
+|===
+| Type of dump operation| Resulting file name
+a|
+Operation dump command with operation ID
+a|
+smsap_dump_operation-id.jar
+a|
+Operation dump command with no operation ID
+a|
+smsap operation dump -profile VH1 -verbose The following output is displayed:
+
+----
+smsap operation dump -profile VH1 -verbose
+[ INFO] SMSAP-13048: Dump Operation Status: SUCCESS
+[ INFO] SMSAP-13049: Elapsed Time: 0:00:01.404
+Dump file created.
+Path: /oracle/VH1/<path>/smsap/3.3.0/smsap_dump_VH1_kaw.rtp.foo.com.jar
+----
+
+a|
+System dump command
+a|
+smsap_dump_host-name.jar
+a|
+Profile dump command
+a|
+smsap_dump_profile-name_host-name.jar
+|===

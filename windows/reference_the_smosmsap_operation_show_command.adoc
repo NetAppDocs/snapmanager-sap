@@ -1,0 +1,56 @@
+---
+permalink: windows/reference_the_smosmsap_operation_show_command.html
+sidebar: sidebar
+keywords: 
+summary: 'You can run the operation show command to list the summary information of all the operations performed against the specified profile. The output lists the client user \(the user for the client PC\) and the effective user \(the user in SnapManager who is valid on the selected host\).'
+---
+= The smsap operation show command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can run the operation show command to list the summary information of all the operations performed against the specified profile. The output lists the client user (the user for the client PC) and the effective user (the user in SnapManager who is valid on the selected host).
+
+== Syntax
+
+----
+
+        smsap operation show 
+-profile profile_name 
+\[-label label \| -id id\]
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *-profile profile_name*
++
+Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
+
+* *-label label*
++
+Specifies the label for the operation.
+
+* *-id id*
++
+Specifies the identifier for the operation.
+
+* *-quiet*
++
+Optional: Displays only error messages in the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Optional: Displays error, warning, and informational messages in the console.
+
+== Example
+
+The following command line shows detailed information about an operation:
+
+----
+smsap operation show -id 8ac861781d0ac992011d0ac999680001  -profile CER
+----
+
+*Related information*
+
+xref:task_viewing_operation_details.adoc[Viewing operation details]

@@ -1,0 +1,37 @@
+---
+permalink: windows/task_updating_the_existing_repository.html
+sidebar: sidebar
+keywords: SnapManager
+summary: 'You do need not to update the existing repository if you are upgrading from SnapManager 3.3.x to SnapManager 3.4 or later, but for all other upgrade paths you must update the existing repository so that you can access it after the upgrade.'
+---
+= Updating the existing repository
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You do need not to update the existing repository if you are upgrading from SnapManager 3.3.x to SnapManager 3.4 or later, but for all other upgrade paths you must update the existing repository so that you can access it after the upgrade.
+
+* The upgraded SnapManager server must have been started and verified.
+* A backup of the existing repository must exist.
+* If you are upgrading from any version earlier than SnapManager 3.1 to SnapManager 3.3 or later, you must first upgrade to SnapManager 3.2.
++
+After upgrading to SnapManager 3.2, you can then upgrade to SnapManager 3.3 or later.
+
+* After you update the repository, you cannot use the repository with an earlier version of SnapManager.
+
+. Update the existing repository: `smsap repository update -repository -dbname repository_service_name -host repository_host_name -login -username repository_user_name -port repository_port`
+ ** The repository user name, repository service name, and repository host name can consist of alphanumeric characters, a minus sign, an underscore, and a period.
+ ** The repository port can be any valid port number.
+The other options used while updating the existing repository are as follows:
+ ** The force option
+ ** The noprompt option
+ ** The quiet option
+ ** The verbose option
+
++
+----
+smsap repository update -repository -dbname HR1
+-host server1 -login -username admin -port 1521
+----
+
+Restart the SnapManager server to restart any associated schedules.

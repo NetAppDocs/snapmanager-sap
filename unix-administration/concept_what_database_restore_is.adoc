@@ -1,0 +1,102 @@
+---
+permalink: unix-administration/concept_what_database_restore_is.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager enables you to perform volume-based or file-based backup and restore operations.'
+---
+= What database restore is
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to perform volume-based orfile-based backup and restore operations.
+
+The following table describes the restore methods:
+
+|===
+| Restore process| Details
+a|
+Volume-based fast restores (from primary storage)
+a|
+SnapManager restores the data files of a database by restoring a full volume. This default process is the fastest method for restoring your database.
+a|
+File-based restores
+a|
+Storage-side full file system restore (from primary or secondary): SnapManager performs a full logical unit number (LUN) restore.
+a|
+Storage-side file restore: SnapManager performs a single file snap restore (SFSR) in a NAS environment. In an SFSR, each of the files or LUNs that represents the protected objects are restored.
+
+a|
+Host-side file copy restore (from primary or secondary): SnapManager clones the local backup using either a LUN or a FlexClone. The clone is mounted and then SnapManager copies the host files from the clone into the active file system.
+|===
+Although the default is the fast restore process, administrators can choose either type. In the fast restore process, SnapManager provides information about the conditions that prevent the fast restore process from completing and those that might affect the fast restore but which administrators can ignore if they choose to continue with the process.
+
+NOTE: You cannot restore a backup from the secondary storage, if the backup also exists on the primary storage.
+
+When the fast restore operation is completed, SnapManager performs the following tasks:
+
+* Frees more recent backups (taken after the backup was restored) in the same profile, because their Snapshot copies no longer exist on the primary storage.
+* Deletes all Snapshot copies for backups in the same profile that had any Snapshot copies automatically deleted by the fast restore process.
++
+This prevents backups from being partially freed. For example, Backup_A was created first and then Backup_B was created. Each has a Snapshot copy for the data files and one for the archive logs. After SnapManager restores Backup_A by using the fast restore process, SnapManager automatically deletes the data file Snapshot copy from Backup_B. Because the archive log is not restored in the fast restore process, SnapManager must delete Backup_B's Snapshot copy of the archive logs after the fast restore process completes.
+
+== Fast restore
+
+Fast restore or volume-based restore is so named because it is the fastest possible restore method. The entire storage system volume is reverted to a Snapshot copy. At the storage level, this restore is almost instantaneous. However, performing a volume restore can have the following negative consequences, and therefore must be used with caution:
+
+* The entire storage side volume is reverted, including the following:
+ ** Files that were not considered as part of the backup
+ ** Other files, file systems, or LUNs on the volume
+* All the Snapshot copies that were created after the Snapshot copy to which the volume is being reverted are deleted.
++
+For example, you can no longer restore Tuesday's backup if you volume restored Monday's backup.
+
+* Relationships to secondary storage systems are broken if the restored Snapshot copy is older than the baseline Snapshot copy in the relationship.
+
+== Storage-side full file system restore
+
+A storage-side full file system restore is performed when a volume restore cannot be performed, but the entire files system can be restored on the storage system.
+
+When a storage-side file system restore is performed, the following occurs:
+
+* In a SAN environment, all the LUNs used by the file system (and underlying volume group if any) are restored on the storage system.
+* In a NAS environment, every file in the file system is restored on the storage system.
++
+For NAS environments, this restore mechanism does not provide additional benefit over storage side file restore.
+
+When a storage-side file system restore is performed, the following occurs, depending on the storage location:
+
+* When SnapManager restores from primary storage systems, the LUNs (SAN)or files (NAS) are restored in place via SFSR.
+* When SnapManager restores from secondary storage systems, the LUNs (SAN)or files (NAS) are copied from secondary storage systems back to the primary storage system over the network.
+
+Because the file system is fully restored, files that are not part of the backup are reverted as well. An override is required if files, which are not part of the restore, exist in the file system that is being restored.
+
+== Storage-side file restore
+
+A storage-side file restore is sometimes performed when a storage-side file system restore cannot be performed. In a storage-side file restore, individual files within a file system are restored directly on the storage systems.
+
+This type of restore can be performed only in NFS environments or in certain cases in ASM environments.
+
+When a storage-side file restore is performed, the following occurs:
+
+* When SnapManager restores NFS files from primary storage systems, the individual files are restored in place by using SFSR.
+* When SnapManager restores NFS files from secondary storage systems, the individual files are copied back to the primary storage system over the storage network.
+
+== Host-side file restore
+
+A host-side file copy restore is used as a last resort in SAN environments when fast restore, storage side file system restore, and storage side file restore cannot be performed.
+
+A host-side file copy restore involves the following tasks:
+
+* Cloning the storage
+* Connecting the cloned storage to the host
+* Copying files out of the clone file systems back into the active file systems
+* Disconnecting the clone storage from the host
+* Deleting the clone storage
+
+When restoring from the secondary storage, SnapManager first attempts to restore data directly from the secondary storage system to the primary storage system (without involving the host). If SnapManager cannot perform this type of restore (for example, if files not part of the restore exist in a file system), then SnapManager will perform host-side file copy restore. SnapManager has two methods of performing a host-side file copy restore from the secondary storage. The method SnapManager selects is configured in the smsap.config file.
+
+* Direct: SnapManager clones the data on the secondary storage, mounts the cloned data from the secondary storage system to the host, and then copies data out of the clone into the active environment. This is the default secondary access policy.
+* Indirect: SnapManager first copies the data to a temporary volume on the primary storage, then mounts the data from the temporary volume to the host, and then copies data out of the temporary volume into the active environment. This secondary access policy should be used only if the host does not have direct access to the secondary storage system. Restores using this method take twice as long as the direct secondary access policy because two copies of the data are made.
+
+The decision whether to use the direct or indirect method is controlled by the value of the restore.secondaryAccessPolicy parameter in the smsap.config configuration file. The default is direct.

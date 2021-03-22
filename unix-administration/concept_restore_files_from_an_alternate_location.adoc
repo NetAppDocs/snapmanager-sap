@@ -1,0 +1,27 @@
+---
+permalink: unix-administration/concept_restore_files_from_an_alternate_location.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager enables you to restore data files and control files from a location other than that of the Snapshot copies in the original volume.'
+---
+= Restore files from an alternate location
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to restore data files and control files from a location other than that of the Snapshot copies in the original volume.
+
+The original location is the location of the file on the active file system at the time of the backup. The alternate location is the location from which a file will be restored.
+
+You can restore the following data from an alternate location:
+
+* The data files from an intermediate file system to an active file system
+* The blocks of data from an intermediate raw device into an active raw device
+
+Recovery is automated by SnapManager. When recovering files from external locations, SnapManager uses the recovery automatic from location command.
+
+SnapManager also uses Oracle Recovery Manager (RMAN) to recover files. The files to be recovered should be recognizable by Oracle. The file names should be in the default format. When recovering from flash recovery area, SnapManager provides the translated path to Oracle. Oracle though, does not recover from the flash recovery area because it cannot generate the correct file name. Ideally, flash recovery area is a destination that is intended to work with RMAN.
+
+*Related information*
+
+xref:task_creating_restore_specifications.adoc[Creating restore specifications]

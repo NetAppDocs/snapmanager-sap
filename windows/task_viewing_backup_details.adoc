@@ -1,0 +1,64 @@
+---
+permalink: windows/task_viewing_backup_details.html
+sidebar: sidebar
+keywords: 
+summary: 'You can view the detailed information about a particular backup in a profile by using the smsap backup show command.'
+---
+= Viewing backup details
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can view the detailed information about a particular backup in a profile by using the smsap backup show command.
+
+The smsap backup show command displays the following information for each backup:
+
+* The backup ID
+* Whether the backup succeeded or failed
+* Backup scope (full, partial, online, or offline)
+* Backup mode
+* Mount status
+* The backup label
+* Comment
+* The date and time when the operation started and ended
+* Information about whether the backup was verified
+* The backup retention class
+* The database and host name
+* The checkpoint System Change Number (SCN)
+* The end backup SCN (for online backups only)
+* The tablespaces and data files from the database backed up
+* The control files from the database backed up
+* The archive logs from the database backed up
+* The storage system and volumes where the files are located
+* The Snapshot copies made and their location
+* The status of the primary storage resources
+* The backup protection status
+* Backup mode
+
+If you specify the -verbose option, the following additional information is displayed:
+
+* The clones made from the backup, if there are any
+* Verification information
+* If the backup is mounted, SnapManager displays the mount points in use
+
+For the archive log file backup, the same information is displayed as that of the other database backup except for the following information:
+
+* Checkpoint SCN
+* End Backup SCN
+* Tablespace
+* Control files
+
+However, archive log file backup contains the following additional information:
+
+* The first change number of the backup
+* The next change number of the backup
+* Thread number
+* Reset logs ID
+* Incarnation
+* Log file name
+
+. Enter the following command:``smsap backup show -profileprofile_name {-labellabel [data | -archivelogs] | -id id [-quiet | -verbose]``
+
+*Related information*
+
+xref:reference_the_smosmsapbackup_show_command.adoc[The smsap backup show command]

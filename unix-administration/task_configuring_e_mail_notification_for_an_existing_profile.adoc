@@ -1,0 +1,21 @@
+---
+permalink: unix-administration/task_configuring_e_mail_notification_for_an_existing_profile.html
+sidebar: sidebar
+keywords: 
+summary: 'When you are updating a profile, you can configure to receive an email notification on completion of the database operation.'
+---
+= Configuring email notification for an existing profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you are updating a profile, you can configure to receive an email notification on completion of the database operation.
+
+* You must configure the email address from which the alerts are sent.
+* You must enter a single email address or multiple email addresses to which alerts will be sent.
++
+You can use a comma-separated list for multiple addresses. You must ensure that there is no space between the comma and the next email address. Optionally, you can add a subject to the email as well.
+
+. Enter the following command:``smsap profile update -profileprofile [-profile-passwordprofile_password][-database-dbnamedb_dbname-host db_host [-siddb_sid] [-login -usernamedb_username-password db_password-port db_port]] [{-rman{-controlfile | {-login  -usernamerman_username-password  rman_password-tnsname  rman_tnsname}}} | -remove-rman]-osaccountosaccount-osgrouposgroup [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][[-protect [-protection-policypolicy_name]]| [[-noprotect]] [-notification [-success-emailemail_address1,email_address2-subjectsubject_pattern] [-failure-emailemail_address1,email_address2-subjectsubject_pattern]]``
++
+You can use the success option to receive a notification only for successful database operations and the failure option to receive a notification only for failed database operations.

@@ -1,0 +1,38 @@
+---
+permalink: unix-administration/concept_what_user_authentication_is.html
+sidebar: sidebar
+keywords: 
+summary: 'In addition to using role-based access control \(RBAC\), SnapManager authenticates the user by using an operating system \(OS\) login on the host where the SnapManager server is running. You can enable user authentication either through password prompts on operations or by using the smsap credential set.'
+---
+= What user authentication is
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+In addition to using role-based access control (RBAC),SnapManager authenticates the user by using an operating system (OS) login on the host where the SnapManager server is running. You can enable user authentication either through password prompts on operations or by using the smsap credential set.
+
+User authentication requirements depend on where the operation is performed.
+
+* If the SnapManager client is on the same server as the SnapManager host, you are authenticated by the OS credentials.
++
+You are not prompted for a password because you are already logged in to the host where the SnapManager server is running.
+
+* If the SnapManager client and the SnapManager server are on different hosts, SnapManager needs to authenticate you with both OS credentials.
++
+SnapManager prompts you for passwords for any operation, if you have not saved your OS credentials in your SnapManager user credential cache. If you enter the smsap credential set -host command, you save the OS credentials in your SnapManager credential cache file and so SnapManager does not prompt for the password for any operation.
+
+If you are authenticated with the SnapManager server, you are considered the effective user. The effective user for any operation must be a valid user account on the host on which the operation is executed. For example, if you execute a clone operation, you should be able to log in to the destination host for the clone.
+
+NOTE: SnapManager for SAP might fail in authorizing users created in Central Active Directory Services, such as LDAP and ADS. To ensure the authentication does not fail, you must set configurable auth.disableServerAuthorization to true.
+
+As an effective user you can manage credentials in the following ways:
+
+* Optionally, you can configure SnapManager to store user credentials in the SnapManager user credentials file.
++
+By default, SnapManager does not store host credentials. You might want to change this, for example, if you have custom scripts that require access on a remote host. The remote clone operation is an example of a SnapManager operation that needs the login credentials of a user for a remote host. To have SnapManager remember user host login credentials in the SnapManager user credentials cache, set the host.credentials.persist property to true in the smsap.config file.
+
+* You can authorize user access to the repository.
+* You can authorize user access to profiles.
+* You can view all user credentials.
+* You can clear a user's credentials for all resources (hosts, repositories, and profiles).
+* You can delete credentials for individual resources (hosts, repositories, and profiles).

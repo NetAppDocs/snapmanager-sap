@@ -1,0 +1,66 @@
+---
+permalink: unix-administration/task_using_protection_manager_to_configure_secondary_backup_schedules.html
+sidebar: sidebar
+keywords: 
+summary: 'To support backup of the database to secondary storage, the storage administrator uses Protection Manager to configure a backup schedule.'
+---
+= Using Protection Manager to configure secondary backup schedules
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+To support backup of the database to secondary storage, the storage administrator uses Protection Manager to configure a backup schedule.
+
+Before configuring the schedule for secondary backups, the storage administrator confers with the DBA partner for the following information:
+
+* The schedule that the DBA wants the secondary backups to follow.
++
+In this case, once-daily backups occur at 7 p.m. and once-weekly backups occur on Saturday at 1 a.m.
+
+. Go to the Protection Manager's NetApp Management Console.
+. From the menu bar, click *Policies* > *Protection* > *Schedules*.
++
+The Schedules tab of the Protection Policies window is displayed.
+
+. Select the Daily schedule**Daily at 8:00 PM** in the list of schedules.
+. Click *Copy*.
++
+A new Daily schedule, *Copy of Daily at 8:00 PM*, is displayed in the list. It is already selected.
+
+. Click *Edit*.
++
+The Edit Daily Schedule property sheet opens to the Schedule tab.
+
+. Change the schedule name to *Payroll Daily at 7 PM*, update the description, then click *Apply*.
++
+Your changes are saved.
+
+. Click the *Daily Events* tab.
++
+The schedule's current Daily backup time of 8:00 p.m. is displayed.
+
+. Click *Add* and enter *7:00 PM* in the new time field, then click *Apply*.
++
+The schedule's current Daily backup time is now 7:00 p.m.
+
+. Click *OK* to save your changes and exit the property sheet.
++
+Your new Daily schedule, *Payroll Daily at 7 PM*, is displayed in the list of schedules.
+
+. Select the Weekly schedule**Sunday at 8:00 PM plus daily** in the list of schedules.
+. Click *Copy*.
++
+A new Weekly schedule, *Copy of Sunday at 8:00 PM plus daily*, is displayed in the list. It is already selected.
+
+. Click *Edit*.
++
+The Edit Weekly Schedule property sheet opens to the Schedule tab.
+
+. Change the schedule name to *Payroll Saturday at 1 AM plus daily at 7 PM* and update the description.
+. From the *Daily Schedule* drop-down list, select the Daily schedule you just created, *Payroll Daily at 7 PM*.
++
+Selecting *Payroll Daily at 7 PM* means that this schedule defines when Daily operations occur when the *Payroll Saturday at 1 AM plus daily at 7 PM* schedule is applied to a policy.
+
+. Click *OK* to save your changes and exit the property sheet.
++
+Your new Weekly schedule, *Payroll Saturday at 1 AM plus daily at 7 PM*, is displayed in the list of schedules.

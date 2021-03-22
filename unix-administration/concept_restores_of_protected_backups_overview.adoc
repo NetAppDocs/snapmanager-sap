@@ -1,0 +1,48 @@
+---
+permalink: unix-administration/concept_restores_of_protected_backups_overview.html
+sidebar: sidebar
+keywords: 
+summary: 'You can choose the restore method that you want to use to restore the backup data from secondary storage to primary storage.'
+---
+= Restores of protected backups overview
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can choose the restore method that you want to use to restore the backup data from secondary storage to primary storage.
+
+The following table explains the different scenarios and methods that you can use to restore a backup from secondary storage:
+
+|===
+| Restore target| Explanation
+a|
+Directly to primary storage
+a|
+Returns the data from the secondary storage system directly to the original location on the primary storage system over the same network that was used to protect the data.
+
+SnapManager uses the direct storage method whenever possible. This method is not possible if the data is in a file system on storage area network (SAN) and if any of the following conditions apply:
+
+* Other non-database files are not being restored in the same file system.
+* Snapshot copies of the control files and data files in a file system being restored were taken at different times.
+* The logical unit number (LUN) is in a volume group, but other LUNs in the same volume group are not being restored.
+
+a|
+Directly to host
+a|
+Clones the data on the secondary storage system and mounts the cloned data on the host. After the data is cloned and mounted, SnapManager copies it into its original location.
+a|
+Indirectly to storage or host
+a|
+Returns the data from the secondary storage system to a new location on the primary system over the same network that was used to protect the data and to mount the new storage on the host. After the data is returned and mounted, SnapManager copies it into its original location. The indirect storage method might require a long time to return the data.
+
+SnapManager first copies data to a scratch volume on the primary host before SnapManager uses it to restore and recover the database. Whether the scratch data is automatically deleted depends on the protocol used.
+
+* For SAN, SnapManager deletes the returned data.
+* For network-attached storage (NAS), SnapManager deletes the contents of the returned qtrees, but does not delete the qtrees themselves. To delete the qtrees, administrators should mount the scratch volume and remove the qtrees using the UNIX rmdir command.
+
+|===
+If you cannot directly return data to storage, SnapManager can return data either directly to host or indirectly to storage or host. The method depends on the policy governing whether the organization allows connection directly to secondary storage or requires data to be copied over the storage network. You can manage this policy by setting configuration information in the smsap.config file.
+
+*Related information*
+
+xref:reference_snapmanager_configuration_parameters.adoc[SnapManager configuration parameters]

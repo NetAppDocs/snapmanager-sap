@@ -1,0 +1,17 @@
+---
+permalink: windows/task_starting_snapmanager_for_oraclefor_sap.html
+sidebar: sidebar
+keywords: 
+summary: 'The SnapManager startup section lists the tasks that you perform when you start SnapManager. Use this section also if you are just learning about SnapManager.'
+---
+= Starting SnapManagerfor SAP
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The SnapManager startup section lists the tasks that you perform when you start SnapManager. Use this section also if you are just learning about SnapManager.
+
+Before using SnapManager, you should have performed the following actions:
+
+* Downloaded and installed the SnapManager software.
+* Determined whether you will use the graphical user interface or the command-line interface.

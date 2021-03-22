@@ -1,0 +1,72 @@
+---
+permalink: windows/reference_sample_database_volume_layouts.html
+sidebar: sidebar
+keywords: 
+summary: 'You can refer to sample database volume layouts for help in configuring your database.'
+---
+= Sample database volume layouts
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can refer to sample database volume layouts for help in configuring your database.
+
+== Single-instance databases
+
+|===
+| File types| Volume names| Dedicated volume for file types| Automatic Snapshot copies
+a|
+Oracle binaries
+a|
+orabin_host name
+a|
+Yes
+a|
+On
+a|
+Data files
+a|
+oradata_sid
+a|
+Yes
+a|
+Off
+a|
+Temporary data files
+a|
+oratemp_sid
+a|
+Yes
+a|
+Off
+a|
+Control files
+a|
+oracntrl01_sid (Multiplexed)
+
+oracntrl02_sid (Multiplexed)
+
+a|
+Yes
+a|
+Off
+a|
+Redo logs
+a|
+oralog01_sid (Multiplexed)
+
+oralog02_sid (Multiplexed)
+
+a|
+Yes
+a|
+Off
+a|
+Archive logs
+a|
+oraarch_sid
+a|
+Yes
+a|
+Off
+|===

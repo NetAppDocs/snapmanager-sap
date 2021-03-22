@@ -1,0 +1,18 @@
+---
+permalink: unix-installation-7mode/task_verifying_the_oracle_listener_configuration.html
+sidebar: sidebar
+keywords: 
+summary: 'The listener is a process that listens for client connection requests. It receives incoming client connection requests and manages the traffic of these requests to the database. Before connecting to a target database or repository database instance, you can use the STATUS command to verify the listener configuration.'
+---
+= Verifying the Oracle listener configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The listener is a process that listens for client connection requests. It receives incoming client connection requests and manages the traffic of these requests to the database. Before connecting to a target database or repository database instance, you can use the STATUS command to verify the listener configuration.
+
+The STATUS command displays basic status information about a specific listener, including a summary of listener configuration settings, listening protocol addresses, and a summary of services registered with that listener.
+
+. Enter the following command at the command prompt: `lsnrctl STATUS`
++
+The default value assigned to the listener port is 1521.

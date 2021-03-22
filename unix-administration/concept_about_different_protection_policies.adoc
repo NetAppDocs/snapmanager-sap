@@ -1,0 +1,71 @@
+---
+permalink: unix-administration/concept_about_different_protection_policies.html
+sidebar: sidebar
+keywords: 
+summary: 'You can select different policies to protect the backups on the secondary or tertiary storage systems.'
+---
+= About different protection policies
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can select different policies to protect the backups on the secondary or tertiary storage systems.
+
+If you are using Data ONTAP operating in 7-Mode and SnapManager is integrated with Protection Manager, you must select one of the following protection policies while creating the profile. The Protection Manager's Management Console provides templates to configure protection policies for the datasets. Even though disaster recovery protection policies are listed in the SnapManager user interface, these policies are not supported.
+
+|===
+| Policy| Description
+a|
+Back up
+a|
+A dataset is backed up locally and also from the primary to secondary storage by using SnapVault or SnapMirror.
+a|
+Back up, then mirror
+a|
+A dataset is backed up from the primary to secondary storage by using SnapVault or SnapMirror, and then mirrored to a SnapMirror partner.
+a|
+Local Snapshot copies only
+a|
+A dataset uses only local Snapshot copies in the primary storage.
+a|
+Mirror
+a|
+A dataset is mirrored from the primary to secondary storage by using SnapMirror.
+a|
+Mirror and back up
+a|
+A dataset is mirrored from the primary to secondary storage by using SnapMirror, and then backed up to the secondary storage by using SnapVault or SnapMirror.
+a|
+Mirror and mirror
+a|
+A dataset is mirrored from the primary to secondary storage on two different SnapMirror partners.
+a|
+Mirror, then back up
+a|
+A dataset is mirrored from the primary to secondary storage by using SnapMirror, and then backed up to tertiary storage by using SnapVault or SnapMirror.
+a|
+Mirror, then mirror
+a|
+A dataset is mirrored from the primary to secondary storage by using SnapMirror, and then mirrored to an additional SnapMirror partner.
+a|
+No protection
+a|
+A dataset has no Snapshot copies, backups, or mirror-copy protection of any kind.
+a|
+Remote backup only
+a|
+Data on a storage system is backed up remotely to secondary storage by using SnapVault or SnapMirror. The licensed application carries out no local backup on the primary storage. This protection policy can be applied to third-party systems with Open Systems SnapVault installed.
+|===
+If you are using clustered Data ONTAP, you must select one of following protection policies while creating the profile.
+
+|===
+| Policy| Description
+a|
+SnapManager_cDOT_Mirror
+a|
+Mirrors the backup.
+a|
+SnapManager_cDOT_Vault
+a|
+Vaults the backup.
+|===
