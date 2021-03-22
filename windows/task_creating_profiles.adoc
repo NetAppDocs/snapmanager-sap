@@ -1,0 +1,103 @@
+---
+permalink: windows/task_creating_profiles.html
+sidebar: sidebar
+keywords: 
+summary: 'When creating profiles, you can assign a particular Oracle database user account to the profile. You can set the retention policy for the profile, and set the retention count and duration for each retention class.'
+---
+= Creating profiles
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When creating profiles, you can assign a particular Oracle database user account to the profile. You can set the retention policy for the profile, and set the retention count and duration for each retention class.
+
+If you do not provide the values of the -login, -password, and -port parameters of the database, the operating system (OS) authentication mode uses the default credentials.
+
+While creating a profile, SnapManager performs a restore eligibility check to determine the restore mechanism that can be used to restore the database.
+
+SnapManager (3.2 or later) enables you to separate archive log files from the data files while creating a new profile or updating an existing profile. After you have separated the backup using the profile, you can either create only the data files-only backup or archive log-only backup of the database. You can use the new profile or the updated profile to create the backup containing both the data files and archive log files. However, you cannot use the profile to create the full backup or revert the settings.
+
+*Profiles for creating full and partial backups*
+
+You can create profiles to create the full database backup containing the data files, control files, and archive log files and partial database backup containing specified data files or tablespaces, all the control files, and all the archive log files. SnapManager does not allow you to create separate archive log backups using the profiles created for full and partial backups.
+
+*Profiles for creating data files-only backups and archivelogs-only backups*
+
+When you create a new profile, you can include -separate-archivelog-backups to separate the archive log backup from the data file backup. You can also update the existing profile to separate the archive log backup from the data file backup.
+
+By using the new profile options to separate the archive log backups, you can perform the following SnapManager operations:
+
+* Create an archive log backup
+* Delete an archive log backup
+* Mount an archive log backup
+* Free an archive log backup
+
+While creating the profile to separate archive log backups from the data files backup, if the archive log files do not exist in the database for which the profile is created, then a warning message Archived log file does not exist in the active file system. The archived log file versions earlier than the <archive log thread version> log file will not be included in the backup is displayed. Even if you create backups for this database, the archive log files are not available in the database backups.
+
+NOTE: If you encounter an error while creating a profile, use the smsapsystem dump command. After you create a profile, if you encounter an error, use the smsapoperation dump and smsapprofile dump commands.
+
+. To create a profile with a user name, password, and port (Oracle authentication), enter the following command: `smsap profile create -profileprofile [-profile-passwordprofile_password] -repository-dbnamerepo_dbname-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][-summary-notification] [-notification [-success-emailemail_address1, email_address2-subjectsubject_pattern] [-failure-emailemail_address1, email_address2-subjectsubject_pattern]][-separate-archivelog-backups-retain-archivelog-backups-hourshours | -daysdays | -weeksweeks| -monthsmonths [-include-with-online-backups | -no-include-with-online-backups]] [-dump]`
++
+Other options for this command are as follows:
++
+[-force] [-noprompt]
++
+[quiet | verbose]
++
+You can also include other options when creating profiles, depending on how you want to access the database.
++
+|===
+| If...| Then...
+a|
+*You want to use database authentication to create a profile*
+a|
+Specify the database login details.
+a|
+*You want to specify a backup retention policy for backups*
+a|
+Specify either the retention count or duration for a retention class, or both. The duration is in units of the class (for example, hours for hourly, days for daily).
+
+ ** -hourly is the hourly retention class, for which [-count n] [-duration m] are the retention count and retention duration, respectively.
+ ** -daily is the daily retention class, for which [-count n] [-durationm] are the retention count and retention duration, respectively.
+ ** -weekly is the weekly retention class, for which [-count n] [-duration m] are the retention count and retention duration, respectively.
+ ** -monthly is the monthly retention class, for which [-count n] [-durationm] are the retention count and retention duration, respectively.
+
+a|
+*You want to enable email notification for the completion status of the database operations*
+a|
+Specify the following options and variables:
+
+ ** -summary-notification enables you to configure a summary email notification for multiple profiles under a repository database.
+ ** -notification enables you to receive an email notification for the completion status of the database operation for a profile.
+ ** -success-emailemail_address2 enables you to receive an email notification on the successful database operation performed by using a new or existing profile.
+ ** -failure-emailemail_address2 enables you to receive an email notification on the failed database operation performed by using a new or existing profile.
+ ** -subjectsubject_text specifies the subject text for the email notification while creating a new profile or an existing profile.
+If the notification settings are not configured for the repository and you try to configure profile or summary notifications by using the CLI, the following message is logged in the console log: SMSAP-14577: Notification Settings not configured.
+
++
+If you have configured the notification settings and you try to configure summary notification by using the CLI without enabling summary notification for the repository, the following message is shown in the console log: __**__SMSAP-14575: Summary notification configuration not available for this repository
+a|
+*You want to backup archive log files separately from data files*
+a|
+Specify the following options and variables:
+
+ ** -separate-archivelog-backups enables you to separate the archive log backup from the datafile backup.
+ ** -retain-archivelog-backups sets the retention duration for archive log backups. You must specify a positive retention duration.
++
+The archive log backups are retained based on the archive log retention duration. The data files backups are retained based on the existing retention policies.
+
+ ** -include-with-online-backups includes the archive log backup along with the online database backup.
++
+This option enables you to create an online data files backup and archive logs backup together for cloning. When this option is set, whenever you create an online data files backup, the archive logs backups are created along with the data files immediately.
+
+ ** -no-include-with-online-backups does not include the archive log backup along with database backup.
+
+a|
+*You can collect the dump files after the successful profile create operation*
+a|
+Specify the -dump option at the end of the profile create command.
+|===
+
+*Related information*
+
+xref:concept_how_to_collect_dump_files.adoc[How to collect dump files]

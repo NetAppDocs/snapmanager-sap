@@ -1,0 +1,20 @@
+---
+permalink: unix-administration/task_viewing_snapmanger_history_operation_details.html
+sidebar: sidebar
+keywords: 
+summary: 'You can view the history settings for a single profile.'
+---
+= Viewing SnapManager history configuration details
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can view the history settings for a single profile.
+
+The SnapManager history operation displays the following information for each profile:
+
+* Operation name
+* Retention class
+* Retention count
+
+. To display information about the SnapManager history operation for a specific profile, enter the following command: `smsap history show -profileprofile_name`

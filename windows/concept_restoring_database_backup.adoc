@@ -1,0 +1,39 @@
+---
+permalink: windows/concept_restoring_database_backup.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager for SAP enables you to restore a database to the state it was when a Snapshot copy was taken. Because backups are created more frequently, the number of logs that need to be applied is reduced, thus reducing the mean-time-to-recovery \(MTTR\) for a database.'
+---
+= Restoring database backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager for SAP enables you to restore a database to the state it was when a Snapshot copy was taken. Because backups are created more frequently, the number of logs that need to be applied is reduced, thus reducing the mean-time-to-recovery (MTTR) for a database.
+
+The following are some of the tasks that you can perform related to restoring and recovering data in databases:
+
+* Perform a file-based restore.
+* Restore the entire backup or a portion of it.
++
+If you restore a portion of it, you specify a group of tablespaces or a group of data files. You can also restore the control files along with the data or just the control files themselves.
+
+* Recover the data based on either a point in time or on all of the available logs, which stores the last transaction committed to the database.
++
+The point in time can be an Oracle System Change Number (SCN) or a date and time (yyyy-mm-dd:hh:mm:ss). SnapManager uses the 24-hour clock.
+
+* Restore from backups on primary storage (local backups).
+* Restore and recover the backup by using SnapManager, or use SnapManager to restore the backup and use another tool, such as Recovery Manager (RMAN), to recover the data.
+* Restore backups from alternate locations.
+
+For more information, see the .
+
+You can restore a backup made by a previous version of SnapManager by using SnapManager 3.0 and later versions.
+
+Administrators can perform restore or recovery operations by using the SnapManager graphical user interface (GUI) or by using the command-line interface (CLI).
+
+*Related information*
+
+xref:concept_database_backup_management.adoc[Backing up databases]
+
+xref:reference_the_smosmsapbackup_restore_command.adoc[The smsap backup restore command]

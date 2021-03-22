@@ -1,0 +1,65 @@
+---
+permalink: unix-administration/task_updating_storage_system_name_associated_with_a_profile.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager 3.3 or later provides the ability to update the host name or IP address of a storage system associated with a profile.'
+---
+= Updating the storage system name associated with a profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager 3.3 or later provides the ability to update the host name or IP address of a storage system associated with a profile.
+
+You must ensure the following:
+
+* The profile has at least one backup.
++
+If the profile does not have any backup, then there is no necessity to update the storage system name for that profile.
+
+* No operation is running for the profile.
+
+You can update the storage system name or IP address by using the SnapManager command-line interface (CLI). While updating the storage system name, the metadata stored in the repository database alone is updated. After renaming the storage system name, you can perform all the SnapManager operations as earlier.
+
+NOTE: You cannot change the storage system name by using the SnapManager graphical user interface (GUI).
+
+You must ensure that Snapshot copies are available in the new storage system. SnapManager does not verify the existence of the Snapshot copies in the storage system.
+
+However, you must remember the following while performing rolling upgrade and rollback of the host after renaming the storage system name:
+
+* If you are performing rolling upgrade of the host after renaming the storage system name, you must update the profile with the new storage system name.
++
+See _Troubleshooting storage system name issues_ for information about how to use the SnapDrive commands for changing the storage system name.
+
+* If you are rolling back the host after renaming the storage system, you must ensure that you change the storage system name back to the earlier storage system name so that you can use the profiles, backups, and clones of the earlier storage system for performing SnapManager operations.
+
+NOTE: If SnapDrive could not identify the storage system and displays error messages, you can enter the ipmigrate command with the earlier and later host names of the storage system. For additional information about storage system name issues, see _Troubleshooting storage system name issues_.
+
+. Enter the following command: `smsap storage rename -profileprofile-oldnameold_storage_name-newnamenew_storage_name [quiet | -verbose`]
++
+|===
+| If you want to...| Then...
+a|
+Update the storage system name associated with a profile
+a|
+Specify the -profile option.
+a|
+Update the storage system name or IP address associated with a profile
+a|
+Specify the following options and variables:
+
+ ** -oldnameold_storage_name is the host name or IP address of the storage system.
+ ** -newnamenew_storage_name is the host name or IP address of the storage system.
+
++
+|===
+
+The following example shows the storage system name being updated:
+
+----
+smsap storage rename -profile mjullian -oldname lech -newname hudson -verbose
+----
+
+*Related information*
+
+xref:reference_troubleshooting_storage_system_renaming_issue.adoc[Troubleshooting storage system renaming issue]

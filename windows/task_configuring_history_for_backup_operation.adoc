@@ -1,0 +1,26 @@
+---
+permalink: windows/task_configuring_history_for_backup_operation.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager for SAP enables you to maintain the history of SnapManager operation from the SnapManager CLI or GUI. You can view the history of the SnapManager operation as a report.'
+---
+= Configuring history for SnapManager operation
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager for SAP enables you to maintain the history of SnapManager operation from the SnapManager CLI or GUI. You can view the history of the SnapManager operation as a report.
+
+. To configure the history of SnapManager operation, enter the following command: `smsap history set -profile {-name, profile_name [profile_name1, profile_name2] | -all-repository-login [-passwordrepo_password] -usernamerepo_username-dbnamerepo_dbname-hostrepo_host-portrepo_port} -operation {-operationsoperation_name [operation_name1, operation_name2] | -all} -retain {-countretain_count | -dailyretain_daily | -weeklyretain_weekly | -monthlyretain_monthly} [-quiet | -verbose]`
+
+----
+
+        smsap
+history set -profile -name PROFILE1 -operation -operations backup -retain -daily 6 -verbose
+----
+
+----
+
+        smsap
+history set -profile -name PROFILE1 -operation -all -retain -weekly 3 -verbose
+----

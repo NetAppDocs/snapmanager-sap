@@ -1,0 +1,19 @@
+---
+permalink: unix-installation-7mode/task_creating_an_oracle_user_for_the_repository_database_instance.html
+sidebar: sidebar
+keywords: 
+summary: 'An Oracle user is required to log in to and access the repository database instance. You must create this user with connect and resource privileges.'
+---
+= Creating an Oracle user for the repository database instance
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+An Oracle user is required to log in to and access the repository database instance. You must create this user with _connect_ and _resource_ privileges.
+
+. Log in to SQL *Plus: `sqlplus '/ as sysdba'`
+. Create a new user and assign an administrator password to that user: `create useruser_name identified by admin_password default tablespace tablespace_name quota unlimited on tablespace_name;`
+ ** user_name is the name of the user you are creating for the repository database.
+ ** admin_password is the password you want to assign to the user.
+ ** tablespace_name is the name of the tablespace created for the repository database.
+. Assign _connect_ and _resource_ privileges to the new Oracle user: `grant connect, resource to user_name;`

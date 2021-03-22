@@ -1,0 +1,28 @@
+---
+permalink: unix-administration/task_viewing_a_list_of_operations.html
+sidebar: sidebar
+keywords: 
+summary: 'You can view a summary listing of all the operations performed against a profile.'
+---
+= Viewing a list of operations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can view a summary listing of all the operations performed against a profile.
+
+You can view the following information when you list operations associated with a particular profile:
+
+* Start and end date when the operation ran
+* Operation status
+* Operation ID
+* Type of operation
+* Host that it ran upon
+
+. To list the summary information of all the operations, use the following command: `smsap operation list profile -profileprofile_name-delimitercharacter [-quiet | -verbose]`
++
+When the -delimiter option is specified, the command lists each row on a separate line and the attributes in that row are separated by the character specified.
+
+*Related information*
+
+xref:reference_the_smosmsapoperation_list_command.adoc[The smsap operation list command]

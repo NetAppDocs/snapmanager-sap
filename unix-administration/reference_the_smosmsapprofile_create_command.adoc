@@ -1,0 +1,241 @@
+---
+permalink: unix-administration/reference_the_smosmsapprofile_create_command.html
+sidebar: sidebar
+keywords: 
+summary: 'You can run the profile create command to create a profile of a database in a repository. You must mount the database before you run this command.'
+---
+= The smsap profile create command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can run the profile create command to create a profile of a database in a repository. You must mount the database before you run this command.
+
+== Syntax
+
+----
+
+        smsap profile create 
+-profile profile
+\[-profile-password profile_password\] 
+-repository 
+-dbname repo_service_name 
+-host repo_host 
+-port repo_port 
+-login -username repo_username 
+-database 
+-dbname db_dbname 
+-host db_host
+[-sid  db_sid\]
+[-login 
+\[-username db_username -password db_password -port db_port\] 
+ \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]   
+[-rman \{-controlfile \| \{-login 
+-username  rman_username -password  rman_password\} 
+-tnsname  rman_tnsname\}\}]
+\[-osaccount osaccount \]
+\[-osgroup osgroup\]
+[-retain 
+\[-hourly \[-count n\] \[-duration m\]\] 
+\[-daily \[-count n\] \[-duration m\]] 
+\[-weekly \[-count n\] \[-duration m\]] 
+\[-monthly \[-count n\] \[-duration m\]]]] 
+-comment comment 
+-snapname-pattern pattern 
+[-protect \[-protection-policy policy\]] 
+[-summary-notification] 
+[-notification 
+\[-success 
+-email email_address1,email_address2 
+-subject subject_pattern\] 
+\[-failure  
+-email email_address1,email_address2 
+-subject subject_pattern] 
+[-separate-archivelog-backups
+-retain-archivelog-backups
+ -hours hours |
+-days days |
+-weeks weeks |
+-months months
+[-protect \[-protection-policy policy_name \| -noprotect]
+[-include-with-online-backups \| -no-include-with-online-backups]]
+[-dump]
+[-quiet | -verbose]
+----
+
+== Parameters
+
+* *-profile profile*
++
+Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
+
+* *-profile-password profile_password*
++
+Specify the password for the profile.
+
+* *-repository*
++
+The options that follow -repository specify the details of the database that stores the profile.
+
+* *-dbname repo_service_name*
++
+Specifies the name of the database that stores the profile. Use either the global name or the SID.
+
+* *-host repo_host*
++
+Specifies the name or IP address of the host computer the repository database runs on.
+
+* *-sid db_sid*
++
+Specifies the system identifier of the database that the profile describes. By default, SnapManager uses the database name as the system identifier. If the system identifier is different from the database name, you must specify it with the -sid option.
++
+For example, if you are using Oracle Real Application Clusters (RAC), you must specify the system identifier of the RAC instance on the RAC node from which SnapManager is executed.
+
+* *-login*
++
+Specifies the repository login details.
+
+* *-username repo_username*
++
+Specifies the user name needed to access the repository database.
+
+* *-port repo_port*
++
+Specifies the TCP port number used to access the repository database.
+
+* *-database*
++
+Specifies the details of the database that the profile describes. This is the database that will be backed up, restored, or cloned.
+
+* *-dbname db_dbname*
++
+Specifies the name of the database that the profile describes. You can use either the global name or the system identifier.
+
+* *-host db_host db_host*
++
+Specifies the name or IP address of the host computer on which the database runs.
+
+* *-asminstance*
++
+Specifies the credentials that are used to log in to the Automatic Storage Management (ASM) instance.
+
+* *-asmusername asminstance_username*
++
+Specifies the user name used to log in to the ASM instance.
+
+* *-asmpassword asminstance_password*
++
+Specifies the password used to log in to ASM instance.
+
+* *-login*
++
+Specifies the database login details.
+
+* *-username db_username*
++
+Specifies the user name needed to access the database that the profile describes.
+
+* *-password db_password*
++
+Specifies the password needed to access the database that the profile describes.
+
+* *-port db_port*
++
+Specifies the TCP port number used to access the database that the profile describes.
+
+* *-osaccount osaccount*
++
+Specifies the name of the Oracle database user account. SnapManager uses this account to perform the Oracle operations such as startup and shutdown. It is typically the user who owns the Oracle software on the host, for example, orasid.
+
+* *-osgroup osgroup*
++
+Specifies the name of the Oracle database group name associated with the orasid account.
+
+* *-retain [-hourly [-count n] [-duration m]] [-daily [-count n] [-duration m]] [-weekly [-count n] [-duration m]] [-monthly [-count n] [-duration m]]*
++
+Specifies the retention policy for a backup where either or both of a retention count along with a retention duration for a retention class (hourly, daily, weekly, monthly).
++
+For each retention class, either or both of a retention count or a retention duration may be specified. The duration is in units of the class (for example, hours for hourly, days for daily). For instance, if the user specifies only a retention duration of 7 for daily backups, then SnapManager will not limit the number of daily backups for the profile (because the retention count is 0), but SnapManager will automatically delete daily backups created over 7 days ago.
+
+* *-comment comment*
++
+Specifies the comment for a profile describing the profile domain.
+
+* *-snapname-pattern pattern*
++
+Specifies the naming pattern for Snapshot copies. You can also include custom text, for example, HAOPS for highly available operations, in all Snapshot copy names. You can change the Snapshot copy naming pattern when you create a profile or after the profile has been created. The updated pattern applies only to Snapshot copies that have not yet been created. Snapshot copies that exist retain the previous Snapname pattern. You can use several variables in the pattern text.
+
+* *-protect -protection-policy policy*
++
+Indicates whether the backup should be protected to secondary storage.
++
+NOTE: If -protectis specified without -protection-policy, then the dataset will not have a protection policy. If -protect is specified and -protection-policy is not set when the profile is created, then it may be set later bysmsap profile update command or set by the storage administrator through Protection Manager's console.
+
+* *-summary-notification*
++
+Specifies that summary email notification is enabled for the new profile.
+
+* *-notification  -success-email  e-mail_address1,e-mail address2  -subject  subject_pattern*
++
+Specifies that email notification is enabled for the new profile so that emails are received by recipients when the SnapManager operation succeeds. You must enter a single email address or multiple email addresses to which email alerts will be sent and an email subject pattern for the new profile.
++
+You can also include custom subject text for the new profile. You can change the subject text when you create a profile or after the profile has been created. The updated subject applies only to the emails that are not sent. You can use several variables for the email subject.
+
+* *-notification  -failure  -email  e-mail_address1,e-mail address2  -subject  subject_pattern*
++
+Specifies that enable email notification is enabled for the new profile so that emails are received by recipients when the SnapManager operation fails. You must enter a single email address or multiple email addresses to which email alerts will be sent and an email subject pattern for the new profile.
++
+You can also include custom subject text for the new profile. You can change the subject text when you create a profile or after the profile has been created. The updated subject applies only to the emails that are not sent. You can use several variables for the email subject.
+
+* *-separate-archivelog-backups*
++
+Specifies that the archive log backup is separated from datafile backup. This is an optional parameter you can provide while creating the profile. After you separate the backup using this option, you can either take data files-only backup or archive logs-only backup.
+
+* *-retain-archivelog-backups -hours hours | -daysdays | -weeksweeks| -monthsmonths*
++
+Specifies that the archive log backups are retained based on the archive log retention duration (hourly, daily, weekly, monthly).
+
+* *protect [-protection-policypolicy_name] | -noprotect*
++
+Specifies to protect the archive log files based on the archive log protection policy.
++
+The -noprotect option specifies not to protect the archive log files.
+
+* *-quiet*
++
+Displays only error messages in the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Displays error, warning, and informational messages in the console.
+
+* *-include-with-online-backups*
++
+Specifies that the archive log backup is included along with the online database backup.
+
+* *-no-include-with-online-backups*
++
+Specifies that the archive log backups are not included along with the online database backup.
+
+* *-dump*
++
+Specifies that the dump files are collected after the successful profile create operation.
+
+== Example
+
+The following example shows the creation of a profile with hourly retention policy and email notification:
+
+----
+smsap profile create -profile test_rbac -profile-password netapp -repository -dbname SMSAPREP -host hostname.org.com -port 1521 -login -username smsaprep -database -dbname RACB -host saal -sid racb1 -login -username sys -password netapp -port 1521 -rman -controlfile -retain -hourly -count 30 -verbose
+Operation Id [8abc01ec0e78ebda010e78ebe6a40005] succeeded.
+----
+
+*Related information*
+
+xref:concept_managing_profiles_for_efficient_backups.adoc[Managing profiles for efficient backups]
+
+xref:reference_the_smosmsapprotection_policy_command.adoc[The smsap protection-policy command]
+
+xref:concept_snapshot_copy_naming.adoc[Snapshot copy naming]
+
+xref:concept_how_snapmanager_retains_backups_on_the_local_storage.adoc[How SnapManager retains backups on the local storage]

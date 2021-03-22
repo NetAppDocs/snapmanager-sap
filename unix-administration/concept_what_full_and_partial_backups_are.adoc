@@ -1,0 +1,32 @@
+---
+permalink: unix-administration/concept_what_full_and_partial_backups_are.html
+sidebar: sidebar
+keywords: 
+summary: 'You can choose to back up the entire database or just a portion of it. If you choose to back up a portion of the database, you can choose to back up a group of tablespaces or data files. You can choose to take a separate backup of both tablespaces and data files.'
+---
+= What full and partial backups are
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can choose to back up the entire database or just a portion of it. If you choose to back up a portion of the database, you can choose to back up a group of tablespaces or data files. You can choose to take a separate backup of both tablespaces and data files.
+
+The following table lists the benefits and consequences of each type of backup:
+
+|===
+| Backup type| Advantages| Disadvantages
+a|
+Full
+a|
+Minimizes the number of Snapshot copies. For online backups, each tablespace is in backup mode for the entire time of the backup operation. SnapManager takes one Snapshot copy for each volume that the database uses, plus one Snapshot copy for each volume that the log files occupy.
+a|
+For online backups, each tablespace is in backup mode for the entire time of the backup operation.
+a|
+Partial
+a|
+Minimizes the amount of time each tablespace spends in backup mode. SnapManager groups the Snapshot copies it takes by tablespace. Each tablespace is in backup mode only long enough to create the Snapshot copies. This method of grouping the Snapshot copies minimizes the physical block writes in the log files during an online backup.
+
+a|
+The backup can require creating Snapshot copies of multiple tablespaces in the same volume. This method can cause SnapManager to create multiple Snapshot copies of a single volume during the backup operation.
+|===
+*Note:* Although you can perform a partial backup, you must always perform a full backup of the entire database.

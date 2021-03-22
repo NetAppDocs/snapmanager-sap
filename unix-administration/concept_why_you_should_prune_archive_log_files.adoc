@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/concept_why_you_should_prune_archive_log_files.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager for SAP enables you to delete archive log files from the active file system that are already backed up.'
+---
+= Why you should prune archive log files
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager for SAP enables you to delete archive log files from the active file system that are already backed up.
+
+Pruning enables SnapManager to create backups of distinct archive log files. Pruning, along with the backup retention policy, frees archive log space when backups are purged.
+
+NOTE: You cannot prune the archive log files when Flash Recovery Area (FRA) is enabled for archive log files. If you specify the archive log location in Flash Recovery Area, you must ensure that you also specify the archive log location in the archive_log_dest parameter.

@@ -1,0 +1,36 @@
+---
+permalink: unix-administration/concept_what_protection_states_are.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager shows the state of each backup. Administrators must know the different states and monitor the state of their backups.'
+---
+= What protection states are
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager shows the state of each backup. Administrators must know the different states and monitor the state of their backups.
+
+A database backup can have the following protection states:
+
+|===
+| Status| Definition| Explanation
+a|
+Protected
+a|
+Protection was requested and has been enabled.
+a|
+Protection is enabled for the backup in SnapManager and the Protection Manager successfully copied the backup to another set of physical disks (also referred to as secondary storage). If the Protection Manager removes a backup from secondary storage due to a retention policy, the backup can return to a Not protected state.
+a|
+Not protected
+a|
+Protection was requested, but not completed.
+a|
+Protection is enabled for the backup, but the backup is not copied to another set of physical disks. The backup is not yet protected, or protection failed, or it was protected earlier but is no longer protected. When you create a backup, the initial protection state of the backup is either Not requested or Not protected. If the backup is not protected, it becomes protected when it is transferred to secondary storage.
+a|
+Not requested
+a|
+Protection was not requested.
+a|
+Protection is not enabled for the backup. A logical copy of the data exists on the same physical disks (also referred to as a local backup). If protection is not requested when the backup was created, protection on the backup is always shown as Not requested.
+|===

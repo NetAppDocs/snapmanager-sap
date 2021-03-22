@@ -1,0 +1,71 @@
+---
+permalink: windows/concept_backup_types_and_the_number_of_snapshot_copies.html
+sidebar: sidebar
+keywords: 
+summary: 'The backup type \(full or partial\) affects the number of Snapshot copies that SnapManager creates. For a full backup, SnapManager creates a Snapshot copy of each volume, while for a partial backup, SnapManager creates a Snapshot copy of each tablespace file.'
+---
+= Backup types and the number of Snapshot copies
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The backup type (full or partial) affects the number of Snapshot copies that SnapManager creates. For a full backup, SnapManager creates a Snapshot copy of each volume, while for a partial backup, SnapManager creates a Snapshot copy of each tablespace file.
+
+NOTE: Data ONTAP limits the maximum number of Snapshot copies to 255 per volume. You might reach this maximum only if you configure SnapManager to retain a large number of backups where each backup consists of numerous Snapshot copies.
+
+To keep an adequate pool of backups available while ensuring that the maximum limit of Snapshot copies per volume is not reached, you must remove backups when they are no longer needed. You can configure the SnapManager retention policy to remove successful backups after reaching a specific threshold for a specific backup frequency. For example, after SnapManager creates four successful daily backups, SnapManager removes the daily backups created on the previous day.
+
+The following tables show how SnapManager creates Snapshot copies based on the backup type. The example in the tables assumes that database Z includes two volumes, each volume includes two tablespaces (TS1 and TS2), and each tablespace includes two database files (ts1.data1, ts1.data2, ts2.data1, and ts2.data2).
+
+These tables show how the two types of backups produce different numbers of Snapshot copies.
+
+SnapManager creates Snapshot copies at the volume level instead of the tablespace level, which usually reduces the number of Snapshot copies it must create.
+
+NOTE: Both backups also create Snapshot copies of the log files.
+
+|===
+| Volumes in database| Tablespace TS1 (includes 2 database files)| Tablespace TS2 (includes 2 database files)| Snapshot copies created| Total number of Snapshot copies
+a|
+E:\data
+
+a|
+TS1.data1
+a|
+TS2.data1
+a|
+1 per volume
+a|
+2
+a|
+E:\data1
+
+a|
+TS1.data2
+a|
+TS2.data2
+a|
+1 per volume
+|===
+|===
+| Volumes in database| Tablespace TS1 (includes 2 database files)| Tablespace TS2 (includes 2 database files)| Snapshot copies created| Total number of Snapshot copies
+a|
+E:\data
+
+a|
+TS1.data1
+a|
+TS2.data1
+a|
+2 per file
+a|
+4
+a|
+E:\data1
+
+a|
+TS1.data2
+a|
+TS2.data2
+a|
+2 per file
+|===

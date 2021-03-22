@@ -1,0 +1,54 @@
+---
+permalink: windows/concept_what_cloning_is.html
+sidebar: sidebar
+keywords: 
+summary: 'You can clone a database to create an exact replica of the original database. You can create the clone from a full backup or from the current state of the database.'
+---
+= What Cloning is
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can clone a database to create an exact replica of the original database. You can create the clone from a full backup or from the current state of the database.
+
+Some of the advantages of creating a clone by using SnapManager are as follows:
+
+|===
+| Advantages| Details
+a|
+Speed
+a|
+The SnapManager clone operation uses the FlexClone feature available with Data ONTAP. This enables you to quickly clone large data volumes.
+a|
+Space efficiency
+a|
+When you create a clone by using SnapManager, space is needed only for the changes between the backup and the clone. A SnapManager clone is a writable Snapshot copy of the original database and can grow as needed. In contrast, a physical clone of the database requires that you have enough space available to copy the entire database.
+a|
+Virtual copy
+a|
+You can use the cloned database as if it were the original database. For example, you can use a clone for testing, platform and update checks, multiple simulations against a large data set, and remote office testing and staging. Changes to the clone do not affect the original database. After the database is cloned, the cloned database is fully operational.
+
+a|
+Simplicity
+a|
+You can clone a database to any host by using SnapManager commands.
+|===
+You must ensure that the following prerequisites are met before a database can be cloned:
+
+* Delete the spfile<SID>.ora file from $ORACLE_HOME\database.
+* Delete the init<SID>.ora file from $ORACLE_HOME\database.
+* Delete Oracle dump destinations that are specified in the clone specification file.
+* Delete the Oracle control files that are specified in the clone specification file.
+* Delete the Oracle redo log files that are specified in the clone specification file.
+
+You must give the clone a new system identifier. You cannot simultaneously run two databases with the same system identifier on the same host. You can have a clone on a different host using the same system identifier. You can either give the clone a label or let SnapManager create a label by using the system identifier, date, and time the clone was created.
+
+When you enter a label, you should not include spaces or special characters.
+
+As part of the cloning process, SnapManager creates the necessary Oracle files and parameters for the cloned database. An example of a necessary Oracle file is init<SID>.ora.
+
+When you clone a database, SnapManager creates a new init<SID>.ora file for the database in the $ORACLE_HOME\database directory.
+
+You can clone a database backup to the host in which the database resides or to an alternate host.
+
+If the database you cloned was using a spfile, SnapManager creates an spfile for the clone. It places this file in the $ORACLE_HOME\database directory and creates the directory structure for the diagnostic files. The file name is spfile <SID>.ora.

@@ -1,0 +1,41 @@
+---
+permalink: unix-administration/task_using_protection_manager_to_provision_the_new_dataset.html
+sidebar: sidebar
+keywords: 
+summary: 'After the smsap_paydb dataset is created, the storage administrator uses Protection Manager to assign storage system resources to provision the dataset’s Backup node.'
+---
+= Using Protection Manager to provision the new dataset
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After the smsap_paydb dataset is created, the storage administrator uses Protection Manager to assign storage system resources to provision the dataset's Backup node.
+
+Before provisioning the newly created dataset, the storage administrator confers with the DBA partner for the name of the dataset specified in the profile.
+
+In this case, the dataset name is smsap_prod01.sample.com_P01.
+
+. Go to Protection Manager's NetApp Management Console.
+. From the menu bar, click *Data* > *Datasets* > *Overview*.
++
+The Datasets tab of the Datasets window displays a list of datasets that includes the dataset that was just created through SnapManager.
+
+. Locate and select the *smsap_prod01.sample.com_p01* dataset.
++
+When you select this dataset, the graph area displays the smsap_p01 dataset with its backup node unprovisioned. Its conformance status is flagged as nonconformant.
+
+. With the smsap_p01 dataset still highlighted, click *Edit*.
++
+The Protection Manager's NetApp Management Console displays the Edit Dataset window for the *smsap_prod01.sample.com_p01* dataset. The window's navigation pane displays configuration options for the dataset's primary node, backup connection, and backup node.
+
+. From the navigation pane, locate the options for the dataset's backup node and select *provisioning/resource pools*.
++
+The Edit Dataset window displays a setting for default provisioning policy and a list of available resource pools.
+
+. For this example, select the *p01_backup_resource* resource pool and click *>*.
++
+The selected resource pool is listed in the "Resource Pools for this node" field.
+
+. Click *Finish* to save your changes.
+
+The Protection Manager automatically provisions the secondary backup node with resources from the paydb_backup_resource resource pool.

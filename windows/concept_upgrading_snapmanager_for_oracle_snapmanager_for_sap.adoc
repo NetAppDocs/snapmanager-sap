@@ -1,0 +1,12 @@
+---
+permalink: windows/concept_upgrading_snapmanager_for_oracle_snapmanager_for_sap.html
+sidebar: sidebar
+keywords: 
+summary: 'You can upgrade to the latest version of SnapManager for SAP from any of the earlier versions. You can either upgrade all the SnapManager hosts simultaneously or perform a rolling upgrade, which allows you to upgrade the hosts in a staggered, host-by-host manner.'
+---
+= Upgrading SnapManager
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can upgrade to the latest version of SnapManager for SAP from any of the earlier versions. You can either upgrade all the SnapManager hosts simultaneously or perform a rolling upgrade, which allows you to upgrade the hosts in a staggered, host-by-host manner.

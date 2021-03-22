@@ -1,0 +1,70 @@
+---
+permalink: unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_and_assign_a_protection_policy.html
+sidebar: sidebar
+keywords: 
+summary: 'You must create a profile in SnapManager for SAP, enable protection in the profile, and assign a protection policy to create a protected backup.'
+---
+= Using SnapManager for SAP to create the database profile and assign a protection policy
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must create a profile in SnapManager for SAP, enable protection in the profile, and assign a protection policy to create a protected backup.
+
+A profile contains information about the database being managed, including its credentials, backup settings, and protection settings for backups. After you create a profile, you do not need to specify database details each time you perform an operation. A profile can reference only one database, but that same database can be referenced by more than one profile.
+
+. Go to the SnapManager for SAP client.
+. From the Repositories tree, right-click the host, and select *Create Profile*.
+. On the Profile Configuration Information page, enter the profile details, and click *Next*.
++
+You can enter the following information:
+
+ ** Profile name: P01_BACKUP
+ ** Profile password: payroll123
+ ** Comment: Production Payroll database
+
+. On the Database Configuration Information pages, enter the database details, and click *Next*.
++
+You can enter the following information:
+
+ ** Database name: P01
+ ** Database SID: P01
+ ** Database host: Accept the default. Because you are creating a profile from a host in the repository tree, SnapManager displays the host name.
+ ** Host Account, representing the Oracle user account (for ora<sid>): orapayrolldb
+ ** Host Group, representing the Oracle group: dba
+
+. On the Database Connection Information page, click *Use database Authentication* to allow users to authenticate using database information.
+. Enter the database connection details and click *Next*.
++
+You can enter the following information:
+
+ ** SYSDBA Privileged User Name, representing the system database administrator who has administrative privileges: sys
+ ** Password (SYSDBA password): oracle
+ ** Port to connect to database host: 1527
+
+. On the Snapshot Naming Information page, specify a naming convention for the Snapshots associated with this profile by selecting variables.
++
+The smid variable creates a unique snapshot identifier.
++
+Perform the following:
+
+ .. In the Variable Token list, select usertext and click *Add*.
+ .. Enter prod01.sample.com_ as the host name and click *OK*.
+ .. Click *Left* until the host name appears just after smsap in the Format box.
+ .. Click *Next*.
+
++
+The Snapshot naming convention of smsap_hostname_smsapprofile_dbsid_scope_mode_smid becomes "smsap_prpd01.sample.com_P01_BACKUP_P01_f_a_x" (where "f" indicates a full backup, "a" indicates the automatic mode, and "x" represents the unique SMID).
+
+. Select *Protection Manager Protection Policy*.
++
+The *Protection Manager Protection Policy* enables you to select a protection policy that was configured by using NetApp Management Console.
+
+. Select *TechCo Payroll Data: Backup* as the protection policy from the protection policies retrieved from NetApp Management Console, and click *Next*.
+. On the Perform Operation page, verify the information and click *Create*.
+. Click *Operation Details* to see information about the profile create operation and volume-based restore eligibility information.
+
+* The assignment of a NetApp Management Console protection policy to the database profile automatically creates a nonconformant dataset, visible to the NetApp Management Console operator, with the name convention smsap_<hostname>_<profilename>, or in this example: smsap_prod01.sample.com_P01_BACKUP.
+* If the profile is not eligible for volume restore (also called "fast restore"), the following occurs:
+ ** The *Results* tab indicates that the profile creation was successful and that warnings occurred during the operation.
+ ** The *Operation Details* tab includes a WARNING log, which states the profile is not eligible for fast restore and explains why.

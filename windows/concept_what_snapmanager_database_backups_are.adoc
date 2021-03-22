@@ -1,0 +1,32 @@
+---
+permalink: windows/concept_what_snapmanager_database_backups_are.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager enables you to perform different backup tasks. You can assign retention classes to specify how long the backup can be retained; once that time limit is reached, the backup is deleted.'
+---
+= What SnapManager database backups are
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to perform different backup tasks. You can assign retention classes to specify how long the backup can be retained; once that time limit is reached, the backup is deleted.
+
+* Create backups on the primary storage
+* Create protected backups on the secondary storage resources by using postprocessing scripts
+* Verify that the backups completed successfully
+* View a list of backups
+* Schedule backups by using the graphical user interface
+* Manage the number of backups retained
+* Free backup resources
+* Mount and unmount backups
+* Delete backups
+
+SnapManager creates backups by using one of the following retention classes:
+
+* Hourly
+* Daily
+* Weekly
+* Monthly
+* Unlimited
+
+If new data files are added to the database, you should create a new backup immediately. Also, if you restore a backup taken before the new data files were added and attempt to recover to a point after the new data files were added, the automatic recovery process might fail. See the Oracle documentation to learn more about the process for recovering the data files added after a backup.

@@ -1,0 +1,41 @@
+---
+permalink: unix-administration/reference_the_smo_smsap_history_show_command.html
+sidebar: sidebar
+keywords: 
+summary: 'This command enables you to view a detailed history information for a specific profile.'
+---
+= The smsap history show command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command enables you to view a detailed history information for a specific profile.
+
+== Syntax
+
+----
+
+        smsap history show 
+-profile profile
+----
+
+== Parameters
+
+* *-profile profile*
++
+Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
+
+* *-quiet*
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Displays error, warning, and informational messages on the console.
+
+== Example command
+
+----
+ smsap history show -profile -name PROFILE1
+ -verbose
+----

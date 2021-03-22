@@ -1,0 +1,32 @@
+---
+permalink: windows/concept_full_online_backups.html
+sidebar: sidebar
+keywords: 
+summary: 'During a full online backup, SnapManager backs up the entire database and creates Snapshot copies at the volume level \(not at the tablespace level\).'
+---
+= Full online backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+During a full online backup, SnapManager backs up the entire database and creates Snapshot copies at the volume level (not at the tablespace level).
+
+SnapManager creates two Snapshot copies for each backup. If all the files needed by the database are in a single volume, then both Snapshot copies appear in that volume.
+
+When you specify a full backup, SnapManager performs the following actions:
+
+. Places the entire database in the online backup mode
+. Creates Snapshot copies of all the volumes containing database files
+. Takes the database out of the online backup mode
+. Forces a log switch and then archives the log files
++
+This also flushes the redo information to disk.
+
+. Generates backup control files
+. Creates a Snapshot copy of the log files and the backup control files
+
+When performing a full backup, SnapManager places the entire database in the online backup mode. An individual tablespace (for example, E:\data\system.data1) is in the online backup mode longer than certain tablespaces or data files that were specified.
+
+When a database goes into backup mode, Oracle writes entire blocks to the logs and does not merely write the delta between backups. Because databases do more work in online backup mode, choosing a full backup places a greater load on the host.
+
+Although performing full backups places a greater load on the host, full backups require fewer Snapshot copies, resulting in fewer storage requirements.

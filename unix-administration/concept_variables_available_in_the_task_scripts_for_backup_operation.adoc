@@ -1,0 +1,164 @@
+---
+permalink: unix-administration/concept_variables_available_in_the_task_scripts_for_backup_operation.html
+sidebar: sidebar
+keywords: 
+summary: 'SnapManager provides context information in the form of environment variables related to the backup operation that is being performed. For example, your script can retrieve the name of the original host, the name of the retention policy, and the label of the backup.'
+---
+= Variables available in the task scripts for the backup operation
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager provides context information in the form of environment variables related to the backup operation that is being performed. For example, your script can retrieve the name of the original host, the name of the retention policy, and the label of the backup.
+
+The following table lists the environment variables that you can use in your scripts:
+
+|===
+| Variables| Description| Format
+a|
+SM_OPERATION_ID
+a|
+Specifies the ID of the current operation
+a|
+string
+a|
+SM_PROFILE_NAME
+a|
+Specifies the name of the profile used
+a|
+string
+a|
+SM_SID
+a|
+Specifies the system identifier of the database
+a|
+string
+a|
+SM_HOST
+a|
+Specifies the host name of the database
+a|
+string
+a|
+SM_OS_USER
+a|
+Specifies the operating system (OS) owner of the database
+a|
+string
+a|
+SM_OS_GROUP
+a|
+Specifies the OS group of the database
+a|
+string
+a|
+SM_BACKUP_TYPE
+a|
+Specifies the type of the backup (online, offline, or auto)
+a|
+string
+a|
+SM_BACKUP_LABEL
+a|
+Specifies the label of the backup
+a|
+string
+a|
+SM_BACKUP_ID
+a|
+Specifies the ID of the backup
+a|
+string
+a|
+SM_BACKUP_RETENTION
+a|
+Specifies the retention period
+a|
+string
+a|
+SM_BACKUP_PROFILE
+a|
+Specifies the profile used for this backup
+a|
+string
+a|
+SM_ALLOW_DATABASE_SHUTDOWN
+a|
+Specifies if you want to start up or shut down the databaseIf required you can use the -force option from the command-line interface.
+
+a|
+boolean
+a|
+SM_BACKUP_SCOPE
+a|
+Specifies the scope of the backup (full or partial)
+a|
+string
+a|
+SM_BACKUP_PROTECTION
+a|
+Specifies if backup protection is enabled
+a|
+boolean
+a|
+SM_TARGET_FILER_NAME
+a|
+Specifies the target storage system name *Note:* If more than one storage system is used, then the storage system names must be separated by commas.
+
+a|
+string
+a|
+SM_TARGET_VOLUME_NAME
+a|
+Specifies the target volume name *Note:* The target volume name must be prefixed with storage device name, for example, SM_TARGET_FILER_NAME/SM_TARGET_VOLUME_NAME.
+
+a|
+string
+a|
+SM_HOST_FILE_SYSTEM
+a|
+Specifies the host file system
+a|
+string
+a|
+SM_SNAPSHOT_NAMES
+a|
+Specifies the Snapshot list *Note:* Name of the Snapshot copies must be prefixed with the storage system name and volume name. Names of the Snapshot copies are separated by commas.
+
+a|
+string array
+a|
+SM_ARCHIVE_LOGS_DIRECTORY
+a|
+Specifies the archive logs directory *Note:* If the archive logs are located in more than one directory, then the names of those directories are separated by commas.
+
+a|
+string array
+a|
+SM_REDO_LOGS_DIRECTORY
+a|
+Specifies the redo logs directory *Note:* If the redo logs are located in more than one directory, then the names of those directories are separated by commas.
+
+a|
+string array
+a|
+SM_CONTROL_FILES_DIRECTORY
+a|
+Specifies the control files directory *Note:* If the control files are located in more than one directory, then the names of those directories are separated by commas.
+
+a|
+string array
+a|
+SM_DATA_FILES_DIRECTORY
+a|
+Specifies the data files directory *Note:* If the data files are located in more than one directory, then the names of those directories are separated by commas.
+
+a|
+string array
+a|
+user_defined
+a|
+Specifies additional parameters defined by the user. User-defined parameters are not available for plug-ins that are used as policies.
+a|
+user-defined
+|===

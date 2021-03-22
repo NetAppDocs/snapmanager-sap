@@ -1,0 +1,77 @@
+---
+permalink: windows/reference_the_smosmsap_history_purge_command.html
+sidebar: sidebar
+keywords: 
+summary: 'This command enables you to delete the history of SnapManager operation.'
+---
+= The smsap history purge command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command enables you to delete the history of SnapManager operation.
+
+== Syntax
+
+----
+
+        smsap history purge 
+-profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
+-repository 
+-login \[-password repo_password\]
+-username repo_username
+-host repo_host 
+-dbname repo_dbname 
+-port repo_port}
+-operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\} 
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *-profile profile*
++
+Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
+
+* *-repository*
++
+The options that follow -repository specify the details of the database that stores the profile.
+
+* *-dbname repo_dbname*
++
+Specifies the name of the database that stores the profile. Use either the global name or the SID.
+
+* *-host repo_host*
++
+Specifies the name or IP address of the host computer the repository database runs on.
+
+* *-login*
++
+Starts the repository login details.
+
+* *-username repo_username*
++
+Specifies the user name needed to access the database that stores the repository.
+
+* *-port repo_port*
++
+Specifies the TCP port number used to access the database that stores the repository.
+
+* *-operation {-operationsoperation_name [operation_name1, operation_name2] | -all*
++
+Specifies the SnapManager operation for which you configure the history.
+
+* *-quiet*
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Displays error, warning, and informational messages on the console.
+
+== Example command
+
+----
+ smsap history purge -profile -name PROFILE1 -operation -operations backup
+ -verbose
+----

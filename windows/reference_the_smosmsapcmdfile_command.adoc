@@ -1,0 +1,39 @@
+---
+permalink: windows/reference_the_smosmsapcmdfile_command.html
+sidebar: sidebar
+keywords: 
+summary: 'You can use the cmdfile command to run any command if the shell on your host limits the number of characters that can appear on a command line.'
+---
+= The smsap cmdfile command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use the cmdfile command to run any command if the shell on your host limits the number of characters that can appear on a command line.
+
+== Syntax
+
+----
+
+        smsap cmdfile 
+-file file_name 
+\[-quiet \| -verbose\]
+----
+
+You can include the command in a text file and use the smsap cmdfile command to execute the command. You can add only one command in a text file. You must not include smsap in the command syntax.
+
+NOTE: The smsap cmdfile command replaces the smsap pfile command. The smsap cmdfile is not compatible with the smsap pfile command.
+
+== Parameters
+
+* *-file file_name*
++
+Specifies the path to text file containing the command you want to execute.
+
+* *-quiet*
++
+Specifies that only error messages are displayed in the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Specifies that error, warning, and informational messages are displayed in the console.

@@ -1,0 +1,35 @@
+---
+permalink: unix-administration/task_using_protection_manager_to_configure_a_secondary_resource_pool.html
+sidebar: sidebar
+keywords: 
+summary: 'To support backup of the database to secondary storage, the storage administrator uses Protection Manager to organize the secondary storage systems enabled with the SnapVault Secondary license into a resource pool for the backups.'
+---
+= Using Protection Manager to configure a secondary resource pool
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+To support backup of the database to secondary storage, the storage administrator uses Protection Manager to organize the secondary storage systems enabled with the SnapVault Secondary license into a resource pool for the backups.
+
+Ideally, storage systems in a resource pool are interchangeable in terms of their acceptability as destinations for backups. For example, when developing the protection strategy for the payroll database, you, as the storage administrator, identified secondary storage systems with similar performance and quality of service levels that would be suitable members of the same resource pool.
+
+You have already created aggregates of unused space on storage systems that you intend to assign to resource pools. This ensures that there is adequate space to contain the backups.
+
+. Go to Protection Manager's NetApp Management Console.
+. From the menu bar, click *Data* > *Resource Pools*.
++
+The Resource Pools window appears.
+
+. Click *Add*.
++
+The Add Resource Pool wizard starts.
+
+. Complete the steps in the wizard to create the *paydb_backup_resource* resource pool.
++
+Use the following settings:
+
+ ** Name: Use *paydb-backup_resource*
+ ** Space thresholds (use the defaults):
+  *** Space utilization thresholds: enabled
+  *** Nearly Full threshold (for resource pool): 80%
+  *** Full threshold (for resource pool): 90%

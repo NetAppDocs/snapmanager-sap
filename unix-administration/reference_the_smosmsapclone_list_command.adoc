@@ -1,0 +1,58 @@
+---
+permalink: unix-administration/reference_the_smosmsapclone_list_command.html
+sidebar: sidebar
+keywords: 
+summary: 'This command lists the clones of the database for a given profile.'
+---
+= The smsap clone list command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command lists the clones of the database for a given profile.
+
+== Syntax
+
+----
+
+        smsap clone list 
+-profile profile_name 
+-delimiter character 
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *-profile profile_name*
++
+Specifies the list of clones associated with the profile. The profile contains the identifier of the database and other database information.
+
+* *-delimiter character*
++
+When this parameter is specified, the command lists the attributes in each row separated by the character specified.
+
+* *-quiet*
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* *-verbose*
++
+Displays error, warning, and informational messages on the console.
+
+== Example command
+
+The following example lists the database clones in the SALES1 profile.
+
+----
+smsap clone list -profile SALES1 -verbose
+----
+
+----
+ID Status SID Host Label Comment
+-------- ------- ----- ------- ---------- -------
+8ab...01 SUCCESS hsdbc server1 back1clone test comment
+----
+
+*Related information*
+
+xref:task_viewing_a_list_of_clones.adoc[Viewing a list of clones]
