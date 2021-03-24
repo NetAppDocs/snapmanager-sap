@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_snapmanager_security.html
 sidebar: sidebar
-keywords: 
-summary: 'You can perform SnapManager operations only if you have the appropriate credentials. Security in SnapManager is governed by user authentication and role-based access control \(RBAC\). RBAC enables database administrators to restrict the operations that SnapManager can perform against the volumes and LUNs that hold the data files in a database.'
+keywords: snapmanager, operation, credential, security, authentication, role-based, access, control, rbac, lun, data, file, database
+summary: You can perform SnapManager operations only if you have the appropriate credentials. Security in SnapManager is governed by user authentication and role-based access control \(RBAC\). RBAC enables database administrators to restrict the operations that SnapManager can perform against the volumes and LUNs that hold the data files in a database.
 ---
 = How SnapManager maintains security
 :icons: font

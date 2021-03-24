@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_disabling_client_access_to_snapshot_copies.html
 sidebar: sidebar
-keywords: 
-summary: 'For any storage system volume that uses the NFS protocol and contains SAP data backed up using BR\*Tools, you must disable client access to the Snapshot copies of that volume. If client access is enabled, BR\*Tools will attempt to create backups of the hidden .snapshot directories that contain previous backups.'
+keywords: storage, system, volume, nfs, protocol, sap, tools, snapshot, copies, copy, snapshot, directory, directories, backup, diable, disabling, client, access
+summary: For any storage system volume that uses the NFS protocol and contains SAP data backed up using BR\*Tools, you must disable client access to the Snapshot copies of that volume. If client access is enabled, BR\*Tools will attempt to create backups of the hidden .snapshot directories that contain previous backups.
 ---
 = Disabling client access to Snapshot copies
 :icons: font

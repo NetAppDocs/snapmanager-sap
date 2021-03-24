@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_dump_files.html
 sidebar: sidebar
-keywords: 
-summary: 'The dump files are compressed log files containing information about SnapManager and its environment. The different types of log files created are operation, profile, and system dump file.'
+keywords: dump, file, compress, log, contain, snapmanager, environment, file, system, dump
+summary: The dump files are compressed log files containing information about SnapManager and its environment. The different types of log files created are operation, profile, and system dump file.
 ---
 = Dump files
 :icons: font

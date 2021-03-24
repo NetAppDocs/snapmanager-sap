@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_about_control_file_and_archive_log_file_handling.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager includes the control files and optionally includes archive log files with each backup. Archive log files are used for recovery operations.'
+keywords: snapmanager, control, file, log, backup, archive, recovery, operation, handling
+summary: SnapManager includes the control files and optionally includes archive log files with each backup. Archive log files are used for recovery operations.
 ---
 = About control file and archive log file handling
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_managing_profiles_for_efficient_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You must create a profile in SnapManager for the database on which you want to perform an operation. You must select the profile and then select the operation that you want to perform.'
+keywords: create, profile, snapmanager, database, operation, manage, managing, efficient
+summary: You must create a profile in SnapManager for the database on which you want to perform an operation. You must select the profile and then select the operation that you want to perform.
 ---
 = Managing profiles for efficient backups
 :icons: font

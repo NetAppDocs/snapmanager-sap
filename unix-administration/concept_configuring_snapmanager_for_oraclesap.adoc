@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_configuring_snapmanager_for_oraclesap.html
 sidebar: sidebar
-keywords: 
-summary: 'After installing SnapManager, you must perform some additional configuration tasks depending on the environment that you are using.'
+keywords: install, snapmanager, additional, configuration, environment, configuring, configure
+summary: After installing SnapManager, you must perform some additional configuration tasks depending on the environment that you are using.
 ---
 = Configuring SnapManager
 :icons: font

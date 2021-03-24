@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_profile_usage_for_br_tools_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'When you run a BR\*Tools command that uses the BACKINT interface, SnapManager uses a profile from the repository. The repository is determined by the SnapManager credentials of the user running the BR\*Tools command.'
+keywords: backint, snapmanager, profile, repository, backup
+summary: When you run a BR\*Tools command that uses the BACKINT interface, SnapManager uses a profile from the repository. The repository is determined by the SnapManager credentials of the user running the BR\*Tools command.
 ---
 = Profile usage for BR*Tools backups
 :icons: font

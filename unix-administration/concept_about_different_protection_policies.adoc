@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_about_different_protection_policies.html
 sidebar: sidebar
-keywords: 
-summary: 'You can select different policies to protect the backups on the secondary or tertiary storage systems.'
+keywords: policies, policy, protect, backup, secondary, tertiary, storage, system, protection
+summary: You can select different policies to protect the backups on the secondary or tertiary storage systems.
 ---
 = About different protection policies
 :icons: font

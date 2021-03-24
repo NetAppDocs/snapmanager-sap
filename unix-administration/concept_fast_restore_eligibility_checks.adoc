@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_fast_restore_eligibility_checks.html
 sidebar: sidebar
-keywords: 
-summary: 'When you choose to perform a fast restore of a backup, SnapManager first performs an eligibility check to determine whether the fast restore process can be used.'
+keywords: perform, restore, backup, snapmanager, eligibility, check, fast
+summary: When you choose to perform a fast restore of a backup, SnapManager first performs an eligibility check to determine whether the fast restore process can be used.
 ---
 = Fast restore eligibility checks
 :icons: font

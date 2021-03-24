@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_general_layout_and_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'Knowing the recommended general database layouts and storage configurations can help you avoid issues related to disk groups, file types, and tablespaces.'
+keywords: recommend, general, database, layout, storage, configuration, help, avoid, issue, relate, disk, group, file, type, tablespace
+summary: Knowing the recommended general database layouts and storage configurations can help you avoid issues related to disk groups, file types, and tablespaces.
 ---
 = Recommended general database layouts and storage configurations
 :icons: font

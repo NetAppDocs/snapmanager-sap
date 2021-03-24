@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_understanding_enabling_or_disabling_of_data_protection_in_profile.html
 sidebar: sidebar
-keywords: 
-summary: 'You can enable or disable data protection while creating or updating a database profile.'
+keywords: enable, disable, data, protection, creating, create, update, updating, database, profile, understand, enabling, disabling
+summary: You can enable or disable data protection while creating or updating a database profile.
 ---
 = Understanding enabling or disabling of data protection in profile
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_primary_and_secondary_storage_configuration_and_topology.html
 sidebar: sidebar
-keywords: 
-summary: 'In this example, the TechCo corporation runs its payroll database on a database server that is also a SnapManager for SAP host and stores its payroll database data and configuration files on primary storage systems at company headquarters. The corporate requirement is to protect that database with daily and weekly backups to local storage as well as backups to storage systems at a secondary storage site fifty miles away.'
+keywords: techco, corportation, payroll, database, server, snapmanager, sap, host, fifty, mile, primary, secondary, storage, configuration, topology
+summary: In this example, the TechCo corporation runs its payroll database on a database server that is also a SnapManager for SAP host and stores its payroll database data and configuration files on primary storage systems at company headquarters. The corporate requirement is to protect that database with daily and weekly backups to local storage as well as backups to storage systems at a secondary storage site fifty miles away.
 ---
 = Primary and secondary storage configuration and topology
 :icons: font

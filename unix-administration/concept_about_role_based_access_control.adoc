@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_about_role_based_access_control.html
 sidebar: sidebar
-keywords: 
-summary: 'Role-based access control \(RBAC\) lets you control who has access to SnapManager operations. RBAC allows administrators to manage groups of users by defining roles and assigning users to those roles. You might want to use SnapManager RBAC in environments where RBAC is already in place.'
+keywords: role-based, access, control, rbac, control, access, snapmanager, operation, administrator, environment, role
+summary: Role-based access control \(RBAC\) lets you control who has access to SnapManager operations. RBAC allows administrators to manage groups of users by defining roles and assigning users to those roles. You might want to use SnapManager RBAC in environments where RBAC is already in place.
 ---
 = About role-based access control
 :icons: font

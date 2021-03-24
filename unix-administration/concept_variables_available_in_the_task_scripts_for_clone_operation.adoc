@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_variables_available_in_the_task_scripts_for_clone_operation.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager provides context information in the form of environment variables related to the clone operation being performed. For example, your script can retrieve the name of the original host, the name of the clone database, and the label of the backup.'
+keywords: snapmanager, environment, variable, clone, operation, script, host, database, backup
+summary: SnapManager provides context information in the form of environment variables related to the clone operation being performed. For example, your script can retrieve the name of the original host, the name of the clone database, and the label of the backup.
 ---
 = Variables available in the task scripts for clone operation
 :icons: font

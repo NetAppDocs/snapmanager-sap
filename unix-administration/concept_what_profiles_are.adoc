@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_what_profiles_are.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager uses profiles to store the information necessary to perform operations on a given database. A profile contains the information about the database including its credentials, backups, and clones. By creating a profile, you do not have to specify database details each time you perform an operation on that database.'
+keywords: snapmanager, profile, store, information, database, database, credential, clone, backup, operation
+summary: SnapManager uses profiles to store the information necessary to perform operations on a given database. A profile contains the information about the database including its credentials, backups, and clones. By creating a profile, you do not have to specify database details each time you perform an operation on that database.
 ---
 = What profiles are
 :icons: font

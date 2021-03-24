@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_database_restore_by_using_brrestore_and_brrecover.html
 sidebar: sidebar
-keywords: 
-summary: 'The BRRESTORE and BRRECOVER commands work only with backups created using BRBACKUP.'
+keywords: brrestore, brrecover, backup, brbackup, database, restore
+summary: The BRRESTORE and BRRECOVER commands work only with backups created using BRBACKUP.
 ---
 = Database restore by using BRRESTORE and BRRECOVER
 :icons: font

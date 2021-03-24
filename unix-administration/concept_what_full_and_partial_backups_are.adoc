@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_what_full_and_partial_backups_are.html
 sidebar: sidebar
-keywords: 
-summary: 'You can choose to back up the entire database or just a portion of it. If you choose to back up a portion of the database, you can choose to back up a group of tablespaces or data files. You can choose to take a separate backup of both tablespaces and data files.'
+keywords: entire, database, portion, tablespace, data, file, full, partial, backup
+summary: You can choose to back up the entire database or just a portion of it. If you choose to back up a portion of the database, you can choose to back up a group of tablespaces or data files. You can choose to take a separate backup of both tablespaces and data files.
 ---
 = What full and partial backups are
 :icons: font

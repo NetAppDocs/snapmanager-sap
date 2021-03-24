@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_limitations.html
 sidebar: sidebar
-keywords: SnapManager
-summary: 'You must be aware of the scenarios and limitations that might affect your environment.'
+keywords: scenario, limitation, environment, snapmanager
+summary: You must be aware of the scenarios and limitations that might affect your environment.
 ---
 = Limitations when working with SnapManager
 :icons: font

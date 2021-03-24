@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_restore_files_from_an_alternate_location.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to restore data files and control files from a location other than that of the Snapshot copies in the original volume.'
+keywords: snapmanager, enable, restore, data, file, control, location, snapshot, copies, copy, volume, alternate
+summary: SnapManager enables you to restore data files and control files from a location other than that of the Snapshot copies in the original volume.
 ---
 = Restore files from an alternate location
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_what_protection_states_are.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager shows the state of each backup. Administrators must know the different states and monitor the state of their backups.'
+keywords: snapmanager, state, backup, administrator, monitor, protection
+summary: SnapManager shows the state of each backup. Administrators must know the different states and monitor the state of their backups.
 ---
 = What protection states are
 :icons: font

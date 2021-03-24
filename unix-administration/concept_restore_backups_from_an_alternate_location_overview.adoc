@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_restore_backups_from_an_alternate_location_overview.html
 sidebar: sidebar
-keywords: 
-summary: 'To restore a database backup from an alternate location, use the following major steps, each of which is further described in this section.'
+keywords: restore, database, backup, alternate, location, overview
+summary: To restore a database backup from an alternate location, use the following major steps, each of which is further described in this section.
 ---
 = Restore backups from an alternate location overview
 :icons: font

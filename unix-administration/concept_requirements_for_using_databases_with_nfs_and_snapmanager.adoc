@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_requirements_for_using_databases_with_nfs_and_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'You must know the requirements for using databases with Network File System \(NFS\) and SnapManager. The recommendations include running as root, attribute caching, and symbolic links.'
+keywords: requirement, database, network, file, system, nfs, snapmanager, root, attribute, caching, cache, sybolic, link
+summary: You must know the requirements for using databases with Network File System \(NFS\) and SnapManager. The recommendations include running as root, attribute caching, and symbolic links.
 ---
 = Requirements for using databases with NFS and SnapManager
 :icons: font

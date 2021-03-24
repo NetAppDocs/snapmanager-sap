@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_create_backups_using_snapshot_copies.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to create backups on the primary \(local\) storage and also on the secondary \(remote\) storage using protection policies or postprocessing scripts.'
+keywords: snapmanager, enable, primary, local, storage, secondary, remote, protection, policies, policy, postprocessing, script, create, backup, snapshot, copies, copy
+summary: SnapManager enables you to create backups on the primary \(local\) storage and also on the secondary \(remote\) storage using protection policies or postprocessing scripts.
 ---
 = Create backups using Snapshot copies
 :icons: font

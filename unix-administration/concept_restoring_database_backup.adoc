@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_restoring_database_backup.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP enables you to restore a database to the state it was when a Snapshot copy was taken. In addition to the file-based restore process, SnapManager supports volume-based fast restore technology, which reduces the restore time significantly compared to other recovery methods. Because backups are created more frequently, the number of logs that need to be applied is reduced, thus reducing the mean-time-to-recovery \(MTTR\) for a database.'
+keywords: snapmanager, sap, enable, restore, database, state, snapshot, copy, addition, file-base, restoring, backup, mean-time-to-recoverr, mttr
+summary: SnapManager for SAP enables you to restore a database to the state it was when a Snapshot copy was taken. In addition to the file-based restore process, SnapManager supports volume-based fast restore technology, which reduces the restore time significantly compared to other recovery methods. Because backups are created more frequently, the number of logs that need to be applied is reduced, thus reducing the mean-time-to-recovery \(MTTR\) for a database.
 ---
 = Restoring database backups
 :icons: font

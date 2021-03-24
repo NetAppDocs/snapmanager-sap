@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_restores_of_protected_backups_overview.html
 sidebar: sidebar
-keywords: 
-summary: 'You can choose the restore method that you want to use to restore the backup data from secondary storage to primary storage.'
+keywords: restore, method, backup, data, secondary, primary, storage, protect, overview
+summary: You can choose the restore method that you want to use to restore the backup data from secondary storage to primary storage.
 ---
 = Restores of protected backups overview
 :icons: font

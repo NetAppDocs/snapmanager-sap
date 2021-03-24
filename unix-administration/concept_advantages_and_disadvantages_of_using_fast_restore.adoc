@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_advantages_and_disadvantages_of_using_fast_restore.html
 sidebar: sidebar
-keywords: 
-summary: 'DBAs should be aware of the advantages and disadvantages of using volume-based fast restores.'
+keywords: dba, aware, advantage, disadvantage, volume-base, fast, restore, disadvantage
+summary: DBAs should be aware of the advantages and disadvantages of using volume-based fast restores.
 ---
 = Advantages and disadvantages of using fast restore
 :icons: font

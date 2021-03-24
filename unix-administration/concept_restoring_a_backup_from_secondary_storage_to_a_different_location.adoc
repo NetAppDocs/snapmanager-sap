@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_restoring_a_backup_from_secondary_storage_to_a_different_location.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the BRRESTORE or smsap restore command to restore a secondary backup to a different location. The new host must also be running SnapManager.'
+keywords: brrestore, smsap, restore, command, secondary, backup, location, host, snapmanager, restoring
+summary: You can use the BRRESTORE or smsap restore command to restore a secondary backup to a different location. The new host must also be running SnapManager.
 ---
 = Restoring a backup from a secondary storage to a different location
 :icons: font

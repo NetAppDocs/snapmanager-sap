@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_database_backups_created_using_brbackup_and_brarchive.html
 sidebar: sidebar
-keywords: 
-summary: 'The BRBACKUP command creates a backup of the SAP database using Snapshot copy on the storage system. You can run the BRBACKUP command from the SAP host’s command-line interface \(CLI\), or BR\*Tools CLI or graphical user interface \(GUI\). To back up the offline redo log files, you can use the BRARCHIVE command.'
+keywords: brbackup, command, create, backup, sap, database, snapshot, copy, storage, system, cli, interface, offline, redo, log, file, brarchive
+summary: The BRBACKUP command creates a backup of the SAP database using Snapshot copy on the storage system. You can run the BRBACKUP command from the SAP host’s command-line interface \(CLI\), or BR\*Tools CLI or graphical user interface \(GUI\). To back up the offline redo log files, you can use the BRARCHIVE command.
 ---
 = Database backups created using BRBACKUP and BRARCHIVE
 :icons: font

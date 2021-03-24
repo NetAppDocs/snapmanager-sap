@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_introduction_to_data_protection_in_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager supports data protection to protect the backups on the secondary or tertiary storage systems. You must set up SnapMirror and SnapVault relationships between the source and the destination volumes.'
+keywords: snapmanager, data, protection, backup, secondary, tertiary, storage, system, snapmirror, snapvault, relationship, destination, volume
+summary: SnapManager supports data protection to protect the backups on the secondary or tertiary storage systems. You must set up SnapMirror and SnapVault relationships between the source and the destination volumes.
 ---
 = Introduction to data protection in SnapManager
 :icons: font

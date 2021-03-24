@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_cloning_methods.html
 sidebar: sidebar
-keywords: 
-summary: 'You can clone a database using one of two methods. The method you choose affects the clone create operation.'
+keywords: clone, database, crate, operation, cloning, method
+summary: You can clone a database using one of two methods. The method you choose affects the clone create operation.
 ---
 = Cloning methods
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_variables_available_in_custom_script_for_restore_operation.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager provides context information in the form of environment variables related to the restore operation that is being performed. For example, your script can retrieve the name of the original host and the label of the backup that is restored.'
+keywords: snapmanager, context, information, form, environment, variable, script, restore, operation, host
+summary: SnapManager provides context information in the form of environment variables related to the restore operation that is being performed. For example, your script can retrieve the name of the original host and the label of the backup that is restored.
 ---
 = Variables available in the task scripts for the restore operation
 :icons: font
