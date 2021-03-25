@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_history_list_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command enables you to view a list of history details of the SnapManager operation.'
+keywords: command, enable, view, list, history, details, snapmanager, operation, smsap
+summary: This command enables you to view a list of history details of the SnapManager operation.
 ---
 = The smsap history list command
 :icons: font
@@ -15,15 +15,15 @@ This command enables you to view a list of history details of the SnapManager op
 
 ----
 
-        smsap history list 
+        smsap history list
 -profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
--repository 
+-repository
 -login \[-password repo_password\]
 -username repo_username
--host repo_host 
--dbname repo_dbname 
+-host repo_host
+-dbname repo_dbname
 -port repo_port}
--operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\} 
+-operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\}
 \[-delimiter character\]
 \[-quiet \| -verbose\]
 ----

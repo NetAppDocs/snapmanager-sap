@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_checking_the_snapmanager_software_version.html
 sidebar: sidebar
-keywords: 
-summary: 'You can determine which version of the product you are running on your local host by running the version command.'
+keywords: determine, version, product, run, local, host, command, check, software, snapmanager
+summary: You can determine which version of the product you are running on your local host by running the version command.
 ---
 = Checking the SnapManager software version
 :icons: font

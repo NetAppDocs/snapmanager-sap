@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_troubleshooting_snapdrive_issues.html
 sidebar: sidebar
-keywords: 
-summary: 'There are a few common issues you might run into when using SnapManager with SnapDrive products.'
+keywords: common, issue, snapmanager, snapdrive, troubleshooting, product
+summary: There are a few common issues you might run into when using SnapManager with SnapDrive products.
 ---
 = Troubleshooting SnapDrive issues
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_history_operation_show_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command enables you to view the history of a specific SnapManager operation associated with a profile.'
+keywords: command, enable, history, snapmanager, operation, associated, profile, smsap, operation-show
+summary: This command enables you to view the history of a specific SnapManager operation associated with a profile.
 ---
 = The smsap history operation-show command
 :icons: font
@@ -15,7 +15,7 @@ This command enables you to view the history of a specific SnapManager operation
 
 ----
 
-        smsap history operation-show 
+        smsap history operation-show
 -profile profile
 \{-label label \| -id id\}
 \[-quiet \| -verbose\]

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_defining_the_database_home_with_the_oratab_file.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager uses the oratab file during operations to determine the Oracle database home directory. An entry for your Oracle database must be in the oratab file for SnapManager to work correctly. The oratab file is created during the Oracle software installation.'
+keywords: snapmanager, oratab, file, operation, determine, oracle, database, home, directory, software, installation, defining, define
+summary: SnapManager uses the oratab file during operations to determine the Oracle database home directory. An entry for your Oracle database must be in the oratab file for SnapManager to work correctly. The oratab file is created during the Oracle software installation.
 ---
 = Defining the database home with the oratab file
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_backint_register_sld_command.html
 sidebar: sidebar
-keywords: 
-summary: 'If you want to use SAP BR\*Tools, you can run the backint register-sld command with SnapManager for SAP to register the BACKINT interface at your System Landscape Directory \(SLD\). The BACKINT interface is provided by the storage vendor to make the storage system work with the BR\*Tools commands. SnapManager for SAP installs its BACKINT interface file at /opt/NetApp/smsap/bin/.'
+keywords: sap, br, tools, backint, register-sld, command, snapmanager, backint, interface, system, landscape, directory, sld
+summary: If you want to use SAP BR\*Tools, you can run the backint register-sld command with SnapManager for SAP to register the BACKINT interface at your System Landscape Directory \(SLD\). The BACKINT interface is provided by the storage vendor to make the storage system work with the BR\*Tools commands. SnapManager for SAP installs its BACKINT interface file at /opt/NetApp/smsap/bin/.
 ---
 = The backint register-sld command
 :icons: font

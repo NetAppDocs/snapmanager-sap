@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_clone_split_result_command.html
 sidebar: sidebar
-keywords: 
-summary: ''
+keywords: smsap, clone, split-result, command, process
+summary: This command lets you view the result of the clone split process.
 ---
 = The smsap clone split-result command
 :icons: font
@@ -15,10 +15,10 @@ This command lets you view the result of the clone split process.
 
 ----
 
-        smsap clone split-result 
--profile profile 
-\[-host hostname\] 
-\[-label split-label \| -id split-id\] 
+        smsap clone split-result
+-profile profile
+\[-host hostname\]
+\[-label split-label \| -id split-id\]
 \[-quiet \| -verbose\]
 ----
 

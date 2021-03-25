@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_troubleshooting_known_issues.html
 sidebar: sidebar
-keywords: 
-summary: 'You should be aware of some known issues that might occur when you use SnapManager, and how to work around them.'
+keywords: aware, snapmanager, troubleshooting, known, issue
+summary: You should be aware of some known issues that might occur when you use SnapManager, and how to work around them.
 ---
 = Troubleshooting known issues
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_snapmanager_configuration_parameters.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager provides a list of configuration parameters that you can edit depending on your requirement. The configuration parameters are stored in the smsap.config file. However, the smsap.config file might not contain all the supported configuration parameters. You can add the configuration parameters, depending on your requirement.'
+keywords: snapmanager, provide, list, configuration, parameter, edit, depend, requirement, smsap, config, file, requirement
+summary: SnapManager provides a list of configuration parameters that you can edit depending on your requirement. The configuration parameters are stored in the smsap.config file. However, the smsap.config file might not contain all the supported configuration parameters. You can add the configuration parameters, depending on your requirement.
 ---
 = SnapManager configuration parameters
 :icons: font

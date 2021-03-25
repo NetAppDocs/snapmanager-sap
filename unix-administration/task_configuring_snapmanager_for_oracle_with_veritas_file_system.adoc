@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_configuring_snapmanager_for_oracle_with_veritas_file_system.html
 sidebar: sidebar
-keywords: 
-summary: 'When SnapManager is installed on Solaris, you can configure SnapManager to support the Veritas Storage Foundation for Oracle RAC \(SFRAC\) environment.'
+keywords: snapmanager, install, solaris, configure, configuring, support, veritas, sfrac, environment, oracle, rac, sfrac
+summary: When SnapManager is installed on Solaris, you can configure SnapManager to support the Veritas Storage Foundation for Oracle RAC \(SFRAC\) environment.
 ---
 = Configuring SnapManager to support the Veritas SFRAC environment
 :icons: font

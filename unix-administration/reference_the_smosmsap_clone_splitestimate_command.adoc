@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_clone_splitestimate_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command enables you to view the clone split amount of storage consumed estimate.'
+keywords: command, enable, view, clone, split, storage, consume, estimate, smsap, split-estimate
+summary: This command enables you to view the clone split amount of storage consumed estimate.
 ---
 = The smsap clone split-estimate command
 :icons: font
@@ -15,10 +15,10 @@ This command enables you to view the clone split amount of storage consumed esti
 
 ----
 
-        smsap clone split-estimate 
--profile profile 
-\[-host hostname\] 
-\[-label clone-label | -id clone-id\] 
+        smsap clone split-estimate
+-profile profile
+\[-host hostname\]
+\[-label clone-label | -id clone-id\]
 \[-quiet \| -verbose\]
 ----
 

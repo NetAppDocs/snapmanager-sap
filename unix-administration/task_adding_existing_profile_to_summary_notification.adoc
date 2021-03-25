@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_adding_existing_profile_to_summary_notification.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to add an existing profile to a summary email notification while updating that profile.'
+keywords: snapmanager, enable, exist, add, profile, summary, email, notification, update, updating
+summary: SnapManager enables you to add an existing profile to a summary email notification while updating that profile.
 ---
 = Adding an existing profile to summary email notifications
 :icons: font

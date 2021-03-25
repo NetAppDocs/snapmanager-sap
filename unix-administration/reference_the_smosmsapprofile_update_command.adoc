@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapprofile_update_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the profile update command to update the information for an existing profile.'
+keywords: run, profile, update, command, information, exist, smsap
+summary: You can run the profile update command to update the information for an existing profile.
 ---
 = The smsap profile update command
 :icons: font
@@ -15,39 +15,39 @@ You can run the profile update command to update the information for an existing
 
 ----
 
-        smsap profile update 
+        smsap profile update
 -profile profile
 \[-new-profile new_profile_name\]
 \[-profile-password profile_password\]
-[-database  
--dbname db_dbname 
--host db_host 
-\[-sid db_sid\] 
-[-login 
-\[-username db_username -password db_password -port db_port\] 
- \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]   
-[\{-rman  \{-controlfile \| \{\{-login  
--username  rman_username  
--password  rman_password \} 
-\[-tnsname  tnsname\]\}\}\} \| 
--remove-rman\] 
--osaccount osaccount 
--osgroup osgroup 
-[-retain 
-\[-hourly \[-count n\] \[-duration m\]\] 
-\[-daily \[-count n\] \[-duration m\]] 
-\[-weekly \[-count n\] \[-duration m\]] 
-\[-monthly \[-count n\] \[-duration m\]]]] 
--comment comment 
--snapname-patternpattern 
-[-protect \[-protection-policy policy_name\] \| \[-noprotect\]] 
-[-summary-notification] 
-[-notification 
-\[-success 
--email email_address1,email_address2 
--subject subject_pattern\] 
-\[-failure  
--email email_address1,email_address2 
+[-database
+-dbname db_dbname
+-host db_host
+\[-sid db_sid\]
+[-login
+\[-username db_username -password db_password -port db_port\]
+ \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]
+[\{-rman  \{-controlfile \| \{\{-login
+-username  rman_username
+-password  rman_password \}
+\[-tnsname  tnsname\]\}\}\} \|
+-remove-rman\]
+-osaccount osaccount
+-osgroup osgroup
+[-retain
+\[-hourly \[-count n\] \[-duration m\]\]
+\[-daily \[-count n\] \[-duration m\]]
+\[-weekly \[-count n\] \[-duration m\]]
+\[-monthly \[-count n\] \[-duration m\]]]]
+-comment comment
+-snapname-patternpattern
+[-protect \[-protection-policy policy_name\] \| \[-noprotect\]]
+[-summary-notification]
+[-notification
+\[-success
+-email email_address1,email_address2
+-subject subject_pattern\]
+\[-failure
+-email email_address1,email_address2
 -subject subject_pattern]
 [-separate-archivelog-backups
 -retain-archivelog-backups
@@ -57,7 +57,7 @@ You can run the profile update command to update the information for an existing
 -months months
 [-protect \[-protection-policy policy_name\] \| \[-noprotect\]]
 [-include-with-online-backups \| -no-include-with-online-backups]]
-[-dump] 
+[-dump]
 \[-quiet \| -verbose\]
 ----
 

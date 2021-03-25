@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_storage_list_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the storage list command to display the list of storage systems associated with a particular profile.'
+keywords: run, storage, list, command, display, system, profile, smsap
+summary: You can run the storage list command to display the list of storage systems associated with a particular profile.
 ---
 = The smsap storage list command
 :icons: font
@@ -15,7 +15,7 @@ You can run the storage list command to display the list of storage systems asso
 
 ----
 
-        smsap storage list 
+        smsap storage list
 -profile profile
 ----
 

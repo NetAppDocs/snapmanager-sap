@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapprofile_show_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the profile show command to display the information about a profile.'
+keywords: run, profile, show, command, display, information, smsap
+summary: You can run the profile show command to display the information about a profile.
 ---
 = The smsap profile show command
 :icons: font
@@ -15,8 +15,8 @@ You can run the profile show command to display the information about a profile.
 
 ----
 
-        smsap profile show 
--profile profile_name 
+        smsap profile show
+-profile profile_name
 \[-quiet \| -verbose\]
 ----
 

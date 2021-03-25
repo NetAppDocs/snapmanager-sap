@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_changing_the_backup_retention_policy.html
 sidebar: sidebar
-keywords: 
-summary: 'You can change properties of a backup so it is eligible or ineligible for deletion according to the retention policy.'
+keywords: change, properties, backup, eligible, ineligible, deletion, retention, policy, changing
+summary: You can change properties of a backup so it is eligible or ineligible for deletion according to the retention policy.
 ---
 = Changing the backup retention policy
 :icons: font

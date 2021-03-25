@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapclone_delete_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the clone delete command to delete a clone. You cannot delete a clone if the clone is use by any operation.'
+keywords: run, clone, delete, command, operation, smsap
+summary: You can run the clone delete command to delete a clone. You cannot delete a clone if the clone is use by any operation.
 ---
 = The smsap clone delete command
 :icons: font
@@ -15,14 +15,14 @@ You can run the clone delete command to delete a clone. You cannot delete a clon
 
 ----
 
-        smsap clone delete 
--profile profile_name 
+        smsap clone delete
+-profile profile_name
 \[-id guid \| -label clone_name\]
-[-login 
-\[-username db_username -password db_password -port db_port\] 
- \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]   
+[-login
+\[-username db_username -password db_password -port db_port\]
+ \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]
 \[-syspassword syspassword\]
--force 
+-force
 \[-dump\]
 \[-quiet \| -verbose\]
 ----

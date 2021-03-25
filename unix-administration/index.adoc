@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/index.html
 sidebar: sidebar
-keywords: 
-summary: ''
+keywords: administration, guide
+summary: Administration Guide
 ---
 = Administration Guide
 :icons: font

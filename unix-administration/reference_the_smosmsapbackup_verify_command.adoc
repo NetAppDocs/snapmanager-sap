@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapbackup_verify_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the backup verify command to see if the backup is in a valid format for Oracle.'
+keywords: run, backup, verify, command, oracle, smsap
+summary: You can run the backup verify command to see if the backup is in a valid format for Oracle.
 ---
 = The smsap backup verify command
 :icons: font
@@ -15,11 +15,11 @@ You can run the backup verify command to see if the backup is in a valid format 
 
 ----
 
-        smsap backup verify 
--profile profile_name 
-[-label backup_name \| \[-id guid\] 
+        smsap backup verify
+-profile profile_name
+[-label backup_name \| \[-id guid\]
 \[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\}\]
-\[-force\] 
+\[-force\]
 \[-dump\]
 \[-quiet \| -verbose\]
 ----

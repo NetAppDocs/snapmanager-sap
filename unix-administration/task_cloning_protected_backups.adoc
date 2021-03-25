@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_cloning_protected_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use SnapManager to clone a copy of a backup that has been protected.'
+keywords: snapmanager, clone, copy, backup, protect, cloning
+summary: You can use SnapManager to clone a copy of a backup that has been protected.
 ---
 = Cloning protected backups
 :icons: font

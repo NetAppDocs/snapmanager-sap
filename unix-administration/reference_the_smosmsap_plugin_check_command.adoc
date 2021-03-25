@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_plugin_check_command.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to install and use custom scripts for various operations. SnapManager offers backup, restore, and clone plug-ins to automate your custom scripts before and after the backup, restore, and clone operations. Before you use the backup, restore, and clone plug-in, you can run the plugin check command to verify the installation of plug-in scripts. Custom scripts are stored in three directories: policy \(for scripts that should always be run before the backup, restore, or clone operation occurs\), pre \(for preprocessing scripts\), and post \(for post-processing scripts\).'
+keywords: snapmanager, enable, install, custom, script, operation, backup, restore, clone, plug-in, automate, custom, restore, smsap, plugin, check
+summary: SnapManager enables you to install and use custom scripts for various operations. SnapManager offers backup, restore, and clone plug-ins to automate your custom scripts before and after the backup, restore, and clone operations. Before you use the backup, restore, and clone plug-in, you can run the plugin check command to verify the installation of plug-in scripts. Custom scripts are stored in three directories: policy \(for scripts that should always be run before the backup, restore, or clone operation occurs\), pre \(for preprocessing scripts\), and post \(for post-processing scripts\).
 ---
 = The smsap plugin check command
 :icons: font

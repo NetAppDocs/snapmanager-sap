@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapclone_template_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command lets you create a clone specification template.'
+keywords: command, create, clone, specification, template, smsap
+summary: This command lets you create a clone specification template.
 ---
 = The smsap clone template command
 :icons: font
@@ -15,9 +15,9 @@ This command lets you create a clone specification template.
 
 ----
 
-        smsap clone template 
--profile name 
-\[-backup-id guid  \| -backup-label backup_name\] 
+        smsap clone template
+-profile name
+\[-backup-id guid  \| -backup-label backup_name\]
 \[-quiet \| -verbose\]
 ----
 

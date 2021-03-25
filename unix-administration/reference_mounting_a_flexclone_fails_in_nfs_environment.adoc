@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_mounting_a_flexclone_fails_in_nfs_environment.html
 sidebar: sidebar
-keywords: 
-summary: 'When SnapManager creates a FlexClone of a volume in an NFS environment, an entry is added in the /etc/exports file. The clone or backup fails to mount on a SnapManager host with an error message.'
+keywords: snapmanager, create, flexclone, volume, nfs, environment, export, file, clone, backup, fail, mount, error, message
+summary: When SnapManager creates a FlexClone of a volume in an NFS environment, an entry is added in the /etc/exports file. The clone or backup fails to mount on a SnapManager host with an error message.
 ---
 = Mounting a FlexClone volume fails in NFS environment
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_schedule_create_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the schedule create command to schedule a backup to be created at a specific time.'
+keywords: schedule, create, command, schedule, backup, smsap
+summary: You can use the schedule create command to schedule a backup to be created at a specific time.
 ---
 = The smsap schedule create command
 :icons: font
@@ -16,20 +16,20 @@ You can use the schedule create command to schedule a backup to be created at a 
 ----
 
         smsap schedule create
--profile profile_name 
-\[-full\{-auto \| -online \| -offline\} 
+-profile profile_name
+\[-full\{-auto \| -online \| -offline\}
 \[-retain -hourly \| -daily \| -weekly \| -monthly \| -unlimited\]
 \[-verify\]\] |
-\[-data \[\[-files files \[files\]\] \|  
+\[-data \[\[-files files \[files\]\] \|
 \[-tablespaces tablespaces \[tablespaces\]\] \{-auto \| -online \| -offline\}
 \[-retain -hourly \| -daily \| -weekly \| -monthly \| -unlimited\]
 \[-verify\]\] |
 \[-archivelogs\]}
-\[-label label\] 
-\[-comment comment\] 
+\[-label label\]
+\[-comment comment\]
 \[-protect \| -noprotect \| -protectnow\]
-\[-backup-dest path1 \[ , path2\]\] 
-\[-exclude-dest path1 \[ , path2\]\] 
+\[-backup-dest path1 \[ , path2\]\]
+\[-exclude-dest path1 \[ , path2\]\]
 \[-prunelogs \{-all \| -until-scn until-scn \| -until -date  yyyy-MM-dd:HH:mm:ss\] \| -before \{-months \| -days \| -weeks \| -hours}}
 -prune-dest prune_dest1,\[prune_dest2\]\]
 -schedule-name schedule_name
@@ -39,7 +39,7 @@ You can use the schedule create command to schedule a backup to be created at a 
 -start-time \{start_time <yyyy-MM-dd HH:mm\>\}
 -runasuser runasuser
 \[-taskspec taskspec\]
--force 
+-force
 \[-quiet \| -verbose\]
 ----
 

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapsystem_verify_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command confirms that all the components of the environment required to run SnapManager are set up correctly.'
+keywords: command, confirm, component, environment, require, run, snapmanager, smsap
+summary: This command confirms that all the components of the environment required to run SnapManager are set up correctly.
 ---
 = The smsap system verify command
 :icons: font
@@ -15,7 +15,7 @@ This command confirms that all the components of the environment required to run
 
 ----
 
-        smsap system verify 
+        smsap system verify
 \[-quiet \| -verbose\]
 ----
 

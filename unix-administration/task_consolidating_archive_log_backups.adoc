@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_consolidating_archive_log_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager consolidates the archivelog-only backups every time you take a backup by freeing up the duplicate archivelog-only backups. By default, consolidation is enabled.'
+keywords: snapmanager, consolidate, archivelog-only, backup, consolidation, consolidating, archive, log
+summary: SnapManager consolidates the archivelog-only backups every time you take a backup by freeing up the duplicate archivelog-only backups. By default, consolidation is enabled.
 ---
 = Consolidating archive log backups
 :icons: font

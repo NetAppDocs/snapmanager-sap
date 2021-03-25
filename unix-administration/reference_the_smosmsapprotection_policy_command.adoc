@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapprotection_policy_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the protection-policy command to list the protection policies that can be applied to a profile. The protection policy can be applied when a new profile is created or an existing profile is updated. You can also set the protection policy for the profile using the Protection Manager console.'
+keywords: run, protection-policy, command, list, policies, applied, apply, profile, protection, policy, exist, update, manager, smsap
+summary: You can run the protection-policy command to list the protection policies that can be applied to a profile. The protection policy can be applied when a new profile is created or an existing profile is updated. You can also set the protection policy for the profile using the Protection Manager console.
 ---
 = The smsap protection-policy command
 :icons: font
@@ -15,7 +15,7 @@ You can run the protection-policy command to list the protection policies that c
 
 ----
 
-        smsap protection-policy list 
+        smsap protection-policy list
 ----
 
 NOTE: The Protection Manager and SnapDrive must be installed on the server for you to use this command.

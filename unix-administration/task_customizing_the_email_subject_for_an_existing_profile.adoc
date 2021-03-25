@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_customizing_the_email_subject_for_an_existing_profile.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to customize the email subject pattern for an existing profile by updating that profile. This customized subject pattern is applicable only for the updated profile.'
+keywords: snapmanager, enable, customize, email, subject, pattern, exist, profile, updating, update, applicable, update, customizing
+summary: SnapManager enables you to customize the email subject pattern for an existing profile by updating that profile. This customized subject pattern is applicable only for the updated profile.
 ---
 = Customizing the email subject for an existing profile
 :icons: font

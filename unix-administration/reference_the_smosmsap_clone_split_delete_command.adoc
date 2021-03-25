@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_clone_split_delete_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command lets you delete a clone split operation cycle entry from a repository database.'
+keywords: delete, clone, command, split, operation, cycle, entry, repository, database, smsap, split-delete
+summary: This command lets you delete a clone split operation cycle entry from a repository database.
 ---
 = The smsap clone split-delete command
 :icons: font
@@ -15,9 +15,9 @@ This command lets you delete a clone split operation cycle entry from a reposito
 
 ----
 
-        smsap clone split-delete 
--profile profile \[-host hostname\] 
-\[-label split-label \| -id split-id\] 
+        smsap clone split-delete
+-profile profile \[-host hostname\]
+\[-label split-label \| -id split-id\]
 \[-quiet \| -verbose\]
 ----
 

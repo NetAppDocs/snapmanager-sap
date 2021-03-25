@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_sample_database_volume_layouts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can refer to sample database volume layouts for help in configuring your database.'
+keywords: sample, database, volume, layout, configuring, configure
+summary: You can refer to sample database volume layouts for help in configuring your database.
 ---
 = Sample database volume layouts
 :icons: font

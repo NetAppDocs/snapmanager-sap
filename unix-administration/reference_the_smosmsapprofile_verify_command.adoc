@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapprofile_verify_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the profile verify command to verify the profile set up. You must mount the database before running this command.'
+keywords: run, profile, verify, command, mount, database, run, smsap
+summary: You can run the profile verify command to verify the profile set up. You must mount the database before running this command.
 ---
 = The smsap profile verify command
 :icons: font
@@ -15,8 +15,8 @@ You can run the profile verify command to verify the profile set up. You must mo
 
 ----
 
-        smsap profile verify 
--profile profile_name 
+        smsap profile verify
+-profile profile_name
 \[-quiet \| -verbose\]
 ----
 

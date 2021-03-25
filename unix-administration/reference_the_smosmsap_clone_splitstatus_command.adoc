@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_clone_splitstatus_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command lets you know the progress of running split process.'
+keywords: command, run, split, process, smsap, split-status, clone
+summary: This command lets you know the progress of running split process.
 ---
 = The smsap clone split-status command
 :icons: font
@@ -15,10 +15,10 @@ This command lets you know the progress of running split process.
 
 ----
 
-        smsap clone split-status 
--profile profile 
-\[-host hostname\] 
-\[-label split-label \| -id split-id\] 
+        smsap clone split-status
+-profile profile
+\[-host hostname\]
+\[-label split-label \| -id split-id\]
 \[-quiet \| -verbose\]
 ----
 

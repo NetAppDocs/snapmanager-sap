@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapbackup_restore_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the backup restore command to restore backups of a database or a portion of a database, and then optionally recover the database information.'
+keywords: run, backup, restore, command, database, portion, recover, information, smsap
+summary: You can run the backup restore command to restore backups of a database or a portion of a database, and then optionally recover the database information.
 ---
 = The smsap backup restore command
 :icons: font
@@ -15,20 +15,20 @@ You can run the backup restore command to restore backups of a database or a por
 
 ----
 
-        smsap backup restore 
--profile profile_name 
-\[-label label \| -id id\] 
+        smsap backup restore
+-profile profile_name
+\[-label label \| -id id\]
 \[-files files \[files...\] \|
--tablespaces tablespaces \[tablespaces...\]\] \| 
--complete \| -controlfiles\]  
-\[-recover \{-alllogs \| -nologs \| -until until\} \[-using-backup-controlfile\] \] 
-\[-restorespec restorespec \| -from-secondary \[-temp-volume temp_volume\] \[-copy-id id\]\] 
-\[-preview\] 
-\[-fast \{-require \| -override \| -fallback \| -off\}\] 
+-tablespaces tablespaces \[tablespaces...\]\] \|
+-complete \| -controlfiles\]
+\[-recover \{-alllogs \| -nologs \| -until until\} \[-using-backup-controlfile\] \]
+\[-restorespec restorespec \| -from-secondary \[-temp-volume temp_volume\] \[-copy-id id\]\]
+\[-preview\]
+\[-fast \{-require \| -override \| -fallback \| -off\}\]
 \[-recover-from-location path1 \[, path2\]\]
 \[-taskspec taskspec\]
 \[-dump\]
-\[-force\] 
+\[-force\]
 \[-quiet \| -verbose\]
 ----
 

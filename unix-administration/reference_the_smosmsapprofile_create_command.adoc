@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapprofile_create_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the profile create command to create a profile of a database in a repository. You must mount the database before you run this command.'
+keywords: run, profile, create, command, database, repository, mount, smsap
+summary: You can run the profile create command to create a profile of a database in a repository. You must mount the database before you run this command.
 ---
 = The smsap profile create command
 :icons: font
@@ -15,42 +15,42 @@ You can run the profile create command to create a profile of a database in a re
 
 ----
 
-        smsap profile create 
+        smsap profile create
 -profile profile
-\[-profile-password profile_password\] 
--repository 
--dbname repo_service_name 
--host repo_host 
--port repo_port 
--login -username repo_username 
--database 
--dbname db_dbname 
+\[-profile-password profile_password\]
+-repository
+-dbname repo_service_name
+-host repo_host
+-port repo_port
+-login -username repo_username
+-database
+-dbname db_dbname
 -host db_host
 [-sid  db_sid\]
-[-login 
-\[-username db_username -password db_password -port db_port\] 
- \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]   
-[-rman \{-controlfile \| \{-login 
--username  rman_username -password  rman_password\} 
+[-login
+\[-username db_username -password db_password -port db_port\]
+ \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]
+[-rman \{-controlfile \| \{-login
+-username  rman_username -password  rman_password\}
 -tnsname  rman_tnsname\}\}]
 \[-osaccount osaccount \]
 \[-osgroup osgroup\]
-[-retain 
-\[-hourly \[-count n\] \[-duration m\]\] 
-\[-daily \[-count n\] \[-duration m\]] 
-\[-weekly \[-count n\] \[-duration m\]] 
-\[-monthly \[-count n\] \[-duration m\]]]] 
--comment comment 
--snapname-pattern pattern 
-[-protect \[-protection-policy policy\]] 
-[-summary-notification] 
-[-notification 
-\[-success 
--email email_address1,email_address2 
--subject subject_pattern\] 
-\[-failure  
--email email_address1,email_address2 
--subject subject_pattern] 
+[-retain
+\[-hourly \[-count n\] \[-duration m\]\]
+\[-daily \[-count n\] \[-duration m\]]
+\[-weekly \[-count n\] \[-duration m\]]
+\[-monthly \[-count n\] \[-duration m\]]]]
+-comment comment
+-snapname-pattern pattern
+[-protect \[-protection-policy policy\]]
+[-summary-notification]
+[-notification
+\[-success
+-email email_address1,email_address2
+-subject subject_pattern\]
+\[-failure
+-email email_address1,email_address2
+-subject subject_pattern]
 [-separate-archivelog-backups
 -retain-archivelog-backups
  -hours hours |

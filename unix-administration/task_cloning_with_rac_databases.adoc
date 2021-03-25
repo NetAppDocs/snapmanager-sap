@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_cloning_with_rac_databases.html
 sidebar: sidebar
-keywords: 
-summary: 'You can clone your RAC database to a non-RAC database or you can clone it to a non-RAC database and then change it to a RAC database.'
+keywords: clone, rac, database, cloning
+summary: You can clone your RAC database to a non-RAC database or you can clone it to a non-RAC database and then change it to a RAC database.
 ---
 = Cloning with RAC databases
 :icons: font

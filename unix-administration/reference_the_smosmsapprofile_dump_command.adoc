@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapprofile_dump_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the profile dump command to create the .jar file that contains diagnostic information about a profile.'
+keywords: run, profile, dump, command, create, jar, file, contain, diagnostic, information, smsap
+summary: You can run the profile dump command to create the .jar file that contains diagnostic information about a profile.
 ---
 = The smsap profile dump command
 :icons: font
@@ -15,8 +15,8 @@ You can run the profile dump command to create the .jar file that contains diagn
 
 ----
 
-        smsap profile dump 
--profile profile_name 
+        smsap profile dump
+-profile profile_name
 \[-quiet \| -verbose\]
 ----
 

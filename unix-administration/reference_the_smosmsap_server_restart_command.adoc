@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_server_restart_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command restarts the SnapManager host server and is entered as root.'
+keywords: command, restart, snapmanager, host, server, enter, root, smsap_server
+summary: This command restarts the SnapManager host server and is entered as root.
 ---
 = The smsap_server restart command
 :icons: font

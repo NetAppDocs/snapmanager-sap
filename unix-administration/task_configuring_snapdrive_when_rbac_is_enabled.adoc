@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_configuring_snapdrive_when_rbac_is_enabled.html
 sidebar: sidebar
-keywords: 
-summary: 'When role-based access control \(RBAC\) is enabled, you must configure the DataFabric Manager server to include the RBAC capabilities. You must also register the SnapDrive user created in the DataFabric Manager server and root user of the storage system in SnapDrive.'
+keywords: role-based, access, control, rbac, enable, configure, datafabric, manager, server, capability, capabilities, snapdrive, create, storage, system, regiser, configure, configuring
+summary: When role-based access control \(RBAC\) is enabled, you must configure the DataFabric Manager server to include the RBAC capabilities. You must also register the SnapDrive user created in the DataFabric Manager server and root user of the storage system in SnapDrive.
 ---
 = Configuring DataFabric Manager server and SnapDrive when RBAC is enabled
 :icons: font

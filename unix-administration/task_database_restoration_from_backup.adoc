@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_database_restoration_from_backup.html
 sidebar: sidebar
-keywords: 
-summary: 'If the active content of the payroll database is accidentally lost or destroyed, SnapManager and the NetApp Management Console data protection capability support restoration of that data from either a local backup or secondary storage.'
+keywords: active, content, payroll, database, accidentally, lost, destroy, snapmanager, netapp, management, console, data, protection, capability, support, restoration, local, backup, secondary, storage
+summary: If the active content of the payroll database is accidentally lost or destroyed, SnapManager and the NetApp Management Console data protection capability support restoration of that data from either a local backup or secondary storage.
 ---
 = Database restoration from backup
 :icons: font

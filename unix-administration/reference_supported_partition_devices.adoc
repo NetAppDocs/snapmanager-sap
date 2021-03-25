@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_supported_partition_devices.html
 sidebar: sidebar
-keywords: 
-summary: 'You must know the different partition devices that are supported in SnapManager.'
+keywords: partition, device, support, snapmanager
+summary: You must know the different partition devices that are supported in SnapManager.
 ---
 = Supported partition devices
 :icons: font

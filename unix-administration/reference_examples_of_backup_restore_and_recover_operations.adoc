@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_examples_of_backup_restore_and_recover_operations.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information about some of the backup, restore, and recover scenarios that you can use to accomplish your data protection goals.'
+keywords: information, backup, restore, recover, scenario, accomplish, data, protection, goal, example, operation
+summary: You can find information about some of the backup, restore, and recover scenarios that you can use to accomplish your data protection goals.
 ---
 = Examples of backup, restore, and recover operations
 :icons: font

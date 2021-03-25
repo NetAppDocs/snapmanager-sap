@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_troubleshooting_storage_system_renaming_issue.html
 sidebar: sidebar
-keywords: 
-summary: 'You might face issues when renaming a storage system or after you have successfully renamed the storage system.'
+keywords: face, issue, renaming, rename, storage, system, successful, troubleshooting
+summary: You might face issues when renaming a storage system or after you have successfully renamed the storage system.
 ---
 = Troubleshooting storage system renaming issue
 :icons: font

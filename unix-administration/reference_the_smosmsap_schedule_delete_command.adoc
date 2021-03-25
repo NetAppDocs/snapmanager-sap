@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_schedule_delete_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command deletes a backup schedule when it is no longer necessary.'
+keywords: command, delete, backup, schedule, smsap
+summary: This command deletes a backup schedule when it is no longer necessary.
 ---
 = The smsap schedule delete command
 :icons: font
@@ -16,7 +16,7 @@ This command deletes a backup schedule when it is no longer necessary.
 ----
 
         smsap schedule delete
--profile profile_name 
+-profile profile_name
 -schedule-name schedule_name
 \[-quiet \| -verbose\]
 ----

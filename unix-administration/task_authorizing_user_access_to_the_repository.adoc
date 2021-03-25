@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_authorizing_user_access_to_the_repository.html
 sidebar: sidebar
-keywords: 
-summary: 'In addition to role-based access control \(RBAC\), SnapManager enables you to set credentials for database users to access the repository. Using credentials, you can restrict or prevent access to the SnapManager hosts, repositories, profiles, and databases.'
+keywords: addition, role-based, access, control, rbac, snapmanager, enable, set, credential, database, repository, restrict, prevent, host, profile, database, authorizing, authorize
+summary: In addition to role-based access control \(RBAC\), SnapManager enables you to set credentials for database users to access the repository. Using credentials, you can restrict or prevent access to the SnapManager hosts, repositories, profiles, and databases.
 ---
 = Authorizing access to the repository
 :icons: font

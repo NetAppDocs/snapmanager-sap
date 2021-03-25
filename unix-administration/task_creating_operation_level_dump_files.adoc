@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_creating_operation_level_dump_files.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the smsap operation dump command with the name or ID of the failed operation to get log information about a particular operation. You can specify different log levels to gather information about a specific operation, profile, host, or environment.'
+keywords: smsap, operation, dump, command, name, id, fail, log, information, level, information, host, environment
+summary: You can use the smsap operation dump command with the name or ID of the failed operation to get log information about a particular operation. You can specify different log levels to gather information about a specific operation, profile, host, or environment.
 ---
 = Creating operation-level dump files
 :icons: font

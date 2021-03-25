@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_cloning_databases_in_the_current_state.html
 sidebar: sidebar
-keywords: 
-summary: 'You can create a backup and a clone of the database from the current state of the database by using a single command.'
+keywords: create, backup, clone, database, current, state, single, command, cloning
+summary: You can create a backup and a clone of the database from the current state of the database by using a single command.
 ---
 = Cloning databases in the current state
 :icons: font

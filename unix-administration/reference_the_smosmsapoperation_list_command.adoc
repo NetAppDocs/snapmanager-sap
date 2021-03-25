@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapoperation_list_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command lists the summary information of all operations recorded against a specified profile.'
+keywords: command, list, summary, information, operation, profile, smsap
+summary: This command lists the summary information of all operations recorded against a specified profile.
 ---
 = The smsap operation list command
 :icons: font
@@ -15,9 +15,9 @@ This command lists the summary information of all operations recorded against a 
 
 ----
 
-        smsap operation list 
--profile profile_name 
-\[-delimiter character\] 
+        smsap operation list
+-profile profile_name
+\[-delimiter character\]
 \[-quiet \| -verbose\]
 ----
 

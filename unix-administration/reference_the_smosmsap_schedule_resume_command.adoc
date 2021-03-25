@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_schedule_resume_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command resumes the suspended backup schedule.'
+keywords: command, resume, suspend, backup, schedule, smsap
+summary: This command resumes the suspended backup schedule.
 ---
 = The smsap schedule resume command
 :icons: font
@@ -16,7 +16,7 @@ This command resumes the suspended backup schedule.
 ----
 
         smsap schedule resume
--profile profile_name 
+-profile profile_name
 -schedule-name schedule_name
 \[-quiet \| -verbose\]
 ----

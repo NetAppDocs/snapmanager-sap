@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_clone_stopsplit_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command stops the running clone split process.'
+keywords: command, stop, run, clone, split, process, split-stop, smsap
+summary: This command stops the running clone split process.
 ---
 = The smsap clone split-stop command
 :icons: font
@@ -15,10 +15,10 @@ This command stops the running clone split process.
 
 ----
 
-        smsap clone split-stop 
--profile profile 
-\[-host hostname\] 
-\[-label split-label \| -id split-id\] 
+        smsap clone split-stop
+-profile profile
+\[-host hostname\]
+\[-label split-label \| -id split-id\]
 \[-quiet \| -verbose\]
 ----
 

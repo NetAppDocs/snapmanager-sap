@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_cloning_a_database_to_an_alternate_host.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the clone create command to clone a database backup on an alternate host.'
+keywords: clone, create, command, database, alternate, host, cloning
+summary: You can use the clone create command to clone a database backup on an alternate host.
 ---
 = Cloning a database to an alternate host
 :icons: font

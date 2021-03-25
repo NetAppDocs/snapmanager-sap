@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_where_to_go_for_more_information.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information about the basic tasks involved in installing and using SnapManager.'
+keywords: information, basic, task, install, snapmanager, where, to, go
+summary: You can find information about the basic tasks involved in installing and using SnapManager.
 ---
 = Where to go for more information
 :icons: font
