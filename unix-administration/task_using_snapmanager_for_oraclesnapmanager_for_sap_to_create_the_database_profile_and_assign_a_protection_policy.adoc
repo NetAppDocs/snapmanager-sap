@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_and_assign_a_protection_policy.html
 sidebar: sidebar
-keywords: 
-summary: 'You must create a profile in SnapManager for SAP, enable protection in the profile, and assign a protection policy to create a protected backup.'
+keywords: create, profile, snapmanager, sap, enable, protection, assign, policy, protection, backup
+summary: You must create a profile in SnapManager for SAP, enable protection in the profile, and assign a protection policy to create a protected backup.
 ---
 = Using SnapManager for SAP to create the database profile and assign a protection policy
 :icons: font

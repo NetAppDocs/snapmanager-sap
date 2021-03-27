@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_restoring_backup_using_single_file_snaprestore.html
 sidebar: sidebar
-keywords: 
-summary: 'You can restore the backups by using the Single File SnapRestore \(SFSR\) method.'
+keywords: restore, backup, single, file, snaprestore, sfsr, method, restoring
+summary: You can restore the backups by using the Single File SnapRestore \(SFSR\) method.
 ---
 = Restoring backups by using Single File SnapRestore
 :icons: font

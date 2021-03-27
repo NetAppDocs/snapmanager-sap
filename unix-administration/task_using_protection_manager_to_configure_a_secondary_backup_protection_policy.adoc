@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_using_protection_manager_to_configure_a_secondary_backup_protection_policy.html
 sidebar: sidebar
-keywords: 
-summary: 'After configuring the backup schedule, the storage administrator configures a protected backup storage policy in which that schedule is to be included.'
+keywords: configure, configuring, backup, schedule, storage, administrator, protect, protection, manager, secondary, policy
+summary: After configuring the backup schedule, the storage administrator configures a protected backup storage policy in which that schedule is to be included.
 ---
 = Using Protection Manager to configure a secondary backup protection policy
 :icons: font

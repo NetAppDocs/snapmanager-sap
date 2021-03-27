@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_mounting_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager automatically handles the mounting of a backup to make it available to the host. You can also mount backups in scenarios where you use an external tool, such as Oracle Recovery Manager \(RMAN\), to access the files in the backup.'
+keywords: snapmanager, automatic, handle, mount, backup, available, host, scenario, external, tool, oracle, recovery, manager, rman, access, file
+summary: SnapManager automatically handles the mounting of a backup to make it available to the host. You can also mount backups in scenarios where you use an external tool, such as Oracle Recovery Manager \(RMAN\), to access the files in the backup.
 ---
 = Mounting backups
 :icons: font

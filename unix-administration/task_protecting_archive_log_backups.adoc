@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_protecting_archive_log_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'While creating profiles, you can enable protection for the archive log backups based on the archive log protection policy.'
+keywords: create, creating, profile, enable, protection, archive, log, backup, policy, protect
+summary: While creating profiles, you can enable protection for the archive log backups based on the archive log protection policy.
 ---
 = Protecting archive log backups
 :icons: font

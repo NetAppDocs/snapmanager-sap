@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_viewing_a_list_of_scheduled_operations.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view a list of scheduled operations for a profile.'
+keywords: view, list, schedule, operation, profile
+summary: You can view a list of scheduled operations for a profile.
 ---
 = Viewing a list of scheduled operations
 :icons: font

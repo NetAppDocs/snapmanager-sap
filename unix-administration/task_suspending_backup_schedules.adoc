@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_suspending_backup_schedules.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to suspend a backup schedule until the backup schedule is resumed.'
+keywords: snapmanager, enable, suspend, backup, schedule, resume
+summary: SnapManager enables you to suspend a backup schedule until the backup schedule is resumed.
 ---
 = Suspending backup schedules
 :icons: font

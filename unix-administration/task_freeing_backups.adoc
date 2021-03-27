@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_freeing_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You can free backups, which deletes the Snapshot copies without deleting the backup metadata. This function frees the space occupied by the backup. You can use the smsap backup free command to free the backups.'
+keywords: free, backup, delete, snapshot, copies, copy, deleting, metadata, function, smsap, command
+summary: You can free backups, which deletes the Snapshot copies without deleting the backup metadata. This function frees the space occupied by the backup. You can use the smsap backup free command to free the backups.
 ---
 = Freeing backups
 :icons: font

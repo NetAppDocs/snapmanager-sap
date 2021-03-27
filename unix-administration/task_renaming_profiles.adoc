@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_renaming_profiles.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to rename the profile when you update the profile. The SnapManager capabilities that are set on the profile and the operations that can be performed before renaming are retained for the renamed profile.'
+keywords: snapmanager, enable, rename, profile, update, perform, renaming, retain
+summary: SnapManager enables you to rename the profile when you update the profile. The SnapManager capabilities that are set on the profile and the operations that can be performed before renaming are retained for the renamed profile.
 ---
 = Renaming profiles
 :icons: font

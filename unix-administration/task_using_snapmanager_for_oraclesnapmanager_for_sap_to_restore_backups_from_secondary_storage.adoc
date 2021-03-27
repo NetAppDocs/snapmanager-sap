@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_restore_backups_from_secondary_storage.html
 sidebar: sidebar
-keywords: 
-summary: 'Administrators can restore protected backups from secondary storage and can choose how they want to copy the data back to the primary storage.'
+keywords: administrator, restore, protect, backup, secondary, storage, copy, data, back, primary, snapmanager
+summary: Administrators can restore protected backups from secondary storage and can choose how they want to copy the data back to the primary storage.
 ---
 = Using SnapManager for SAP to restore backups from secondary storage
 :icons: font

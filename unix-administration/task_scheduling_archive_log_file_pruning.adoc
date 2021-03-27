@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_scheduling_archive_log_file_pruning.html
 sidebar: sidebar
-keywords: 
-summary: 'When you create a backup, you can schedule the pruning of archive log files to occur at a specified time.'
+keywords: create, backup, schedule, pruning, prune, archive, log, file, scheduling
+summary: When you create a backup, you can schedule the pruning of archive log files to occur at a specified time.
 ---
 = Scheduling archive log file pruning
 :icons: font

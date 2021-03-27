@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_viewing_a_list_of_storage_controllers_associated_with_a_profile.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view a list of the storage systems associated with a particular profile.'
+keywords: view, list, storage, system, associate, particular, profile
+summary: You can view a list of the storage systems associated with a particular profile.
 ---
 = Viewing a list of storage systems associated with a profile
 :icons: font

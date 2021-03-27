@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_splitting_a_clone_on_a_primary_or_secondary_storage.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the clone split command to split the clone. After the clone split is complete, the clone metadata is removed from the repository database and the backup associated with the clone can be deleted or freed.'
+keywords: clone, split, complete, metadata, remove, repository, primary, secondary, storage, delete, free
+summary: You can use the clone split command to split the clone. After the clone split is complete, the clone metadata is removed from the repository database and the backup associated with the clone can be deleted or freed.
 ---
 = Splitting a clone on primary or secondary storage
 :icons: font

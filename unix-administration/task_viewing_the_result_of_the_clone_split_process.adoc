@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_viewing_the_result_of_the_clone_split_process.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view the result of the clone split process you started.'
+keywords: view, result, clone, split, process
+summary: You can view the result of the clone split process you started.
 ---
 = Viewing the result of the clone split process
 :icons: font

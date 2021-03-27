@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_viewing_clone_split_estimate.html
 sidebar: sidebar
-keywords: 
-summary: 'The clone split estimate helps you know the total free space available on the aggregate, the amount of space shared between the clone and the original database, and the space exclusively used by the clone. In addition, you can view the date and time at which the underlying clone was created and the age of the clone. Based on this estimate, you decide whether to split a clone or not.'
+keywords: clone, split, estimate, help, total, free, space, available, aggregate, database, view
+summary: The clone split estimate helps you know the total free space available on the aggregate, the amount of space shared between the clone and the original database, and the space exclusively used by the clone. In addition, you can view the date and time at which the underlying clone was created and the age of the clone. Based on this estimate, you decide whether to split a clone or not.
 ---
 = Viewing a clone split estimate
 :icons: font

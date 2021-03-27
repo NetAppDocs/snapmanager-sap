@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_using_protection_manager_to_configure_a_secondary_resource_pool.html
 sidebar: sidebar
-keywords: 
-summary: 'To support backup of the database to secondary storage, the storage administrator uses Protection Manager to organize the secondary storage systems enabled with the SnapVault Secondary license into a resource pool for the backups.'
+keywords: support, backup, database, secondary, storage, administrator, protection, manager, organize, snapvault, license, resource, pool
+summary: To support backup of the database to secondary storage, the storage administrator uses Protection Manager to organize the secondary storage systems enabled with the SnapVault Secondary license into a resource pool for the backups.
 ---
 = Using Protection Manager to configure a secondary resource pool
 :icons: font

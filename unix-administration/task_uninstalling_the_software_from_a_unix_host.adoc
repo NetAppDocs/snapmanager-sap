@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_uninstalling_the_software_from_a_unix_host.html
 sidebar: sidebar
-keywords: 
-summary: 'If you no longer need the SnapManager software, you can uninstall it from the host server.'
+keywords: snapmanager, software, uninstall, host, server, unix
+summary: If you no longer need the SnapManager software, you can uninstall it from the host server.
 ---
 = Uninstalling the software from a UNIX host
 :icons: font

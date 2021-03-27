@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_viewing_a_list_of_operations.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view a summary listing of all the operations performed against a profile.'
+keywords: view, summary, list, operation, perform, profile
+summary: You can view a summary listing of all the operations performed against a profile.
 ---
 = Viewing a list of operations
 :icons: font

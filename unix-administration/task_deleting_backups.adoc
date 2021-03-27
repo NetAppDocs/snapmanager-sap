@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_deleting_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You must delete backups when you no longer need them, which frees the space those backups occupy. If you remove backups, you reduce the chance of reaching the limit of 255 Snapshot copies per volume.'
+keywords: delete, backup, free, space, remove, snapshot, copies, copy, volume, deleting
+summary: You must delete backups when you no longer need them, which frees the space those backups occupy. If you remove backups, you reduce the chance of reaching the limit of 255 Snapshot copies per volume.
 ---
 = Deleting backups
 :icons: font

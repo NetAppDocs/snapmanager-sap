@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_for_a_local_backup.html
 sidebar: sidebar
-keywords: 
-summary: 'The database administrators use SnapManager to create a database profile that will be used to initiate a backup to local storage on a primary storage system. The entire profile creation and backup creation processes are performed entirely in SnapManager; they do not involve Protection Manager.'
+keywords: database, administrator, snapmanager, database, initiate, local, storage, primary, system, creation, process, involve, manager
+summary: The database administrators use SnapManager to create a database profile that will be used to initiate a backup to local storage on a primary storage system. The entire profile creation and backup creation processes are performed entirely in SnapManager; they do not involve Protection Manager.
 ---
 = Using SnapManager for SAP to create the database profile for a local backup
 :icons: font

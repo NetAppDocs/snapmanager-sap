@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/task_enabling_role_based_access_control.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager role-based access control \(RBAC\) is enabled using SnapDrive. Upon installation of SnapDrive, RBAC is disabled by default. After you enable RBAC in SnapDrive, SnapManager then performs operations with RBAC enabled.'
+keywords: snapmanager, role-based, access, control, rbac, enable, snapdrive, installation, disable, default, operation
+summary: SnapManager role-based access control \(RBAC\) is enabled using SnapDrive. Upon installation of SnapDrive, RBAC is disabled by default. After you enable RBAC in SnapDrive, SnapManager then performs operations with RBAC enabled.
 ---
 = Enabling role-based access control
 :icons: font
