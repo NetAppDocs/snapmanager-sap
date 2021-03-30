@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/task_upgrading_snapmanager_for_oracle_snapmanager_for_sap_hosts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can upgrade all of the existing hosts to use the latest version of SnapManager. All of the hosts are upgraded simultaneously. However, this might result in downtime of all the SnapManager hosts and the scheduled operations during that time.'
+keywords: upgrade, exist, host, version, snapmanager, simultaneous, result, schedule, upgrading
+summary: You can upgrade all of the existing hosts to use the latest version of SnapManager. All of the hosts are upgraded simultaneously. However, this might result in downtime of all the SnapManager hosts and the scheduled operations during that time.
 ---
 = Upgrading the SnapManager hosts
 :icons: font

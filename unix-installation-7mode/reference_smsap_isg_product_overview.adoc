@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/reference_smsap_isg_product_overview.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP automates and simplifies the complex, manual, and time-consuming processes associated with the backup, recovery, and cloning of databases. You can use SnapManager with ONTAP SnapMirror technology to create copies of backups on another volume and with ONTAP SnapVault technology to archive backups efficiently to disk.'
+keywords: snapmanager, sap, automate, complex, manual, time-consuming, associate, backup, recovery, cloning, clone, database, ontap, technology, copies, copy, disk, product, overview
+summary: SnapManager for SAP automates and simplifies the complex, manual, and time-consuming processes associated with the backup, recovery, and cloning of databases. You can use SnapManager with ONTAP SnapMirror technology to create copies of backups on another volume and with ONTAP SnapVault technology to archive backups efficiently to disk.
 ---
 = Product overview
 :icons: font

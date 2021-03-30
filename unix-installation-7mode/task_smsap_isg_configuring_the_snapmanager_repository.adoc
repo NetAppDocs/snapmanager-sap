@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/task_smsap_isg_configuring_the_snapmanager_repository.html
 sidebar: sidebar
-keywords: 
-summary: 'You must configure the SnapManager repository in the repository database instance. The repository database stores metadata for databases managed by SnapManager.'
+keywords: configure, snapmanager, repository, database, instance, store, manage, configuring
+summary: You must configure the SnapManager repository in the repository database instance. The repository database stores metadata for databases managed by SnapManager.
 ---
 = Configuring the SnapManager repository
 :icons: font

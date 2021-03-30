@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use SnapManager with ONTAP SnapMirror technology to create mirror copies of backup sets on another volume, and with ONTAP SnapVault technology to perform disk-to-disk backup replication for standards compliance and other governance-related purposes. Before you perform these tasks, you must configure a data-protection relationship between the source and destination volumes and initialize the relationship.'
+keywords: snapmanager, snapmirror, ontap, technology, create, mirror, copies, copy, backup, volume, snapvault, disk-to-disk, replication, compliance, governance-related, purpose, task, data-protection, relationship, source, destination, volume, relationship
+summary: You can use SnapManager with ONTAP SnapMirror technology to create mirror copies of backup sets on another volume, and with ONTAP SnapVault technology to perform disk-to-disk backup replication for standards compliance and other governance-related purposes. Before you perform these tasks, you must configure a data-protection relationship between the source and destination volumes and initialize the relationship.
 ---
 = Preparing storage systems for SnapMirror and SnapVault replication
 :icons: font

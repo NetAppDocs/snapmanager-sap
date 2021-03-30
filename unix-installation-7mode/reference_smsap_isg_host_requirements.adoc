@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/reference_smsap_isg_host_requirements.html
 sidebar: sidebar
-keywords: 
-summary: 'You must install SnapManager for SAP on every host where the database you want to backup is hosted. You must ensure that your hosts meet the minimum requirements for SnapManager configuration.'
+keywords: install, snapmanager, sap, host, database, backup, host, minimum, requirement, configuration, unix, requirement
+summary: You must install SnapManager for SAP on every host where the database you want to backup is hosted. You must ensure that your hosts meet the minimum requirements for SnapManager configuration.
 ---
 = UNIX host requirements
 :icons: font

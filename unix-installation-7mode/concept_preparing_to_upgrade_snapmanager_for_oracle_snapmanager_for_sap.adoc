@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/concept_preparing_to_upgrade_snapmanager_for_oracle_snapmanager_for_sap.html
 sidebar: sidebar
-keywords: 
-summary: 'The environment in which you want to upgrade SnapManager must meet the specific software, hardware, browser, database, and operating system requirements. For the latest information about the requirements, see the Interoperability Matrix.'
+keywords: environment, upgrade, snapmanager, software, hardware, browser, database, operating, system, requirement, information, interoperability, preparing, prepare
+summary: The environment in which you want to upgrade SnapManager must meet the specific software, hardware, browser, database, and operating system requirements. For the latest information about the requirements, see the Interoperability Matrix.
 ---
 = Preparing to upgrade SnapManager
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/task_smsap_isg_scheduling_recurring_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You can schedule backup operations so that the backups are initiated automatically at regular intervals. SnapManager allows you to schedule backups on an hourly, daily, weekly, monthly, or one-time basis.'
+keywords: schedule, backup, operation, initiate, automatic, regular, interval, hourly, daily, weekly, monthly, one-time, basis, scheduling, recur
+summary: You can schedule backup operations so that the backups are initiated automatically at regular intervals. SnapManager allows you to schedule backups on an hourly, daily, weekly, monthly, or one-time basis.
 ---
 = Scheduling recurring backups
 :icons: font

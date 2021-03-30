@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/task_smsap_isg_backing_up_your_database.html
 sidebar: sidebar
-keywords: 
-summary: 'After creating a profile, you must back up your database. You can schedule recurring backups after the initial backup and verification.'
+keywords: create, creating, profile, back, up, database, schedule, recur, backup, initial, verification
+summary: After creating a profile, you must back up your database. You can schedule recurring backups after the initial backup and verification.
 ---
 = Backing up your database
 :icons: font

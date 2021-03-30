@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/reference_smsap_isg_snapmanager_architecture.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP includes components that work together to provide a comprehensive and powerful backup, restore, recovery, and cloning solution for Oracle databases.'
+keywords: snapmanager, sap, component, comprehensive, powerful, backup, restore, recovery, cloning, clone, solution, oracle, database
+summary: SnapManager for SAP includes components that work together to provide a comprehensive and powerful backup, restore, recovery, and cloning solution for Oracle databases.
 ---
 = SnapManager architecture
 :icons: font
