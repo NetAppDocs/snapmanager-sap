@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/task_modifying_the_backup_retention_class.html
 sidebar: sidebar
-keywords: 
-summary: 'After upgrading, SnapManager assigns the default backup retention class to the existing backups. You can modify the default retention class values to meet your backup requirements.'
+keywords: upgrading, upgrade, snapmanager, assign, default, backup, retention, exist, default, retention, class, value, requirement, modify, class
+summary: After upgrading, SnapManager assigns the default backup retention class to the existing backups. You can modify the default retention class values to meet your backup requirements.
 ---
 = Modifying the backup retention class
 :icons: font

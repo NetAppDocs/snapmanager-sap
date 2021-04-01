@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/concept_prerequisites_for_performing_a_rollback.html
 sidebar: sidebar
-keywords: 
-summary: 'Before performing a rollback, you must ensure that your environment meets certain requirements.'
+keywords: perform, rollback, ensure, environment, certain, requirement, prerequisite
+summary: Before performing a rollback, you must ensure that your environment meets certain requirements.
 ---
 = Prerequisites for performing a rollback
 :icons: font

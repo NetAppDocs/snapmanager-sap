@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/reference_smsap_isg_where_to_go_next.html
 sidebar: sidebar
-keywords: 
-summary: 'After installing SnapManager and successfully creating a backup, you can use SnapManager to perform restore, recovery, and cloning operations. In addition, you might want to find information about other SnapManager features such as scheduling, managing SnapManager operations, and maintaining a history of operations.'
+keywords: install, snapmanager, successful, creating, create, backup, perform, restore, recovery, cloning, clone, operation, addition, information, feature, operation, history, where, to, go, next
+summary: After installing SnapManager and successfully creating a backup, you can use SnapManager to perform restore, recovery, and cloning operations. In addition, you might want to find information about other SnapManager features such as scheduling, managing SnapManager operations, and maintaining a history of operations.
 ---
 = Where to go next
 :icons: font

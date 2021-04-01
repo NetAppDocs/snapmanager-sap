@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/concept_post_upgrade_tasks.html
 sidebar: sidebar
-keywords: 
-summary: 'After upgrading to a later version of SnapManager, you must update the existing repository. You might also want to modify the backup retention class assigned to the existing backups and identify which restore process you can use.'
+keywords: upgrade, upgrading, version, snapmanager, update, exist, repository, backup, retention, class, assign, restore, post-upgrade, task
+summary: After upgrading to a later version of SnapManager, you must update the existing repository. You might also want to modify the backup retention class assigned to the existing backups and identify which restore process you can use.
 ---
 = Post-upgrade tasks
 :icons: font

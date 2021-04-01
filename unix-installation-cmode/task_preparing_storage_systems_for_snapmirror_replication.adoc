@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/task_preparing_storage_systems_for_snapmirror_replication.html
 sidebar: sidebar
-keywords: 
-summary: 'Before you can use SnapManager to mirror Snapshot copies, you need to configure a data-protection relationship between the source and destination volumes, then initialize the relationship. Upon initialization, SnapMirror makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks that it references to the destination volume. It also transfers any other, less recent Snapshot copies on the source volume to the destination volume.'
+keywords: snapmanager, mirror, snapshot, copies, copy, configure, data-protection, relationship, source, destination, volume, initialize, snapmirror, transfer, replication
+summary: Before you can use SnapManager to mirror Snapshot copies, you need to configure a data-protection relationship between the source and destination volumes, then initialize the relationship. Upon initialization, SnapMirror makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks that it references to the destination volume. It also transfers any other, less recent Snapshot copies on the source volume to the destination volume.
 ---
 = Preparing storage systems for SnapMirror replication
 :icons: font

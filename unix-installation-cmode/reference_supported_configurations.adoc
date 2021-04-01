@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/reference_supported_configurations.html
 sidebar: sidebar
-keywords: 
-summary: 'The hosts on which you are installing SnapManager must meet the specified software, browser, database, and operating system requirements. You must verify support for your configuration before you install or upgrade SnapManager.'
+keywords: host, install, snapmanager, software, browser, database, operating, operate, system, requirement, configuration, upgrade, support, configuration
+summary: The hosts on which you are installing SnapManager must meet the specified software, browser, database, and operating system requirements. You must verify support for your configuration before you install or upgrade SnapManager.
 ---
 = Supported configurations
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/task_smsap_isg_verifying_database_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You can verify the backup of your database to ensure that the backed-up files are not corrupted.'
+keywords: verify, backup, database, ensure, backed-up, file, corrupt
+summary: You can verify the backup of your database to ensure that the backed-up files are not corrupted.
 ---
 = Verifying database backups
 :icons: font

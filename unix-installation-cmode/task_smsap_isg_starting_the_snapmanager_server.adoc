@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/task_smsap_isg_starting_the_snapmanager_server.html
 sidebar: sidebar
-keywords: 
-summary: 'You must start the SnapManager server from the target database host.'
+keywords: start, snapmanager, server, target, database, host
+summary: You must start the SnapManager server from the target database host.
 ---
 = Starting the SnapManager server
 :icons: font

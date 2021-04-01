@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/task_smsap_isg_accessing_the_snapmanager_user_interface.html
 sidebar: sidebar
-keywords: 
-summary: 'You can access the SnapManager user interface \(UI\) remotely by using a web browser from any system running on an operating system supported by SnapManager. You can also access the SnapManager UI from the target database host by running the smsapgui command.'
+keywords: access, snapmanager, user, interface, ui, remote, web, browser, system, operating, operate, support, target, database, smsapgui, command
+summary: You can access the SnapManager user interface \(UI\) remotely by using a web browser from any system running on an operating system supported by SnapManager. You can also access the SnapManager UI from the target database host by running the smsapgui command.
 ---
 = Accessing the SnapManager user interface
 :icons: font

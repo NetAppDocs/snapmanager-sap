@@ -19,6 +19,7 @@ NOTE: To see which tablespaces and data files are included in a backup, use the 
 
 The following table illustrates how SnapManager handles control and archive log files during each operation:
 
+[options="header"]
 |===
 | Type of operation| Control files| Archive log files
 a|

@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/concept_backing_up_and_verifying_your_databases.html
 sidebar: sidebar
-keywords: 
-summary: 'After installing SnapManager, you can create a basic backup of your database and verify that backup to ensure it does not contain any corrupt files.'
+keywords: install, snapmanager, create, backup, database, verify, corrupt, file, back, up
+summary: After installing SnapManager, you can create a basic backup of your database and verify that backup to ensure it does not contain any corrupt files.
 ---
 = Backing up and verifying your databases
 :icons: font

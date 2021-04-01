@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/task_preparing_storage_systems_for_snapvault_replication.html
 sidebar: sidebar
-keywords: 
-summary: 'Before you can use SnapManager to perform disk-to-disk backup replication, you need to configure a data-protection relationship between the source and destination volumes, then initialize the relationship. On initialization, SnapVault makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks it references to the destination volume.'
+keywords: snapmanager, perform, disk-to-disk, backup, replication, configure, data-protection, relationship, source, destination, volume, initialize, snapvault, data, block, preparing, prepare, storage, system, replication
+summary: Before you can use SnapManager to perform disk-to-disk backup replication, you need to configure a data-protection relationship between the source and destination volumes, then initialize the relationship. On initialization, SnapVault makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks it references to the destination volume.
 ---
 = Preparing storage systems for SnapVault replication
 :icons: font

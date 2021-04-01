@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/index.html
 sidebar: sidebar
-keywords: 
-summary: ''
+keywords: installation, setup, guide, unix
+summary: Installation and Setup Guide for UNIX®
 ---
 = Installation and Setup Guide for UNIX®
 :icons: font

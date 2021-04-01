@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/task_smsap_isg_installing_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'You must install SnapManager on each host where the database you want to backup is running.'
+keywords: install, snapmanager, host, database, backup, run
+summary: You must install SnapManager on each host where the database you want to backup is running.
 ---
 = Installing SnapManager
 :icons: font
