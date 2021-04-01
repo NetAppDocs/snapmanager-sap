@@ -18,6 +18,7 @@ SnapManager provides the following types of checks:
 
 The following table lists issues that you might encounter and indicates whether the fast restore eligibility check can be overridden:
 
+[options="header"]
 |===
 | Issue| Pass required| Details
 a|

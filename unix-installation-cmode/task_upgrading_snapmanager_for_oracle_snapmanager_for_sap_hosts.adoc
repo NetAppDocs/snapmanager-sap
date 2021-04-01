@@ -17,6 +17,7 @@ You can upgrade all of the existing hosts to use the latest version of SnapManag
 . Stop the SnapManager server: `smsap_server stop`
 . Depending on the UNIX host, install SnapManager:
 +
+[options="header"]
 |===
 | If the operating system is...| Then run...
 a|

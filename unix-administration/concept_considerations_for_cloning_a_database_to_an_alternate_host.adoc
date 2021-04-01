@@ -13,6 +13,7 @@ Before you can clone to a host other than the one on which the database resides,
 
 The following table shows the source and target host setup requirements:
 
+[options="header"]
 |===
 | Prerequisite set up| Requirement
 a|

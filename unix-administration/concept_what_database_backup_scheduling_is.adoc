@@ -13,6 +13,7 @@ You can schedule, update, and monitor backups for databases by using the Schedul
 
 The following table addresses some common scheduling questions:
 
+[options="header"]
 |===
 | Question| Answer
 a|

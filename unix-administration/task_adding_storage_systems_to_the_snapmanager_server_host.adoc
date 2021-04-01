@@ -13,6 +13,7 @@ You must add the storage systems operating in clustered Data ONTAP to the SnapMa
 
 . Add storage systems operating in clustered Data ONTAP to the SnapManager server host.
 +
+[options="header"]
 |===
 | If...| Then run the following command...
 a|

@@ -25,6 +25,7 @@ The directory that contains the sample plug-in scripts includes the following su
 
 The following table describes the sample scripts:
 
+[options="header"]
 |===
 | Script name| Description| Type of script
 a|

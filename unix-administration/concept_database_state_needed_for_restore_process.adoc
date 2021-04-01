@@ -13,6 +13,7 @@ The state of the database that is to be restored depends on the type of restore 
 
 The following table lists the state in which the database should be depending on the restore option selected and the type of files you want to include in the restore:
 
+[options="header"]
 |===
 | Type of restore| Files included| Database state for this instance| Database state for other instance (RAC only)
 a|

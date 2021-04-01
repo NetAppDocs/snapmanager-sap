@@ -11,6 +11,7 @@ summary: SnapManager supports a wide range of storage types on both physical and
 [.lead]
 SnapManager supports a wide range of storage types on both physical and virtual machines. You must verify support for your storage type before you install or upgrade SnapManager.
 
+[options="header"]
 |===
 | Machine| Storage type
 a|

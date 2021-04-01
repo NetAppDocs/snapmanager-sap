@@ -33,6 +33,7 @@ on filer pathname.
 
 The following are the most common SnapDrive for UNIX error messages related to LUN discovery, configuration issues, and space. If you receive any of these errors, see the Troubleshooting chapter of the _SnapDrive Installation and Administration Guide_.
 
+[options="header"]
 |===
 | Symptom| Explanation
 a|

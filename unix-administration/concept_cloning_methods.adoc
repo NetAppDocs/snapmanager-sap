@@ -13,6 +13,7 @@ You can clone a database using one of two methods. The method you choose affects
 
 The following table describes the cloning methods and their effect on the clone create operation and its -reserve option. A LUN can be cloned using either method.
 
+[options="header"]
 |===
 | Cloning method
 

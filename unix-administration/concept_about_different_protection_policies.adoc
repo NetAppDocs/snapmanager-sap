@@ -13,6 +13,7 @@ You can select different policies to protect the backups on the secondary or ter
 
 If you are using Data ONTAP operating in 7-Mode and SnapManager is integrated with Protection Manager, you must select one of the following protection policies while creating the profile. The Protection Manager's Management Console provides templates to configure protection policies for the datasets. Even though disaster recovery protection policies are listed in the SnapManager user interface, these policies are not supported.
 
+[options="header"]
 |===
 | Policy| Description
 a|
@@ -58,6 +59,7 @@ Data on a storage system is backed up remotely to secondary storage by using Sna
 |===
 If you are using clustered Data ONTAP, you must select one of following protection policies while creating the profile.
 
+[options="header"]
 |===
 | Policy| Description
 a|

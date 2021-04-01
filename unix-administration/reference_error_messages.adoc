@@ -15,6 +15,7 @@ You can find information about the error messages associated with different Snap
 
 The following table lists some of the most common and important errors associated with SnapManager for SAP:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -217,6 +218,7 @@ For more information, see the Knowledge Base article 2017632.
 
 The following table lists the common errors associated with the database backup process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -268,6 +270,7 @@ Recover the cloned database or convert the database into a Data Guard Standby da
 
 The following table shows the common errors associated with data protection:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -387,6 +390,7 @@ This is a known issue in SnapManager for SAP and expected behavior within Protec
 
 The following table shows the common errors associated with the restore process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -433,6 +437,7 @@ Do not delete the latest backups from primary, so that SnapManager can use the p
 
 The following table shows the common errors associated with the clone process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -482,6 +487,7 @@ You must either provide a value for the parameter or delete that parameter if it
 
 The following table shows the common errors associated with the clone process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -496,6 +502,7 @@ Use smsapsystem dump.
 
 The following table shows the common errors associated with backup tasks:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -530,6 +537,7 @@ You cannot mount, clone, verify, or perform backint restore on a backup that has
 
 The following table shows the common errors associated with virtual storage interface tasks:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -554,6 +562,7 @@ SAP uses four redo log groups with two members:
 
 The following table shows the common errors associated with the rolling upgrade process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -604,6 +613,7 @@ Restore the repository that you backed up earlier.
 
 The following table shows the common errors associated with operations:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -619,6 +629,7 @@ Enter the command on a host running the SnapManager server. You can check the po
 
 The following table shows the common errors associated with the process component of SnapManager:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -682,6 +693,7 @@ You must wait until the split operation completes.
 
 The following table shows the common errors associated with SnapManager utilities:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -792,6 +804,7 @@ You must select either success or failure option or both.
 
 The following table shows the common errors related to SnapDrive for UNIX:
 
+[options="header"]
 |===
 | Error message| Explanation
 a|

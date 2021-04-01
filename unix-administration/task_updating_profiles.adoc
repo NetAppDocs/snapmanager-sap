@@ -23,6 +23,7 @@ Other options for this command are as follows:
 +
 [quiet | verbose]
 +
+[options="header"]
 |===
 | If you want to...| Then...
 a|

@@ -13,6 +13,7 @@ The DBA wants to ensure that backups are available in case of a loss of data, in
 
 For the production payroll database, the DBA adheres to the following TechCo retention strategy:
 
+[options="header"]
 |===
 | Backup frequency| Retention duration| Backup time| Type of storage
 a|

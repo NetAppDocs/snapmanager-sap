@@ -22,6 +22,7 @@ You enable RBAC in SnapDrive. You can then configure specific capabilities per r
 
 The following table lists some roles and their typical tasks, as set in Operations Manager.
 
+[options="header"]
 |===
 | Role| Typical tasks
 a|

@@ -13,6 +13,7 @@ You can enable or disable data protection while creating or updating a database 
 
 To create a protected backup of a database on the secondary storage resources, database administrators and storage administrators perform the following actions.
 
+[options="header"]
 |===
 | If you want to...| Then...
 a|

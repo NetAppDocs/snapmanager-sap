@@ -17,6 +17,7 @@ NOTE: For SnapManager best practices, see _TR 3761_.
 
 SnapManager supports two modes of backups:
 
+[options="header"]
 |===
 | Backup mode| Description
 a|
@@ -33,6 +34,7 @@ Creates a backup of the database when the database is either in a mounted or shu
 
 SnapManager supports three types of backups:
 
+[options="header"]
 |===
 | Backup type| Description
 a|
@@ -54,6 +56,7 @@ Creates a backup of only the archive log files.You must select *Backup Archivelo
 
 SnapManager creates backups based on whether the database profile separates the archive log backups from the data file backups.
 
+[options="header"]
 |===
 | Profile type| Description
 a|

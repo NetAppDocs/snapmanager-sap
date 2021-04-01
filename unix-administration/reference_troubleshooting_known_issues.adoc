@@ -178,6 +178,7 @@ SnapManager operations fail and you cannot access the GUI when the repository da
 
 The following table lists the different actions you might want to perform, and their exceptions:
 
+[options="header"]
 |===
 | Operations| Exceptions
 a|

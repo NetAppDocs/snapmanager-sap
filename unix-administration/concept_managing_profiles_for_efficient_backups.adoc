@@ -40,6 +40,7 @@ NOTE: To use database authentication for an Automatic Storage Management (ASM) i
 
 You can set sqlnet.authentication_services to NONE only in the following environments:
 
+[options="header"]
 |===
 | Database layout| Oracle version| Is database authentication supported for the target database| Is database authentication supported for the ASM instance
 a|

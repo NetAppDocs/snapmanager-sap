@@ -13,6 +13,7 @@ You must know the different partition devices that are supported in SnapManager.
 
 The following table provides partition information and how it can be enabled for different operating systems:
 
+[options="header"]
 |===
 | Operating system| Single partition| Multiple partition| Non-partition devices| File system or RAW devices
 a|

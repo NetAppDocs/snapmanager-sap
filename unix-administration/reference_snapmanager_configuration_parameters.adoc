@@ -13,6 +13,7 @@ SnapManager provides a list of configuration parameters that you can edit depend
 
 The following table lists all the supported SnapManager configuration parameters and also explains when to use these parameters:
 
+[options="header"]
 |===
 | Parameters| Description
 a|

@@ -13,6 +13,7 @@ A SnapManager license and several storage system licenses are required to enable
 
 The SnapManager license requirements are as follows:
 
+[options="header"]
 |===
 | License| Description| Where required
 a|

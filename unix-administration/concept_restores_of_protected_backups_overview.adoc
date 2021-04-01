@@ -13,6 +13,7 @@ You can choose the restore method that you want to use to restore the backup dat
 
 The following table explains the different scenarios and methods that you can use to restore a backup from secondary storage:
 
+[options="header"]
 |===
 | Restore target| Explanation
 a|

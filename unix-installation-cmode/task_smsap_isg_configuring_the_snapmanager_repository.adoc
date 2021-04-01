@@ -23,6 +23,7 @@ For information about how to create the repository by using CLI, see the _SnapMa
 . Select *Create New Repository* and click *Next*.
 . In the Repository Database Configuration Information window, enter the following information:
 +
+[options="header"]
 |===
 | In this field...| Do this...
 a|

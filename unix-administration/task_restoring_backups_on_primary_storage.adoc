@@ -17,6 +17,7 @@ You can use the backup restore command options to specify whether SnapManager sh
 
 You can select one of the following options to restore the backup:
 
+[options="header"]
 |===
 | If you want to restore...| Use...
 a|
@@ -89,6 +90,7 @@ You can specify the -dump option as an optional parameter to collect the dump fi
 
 . To restore data for different scenarios, complete one of the following:
 +
+[options="header"]
 |===
 | If you want to restore...| Command Example
 a|

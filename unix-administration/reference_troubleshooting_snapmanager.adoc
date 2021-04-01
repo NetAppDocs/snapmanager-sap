@@ -13,6 +13,7 @@ You can find information about some of the most common issues that might occur a
 
 The following table describes common issues and possible solutions:
 
+[options="header"]
 |===
 | Issue-driven question| Possible solution
 a|

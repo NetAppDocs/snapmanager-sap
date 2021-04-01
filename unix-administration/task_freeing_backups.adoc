@@ -23,6 +23,7 @@ If protection is enabled on the profile and the protection policy contains conne
 
 When you free a protected backup, SnapManager requests that Protection Manager remove the local Snapshot copies for the backup. If the backup free operation is successful for the protected backups, the Snapshot copies are deleted by Protection Manager in an asynchronous manner.
 
+[options="header"]
 |===
 | Protection state| Local status| Action on primary storage| Action on secondary storage| Explanation
 a|

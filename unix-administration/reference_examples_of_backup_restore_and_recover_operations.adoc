@@ -21,6 +21,7 @@ The following tables describe some full and partial backup, restore, and recover
 
 == Examples of full backup, restore, and recover operations
 
+[options="header"]
 |===
 | Full backup| Restore| Recover
 a|
@@ -58,6 +59,7 @@ Restore control files only
 
 == Examples of partial backup, restore, and recover operations
 
+[options="header"]
 |===
 | Partial backup| Restore| Recover
 a|

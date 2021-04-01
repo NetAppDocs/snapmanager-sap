@@ -13,6 +13,7 @@ SnapManager enables you to perform volume-based orfile-based backup and restore 
 
 The following table describes the restore methods:
 
+[options="header"]
 |===
 | Restore process| Details
 a|

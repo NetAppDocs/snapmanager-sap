@@ -13,6 +13,7 @@ You can refer to sample database volume layouts for help in configuring your dat
 
 == Single-instance databases
 
+[options="header"]
 |===
 | File types| Volume names| Dedicated volume for file types| Automatic Snapshot copies
 a|
@@ -73,6 +74,7 @@ Off
 
 == Real Application Clusters (RAC) databases
 
+[options="header"]
 |===
 | File types| Volume names| Dedicated volume for file types| Automatic Snapshot copies
 a|

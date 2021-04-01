@@ -28,6 +28,7 @@ User1 and User2 share a profile called Prof2. User2 cannot perform a backup of D
 
 The following table describes different permissions assigned to the users:
 
+[options="header"]
 |===
 | Permission type| User1| User2
 a|

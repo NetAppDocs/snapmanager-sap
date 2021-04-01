@@ -15,6 +15,7 @@ NOTE: The Oracle home directory is set in the oratab file for SAP systems, just 
 
 The oratab file resides in different locations based on the host operating system as shown in the following table:
 
+[options="header"]
 |===
 | Host operating system| File location
 a|

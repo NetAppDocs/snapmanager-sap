@@ -12,6 +12,7 @@ summary: After upgrading, SnapManager assigns the default backup retention class
 After upgrading, SnapManager assigns the default backup retention class to the existing backups. You can modify the default retention class values to meet your backup requirements.
 
 The default backup retention class assigned to the existing backups are as follows:
+[options="header"]
 
 |===
 | Backup type| Retention class assignment after upgrade

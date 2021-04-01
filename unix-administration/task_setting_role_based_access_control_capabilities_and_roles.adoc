@@ -21,6 +21,7 @@ You can use either the Operations Manager web interface or the Data Fabric Manag
 
 The table lists the RBAC capabilities required to perform SnapManager operations:
 
+[options="header"]
 |===
 | SnapManager operations| RBAC capabilities required when data protection is not enabled| RBAC capabilities required when data protection is enabled
 a|

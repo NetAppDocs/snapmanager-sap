@@ -31,6 +31,7 @@ This policy should be used only if the host does not have direct access to the s
 
 . Perform one of the following actions:
 +
+[options="header"]
 |===
 | If you want to...| Then...
 a|

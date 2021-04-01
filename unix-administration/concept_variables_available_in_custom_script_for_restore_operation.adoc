@@ -13,6 +13,7 @@ SnapManager provides context information in the form of environment variables re
 
 The following table lists the environment variables that you can use in your scripts:
 
+[options="header"]
 |===
 | Variables| Description| Format
 a|

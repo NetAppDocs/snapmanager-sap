@@ -15,6 +15,7 @@ You must delete backups when you no longer need them, which frees the space thos
 
 When you delete a protected backup, SnapManager deletes the backup from secondary storage and the SnapManager repository. The following table shows the actions taken on both the primary and secondary storage when you delete a local backup:
 
+[options="header"]
 |===
 | Protection state| Local status| Action on primary storage| Action on secondary storage| Explanation
 a|

@@ -27,6 +27,7 @@ Backups created with versions before BR*Tools 7.00 cannot be verified. The block
 
 You can use a combination of the BR*Tools and the SnapManager for SAP graphical user interface (GUI) or command-line interface (CLI) to perfom following operations:
 
+[options="header"]
 |===
 | Operation| Interfaces that you can use
 a|
@@ -49,6 +50,7 @@ A full online or offline backup taken using the BRBACKUP command can be cloned b
 
 The following options are available under the BR*Tools CLI:
 
+[options="header"]
 |===
 | Option| Tasks that can be performed
 a|
@@ -77,6 +79,7 @@ Maintain the statistics of tables and indexes.
 
 The following operations are available under BR*Tools GUI:
 
+[options="header"]
 |===
 | Type of wizard| Tasks that can be performed
 a|

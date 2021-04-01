@@ -21,6 +21,7 @@ For information about how to create profiles using the CLI, see the _SnapManager
 . On the Profile Configuration Information page, enter the custom name and password for the profile.
 . On the Database Configuration Information page, enter the following information:
 +
+[options="header"]
 |===
 | In this field...| Do this...
 a|
@@ -48,6 +49,7 @@ Enter the Oracle user group name.    The default value is dba.
 
 . On the Database Connection Information page, select one of the following:
 +
+[options="header"]
 |===
 | Choose this...| If you want to...
 a|
@@ -79,6 +81,7 @@ Allow Automatic Storage Management (ASM) database instance to authenticate an ad
 
 . On the RMAN Configuration Information page, select one of the following:
 +
+[options="header"]
 |===
 | Choose this...| If...
 a|

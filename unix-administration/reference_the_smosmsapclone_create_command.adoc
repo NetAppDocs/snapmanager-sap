@@ -98,6 +98,7 @@ Setting the -reserve option to yes ensures that the volume guarantee space reser
 +
 The following table describes the cloning methods and their effect on the clone create operation and its -reserve option. A LUN can be cloned by using either method.
 +
+[options="header"]
 |===
 | Cloning method| Description| Result
 a|

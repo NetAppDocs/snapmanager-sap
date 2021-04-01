@@ -13,6 +13,7 @@ SnapManager shows the state of each backup. Administrators must know the differe
 
 A database backup can have the following protection states:
 
+[options="header"]
 |===
 | Status| Definition| Explanation
 a|

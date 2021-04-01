@@ -28,6 +28,7 @@ user_home/.netapp/smsap/3.3.0/smsap_dump_dump_file_type_name server_host.jar
 
 The dump file contains the output of the dump command. The name of the file depends on the information supplied. The following table shows the types of dump operations and the resulting file names:
 
+[options="header"]
 |===
 | Type of dump operation| Resulting file name
 a|
