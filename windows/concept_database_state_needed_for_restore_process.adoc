@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_database_state_needed_for_restore_process.html
 sidebar: sidebar
-keywords: 
-summary: 'The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included.'
+keywords: state, database, restore, depend, process, perform, type, file
+summary: The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included.
 ---
 = Database state needed for the restore process
 :icons: font

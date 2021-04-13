@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_creating_task_specification_file_and_scripts_for_snapmanager_operations.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP uses a task specification Extensible Markup Language \(XML\) file that indicates the pretasks and post-tasks for the backup, restore, and clone operations. You can add the pretask and post-task script names in the XML file for the tasks to be performed before or after the backup, restore, and clone operations.'
+keywords: snapmanager, sap, task, specification, extensible, markup, language, xml, file, pretask, post-task, backup, restore, clone, operation, creating, create
+summary: SnapManager for SAP uses a task specification Extensible Markup Language \(XML\) file that indicates the pretasks and post-tasks for the backup, restore, and clone operations. You can add the pretask and post-task script names in the XML file for the tasks to be performed before or after the backup, restore, and clone operations.
 ---
 = Creating task specification file and scripts for SnapManager operations
 :icons: font

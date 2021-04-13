@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_database_version_support_and_configuration_overview.html
 sidebar: sidebar
-keywords: 
-summary: 'You must know the different database versions and configurations supported with SnapManager. You must perform basic database layout and configuration setup to ensure successful operations.'
+keywords: database, version, configuration, support, snapmanager,  perform, layout, setup, operation, overview
+summary: You must know the different database versions and configurations supported with SnapManager. You must perform basic database layout and configuration setup to ensure successful operations.
 ---
 = Database version support and configuration overview
 :icons: font

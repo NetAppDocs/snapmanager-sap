@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_create_backups_using_snapshot_copies.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to create backups on the primary \(local\) storage and also on the secondary \(remote\) storage using postprocessing scripts.'
+keywords: snapmanager, enable, create, backup, primary, local, storage, secondary, remote, postprocessing, script, copies, copy, snapshot
+summary: SnapManager enables you to create backups on the primary \(local\) storage and also on the secondary \(remote\) storage using postprocessing scripts.
 ---
 = Create backups using Snapshot copies
 :icons: font
