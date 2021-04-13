@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_cloning_methods.html
 sidebar: sidebar
-keywords: 
-summary: 'You can clone a database using one of two methods. The method you choose affects the clone create operation.'
+keywords: clone, cloning, method, database, create, operation
+summary: You can clone a database using one of two methods. The method you choose affects the clone create operation.
 ---
 = Cloning methods
 :icons: font

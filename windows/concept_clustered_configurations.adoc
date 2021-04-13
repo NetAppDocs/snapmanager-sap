@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_clustered_configurations.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager operates in cluster configurations.'
+keywords: snapmanager, operate, cluster, configuration
+summary: SnapManager operates in cluster configurations.
 ---
 = Clustered configurations
 :icons: font

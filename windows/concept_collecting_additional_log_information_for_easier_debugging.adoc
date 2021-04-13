@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_collecting_additional_log_information_for_easier_debugging.html
 sidebar: sidebar
-keywords: 
-summary: 'If you need additional logs to debug a failed SnapManager operation, you must set an external environment variable server.log.level. This variable overrides the default log level and dumps all the log messages in the log file. For example, you can change the log level to DEBUG, which logs additional messages and can assist in debugging issues.'
+keywords: additional, log, debug, fail, snapmanager, operation, external, environment, variable, server.log.level, file, collect
+summary: If you need additional logs to debug a failed SnapManager operation, you must set an external environment variable server.log.level. This variable overrides the default log level and dumps all the log messages in the log file. For example, you can change the log level to DEBUG, which logs additional messages and can assist in debugging issues.
 ---
 = Collecting additional log information for easier debugging
 :icons: font

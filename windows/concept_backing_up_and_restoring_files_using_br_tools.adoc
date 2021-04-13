@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_backing_up_and_restoring_files_using_br_tools.html
 sidebar: sidebar
-keywords: 
-summary: 'In addition to backing up database files, you can use BR\*Tools to back up and restore any files, such as the SAP system files stored on the storage system.'
+keywords: addition, back, up, database, file, br, tool, restore, sap, system, storage
+summary: In addition to backing up database files, you can use BR\*Tools to back up and restore any files, such as the SAP system files stored on the storage system.
 ---
 = Backing up and restoring files using BR*Tools
 :icons: font
