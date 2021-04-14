@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_scheduling_database_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager \(3.2 or later\) for SAP enables you to schedule database backups to occur on a regular basis during off-peak hours to maintain high performance. To schedule a backup, you can create a profile, which includes the database information and retention policy, and then set schedules for the backup.'
+keywords: snapmanager, sap, enable, schedule, database, backup, basis, off-peak, performance, profile, information, retention, policy, scheduling
+summary: SnapManager \(3.2 or later\) for SAP enables you to schedule database backups to occur on a regular basis during off-peak hours to maintain high performance. To schedule a backup, you can create a profile, which includes the database information and retention policy, and then set schedules for the backup.
 ---
 = Scheduling database backups
 :icons: font

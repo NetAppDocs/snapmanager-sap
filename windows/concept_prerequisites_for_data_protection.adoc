@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_prerequisites_for_data_protection.html
 sidebar: sidebar
-keywords: 
-summary: 'You must be aware of certain considerations for performing data protection.'
+keywords: aware, consideration, perform, data, protection
+summary: You must be aware of certain considerations for performing data protection.
 ---
 = Considerations for performing data protection
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_track_details_and_produce_reports.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager reduces the level of detail database administrators need to track the status of different operations by offering methods to monitor operations from a single interface.'
+keywords: snapmanager, reduce, level, detail, database, administrator, track, status, operation, monitor, interface, produce, report
+summary: SnapManager reduces the level of detail database administrators need to track the status of different operations by offering methods to monitor operations from a single interface.
 ---
 = Track details and produce reports
 :icons: font

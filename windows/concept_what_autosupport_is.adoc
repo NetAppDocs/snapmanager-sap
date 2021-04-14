@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_autosupport_is.html
 sidebar: sidebar
-keywords: AutoSupport,ASUP
-summary: 'The AutoSupport feature enables SnapManager server to send AutoSupport messages to the storage system after the backup operation is complete.'
+keywords: autosupport, feature, enable, snapmanager, server, message, storage, system, backup, operation, complete
+summary: The AutoSupport feature enables SnapManager server to send AutoSupport messages to the storage system after the backup operation is complete.
 ---
 = What AutoSupport is
 :icons: font

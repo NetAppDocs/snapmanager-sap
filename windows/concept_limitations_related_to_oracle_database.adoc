@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_limitations_related_to_oracle_database.html
 sidebar: sidebar
-keywords: 
-summary: 'Before you start working with SnapManager, you must know the limitations related to Oracle Database.'
+keywords: start, work, snapmanager, limitation, relate, oracle, database
+summary: Before you start working with SnapManager, you must know the limitations related to Oracle Database.
 ---
 = Limitations related to Oracle Database
 :icons: font

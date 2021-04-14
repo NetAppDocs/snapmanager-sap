@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_supported_host_hardware.html
 sidebar: sidebar
-keywords: 
-summary: 'Consider the memory, disk space, and CPU requirements.'
+keywords: memory, disk, space, cpu, requirement, support, host, hardware
+summary: Consider the memory, disk space, and CPU requirements.
 ---
 = Supported host hardware
 :icons: font

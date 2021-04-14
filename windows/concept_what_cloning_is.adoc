@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_cloning_is.html
 sidebar: sidebar
-keywords: 
-summary: 'You can clone a database to create an exact replica of the original database. You can create the clone from a full backup or from the current state of the database.'
+keywords: clone, database, create, replica, original, full, backup, cloning
+summary: You can clone a database to create an exact replica of the original database. You can create the clone from a full backup or from the current state of the database.
 ---
 = What Cloning is
 :icons: font

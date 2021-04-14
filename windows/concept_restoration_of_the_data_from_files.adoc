@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_restoration_of_the_data_from_files.html
 sidebar: sidebar
-keywords: 
-summary: 'Before you restore from an alternate location, you need to restore the necessary files from any storage media and restore the files from applications like SnapVault or SnapMirror to a file system mounted on the local host.'
+keywords: restore, alternate, location, file, storage, media, application, snapvault, snapmirror, system, local, host
+summary: Before you restore from an alternate location, you need to restore the necessary files from any storage media and restore the files from applications like SnapVault or SnapMirror to a file system mounted on the local host.
 ---
 = Restoration of the data from files
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_how_to_collect_dump_files.html
 sidebar: sidebar
-keywords: 
-summary: 'You can include -dump in the SnapManager command to collect the dump files after a successful or failed SnapManager operation.'
+keywords: dump, snapmanager, command, collect, file, successful, fail, operation
+summary: You can include -dump in the SnapManager command to collect the dump files after a successful or failed SnapManager operation.
 ---
 = How to collect dump files
 :icons: font

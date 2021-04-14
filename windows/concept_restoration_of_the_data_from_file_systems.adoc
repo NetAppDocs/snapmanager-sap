@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_restoration_of_the_data_from_file_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Before you restore data from an alternate location, you must restore the necessary file system and mount it on the local host.'
+keywords: restore, data, alternate, location, file, system, mount, host, restoration
+summary: Before you restore data from an alternate location, you must restore the necessary file system and mount it on the local host.
 ---
 = Restoration of data from the file system
 :icons: font

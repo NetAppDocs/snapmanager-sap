@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_prerequisites_for_performing_rolling_upgrade.html
 sidebar: sidebar
-keywords: 
-summary: 'Before performing a rolling upgrade, you must ensure that your environment meets certain requirements.'
+keywords: perform, roll, upgrade, ensure, environment, requirement, prerequisite
+summary: Before performing a rolling upgrade, you must ensure that your environment meets certain requirements.
 ---
 = Prerequisites for performing rolling upgrades
 :icons: font

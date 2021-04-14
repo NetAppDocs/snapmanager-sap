@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_general_layout_and_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information about the recommended general database layouts and storage configurations to avoid issues related to disk groups, file types, and tablespaces.'
+keywords: information, recommend, general, database, layout, storage, configuration, issue, disk, group, file, type, tablespace
+summary: You can find information about the recommended general database layouts and storage configurations to avoid issues related to disk groups, file types, and tablespaces.
 ---
 = General layout and configuration
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_br_tools_are.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information that you would need to use SAP with the storage systems.'
+keywords: information, sap, storage, system, brtools, br, tools
+summary: You can find information that you would need to use SAP with the storage systems.
 ---
 = What BR*Tools are
 :icons: font

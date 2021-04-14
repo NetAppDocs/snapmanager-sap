@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_requirements_for_running_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'Before deploying SnapManager in your environment, you should know the different requirements.'
+keywords: deploy, snapmanager, environment, requirement, run
+summary: Before deploying SnapManager in your environment, you should know the different requirements.
 ---
 = Requirements for running SnapManager
 :icons: font

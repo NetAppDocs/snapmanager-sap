@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_variables_available_in_the_task_scripts_for_backup_operation.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager provides context information in the form of environment variables related to the backup operation that is being performed. For example, your script can retrieve the name of the original host, the name of the retention policy, and the label of the backup.'
+keywords: snapmanager, provide, context, information, environment, variable, relate, backup, operation, perform, example, original, host, retention, policy, label, script
+summary: SnapManager provides context information in the form of environment variables related to the backup operation that is being performed. For example, your script can retrieve the name of the original host, the name of the retention policy, and the label of the backup.
 ---
 = Variables available in the task scripts for the backup operation
 :icons: font

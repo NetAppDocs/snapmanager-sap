@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_managing_profiles_for_efficient_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You must create a profile in SnapManager for the database on which you want to perform an operation. You must select the profile and then select the operation that you want to perform.'
+keywords: create, profile, snapmanager, database, perform, operation, perform, managing, manage, efficient, backup
+summary: You must create a profile in SnapManager for the database on which you want to perform an operation. You must select the profile and then select the operation that you want to perform.
 ---
 = Managing profiles for efficient backups
 :icons: font

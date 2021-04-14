@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_restoring_a_backup_to_a_different_host.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the BRRESTORE or smsap restore command to restore a backup that you made with BRBACKUP on a different host. The new host must also be running SnapManager for SAP.'
+keywords: brrestore, smsap, restore, command, backup, brbackup, host, run, snapmanager, sap, restoring
+summary: You can use the BRRESTORE or smsap restore command to restore a backup that you made with BRBACKUP on a different host. The new host must also be running SnapManager for SAP.
 ---
 = Restoring a backup to a different host
 :icons: font

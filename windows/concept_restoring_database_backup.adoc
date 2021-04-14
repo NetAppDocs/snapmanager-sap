@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_restoring_database_backup.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP enables you to restore a database to the state it was when a Snapshot copy was taken. Because backups are created more frequently, the number of logs that need to be applied is reduced, thus reducing the mean-time-to-recovery \(MTTR\) for a database.'
+keywords: snapmanager, sap, enable, restore, database, snapshot, copy, backup, mean-time-to-recovery, mttrm restoring
+summary: SnapManager for SAP enables you to restore a database to the state it was when a Snapshot copy was taken. Because backups are created more frequently, the number of logs that need to be applied is reduced, thus reducing the mean-time-to-recovery \(MTTR\) for a database.
 ---
 = Restoring database backups
 :icons: font

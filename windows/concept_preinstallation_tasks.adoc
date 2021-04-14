@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_preinstallation_tasks.html
 sidebar: sidebar
-keywords: 
-summary: 'Before installing SnapManager for SAP, you must perform some additional tasks to set up your environment. The tasks that you have to perform depend on the operating system and the database version you want to use.'
+keywords: install, snapmanager, sap, additional, task, environment, perform, operating, operate, system, database, version, preinstallation
+summary: Before installing SnapManager for SAP, you must perform some additional tasks to set up your environment. The tasks that you have to perform depend on the operating system and the database version you want to use.
 ---
 = Preinstallation tasks
 :icons: font

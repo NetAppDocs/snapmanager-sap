@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_partial_online_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'Instead of a full backup, you can choose to perform a partial backup of the tablespaces in a database. While SnapManager takes a Snapshot copy of volumes for full backups, SnapManager takes a Snapshot copy of each specified tablespace for partial backups.'
+keywords: full, backup, perform, partial, tablespace, database, snapmanager, snapshot, copy, volume, snapshot, copy, online
+summary: Instead of a full backup, you can choose to perform a partial backup of the tablespaces in a database. While SnapManager takes a Snapshot copy of volumes for full backups, SnapManager takes a Snapshot copy of each specified tablespace for partial backups.
 ---
 = Partial online backups
 :icons: font

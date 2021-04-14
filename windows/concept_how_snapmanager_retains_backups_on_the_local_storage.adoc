@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_how_snapmanager_retains_backups_on_the_local_storage.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to create backups that meet retention policies, which specify how many successful backups on local storage should be retained. You can specify the number of successful backups that should be retained in the profile for a given database.'
+keywords: snapmanager, enable, create, backup, retention, policies, policy, successful, local, storage, retain, database
+summary: SnapManager enables you to create backups that meet retention policies, which specify how many successful backups on local storage should be retained. You can specify the number of successful backups that should be retained in the profile for a given database.
 ---
 = How SnapManager retains backups on the local storage
 :icons: font

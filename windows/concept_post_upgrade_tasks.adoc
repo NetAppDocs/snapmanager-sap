@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_post_upgrade_tasks.html
 sidebar: sidebar
-keywords: 
-summary: 'After upgrading to a later version of SnapManager, you must update the existing repository. You might also want to modify the backup retention class assigned to the existing backups.'
+keywords: upgrading, upgrade, version, snapmanager, update, exist, repository, modify, backup, retention, class, assign, post-upgrade, task
+summary: After upgrading to a later version of SnapManager, you must update the existing repository. You might also want to modify the backup retention class assigned to the existing backups.
 ---
 = Post-upgrade tasks
 :icons: font

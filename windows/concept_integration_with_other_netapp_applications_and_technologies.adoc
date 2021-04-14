@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_integration_with_other_netapp_applications_and_technologies.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP is a stand-alone product that integrates the features from other NetApp products to enable fast backups that require only a small amount of space.'
+keywords: snapmanager, sap, stand-alone, product, integrate, feature, netapp, enable, backup, amount, space, integration, application, technology, technologies
+summary: SnapManager for SAP is a stand-alone product that integrates the features from other NetApp products to enable fast backups that require only a small amount of space.
 ---
 = Integration with other NetApp applications and technologies
 :icons: font

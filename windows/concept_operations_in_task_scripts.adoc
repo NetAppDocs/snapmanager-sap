@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_operations_in_task_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'The pretask or post-task scripts that you create must follow a standard SnapManager for SAP plug-in structure.'
+keywords: pretask, post-task, script, create, standard, snapmanager, sap, plug-in, structure
+summary: The pretask or post-task scripts that you create must follow a standard SnapManager for SAP plug-in structure.
 ---
 = Operations in task scripts
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_snapmanager_security.html
 sidebar: sidebar
-keywords: 
-summary: 'You can perform SnapManager operations only if you have the appropriate credentials. Security in SnapManager is governed by user authentication.'
+keywords: perform, snapmanager, operation, credential, govern, authentication, maintain, security
+summary: You can perform SnapManager operations only if you have the appropriate credentials. Security in SnapManager is governed by user authentication.
 ---
 = How SnapManager maintains security
 :icons: font
