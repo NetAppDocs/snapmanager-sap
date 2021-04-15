@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_history_set_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the history set command to configure the operations for which you want to view the history.'
+keywords: run, history, set, command, configure, operation, smsap
+summary: You can run the history set command to configure the operations for which you want to view the history.
 ---
 = The smsap history set command
 :icons: font
@@ -15,15 +15,15 @@ You can run the history set command to configure the operations for which you wa
 
 ----
 
-        smsap history set 
+        smsap history set
 -profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
--repository 
+-repository
 -login \[password repo_password\]
 -username repo_username
--host repo_host 
--dbname repo_dbname 
+-host repo_host
+-dbname repo_dbname
 -port repo_port}
--operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\} 
+-operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\}
 -retain
 {-count retain_count \| -daily daily_count \| -monthly monthly_count \| -weekly weekly_count}
 [-quiet | -verbose]

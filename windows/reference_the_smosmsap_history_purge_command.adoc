@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_history_purge_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command enables you to delete the history of SnapManager operation.'
+keywords: command, enable, delete, history, snapmanager, operation, smsap, purge
+summary: This command enables you to delete the history of SnapManager operation.
 ---
 = The smsap history purge command
 :icons: font
@@ -15,15 +15,15 @@ This command enables you to delete the history of SnapManager operation.
 
 ----
 
-        smsap history purge 
+        smsap history purge
 -profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
--repository 
+-repository
 -login \[-password repo_password\]
 -username repo_username
--host repo_host 
--dbname repo_dbname 
+-host repo_host
+-dbname repo_dbname
 -port repo_port}
--operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\} 
+-operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\}
 \[-quiet \| -verbose\]
 ----
 

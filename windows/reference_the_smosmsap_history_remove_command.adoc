@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_history_remove_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command enables you to remove the history of SnapManager operations associated with a single profile, multiple profiles, or all profiles under a repository.'
+keywords: command, enable, remove, history, snapmanager, operation, associate, single, profile, multiple, repository, smsap
+summary: This command enables you to remove the history of SnapManager operations associated with a single profile, multiple profiles, or all profiles under a repository.
 ---
 = The smsap history remove command
 :icons: font
@@ -15,15 +15,15 @@ This command enables you to remove the history of SnapManager operations associa
 
 ----
 
-        smsap history remove 
+        smsap history remove
 -profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
--repository 
+-repository
 -login \[-password repo_password\]
 -username repo_username
--host repo_host 
--dbname repo_dbname 
+-host repo_host
+-dbname repo_dbname
 -port repo_port}
--operation \{-operations operation_name \[operation_name, operation_name2\] \| -all\} 
+-operation \{-operations operation_name \[operation_name, operation_name2\] \| -all\}
 \[-quiet \| -verbose\]
 ----
 

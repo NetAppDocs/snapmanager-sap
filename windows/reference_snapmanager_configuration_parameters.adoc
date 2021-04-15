@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_snapmanager_configuration_parameters.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager provides a list of configuration parameters that you can edit depending on your requirement. The configuration parameters are stored in the smsap.config file. However, the smsap.config file might not contain all the supported configuration parameters. You can add the configuration parameters, depending on your requirement.'
+keywords: snapmanager, provide, list, configuration, parameter, edit, requirement, smsap, config, file
+summary: SnapManager provides a list of configuration parameters that you can edit depending on your requirement. The configuration parameters are stored in the smsap.config file. However, the smsap.config file might not contain all the supported configuration parameters. You can add the configuration parameters, depending on your requirement.
 ---
 = SnapManager configuration parameters
 :icons: font
@@ -188,7 +188,7 @@ For example, you can set archivedLogs.exclude.fileslike = J:\\ARCH2\\%.
 NOTE: If the destination has a file separator, then an additional slash symbol (\) must be added to the pattern and the pattern must end with a double-slash pattern (\\%).
 
 a|
- 
+
 a|
 
 * <db-unique-name>.archivedLogs.exclude.fileslike to specify an SQL expression for excluding archive log files only from the profile or the backup created for the database with the specified db-unique-name.

@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_operation_show_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the operation show command to list the summary information of all the operations performed against the specified profile. The output lists the client user \(the user for the client PC\) and the effective user \(the user in SnapManager who is valid on the selected host\).'
+keywords: run, operation, show, command, list, summary, information, profile, client, user, pc, smsap
+summary: You can run the operation show command to list the summary information of all the operations performed against the specified profile. The output lists the client user \(the user for the client PC\) and the effective user \(the user in SnapManager who is valid on the selected host\).
 ---
 = The smsap operation show command
 :icons: font
@@ -15,8 +15,8 @@ You can run the operation show command to list the summary information of all th
 
 ----
 
-        smsap operation show 
--profile profile_name 
+        smsap operation show
+-profile profile_name
 \[-label label \| -id id\]
 \[-quiet \| -verbose\]
 ----

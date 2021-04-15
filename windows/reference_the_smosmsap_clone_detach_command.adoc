@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_clone_detach_command.html
 sidebar: sidebar
-keywords: 
-summary: 'After splitting a cloned volume from its parent volume in Data ONTAP, you can run the clone detach command from SnapManager to let SnapManager know that the volume is no longer a clone.'
+keywords: split, clone, volume, parent, data, ontap, detach, command, snapmanager, smsap
+summary: After splitting a cloned volume from its parent volume in Data ONTAP, you can run the clone detach command from SnapManager to let SnapManager know that the volume is no longer a clone.
 ---
 = The smsap clone detach command
 :icons: font

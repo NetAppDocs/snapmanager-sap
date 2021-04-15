@@ -1,8 +1,8 @@
 ---
 permalink: windows/index.html
 sidebar: sidebar
-keywords: 
-summary: ''
+keywords: installation, administration, guide
+summary: Installation and Administration Guide
 ---
 = Installation and Administration Guide
 :icons: font

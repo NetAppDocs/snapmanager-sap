@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_repository_rollingback_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command enables you to roll back or revert from a higher version of SnapManager to the original version from which you upgraded.'
+keywords: command, enable, roll, back, revert, version, snapmanager, upgrade, smsap
+summary: This command enables you to roll back or revert from a higher version of SnapManager to the original version from which you upgraded.
 ---
 = The smsap repository rollback command
 :icons: font
@@ -15,13 +15,13 @@ This command enables you to roll back or revert from a higher version of SnapMan
 
 ----
 
-        smsap repository rollback 
--repository 
--dbname repo_service_name 
--host repo_host 
--login -username repo_username 
--port repo_port 
--rollbackhost host_with_target_database 
+        smsap repository rollback
+-repository
+-dbname repo_service_name
+-host repo_host
+-login -username repo_username
+-port repo_port
+-rollbackhost host_with_target_database
 [-force]
 \[-quiet \| -verbose\]
 ----

@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_notification_set_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the notification set command to configure the mail server.'
+keywords: notification, set, command, configure, mail, server, smsap
+summary: You can use the notification set command to configure the mail server.
 ---
 = The smsap notification set command
 :icons: font
@@ -15,18 +15,18 @@ You can use the notification set command to configure the mail server.
 
 ----
 
-        smsap notification set 
--sender-email email_address 
--mailhost mailhost 
--mailport mailport 
-[-authentication 
--username username 
--password password] 
--repository 
--dbname repo_service_name 
--port repo_port] 
--host repo_host 
--login -username repo_username 
+        smsap notification set
+-sender-email email_address
+-mailhost mailhost
+-mailport mailport
+[-authentication
+-username username
+-password password]
+-repository
+-dbname repo_service_name
+-port repo_port]
+-host repo_host
+-login -username repo_username
 [-quiet | -verbose]
 ----
 

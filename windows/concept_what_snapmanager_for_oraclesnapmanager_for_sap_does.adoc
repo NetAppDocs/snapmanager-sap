@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_snapmanager_for_oraclesnapmanager_for_sap_does.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP simplifies and automates database backup, recovery, and cloning by leveraging the Snapshot copies, SnapRestore, and FlexClone technologies.'
+keywords: snapmanager, sap, simplify, simplifies, automate, database, backup, recovery, cloning, clone, leverage, snapshot, copies, copy, snaprestore, flexclone, technology, technologies
+summary: SnapManager for SAP simplifies and automates database backup, recovery, and cloning by leveraging the Snapshot copies, SnapRestore, and FlexClone technologies.
 ---
 = What SnapManager for SAP does
 :icons: font

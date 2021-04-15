@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_user_authentication_is.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager authenticates the user by using an operating system \(OS\) login on the host where the SnapManager server is running. You can enable user authentication either through password prompts on operations or by using the smo credential You can enable user authentication either through password prompts on operations or by using the smsap credential set.'
+keywords: snapmanager, authenticate, user, operating, system, os, login, host, server, enable, password, smo, credential, smsap, credential, set
+summary: SnapManager authenticates the user by using an operating system \(OS\) login on the host where the SnapManager server is running. You can enable user authentication either through password prompts on operations or by using the smo credential You can enable user authentication either through password prompts on operations or by using the smsap credential set.
 ---
 = What user authentication is
 :icons: font

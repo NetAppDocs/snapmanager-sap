@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_error_message_classifications.html
 sidebar: sidebar
-keywords: 
-summary: 'You can determine the cause of an error if you know the message classifications.'
+keywords: determine, cause, error, message, clarification
+summary: You can determine the cause of an error if you know the message classifications.
 ---
 = Error message classifications
 :icons: font

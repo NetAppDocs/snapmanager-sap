@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_how_to_locate_dump_files.html
 sidebar: sidebar
-keywords: 
-summary: 'The dump file is located at the client system for easy access. These files are helpful if you need to troubleshoot a problem related to profile, system, or any operation.'
+keywords: dump, file, locate, client, system, access, troubleshoot, problem, profile, operation
+summary: The dump file is located at the client system for easy access. These files are helpful if you need to troubleshoot a problem related to profile, system, or any operation.
 ---
 = How to locate dump files
 :icons: font

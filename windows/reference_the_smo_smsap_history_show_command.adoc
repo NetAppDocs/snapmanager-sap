@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smo_smsap_history_show_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command enables you to view a detailed history information for a specific profile.'
+keywords: command, enable, detail, history, information, profile, smsap, show
+summary: This command enables you to view a detailed history information for a specific profile.
 ---
 = The smsap history show command
 :icons: font
@@ -15,7 +15,7 @@ This command enables you to view a detailed history information for a specific p
 
 ----
 
-        smsap history show 
+        smsap history show
 -profile profile
 ----
 

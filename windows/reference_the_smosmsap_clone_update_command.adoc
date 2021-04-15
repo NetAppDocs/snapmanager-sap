@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_clone_update_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command updates information about the clone. You can update the comment.'
+keywords: command, update, information, clone, comment, smsap
+summary: This command updates information about the clone. You can update the comment.
 ---
 = The smsap clone update command
 :icons: font
@@ -15,9 +15,9 @@ This command updates information about the clone. You can update the comment.
 
 ----
 
-        smsap clone update 
--profile profile_name 
-\[-label label \| -id id\] 
+        smsap clone update
+-profile profile_name
+\[-label label \| -id id\]
 -comment  commment_text
 \[-quiet \| -verbose\]
 ----

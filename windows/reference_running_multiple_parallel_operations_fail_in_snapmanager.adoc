@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_running_multiple_parallel_operations_fail_in_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'When you run multiple parallel operations on separate databases that reside on the same storage system, the igroup for LUNs associated with both the databases might get deleted because of one of the operations. Later, if the other operation attempts to use the deleted igroup, SnapManager displays an error message.'
+keywords: multiple, run, parallel, operation, seperate, database, reside, storage, system, igroup, lun, associate, delete, snapmanager, display, error, message
+summary: When you run multiple parallel operations on separate databases that reside on the same storage system, the igroup for LUNs associated with both the databases might get deleted because of one of the operations. Later, if the other operation attempts to use the deleted igroup, SnapManager displays an error message.
 ---
 = Running multiple parallel operations fails in SnapManager
 :icons: font

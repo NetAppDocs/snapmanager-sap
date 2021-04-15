@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_repository_rollingupgrade.html
 sidebar: sidebar
-keywords: 
-summary: 'This command performs rolling upgrade on a single host or multiple hosts and their associated target databases from a lower version of SnapManager to a higher version. The upgraded host is managed only with the higher version of SnapManager.'
+keywords: command, perform, roll, upgrade, host, multiple, target, database, associate, version, smsap, rollingupgrade
+summary: This command performs rolling upgrade on a single host or multiple hosts and their associated target databases from a lower version of SnapManager to a higher version. The upgraded host is managed only with the higher version of SnapManager.
 ---
 = The smsap repository rollingupgrade command
 :icons: font
@@ -15,14 +15,14 @@ This command performs rolling upgrade on a single host or multiple hosts and the
 
 ----
 
-        smsap repository rollingupgrade 
--repository 
--dbname repo_service_name 
--host repo_host 
--login -username repo_username 
--port repo_port 
--upgradehost host_with_target_database 
-[-force] [-noprompt] 
+        smsap repository rollingupgrade
+-repository
+-dbname repo_service_name
+-host repo_host
+-login -username repo_username
+-port repo_port
+-upgradehost host_with_target_database
+[-force] [-noprompt]
 \[-quiet \| -verbose\]
 ----
 

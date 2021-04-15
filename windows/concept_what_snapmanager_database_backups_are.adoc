@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_snapmanager_database_backups_are.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to perform different backup tasks. You can assign retention classes to specify how long the backup can be retained; once that time limit is reached, the backup is deleted.'
+keywords: snapmanager, enable, backup, task, assign, retention, class, database
+summary: SnapManager enables you to perform different backup tasks. You can assign retention classes to specify how long the backup can be retained; once that time limit is reached, the backup is deleted.
 ---
 = What SnapManager database backups are
 :icons: font
