@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_unable_to_restore_rac_database_from_one_of_the_rac_nodes_where_the_profile_was_not_created.html
 sidebar: sidebar
-keywords: 
-summary: 'In an Oracle RAC environment where both nodes belong to the same cluster, if you attempt a restore operation from a node which is different from the node where the backup was created, the restore operation fails.'
+keywords: oracle, rac, environment, node, cluster, restore, backup, operation, fail, profile
+summary: In an Oracle RAC environment where both nodes belong to the same cluster, if you attempt a restore operation from a node which is different from the node where the backup was created, the restore operation fails.
 ---
 = Unable to restore RAC database from one of the RAC nodes where the profile was not created
 :icons: font

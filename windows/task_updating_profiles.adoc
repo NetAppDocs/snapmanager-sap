@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_updating_profiles.html
 sidebar: sidebar
-keywords: 
-summary: 'You can update the profiles to modify the profile password, the number of backups to retain, access to the database, the operating system \(OS\) authentication to database authentication and vice versa, and information about the host. If the Oracle database password information changes, you must also change that information in the profile.'
+keywords: update, profile, modify, password, backup, database, operating, system, authentication, information, host, oracle, updating
+summary: You can update the profiles to modify the profile password, the number of backups to retain, access to the database, the operating system \(OS\) authentication to database authentication and vice versa, and information about the host. If the Oracle database password information changes, you must also change that information in the profile.
 ---
 = Updating profiles
 :icons: font

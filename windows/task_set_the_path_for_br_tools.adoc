@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_set_the_path_for_br_tools.html
 sidebar: sidebar
-keywords: 
-summary: 'You must set the path for BR\*Tools to use the BR\*Tools command.'
+keywords: set, path, br, tools, command
+summary: You must set the path for BR\*Tools to use the BR\*Tools command.
 ---
 = Setting the path for BR*Tools
 :icons: font

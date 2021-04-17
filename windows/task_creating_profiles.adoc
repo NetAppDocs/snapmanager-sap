@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_profiles.html
 sidebar: sidebar
-keywords: 
-summary: 'When creating profiles, you can assign a particular Oracle database user account to the profile. You can set the retention policy for the profile, and set the retention count and duration for each retention class.'
+keywords: creating, create, profile, assign, oracle, database, policy, set, retention, count, class
+summary: When creating profiles, you can assign a particular Oracle database user account to the profile. You can set the retention policy for the profile, and set the retention count and duration for each retention class.
 ---
 = Creating profiles
 :icons: font

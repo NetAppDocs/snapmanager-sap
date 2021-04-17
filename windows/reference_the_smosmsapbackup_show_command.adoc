@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapbackup_show_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the backup show command to display detailed information about a backup, including its protection status, backup retention class, and backups on primary and secondary storage.'
+keywords: backup, show, command, display, detail, information, protection, status, retention, class, primary, secondary, storage, smsap
+summary: You can use the backup show command to display detailed information about a backup, including its protection status, backup retention class, and backups on primary and secondary storage.
 ---
 = The smsap backup show command
 :icons: font
@@ -15,9 +15,9 @@ You can use the backup show command to display detailed information about a back
 
 ----
 
-        smsap backup show 
--profile profile_name 
-[-label label \[-data \| -archivelogs\] \| \[-id id\] 
+        smsap backup show
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id id\]
 \[-quiet \| -verbose\]
 ----
 

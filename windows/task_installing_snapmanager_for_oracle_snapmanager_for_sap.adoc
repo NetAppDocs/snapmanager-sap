@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_installing_snapmanager_for_oracle_snapmanager_for_sap.html
 sidebar: sidebar
-keywords: 
-summary: 'You can install SnapManager on the host that has one or more databases to be managed. You can install only one SnapManager instance per host.'
+keywords: install, snapmanager, host, database, manage, instance, host, sap
+summary: You can install SnapManager on the host that has one or more databases to be managed. You can install only one SnapManager instance per host.
 ---
 = Installing SnapManager for SAP
 :icons: font

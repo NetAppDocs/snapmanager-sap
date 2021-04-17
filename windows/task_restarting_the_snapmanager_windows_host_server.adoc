@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_restarting_the_snapmanager_windows_host_server.html
 sidebar: sidebar
-keywords: 
-summary: 'You can restart the SnapManager server through the Services window.'
+keywords: restart, snapmanager, server, service, window, host
+summary: You can restart the SnapManager server through the Services window.
 ---
 = Restarting the SnapManager host server
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_viewing_operation_details.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view detailed information about a particular profile to verify the success or failure of an operation. It can also help you determine the storage resources in use for a particular operation.'
+keywords: view, detail, information, particular, profile, verify, success, failure, operation, resource, operation
+summary: You can view detailed information about a particular profile to verify the success or failure of an operation. It can also help you determine the storage resources in use for a particular operation.
 ---
 = Viewing operation details
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_database_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You can create backups of entire databases or portions of databases, including tablespaces, data files, or control files.'
+keywords: create, backup, database, portion, tablespace, data, file, control, creating
+summary: You can create backups of entire databases or portions of databases, including tablespaces, data files, or control files.
 ---
 = Creating database backups
 :icons: font

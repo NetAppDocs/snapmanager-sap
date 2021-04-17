@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_changing_the_retention_policy_default_behavior.html
 sidebar: sidebar
-keywords: 
-summary: 'When a backup expires based on the retention policy, SnapManager determines whether to delete the backup based on the retention settings. Deletion of backups is the default behavior. You can change this default behavior and choose to free the unprotected backups instead.'
+keywords: backup, expire, retention, policy, snapmanager, delete, setting
+summary: When a backup expires based on the retention policy, SnapManager determines whether to delete the backup based on the retention settings. Deletion of backups is the default behavior. You can change this default behavior and choose to free the unprotected backups instead.
 ---
 = Changing the retention policy default behavior
 :icons: font

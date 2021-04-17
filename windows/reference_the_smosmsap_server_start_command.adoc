@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_server_start_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command starts the host server running the SnapManager for SAP software.'
+keywords: command, start, host, server, run, snapmanager, sap, software, smsap_server, smsap
+summary: This command starts the host server running the SnapManager for SAP software.
 ---
 = The smsap_server start command
 :icons: font
@@ -15,7 +15,7 @@ This command starts the host server running the SnapManager for SAP software.
 
 ----
 
-        smsap_server start 
+        smsap_server start
 \[-quiet \| -verbose\]
 ----
 

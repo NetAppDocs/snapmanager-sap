@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_troubleshooting_graphical_user_interface_issues.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information about some common known graphical user interface \(GUI\) issues that might help you resolve them.'
+keywords: information, graphical, user, interface, gui, resolve, troubleshoot, issue
+summary: You can find information about some common known graphical user interface \(GUI\) issues that might help you resolve them.
 ---
 = Troubleshooting graphical user interface issues
 :icons: font

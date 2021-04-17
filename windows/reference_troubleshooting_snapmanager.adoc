@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_troubleshooting_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information about some of the most common issues that might occur and how you can resolve them.'
+keywords: information, common, issue, resolve, troubleshoot, snapmanager
+summary: You can find information about some of the most common issues that might occur and how you can resolve them.
 ---
 = Troubleshooting SnapManager
 :icons: font

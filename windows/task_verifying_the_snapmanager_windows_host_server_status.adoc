@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_verifying_the_snapmanager_windows_host_server_status.html
 sidebar: sidebar
-keywords: 
-summary: 'The server must be running for you to execute commands or initiate SnapManager operations. You must verify the status of the server before performing any operations.'
+keywords: server, run, execute, command, initiate, snapmanager, operation, verify, status, host
+summary: The server must be running for you to execute commands or initiate SnapManager operations. You must verify the status of the server before performing any operations.
 ---
 = Verifying the SnapManager host server status
 :icons: font

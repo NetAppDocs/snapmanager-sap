@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapbackup_create_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the backup create command to create database backups on one or more storage systems.'
+keywords: run, backup, create, command, database, storage, system, smsap
+summary: You can run the backup create command to create database backups on one or more storage systems.
 ---
 = The smsap backup create command
 :icons: font
@@ -18,20 +18,20 @@ NOTE: Before you run this command, you must create a database profile by using t
 ----
 
         smsap backup create
--profile profile_name 
+-profile profile_name
 {\[-full\{-auto \| -online \| -offline\}\[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\} \[-verify\]  |
-\[-data \[\[-files files \[files\]\] \|  
+\[-data \[\[-files files \[files\]\] \|
 \[-tablespaces tablespaces \[tablespaces\]\] \[-label label\] \{-auto \| -online \| -offline\}
 \[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\} \[-verify\] |
 \[-archivelogs \[-label label\]\] \[-comment comment\]}
 
-\[-backup-dest path1 \[ , path2\]\] 
-\[-exclude-dest path1 \[ , path2\]\] 
+\[-backup-dest path1 \[ , path2\]\]
+\[-exclude-dest path1 \[ , path2\]\]
 \[-prunelogs \{-all \| -until-scn until-scn \| -until-date yyyy-MM-dd:HH:mm:ss\] \| -before \{-months \| -days \| -weeks \| -hours}}
 -prune-dest prune_dest1,\[prune_dest2\]\]
 \[-taskspec taskspec\]
 \[-dump\]
--force 
+-force
 \[-quiet \| -verbose\]
 ----
 

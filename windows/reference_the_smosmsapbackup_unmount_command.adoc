@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapbackup_unmount_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the backup unmount command to unmount a backup.'
+keywords: run, backup, unmount, command, smsap
+summary: You can run the backup unmount command to unmount a backup.
 ---
 = The smsap backup unmount command
 :icons: font
@@ -15,10 +15,10 @@ You can run the backup unmount command to unmount a backup.
 
 ----
 
-        smsap backup unmount 
--profile profile_name 
-[-label label \[-data \| -archivelogs\] \| \[-id id\] 
-\[-force\] 
+        smsap backup unmount
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id id\]
+\[-force\]
 \[-dump\]
 \[-quiet \| -verbose\]
 ----

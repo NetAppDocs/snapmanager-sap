@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_viewing_snapmanger_history_operation_details.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view the history settings for a single profile.'
+keywords: view, history, setting, single, profile, snapmanager, configuration, detail
+summary: You can view the history settings for a single profile.
 ---
 = Viewing SnapManager history configuration details
 :icons: font

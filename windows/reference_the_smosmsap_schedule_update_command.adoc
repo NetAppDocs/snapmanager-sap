@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_schedule_update_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command updates the schedule for a backup.'
+keywords: command, update, schedule, backup, smsap
+summary: This command updates the schedule for a backup.
 ---
 = The smsap schedule update command
 :icons: font
@@ -16,7 +16,7 @@ This command updates the schedule for a backup.
 ----
 
         smsap schedule update
--profile profile_name 
+-profile profile_name
 -schedule-name schedule_name
 \[-schedule-comment schedule_comment\]
 -interval \{-hourly \| -daily \| -weekly \| -monthly \| -onetimeonly\}
@@ -24,7 +24,7 @@ This command updates the schedule for a backup.
 -start-time \{start_time <yyyy-MM-dd HH:mm\>\}
 -runasuser runasuser
 \[-taskspec taskspec\]
--force 
+-force
 \[-quiet \| -verbose\]
 ----
 

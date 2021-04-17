@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_disabling_autosupport_in_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'You must disable AutoSupport if you do not want the storage system to receive messages from the SnapManager server for every successful backup operation.'
+keywords: disable, autosupport, storage, system, receive, message, snapmanager, backup, operation, disabling
+summary: You must disable AutoSupport if you do not want the storage system to receive messages from the SnapManager server for every successful backup operation.
 ---
 = Disabling AutoSupport in SnapManager
 :icons: font

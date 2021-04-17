@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_restoring_backups_on_primary_storage.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the backup restore command to restore a database backup on primary storage.'
+keywords: backup, restore, command, database, primary, storage, restoring
+summary: You can use the backup restore command to restore a database backup on primary storage.
 ---
 = Restoring backups on primary storage
 :icons: font

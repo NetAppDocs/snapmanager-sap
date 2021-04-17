@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapprofile_sync_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command loads the profile-to-repository mappings for that repository to a file in your home directory on the local host.'
+keywords: command, profile-to-repository, mapping, repository, file, home, directory, local, host, smsap
+summary: This command loads the profile-to-repository mappings for that repository to a file in your home directory on the local host.
 ---
 = The smsap profile sync command
 :icons: font
@@ -15,12 +15,12 @@ This command loads the profile-to-repository mappings for that repository to a f
 
 ----
 
-        smsap profile sync 
--repository 
--dbname repo_service_name 
--host repo_host 
--port repo_port 
--login 
+        smsap profile sync
+-repository
+-dbname repo_service_name
+-host repo_host
+-port repo_port
+-login
 -username repo_username
 				\[-quiet \| -verbose\]
 ----

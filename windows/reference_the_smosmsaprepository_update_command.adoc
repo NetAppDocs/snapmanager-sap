@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsaprepository_update_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command updates the repository that stores database profiles and associated credentials when you upgrade SnapManager. Any time you install a new version of SnapManager, you must run the repository update command before you can use the new version. You are able to use this command only if there are no incomplete commands in the repository.'
+keywords: command, update, repository, store, database, profile, associate, credential, upgrade, snapmanager, version, smsap
+summary: This command updates the repository that stores database profiles and associated credentials when you upgrade SnapManager. Any time you install a new version of SnapManager, you must run the repository update command before you can use the new version. You are able to use this command only if there are no incomplete commands in the repository.
 ---
 = The smsap repository update command
 :icons: font
@@ -15,13 +15,13 @@ This command updates the repository that stores database profiles and associated
 
 ----
 
-        smsap repository update 
--repository 
--dbname repo_service_name 
--host repo_host 
--login -username repo_username 
--port repo_port 
-[-force] [-noprompt] 
+        smsap repository update
+-repository
+-dbname repo_service_name
+-host repo_host
+-login -username repo_username
+-port repo_port
+[-force] [-noprompt]
 \[-quiet \| -verbose\]
 ----
 

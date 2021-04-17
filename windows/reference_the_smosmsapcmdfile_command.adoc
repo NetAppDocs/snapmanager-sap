@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapcmdfile_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the cmdfile command to run any command if the shell on your host limits the number of characters that can appear on a command line.'
+keywords: cmdfile, command, shell, host, character, number, line, smsap
+summary: You can use the cmdfile command to run any command if the shell on your host limits the number of characters that can appear on a command line.
 ---
 = The smsap cmdfile command
 :icons: font
@@ -15,8 +15,8 @@ You can use the cmdfile command to run any command if the shell on your host lim
 
 ----
 
-        smsap cmdfile 
--file file_name 
+        smsap cmdfile
+-file file_name
 \[-quiet \| -verbose\]
 ----
 

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_retaining_backups_forever.html
 sidebar: sidebar
-keywords: 
-summary: 'You can specify that a backup should be ineligible for deletion by the retention policy to keep the backup indefinitely.'
+keywords: specify, backup, ineligible, deletion, retention, policy, indefinite, retain, forever
+summary: You can specify that a backup should be ineligible for deletion by the retention policy to keep the backup indefinitely.
 ---
 = Retaining backups forever
 :icons: font

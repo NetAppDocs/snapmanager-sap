@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_repositories.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager requires a repository on a host to hold data about the operations you perform.'
+keywords: snapmanager, require, repository, host, data, operation, perform, creating, create
+summary: SnapManager requires a repository on a host to hold data about the operations you perform.
 ---
 = Creating repositories
 :icons: font

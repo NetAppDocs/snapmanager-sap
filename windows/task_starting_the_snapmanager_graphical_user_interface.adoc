@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_starting_the_snapmanager_graphical_user_interface.html
 sidebar: sidebar
-keywords: 
-summary: 'If SnapManager is installed on the host, start the graphical user interface \(GUI\) for SnapManager by selecting the program from a list of programs.'
+keywords: snapmanager, install, host, graphical, user, interface, gui, list, program, start
+summary: If SnapManager is installed on the host, start the graphical user interface \(GUI\) for SnapManager by selecting the program from a list of programs.
 ---
 = Starting the SnapManager GUI
 :icons: font

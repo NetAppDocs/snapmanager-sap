@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapbackup_list_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the backup list command to display information about the backups in a profile, including information about the retention class and protection status.'
+keywords: run, backup, list, command, display, information, profile, information, retention, class, protection, smsap, status
+summary: You can run the backup list command to display information about the backups in a profile, including information about the retention class and protection status.
 ---
 = The smsap backup list command
 :icons: font
@@ -15,9 +15,9 @@ You can run the backup list command to display information about the backups in 
 
 ----
 
-        smsap backup list 
--profile profile_name 
--delimiter character 
+        smsap backup list
+-profile profile_name
+-delimiter character
 [-data | -archivelogs | -all]
 \[-quiet \| -verbose\]
 ----

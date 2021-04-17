@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsaprepository_show_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command displays information about the repository.'
+keywords: command, display, information, repository, smsap
+summary: This command displays information about the repository.
 ---
 = The smsap repository show command
 :icons: font
@@ -15,12 +15,12 @@ This command displays information about the repository.
 
 ----
 
-        smsap repository show 
--repository 
--dbname repo_service_name 
--host repo_host 
--port repo_port 
--login -username repo_username 
+        smsap repository show
+-repository
+-dbname repo_service_name
+-host repo_host
+-port repo_port
+-login -username repo_username
 \[-quiet \| -verbose\]
 ----
 

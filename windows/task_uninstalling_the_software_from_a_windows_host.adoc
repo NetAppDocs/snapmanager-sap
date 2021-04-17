@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_uninstalling_the_software_from_a_windows_host.html
 sidebar: sidebar
-keywords: 
-summary: 'You can uninstall SnapManager from the host server.'
+keywords: uninstall, snapmanager, host, server
+summary: You can uninstall SnapManager from the host server.
 ---
 = Uninstalling SnapManager
 :icons: font

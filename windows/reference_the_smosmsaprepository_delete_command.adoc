@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsaprepository_delete_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command deletes a repository used to store database profiles and associated credentials. You can delete a repository only if there are no profiles in the repository.'
+keywords: command, delete, repository, store, database, profile, associate, credential, smsap
+summary: This command deletes a repository used to store database profiles and associated credentials. You can delete a repository only if there are no profiles in the repository.
 ---
 = The smsap repository delete command
 :icons: font
@@ -15,13 +15,13 @@ This command deletes a repository used to store database profiles and associated
 
 ----
 
-        smsap repository delete 
--repository 
--port repo_port 
--dbname repo_service_name 
--host repo_host 
--login -username repo_username 
-[-force] [-noprompt] 
+        smsap repository delete
+-repository
+-port repo_port
+-dbname repo_service_name
+-host repo_host
+-login -username repo_username
+[-force] [-noprompt]
 [-quiet | -verbose]
 ----
 

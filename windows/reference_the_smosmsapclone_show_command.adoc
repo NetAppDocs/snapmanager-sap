@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapclone_show_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the clone show command to display information about the database clones for the specified profile.'
+keywords: run, clone, show, command, display, information, database, profile, smsap
+summary: You can run the clone show command to display information about the database clones for the specified profile.
 ---
 = The smsap clone show command
 :icons: font
@@ -15,9 +15,9 @@ You can run the clone show command to display information about the database clo
 
 ----
 
-        smsap clone show 
--profile profile_name 
-\[-id  guid \| -label clone_name\] 
+        smsap clone show
+-profile profile_name
+\[-id  guid \| -label clone_name\]
 \[-quiet \| -verbose\]
 ----
 

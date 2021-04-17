@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsaprepository_create_command.html
 sidebar: sidebar
-keywords: 
-summary: ''
+keywords: command, create, repository, store, database, profile, associate, credential, adequate, smsap
+summary: This command creates a repository in which to store database profiles and associated credentials. This command also checks to see that the block size is adequate.
 ---
 = The smsap repository create command
 :icons: font
@@ -15,13 +15,13 @@ This command creates a repository in which to store database profiles and associ
 
 ----
 
-        smsap repository create 
--repository 
--port repo_port 
--dbname repo_service_name 
--host repo_host 
--login -username repo_username 
-[-force] [-noprompt] 
+        smsap repository create
+-repository
+-port repo_port
+-dbname repo_service_name
+-host repo_host
+-login -username repo_username
+[-force] [-noprompt]
 \[-quiet \| -verbose\]
 ----
 

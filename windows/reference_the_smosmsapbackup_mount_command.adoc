@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapbackup_mount_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the backup mount command to mount a backup in order to perform a recover operation by using an external tool.'
+keywords: run, backup, mount, command, perform, recover, operation, external, tool, smsap
+summary: You can run the backup mount command to mount a backup in order to perform a recover operation by using an external tool.
 ---
 = The smsap backup mount command
 :icons: font
@@ -15,11 +15,11 @@ You can run the backup mount command to mount a backup in order to perform a rec
 
 ----
 
-        smsap backup mount 
--profile profile_name 
-[-label label \[-data \| -archivelogs\] \| \[-id id\] 
-[-host  host] 
- 
+        smsap backup mount
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id id\]
+[-host  host]
+
 \[-dump\]
 [-quiet | -verbose]
 ----

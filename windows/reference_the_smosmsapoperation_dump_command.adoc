@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapoperation_dump_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the operation dump command to create a JAR file that contains diagnostic information about an operation.'
+keywords: run, operation, dump, command, jar, file, diagnostic, information, smsap
+summary: You can run the operation dump command to create a JAR file that contains diagnostic information about an operation.
 ---
 = The smsap operation dump command
 :icons: font
@@ -15,9 +15,9 @@ You can run the operation dump command to create a JAR file that contains diagno
 
 ----
 
-        smsap operation dump 
--profile profile_name 
-\[-label label_name \| -id guid\] 
+        smsap operation dump
+-profile profile_name
+\[-label label_name \| -id guid\]
 \[-quiet \| -verbose\]
 ----
 

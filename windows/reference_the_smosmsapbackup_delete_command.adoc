@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapbackup_delete_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the backup delete command to remove backups that are not automatically removed, such as backups that were used to create a clone or backups that failed. You can delete backups retained on an unlimited basis without changing the retention class.'
+keywords: run, backup, delete, command, remove, automatic, create, clone, fail, retention, unlimited, basis, class, smsap
+summary: You can run the backup delete command to remove backups that are not automatically removed, such as backups that were used to create a clone or backups that failed. You can delete backups retained on an unlimited basis without changing the retention class.
 ---
 = The smsap backup delete command
 :icons: font
@@ -15,10 +15,10 @@ You can run the backup delete command to remove backups that are not automatical
 
 ----
 
-        smsap backup delete 
--profile profile_name 
-[-label label \[-data \| -archivelogs\] \| \[-id guid \| -all\] 
--force 
+        smsap backup delete
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id guid \| -all\]
+-force
 \[-dump\]
 \[-quiet \| -verbose\]
 ----

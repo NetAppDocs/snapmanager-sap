@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapversion_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the version command to determine which version of SnapManager you are running on your local host.'
+keywords: run, version, command, snapmanager, local, host, smsap
+summary: You can run the version command to determine which version of SnapManager you are running on your local host.
 ---
 = The smsap version command
 :icons: font
@@ -15,7 +15,7 @@ You can run the version command to determine which version of SnapManager you ar
 
 ----
 
-        smsap version 
+        smsap version
 \[-quiet \| -verbose\]
 ----
 

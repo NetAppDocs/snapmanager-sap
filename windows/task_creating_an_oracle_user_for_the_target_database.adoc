@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_an_oracle_user_for_the_target_database.html
 sidebar: sidebar
-keywords: 
-summary: 'You need to create an Oracle user with the sysdba role that connects to the database and performs database operations.'
+keywords: create, oracle, user, sysdba, role, connext, database, perform, operation, creating, target
+summary: You need to create an Oracle user with the sysdba role that connects to the database and performs database operations.
 ---
 = Creating an Oracle user for the target database
 :icons: font

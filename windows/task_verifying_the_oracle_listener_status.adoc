@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_verifying_the_oracle_listener_status.html
 sidebar: sidebar
-keywords: 
-summary: 'You can verify the Oracle listener status by using the lsnrctl status command.'
+keywords: verify, oracle, listener, lsnrctl, status, command
+summary: You can verify the Oracle listener status by using the lsnrctl status command.
 ---
 = Verifying the Oracle listener status
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_updating_a_backup_schedule.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view a list of scheduled operations and update them if necessary. You can update the scheduling frequency, the start time of the schedule, cronstring expression, and the user who scheduled the backup.'
+keywords: list, schedule, operation, update, scheduling, frequency, cronstring, expression, user, backup, updating
+summary: You can view a list of scheduled operations and update them if necessary. You can update the scheduling frequency, the start time of the schedule, cronstring expression, and the user who scheduled the backup.
 ---
 = Updating a backup schedule
 :icons: font

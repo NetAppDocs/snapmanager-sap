@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_accessing_and_printing_online_help.html
 sidebar: sidebar
-keywords: 
-summary: 'The online Help provides instructions for the tasks that you can perform using the SnapManager graphical user interface. The online Help also provides descriptions of fields on the windows and wizards.'
+keywords: online, help, instruction, task, snapmanager, graphical, user, interface, windows, wizard, access, print
+summary: The online Help provides instructions for the tasks that you can perform using the SnapManager graphical user interface. The online Help also provides descriptions of fields on the windows and wizards.
 ---
 = Accessing and printing online Help
 :icons: font

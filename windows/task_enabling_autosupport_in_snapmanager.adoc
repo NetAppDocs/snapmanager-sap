@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_enabling_autosupport_in_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'You must enable AutoSupport, so that storage systems receive messages from the SnapManager server for every successful backup operation.'
+keywords: enable, autosupport, storage, system, receive, message, snapmanager, server, successful, backup, operation, enabling, enable
+summary: You must enable AutoSupport, so that storage systems receive messages from the SnapManager server for every successful backup operation.
 ---
 = Enabling AutoSupport in SnapManager
 :icons: font

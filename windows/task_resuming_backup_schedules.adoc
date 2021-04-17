@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_resuming_backup_schedules.html
 sidebar: sidebar
-keywords: 
-summary: 'Administrators have the option to resume the suspended backup schedule.'
+keywords: administrator, option, resume, suspend, backup, schedule, resuming
+summary: Administrators have the option to resume the suspended backup schedule.
 ---
 = Resuming backup schedules
 :icons: font

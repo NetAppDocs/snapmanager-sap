@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapprofile_delete_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the profile delete command to delete a profile of the database.'
+keywords: run, profile, delete, command, database, smsap
+summary: You can run the profile delete command to delete a profile of the database.
 ---
 = The smsap profile delete command
 :icons: font
@@ -15,8 +15,8 @@ You can run the profile delete command to delete a profile of the database.
 
 ----
 
-        smsap profile delete 
--profile profile  
+        smsap profile delete
+-profile profile
 \[-quiet \| -verbose\]
 ----
 

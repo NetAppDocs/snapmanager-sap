@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_stopping_the_snapmanager_host_server.html
 sidebar: sidebar
-keywords: 
-summary: 'When you have finished using SnapManager, you might want to stop the server.'
+keywords: finish, snapmanager, stop, server, host
+summary: When you have finished using SnapManager, you might want to stop the server.
 ---
 = Stopping the SnapManager host server
 :icons: font

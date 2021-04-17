@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapclone_create_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the clone create command to create a clone of a backed-up database. You can clone a backup from primary or secondary storage.'
+keywords: run, clone, create, command, backed-up, back, up, database, backup, primary, secondary, storage, smsap
+summary: You can run the clone create command to create a clone of a backed-up database. You can clone a backup from primary or secondary storage.
 ---
 = The smsap clone create command
 :icons: font
@@ -15,18 +15,18 @@ You can run the clone create command to create a clone of a backed-up database. 
 
 ----
 
-        smsap clone create 
--profile profile_name 
-[-backup-id backup_guid \| -backup-label backup_label_name \| -current\] 
--newsid new_sid 
-\[-host target_host\] 
-[-label clone_label] 
-\[-comment string\] 
--clonespec full_path_to_clonespec_file 
-]  
+        smsap clone create
+-profile profile_name
+[-backup-id backup_guid \| -backup-label backup_label_name \| -current\]
+-newsid new_sid
+\[-host target_host\]
+[-label clone_label]
+\[-comment string\]
+-clonespec full_path_to_clonespec_file
+]
 \[-syspassword syspassword\]
-\[-reserve \{yes \| no \| inherit\}\] 
- 
+\[-reserve \{yes \| no \| inherit\}\]
+
 \[-no-resetlogs \| -recover-from-location path1 \[, path2\]\]\[-taskspec taskspec\]
 \[-dump\]
 \[-quiet \| -verbose\]

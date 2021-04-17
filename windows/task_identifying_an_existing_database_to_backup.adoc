@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_identifying_an_existing_database_to_backup.html
 sidebar: sidebar
-keywords: 
-summary: 'You can identify the system identifier \(SID\) of the SnapManager database which is used in creating a profile.'
+keywords: identify, system, identify, identifier, sid, snapmanager, database, profile, exist, backup
+summary: You can identify the system identifier \(SID\) of the SnapManager database which is used in creating a profile.
 ---
 = Identifying an existing database to backup
 :icons: font
