@@ -64,7 +64,7 @@ Specify the following options:
   *** -all specifies deleting all the archive log files.
   *** -untilSCN specifies deleting the archive log files until the specified SCN.
   *** -until-date specifies deleting the archive logs including the specified date and time.
-  *** -before {-months |-days | -weeks | -hours} specifies deleting the archive log files before the specified time period.
+  *** -before {-months \|-days \| -weeks \| -hours} specifies deleting the archive log files before the specified time period.
 
 a|
 *Include the destination from where the archive log files are to be pruned*

@@ -26,7 +26,7 @@ When you free a protected backup, SnapManager requests that Protection Manager r
 [options="header"]
 |===
 | Protection state| Local status| Action on primary storage| Action on secondary storage| Explanation
-a|
+.2+a|
 Not requested (to be protected)
 a|
 Exists
@@ -44,7 +44,7 @@ a|
 No action required
 a|
 The local backup is already freed.
-a|
+.2+a|
 Not protected
 a|
 Exists
@@ -62,7 +62,7 @@ a|
 No action required
 a|
 The local backup is already freed.
-a|
+.2+a|
 Protected
 a|
 Exists

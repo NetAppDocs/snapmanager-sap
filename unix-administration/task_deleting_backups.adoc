@@ -18,7 +18,7 @@ When you delete a protected backup, SnapManager deletes the backup from secondar
 [options="header"]
 |===
 | Protection state| Local status| Action on primary storage| Action on secondary storage| Explanation
-a|
+.2+a|
 Not requested (to be protected)
 a|
 Exists
@@ -37,7 +37,7 @@ No action required
 a|
 The local backup is already freed. If you delete a freed backup, the backup metadata is removed from the repository.
 
-a|
+.2+a|
 Not protected
 a|
 Exists
@@ -56,7 +56,7 @@ No action required
 a|
 The local backup is already freed. If you delete a freed backup, the backup metadata is removed from the repository.
 
-a|
+.2+a|
 Protected
 a|
 Exists

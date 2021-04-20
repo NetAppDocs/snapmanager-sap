@@ -50,21 +50,21 @@ Backup retention
 a|
 
 * Key: retain
-* Value: unlimited | hourly | daily | weekly | monthly
+* Value: unlimited \| hourly \| daily \| weekly \| monthly
 
 a|
 Fast restore
 a|
 
 * Key: fast
-* Value: require | override | fallback | off
+* Value: require \| override \| fallback \| off
 
 a|
 Data Protection
 a|
 
 * Key: protect
-* Value: yes | no | left blank
+* Value: yes, no, left blank
 
 NOTE: The different options mentioned for value parameter are similar to the -protect option used in command-line interface.
 

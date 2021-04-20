@@ -84,7 +84,7 @@ Were you unable to connect to the repository?
 a|
 If connecting to a repository fails, run the lsnrctl status command on the repository database and check the active service names. When SnapManager connects to the repository database, it uses the service name of the database. Depending on how the listener is setup, this might be the short service name or the fully qualified service name. When SnapManager connects to a database for a backup, restore, or other operation, it uses the host name and the SID. If the repository does not initialize correctly because it is currently unreachable, you receive an error message asking whether you want to remove the repository. You can remove the repository from your current view so that you can perform operations on other repositories.
 
-Also, check whether the repository instance is running by running the ps -eaf |grepinstance - name command.
+Also, check whether the repository instance is running by running the ps -eaf \|grepinstance - name command.
 
 a|
 Can system resolve the host name?
