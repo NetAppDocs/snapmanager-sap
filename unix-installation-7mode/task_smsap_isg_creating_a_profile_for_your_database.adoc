@@ -96,7 +96,6 @@ a|
 ***Use RMAN via Recovery Catalog***
 a|
 You are managing the RMAN repository using recovery catalog database.     Enter the user name who has access to recovery catalog database, password, and the Oracle net service name of the database that manages the Transparent Network Substrate (TNS) connection.
-+
 |===
 
 . On the Snapshot Naming Information page, select the variables to specify a naming format for the Snapshot copy.

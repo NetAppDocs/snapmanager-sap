@@ -46,7 +46,6 @@ a|
 *Service Name*
 a|
 Enter the name that SnapManager uses to connect to the repository database instance.    Depending on the details included in the tnsnames.ora file, this might be the short service name or the fully qualified service name.
-+
 |===
 
 . In the Perform Repository Add Operation window, review the configuration summary and click *Add*.
