@@ -13,6 +13,7 @@ You can choose to back up the entire database or just a portion of it. If you ch
 
 The following table lists the benefits and consequences of each type of backup:
 
+[options="header"]
 |===
 | Backup type| Advantages| Disadvantages
 a|

@@ -23,6 +23,7 @@ SnapManager creates Snapshot copies at the volume level instead of the tablespac
 
 NOTE: Both backups also create Snapshot copies of the log files.
 
+[options="header"]
 |===
 | Volumes in database| Tablespace TS1 (includes 2 database files)| Tablespace TS2 (includes 2 database files)| Snapshot copies created| Total number of Snapshot copies
 a|
@@ -46,6 +47,7 @@ TS2.data2
 a|
 1 per volume
 |===
+[options="header"]
 |===
 | Volumes in database| Tablespace TS1 (includes 2 database files)| Tablespace TS2 (includes 2 database files)| Snapshot copies created| Total number of Snapshot copies
 a|

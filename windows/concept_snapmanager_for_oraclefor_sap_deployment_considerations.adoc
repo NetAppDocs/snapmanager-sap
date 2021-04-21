@@ -13,6 +13,7 @@ Before deploying SnapManager in your environment, you should know the other appl
 
 The following table lists the different applications and technologies:
 
+[options="header"]
 |===
 | Applications and technologies| Details
 a|

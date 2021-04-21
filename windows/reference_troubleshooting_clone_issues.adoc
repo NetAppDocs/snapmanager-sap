@@ -11,6 +11,7 @@ summary: You can find information about that might occur during clone operations
 [.lead]
 You can find information about that might occur during clone operations and how you can resolve them.
 
+[options="header"]
 |===
 | Symptom| Explanation| Workaround
 a|

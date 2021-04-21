@@ -36,6 +36,7 @@ For OS authentication, you must enter the OS account user and group information.
 
 You can set sqlnet.authentication_services to NONE only in the following environments:
 
+[options="header"]
 |===
 | Database layout| Oracle version| Is database authentication supported for the target database
 a|

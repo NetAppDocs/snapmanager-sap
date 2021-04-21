@@ -46,6 +46,7 @@ Other options for this command are as follows:
 +
 You can also include other options when creating profiles, depending on how you want to access the database.
 +
+[options="header"]
 |===
 | If...| Then...
 a|

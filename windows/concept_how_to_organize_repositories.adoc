@@ -13,6 +13,7 @@ You can organize the SnapManager repositories to meet your business needs. You c
 
 You can organize repositories in several ways. Two such ways are as follows:
 
+[options="header"]
 |===
 | Type| Characteristics
 a|

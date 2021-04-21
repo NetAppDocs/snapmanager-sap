@@ -19,6 +19,7 @@ For information about installing and configuring SnapDrive for Windows, see _Sna
 
 . Double-click the SnapManager installation file:
 +
+[options="header"]
 |===
 | If the operating system is...| Then use...
 a|

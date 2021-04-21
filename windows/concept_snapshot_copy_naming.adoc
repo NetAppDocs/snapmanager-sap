@@ -27,6 +27,7 @@ The default pattern includes the required smid, as shown in the following:
 
 You can use the following variables in the Snapshot copy name:
 
+[options="header"]
 |===
 | Variable name| Description| Example value
 a|

@@ -11,6 +11,7 @@ summary: SnapManager operations \(backup, restore, and clone\) can be in differe
 [.lead]
 SnapManager operations (backup, restore, and clone) can be in different states, with each state indicating the progress of the operation.
 
+[options="header"]
 |===
 | Operation state| Description
 a|

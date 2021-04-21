@@ -13,9 +13,10 @@ The state of the database that is to be restored depends on the type of restore 
 
 The following table lists the state in which the database should be depending on the restore option selected and the type of files you want to include in the restore:
 
+[options="header"]
 |===
 | Type of restore| Files included| Database state for this instance
-a|
+.3+a|
 Restore only
 a|
 Control files
@@ -29,7 +30,7 @@ a|
 No system files
 a|
 Any state
-a|
+.3+a|
 Restore and recovery
 a|
 Control files

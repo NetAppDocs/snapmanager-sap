@@ -13,6 +13,7 @@ After upgrading, SnapManager assigns the default backup retention class to the e
 
 The default backup retention class assigned to the existing backups are as follows:
 
+[options="header"]
 |===
 | Backup type| Retention class assignment after upgrade
 a|

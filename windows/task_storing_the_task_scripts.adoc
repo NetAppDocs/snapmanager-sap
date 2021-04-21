@@ -16,6 +16,7 @@ You must store the pretask, post-task, and policy task scripts in a specified di
 +
 *For the backup operation*
 +
+[options="header"]
 |===
 | Directory| Description
 a|
@@ -33,6 +34,7 @@ The post-processing scripts run after the backup operations.
 |===
 *For the restore operation*
 +
+[options="header"]
 |===
 | Directory| Description
 a|
@@ -50,6 +52,7 @@ The post-processing scripts run after the restore operations.
 |===
 *For the clone operation*
 +
+[options="header"]
 |===
 | Directory| Description
 a|

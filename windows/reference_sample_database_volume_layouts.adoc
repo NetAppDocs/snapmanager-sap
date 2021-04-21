@@ -3,6 +3,8 @@ permalink: windows/reference_sample_database_volume_layouts.html
 sidebar: sidebar
 keywords: refer, sample, database, volume, layout, configuring, configure
 summary: You can refer to sample database volume layouts for help in configuring your database.Sample database volume layouts
+---
+= Sample database volume layouts
 :icons: font
 :imagesdir: ../media/
 
@@ -11,6 +13,7 @@ You can refer to sample database volume layouts for help in configuring your dat
 
 == Single-instance databases
 
+[options="header"]
 |===
 | File types| Volume names| Dedicated volume for file types| Automatic Snapshot copies
 a|

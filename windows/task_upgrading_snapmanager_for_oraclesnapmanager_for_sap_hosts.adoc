@@ -16,6 +16,7 @@ You can upgrade all the existing SnapManager hosts to use the latest version of 
  .. In the left panel, click *Stop*.
 . Double-click the SnapManager installation file.
 +
+[options="header"]
 |===
 | If the operating system is...| Then use...
 a|

@@ -13,6 +13,7 @@ You can determine the cause of an error if you know the message classifications.
 
 The following table provides information about the numerical ranges for the different types of messages you might see with SnapManager:
 
+[options="header"]
 |===
 | Group| Range| Usage
 a|

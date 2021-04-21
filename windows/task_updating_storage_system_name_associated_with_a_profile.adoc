@@ -32,6 +32,7 @@ However, you must remember the following while performing rolling upgrade and ro
 
 . Enter the following command: `smsap storage rename -profileprofile-oldnameold_storage_name-newnamenew_storage_name [quiet | -verbose`]
 +
+[options="header"]
 |===
 | If you want to...| Then...
 a|

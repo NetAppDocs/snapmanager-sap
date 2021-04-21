@@ -21,6 +21,7 @@ If any one of these operations is not specified in the pretask or post-task scri
 
 When you run the smsap plugin check command for the pretask or post-task scripts, the returned status of the scripts display error (because the returned status value is not zero).
 
+[options="header"]
 |===
 | Operation| Description
 a|

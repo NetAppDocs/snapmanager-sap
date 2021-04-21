@@ -11,6 +11,7 @@ summary: You can find information about the basic tasks involved in installing a
 [.lead]
 You can find information about the basic tasks involved in installing and using SnapManager.
 
+[options="header"]
 |===
 | Document| Description
 a|

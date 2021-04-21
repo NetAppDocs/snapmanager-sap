@@ -15,6 +15,7 @@ You can find information about the error messages associated with different Snap
 
 The following table lists some of the most common and important errors associated with SnapManager for SAP:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -175,6 +176,7 @@ For more information, see the Knowledge Base article 2017632.
 
 The following table lists the common errors associated with the database backup process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -226,6 +228,7 @@ Recover the cloned database or convert the database into a Data Guard Standby da
 
 The following table shows the common errors associated with the restore process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -259,6 +262,7 @@ If the file mentioned in the error message is an archived log file and if you ha
 
 The following table shows the common errors associated with the clone process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -289,6 +293,7 @@ You must either provide a value for the parameter or delete that parameter if it
 
 The following table shows the common errors associated with the clone process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -303,6 +308,7 @@ Use smsapsystem dump.
 
 The following table shows the common errors associated with backup tasks:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -337,6 +343,7 @@ You cannot mount, clone, verify, or perform backint restore on a backup that has
 
 The following table shows the common errors associated with the rolling upgrade process:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -387,6 +394,7 @@ Restore the repository that you backed up earlier.
 
 The following table shows the common errors associated with operations:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -402,6 +410,7 @@ Enter the command on a host running the SnapManager server. You can check the po
 
 The following table shows the common errors associated with the process component of SnapManager:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
@@ -434,6 +443,7 @@ Insert the required smid variable.
 
 The following table shows the common errors associated with SnapManager utilities:
 
+[options="header"]
 |===
 | Error message| Explanation| Resolution
 a|
