@@ -2,7 +2,7 @@
 permalink: unix-installation-cmode/task_smsap_isg_configuring_the_target_database.html
 sidebar: sidebar
 keywords: target, database, oracle, configure, standalone, real, application, cluster, rac, automatic, storage, management, asm, support, combination, configuring
-summary: The target database is an Oracle database that can be configured either as standalone, Real Application Clusters \(RAC\), Automatic Storage Management \(ASM\), or any other supported combinations.
+summary: "The target database is an Oracle database that can be configured either as standalone, Real Application Clusters (RAC), Automatic Storage Management (ASM), or any other supported combinations."
 ---
 = Configuring the target database
 :icons: font

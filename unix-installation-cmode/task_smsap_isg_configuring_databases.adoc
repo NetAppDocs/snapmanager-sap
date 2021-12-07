@@ -2,7 +2,7 @@
 permalink: unix-installation-cmode/task_smsap_isg_configuring_databases.html
 sidebar: sidebar
 keywords: configure, database, target, back, up, snapmanager, repository, store, metadata, online, operation, configuring
-summary: You must configure at least two databases: a target database that you want to back up using SnapManager; and a repository database to store the target database metadata. The target database and the SnapManager repository database must be configured and online before performing SnapManager operations.
+summary: "You must configure at least two databases: a target database that you want to back up using SnapManager; and a repository database to store the target database metadata. The target database and the SnapManager repository database must be configured and online before performing SnapManager operations."
 ---
 = Configuring databases
 :icons: font

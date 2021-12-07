@@ -2,7 +2,7 @@
 permalink: unix-installation-cmode/task_smsap_isg_integrating_with_sap_br_tools.html
 sidebar: sidebar
 keywords: sap, br, contain, tool, oracle, database, administration, brarchive, brbackup, brconnect, brrecover, brrestore, brspace, brtools, backint, file, integrating, integrate
-summary: The SAP BR\* Tools that contains SAP tools for Oracle database administration, for example, BRARCHIVE, BRBACKUP, BRCONNECT, BRRECOVER, BRRESTORE, BRSPACE, and BRTOOLS uses the BACKINT interface provided by SnapManager for SAP. To integrate SAP BR\* Tools, you must create a link from the BR\* Tools directory to /opt/NetApp/smsap/bin/, where the BACKINT file is installed.
+summary: "The SAP BR* Tools that contains SAP tools for Oracle database administration, for example, BRARCHIVE, BRBACKUP, BRCONNECT, BRRECOVER, BRRESTORE, BRSPACE, and BRTOOLS uses the BACKINT interface provided by SnapManager for SAP. To integrate SAP BR* Tools, you must create a link from the BR* Tools directory to /opt/NetApp/smsap/bin/, where the BACKINT file is installed."
 ---
 = Integrating with SAP BR* Tools
 :icons: font
