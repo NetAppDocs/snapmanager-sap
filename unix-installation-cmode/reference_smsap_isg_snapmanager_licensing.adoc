@@ -2,7 +2,7 @@
 permalink: unix-installation-cmode/reference_smsap_isg_snapmanager_licensing.html
 sidebar: sidebar
 keywords: snapmanager, license, storage, system, license, require, enable, operation, licensing, per-server, database, per-storage
-summary: A SnapManager license and several storage system licenses are required to enable SnapManager operations. The SnapManager license is available in two licensing models: per-server licensing, in which the SnapManager license resides on each database host; and per-storage system licensing, in which the SnapManager license resides on the storage system.
+summary: "A SnapManager license and several storage system licenses are required to enable SnapManager operations. The SnapManager license is available in two licensing models: per-server licensing, in which the SnapManager license resides on each database host; and per-storage system licensing, in which the SnapManager license resides on the storage system."
 ---
 = SnapManager licensing
 :icons: font
