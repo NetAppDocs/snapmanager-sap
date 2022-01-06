@@ -1,10 +1,6 @@
 ---
 settings:
   name: SnapManager for SAP
-  internal:
-    pdf_enabled: true
-  prod:
-    pdf_enabled: true
 sidebar:
   entries:
     - title: SnapManager for SAP docs
