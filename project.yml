@@ -1,6 +1,12 @@
 ---
 settings:
   name: SnapManager for SAP
+  internal:
+    pdf_enabled: false
+  prod:
+    pdf_enabled: true
+    harmony_enabled: true
+    langs: "us-en,ja-jp,zh-cn"
 sidebar:
   entries:
     - title: SnapManager for SAP docs

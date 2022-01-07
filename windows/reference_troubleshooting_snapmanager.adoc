@@ -25,6 +25,7 @@ a|
 Is the storage visible?
 a|
 Perform the following steps:
+
 . Right-click My Computer, and then select *Manage*.
 . Click *storage* > *snapdrive* > *Hostname* > *Disks*.
 a|
@@ -106,6 +107,7 @@ a|
 Which storage systems are configured to be accessed with SnapDrive?
 a|
 To find the storage systems configured for SnapDrive, perform the following steps:
+
 . Right-click *My Computer*, and then select *Manage*.
 . Click *Storage* > *SnapDrive*.
 . Right-click the host name, and then select *transport protocol settings*.
