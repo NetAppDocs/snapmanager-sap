@@ -17,30 +17,30 @@ You can use the backup restore command options to specify whether SnapManager sh
 
 You can select one of the following options to restore the backup:
 
-[options="header"]
+[cols="1a,1a" options="header"]
 |===
-| If you want to restore...| Use...
-a|
-The entire backup with all tablespaces and data files
-a|
--complete
-a|
-The list of specific tablespaces
-a|
--tablespaces
-a|
-Specific data files
-a|
--files
-a|
-The control files only
-a|
--controlfiles
-a|
-Tablespaces, data files, and control files
-a|
--complete -controlfiles
+// header row
+
+| If you want to restore...
+| Use...
+
+| The entire backup with all tablespaces and data files
+| -complete
+
+| The list of specific tablespaces
+| -tablespaces
+
+| Specific data files
+| -files
+
+| The control files only
+| -controlfiles
+
+| Tablespaces, data files, and control files
+| -complete -controlfiles
+
 |===
+
 You can also restore the backup from an alternate location by specifying -restorespec.
 
 If you include -recover, you can recover the database to:
@@ -90,43 +90,37 @@ You can specify the -dump option as an optional parameter to collect the dump fi
 
 . To restore data for different scenarios, complete one of the following:
 +
-[options="header"]
+[cols="1a,1a" options="header"]
 |===
-| If you want to restore...| Command Example
-a|
-*Complete database without control files and recover to a particular SCN number (3794392). In this case, the current control files exist, but all the data files are damaged or lost. Restore and recover the database from an existing full online backup to a point immediately before that SCN.*
-a|
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until 3794392 -verbose`
-a|
-*Complete database without control files and recover up to a date and time.*
-a|
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until 2008-09-15:15:29:23 -verbose`
-a|
-*Complete database without control files and recover up to a data and time. In this case, the current control files exist, but all of the data files are damaged or lost or a logical error occurred after a specific time. Restore and recover the database from an existing full online backup to a date and time immediately before the point of failure.*
-a|
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until "2008-09-15:15:29:23" -verbose`
-a|
-*Partial database (one or more data files) without control files and recover using all available logs. In this case, the current control files exist, but one or more data files are damaged or lost. Restore those data files and recover the database from an existing full online backup using all available logs.*
-a|
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -files /oracle/FLA/sapdata1/sr3_1/sr3.data1 /oracle/FLA/sapdata1/sr3_2/sr3.data2 /oracle/FLA/sapdata1/sr3_3/sr3.data3 -recover -alllogs -verbose (where "FLA" is the <SID>`
-a|
-*Partial database (one or more tablespaces) without control files and recover using all available logs. In this case, the current control files exist, but one or more tablespaces are dropped or one of more data files belonging to the tablespace are damaged or lost. Restore those tablespaces and recover the database from an existing full online backup using all available logs.*
-a|
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -tablespaces users -recover -alllogs -verbose`
-a|
-*Only control files and recover using all available logs. In this case, the data files exist, but all control files are damaged or lost. Restore just the control files and recover the database from an existing full online backup using all available logs.*
-a|
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -controlfiles -recover -alllogs -verbose`
-a|
-*Complete database without control files and recover using the backup control files and all available logs. In this case, all data files are damaged or lost. Restore just the control files and recover the database from an existing full online backup using all available logs.*
-a|
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -using-backup-controlfile -recover -alllogs -verbose`
-a|
-*Recover the restored database using the archive log files from the external archive log location.*
-a|
+// header row
+| If you want to restore...
+| Command Example
 
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -using-backup-controlfile -recover -alllogs -recover-from-location /user1/archive -verbose`
-    |===
+| Complete database without control files and recover to a particular SCN number (3794392). In this case, the current control files exist, but all the data files are damaged or lost. Restore and recover the database from an existing full online backup to a point immediately before that SCN.
+| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until 3794392 -verbose`
+
+| Complete database without control files and recover up to a date and time.
+| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until 2008-09-15:15:29:23 -verbose`
+
+| Complete database without control files and recover up to a data and time. In this case, the current control files exist, but all of the data files are damaged or lost or a logical error occurred after a specific time. Restore and recover the database from an existing full online backup to a date and time immediately before the point of failure.
+| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until "2008-09-15:15:29:23" -verbose`
+
+| Partial database (one or more data files) without control files and recover using all available logs. In this case, the current control files exist, but one or more data files are damaged or lost. Restore those data files and recover the database from an existing full online backup using all available logs.
+| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -files /oracle/FLA/sapdata1/sr3_1/sr3.data1 /oracle/FLA/sapdata1/sr3_2/sr3.data2 /oracle/FLA/sapdata1/sr3_3/sr3.data3 -recover -alllogs -verbose (where "FLA" is the <SID>`
+
+| Partial database (one or more tablespaces) without control files and recover using all available logs. In this case, the current control files exist, but one or more tablespaces are dropped or one of more data files belonging to the tablespace are damaged or lost. Restore those tablespaces and recover the database from an existing full online backup using all available logs.
+| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -tablespaces users -recover -alllogs -verbose`
+
+| Only control files and recover using all available logs. In this case, the data files exist, but all control files are damaged or lost. Restore just the control files and recover the database from an existing full online backup using all available logs.
+| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -controlfiles -recover -alllogs -verbose`
+
+| Complete database without control files and recover using the backup control files and all available logs. In this case, all data files are damaged or lost. Restore just the control files and recover the database from an existing full online backup using all available logs.
+| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -using-backup-controlfile -recover -alllogs -verbose`
+
+| Recover the restored database using the archive log files from the external archive log location.
+| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -using-backup-controlfile -recover -alllogs -recover-from-location /user1/archive -verbose`
+
+|===
 
 . Review the fast restore eligibility checks.
 +
