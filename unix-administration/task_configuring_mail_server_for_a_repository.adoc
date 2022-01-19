@@ -21,9 +21,9 @@ Other options for this command are as follows:
 +
 [-force]
 +
-[quiet | -verbose]
+[quiet \| -verbose]
 +
-[options="header"]
+[cols="2a,4a" options="header"]
 |===
 | To do the following...| Then...
 a|

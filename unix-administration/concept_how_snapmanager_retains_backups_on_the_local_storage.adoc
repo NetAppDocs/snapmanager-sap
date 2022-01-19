@@ -32,7 +32,7 @@ After a backup expires, SnapManager either frees or deletes the expired backup. 
 
 SnapManager counts only the number of successful backups for the retention count and does not consider the following:
 
-[options="header"]
+[cols="1a,1a" options="header"]
 |===
 | Backups not included in the retention count| Additional details
 a|
@@ -71,7 +71,7 @@ In an archivelog-only backup operation, SnapManager does not archive the redo lo
 
 The following example shows the actions that SnapManager takes on various types of backups, based on a three-daily-backups retention policy (with the count set to retain 3):
 
-[options="header"]
+[cols="1a,1a,1a,1a" options="header"]
 |===
 | Backup date| Status| Retention policy action taken| Explanation
 a|
@@ -133,4 +133,4 @@ SnapManager counts this successful backup, but after SnapManager reaches three s
 |===
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

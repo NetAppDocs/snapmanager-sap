@@ -13,7 +13,7 @@ You can clone a database to create an exact replica of the original database. Yo
 
 Some of the advantages of creating a clone by using SnapManager are as follows:
 
-[options="header"]
+[cols="1a,4a" options="header"]
 |===
 | Advantages| Details
 a|

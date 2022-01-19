@@ -24,9 +24,9 @@ You can run the clone create command to create a clone of a backed-up database. 
 \[-comment string\]
 -clonespec full_path_to_clonespec_file
 \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]
-\[-syspassword syspassword\]
-\[-reserve \{yes \| no \| inherit\}\]
-\[-from-secondary \{-copy-id id\}\]
+[-syspassword syspassword]
+[-reserve {yes \| no \| inherit}]
+\[-from-secondary {-copy-id id\}\]
 \[-no-resetlogs \| -recover-from-location path1 \[, path2\]\]\[-taskspec taskspec\]
 \[-dump\]
 \[-quiet \| -verbose\]
@@ -98,7 +98,7 @@ Setting the -reserve option to yes ensures that the volume guarantee space reser
 +
 The following table describes the cloning methods and their effect on the clone create operation and its -reserve option. A LUN can be cloned by using either method.
 +
-[options="header"]
+[cols="1a,2a,2a" options="header"]
 |===
 | Cloning method| Description| Result
 a|

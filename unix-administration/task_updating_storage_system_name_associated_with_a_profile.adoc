@@ -37,7 +37,7 @@ NOTE: If SnapDrive could not identify the storage system and displays error mess
 
 . Enter the following command: `smsap storage rename -profileprofile-oldnameold_storage_name-newnamenew_storage_name [quiet | -verbose`]
 +
-[options="header"]
+[cols="1a,2a" options="header"]
 |===
 | If you want to...| Then...
 a|

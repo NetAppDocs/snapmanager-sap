@@ -43,7 +43,7 @@ Other options for this command are as follows:
 +
 [quiet | -verbose]
 +
-[options="header"]
+[cols="1a,1a" options="header"]
 |===
 | If you want to...| Then...
 a|

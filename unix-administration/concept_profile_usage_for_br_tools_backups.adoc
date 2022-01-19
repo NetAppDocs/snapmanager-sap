@@ -42,7 +42,7 @@ Add profile_name = <profile> to the .utl file and save. The profile is the name 
 
 The following table lists additional backup utility parameters included in the .utl file for operations like backup retention, fast restore, and data protection:
 
-[options="header"]
+[cols="1a,3a" options="header"]
 |===
 | Operations| Backup utility parameters
 a|
@@ -64,7 +64,7 @@ Data Protection
 a|
 
 * Key: protect
-* Value: yes, no, left blank
+* Value: yes \| no \| left blank
 
 NOTE: The different options mentioned for value parameter are similar to the -protect option used in command-line interface.
 
@@ -83,13 +83,13 @@ Restore data from the secondary storage to a location to a preferred location
 a|
 
 * Key: restore_from_nearest_backup_location
-* Value: yes | no
+* Value: yes \| no
 * Default: yes
 
 |===
 The following table describes the different backup utility parameters for these operations:
 
-[options="header"]
+[cols="1a,1a,1a" options="header"]
 |===
 | Operation| Key| Value
 a|

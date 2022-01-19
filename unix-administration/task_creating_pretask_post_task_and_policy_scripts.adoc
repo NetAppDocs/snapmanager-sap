@@ -39,7 +39,7 @@ The directory in which you install the script affects how it is used. You can pl
 
 NOTE: You must ensure that the plugins directory has the executable permission before using the scripts for the SnapManager operation.
 
-[options="header"]
+[cols="1a,3a,3a,3a" options="header"]
 |===
 | Activity| Backup| Restore| Clone
 a|

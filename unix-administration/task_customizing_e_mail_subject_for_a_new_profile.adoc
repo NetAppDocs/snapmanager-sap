@@ -13,7 +13,7 @@ You can customize the email subject for the new profile when you create it.
 
 You can customize the email subject by using the \{profile}_\{operation-name}_\{db-sid}_\{db-host}_\{start-date}_\{end-date}_\{status} pattern or enter your own text.
 
-[options="header"]
+[cols="1a,2a,2a" options="header"]
 |===
 | Variable name| Description| Example value
 a|
