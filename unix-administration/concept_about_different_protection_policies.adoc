@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_about_different_protection_policies.html
 sidebar: sidebar
 keywords: policies, policy, protect, backup, secondary, tertiary, storage, system, protection
-summary: You can select different policies to protect the backups on the secondary or tertiary storage systems.
+summary: "You can select different policies to protect the backups on the secondary or tertiary storage systems."
 ---
 = About different protection policies
 :icons: font
@@ -13,7 +13,7 @@ You can select different policies to protect the backups on the secondary or ter
 
 If you are using Data ONTAP operating in 7-Mode and SnapManager is integrated with Protection Manager, you must select one of the following protection policies while creating the profile. The Protection Manager's Management Console provides templates to configure protection policies for the datasets. Even though disaster recovery protection policies are listed in the SnapManager user interface, these policies are not supported.
 
-[cols="1a,1a" options="header"]
+[cols="1a,3a" options="header"]
 |===
 // header row
 | Policy
