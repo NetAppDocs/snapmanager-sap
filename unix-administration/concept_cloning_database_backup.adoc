@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_cloning_database_backup.html
 sidebar: sidebar
 keywords: clone, database, perform, task, upgrade, production, installation, cloning, backup
-summary: If you clone a database, you can perform tasks such as test an upgrade to a database without affecting the database in production, duplicate a master installation to several training systems, or duplicate a master installation as a base installation to other servers, which have similar requirements.
+summary: "If you clone a database, you can perform tasks such as test an upgrade to a database without affecting the database in production, duplicate a master installation to several training systems, or duplicate a master installation as a base installation to other servers, which have similar requirements."
 ---
 = Cloning database backup
 :icons: font
