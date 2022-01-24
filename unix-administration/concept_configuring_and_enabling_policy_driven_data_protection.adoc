@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_configuring_and_enabling_policy_driven_data_protection.html
 sidebar: sidebar
 keywords: snapdrive, datafabric, manager, server, protect, backup, configure, configuring, policy-driven, policy, driven, data, protection
-summary: You must configure SnapDrive and the DataFabric Manager server to enable data protection on the profile to protect backups on the secondary storage systems. You can select the protection policies in the Protection Manager’s console to specify how database backups will be protected.
+summary: "You must configure SnapDrive and the DataFabric Manager server to enable data protection on the profile to protect backups on the secondary storage systems. You can select the protection policies in the Protection Manager’s console to specify how database backups will be protected."
 ---
 = Configuring and enabling policy-driven data protection
 :icons: font
