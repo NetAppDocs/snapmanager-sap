@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_error_handling_in_custom_scripts.html
 sidebar: sidebar
 keywords: snapmanager, process, custom, script, specific, return, code, value, execution, error, handling, handle
-summary: SnapManager processes the custom script based on the specific return codes. For example, if your custom script returns a value of 0, 1, 2, or 3, SnapManager continues with the clone process. The return code also influences how SnapManager processes and returns the standard output of your script execution.
+summary: "SnapManager processes the custom script based on the specific return codes. For example, if your custom script returns a value of 0, 1, 2, or 3, SnapManager continues with the clone process. The return code also influences how SnapManager processes and returns the standard output of your script execution."
 ---
 = Error handling in custom scripts
 :icons: font
@@ -11,7 +11,7 @@ summary: SnapManager processes the custom script based on the specific return co
 [.lead]
 SnapManager processes the custom script based on the specific return codes. For example, if your custom script returns a value of 0, 1, 2, or 3, SnapManager continues with the clone process. The return code also influences how SnapManager processes and returns the standard output of your script execution.
 
-[options="header"]
+[cols="1a,3a,2a" options="header"]
 |===
 | Return code| Description| Continue processing the operation
 a|
