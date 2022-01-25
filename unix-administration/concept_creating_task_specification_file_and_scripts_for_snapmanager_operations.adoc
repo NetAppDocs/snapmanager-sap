@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_creating_task_specification_file_and_scripts_for_snapmanager_operations.html
 sidebar: sidebar
 keywords: snapmanager, sap, task, specification, extensible, markup, language, xml, pretask, backup, restore, clone, operation, creating, create, file, script, operation
-summary: SnapManager for SAP uses a task specification Extensible Markup Language \(XML\) file that indicates the pretasks and post-tasks for the backup, restore, and clone operations. You can add the pretask and post-task script names in the XML file for the tasks to be performed before or after the backup, restore, and clone operations.
+summary: "SnapManager for SAP uses a task specification Extensible Markup Language (XML) file that indicates the pretasks and post-tasks for the backup, restore, and clone operations. You can add the pretask and post-task script names in the XML file for the tasks to be performed before or after the backup, restore, and clone operations."
 ---
 = Creating task specification file and scripts for SnapManager operations
 :icons: font
@@ -33,13 +33,13 @@ The task specification XML file includes two sections:
 
 The values included in the pretasks and post-tasks sections must adhere to the following guidelines:
 
-* Task name: The name of the task must match the name of the script, which is displayed when you run the plugin.sh -describe command.
+* Task name: The name of the task must match the name of the script, which is displayed when you run the `plugin.sh -describe` command.
 +
-NOTE: If there is a mismatch, then you might receive the following error message: the file not found.
+NOTE: If there is a mismatch, then you might receive the following error message: `the file not found`.
 
 * Parameter name: The name of the parameter must be a string that can be used as an environment variable setting.
 +
-The string must match the parameter name in the custom script, which is displayed when you run the plugin.sh -describe command.
+The string must match the parameter name in the custom script, which is displayed when you run the `plugin.sh -describe` command.
 
 You can create the specification file based on the structure of the following sample task specification file:
 
