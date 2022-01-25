@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_database_state_needed_for_restore_process.html
 sidebar: sidebar
 keywords: state, database, restore, process, perform
-summary: The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included.
+summary: "The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included."
 ---
 = Database state needed for the restore process
 :icons: font
@@ -13,50 +13,37 @@ The state of the database that is to be restored depends on the type of restore 
 
 The following table lists the state in which the database should be depending on the restore option selected and the type of files you want to include in the restore:
 
-[options="header"]
+[cols="1,1,1,1" options="header"]
 |===
 | Type of restore| Files included| Database state for this instance| Database state for other instance (RAC only)
-a|
-Restore only
-a|
-Control files
-a|
-Shutdown
-a|
-Shutdown
-a|
-System files
-a|
-Mount or Shutdown
-a|
-Mount or Shutdown
-a|
-No system files
-a|
-Any state
-a|
-Any state
-a|
-Restore and recovery
-a|
-Control files
-a|
-Shutdown
-a|
-Shutdown
-a|
-System files
-a|
-Mount
-a|
-Mount or Shutdown
-a|
-No system files
-a|
-Mount or Open
-a|
-Any
+
+.3+|Restore only
+|Control files
+|Shutdown
+|Shutdown
+
+|System files
+|Mount or Shutdown
+|Mount or Shutdown
+
+|No system files
+|Any state
+|Any state
+
+.3+|Restore and recovery
+|Control files
+|Shutdown
+|Shutdown
+
+|System files
+|Mount
+|Mount or Shutdown
+
+|No system files
+|Mount or Open
+|Any
 |===
+
 The database state required by SnapManager for a restore operation depends on the type of restore being performed (complete, partial, or control files). SnapManager does not transition the database to a lower state (for example, from Open to Mount) unless the force option is specified.
 
 SnapManager for SAP does not verify whether SAP is running. SnapManager for SAP waits for a timeout to elapse and then shuts down the database, which can add an hour of additional restore time.
