@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_requirements_for_using_rac_databases_with_snapmanager.html
 sidebar: sidebar
 keywords: recommendation, real, application, cluster, rac, database, snapmanager, number, password, authentication, mode, requirement
-summary: You must know the recommendations for using Real Application Clusters \(RAC\) databases with SnapManager. The recommendations include port numbers, passwords, and authentication mode.
+summary: "You must know the recommendations for using Real Application Clusters (RAC) databases with SnapManager. The recommendations include port numbers, passwords, and authentication mode."
 ---
 = Requirements for using RAC databases with SnapManager
 :icons: font

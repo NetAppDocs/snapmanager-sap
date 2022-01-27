@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_restore_preview_plans.html
 sidebar: sidebar
 keywords: snapmanager, restore, plan, before, after, operation, preview, review, analyze
-summary: SnapManager provides restore plans before and after a restore operation is completed. The restore plans are used to preview, review, and analyze regarding different restore methods.
+summary: "SnapManager provides restore plans before and after a restore operation is completed. The restore plans are used to preview, review, and analyze regarding different restore methods."
 ---
 = What restore preview plans are
 :icons: font
@@ -72,7 +72,7 @@ Files to restore:
 * Reasons denoted with an asterisk (*) are overridable.
 ----
 
-In the example, the first failure is overridable by using -fast -override from the command-line interface (CLI), or by selecting *Override* in the graphical user interface (GUI). The second failure about mapped LUNs in the volume is mandatory and not overridable.
+In the example, the first failure is overridable by using `-fast -override` from the command-line interface (CLI), or by selecting *Override* in the graphical user interface (GUI). The second failure about mapped LUNs in the volume is mandatory and not overridable.
 
 You can resolve checks by doing the following:
 

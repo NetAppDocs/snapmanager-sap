@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_restoration_of_the_data_from_file_systems.html
 sidebar: sidebar
 keywords: restore, data, alternate, location, necessary, file, system, local, host, restoration
-summary: Before you restore data from an alternate location, you must restore the necessary file system and mount it on the local host.
+summary: "Before you restore data from an alternate location, you must restore the necessary file system and mount it on the local host."
 ---
 = Restoration of data from the file system
 :icons: font
@@ -16,7 +16,3 @@ You can invoke the restore operation from an alternate location to copy the file
 To perform this operation, you must specify the alternate mount points from which to restore the original mount points and the original Snapshot copy names by creating a restore specification file.
 
 NOTE: The Snapshot copy name is a necessary component because the same file system might be snapped multiple times in a single backup operation (for example, once for the data files and once for the log file).
-
-*Related information*
-
-xref:task_creating_restore_specifications.adoc[Creating restore specifications]
