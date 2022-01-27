@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_general_layout_and_configuration.html
 sidebar: sidebar
 keywords: recommend, general, database, layout, storage, configuration, help, avoid, issue, relate, disk, group, file, type, tablespace
-summary: Knowing the recommended general database layouts and storage configurations can help you avoid issues related to disk groups, file types, and tablespaces.
+summary: "Knowing the recommended general database layouts and storage configurations can help you avoid issues related to disk groups, file types, and tablespaces."
 ---
 = Recommended general database layouts and storage configurations
 :icons: font
@@ -16,9 +16,9 @@ Knowing the recommended general database layouts and storage configurations can 
 All files making up a database must reside on the same type of file system.
 
 * SnapManager requires a multiple of 4K block size.
-* Include the database system identifier in the oratab file.
+* Include the database system identifier in the `oratab` file.
 +
-Include an entry in the oratab file for each database to be managed. SnapManager relies on the oratab file to determine which Oracle home to use.
+Include an entry in the `oratab` file for each database to be managed. SnapManager relies on the `oratab` file to determine which Oracle home to use.
 
 If you want to leverage the new volume-based restore or full disk group restore, consider the following guidelines related to file systems and disk groups:
 
@@ -31,7 +31,7 @@ The following are some guidelines for volume separation:
 * You must use separate volumes for each of the following file classifications: database binaries, data files, online redo log files, archived redo log files, and control files.
 * You do not need to create a separate volume for temporary database files because SnapManager does not back up temporary database files.
 
-SAP uses a standard layout for Oracle database installations. In this layout, SAP places copies of the Oracle control file in E:\oracle\SID\origlogA, E:\oracle\SID\origlogB, and E:\oracle\SID\sapdata1 file systems.
+SAP uses a standard layout for Oracle database installations. In this layout, SAP places copies of the Oracle control file in `E:\oracle\SID\origlogA, E:\oracle\SID\origlogB`, and `E:\oracle\SID\sapdata1 file systems`.
 
 The control file in the sapdata1 file system conflicts with the SnapManager requirements for separating the control files and data files into separate volumes and must be adjusted to allow fast restore capability.
 

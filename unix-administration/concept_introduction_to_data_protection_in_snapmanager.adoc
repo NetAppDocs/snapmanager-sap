@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_introduction_to_data_protection_in_snapmanager.html
 sidebar: sidebar
 keywords: snapmanager, data, protection, backup, secondary, tertiary, storage, system, snapmirror, snapvault, relationship, destination, volume
-summary: SnapManager supports data protection to protect the backups on the secondary or tertiary storage systems. You must set up SnapMirror and SnapVault relationships between the source and the destination volumes.
+summary: "SnapManager supports data protection to protect the backups on the secondary or tertiary storage systems. You must set up SnapMirror and SnapVault relationships between the source and the destination volumes."
 ---
 = Introduction to data protection in SnapManager
 :icons: font
@@ -25,6 +25,6 @@ If you were using SnapManager 3.3.1 with clustered Data ONTAP, the backups were 
 
 NOTE: If you have backups in the secondary storage system that were mirrored or vaulted using SnapManager 3.3.1 post-scripts, you cannot use those backups for restore or cloning using SnapManager 3.4.
 
-If you are using clustered Data ONTAP, SnapManager 3.4.2 supports multiple protection relationships (SnapMirror and SnapVault) on source volumes. Only one SnapMirror and one SnapVault relationship per volume is supported. You must create separate profiles, each with the SnapManager_cDOT_Mirror and the SnapManager_cDOT_Vault policy selected.
+If you are using clustered Data ONTAP, SnapManager 3.4.2 supports multiple protection relationships (SnapMirror and SnapVault) on source volumes. Only one SnapMirror and one SnapVault relationship per volume is supported. You must create separate profiles, each with the `_SnapManager_cDOT_Mirror_` and the `_SnapManager_cDOT_Vault_` policy selected.
 
 NOTE: Snapdrive for Unix 5.3.2 and later is required to use multiple protection policies.
