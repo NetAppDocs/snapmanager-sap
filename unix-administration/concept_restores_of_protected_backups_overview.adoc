@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_restores_of_protected_backups_overview.html
 sidebar: sidebar
 keywords: restore, method, backup, data, secondary, primary, storage, protect, overview
-summary: You can choose the restore method that you want to use to restore the backup data from secondary storage to primary storage.
+summary: "You can choose the restore method that you want to use to restore the backup data from secondary storage to primary storage."
 ---
 = Restores of protected backups overview
 :icons: font
@@ -43,7 +43,3 @@ SnapManager first copies data to a scratch volume on the primary host before Sna
 
 |===
 If you cannot directly return data to storage, SnapManager can return data either directly to host or indirectly to storage or host. The method depends on the policy governing whether the organization allows connection directly to secondary storage or requires data to be copied over the storage network. You can manage this policy by setting configuration information in the smsap.config file.
-
-*Related information*
-
-xref:reference_snapmanager_configuration_parameters.adoc[SnapManager configuration parameters]
