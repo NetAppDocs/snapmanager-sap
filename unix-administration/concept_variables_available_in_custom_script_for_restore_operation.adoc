@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_variables_available_in_custom_script_for_restore_operation.html
 sidebar: sidebar
 keywords: snapmanager, context, information, form, environment, variable, script, restore, operation, host
-summary: SnapManager provides context information in the form of environment variables related to the restore operation that is being performed. For example, your script can retrieve the name of the original host and the label of the backup that is restored.
+summary: "SnapManager provides context information in the form of environment variables related to the restore operation that is being performed. For example, your script can retrieve the name of the original host and the label of the backup that is restored."
 ---
 = Variables available in the task scripts for the restore operation
 :icons: font
@@ -13,125 +13,125 @@ SnapManager provides context information in the form of environment variables re
 
 The following table lists the environment variables that you can use in your scripts:
 
-[options="header"]
+[cols="2a,3a,1a" options="header"]
 |===
 | Variables| Description| Format
 a|
-SM_OPERATION_ID
+`_SM_OPERATION_ID_`
 a|
 Specifies the ID of the current operation
 a|
 string
 a|
-SM_PROFILE_NAME
+`_SM_PROFILE_NAME_`
 a|
 Specifies the name of the profile used
 a|
 string
 a|
-SM_HOST
+`_SM_HOST_`
 a|
 Specifies the host name of the database
 a|
 string
 a|
-SM_OS_USER
+`_SM_OS_USER_`
 a|
 Specifies the operating system (OS) owner of the database
 a|
 string
 a|
-SM_OS_GROUP
+`_SM_OS_GROUP_`
 a|
 Specifies the OS group of the database
 a|
 string
 a|
-SM_BACKUP_TYPE
+`_SM_BACKUP_TYPE_`
 a|
 Specifies the type of the backup (online, offline, or auto)
 a|
 string
 a|
-SM_BACKUP_LABEL
+`_SM_BACKUP_LABEL_`
 a|
 Specifies the backup label
 a|
 string
 a|
-SM_BACKUP_ID
+`_SM_BACKUP_ID_`
 a|
 Specifies the backup ID
 a|
 string
 a|
-SM_BACKUP_PROFILE
+`_SM_BACKUP_PROFILE_`
 a|
 Specifies the profile used for the backup
 a|
 string
 a|
-SM_RECOVERY_TYPE
+`_SM_RECOVERY_TYPE_`
 a|
 Specifies the recovery configuration information
 a|
 string
 a|
-SM_VOLUME_RESTORE_MODE
+`_SM_VOLUME_RESTORE_MODE_`
 a|
 Specifies the volume restore configuration
 a|
 string
 a|
-SM_TARGET_FILER_NAME
+`_SM_TARGET_FILER_NAME_`
 a|
 Specifies the target storage system name *Note:* If more than one storage system is used, then the storage system names must be separated by commas.
 
 a|
 string
 a|
-SM_TARGET_VOLUME_NAME
+`_SM_TARGET_VOLUME_NAME_`
 a|
 Specifies the target volume name *Note:* The target volume name must be prefixed with storage device name, for example, SM_TARGET_FILER_NAME/SM_TARGET_VOLUME_NAME.
 
 a|
 string
 a|
-SM_HOST_FILE_SYSTEM
+`_SM_HOST_FILE_SYSTEM_`
 a|
 Specifies the host file system
 a|
 string
 a|
-SM_SNAPSHOT_NAMES
+`_SM_SNAPSHOT_NAMES_`
 a|
 Specifies the Snapshot list *Note:* Name of the Snapshot copies must be prefixed with the storage system name and volume name. Names of the Snapshot copies are separated by commas.
 
 a|
 string array
 a|
-SM_ARCHIVE_LOGS_DIRECTORY
+`_SM_ARCHIVE_LOGS_DIRECTORY_`
 a|
 Specifies the archive logs directory *Note:* If the archive logs are located in more than one directory, then the names of those directories are separated by commas.
 
 a|
 string array
 a|
-SM_REDO_LOGS_DIRECTORY
+`_SM_REDO_LOGS_DIRECTORY_`
 a|
 Specifies the redo logs directory *Note:* If the redo logs are located in more than one directory, then the names of those directories are separated by commas.
 
 a|
 string array
 a|
-SM_CONTROL_FILES_DIRECTORY
+`_SM_CONTROL_FILES_DIRECTORY_`
 a|
 Specifies the control files directory *Note:* If the control files are located in more than one directory, then the names of those directories are separated by commas.
 
 a|
 string array
 a|
-SM_DATA_FILES_DIRECTORY
+`_SM_DATA_FILES_DIRECTORY_`
 a|
 Specifies the data files directory *Note:* If the data files are located in more than one directory, then the names of those directories are separated by commas.
 

@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_updating_storage_controller_name_and_database_hostname_associated_with_a_profile.html
 sidebar: sidebar
 keywords: snapmanager, storage, system, host, name, address, profile, update, updating, target
-summary: SnapManager 3.3 or later allows you to update the storage system host name or storage system address, and the target database host name associated with a SnapManager profile.
+summary: "SnapManager 3.3 or later allows you to update the storage system host name or storage system address, and the target database host name associated with a SnapManager profile."
 ---
 = Updating storage system name and target database host name associated with a profile
 :icons: font
