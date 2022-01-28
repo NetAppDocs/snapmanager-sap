@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_snapshot_copy_naming.html
 sidebar: sidebar
 keywords: naming, name, snapshot, copy, convention, pattern, copies
-summary: You can specify a naming convention or pattern to describe the Snapshot copies related to the profile you create or update. You can also include custom text in all Snapshot copy names.
+summary: "You can specify a naming convention or pattern to describe the Snapshot copies related to the profile you create or update. You can also include custom text in all Snapshot copy names."
 ---
 = Snapshot copy naming
 :icons: font
@@ -27,7 +27,7 @@ The default pattern includes the required smid, as shown in the following:
 
 You can use the following variables in the Snapshot copy name:
 
-[options="header"]
+[cols="1a,3a,2a" options="header"]
 |===
 | Variable name| Description| Example value
 a|

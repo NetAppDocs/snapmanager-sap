@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_snapmanager_security.html
 sidebar: sidebar
 keywords: snapmanager, operation, credential, security, authentication, role-based, access, control, rbac, lun, data, file, database
-summary: You can perform SnapManager operations only if you have the appropriate credentials. Security in SnapManager is governed by user authentication and role-based access control \(RBAC\). RBAC enables database administrators to restrict the operations that SnapManager can perform against the volumes and LUNs that hold the data files in a database.
+summary: "You can perform SnapManager operations only if you have the appropriate credentials. Security in SnapManager is governed by user authentication and role-based access control (RBAC). RBAC enables database administrators to restrict the operations that SnapManager can perform against the volumes and LUNs that hold the data files in a database."
 ---
 = How SnapManager maintains security
 :icons: font
@@ -17,10 +17,10 @@ In addition to role-based access, SnapManager maintains security by requesting u
 
 SnapManager credentials and user authentication differ significantly from SnapManager 3.0:
 
-* In SnapManager versions earlier than 3.0, you would set an arbitrary server password when you install SnapManager. Anyone who wants to use the SnapManager server would need the SnapManager server password. The SnapManager server password would need to be added to the user credentials by using the smsap credential set -host command.
-* In SnapManager (3.0 and later), the SnapManager server password has been replaced by individual user operating system (OS) authentication. If you are not running the client from the same server as the host, the SnapManager server performs the authentication by using your OS user names and passwords. If you do not want to be prompted for your OS passwords, you can save the data to your SnapManager user credentials cache by using the smsap credential set -host command.
+* In SnapManager versions earlier than 3.0, you would set an arbitrary server password when you install SnapManager. Anyone who wants to use the SnapManager server would need the SnapManager server password. The SnapManager server password would need to be added to the user credentials by using the `smsap credential set -host` command.
+* In SnapManager (3.0 and later), the SnapManager server password has been replaced by individual user operating system (OS) authentication. If you are not running the client from the same server as the host, the SnapManager server performs the authentication by using your OS user names and passwords. If you do not want to be prompted for your OS passwords, you can save the data to your SnapManager user credentials cache by using the `smsap credential set -host` command.
 +
-NOTE: The smsap credential set -host command remembers your credentials when the host.credentials.persist property in the smsap.config file is set to true.
+NOTE: The `smsap credential set -host` command remembers your credentials when the `host.credentials.persist` property in the smsap.config file is set to `*true*`.
 
 *Example*
 
@@ -28,7 +28,7 @@ User1 and User2 share a profile called Prof2. User2 cannot perform a backup of D
 
 The following table describes different permissions assigned to the users:
 
-[options="header"]
+[cols="2a,1a,1a" options="header"]
 |===
 | Permission type| User1| User2
 a|
@@ -50,4 +50,4 @@ Prof1, Prof2
 a|
 Prof2
 |===
-In the case where User1 and User2 do not have any shared profiles, assume User1 has permissions for the hosts named Host1 and Host2, and User2 has permissions for the host named Host2. User2 cannot run even the nonprofile commands such as dump and system verify on Host1.
+In the case where User1 and User2 do not have any shared profiles, assume User1 has permissions for the hosts named Host1 and Host2, and User2 has permissions for the host named Host2. User2 cannot run even the nonprofile commands such as dump and `system verify` on Host1.
