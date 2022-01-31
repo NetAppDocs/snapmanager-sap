@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_volume_management_restrictions.html
 sidebar: sidebar
 keywords: snapmanager, volume, management, restriction, environment
-summary: SnapManager has certain volume management restrictions that might affect your environment.
+summary: "SnapManager has certain volume management restrictions that might affect your environment."
 ---
 = Volume management restrictions
 :icons: font

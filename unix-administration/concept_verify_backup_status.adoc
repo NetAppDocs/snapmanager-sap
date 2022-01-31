@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_verify_backup_status.html
 sidebar: sidebar
 keywords: snapmanager, integrity, backup, oracle, backup, verification, operation, verify, status
-summary: SnapManager can confirm the integrity of the backup using standard Oracle backup verification operations.
+summary: "SnapManager can confirm the integrity of the backup using standard Oracle backup verification operations."
 ---
 = Verify backup status
 :icons: font

@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_what_database_backup_scheduling_is.html
 sidebar: sidebar
 keywords: schedule, update, monitor, backup, database, graphical, user, interface, scheduling
-summary: You can schedule, update, and monitor backups for databases by using the Schedule tab of the graphical user interface.
+summary: "You can schedule, update, and monitor backups for databases by using the Schedule tab of the graphical user interface."
 ---
 = What database backup scheduling is
 :icons: font

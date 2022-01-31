@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_what_br_tools_are.html
 sidebar: sidebar
 keywords: information, sap, storage, system, br, tools
-summary: You can find information that you would need to use SAP with the storage systems.
+summary: "You can find information that you would need to use SAP with the storage systems."
 ---
 = What BR*Tools are
 :icons: font
@@ -19,7 +19,7 @@ The SnapManager for SAP profile must be named correctly to work with BR*Tools. B
 
 You need to use a different profile name, if the SAP SID is not unique in your environment. For more information, see _Profile usage for BR* Tools backups_.
 
-You must have a link from the BR*Tools directory to the /opt/NetApp/smsap/bin/backint file installed by SnapManager for SAP. For information about creating the link, see _Integrating with SAP BR* Tools_.
+You must have a link from the BR*Tools directory to the `/opt/NetApp/smsap/bin/backint` file installed by SnapManager for SAP. For information about creating the link, see _Integrating with SAP BR* Tools_.
 
 Backups created with versions before BR*Tools 7.00 cannot be verified. The block size of the tablespace or data file is required to complete the verification; however, versions before BR*Tools 7.00 do not provide this.
 
