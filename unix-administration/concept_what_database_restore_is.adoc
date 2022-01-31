@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_what_database_restore_is.html
 sidebar: sidebar
 keywords: snapmanager, enable, volume-based, file-based, backup, restore, operation, database, restore
-summary: SnapManager enables you to perform volume-based or file-based backup and restore operations.
+summary: "SnapManager enables you to perform volume-based or file-based backup and restore operations."
 ---
 = What database restore is
 :icons: font
@@ -13,24 +13,23 @@ SnapManager enables you to perform volume-based orfile-based backup and restore 
 
 The following table describes the restore methods:
 
-[options="header"]
+[cols="1a,3a" options="header"]
 |===
+//header
 | Restore process| Details
-a|
-Volume-based fast restores (from primary storage)
-a|
-SnapManager restores the data files of a database by restoring a full volume. This default process is the fastest method for restoring your database.
-a|
-File-based restores
-a|
-Storage-side full file system restore (from primary or secondary): SnapManager performs a full logical unit number (LUN) restore.
-a|
-Storage-side file restore: SnapManager performs a single file snap restore (SFSR) in a NAS environment. In an SFSR, each of the files or LUNs that represents the protected objects are restored.
 
-a|
-Host-side file copy restore (from primary or secondary): SnapManager clones the local backup using either a LUN or a FlexClone. The clone is mounted and then SnapManager copies the host files from the clone into the active file system.
+|Volume-based fast restores (from primary storage)
+|SnapManager restores the data files of a database by restoring a full volume. This default process is the fastest method for restoring your database.
+
+.3+a|File-based restores
+
+|Storage-side full file system restore (from primary or secondary): SnapManager performs a full logical unit number (LUN) restore.
+
+|Storage-side file restore: SnapManager performs a single file snap restore (SFSR) in a NAS environment. In an SFSR, each of the files or LUNs that represents the protected objects are restored.
+
+|Host-side file copy restore (from primary or secondary): SnapManager clones the local backup using either a LUN or a FlexClone. The clone is mounted and then SnapManager copies the host files from the clone into the active file system.
 |===
-Although the default is the fast restore process, administrators can choose either type. In the fast restore process, SnapManager provides information about the conditions that prevent the fast restore process from completing and those that might affect the fast restore but which administrators can ignore if they choose to continue with the process.
+
 
 NOTE: You cannot restore a backup from the secondary storage, if the backup also exists on the primary storage.
 
@@ -95,9 +94,9 @@ A host-side file copy restore involves the following tasks:
 * Disconnecting the clone storage from the host
 * Deleting the clone storage
 
-When restoring from the secondary storage, SnapManager first attempts to restore data directly from the secondary storage system to the primary storage system (without involving the host). If SnapManager cannot perform this type of restore (for example, if files not part of the restore exist in a file system), then SnapManager will perform host-side file copy restore. SnapManager has two methods of performing a host-side file copy restore from the secondary storage. The method SnapManager selects is configured in the smsap.config file.
+When restoring from the secondary storage, SnapManager first attempts to restore data directly from the secondary storage system to the primary storage system (without involving the host). If SnapManager cannot perform this type of restore (for example, if files not part of the restore exist in a file system), then SnapManager will perform host-side file copy restore. SnapManager has two methods of performing a host-side file copy restore from the secondary storage. The method SnapManager selects is configured in the `smsap.config` file.
 
 * Direct: SnapManager clones the data on the secondary storage, mounts the cloned data from the secondary storage system to the host, and then copies data out of the clone into the active environment. This is the default secondary access policy.
 * Indirect: SnapManager first copies the data to a temporary volume on the primary storage, then mounts the data from the temporary volume to the host, and then copies data out of the temporary volume into the active environment. This secondary access policy should be used only if the host does not have direct access to the secondary storage system. Restores using this method take twice as long as the direct secondary access policy because two copies of the data are made.
 
-The decision whether to use the direct or indirect method is controlled by the value of the restore.secondaryAccessPolicy parameter in the smsap.config configuration file. The default is direct.
+The decision whether to use the direct or indirect method is controlled by the value of the `restore.secondaryAccessPolicy` parameter in the `smsap.config` configuration file. The default is direct.

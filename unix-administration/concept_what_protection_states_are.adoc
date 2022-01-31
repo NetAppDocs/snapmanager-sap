@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_what_protection_states_are.html
 sidebar: sidebar
 keywords: snapmanager, state, backup, administrator, monitor, protection
-summary: SnapManager shows the state of each backup. Administrators must know the different states and monitor the state of their backups.
+summary: "SnapManager shows the state of each backup. Administrators must know the different states and monitor the state of their backups."
 ---
 = What protection states are
 :icons: font
@@ -13,7 +13,7 @@ SnapManager shows the state of each backup. Administrators must know the differe
 
 A database backup can have the following protection states:
 
-[options="header"]
+[cols="1a,2a,3a" options="header"]
 |===
 | Status| Definition| Explanation
 a|

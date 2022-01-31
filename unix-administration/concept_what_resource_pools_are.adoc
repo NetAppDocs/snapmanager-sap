@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_what_resource_pools_are.html
 sidebar: sidebar
 keywords: resource, pool, collection, physical, storage, system, volume, lun, provision, assign, aggregate
-summary: A resource pool is a collection of unused physical storage \(such as storage systems or aggregates\) from which new volumes or LUNs can be provisioned to contain data. If you assign a storage system to a resource pool, all the aggregates on that storage system become available for provisioning.
+summary: "A resource pool is a collection of unused physical storage (such as storage systems or aggregates) from which new volumes or LUNs can be provisioned to contain data. If you assign a storage system to a resource pool, all the aggregates on that storage system become available for provisioning."
 ---
 = What resource pools are
 :icons: font
