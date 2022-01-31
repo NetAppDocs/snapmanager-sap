@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_what_snapmanager_operation_states_are.html
 sidebar: sidebar
 keywords: snapmanager, operation, backup, restore, clone, state
-summary: SnapManager operations \(backup, restore, and clone\) can be in different states, with each state indicating the progress of the operation.
+summary: "SnapManager operations (backup, restore, and clone) can be in different states, with each state indicating the progress of the operation."
 ---
 = What SnapManager operation states are
 :icons: font
@@ -11,7 +11,7 @@ summary: SnapManager operations \(backup, restore, and clone\) can be in differe
 [.lead]
 SnapManager operations (backup, restore, and clone) can be in different states, with each state indicating the progress of the operation.
 
-[options="header"]
+[cols="1a,4a" options="header"]
 |===
 | Operation state| Description
 a|
@@ -29,7 +29,9 @@ The schedule has not run or the last run backup was deleted.
 a|
 Failed
 a|
-The operation failed. SnapManager has automatically executed the abort process and cleaned the operation. *Note:* You can split the clone that is created. When you stop the clone split operation you started and the operation is stopped successfully, the clone split operation state displays as failed.
+The operation failed. SnapManager has automatically executed the abort process and cleaned the operation.
+
+*Note:* You can split the clone that is created. When you stop the clone split operation you started and the operation is stopped successfully, the clone split operation state displays as failed.
 
 |===
 
@@ -51,4 +53,4 @@ An unrecoverable (out-of-band) event occurs when any of the following happens:
 
 When an unrecoverable event occurs, SnapManager performs an abort process immediately. The host, database, and storage system might not have returned to the initial states. If this is the case, you must perform a cleanup after the SnapManager operation fails by deleting the orphaned Snapshot copy and removing the SnapManager lock file.
 
-If you want to delete the SnapManager lock file, navigate to $ORACLE_HOME on the target machine and delete the sm_lock_TargetDBName file. After deleting the file, you must restart the SnapManager for SAP server.
+If you want to delete the SnapManager lock file, navigate to `$ORACLE_HOME` on the target machine and delete the `sm_lock_ _TargetDBName_` file. After deleting the file, you must restart the SnapManager for SAP server.
