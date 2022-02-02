@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_supported_partition_devices.html
 sidebar: sidebar
 keywords: partition, device, support, snapmanager
-summary: You must know the different partition devices that are supported in SnapManager.
+summary: "You must know the different partition devices that are supported in SnapManager."
 ---
 = Supported partition devices
 :icons: font
@@ -13,11 +13,13 @@ You must know the different partition devices that are supported in SnapManager.
 
 The following table provides partition information and how it can be enabled for different operating systems:
 
-[options="header"]
+[cols="3a,1a,1a,1a,1a" options="header"]
 |===
 | Operating system| Single partition| Multiple partition| Non-partition devices| File system or RAW devices
 a|
-Red Hat Enterprise Linux 5x or
+Red Hat Enterprise Linux 5x
+
+or
 
 Oracle Enterprise Linux 5x
 
@@ -30,7 +32,9 @@ No
 a|
 ext3*
 a|
-Red Hat Enterprise Linux 6xor
+Red Hat Enterprise Linux 6x
+
+or
 
 Oracle Enterprise Linux 6x
 
@@ -62,16 +66,20 @@ a|
 Yes
 a|
 ext3***
-a|
-*For a non-MPIO environment, enter the following command: `sfdisk -uS -f -L -q /dev/ device_name`
+5+a|
+*
+
+For a non-MPIO environment, enter the following command:
+
+`sfdisk -uS -f -L -q /dev/ device_name`
 
 For an MPIO environment, enter the following commands:
 
 * `sfdisk -uS -f -L -q /dev/ device_name`
 * `kpartx -a -p p /dev/mapper/ device_name`
 
-a|
-***Not applicable.
+5+a|*_*_* *_*_* *_*_*
 
+Not applicable.
 |===
 For more information on the operating system versions supported, refer to the Interoperability Matrix.
