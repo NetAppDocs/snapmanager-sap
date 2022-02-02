@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_sample_database_volume_layouts.html
 sidebar: sidebar
 keywords: sample, database, volume, layout, configuring, configure
-summary: You can refer to sample database volume layouts for help in configuring your database.
+summary: "You can refer to sample database volume layouts for help in configuring your database."
 ---
 = Sample database volume layouts
 :icons: font
@@ -13,13 +13,13 @@ You can refer to sample database volume layouts for help in configuring your dat
 
 == Single-instance databases
 
-[options="header"]
+[cols="1a,3a,1a,1a" options="header"]
 |===
 | File types| Volume names| Dedicated volume for file types| Automatic Snapshot copies
 a|
 Oracle binaries
 a|
-orabin_host name
+orabin_ `_host name_`
 a|
 Yes
 a|
@@ -27,7 +27,7 @@ On
 a|
 Data files
 a|
-oradata_sid
+oradata_ `_sid_`
 a|
 Yes
 a|
@@ -35,7 +35,7 @@ Off
 a|
 Temporary data files
 a|
-oratemp_sid
+oratemp_ `_sid_`
 a|
 Yes
 a|
@@ -43,9 +43,9 @@ Off
 a|
 Control files
 a|
-oracntrl01_sid (Multiplexed)
+oracntrl01_ `_sid_` (Multiplexed)
 
-oracntrl02_sid (Multiplexed)
+oracntrl02_ `_sid_` (Multiplexed)
 
 a|
 Yes
@@ -54,9 +54,9 @@ Off
 a|
 Redo logs
 a|
-oralog01_sid (Multiplexed)
+oralog01_ `_sid_` (Multiplexed)
 
-oralog02_sid (Multiplexed)
+oralog02_ `_sid_` (Multiplexed)
 
 a|
 Yes
@@ -65,7 +65,7 @@ Off
 a|
 Archive logs
 a|
-oraarch_sid
+oraarch_ `_sid_`
 a|
 Yes
 a|
@@ -74,13 +74,13 @@ Off
 
 == Real Application Clusters (RAC) databases
 
-[options="header"]
+[cols="1a,3a,1a,1a" options="header"]
 |===
 | File types| Volume names| Dedicated volume for file types| Automatic Snapshot copies
 a|
 Oracle binaries
 a|
-orabin_host name
+orabin_ `_host name_`
 a|
 Yes
 a|
@@ -88,7 +88,7 @@ On
 a|
 Data files
 a|
-oradata_dbname
+oradata_ `_dbname_`
 a|
 Yes
 a|
@@ -96,7 +96,7 @@ Off
 a|
 Temporary data files
 a|
-oratemp_dbname
+oratemp_ `_dbname_`
 a|
 Yes
 a|
@@ -104,9 +104,9 @@ Off
 a|
 Control files
 a|
-oracntrl01_dbname (Multiplexed)
+oracntrl01_ `_dbname_` (Multiplexed)
 
-oracntrl02_dbname (Multiplexed)
+oracntrl02_ `_dbname_` (Multiplexed)
 
 a|
 Yes
@@ -115,9 +115,9 @@ Off
 a|
 Redo logs
 a|
-oralog01_dbname (Multiplexed)
+oralog01_ `_dbname_` (Multiplexed)
 
-oralog02_dbname (Multiplexed)
+oralog02_ `_dbname_` (Multiplexed)
 
 a|
 Yes
@@ -126,7 +126,7 @@ Off
 a|
 Archive logs
 a|
-oraarch_dbname
+oraarch_ `_dbname_`
 a|
 Yes
 a|
@@ -134,7 +134,7 @@ Off
 a|
 Cluster files
 a|
-oracrs_clustername
+oracrs_ `_clustername_`
 a|
 Yes
 a|
