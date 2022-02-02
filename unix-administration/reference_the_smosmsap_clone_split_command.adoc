@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_the_smosmsap_clone_split_command.html
 sidebar: sidebar
 keywords: run, clone, split, command, independent, original, snapmanager, smsap, operation, profile
-summary: You can run the clone split command to split a clone. The split clone becomes independent of the original clone. SnapManager generates a new profile after the clone split operation and you can use this profile to manage the split clone.
+summary: "You can run the clone split command to split a clone. The split clone becomes independent of the original clone. SnapManager generates a new profile after the clone split operation and you can use this profile to manage the split clone."
 ---
 = The smsap clone split command
 :icons: font
