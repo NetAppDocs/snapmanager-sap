@@ -25,15 +25,15 @@ _username_-password _password_-template _template_ID_]
 +
 Specifies the name of the host on which the SAP SLD is running.
 
-* ``*-port _port_id_*``
+* `*-port _port_id_*`
 +
 Specifies the ID of the port on which the SAP SLD accepts HTTP requests. The ID must be numeric and less than or equal to nine digits.
 
-* ``*-username _username_*``
+* `*-username _username_*`
 +
 Specifies a valid and authorized SAP SLD user name.
 
-* ``*-password _password_*``
+* `*-password _password_*`
 +
 Specifies a valid and authorized SAP SLD user password. This is optional. If you do not set the password by using -password, you will be prompted to enter a password in the following format:
 +
@@ -41,7 +41,7 @@ Specifies a valid and authorized SAP SLD user password. This is optional. If you
 
 If you fail to enter the correct password, after three attempts the command fails and exits.
 
-* ``*-template _template_id_*``
+* `*-template _template_id_*`
 +
 Specifies the name of the master template XML file, which can be used as a base for your custom file.
 

@@ -14,7 +14,6 @@ You can run the clone split command to split a clone. The split clone becomes in
 == Syntax
 
 ----
-
         smsap clone split
 -profile clone-profile
 \[-host hostname\]
