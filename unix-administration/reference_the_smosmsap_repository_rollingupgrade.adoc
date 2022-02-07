@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_the_smosmsap_repository_rollingupgrade.html
 sidebar: sidebar
 keywords: command, perform, roll, upgrade, single, host, multiple, associate, target, database, version, snapmanager, smsap, repository, rollingupgrade
-summary: This command performs rolling upgrade on a single host or multiple hosts and their associated target databases from a lower version of SnapManager to a higher version. The upgraded host is managed only with the higher version of SnapManager.
+summary: "This command performs rolling upgrade on a single host or multiple hosts and their associated target databases from a lower version of SnapManager to a higher version. The upgraded host is managed only with the higher version of SnapManager."
 ---
 = The smsap repository rollingupgrade command
 :icons: font

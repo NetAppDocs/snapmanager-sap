@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_the_smosmsap_operation_show_command.html
 sidebar: sidebar
 keywords: run, operation, show, command, list, summary, information, output, client, user, snapmanager, host, smsap
-summary: You can run the operation show command to list the summary information of all the operations performed against the specified profile. The output lists the client user \(the user for the client PC\) and the effective user \(the user in SnapManager who is valid on the selected host\).
+summary: "You can run the operation show command to list the summary information of all the operations performed against the specified profile. The output lists the client user (the user for the client PC) and the effective user (the user in SnapManager who is valid on the selected host)."
 ---
 = The smsap operation show command
 :icons: font
@@ -13,35 +13,36 @@ You can run the operation show command to list the summary information of all th
 
 == Syntax
 
+[subs=+macros]
 ----
-
-        smsap operation show
--profile profile_name
-\[-label label \| -id id\]
-\[-quiet \| -verbose\]
+pass:quotes[smsap operation show
+-profile _profile_name_
+[-label _label_ | -id _id_\] [-quiet | -verbose\]]
 ----
 
 == Parameters
 
-* *-profile profile_name*
+* `*-profile _profile_name_*`
 +
 Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
 
-* *-label label*
+* `*-label _label_*`
 +
 Specifies the label for the operation.
 
-* *-id id*
+* `*-id _id_*`
 +
 Specifies the identifier for the operation.
 
-* *-quiet*
+* `*-quiet*`
 +
 Optional: Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* `*-verbose*`
 +
 Optional: Displays error, warning, and informational messages in the console.
+
+---
 
 == Example
 
@@ -85,7 +86,4 @@ Resources in use
     /mnt/oracle/CER (File System)
     ...
 ----
-
-*Related information*
-
-xref:task_viewing_operation_details.adoc[Viewing operation details]
+---

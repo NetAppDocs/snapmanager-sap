@@ -20,9 +20,11 @@ SnapManager enables you to install and use custom scripts for various operations
 
 == Parameter
 
-* *-osaccount*
+* `*-osaccount*`
 +
 Specifies the operating system (OS) database user name. If you do not enter the -osaccount option, SnapManager checks the plug-in scripts as root user rather than for a specific user.
+
+---
 
 == Example
 
@@ -54,7 +56,4 @@ OK: 'pre-plugin2' is executable and returned status 0
 ERROR: 'post-plugin1' is executable and returned status 3
 Command complete.
 ----
-
-*Related information*
-
-xref:task_cloning_databases_and_using_custom_plugin_scripts.adoc[Cloning databases and using custom plug-in scripts]
+---
