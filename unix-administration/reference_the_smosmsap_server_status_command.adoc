@@ -9,25 +9,26 @@ summary: You can run the smsap_server status command to view the status of the S
 :imagesdir: ../media/
 
 [.lead]
-You can run the smsap_server status command to view the status of the SnapManager host server.
+You can run the `smsap_server status` command to view the status of the SnapManager host server.
 
 == Syntax
 
 ----
-
-        smsap_server status
-\[-quiet \| -verbose\]
+smsap_server status
+[-quiet | -verbose]
 ----
 
 == Parameters
 
-* *-quiet*
+* `*-quiet*`
 +
 Specifies that only error messages are displayed in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* `*-verbose*`
 +
 Specifies that error, warning, and informational messages are displayed in the console.
+
+---
 
 == Example
 
@@ -38,3 +39,4 @@ smsap_server status
 SMSAP-17104: SnapManager Server version 3.3.1 is running on secure port 25204 with PID 11250
   and has 0 operations in progress.
 ----
+---
