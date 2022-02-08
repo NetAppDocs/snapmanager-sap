@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_the_smosmsap_server_status_command.html
 sidebar: sidebar
 keywords: run, smsap_server, status, command, view, status, snapmanager, host, server
-summary: You can run the smsap_server status command to view the status of the SnapManager host server.
+summary: "You can run the smsap_server status command to view the status of the SnapManager host server."
 ---
 = The smsap_server status command
 :icons: font
