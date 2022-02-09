@@ -9,44 +9,45 @@ summary: You can run the backup list command to display information about the ba
 :imagesdir: ../media/
 
 [.lead]
-You can run the backup list command to display information about the backups in a profile, including information about the retention class and protection status.
+You can run the `backup list` command to display information about the backups in a profile, including information about the retention class and protection status.
 
 == Syntax
 
+[subs=+macros]
 ----
-
-        smsap backup list
--profile profile_name
--delimiter character
-[-data | -archivelogs | -all]
-\[-quiet \| -verbose\]
+pass:quotes[smsap backup list
+-profile _profile_name_
+-delimiter _character_
+[-data | -archivelogs | -all]]
+[-quiet | -verbose]]
 ----
 
 == Parameters
 
-* *-profile profile_name*
+* `*-profile _profile_name_*`
 +
 Specifies the profile you want to list backups for. The profile contains the identifier of the database and other database information.
 
-* *-delimiter character*
+* `*-delimiter character*`
 +
 Displays each row on a separate line. The attributes in the row are separated by the character specified.
 
-* *-data*
+* `*-data*`
 +
 Specifies the data files.
 
-* *-archivelogs*
+* `*-archivelogs*`
 +
 Specifies the archive log files.
 
-* *-quiet*
+* `*-quiet*`
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* `*-verbose*`
 +
 Displays error, warning, and informational messages in the console. Include the -verbose option to display the backup IDs.
+---
 
 == Example
 
@@ -65,6 +66,4 @@ Start Date          Status  Scope  Mode    Primary  Label      Retention   Prote
 2007-07-30 18:31:05 SUCCESS FULL   OFFLINE EXISTS   backup7    HOURLY      PROTECTED
 ----
 
-*Related information*
-
-xref:task_viewing_a_list_of_backups.adoc[Viewing a list of backups]
+---
