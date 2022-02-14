@@ -2,7 +2,7 @@
 permalink: unix-administration/task_cloning_with_rac_databases.html
 sidebar: sidebar
 keywords: clone, rac, database, cloning
-summary: You can clone your RAC database to a non-RAC database or you can clone it to a non-RAC database and then change it to a RAC database.
+summary: "You can clone your RAC database to a non-RAC database or you can clone it to a non-RAC database and then change it to a RAC database."
 ---
 = Cloning with RAC databases
 :icons: font
@@ -11,7 +11,11 @@ summary: You can clone your RAC database to a non-RAC database or you can clone 
 [.lead]
 You can clone your RAC database to a non-RAC database or you can clone it to a non-RAC database and then change it to a RAC database.
 
-. To clone your RAC database, enter the following command: `smsap clone create -backup-label backup_label-profile profile_name-newsid new_SID-clonespec full_path_to_clonespec_file-verbose`
-. To change the cloned non-RAC database to a RAC database, rename the file from initclone_SID.ora to initclone_local_instance_SID.ora.
-. Edit the renamed file to set the parameter cluster.database to true. RAC database information.
+.Steps
+
+. To clone your RAC database, enter the following command:
++
+`*smsap clone create -backup-label _backup_label_ -profile _profile_name_ -newsid _new_SID_ -clonespec _full_path_to_clonespec_file_ -verbose*`
+. To change the cloned non-RAC database to a RAC database, rename the file from `_initclone_SID.ora_` to `_initclone_local_instance_SID.ora_`.
+. Edit the renamed file to set the parameter `cluster.database` to `_true_`. RAC database information.
 . Register the cloned RAC database with srvctl.

@@ -2,7 +2,7 @@
 permalink: unix-administration/task_configuring_e_mail_notification_for_a_new_profile.html
 sidebar: sidebar
 keywords: creating, create, configure, configuring, email, notification, profile, database, operation
-summary: When you are creating a new profile, you can configure to receive an email notification on completion of the database operation.
+summary: "When you are creating a new profile, you can configure to receive an email notification on completion of the database operation."
 ---
 = Configuring email notification for a new profile
 :icons: font
@@ -11,18 +11,24 @@ summary: When you are creating a new profile, you can configure to receive an em
 [.lead]
 When you are creating a new profile, you can configure to receive an email notification on completion of the database operation.
 
+*What you'll need*
+
 * You must configure the email address from which the alerts are sent.
 * You must use a comma-separated list for multiple email addresses.
 +
 You must ensure that there is no space between the comma and the next email address.
 
-. Enter the following command: `smsap profile create -profileprofile [-profile-passwordprofile_password] -repository-dbnamerepo_service_name-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] -osaccountosaccount-osgrouposgroup [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][-protect [-protection-policypolicy_name ]][-notification [-success-emailemail_address1,email_address2-subjectsubject_pattern] [-failure-emailemail_address1,email_address2-subjectsubject_pattern]]`
+.Step
+
+. Enter the following command:
++
+`*smsap profile create -profile _profile_ [-profile-password _profile_password_] -repository-dbname _repo_service_name_ -host _repo_host_ -port _repo_port_ -login-username _repo_username_ -database -dbname _db_dbname_ -host _db_host_ [-sid _db_sid_] [-login-username _db_username_ -password _db_password_ -port _db_port_] [-rman {-controlfile | {-login-username _rman_username_ -password _rman_password_ -tnsname _rman_tnsname_} } ] -osaccount _osaccount_ -osgroup _osgroup_ [-retain [-hourly [-count _n_] [-duration _m_]] [-daily [-count _n_] [-duration _m_]] [-weekly [-count _n_] [-duration _m_]] [-monthly [-count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][-protect [-protection-policy _policy_name_ ]][-notification [-success-email _email_address1,email_address2_ -subject _subject_pattern_] [-failure-email _email_address1,email_address2_ -subject _subject_pattern_]]*`
 +
 Other options for this command are as follows:
 +
 [-force]
 +
-[quiet | -verbose]
+[-quiet | -verbose]
 +
 NOTE: SnapManager supports up to 1000 characters for email addresses.
 +
@@ -40,6 +46,8 @@ Status 	        : SUCCESS
 Error messages 	:
 ----
 
+---
+
 The following example displays the email notification configured while creating a new profile:
 
 ----
@@ -47,3 +55,4 @@ The following example displays the email notification configured while creating 
 smsap profile create -profile sales1 -profile-password sales1 -repository -dbname repo2 -host 10.72.197.133 -port 1521 -login -username oba5 -database -dbname DB1 -host 10.72.197.142 -sid DB1 -osaccount oracle
 -osgroup dba -notification -success -email admin1@org.com -subject {profile}_{operation-name}_{db-sid}_{db-host}_{start-date}_{end-date}_{status}
 ----
+---
