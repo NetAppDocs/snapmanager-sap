@@ -2,7 +2,7 @@
 permalink: unix-administration/task_creating_clone_specifications.html
 sidebar: sidebar
 keywords: snapmanager, sap, clone, specification, xml, file, mapping, option, parameter, operation, information, diagnostic, creating, create
-summary: SnapManager for SAP uses a clone specification XML file, which includes the mappings, options, and parameters for use in the clone operation. SnapManager uses this information to determine where to place the files it clones and how to handle diagnostic information, control files, parameters, and so on.
+summary: "SnapManager for SAP uses a clone specification XML file, which includes the mappings, options, and parameters for use in the clone operation. SnapManager uses this information to determine where to place the files it clones and how to handle diagnostic information, control files, parameters, and so on."
 ---
 = Creating clone specifications
 :icons: font
@@ -11,11 +11,13 @@ summary: SnapManager for SAP uses a clone specification XML file, which includes
 [.lead]
 SnapManager for SAP uses a clone specification XML file, which includes the mappings, options, and parameters for use in the clone operation. SnapManager uses this information to determine where to place the files it clones and how to handle diagnostic information, control files, parameters, and so on.
 
+*About this task*
+
 You can create the clone specification file by using the SnapManager graphical user interface (GUI), command-line interface (CLI), or a text editor.
 
-When you create the clone specification file by using a text editor, you must save it as a .xml file. You can use this XML file for other clone operations.
+When you create the clone specification file by using a text editor, you must save it as a `.xml` file. You can use this XML file for other clone operations.
 
-You can also create a clone specification template and then customize it. You can use the smsap clone template command or in the GUI, use the Clone wizard.
+You can also create a clone specification template and then customize it. You can use the `smsap clone template` command or in the GUI, use the Clone wizard.
 
 SnapManager for SAP adds a version string to any clone specification template that it generates. SnapManager for SAP assumes the latest version for any clone specification file that lacks a version string.
 
@@ -25,9 +27,13 @@ NOTE: Though mount point and ASM disk group information are editable from the GU
 
 You can execute a task multiple times, either with the same or different parameter and value combinations.
 
-SAP uses specific Oracle settings for database configuration. You can find these settings in init<SID>.ora located at $ORACLE_HOME/dbs. You should include these in your clone specification.
+SAP uses specific Oracle settings for database configuration. You can find these settings in `init<SID>.ora` located at ``$ORACLE_HOME/dbs`. You should include these in your clone specification.
+
+.Steps
 
 . Open a text file and enter text as shown in the following example:
++
+*Example*
 +
 ----
 <clone-specification xmlns="http://www.example.com>
@@ -42,6 +48,8 @@ The storage specification lists the locations for the new storage created for th
 +
 The following example shows a single NFS mount point on an NFS-attached storage:
 +
+*Example*
++
 ----
 <mountpoint>
       <source>/oracle/<SOURCE SID>_sapdata</source>
@@ -49,9 +57,15 @@ The following example shows a single NFS mount point on an NFS-attached storage:
 </mountpoint>
 ----
 
-. Optional: If you have a raw device on the source, you must specify the path for the raw device on the source, and then specify `destination auto-generate=”true”` for the destination.
+. *Optional:* If you have a raw device on the source, you must specify the path for the raw device on the source, and then specify
++
+`*destination auto-generate=”true”*`
++
+for the destination.
 +
 Unlike in the clone mapping file from previous versions of SnapManager for SAP, you cannot specify a location for the raw device on the destination. SnapManager for SAP will choose the next available device name for the cloned raw device.
++
+*Example*
 +
 The following example displays the raw device syntax that you use in clone specification:
 +
@@ -66,6 +80,8 @@ The following example displays the raw device syntax that you use in clone speci
 +
 The database specification specifies the database options for the clone such as control files, redo logs, archive logs, and Oracle parameters.
 +
+*Example*
++
 The following example displays the control file syntax that you use in clone specification:
 +
 ----
@@ -77,6 +93,8 @@ The following example displays the control file syntax that you use in clone spe
 ----
 
 . Specify the redo log structure for the clone.
++
+*Example*
 +
 The following example displays the redo log directory structure for cloning:
 +
@@ -113,15 +131,17 @@ The following example displays the redo log directory structure for cloning:
  ** Background dump
  ** Core dump
  ** User dump
- ** (Optional) Archive logs
+ ** *Optional:* Archive logs
 +
 NOTE: If the parameter values are not set correctly, the clone operation is stopped and you receive an error message.
 
 +
-If you do not specify the location where archive logs are stored, SnapManager creates the clone in noarchivelog mode. SnapManager copies this parameter information into the init.ora file of the clone.
-+
+If you do not specify the location where archive logs are stored, SnapManager creates the clone in `noarchivelog` mode. SnapManager copies this parameter information into the `init.ora` file of the clone.
+ +
+*Example*
+ +
 The following example displays the parameter syntax that you use in clone specification:
-+
+ +
 ----
 <parameters>
      <parameter>
@@ -142,9 +162,10 @@ The following example displays the parameter syntax that you use in clone specif
      </parameter>
 </parameters>
 ----
-+
-You can use a default value by using a default element within the parameter element. In the following example, the os_authentication_prefix parameter will take the default value because the default element is specified:
-+
+*Example*
+
+You can use a default value by using a default element within the parameter element. In the following example, the `os_authentication_prefix` parameter will take the default value because the default element is specified:
+
 ----
 <parameters>
      <parameter>
@@ -153,9 +174,10 @@ You can use a default value by using a default element within the parameter elem
      </parameter>
 </parameters>
 ----
-+
-You can specify an empty string as the value for a parameter by using an empty element. In the following example, the os_authentication_prefix will be set to an empty string:
-+
+*Example*
+
+You can specify an empty string as the value for a parameter by using an empty element. In the following example, the `os_authentication_prefix` will be set to an empty string:
+
 ----
 <parameters>
      <parameter>
@@ -164,15 +186,21 @@ You can specify an empty string as the value for a parameter by using an empty e
      </parameter>
 </parameters>
 ----
-+
-NOTE: You can use the value from the source database's init.ora file for the parameter by not specifying any element.
-+
-If a parameter has multiple values, then you can provide the parameter values separated by commas. For example, if you want to move the data files from one location to another, then you can use the db_file_name_convert parameter and specify the data file paths separated by commas as seen in the following example:
-+
-If you want to move the log files from one location to another, then following you can use the log_file_name_convert parameter and specify the log file paths separated by commas, as seen in the example:
+
+
+NOTE: You can use the value from the source database's `init.ora` file for the parameter by not specifying any element.
+
+*Example*
+
+If a parameter has multiple values, then you can provide the parameter values separated by commas. For example, if you want to move the data files from one location to another, then you can use the `db_file_name_convert` parameter and specify the data file paths separated by commas as seen in the following example:
+
+*Example*
+
+If you want to move the log files from one location to another, then following you can use the `log_file_name_convert` parameter and specify the log file paths separated by commas, as seen in the example:
+
 . Optional: Specify arbitrary SQL statements to execute against the clone when it is online.
 +
-You can use the SQL statements to perform tasks such as re-creating the temp files in the cloned database.
+You can use the SQL statements to perform tasks such as re-creating the `temp files` in the cloned database.
 +
 NOTE: You must ensure that a semicolon is not included at the end of the SQL statement.
 +
@@ -193,6 +221,7 @@ The following is a sample SQL statement that you execute as part of the clone op
 
 The following example displays the clone specification structure, including both the storage and database specification components:
 
+---
 ----
 <clone-specification xmlns="http://www.example.com>
 
@@ -269,13 +298,4 @@ The following example displays the clone specification structure, including both
    </database-specification>
 </clone-specification>
 ----
-
-*Related information*
-
-xref:task_cloning_databases_and_using_custom_plugin_scripts.adoc[Cloning databases and using custom plug-in scripts]
-
-xref:task_cloning_databases_from_backups.adoc[Cloning databases from backups]
-
-xref:task_cloning_databases_in_the_current_state.adoc[Cloning databases in the current state]
-
-xref:concept_considerations_for_cloning_a_database_to_an_alternate_host.adoc[Considerations for cloning a database to an alternate host]
+---

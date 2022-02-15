@@ -2,7 +2,7 @@
 permalink: unix-administration/task_configuring_e_mail_notification_for_an_existing_profile.html
 sidebar: sidebar
 keywords: updating, update, profile, configure, receive, email, notification, completion, database, operation, configuring, exist
-summary: When you are updating a profile, you can configure to receive an email notification on completion of the database operation.
+summary: "When you are updating a profile, you can configure to receive an email notification on completion of the database operation."
 ---
 = Configuring email notification for an existing profile
 :icons: font
@@ -11,11 +11,17 @@ summary: When you are updating a profile, you can configure to receive an email 
 [.lead]
 When you are updating a profile, you can configure to receive an email notification on completion of the database operation.
 
+*What you'll need*
+
 * You must configure the email address from which the alerts are sent.
 * You must enter a single email address or multiple email addresses to which alerts will be sent.
 +
 You can use a comma-separated list for multiple addresses. You must ensure that there is no space between the comma and the next email address. Optionally, you can add a subject to the email as well.
 
-. Enter the following command:``smsap profile update -profileprofile [-profile-passwordprofile_password][-database-dbnamedb_dbname-host db_host [-siddb_sid] [-login -usernamedb_username-password db_password-port db_port]] [{-rman{-controlfile | {-login  -usernamerman_username-password  rman_password-tnsname  rman_tnsname}}} | -remove-rman]-osaccountosaccount-osgrouposgroup [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][[-protect [-protection-policypolicy_name]]| [[-noprotect]] [-notification [-success-emailemail_address1,email_address2-subjectsubject_pattern] [-failure-emailemail_address1,email_address2-subjectsubject_pattern]]``
+.Step
+
+. Enter the following command:
++
+`*smsap profile update -profile _profile_ [-profile-password _profile_password_][-database-dbname _db_dbname_ -host _db_host_ [-sid _db_sid_] [-login -username _db_username_ -password _db_password_ -port _db_port_]] [{-rman{-controlfile | {-login  -username _rman_username_ -password  _rman_password_ -tnsname _rman_tnsname_}}} | -remove-rman]-osaccount _osaccount_-osgroup _osgroup_ [-retain [-hourly [-count _n_] [-duration _m_]] [-daily [-count _n_] [-duration _m_]] [-weekly [-count _n_] [-duration _m_]] [-monthly [-count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][[-protect [-protection-policy _policy_name_]]| [[-noprotect]] [-notification [-success-email _email_address1,email_address2_ -subject _subject_pattern_] [-failure-email _email_address1,email_address2_ -subject _subject_pattern_]]*`
 +
 You can use the success option to receive a notification only for successful database operations and the failure option to receive a notification only for failed database operations.
