@@ -2,7 +2,7 @@
 permalink: unix-administration/task_creating_system_level_dump_files.html
 sidebar: sidebar
 keywords: smsap, system, dump, command, log, information, snapmanager, environment, log, level, collect, operation, profile, creating, create, system-level, file
-summary: You can use the smsap system dump command to get log information about the SnapManager host and environment. You can specify different log levels to collect information about a specific operation, profile, or host and environment.
+summary: "You can use the smsap system dump command to get log information about the SnapManager host and environment. You can specify different log levels to collect information about a specific operation, profile, or host and environment."
 ---
 = Creating system-level dump files
 :icons: font
@@ -11,7 +11,11 @@ summary: You can use the smsap system dump command to get log information about 
 [.lead]
 You can use the smsap system dump command to get log information about the SnapManager host and environment. You can specify different log levels to collect information about a specific operation, profile, or host and environment.
 
-. Enter the following command: `smsap system dump`
+.Step
+
+. Enter the following command:
++
+`*smsap system dump*`
 +
 Resulting dump
 +
