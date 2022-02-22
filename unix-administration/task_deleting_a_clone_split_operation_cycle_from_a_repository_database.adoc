@@ -2,7 +2,7 @@
 permalink: unix-administration/task_deleting_a_clone_split_operation_cycle_from_a_repository_database.html
 sidebar: sidebar
 keywords: delete, clone, split, operation, cycle, entry, repository, database, deleting
-summary: You can delete a clone split operation cycle entry from a repository database.
+summary: "You can delete a clone split operation cycle entry from a repository database."
 ---
 = Deleting a clone split operation cycle from a repository database
 :icons: font
@@ -11,8 +11,14 @@ summary: You can delete a clone split operation cycle entry from a repository da
 [.lead]
 You can delete a clone split operation cycle entry from a repository database.
 
-. To delete a clone split operation cycle entry from a repository database, enter the following command:``smsap clone split-delete -profileprofile [-hosthostname] [-labelsplit-label | -idsplit-id] [-quiet \| -verbose]``
+.Step
 
+. To delete a clone split operation cycle entry from a repository database, enter the following command:
++
+`*smsap clone split-delete -profile _profile_ [-host _hostname_] [-label _split-label_ | -id _split-id_] [-quiet | -verbose]*`
+
+---
 ----
 smsap clone split-delete -profile p1 -id 8abc01ec0e78f3e2010e78f3fdd00001
 ----
+---

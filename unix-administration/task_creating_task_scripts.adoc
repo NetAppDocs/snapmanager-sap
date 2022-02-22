@@ -2,7 +2,7 @@
 permalink: unix-administration/task_creating_task_scripts.html
 sidebar: sidebar
 keywords: create, pretask, post-task, policy, task, script, backup, restore, clone,  operation, predefined, environment, variable, parameter, snapmanager, sample, creating
-summary: You can create the pretask, post-task, and policy task scripts for backup, restore, and clone operations, write your script, and include the predefined environment variables in your parameters. You can either create a new script or modify one of the SnapManager sample scripts.
+summary: "You can create the pretask, post-task, and policy task scripts for backup, restore, and clone operations, write your script, and include the predefined environment variables in your parameters. You can either create a new script or modify one of the SnapManager sample scripts."
 ---
 = Creating task scripts
 :icons: font
@@ -10,6 +10,8 @@ summary: You can create the pretask, post-task, and policy task scripts for back
 
 [.lead]
 You can create the pretask, post-task, and policy task scripts for backup, restore, and clone operations, write your script, and include the predefined environment variables in your parameters. You can either create a new script or modify one of the SnapManager sample scripts.
+
+*What you'll need*
 
 Before you start creating the script, ensure that:
 
@@ -23,9 +25,9 @@ Perform the following:
 
  .. Locate a sample script in the following installation directory:
 +
-<default_install_directory>/plugins/examples/backup/create
+`<default_install_directory>/plugins/examples/backup/create`
 +
-<default_install_directory>/plugins/examples/clone/create
+`<default_install_directory>/plugins/examples/clone/create`
 
  .. Open the script in your script editor.
  .. Save the script with a different name.

@@ -2,7 +2,7 @@
 permalink: unix-administration/task_deleting_backups.html
 sidebar: sidebar
 keywords: delete, backup, free, space, remove, snapshot, copies, copy, volume, deleting
-summary: You must delete backups when you no longer need them, which frees the space those backups occupy. If you remove backups, you reduce the chance of reaching the limit of 255 Snapshot copies per volume.
+summary: "You must delete backups when you no longer need them, which frees the space those backups occupy. If you remove backups, you reduce the chance of reaching the limit of 255 Snapshot copies per volume."
 ---
 = Deleting backups
 :icons: font
@@ -11,11 +11,15 @@ summary: You must delete backups when you no longer need them, which frees the s
 [.lead]
 You must delete backups when you no longer need them, which frees the space those backups occupy. If you remove backups, you reduce the chance of reaching the limit of 255 Snapshot copies per volume.
 
+*What you'll need*
+
 * You must ensure that the backup was not used to create a clone.
+
+*About this task*
 
 When you delete a protected backup, SnapManager deletes the backup from secondary storage and the SnapManager repository. The following table shows the actions taken on both the primary and secondary storage when you delete a local backup:
 
-[options="header"]
+[cols="2a,1a,3a,3a,4a" options="header"]
 |===
 | Protection state| Local status| Action on primary storage| Action on secondary storage| Explanation
 .2+a|
@@ -83,7 +87,13 @@ You can optionally collect the dump files after the successful or failed backup 
 
 If you want to delete the archive log backups, you need to check for the retention duration set for the archive log backup. If the archive log backup is within the retention duration and the archive log files are required for recovery of a restored database, you cannot delete the archive log backup.
 
-. Verify that the operations are complete by entering the following command: `smsap operation list -profileprofile_name-dump-quiet-verbose`
-. To delete a backup, enter the following command:``smsap backup delete -profile profile_name [-label label [data | -archivelogs] | -idid | -all] [-force] [ -dump] [-quiet | -verbose]``
+.Steps
+
+. Verify that the operations are complete by entering the following command:
++
+`*smsap operation list -profile _profile_name_-dump-quiet-verbose*`
+. To delete a backup, enter the following command: +
++
+`*smsap backup delete -profile _profile_name_ [-label _label_ [data | -archivelogs] | -id _id_ | -all] [-force] [ -dump] [-quiet | -verbose]*`
 +
 Use the -force option to force the removal of the backup. Forcing the removal of a backup that has incomplete operations might leave the backup in an inconsistent state.

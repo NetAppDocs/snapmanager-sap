@@ -2,7 +2,7 @@
 permalink: unix-administration/task_deleting_profile.html
 sidebar: sidebar
 keywords: delete, profile, successful, backup, current, operation, free, backup, deleting
-summary: You can delete a profile as long as it does not contain successful backups that are currently used in other operations. You can delete profiles that contain freed or deleted backups.
+summary: "You can delete a profile as long as it does not contain successful backups that are currently used in other operations. You can delete profiles that contain freed or deleted backups."
 ---
 = Deleting a profile
 :icons: font

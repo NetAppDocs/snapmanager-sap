@@ -2,7 +2,7 @@
 permalink: unix-administration/task_deleting_backup_schedules.html
 sidebar: sidebar
 keywords: delete, backup, schedule, deleting
-summary: You can delete backup schedules when they are no longer necessary.
+summary: "You can delete backup schedules when they are no longer necessary."
 ---
 = Deleting backup schedules
 :icons: font
@@ -11,4 +11,8 @@ summary: You can delete backup schedules when they are no longer necessary.
 [.lead]
 You can delete backup schedules when they are no longer necessary.
 
-. To delete the backup schedule, enter this command: `smsap schedule delete -profile profile_name-schedule-nameschedulename [-quiet | -verbose]`
+.Step
+
+. To delete the backup schedule, enter this command:
++
+`*smsap schedule delete -profile _profile_name_ -schedule-name _schedulename_ [-quiet | -verbose]*`

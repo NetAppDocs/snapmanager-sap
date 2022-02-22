@@ -2,7 +2,7 @@
 permalink: unix-administration/task_customizing_the_email_subject_for_an_existing_profile.html
 sidebar: sidebar
 keywords: snapmanager, enable, customize, email, subject, pattern, exist, profile, updating, update, applicable, update, customizing
-summary: SnapManager enables you to customize the email subject pattern for an existing profile by updating that profile. This customized subject pattern is applicable only for the updated profile.
+summary: "SnapManager enables you to customize the email subject pattern for an existing profile by updating that profile. This customized subject pattern is applicable only for the updated profile."
 ---
 = Customizing the email subject for an existing profile
 :icons: font
@@ -11,7 +11,13 @@ summary: SnapManager enables you to customize the email subject pattern for an e
 [.lead]
 SnapManager enables you to customize the email subject pattern for an existing profile by updating that profile. This customized subject pattern is applicable only for the updated profile.
 
-. Enter the following command: `smsap profile update -profileprofile [-profile-passwordprofile_password][-database-dbnamedb_dbname-host db_host [-siddb_sid] [-login -usernamedb_username-password db_password-port db_port]] [{-rman{-controlfile | {-login  -usernamerman_username-password  rman_password-tnsname  rman_tnsname}}} | -remove-rman]-osaccountosaccount-osgrouposgroup [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][[-protect [-protection-policypolicy_name]]| [[-noprotect]] [-notification [-success-emailemail_address1,email_address2-subjectsubject_pattern] [-failure-emailemail_address1,email_address2-subjectsubject_pattern]]`
+.Step
+
+. Enter the following command:
++
+`*smsap profile update -profile _profile_ [-profile-password _profile_password_][-database -dbname _db_dbname_ -host _db_host_ [-sid _db_sid_] [-login -username _db_username_ -password _db_password_ -port _db_port_]] [{-rman{-controlfile | {-login  -username _rman_username_ -password  _rman_password_ -tnsname  _rman_tnsname_}}} | -remove-rman]-osaccount _osaccount_ -osgroup _osgroup_ [-retain [-hourly [-count _n_] [-duration _m_]] [-daily [-count _n_] [-duration _m_]] [-weekly [-count _n_] [-duration _m_]] [-monthly [-count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][[-protect [-protection-policy _policy_name_]]| [[-noprotect]] [-notification [-success-email _email_address1,email_address2_ -subject _subject_pattern_] [-failure-email _email_address1,email_address2_ -subject _subject_pattern_]]*`
+
+---
 
 The following example shows an email subject pattern:
 
@@ -20,3 +26,4 @@ The following example shows an email subject pattern:
 smsap profile update -profile sales1 -profile-password sales1 -repository -dbname repo2 -host 10.72.197.133 -port 1521 -login -username admin2 -database -dbname DB1 -host 10.72.197.142 -sid DB1
 -osaccount oracle -osgroup dba -profile-notification -success -email admin@org.com -subject {profile}_{operation-name}_{db-sid}_{db-host}_{start-date}_{end-date}_{status}
 ----
+---
