@@ -2,7 +2,7 @@
 permalink: unix-administration/task_restoring_backup_using_single_file_snaprestore.html
 sidebar: sidebar
 keywords: restore, backup, single, file, snaprestore, sfsr, method, restoring
-summary: You can restore the backups by using the Single File SnapRestore \(SFSR\) method.
+summary: "You can restore the backups by using the Single File SnapRestore (SFSR) method."
 ---
 = Restoring backups by using Single File SnapRestore
 :icons: font
@@ -11,11 +11,13 @@ summary: You can restore the backups by using the Single File SnapRestore \(SFSR
 [.lead]
 You can restore the backups by using the Single File SnapRestore (SFSR) method.
 
+.Steps
+
 . Create a profile from the SnapManager graphical user interface (GUI).
 . Back up the database by using the GUI.
 . Unlink the Oracle and Network File System (NFS) service groups from the cluster service groups and freeze them.
-. Ensure that Secure Shell (SSH) is configured between the hosts and SnapDrive for UNIX by setting #secure-communication-among-cluster-nodes to on in the snapdrive.conf file.
-. From the SnapManager GUI, perform full backup restore and recovery by using --alllogs.
+. Ensure that Secure Shell (SSH) is configured between the hosts and SnapDrive for UNIX by setting `_#secure-communication-among-cluster-nodes_` to `*on*` in the `snapdrive.conf` file.
+. From the SnapManager GUI, perform full backup restore and recovery by using `--alllogs`.
 . Unfreeze the service groups and link them back to the cluster service group.
 +
 NOTE: This configuration is applicable only when you use SnapDrive 4.1.1 D2 for UNIX and SnapDrive 4.2 for UNIX.
@@ -24,7 +26,9 @@ If one restore operation is followed by another restore operation, then there is
 +
 To prevent Snapshot copy creation errors, ensure that restore operations are performed after the time period during which SFSR is in progress.
 +
-To achieve this, check the LUN clone split process status by entering the following command from the storage system command-line interface (CLI): `rshfilernnamelun clone split statuslun-name`
+To achieve this, check the LUN clone split process status by entering the following command from the storage system command-line interface (CLI):
++
+`*rsh _filernname_ lun clone split status _lun-name_*`
 +
 ----
 

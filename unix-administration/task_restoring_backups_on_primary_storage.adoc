@@ -2,18 +2,20 @@
 permalink: unix-administration/task_restoring_backups_on_primary_storage.html
 sidebar: sidebar
 keywords: backup, restore, command, database, primary, storage, restoring
-summary: You can use the backup restore command to restore a database backup on primary storage.
+summary: "You can use the backup restore command to restore a database backup on primary storage."
 ---
 = Restoring backups on primary storage
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can use the backup restore command to restore a database backup on primary storage.
+You can use the `backup restore` command to restore a database backup on primary storage.
+
+*About this task*
 
 SnapManager attempts to perform a volume-based, fast restore by default and provides eligibility check information. You can override some eligibility checks, if needed. If you are certain that a backup cannot be performed by using a fast restore, you can disable the fast restore eligibility check and perform a file-based restore.
 
-You can use the backup restore command options to specify whether SnapManager should restore all or part of the backup. SnapManager also allows you to restore control files along with the data files or tablespaces from the backups in a single user operation. You can include -controlfiles with -complete to restore control files along with tablespaces and data files.
+You can use the `backup restore` command options to specify whether SnapManager should restore all or part of the backup. SnapManager also allows you to restore control files along with the data files or tablespaces from the backups in a single user operation. You can include `-controlfiles` with `-complete` to restore control files along with tablespaces and data files.
 
 You can select one of the following options to restore the backup:
 
@@ -25,25 +27,25 @@ You can select one of the following options to restore the backup:
 | Use...
 
 | The entire backup with all tablespaces and data files
-| -complete
+| `-complete`
 
 | The list of specific tablespaces
-| -tablespaces
+| `-tablespaces`
 
 | Specific data files
-| -files
+| `-files`
 
 | The control files only
-| -controlfiles
+| `-controlfiles`
 
 | Tablespaces, data files, and control files
-| -complete -controlfiles
+| `-complete -controlfiles`
 
 |===
 
-You can also restore the backup from an alternate location by specifying -restorespec.
+You can also restore the backup from an alternate location by specifying `-restorespec`.
 
-If you include -recover, you can recover the database to:
+If you include `-recover`, you can recover the database to:
 
 * The last transaction that occurred in the database (all logs)
 * A specific date and time
@@ -53,17 +55,17 @@ If you include -recover, you can recover the database to:
 
 NOTE: Both date and time recovery and the SCN recovery are point-in-time recoveries.
 
-SnapManager (3.2 or later) provides the ability to recover the restored database backups automatically by using the archive log files. Even if the archive log files are available in the external location, if you specify the -recover-from-location option, SnapManager uses the archive log files from the external location to recover the restored database backups.
+SnapManager (3.2 or later) provides the ability to recover the restored database backups automatically by using the archive log files. Even if the archive log files are available in the external location, if you specify the `-recover-from-location option`, SnapManager uses the archive log files from the external location to recover the restored database backups.
 
 SnapManager provides the external location to Oracle. But, Oracle does not identify the files from the external destination. This behavior is noticed in flash recovery area destination. These are issues with Oracle and the workaround is to always have backup of archive log files in such database layouts.
 
-If any inconsistent SCN or date is provided, then recovery will stop at the last consistent point recovered with the error message Recovery succeeded, but insufficient. You have to manually perform recovery to a consistent state.
+If any inconsistent SCN or date is provided, then recovery will stop at the last consistent point recovered with the error message `Recovery succeeded, but insufficient`. You have to manually perform recovery to a consistent state.
 
 For recovery when no logs are applied, SnapManager recovers until the last SCN of the last archive log file created during the backup. If the database is consistent until this SCN, then the database will be opened successfully. If the database is not consistent at this point, SnapManager still attempts to open the database, which will be opened successfully, if the database is already consistent.
 
 NOTE: SnapManager does not support recovering the archive log-only backups.
 
-If the archive log destinationon an NFS mount point, is not a Snapshot-capable storage, SnapManager enables you to recover the restored database backups using the profile. Before performing SnapManager operations on non-Snapshot-capable storage, you should add the destinations for archivedLogs.exclude in smsap.config.
+If the archive log destinationon an NFS mount point, is not a Snapshot-capable storage, SnapManager enables you to recover the restored database backups using the profile. Before performing SnapManager operations on non-Snapshot-capable storage, you should add the destinations for `archivedLogs.exclude` in `smsap.config`.
 
 You must ensure that you set the exclude parameter before creating a profile. Only after setting the exclude parameter in the SnapManager configuration file, the profile creation is successful.
 
@@ -84,55 +86,60 @@ For example, the external archive log location - I can have 1 to 100 archive log
 
 You can specify the -dump option as an optional parameter to collect the dump files after the successful or failed restore operation.
 
-. Enter the following command:``smsap backup restore -profileprofile_name-labellabel-complete-recover -alllogs [-recover-from-locationpath [,path2]]-dump-verbose``
+.Steps
+
+. Enter the following command:
 +
-`smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 - complete -recover -alllogs -verbose`
+`*smsap backup restore -profile _profile_name_ -label _label_ -complete-recover -alllogs [-recover-from-location _path_ [_,path2_]]-dump-verbose*`
++
+*Example*
++
+`*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 - complete -recover -alllogs -verbose*`
 
 . To restore data for different scenarios, complete one of the following:
 +
-[cols="1a,1a" options="header"]
+[cols="2a,4a" options="header"]
 |===
 // header row
 | If you want to restore...
 | Command Example
 
-| Complete database without control files and recover to a particular SCN number (3794392). In this case, the current control files exist, but all the data files are damaged or lost. Restore and recover the database from an existing full online backup to a point immediately before that SCN.
-| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until 3794392 -verbose`
+| *Complete database without control files and recover to a particular SCN number (3794392). In this case, the current control files exist, but all the data files are damaged or lost. Restore and recover the database from an existing full online backup to a point immediately before that SCN.*
+| `*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until 3794392 -verbose*`
 
-| Complete database without control files and recover up to a date and time.
-| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until 2008-09-15:15:29:23 -verbose`
+| *Complete database without control files and recover up to a date and time.*
+| `*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until 2008-09-15:15:29:23 -verbose*`
 
-| Complete database without control files and recover up to a data and time. In this case, the current control files exist, but all of the data files are damaged or lost or a logical error occurred after a specific time. Restore and recover the database from an existing full online backup to a date and time immediately before the point of failure.
-| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until "2008-09-15:15:29:23" -verbose`
+| *Complete database without control files and recover up to a data and time. In this case, the current control files exist, but all of the data files are damaged or lost or a logical error occurred after a specific time. Restore and recover the database from an existing full online backup to a date and time immediately before the point of failure.*
+| `*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -until "2008-09-15:15:29:23" -verbose*`
 
-| Partial database (one or more data files) without control files and recover using all available logs. In this case, the current control files exist, but one or more data files are damaged or lost. Restore those data files and recover the database from an existing full online backup using all available logs.
-| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -files /oracle/FLA/sapdata1/sr3_1/sr3.data1 /oracle/FLA/sapdata1/sr3_2/sr3.data2 /oracle/FLA/sapdata1/sr3_3/sr3.data3 -recover -alllogs -verbose (where "FLA" is the <SID>`
+| *Partial database (one or more data files) without control files and recover using all available logs. In this case, the current control files exist, but one or more data files are damaged or lost. Restore those data files and recover the database from an existing full online backup using all available logs.*
+| `*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -files /oracle/FLA/sapdata1/sr3_1/sr3.data1 /oracle/FLA/sapdata1/sr3_2/sr3.data2 /oracle/FLA/sapdata1/sr3_3/sr3.data3 -recover -alllogs -verbose (where "FLA" is the <SID>*`
 
-| Partial database (one or more tablespaces) without control files and recover using all available logs. In this case, the current control files exist, but one or more tablespaces are dropped or one of more data files belonging to the tablespace are damaged or lost. Restore those tablespaces and recover the database from an existing full online backup using all available logs.
-| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -tablespaces users -recover -alllogs -verbose`
+| *Partial database (one or more tablespaces) without control files and recover using all available logs. In this case, the current control files exist, but one or more tablespaces are dropped or one of more data files belonging to the tablespace are damaged or lost. Restore those tablespaces and recover the database from an existing full online backup using all available logs.*
+| `*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -tablespaces users -recover -alllogs -verbose*`
 
-| Only control files and recover using all available logs. In this case, the data files exist, but all control files are damaged or lost. Restore just the control files and recover the database from an existing full online backup using all available logs.
-| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -controlfiles -recover -alllogs -verbose`
+| *Only control files and recover using all available logs. In this case, the data files exist, but all control files are damaged or lost. Restore just the control files and recover the database from an existing full online backup using all available logs.*
+| `*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -controlfiles -recover -alllogs -verbose*`
 
-| Complete database without control files and recover using the backup control files and all available logs. In this case, all data files are damaged or lost. Restore just the control files and recover the database from an existing full online backup using all available logs.
-| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -using-backup-controlfile -recover -alllogs -verbose`
+| *Complete database without control files and recover using the backup control files and all available logs. In this case, all data files are damaged or lost. Restore just the control files and recover the database from an existing full online backup using all available logs.*
+| `*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -using-backup-controlfile -recover -alllogs -verbose*`
 
-| Recover the restored database using the archive log files from the external archive log location.
-| `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -using-backup-controlfile -recover -alllogs -recover-from-location /user1/archive -verbose`
+| *Recover the restored database using the archive log files from the external archive log location.*
+| `*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -using-backup-controlfile -recover -alllogs -recover-from-location /user1/archive -verbose*`
 
 |===
 
 . Review the fast restore eligibility checks.
 +
-Enter the following command: `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -alllogs -recover-from-location /user1/archive -verbose`
+*Example*
++
+Enter the following command:
++
+`*smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 -complete -recover -alllogs -recover-from-location /user1/archive -verbose*`
 
-. If the eligibility check displays that no mandatory checks failed and if certain conditions can be overridden, and if you want to continue with the restore process, enter the following: `backup restore -fast override`
-. Specify external archive log locations by using the -recover-from-location option.
+. If the eligibility check displays that no mandatory checks failed and if certain conditions can be overridden, and if you want to continue with the restore process, enter the following:
++
+`*backup restore -fast override*`
 
-*Related information*
-
-xref:task_restoring_backups_using_fast_restore.adoc[Restoring backups by using fast restore]
-
-xref:task_restoring_backups_from_an_alternate_location.adoc[Restoring backups from an alternate location]
-
-xref:reference_the_smosmsapbackup_restore_command.adoc[The smsap backup restore command]
+. Specify external archive log locations by using the `-recover-from-location` option.

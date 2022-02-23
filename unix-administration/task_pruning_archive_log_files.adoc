@@ -2,7 +2,7 @@
 permalink: unix-administration/task_pruning_archive_log_files.html
 sidebar: sidebar
 keywords: prune, archive, log, file, backup, pruning
-summary: You can prune the archive log files from the archive log locations while creating a backup.
+summary: "You can prune the archive log files from the archive log locations while creating a backup."
 ---
 = Pruning archive log files
 :icons: font
@@ -11,6 +11,8 @@ summary: You can prune the archive log files from the archive log locations whil
 [.lead]
 You can prune the archive log files from the archive log locations while creating a backup.
 
+*What you'll need*
+
 * Archive log files must be backed up by the current backup operation.
 +
 If pruning is specified along with other backups that do not contain archive log files, the archive log files are not pruned.
@@ -18,6 +20,8 @@ If pruning is specified along with other backups that do not contain archive log
 * The database must be in the mounted state.
 +
 If the database is not in mounted state, enter the -force option along with backup command.
+
+*About this task*
 
 While performing a backup operation, you can specify the following:
 
@@ -38,7 +42,7 @@ Before deleting the archive log files, SnapManager verifies the following:
 
 If the archive log files are backed up, shipped to standby, and captured by the capture process, SnapManager deletes all the archive log files in a single execution. However, if there are any archive log files that are not backed up, not shipped to standby, or not captured by the capture process, SnapManager deletes the archive log files one-by-one. The deletion of archive logs files in a single execution is faster than deleting archive logs one-by-one.
 
-SnapManager can also group the archive log files and delete them batch-by-batch. Each batch will have a maximum of 998 files. This value can be configured below 998 by using the configuration parameter maximum.archivelog.files.toprune.atATime in the smsap.config file.
+SnapManager can also group the archive log files and delete them batch-by-batch. Each batch will have a maximum of 998 files. This value can be configured below 998 by using the configuration parameter `maximum.archivelog.files.toprune.atATime` in the `smsap.config` file.
 
 SnapManager uses Oracle Recovery Manager (RMAN) commands to delete the archive log files. However, SnapManager does not integrate with the RMAN retention policies and deletion policies.
 
@@ -50,9 +54,13 @@ SnapManager does not support pruning of archive log files in the following scena
 * Archive log files are located in the Standby database.
 * Archive log files are managed by both SnapManager and RMAN.
 
-. Enter the following command: `smsap backup create -profile profile_name {[-full {-online \| -offline \| -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited}] [-verify] | [-data [[-filesfiles [files]] | [-tablespaces-tablespaces [-tablespaces]] [-datalabellabel] {-online \| -offline \| -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited]} [-verify] | [-archivelogs [-labellabel] [-commentcomment] [-protect | -noprotect | -protectnow] [-backup-destpath1 [,[path2]]] [-exclude-destpath1 [,path2]]] [-prunelogs {-all | -untilSCNuntilSCN | -until-dateyyyy-MM-dd:HH:mm:ss | -before {-months | -days | -weeks | -hours}} -prune-destprune_dest1,[prune_dest2]] [-taskspectaskspec]} -dump [-force] [-quiet \| -verbose]`
+.Step
+
+. Enter the following command:
 +
-[options="header"]
+`*smsap backup create -profile _profile_name_ {[-full {-online | -offline | -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited}] [-verify] | [-data [[-files _files_ [_files_]] | [-tablespaces _-tablespaces_ [_-tablespaces_]] [-datalabel _label_] {-online | -offline | -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited]} [-verify] | [-archivelogs [-label _label_] [-comment _comment_] [-protect | -noprotect | -protectnow] [-backup-dest _path1_ [,[_path2_]]] [-exclude-dest _path1_ [_,path2_]]] [-prunelogs {-all | -untilSCN _untilSCN_ | -until -date _yyyy-MM-dd:HH:mm:ss_ | -before {-months | -days | -weeks | -hours}} -prune-dest _prune_dest1_,[_prune_dest2_]] [-taskspec _taskspec_]} -dump [-force] [-quiet | -verbose]*`
++
+[cols="1a,3a" options="header"]
 |===
 | If you want to...| Then...
 a|
@@ -60,14 +68,14 @@ a|
 a|
 Specify the following options:
 
- ** -prunelogs specifies deleting the archive log files while creating a backup.
-  *** -all specifies deleting all the archive log files.
-  *** -untilSCN specifies deleting the archive log files until the specified SCN.
-  *** -until-date specifies deleting the archive logs including the specified date and time.
-  *** -before {-months \|-days \| -weeks \| -hours} specifies deleting the archive log files before the specified time period.
+ ** `-prunelogs` specifies deleting the archive log files while creating a backup.
+  *** `-all` specifies deleting all the archive log files.
+  *** `-untilSCN` specifies deleting the archive log files until the specified SCN.
+  *** `-until-date` specifies deleting the archive logs including the specified date and time.
+  *** `-before` `{-months \|-days \| -weeks \| -hours}` specifies deleting the archive log files before the specified time period.
 
 a|
 *Include the destination from where the archive log files are to be pruned*
 a|
-Specify the -prune-dest option.
+Specify the `-prune-dest` option.
 |===
