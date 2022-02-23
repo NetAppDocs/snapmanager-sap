@@ -2,7 +2,7 @@
 permalink: unix-administration/task_stopping_the_snapmanager_host_server.html
 sidebar: sidebar
 keywords: finish, snapmanager, stop, server, host
-summary: When you have finished using SnapManager, you might want to stop the server.
+summary: "When you have finished using SnapManager, you might want to stop the server."
 ---
 = Stopping the SnapManager host server
 :icons: font
@@ -11,8 +11,8 @@ summary: When you have finished using SnapManager, you might want to stop the se
 [.lead]
 When you have finished using SnapManager, you might want to stop the server.
 
-. To stop the server, enter the following command, as a root user: `smsap_server stop`
+.Step
 
-*Related information*
-
-xref:reference_the_smosmsap_server_stop_command.adoc[The smsap_server stop command]
+. To stop the server, enter the following command, as a root user:
++
+`*smsap_server stop*`
