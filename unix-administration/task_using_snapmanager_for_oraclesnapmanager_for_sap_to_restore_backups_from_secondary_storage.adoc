@@ -2,7 +2,7 @@
 permalink: unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_restore_backups_from_secondary_storage.html
 sidebar: sidebar
 keywords: administrator, restore, protect, backup, secondary, storage, copy, data, back, primary, snapmanager
-summary: Administrators can restore protected backups from secondary storage and can choose how they want to copy the data back to the primary storage.
+summary: "Administrators can restore protected backups from secondary storage and can choose how they want to copy the data back to the primary storage."
 ---
 = Using SnapManager for SAP to restore backups from secondary storage
 :icons: font
@@ -11,7 +11,11 @@ summary: Administrators can restore protected backups from secondary storage and
 [.lead]
 Administrators can restore protected backups from secondary storage and can choose how they want to copy the data back to the primary storage.
 
+*What you'll need*
+
 Before you attempt to restore the backup, check the properties of the backup and ensure that the backup is freed on the primary storage system and is protected on secondary storage.
+
+.Steps
 
 . From the SnapManager for SAP Repository tree, right-click the backup you want to restore, and select *Restore*.
 . In the Restore and Recovery Wizard Welcome page, click *Next*.

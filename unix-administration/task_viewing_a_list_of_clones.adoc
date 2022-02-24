@@ -2,7 +2,7 @@
 permalink: unix-administration/task_viewing_a_list_of_clones.html
 sidebar: sidebar
 keywords: view, list, clone, associate, profile
-summary: You can view a list of clones associated with a particular profile.
+summary: "You can view a list of clones associated with a particular profile."
 ---
 = Viewing a list of clones
 :icons: font
@@ -10,6 +10,8 @@ summary: You can view a list of clones associated with a particular profile.
 
 [.lead]
 You can view a list of clones associated with a particular profile.
+
+*About this task*
 
 The list includes the following information about the clones in a profile:
 
@@ -19,10 +21,10 @@ The list includes the following information about the clones in a profile:
 * Host on which the clone resides
 * Label for the clone
 
-If you specify the -verbose option, the output also shows the comments entered for the clone.
+If you specify the `-verbose` option, the output also shows the comments entered for the clone.
 
-. To display a list of all clones for a profile, enter the following command `smsap clone list -profileprofile_name [-quiet | -verbose]`
+.Step
 
-*Related information*
-
-xref:reference_the_smosmsapclone_list_command.adoc[The smsap clone list command]
+. To display a list of all clones for a profile, enter the following command
++
+`*smsap clone list -profile _profile_name_ [-quiet | -verbose]*`

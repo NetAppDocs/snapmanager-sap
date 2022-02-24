@@ -2,7 +2,7 @@
 permalink: unix-administration/task_viewing_a_list_of_scheduled_operations.html
 sidebar: sidebar
 keywords: view, list, schedule, operation, profile
-summary: You can view a list of scheduled operations for a profile.
+summary: "You can view a list of scheduled operations for a profile."
 ---
 = Viewing a list of scheduled operations
 :icons: font
@@ -11,4 +11,8 @@ summary: You can view a list of scheduled operations for a profile.
 [.lead]
 You can view a list of scheduled operations for a profile.
 
-. To display information about scheduled operation, enter this command: `smsap schedule list -profile profile_name\[-quiet \| -verbose\]`
+.Step
+
+. To display information about scheduled operation, enter this command:
++
+`*smsap schedule list -profile _profile_name_ [-quiet | -verbose]*`
