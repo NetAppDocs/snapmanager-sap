@@ -2,7 +2,7 @@
 permalink: unix-administration/task_suspending_backup_schedules.html
 sidebar: sidebar
 keywords: snapmanager, enable, suspend, backup, schedule, resume
-summary: SnapManager enables you to suspend a backup schedule until the backup schedule is resumed.
+summary: "SnapManager enables you to suspend a backup schedule until the backup schedule is resumed."
 ---
 = Suspending backup schedules
 :icons: font
@@ -11,6 +11,12 @@ summary: SnapManager enables you to suspend a backup schedule until the backup s
 [.lead]
 SnapManager enables you to suspend a backup schedule until the backup schedule is resumed.
 
-You can suspend the active schedules. If you try to suspend the backup schedule that is already suspended, you might encounter error message "Cannot suspend: schedule <schedulename> already in suspend state".
+*About this task*
 
-. To suspend the backup schedule temporarily, enter this command: `smsap schedule suspend -profile profile_name-schedule-nameschedulename [-quiet | -verbose]`
+You can suspend the active schedules. If you try to suspend the backup schedule that is already suspended, you might encounter error message ``"Cannot suspend: schedule <schedulename> already in suspend state".``
+
+.Step
+
+. To suspend the backup schedule temporarily, enter this command:
++
+`*smsap schedule suspend -profile _profile_name_ -schedule-name _schedulename_ [-quiet | -verbose]*`

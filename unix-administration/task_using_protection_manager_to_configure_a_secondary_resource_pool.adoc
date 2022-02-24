@@ -2,7 +2,7 @@
 permalink: unix-administration/task_using_protection_manager_to_configure_a_secondary_resource_pool.html
 sidebar: sidebar
 keywords: support, backup, database, secondary, storage, administrator, protection, manager, organize, snapvault, license, resource, pool
-summary: To support backup of the database to secondary storage, the storage administrator uses Protection Manager to organize the secondary storage systems enabled with the SnapVault Secondary license into a resource pool for the backups.
+summary: "To support backup of the database to secondary storage, the storage administrator uses Protection Manager to organize the secondary storage systems enabled with the SnapVault Secondary license into a resource pool for the backups."
 ---
 = Using Protection Manager to configure a secondary resource pool
 :icons: font
@@ -11,9 +11,13 @@ summary: To support backup of the database to secondary storage, the storage adm
 [.lead]
 To support backup of the database to secondary storage, the storage administrator uses Protection Manager to organize the secondary storage systems enabled with the SnapVault Secondary license into a resource pool for the backups.
 
+*What you'll need*
+
 Ideally, storage systems in a resource pool are interchangeable in terms of their acceptability as destinations for backups. For example, when developing the protection strategy for the payroll database, you, as the storage administrator, identified secondary storage systems with similar performance and quality of service levels that would be suitable members of the same resource pool.
 
 You have already created aggregates of unused space on storage systems that you intend to assign to resource pools. This ensures that there is adequate space to contain the backups.
+
+.Steps
 
 . Go to Protection Manager's NetApp Management Console.
 . From the menu bar, click *Data* > *Resource Pools*.
