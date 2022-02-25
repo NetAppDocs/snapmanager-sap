@@ -2,16 +2,18 @@
 permalink: unix-administration/task_viewing_detailed_clone_information.html
 sidebar: sidebar
 keywords: view, detail, information, clone, show, command
-summary: You can view detailed information about a specific clone by using the clone show command.
+summary: "You can view detailed information about a specific clone by using the clone show command."
 ---
 = Viewing detailed clone information
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can view detailed information about a specific clone by using the clone show command.
+You can view detailed information about a specific clone by using the `clone show` command.
 
-The clone show command displays the following information:
+*About this task*
+
+The `clone show` command displays the following information:
 
 * Clone system identifier and clone ID
 * Clone operation status
@@ -26,8 +28,8 @@ The clone show command displays the following information:
 * Storage system volumes and Snapshot copies backing the clone
 * Whether the clone was created using the backup on the primary or secondary storage
 
-. Enter the following command: `smsap clone show -profileprofile_name [-labellabel | -idguid]`
+.Step
 
-*Related information*
-
-xref:reference_the_smosmsapclone_show_command.adoc[The smsap clone show command]
+. Enter the following command:
++
+`*smsap clone show -profile _profile_name_ [-label _label_ | -id _guid_]*`

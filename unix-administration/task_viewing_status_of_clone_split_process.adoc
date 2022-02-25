@@ -2,7 +2,7 @@
 permalink: unix-administration/task_viewing_status_of_clone_split_process.html
 sidebar: sidebar
 keywords: view, progress, split, start, process, clone
-summary: You can view the progress of the split process you started.
+summary: "You can view the progress of the split process you started."
 ---
 = Viewing the status of the clone split process
 :icons: font
@@ -11,8 +11,14 @@ summary: You can view the progress of the split process you started.
 [.lead]
 You can view the progress of the split process you started.
 
-. To view the progress of the clone split process, enter the following command: `smsap clone split-status -profileprofile [-hosthostname] [-labelsplit-label | -idsplit-id] [-quiet \| -verbose]`
+.Step
 
+. To view the progress of the clone split process, enter the following command:
++
+`*smsap clone split-status -profile _profile_ [-host _hostname_] [-label _split-label_ | -id _split-id_] [-quiet | -verbose]*`
+
+---
 ----
 smsap clone split-status -profile p1 -id 8abc01ec0e78f3e2010e78f3fdd00001
 ----
+---

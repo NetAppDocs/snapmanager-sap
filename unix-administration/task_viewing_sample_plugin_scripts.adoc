@@ -2,7 +2,7 @@
 permalink: unix-administration/task_viewing_sample_plugin_scripts.html
 sidebar: sidebar
 keywords: snapmanager, include, script, example, basis, custom, view, sample, plug-in
-summary: SnapManager includes scripts that you can use as examples for how to make your own scripts or as a basis for your custom scripts.
+summary: "SnapManager includes scripts that you can use as examples for how to make your own scripts or as a basis for your custom scripts."
 ---
 = Viewing sample plug-in scripts
 :icons: font
@@ -11,17 +11,19 @@ summary: SnapManager includes scripts that you can use as examples for how to ma
 [.lead]
 SnapManager includes scripts that you can use as examples for how to make your own scripts or as a basis for your custom scripts.
 
+*About this task*
+
 You can find the sample plug-in scripts at the following location:
 
-* <default_install_directory>/plugins/examples/backup/create
-* <default_install_directory>/plugins/examples/clone/create
-* <default_install_directory>/plugins/unix/examples/backup/create/post
+* `<default_install_directory>/plugins/examples/backup/create`
+* `<default_install_directory>/plugins/examples/clone/create`
+* `<default_install_directory>/plugins/unix/examples/backup/create/post`
 
 The directory that contains the sample plug-in scripts includes the following subdirectories:
 
-* policy: Contains scripts that, when configured, always run on the clone operation.
-* pre: Contains scripts that, when configured, run before the clone operation.
-* post: Contains scripts that, when configured, run after the clone operation.
+* `policy`: Contains scripts that, when configured, always run on the clone operation.
+* `pre`: Contains scripts that, when configured, run before the clone operation.
+* `post`: Contains scripts that, when configured, run after the clone operation.
 
 The following table describes the sample scripts:
 
@@ -29,7 +31,7 @@ The following table describes the sample scripts:
 |===
 | Script name| Description| Type of script
 a|
-validate_sid.sh
+`validate_sid.sh`
 a|
 Contains additional checks to the SID used on the target system. The script checks that the SID has the following characteristics:
 
@@ -40,31 +42,31 @@ Contains additional checks to the SID used on the target system. The script chec
 a|
 Policy
 a|
-cleanup.sh
+`cleanup.sh`
 a|
 Cleans the target system so that it is ready to store the newly created clone. Preserves or deletes files and directories depending on the need.
 a|
 Pretask
 a|
-sap_follow_up_activities.sh
+`sap_follow_up_activities.sh`
 a|
 Performs follow-up activity tasks as described in _SAP System Copy Guide_ and TR-3442, SAP with Oracle on UNIX and NFS and NetApp Storage. For example, this script deletes or modifies table entries in the SAP schema.
 a|
 Post-task
 a|
-os_db_authentication.sh
+`os_db_authentication.sh`
 a|
 Adapts the operating system authentication for the OPS$ user, as recommended in SAP Note 316641. This is a sample of how to process external SQL files.
 a|
 Post-task
 a|
-Mirror_the_backup.sh
+`Mirror_the_backup.sh`
 a|
 Mirrors the volumes after the backup operation occurs in an UNIX environment when you are using either Data ONTAP operating in 7-Mode or clustered Data ONTAP.
 a|
 Post-task
 a|
-Vault_the_backup_cDOT.sh
+`Vault_the_backup_cDOT.sh`
 a|
 Vaults the backup after the backup operation occurs in an UNIX environment when you are using clustered Data ONTAP.
 a|
@@ -72,18 +74,23 @@ Post-task
 |===
 Scripts delivered with SnapManager use the BASH shell by default. You must ensure that support for the BASH shell is installed on your operating system before attempting to run any of the sample scripts.
 
-. To verify that you are using the BASH shell, enter the following command at the command prompt: `bash`
+.Steps
+
+. To verify that you are using the BASH shell, enter the following command at the command prompt:
++
+`*bash*`
 +
 If you do not see an error, the BASH shell is operating properly.
 +
-Alternately, you can enter the which-bash command at the command prompt.
+Alternately, you can enter the `which-bash` command at the command prompt.
 
 . Locate the script in the following directory:
 +
-<installdir>/plugins/examples/clone/create
+`<installdir>/plugins/examples/clone/create`
 
 . Open the script in a script editor such as vi.
 
+---
 == Sample script
 
 The following sample custom script validates database SID names and prevents invalid names from being used in the cloned database. It includes three operations (check, describe, and execute), which are called after you run the script. The script also includes error message handling with codes 0, 4 and >4.
@@ -163,5 +170,7 @@ case $(echo "$1" | tr [A-Z] [a-z]) in
 		 echo "unknown option $1"    usage 		;;
 esac
 ----
+---
+*Related information*
 
-http://media.netapp.com/documents/tr-3442.pdf[SAP with Oracle on UNIX and NFS and NetApp Storage: TR-3442]
+http://media.netapp.com/documents/tr-3442.pdf[SAP with Oracle on UNIX and NFS and NetApp Storage: TR-3442^]
