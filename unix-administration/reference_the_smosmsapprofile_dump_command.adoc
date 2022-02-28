@@ -2,37 +2,38 @@
 permalink: unix-administration/reference_the_smosmsapprofile_dump_command.html
 sidebar: sidebar
 keywords: run, profile, dump, command, create, jar, file, contain, diagnostic, information, smsap
-summary: You can run the profile dump command to create the .jar file that contains diagnostic information about a profile.
+summary: "You can run the profile dump command to create the .jar file that contains diagnostic information about a profile."
 ---
 = The smsap profile dump command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the profile dump command to create the .jar file that contains diagnostic information about a profile.
+You can run the `profile dump` command to create the `.jar` file that contains diagnostic information about a profile.
 
 == Syntax
 
+[subs=+macros]
 ----
-
-        smsap profile dump
--profile profile_name
-\[-quiet \| -verbose\]
+pass:quotes[smsap profile dump
+-profile _profile_name_
+[-quiet | -verbose]]
 ----
 
 == Parameters
 
-* *-profile profile_name*
+* ``*-profile _profile_name_*``
 +
 Specifies the profile for which you want to create the dump files. The profile contains the identifier of the database and other database information.
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages in the console.
+---
 
 == Example
 
@@ -43,3 +44,4 @@ smsap profile dump -profile SALES1
 Dump file created
 Path:/userhomedirectory/.netapp/smsap/3.3.0/smsap_dump_SALES1_hostname.jar
 ----
+---

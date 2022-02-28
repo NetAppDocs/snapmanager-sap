@@ -2,38 +2,40 @@
 permalink: unix-administration/reference_the_smosmsapprofile_delete_command.html
 sidebar: sidebar
 keywords: run, profile, delete, command, smsap
-summary: You can run the profile delete command to delete a profile of the database.
+summary: "You can run the profile delete command to delete a profile of the database."
 ---
 = The smsap profile delete command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the profile delete command to delete a profile of the database.
+You can run the `profile delete` command to delete a profile of the database.
 
 == Syntax
 
+[subs=+macros]
+----
+pass:quotes[smsap profile delete
+-profile _profile_
+[-quiet | -verbose]]
 ----
 
-        smsap profile delete
--profile profile
-\[-quiet \| -verbose\]
-----
 
 == Parameters
 
-* *-profile profile*
+* ``*-profile _profile_*``
 +
 Specifies the profile to be deleted.
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages in the console.
 
+---
 == Example
 
 The following example deletes the profile:
@@ -42,7 +44,4 @@ The following example deletes the profile:
 smsap profile delete -profile SALES1
 Operation Id [Ncaf00af0242b3e8dba5c68a57a5ae932] succeeded.
 ----
-
-*Related information*
-
-xref:task_deleting_profiles.adoc[Deleting profiles]
+---
