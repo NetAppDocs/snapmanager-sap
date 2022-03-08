@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_the_smosmsapprofile_list_command.html
 sidebar: sidebar
 keywords: command, display, list, current, profile, smsap
-summary: This command displays a list of the current profiles.
+summary: "This command displays a list of the current profiles."
 ---
 = The smsap profile list command
 :icons: font
@@ -13,22 +13,23 @@ This command displays a list of the current profiles.
 
 == Syntax
 
+[subs=+macros]
 ----
-
-        smsap profile list
-\[-quiet \| -verbose\]
+pass:quotes[smsap profile list
+[-quiet | -verbose]]
 ----
 
 == Parameters
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages on the console.
 
+---
 == Example command
 
 The following example displays existing profiles with their details.
@@ -84,3 +85,4 @@ Repository:
   Username: swagrahn
   Password: ********
 ----
+---
