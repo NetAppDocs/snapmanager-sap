@@ -2,7 +2,7 @@
 permalink: unix-installation-7mode/concept_preparing_to_upgrade_snapmanager_for_oracle_snapmanager_for_sap.html
 sidebar: sidebar
 keywords: environment, upgrade, snapmanager, software, hardware, browser, database, operating, system, requirement, information, interoperability, preparing, prepare
-summary: The environment in which you want to upgrade SnapManager must meet the specific software, hardware, browser, database, and operating system requirements. For the latest information about the requirements, see the Interoperability Matrix.
+summary: "The environment in which you want to upgrade SnapManager must meet the specific software, hardware, browser, database, and operating system requirements. For the latest information about the requirements, see the Interoperability Matrix."
 ---
 = Preparing to upgrade SnapManager
 :icons: font
@@ -18,4 +18,6 @@ You must ensure that you perform the following tasks before upgrading:
 * Install and configure the appropriate version of SnapDrive for UNIX on all the target hosts.
 * Create a backup of the existing SnapManager for SAP repository database.
 
-http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix: support.netapp.com/NOW/products/interoperability]
+*Related information*
+
+http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix: support.netapp.com/NOW/products/interoperability^]

@@ -2,7 +2,7 @@
 permalink: unix-installation-7mode/concept_prerequisites_for_performing_a_rollback.html
 sidebar: sidebar
 keywords: perform, rollback, ensure, environment, requirement, prerequisite
-summary: Before performing a rollback, you must ensure that your environment meets certain requirements.
+summary: "Before performing a rollback, you must ensure that your environment meets certain requirements."
 ---
 = Prerequisites for performing a rollback
 :icons: font
@@ -35,5 +35,7 @@ If you use profiles with the same name, the rollback operation involving that re
 If there is an operation running, you must wait until that operation completes and before proceeding with the rollback.
 
 NOTE: The rollback operation runs for a longer time as the cumulative number of backups of the hosts that are being rolled back together increases. The duration of the rollback can vary depending on the number of profiles and backups associated with a given host.
+
+*Related information*
 
 http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
