@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_troubleshooting_storage_system_renaming_issue.html
 sidebar: sidebar
 keywords: face, issue, renaming, rename, storage, system, successful, troubleshooting
-summary: You might face issues when renaming a storage system or after you have successfully renamed the storage system.
+summary: "You might face issues when renaming a storage system or after you have successfully renamed the storage system."
 ---
 = Troubleshooting storage system renaming issue
 :icons: font
@@ -11,9 +11,9 @@ summary: You might face issues when renaming a storage system or after you have 
 [.lead]
 You might face issues when renaming a storage system or after you have successfully renamed the storage system.
 
-When you try to rename the storage system, the operation might fail with the following error message: SMSAP-05085 No storage controller "fas3020-rtp07New" is found to be associated with the profile
+When you try to rename the storage system, the operation might fail with the following error message: `SMSAP-05085 No storage controller "fas3020-rtp07New" is found to be associated with the profile`
 
-You must enter the IP address or name of the storage system that is listed when you run the smsap storage list command.
+You must enter the IP address or name of the storage system that is listed when you run the `smsap storage list` command.
 
 After you rename the storage system, SnapManager operations might fail if SnapManager fails to recognize the storage system. You must perform some additional steps in the DataFabric Manager server host and the SnapManager server host to resolve this issue.
 

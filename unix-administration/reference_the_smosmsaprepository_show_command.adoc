@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_the_smosmsaprepository_show_command.html
 sidebar: sidebar
 keywords: command, display, information, repository, smsap
-summary: This command displays information about the repository.
+summary: "This command displays information about the repository."
 ---
 = The smsap repository show command
 :icons: font
@@ -14,47 +14,46 @@ This command displays information about the repository.
 == Syntax
 
 ----
-
-        smsap repository show
+smsap repository show
 -repository
 -dbname repo_service_name
 -host repo_host
 -port repo_port
 -login -username repo_username
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters
 
-* *-repository*
+* ``*-repository*``
 +
-The options that follow -repository specify the details of the database for the repository.
+The options that follow `-repository` specify the details of the database for the repository.
 
-* *-dbname repo_service_name*
+* ``*-dbname _repo_service_name_*``
 +
 Specifies the name of the database that stores the repository. Use either the global name or the SID.
 
-* *-host repo_host*
+* ``*-host _repo_host_*``
 +
 Specifies the name or IP address of the host computer the repository database runs on.
 
-* *-login*
+* ``*-login*``
 +
 Starts the repository login details.
 
-* *-username repo_username*
+* ``*-username _repo_username_*``
 +
 Specifies the user name needed to access the database that stores the repository.
 
-* *-port repo_port*
+* ``*-port repo_port*``
 +
 Specifies the TCP port number used to access the database that stores the repository.
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages on the console.
 

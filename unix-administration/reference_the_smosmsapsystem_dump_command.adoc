@@ -2,30 +2,29 @@
 permalink: unix-administration/reference_the_smosmsapsystem_dump_command.html
 sidebar: sidebar
 keywords: run, system, dump, command, create, jar, file, contain, diagnostic, information, server, environment, smsap
-summary: You can run the system dump command to create a JAR file that contains diagnostic information about the server environment.
+summary: "You can run the system dump command to create a JAR file that contains diagnostic information about the server environment."
 ---
 = The smsap system dump command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the system dump command to create a JAR file that contains diagnostic information about the server environment.
+You can run the `system dump` command to create a JAR file that contains diagnostic information about the server environment.
 
 == Syntax
 
 ----
-
-        smsap system dump
-\[-quiet \| -verbose\]
+smsap system dump
+[-quiet | -verbose]
 ----
 
 == Parameters
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages in the console.
 

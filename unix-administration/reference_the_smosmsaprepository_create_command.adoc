@@ -2,7 +2,7 @@
 permalink: unix-administration/reference_the_smosmsaprepository_create_command.html
 sidebar: sidebar
 keywords: command, create, repository, store, database, profile, associate, credentials, block, size, adequate, smsap
-summary: This command creates a repository in which to store database profiles and associated credentials. This command also checks to see that the block size is adequate.
+summary: "This command creates a repository in which to store database profiles and associated credentials. This command also checks to see that the block size is adequate."
 ---
 = The smsap repository create command
 :icons: font
@@ -14,56 +14,55 @@ summary: This command creates a repository in which to store database profiles a
 This command creates a repository in which to store database profiles and associated credentials. This command also checks to see that the block size is adequate.
 
 ----
-
-        smsap repository create
+smsap repository create
 -repository
 -port repo_port
 -dbname repo_service_name
 -host repo_host
 -login -username repo_username
 [-force] [-noprompt]
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters
 
-* *-repository*
+* ``*-repository*``
 +
-The options that follow -repository specify the details of the database for the repository
+The options that follow `_-repository_` specify the details of the database for the repository
 
-* *-port repo_port*
+* ``*-port _repo_port_*``
 +
 Specifies the TCP port number used to access the database that stores the repository.
 
-* *-dbname repo_service_name*
+* ``*-dbname _repo_service_name_*``
 +
 Specifies the name of the database that stores the repository. Use either the global name or the SID.
 
-* *-host repo_host*
+* ``*-host _repo_host_*``
 +
 Specifies the name or IP address of the host computer the repository database runs on.
 
-* *-login*
+* ``*-login*``
 +
 Starts the repository login details.
 
-* *-username repo_username*
+* ``*-username _repo_username_*``
 +
 Specifies the user name needed to access the database that stores the repository.
 
-* *-force*
+* ``*-force*``
 +
 Attempts to force the creation of the repository. Using this option results in SnapManager prompting you to backup the repository before creating the repository.
 
-* *-noprompt*
+* ``*-noprompt*``
 +
-Does not display the prompt to backup the repository before creating it if you use the -force option. Using the -noprompt option ensures the prompt does not appear, making it easier to create repositories using a script.
+Does not display the prompt to backup the repository before creating it if you use the -force option. Using the `-noprompt` option ensures the prompt does not appear, making it easier to create repositories using a script.
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages on the console.
 

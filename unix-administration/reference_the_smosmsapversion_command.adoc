@@ -2,30 +2,29 @@
 permalink: unix-administration/reference_the_smosmsapversion_command.html
 sidebar: sidebar
 keywords: run, version, command, snapmanager, run, local, host, smsap
-summary: You can run the version command to determine which version of SnapManager you are running on your local host.
+summary: "You can run the version command to determine which version of SnapManager you are running on your local host."
 ---
 = The smsap version command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the version command to determine which version of SnapManager you are running on your local host.
+You can run the `version` command to determine which version of SnapManager you are running on your local host.
 
 == Syntax
 
 ----
-
-        smsap version
-\[-quiet \| -verbose\]
+smsap version
+[-quiet | -verbose]
 ----
 
 == Parameters
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays the build date and contents of each profile. Also displays error, warning, and informational messages in the console.
 
