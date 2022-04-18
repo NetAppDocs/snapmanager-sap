@@ -2,7 +2,7 @@
 permalink: unix-installation-7mode/reference_supported_storage_types.html
 sidebar: sidebar
 keywords: snapmanager, support, wide, range, storage, type, physical, virtual, machine, install, upgrade
-summary: SnapManager supports a wide range of storage types on both physical and virtual machines. You must verify support for your storage type before you install or upgrade SnapManager.
+summary: "SnapManager supports a wide range of storage types on both physical and virtual machines. You must verify support for your storage type before you install or upgrade SnapManager."
 ---
 = Supported storage types
 :icons: font
@@ -11,7 +11,7 @@ summary: SnapManager supports a wide range of storage types on both physical and
 [.lead]
 SnapManager supports a wide range of storage types on both physical and virtual machines. You must verify support for your storage type before you install or upgrade SnapManager.
 
-[options="header"]
+[cols="1a,2a",options="header"]
 |===
 | Machine| Storage type
 a|

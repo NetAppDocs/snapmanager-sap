@@ -9,7 +9,7 @@ summary: "A SnapManager license and several storage system licenses are required
 :imagesdir: ../media/
 
 [.lead]
-A SnapManager license and several storage system licenses are required to enable SnapManager operations. The SnapManager license is available in two licensing models: per-server licensing, in which the SnapManager license resides on each database host; and per-storage system licensing, in which the SnapManager license resides on the storage system.
+A SnapManager license and several storage system licenses are required to enable SnapManager operations. The SnapManager license is available in two licensing models: _per-server licensing_, in which the SnapManager license resides on each database host; and _per-storage system licensing_, in which the SnapManager license resides on the storage system.
 
 The SnapManager license requirements are as follows:
 
