@@ -2,7 +2,7 @@
 permalink: unix-installation-7mode/task_performing_rolling_upgrade_on_a_single_host_or_multiple_hosts.html
 sidebar: sidebar
 keywords: perform, roll, upgrade, single, multiple, snapmanager, server, host, command-line, interface, cli, version
-summary: You can perform rolling upgrade on a single or multiple SnapManager server hosts by using the command-line interface \(CLI\). The upgraded SnapManager server host is then managed only with the later version of SnapManager.
+summary: "You can perform rolling upgrade on a single or multiple SnapManager server hosts by using the command-line interface (CLI). The upgraded SnapManager server host is then managed only with the later version of SnapManager."
 ---
 = Performing rolling upgrade on a single host or multiple hosts
 :icons: font
@@ -11,9 +11,15 @@ summary: You can perform rolling upgrade on a single or multiple SnapManager ser
 [.lead]
 You can perform rolling upgrade on a single or multiple SnapManager server hosts by using the command-line interface (CLI). The upgraded SnapManager server host is then managed only with the later version of SnapManager.
 
+*What you'll need*
+
 You must ensure that all the prerequisites for performing rolling upgrade are completed.
 
-. To perform a rolling upgrade on a single host, enter the following command: `smsaprepository rollingupgrade-repository-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username-portrepo_port-upgradehosthost_with_target_database-force [-quiet | -verbose]`
+.Steps
+
+. To perform a rolling upgrade on a single host, enter the following command:
++
+`*smsap repository rollingupgrade-repository-dbname _repo_service_name_ -host _repo_host_ -login-username _repo_username_ -port _repo_port_ -upgradehost _host_with_target_database_ -force [-quiet | -verbose]*`
 +
 The following command performs the rolling upgrade of all target databases mounted on hostA and a repository database named repoA located on repo_host:
 +
