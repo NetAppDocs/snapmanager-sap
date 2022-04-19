@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_creating_database_backups.html
+permalink: unix-administration/task_create_database_backups.html
 sidebar: sidebar
 keywords: create, backup, entire, database, portion, tablespace, data, file, control, creating
 summary: "You can create backups of entire databases or portions of databases, including tablespaces, data files, or control files."
 ---
-= Creating database backups
+= Create database backups
 :icons: font
 :imagesdir: ../media/
 

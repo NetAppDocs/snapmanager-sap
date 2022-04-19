@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_creating_backup_schedules.html
+permalink: unix-administration/task_create_backup_schedules.html
 sidebar: sidebar
 keywords: schedule, backup, occur, frequency, suited, data, environment, creating, create
 summary: "You can schedule a backup to occur at the time and frequency that are suited for your data and environment."
 ---
-= Creating backup schedules
+= Create backup schedules
 :icons: font
 :imagesdir: ../media/
 

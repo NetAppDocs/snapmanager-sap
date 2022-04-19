@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_creating_pretask_post_task_and_policy_scripts.html
+permalink: unix-administration/task_create_pretask_post_task_and_policy_scripts.html
 sidebar: sidebar
 keywords: snapmanager, enable, create, script, preprocessing, activity, post-processing, policy, task, backup, restore, clone, operation, pretask, post-task, creating
 summary: "SnapManager enables you to create the scripts for the preprocessing activity, the post-processing activity, and policy tasks of the backup, restore, and clone operations. You must place the scripts in the correct installation directory to execute the preprocessing activity, post-processing activity, and policy tasks of the SnapManager operation."
 ---
-= Creating pretask, post-task, and policy scripts
+= Create pretask, post-task, and policy scripts
 :icons: font
 :imagesdir: ../media/
 

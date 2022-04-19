@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_creating_profiles.html
+permalink: unix-administration/task_create_profiles.html
 sidebar: sidebar
 keywords: creating, create, profile, assign, oracle, database, account, retention, policy, protection, backup, duration, class
 summary: "When creating profiles, you can assign a particular Oracle database user account to the profile. You can set the retention policy for the profile, enable backup protection to secondary storage for all the backups using this profile, and set the retention count and duration for each retention class."
 ---
-= Creating profiles
+= Create profiles
 :icons: font
 :imagesdir: ../media/
 

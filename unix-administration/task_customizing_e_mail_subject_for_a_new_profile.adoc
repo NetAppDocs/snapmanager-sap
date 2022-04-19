@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_customizing_e_mail_subject_for_a_new_profile.html
+permalink: unix-administration/task_customize_e_mail_subject_for_a_new_profile.html
 sidebar: sidebar
 keywords: customize, email, subject, profile, create, customizing
 summary: "You can customize the email subject for the new profile when you create it."
 ---
-= Customizing the email subject for a new profile
+= Customize the email subject for a new profile
 :icons: font
 :imagesdir: ../media/
 

@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_creating_restore_specifications.html
+permalink: unix-administration/task_create_restore_specifications.html
 sidebar: sidebar
 keywords: restore, specification, file, xml, original, alternate, location, file, restore, snapmanager, specification, location, creating, create
 summary: "The restore specification file is an XML file that contains the original and alternate locations from which the file can be restored. SnapManager uses this specification file to restore files from the specified location."
 ---
-= Creating restore specifications
+= Create restore specifications
 :icons: font
 :imagesdir: ../media/
 

@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_creating_profile_level_dump_files.html
+permalink: unix-administration/task_create_profile_level_dump_files.html
 sidebar: sidebar
 keywords: find, log, information, particular, profile, smsap, dump, command, profile-level, file, creating, create
 summary: "You can find log information about a particular profile by using the smsap profile dump command with the name of the profile."
 ---
-= Creating profile-level dump files
+= Create profile-level dump files
 :icons: font
 :imagesdir: ../media/
 
