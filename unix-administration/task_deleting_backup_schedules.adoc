@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_deleting_backup_schedules.html
+permalink: unix-administration/task_delete_backup_schedules.html
 sidebar: sidebar
 keywords: delete, backup, schedule, deleting
 summary: "You can delete backup schedules when they are no longer necessary."
 ---
-= Deleting backup schedules
+= Delete backup schedules
 :icons: font
 :imagesdir: ../media/
 

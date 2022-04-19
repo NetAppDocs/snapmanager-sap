@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_disabling_email_notification_for_multiple_profiles.html
+permalink: unix-administration/task_disable_email_notification_for_multiple_profiles.html
 sidebar: sidebar
 keywords: enable, summary, email, notification, multiple, profile, disable, receive, alert, disabling
 summary: "After you enable the summary email notification for multiple profiles, you can disable them to no longer receive email alerts."
 ---
-= Disabling email notification for multiple profiles
+= Disable email notification for multiple profiles
 :icons: font
 :imagesdir: ../media/
 

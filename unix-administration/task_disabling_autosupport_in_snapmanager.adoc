@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_disabling_autosupport_in_snapmanager.html
+permalink: unix-administration/task_disable_autosupport_in_snapmanager.html
 sidebar: sidebar
 keywords: disable, autosupport, storage, system, receive, message, snapmanager, successful, backup, operation, disabling
 summary: "You must disable AutoSupport if you do not want the storage system to receive messages from the SnapManager server for every successful backup operation."
 ---
-= Disabling AutoSupport in SnapManager
+= Disable AutoSupport in SnapManager
 :icons: font
 :imagesdir: ../media/
 

@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_deleting_a_clone_split_operation_cycle_from_a_repository_database.html
+permalink: unix-administration/task_delete_a_clone_split_operation_cycle_from_a_repository_database.html
 sidebar: sidebar
 keywords: delete, clone, split, operation, cycle, entry, repository, database, deleting
 summary: "You can delete a clone split operation cycle entry from a repository database."
 ---
-= Deleting a clone split operation cycle from a repository database
+= Delete a clone split operation cycle from a repository database
 :icons: font
 :imagesdir: ../media/
 
