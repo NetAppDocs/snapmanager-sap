@@ -2,7 +2,7 @@
 permalink: unix-installation-7mode/task_smsap_isg_scheduling_recurring_backups.html
 sidebar: sidebar
 keywords: schedule, backup, operation, initiate, automatic, regular, interval, hourly, daily, weekly, monthly, one-time, basis, scheduling, recur
-summary: You can schedule backup operations so that the backups are initiated automatically at regular intervals. SnapManager allows you to schedule backups on an hourly, daily, weekly, monthly, or one-time basis.
+summary: "You can schedule backup operations so that the backups are initiated automatically at regular intervals. SnapManager allows you to schedule backups on an hourly, daily, weekly, monthly, or one-time basis."
 ---
 = Scheduling recurring backups
 :icons: font
@@ -10,6 +10,8 @@ summary: You can schedule backup operations so that the backups are initiated au
 
 [.lead]
 You can schedule backup operations so that the backups are initiated automatically at regular intervals. SnapManager allows you to schedule backups on an hourly, daily, weekly, monthly, or one-time basis.
+
+*About this task*
 
 You can assign multiple backup schedules for a single database. However, when scheduling multiple backups for the same database, you must ensure that the backups are not scheduled at the same time.
 
@@ -20,13 +22,13 @@ These steps show how to create a backup schedule for your database using the Sna
 +
 You must not include spaces or special characters in the name. If you do not specify a name, SnapManager automatically creates a backup label.
 +
-From SnapManager 3.4, you can modify the backup label created automatically by SnapManager. You can edit the override.default.backup.pattern and new.default.backup.patternconfiguration variables to create your own default backup label pattern.
+From SnapManager 3.4, you can modify the backup label created automatically by SnapManager. You can edit the `override.default.backup.pattern` and `new.default.backup.pattern` configuration variables to create your own default backup label pattern.
 
 . Select *Allow startup or shutdown of database, if necessary* to modify the state of the database, if required.
 +
 This option ensures that if the database is not in the required state to create a backup, SnapManager automatically brings the database to the desired state to complete the operation.
 
-. On the Database, Tablespaces or Datafiles to Backup page, perform the following:
+. On the *Database, Tablespaces or Datafiles to Backup* page, perform the following:
  .. Select *Backup Datafiles* to back up either the full database, selected data files, or selected tablespaces.
  .. Select *Backup Archivelogs* to back up the archive log files separately.
  .. Select *Prune Archivelogs* if you want to delete the archive log files from the active file system that is already backed up.
@@ -40,7 +42,7 @@ This option is enabled only if the protection policy was selected while creating
  .. Select *Protect Now* if you want to protect the backup immediately to the secondary storage overriding Protection Manager's protection schedule.
  .. From the *Type* drop-down list, select the type of backup (offline or online) you want to create.
 +
-If you select Auto, SnapManager creates a backup based on the current state of the database.
+If you select _Auto_, SnapManager creates a backup based on the current state of the database.
 
  .. From the *Retention Class* drop-down list, select the retention class.
  .. Select the *Verify backup using the Oracle DBVERIFY utility* check box if you want to ensure that the backed-up files are not corrupted.
@@ -48,19 +50,19 @@ If you select Auto, SnapManager creates a backup based on the current state of t
 +
 You must not include spaces in the name.
 
-. On the Configure Backup Schedule page, perform the following:
+. On the *Configure Backup Schedule* page, perform the following:
  .. From the *Perform this operation* drop-down list, select the frequency of the backup schedule.
  .. In the *Start Date* field, specify the date when you want to initiate the backup schedule.
  .. In the *Start Time* field, specify the time when you want to initiate the backup schedule.
  .. Specify the interval in which backups will be created.
 +
 For example, if you have selected the frequency as hourly and specify the interval as 2, then backups will be scheduled every 2 hours.
-. On the Task Enabling page, specify whether you want to perform tasks before and after backup operations are completed.
-. On the Perform Backup Schedule Operation page, verify the information and click *Schedule*.
+. On the *Task Enabling* page, specify whether you want to perform tasks before and after backup operations are completed.
+. On the *Perform Backup Schedule Operation* page, verify the information and click *Schedule*.
 . Click *Finish* to close the wizard.
 +
 If the operation fails, click *Operation Details* to view what caused the operation to fail.
 
 *Related information*
 
-https://library.netapp.com/ecm/ecm_download_file/ECMP12481453[SnapManager 3.4.1 for SAP Administration Guide for UNIX]
+https://library.netapp.com/ecm/ecm_download_file/ECMP12481453[SnapManager 3.4.1 for SAP Administration Guide for UNIX^]
