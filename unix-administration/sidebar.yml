@@ -26,8 +26,8 @@ entries:
       url: "/unix-administration/concept_what_snapmanager_operation_states_are.html"
     - title: How SnapManager maintains security
       url: "/unix-administration/concept_snapmanager_security.html"
-    - title: Accessing and printing online Help
-      url: "/unix-administration/task_accessing_and_printing_online_help.html"
+    - title: Access and print online Help
+      url: "/unix-administration/task_access_and_print_online_help.html"
     - title: Recommended general database layouts and storage configurations
       url: "/unix-administration/concept_general_layout_and_configuration.html"
       entries:
@@ -79,14 +79,14 @@ entries:
         url: "/unix-administration/task_setting_role_based_access_control_capabilities_and_roles.html"
     - title: Storing encrypted passwords for custom scripts
       url: "/unix-administration/task_storing_encrypted_passwords_for_custom_scripts.html"
-    - title: Authorizing access to the repository
-      url: "/unix-administration/task_authorizing_user_access_to_the_repository.html"
-    - title: Authorizing access to profiles
-      url: "/unix-administration/task_authorizing_user_access_to_profiles.html"
+    - title: Authorize access to the repository
+      url: "/unix-administration/task_authorize_user_access_to_the_repository.html"
+    - title: Authorize access to profiles
+      url: "/unix-administration/task_authorize_user_access_to_profiles.html"
     - title: Viewing user credentials
       url: "/unix-administration/task_viewing_user_credentials.html"
-    - title: Clearing user credentials for all hosts, repositories, and profiles
-      url: "/unix-administration/task_clearing_user_credentials_for_all_hosts_repositories_and_profiles.html"
+    - title: Clear user credentials for all hosts, repositories, and profiles
+      url: "/unix-administration/task_clear_user_credentials_for_all_hosts_repositories_and_profiles.html"
       entries:
       - title: Setting credentials after clearing the credential cache
         url: "/unix-administration/task_setting_credentials_after_clearing_credential_cache.html"
@@ -108,8 +108,8 @@ entries:
       url: "/unix-administration/concept_snapshot_copy_naming.html"
     - title: Renaming profiles
       url: "/unix-administration/task_renaming_profiles.html"
-    - title: Changing profile passwords
-      url: "/unix-administration/task_changing_profile_passwords.html"
+    - title: Change profile passwords
+      url: "/unix-administration/task_change_profile_passwords.html"
     - title: Resetting the profile password
       url: "/unix-administration/task_resetting_profile_password.html"
     - title: Authorizing access to profiles
@@ -154,24 +154,24 @@ entries:
     - title: What AutoSupport is
       url: "/unix-administration/concept_what_autosupport_is.html"
       entries:
-      - title: Adding storage systems operating in clustered Data ONTAP to the SnapManager
+      - title: Add storage systems operating in clustered Data ONTAP to the SnapManager
           server host
-        url: "/unix-administration/task_adding_storage_systems_to_the_snapmanager_server_host.html"
+        url: "/unix-administration/task_add_storage_systems_to_the_snapmanager_server_host.html"
       - title: Enabling AutoSupport in SnapManager
         url: "/unix-administration/task_enabling_autosupport_in_snapmanager.html"
       - title: Disabling AutoSupport in SnapManager
         url: "/unix-administration/task_disabling_autosupport_in_snapmanager.html"
     - title: Verifying database backups
       url: "/unix-administration/task_verifying_database_backups.html"
-    - title: Changing the backup retention policy
-      url: "/unix-administration/task_changing_the_backup_retention_policy.html"
+    - title: Change the backup retention policy
+      url: "/unix-administration/task_change_the_backup_retention_policy.html"
       entries:
       - title: Retaining backups forever
         url: "/unix-administration/task_retaining_backups_forever.html"
-      - title: Assigning backups with a specific retention class
-        url: "/unix-administration/task_assigning_backups_with_a_specific_retention_class.html"
-      - title: Changing the retention policy default behavior
-        url: "/unix-administration/task_changing_the_retention_policy_default_behavior.html"
+      - title: Assign backups with a specific retention class
+        url: "/unix-administration/task_assign_backups_with_a_specific_retention_class.html"
+      - title: Change the retention policy default behavior
+        url: "/unix-administration/task_change_the_retention_policy_default_behavior.html"
       - title: Freeing or deleting retention policy exempt backups
         url: "/unix-administration/task_freeing_or_deleting_retention_policy_exempt_backups.html"
     - title: Viewing a list of backups
@@ -254,19 +254,19 @@ entries:
     - title: Creating clone specifications
       url: "/unix-administration/task_creating_clone_specifications.html"
       entries:
-      - title: Cloning databases and using custom plug-in scripts
-        url: "/unix-administration/task_cloning_databases_and_using_custom_plugin_scripts.html"
-    - title: Cloning databases from backups
-      url: "/unix-administration/task_cloning_databases_from_backups.html"
-    - title: Cloning databases in the current state
-      url: "/unix-administration/task_cloning_databases_in_the_current_state.html"
-    - title: Cloning database backups without resetlogs
-      url: "/unix-administration/task_cloning_database_backups_without_resetlogs.html"
+      - title: Clone databases and using custom plug-in scripts
+        url: "/unix-administration/task_clone_databases_and_using_custom_plugin_scripts.html"
+    - title: Clone databases from backups
+      url: "/unix-administration/task_clone_databases_from_backups.html"
+    - title: Clone databases in the current state
+      url: "/unix-administration/task_clone_databases_in_the_current_state.html"
+    - title: Clone database backups without resetlogs
+      url: "/unix-administration/task_clone_database_backups_without_resetlogs.html"
     - title: Considerations for cloning a database to an alternate host
       url: "/unix-administration/concept_considerations_for_cloning_a_database_to_an_alternate_host.html"
       entries:
-      - title: Cloning a database to an alternate host
-        url: "/unix-administration/task_cloning_a_database_to_an_alternate_host.html"
+      - title: Clone a database to an alternate host
+        url: "/unix-administration/task_clone_a_database_to_an_alternate_host.html"
     - title: Viewing a list of clones
       url: "/unix-administration/task_viewing_a_list_of_clones.html"
     - title: Viewing detailed clone information
@@ -328,8 +328,8 @@ entries:
         url: "/unix-administration/concept_restores_of_protected_backups_overview.html"
       - title: Restoring backups from secondary storage
         url: "/unix-administration/task_restoring_backups_from_secondary_storage.html"
-    - title: Cloning protected backups
-      url: "/unix-administration/task_cloning_protected_backups.html"
+    - title: Clone protected backups
+      url: "/unix-administration/task_clone_protected_backups.html"
   - title: SnapManager for SAP uses Protection Manager to protect a database backup
     url: "/unix-administration/concept_snapmanager_for_oraclesnapmanager_for_sap_uses_protection_manager_to_protect_a_database_backup.html"
     entries:
@@ -379,8 +379,8 @@ entries:
       url: "/unix-administration/task_viewing_operation_details.html"
     - title: Issuing commands from an alternate host
       url: "/unix-administration/task_issuing_commands_from_an_alternate_host.html"
-    - title: Checking the SnapManager software version
-      url: "/unix-administration/task_checking_the_snapmanager_software_version.html"
+    - title: Check the SnapManager software version
+      url: "/unix-administration/task_check_the_snapmanager_software_version.html"
     - title: Stopping the SnapManager host server
       url: "/unix-administration/task_stopping_the_snapmanager_host_server.html"
     - title: Restarting the SnapManager UNIX host server
@@ -392,22 +392,22 @@ entries:
     entries:
     - title: Configuring a mail server for a repository
       url: "/unix-administration/task_configuring_mail_server_for_a_repository.html"
-    - title: Configuring email notification for a new profile
-      url: "/unix-administration/task_configuring_e_mail_notification_for_a_new_profile.html"
+    - title: Configure email notification for a new profile
+      url: "/unix-administration/task_configure_e_mail_notification_for_a_new_profile.html"
       entries:
       - title: Customizing the email subject for a new profile
         url: "/unix-administration/task_customizing_e_mail_subject_for_a_new_profile.html"
-    - title: Configuring email notification for an existing profile
-      url: "/unix-administration/task_configuring_e_mail_notification_for_an_existing_profile.html"
+    - title: Configure email notification for an existing profile
+      url: "/unix-administration/task_configure_e_mail_notification_for_an_existing_profile.html"
       entries:
       - title: Customizing the email subject for an existing profile
         url: "/unix-administration/task_customizing_the_email_subject_for_an_existing_profile.html"
     - title: Configuring summary email notification for multiple profiles
       url: "/unix-administration/task_configuring_summary_e_mail_notification_for_multiple_profiles.html"
-    - title: Adding a new profile to summary email notifications
-      url: "/unix-administration/task_adding_new_profile_to_summary_notification.html"
-    - title: Adding an existing profile to summary email notifications
-      url: "/unix-administration/task_adding_existing_profile_to_summary_notification.html"
+    - title: Add a new profile to summary email notifications
+      url: "/unix-administration/task_add_new_profile_to_summary_notification.html"
+    - title: Add an existing profile to summary email notifications
+      url: "/unix-administration/task_add_existing_profile_to_summary_notification.html"
     - title: Disabling email notification for multiple profiles
       url: "/unix-administration/task_disabling_email_notification_for_multiple_profiles.html"
   - title: Creating task specification file and scripts for SnapManager operations

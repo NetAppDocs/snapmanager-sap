@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_configuring_e_mail_notification_for_an_existing_profile.html
+permalink: unix-administration/task_configure_e_mail_notification_for_an_existing_profile.html
 sidebar: sidebar
 keywords: updating, update, profile, configure, receive, email, notification, completion, database, operation, configuring, exist
 summary: "When you are updating a profile, you can configure to receive an email notification on completion of the database operation."
 ---
-= Configuring email notification for an existing profile
+= Configure email notification for an existing profile
 :icons: font
 :imagesdir: ../media/
 

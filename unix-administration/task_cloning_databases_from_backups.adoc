@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_cloning_databases_from_backups.html
+permalink: unix-administration/task_clone_databases_from_backups.html
 sidebar: sidebar
 keywords: clone, database, backup, create, command, cloning
 summary: "You can clone a database from a backup by using the clone create command."
 ---
-= Cloning databases from backups
+= Clone databases from backups
 :icons: font
 :imagesdir: ../media/
 

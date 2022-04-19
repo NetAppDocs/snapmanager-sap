@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_configuring_e_mail_notification_for_a_new_profile.html
+permalink: unix-administration/task_configure_e_mail_notification_for_a_new_profile.html
 sidebar: sidebar
 keywords: creating, create, configure, configuring, email, notification, profile, database, operation
 summary: "When you are creating a new profile, you can configure to receive an email notification on completion of the database operation."
 ---
-= Configuring email notification for a new profile
+= Configure email notification for a new profile
 :icons: font
 :imagesdir: ../media/
 

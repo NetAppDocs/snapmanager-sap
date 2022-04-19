@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_accessing_and_printing_online_help.html
+permalink: unix-administration/task_access_and_print_online_help.html
 sidebar: sidebar
 keywords: online, help, instruction, task, perform, snapmanager, graphical, user, interface, description, field, window, wizard, access, print
 summary: "The online Help provides instructions for the tasks that you can perform using the SnapManager graphical user interface. The online Help also provides descriptions of fields on the windows and wizards."
 ---
-= Accessing and printing online Help
+= Access and print online Help
 :icons: font
 :imagesdir: ../media/
 

@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_adding_new_profile_to_summary_notification.html
+permalink: unix-administration/task_add_new_profile_to_summary_notification.html
 sidebar: sidebar
 keywords: configure, summary, email, notification, repository, database, profile, command
 summary: "After you configure a summary email notification for the repository database, you can add a new profile to summary notification by using the summary notification command."
 ---
-= Adding a new profile to summary email notifications
+= Add a new profile to summary email notifications
 :icons: font
 :imagesdir: ../media/
 

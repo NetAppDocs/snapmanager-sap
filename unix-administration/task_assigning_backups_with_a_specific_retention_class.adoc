@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_assigning_backups_with_a_specific_retention_class.html
+permalink: unix-administration/task_assign_backups_with_a_specific_retention_class.html
 sidebar: sidebar
 keywords: dba, assign, specific, retention, class, hourly, daily, weekly, monthly, backup, eligible, deletion
 summary: "DBAs can assign a specific retention class of hourly, daily, weekly, or monthly to backups. Assigning a specific retention class makes the backups performed under this change eligible for deletion."
 ---
-= Assigning backups with a specific retention class
+= Assign backups with a specific retention class
 :icons: font
 :imagesdir: ../media/
 

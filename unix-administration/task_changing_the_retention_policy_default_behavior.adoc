@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_changing_the_retention_policy_default_behavior.html
+permalink: unix-administration/task_change_the_retention_policy_default_behavior.html
 sidebar: sidebar
 keywords: backup, expire, base, retention, policy, snapmanager, determine, delete, back, up, setting, behavior, unprotect, protect, changing, change
 summary: "When a backup expires based on the retention policy, SnapManager determines whether to delete the backup based on the retention settings. Deletion of backups is the default behavior. You can change this default behavior and choose to free the unprotected backups instead."
 ---
-= Changing the retention policy default behavior
+= Change the retention policy default behavior
 :icons: font
 :imagesdir: ../media/
 
