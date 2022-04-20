@@ -278,14 +278,14 @@ entries:
       entries:
       - title: Viewing a clone split estimate
         url: "/unix-administration/task_viewing_clone_split_estimate.html"
-      - title: Splitting a clone on primary or secondary storage
-        url: "/unix-administration/task_splitting_a_clone_on_a_primary_or_secondary_storage.html"
+      - title: Split a clone on primary or secondary storage
+        url: "/unix-administration/task_split_a_clone_on_a_primary_or_secondary_storage.html"
       - title: Viewing the status of the clone split process
         url: "/unix-administration/task_viewing_status_of_clone_split_process.html"
       - title: Viewing the result of the clone split process
         url: "/unix-administration/task_viewing_the_result_of_the_clone_split_process.html"
-      - title: Stopping the clone split process
-        url: "/unix-administration/task_stopping_the_clone_split_process.html"
+      - title: Stop the clone split process
+        url: "/unix-administration/task_stop_the_clone_split_process.html"
       - title: Delete a profile
         url: "/unix-administration/task_delete_profile.html"
       - title: Destroy a profile
@@ -381,8 +381,8 @@ entries:
       url: "/unix-administration/task_issue_commands_from_an_alternate_host.html"
     - title: Check the SnapManager software version
       url: "/unix-administration/task_check_the_snapmanager_software_version.html"
-    - title: Stopping the SnapManager host server
-      url: "/unix-administration/task_stopping_the_snapmanager_host_server.html"
+    - title: Stop the SnapManager host server
+      url: "/unix-administration/task_stop_the_snapmanager_host_server.html"
     - title: Restart the SnapManager UNIX host server
       url: "/unix-administration/task_restart_the_snapmanager_unix_host_server.html"
     - title: Uninstalling the software from a UNIX host

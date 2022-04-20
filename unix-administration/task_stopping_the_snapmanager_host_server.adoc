@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_stopping_the_snapmanager_host_server.html
+permalink: unix-administration/task_stop_the_snapmanager_host_server.html
 sidebar: sidebar
 keywords: finish, snapmanager, stop, server, host
 summary: "When you have finished using SnapManager, you might want to stop the server."
 ---
-= Stopping the SnapManager host server
+= Stop the SnapManager host server
 :icons: font
 :imagesdir: ../media/
 
