@@ -1,10 +1,10 @@
 ---
-permalink: unix-installation-7mode/task_preparing_storage_systems_for_snapmirror_replication_7_mode.html
+permalink: unix-installation-7mode/task_prepare_storage_systems_for_snapmirror_replication_7_mode.html
 sidebar: sidebar
 keywords: snapmanager, snapmirror, technology, mirror, snapshot, copies, copy, configure, initialize, data-protection, relationship, destination, volume, prepare, preparing, storage, system, replication
 summary: "Before you can use SnapManager’s integrated SnapMirror technology to mirror Snapshot copies, you must configure and initialize a data-protection relationship between the source and destination volumes. On initialization, SnapMirror makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks it references to the destination volume. It also transfers any other, less recent Snapshot copies on the source volume to the destination volume."
 ---
-= Preparing storage systems for SnapMirror replication
+= Prepare storage systems for SnapMirror replication
 :icons: font
 :imagesdir: ../media/
 

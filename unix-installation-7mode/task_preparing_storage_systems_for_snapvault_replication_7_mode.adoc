@@ -1,10 +1,10 @@
 ---
-permalink: unix-installation-7mode/task_preparing_storage_systems_for_snapvault_replication_7_mode.html
+permalink: unix-installation-7mode/task_prepare_storage_systems_for_snapvault_replication_7_mode.html
 sidebar: sidebar
 keywords: snapmanager, integrate, snapvault, technology, archive, snapshot, copies, copy, disk, configure, intialize, data-protection, relationship, source, volume, destination, volume, initialization, data, block, preparing, prepare, storage, system, replication
 summary: "Before you can use SnapManager’s integrated SnapVault technology to archive Snapshot copies to disk, you must configure and initialize a data-protection relationship between the source and destination volumes. On initialization, SnapVault makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks it references to the destination volume."
 ---
-= Preparing storage systems for SnapVault replication
+= Prepare storage systems for SnapVault replication
 :icons: font
 :imagesdir: ../media/
 

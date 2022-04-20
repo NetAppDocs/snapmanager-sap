@@ -1,10 +1,10 @@
 ---
-permalink: unix-installation-7mode/task_performing_rolling_upgrade_on_a_single_host_or_multiple_hosts.html
+permalink: unix-installation-7mode/task_perform_rolling_upgrade_on_a_single_host_or_multiple_hosts.html
 sidebar: sidebar
 keywords: perform, roll, upgrade, single, multiple, snapmanager, server, host, command-line, interface, cli, version
 summary: "You can perform rolling upgrade on a single or multiple SnapManager server hosts by using the command-line interface (CLI). The upgraded SnapManager server host is then managed only with the later version of SnapManager."
 ---
-= Performing rolling upgrade on a single host or multiple hosts
+= Perform rolling upgrade on a single host or multiple hosts
 :icons: font
 :imagesdir: ../media/
 

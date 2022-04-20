@@ -1,10 +1,10 @@
 ---
-permalink: unix-installation-7mode/task_smsap_isg_creating_a_profile_for_your_database.html
+permalink: unix-installation-7mode/task_smsap_isg_create_a_profile_for_your_database.html
 sidebar: sidebar
 keywords: create, profile, database, information, reference, multiple, creating
 summary: "You must create a profile for your database to perform any operation on that database. The profile contains information about the database and can reference only one database; however, a database can be referenced by multiple profiles. A backup that is created using one profile cannot be accessed from a different profile, even if both profiles are associated with the same database."
 ---
-= Creating a profile for your database
+= Create a profile for your database
 :icons: font
 :imagesdir: ../media/
 

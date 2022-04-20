@@ -1,10 +1,10 @@
 ---
-permalink: unix-installation-7mode/task_creating_an_oracle_user_for_the_target_database.html
+permalink: unix-installation-7mode/task_create_an_oracle_user_for_the_target_database.html
 sidebar: sidebar
 keywords: oracle, database, user, require, log, in, snapmanager, operation, create, user, sysdba, privilege, target, creating, target
 summary: "An Oracle database user is required to log in to the database and perform SnapManager operations. You must create this user with the sysdba privilege if a user with the sysdba privilege does not exist for the target database."
 ---
-= Creating an Oracle database user for the target database
+= Create an Oracle database user for the target database
 :icons: font
 :imagesdir: ../media/
 

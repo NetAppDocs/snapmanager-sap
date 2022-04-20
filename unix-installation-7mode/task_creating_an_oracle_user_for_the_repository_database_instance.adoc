@@ -1,10 +1,10 @@
 ---
-permalink: unix-installation-7mode/task_creating_an_oracle_user_for_the_repository_database_instance.html
+permalink: unix-installation-7mode/task_create_an_oracle_user_for_the_repository_database_instance.html
 sidebar: sidebar
 keywords: oracle, user, require, log, access, repository, database, instance, create, connect, resource, privileges, creating
 summary: "An Oracle user is required to log in to and access the repository database instance. You must create this user with connect and resource privileges."
 ---
-= Creating an Oracle user for the repository database instance
+= Create an Oracle user for the repository database instance
 :icons: font
 :imagesdir: ../media/
 

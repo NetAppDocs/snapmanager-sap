@@ -1,10 +1,10 @@
 ---
-permalink: unix-installation-7mode/task_smsap_isg_installing_snapmanager.html
+permalink: unix-installation-7mode/task_smsap_isg_install_snapmanager.html
 sidebar: sidebar
 keywords: install, snapmanager, host, database, backup, run
 summary: "You must install SnapManager on each host where the database you want to backup is running."
 ---
-= Installing SnapManager
+= Install SnapManager
 :icons: font
 :imagesdir: ../media/
 

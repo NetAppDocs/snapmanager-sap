@@ -1,10 +1,10 @@
 ---
-permalink: unix-installation-7mode/task_smsap_isg_verifying_database_backups.html
+permalink: unix-installation-7mode/task_smsap_isg_verify_database_backups.html
 sidebar: sidebar
 keywords: verify, backup, database, ensure, backed-up, file, corrupt
 summary: "You can verify the backup of your database to ensure that the backed-up files are not corrupted."
 ---
-= Verifying database backups
+= Verify database backups
 :icons: font
 :imagesdir: ../media/
 
