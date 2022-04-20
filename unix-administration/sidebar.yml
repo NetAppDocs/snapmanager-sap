@@ -114,8 +114,8 @@ entries:
       url: "/unix-administration/task_reset_profile_password.html"
     - title: Authorizing access to profiles
       url: "/unix-administration/task_authorizing_user_access_to_profiles.html"
-    - title: Verifying profiles
-      url: "/unix-administration/task_verifying_profiles.html"
+    - title: Verify profiles
+      url: "/unix-administration/task_verif_profiles.html"
     - title: Update profiles
       url: "/unix-administration/task_update_profiles.html"
     - title: Delete profiles
@@ -161,8 +161,8 @@ entries:
         url: "/unix-administration/task_enable_autosupport_in_snapmanager.html"
       - title: Disable AutoSupport in SnapManager
         url: "/unix-administration/task_disable_autosupport_in_snapmanager.html"
-    - title: Verifying database backups
-      url: "/unix-administration/task_verifying_database_backups.html"
+    - title: Verify database backups
+      url: "/unix-administration/task_verify_database_backups.html"
     - title: Change the backup retention policy
       url: "/unix-administration/task_change_the_backup_retention_policy.html"
       entries:
@@ -432,8 +432,8 @@ entries:
       url: "/unix-administration/task_create_task_scripts.html"
     - title: Store the task scripts
       url: "/unix-administration/task_store_the_task_scripts.html"
-    - title: Verifying the installation of plug-in scripts
-      url: "/unix-administration/task_verifying_installation_of_plugin_scripts.html"
+    - title: Verify the installation of plug-in scripts
+      url: "/unix-administration/task_verify_installation_of_plugin_scripts.html"
     - title: Create a task specification file
       url: "/unix-administration/task_create_a_task_specification_file.html"
     - title: Perform backup, restore, and clone operations using prescript and

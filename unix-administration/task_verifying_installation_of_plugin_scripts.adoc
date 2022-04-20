@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_verifying_installation_of_plugin_scripts.html
+permalink: unix-administration/task_verify_installation_of_plugin_scripts.html
 sidebar: sidebar
 keywords: snapmanager, enable, install, custom, script, various, operation, snapmanager, plugin, backup, restore, clone, operation, automate, custom, script, plug-in
 summary: "SnapManager enables you to install and use custom scripts to perform various operations. SnapManager provides plugins for the backup, restore, and clone operations, which you can use to automate your custom scripts before and after the backup, restore, and clone operations."
 ---
-= Verifying the installation of plug-in scripts
+= Verify the installation of plug-in scripts
 :icons: font
 :imagesdir: ../media/
 

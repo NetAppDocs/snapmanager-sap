@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_verifying_profiles.html
+permalink: unix-administration/task_verify_profiles.html
 sidebar: sidebar
 keywords: verify, exist, profile, set, up, correct, snapmanager, environment, accessible
 summary: "You can verify that an existing profile is set up correctly. When you verify a profile, SnapManager checks the environment for the profile you specify and verifies that the profile is set up and the database in this profile is accessible."
 ---
-= Verifying profiles
+= Verify profiles
 :icons: font
 :imagesdir: ../media/
 

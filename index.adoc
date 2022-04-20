@@ -2,4 +2,4 @@
 permalink: index.html
 sidebar: sidebar
 ---
-= SnapManager for SAP docs
+= SnapManager for SAP Documentation
