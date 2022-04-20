@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_using_protection_manager_to_configure_secondary_backup_schedules.html
+permalink: unix-administration/task_use_protection_manager_to_configure_secondary_backup_schedules.html
 sidebar: sidebar
 keywords: support, backup, database, secondary, storage, administrator, protection, manager, configure, schedule
 summary: "To support backup of the database to secondary storage, the storage administrator uses Protection Manager to configure a backup schedule."
 ---
-= Using Protection Manager to configure secondary backup schedules
+= Use Protection Manager to configure secondary backup schedules
 :icons: font
 :imagesdir: ../media/
 

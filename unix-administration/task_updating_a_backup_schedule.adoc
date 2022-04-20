@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_updating_a_backup_schedule.html
+permalink: unix-administration/task_update_a_backup_schedule.html
 sidebar: sidebar
 keywords: view, list, schedule, operation, update, frequency, start, time, cronstring, expression, user, updating, backup
 summary: "You can view a list of scheduled operations and update them if necessary. You can update the scheduling frequency, the start time of the schedule, cronstring expression, and the user who scheduled the backup."
 ---
-= Updating a backup schedule
+= Update a backup schedule
 :icons: font
 :imagesdir: ../media/
 

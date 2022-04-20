@@ -116,8 +116,8 @@ entries:
       url: "/unix-administration/task_authorizing_user_access_to_profiles.html"
     - title: Verifying profiles
       url: "/unix-administration/task_verifying_profiles.html"
-    - title: Updating profiles
-      url: "/unix-administration/task_updating_profiles.html"
+    - title: Update profiles
+      url: "/unix-administration/task_update_profiles.html"
     - title: Delete profiles
       url: "/unix-administration/task_delete_profiles.html"
   - title: Backing up databases
@@ -180,8 +180,8 @@ entries:
       url: "/unix-administration/task_viewing_backup_details.html"
     - title: Mount backups
       url: "/unix-administration/task_mount_backups.html"
-    - title: Unmounting backups
-      url: "/unix-administration/task_unmounting_backups.html"
+    - title: Unmount backups
+      url: "/unix-administration/task_unmount_backups.html"
     - title: Free backups
       url: "/unix-administration/task_free_backups.html"
     - title: Delete backups
@@ -191,12 +191,12 @@ entries:
     entries:
     - title: Create backup schedules
       url: "/unix-administration/task_create_backup_schedules.html"
-    - title: Updating a backup schedule
-      url: "/unix-administration/task_updating_a_backup_schedule.html"
+    - title: Update a backup schedule
+      url: "/unix-administration/task_update_a_backup_schedule.html"
     - title: Viewing a list of scheduled operations
       url: "/unix-administration/task_viewing_a_list_of_scheduled_operations.html"
-    - title: Suspending backup schedules
-      url: "/unix-administration/task_suspending_backup_schedules.html"
+    - title: Suspend backup schedules
+      url: "/unix-administration/task_suspend_backup_schedules.html"
     - title: Resume backup schedules
       url: "/unix-administration/task_resume_backup_schedules.html"
     - title: Delete backup schedules
@@ -344,32 +344,32 @@ entries:
     - title: Protected backup configuration and execution
       url: "/unix-administration/task_protected_backup_configuration_and_execution.html"
       entries:
-      - title: Using SnapManager for SAP to create the database profile for a local
+      - title: Use SnapManager for SAP to create the database profile for a local
           backup
-        url: "/unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_for_a_local_backup.html"
-      - title: Using Protection Manager to configure a secondary resource pool
-        url: "/unix-administration/task_using_protection_manager_to_configure_a_secondary_resource_pool.html"
-      - title: Using Protection Manager to configure secondary backup schedules
-        url: "/unix-administration/task_using_protection_manager_to_configure_secondary_backup_schedules.html"
-      - title: Using Protection Manager to configure a secondary backup protection
+        url: "/unix-administration/task_use_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_for_a_local_backup.html"
+      - title: Use Protection Manager to configure a secondary resource pool
+        url: "/unix-administration/task_use_protection_manager_to_configure_a_secondary_resource_pool.html"
+      - title: Use Protection Manager to configure secondary backup schedules
+        url: "/unix-administration/task_use_protection_manager_to_configure_secondary_backup_schedules.html"
+      - title: Use Protection Manager to configure a secondary backup protection
           policy
-        url: "/unix-administration/task_using_protection_manager_to_configure_a_secondary_backup_protection_policy.html"
-      - title: Using SnapManager for SAP to create the database profile and assign
+        url: "/unix-administration/task_use_protection_manager_to_configure_a_secondary_backup_protection_policy.html"
+      - title: Use SnapManager for SAP to create the database profile and assign
           a protection policy
-        url: "/unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_and_assign_a_protection_policy.html"
-      - title: Using Protection Manager to provision the new dataset
-        url: "/unix-administration/task_using_protection_manager_to_provision_the_new_dataset.html"
-      - title: Using SnapManager for SAP to create a protected backup
-        url: "/unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_create_a_protected_backup.html"
-      - title: Using SnapManager for SAP to confirm backup protection
-        url: "/unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sapto_confirm_backup_protection.html"
+        url: "/unix-administration/task_use_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_and_assign_a_protection_policy.html"
+      - title: Use Protection Manager to provision the new dataset
+        url: "/unix-administration/task_use_protection_manager_to_provision_the_new_dataset.html"
+      - title: Use SnapManager for SAP to create a protected backup
+        url: "/unix-administration/task_use_snapmanager_for_oraclesnapmanager_for_sap_to_create_a_protected_backup.html"
+      - title: Use SnapManager for SAP to confirm backup protection
+        url: "/unix-administration/task_use_snapmanager_for_oraclesnapmanager_for_sapto_confirm_backup_protection.html"
     - title: Database restore from backup
       url: "/unix-administration/task_database_restore_from_backup.html"
       entries:
-      - title: Using SnapManager for SAP to restore a local backup on primary storage
+      - title: Use SnapManager for SAP to restore a local backup on primary storage
         url: "/unix-administration/task_use_snapmanager_for_oraclesnapmanager_for_sapto_restore_a_local_backup_on_primary_storage.html"
-      - title: Using SnapManager for SAP to restore backups from secondary storage
-        url: "/unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_restore_backups_from_secondary_storage.html"
+      - title: Use SnapManager for SAP to restore backups from secondary storage
+        url: "/unix-administration/task_use_snapmanager_for_oraclesnapmanager_for_sap_to_restore_backups_from_secondary_storage.html"
   - title: Performing management operations
     url: "/unix-administration/concept_performing_management_operations.html"
     entries:
@@ -385,8 +385,8 @@ entries:
       url: "/unix-administration/task_stop_the_snapmanager_host_server.html"
     - title: Restart the SnapManager UNIX host server
       url: "/unix-administration/task_restart_the_snapmanager_unix_host_server.html"
-    - title: Uninstalling the software from a UNIX host
-      url: "/unix-administration/task_uninstalling_the_software_from_a_unix_host.html"
+    - title: Uninstall the software from a UNIX host
+      url: "/unix-administration/task_uninstall_the_software_from_a_unix_host.html"
   - title: Configuring an email notification
     url: "/unix-administration/concept_configuring_e_mail_notification.html"
     entries:
@@ -443,12 +443,12 @@ entries:
       a profile
     url: "/unix-administration/concept_updating_storage_controller_name_and_database_hostname_associated_with_a_profile.html"
     entries:
-    - title: Updating the storage system name associated with a profile
-      url: "/unix-administration/task_updating_storage_system_name_associated_with_a_profile.html"
+    - title: Update the storage system name associated with a profile
+      url: "/unix-administration/task_update_storage_system_name_associated_with_a_profile.html"
     - title: Viewing a list of storage systems associated with a profile
       url: "/unix-administration/task_viewing_a_list_of_storage_controllers_associated_with_a_profile.html"
-    - title: Updating the target database host name associated with a profile
-      url: "/unix-administration/task_updating_target_database_hostname_associated_with_a_profile.html"
+    - title: Update the target database host name associated with a profile
+      url: "/unix-administration/task_update_target_database_hostname_associated_with_a_profile.html"
   - title: Maintaining history of SnapManager operations
     url: "/unix-administration/concept_maintaining_history_of_snapmanager_operations.html"
     entries:

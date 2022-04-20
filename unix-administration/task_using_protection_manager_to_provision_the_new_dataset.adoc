@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_using_protection_manager_to_provision_the_new_dataset.html
+permalink: unix-administration/task_use_protection_manager_to_provision_the_new_dataset.html
 sidebar: sidebar
 keywords: smsap_paydb, dataset, create, storage, administrator, protection, manager, assign, system, resource, provision, backup, node
 summary: "After the smsap_paydb dataset is created, the storage administrator uses Protection Manager to assign storage system resources to provision the dataset’s Backup node."
 ---
-= Using Protection Manager to provision the new dataset
+= Use Protection Manager to provision the new dataset
 :icons: font
 :imagesdir: ../media/
 

@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_updating_storage_system_name_associated_with_a_profile.html
+permalink: unix-administration/task_update_storage_system_name_associated_with_a_profile.html
 sidebar: sidebar
 keywords: snapmanager, provide, ability, update, host, name, ip, address, storage, system, associate, profile, updating
 summary: "SnapManager 3.3 or later provides the ability to update the host name or IP address of a storage system associated with a profile."
 ---
-= Updating the storage system name associated with a profile
+= Update the storage system name associated with a profile
 :icons: font
 :imagesdir: ../media/
 

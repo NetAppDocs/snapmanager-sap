@@ -9,7 +9,7 @@ settings:
     langs: "us-en,ja-jp,zh-cn"
 sidebar:
   entries:
-    - title: SnapManager for SAP docs
+    - title: SnapManager for SAP Documentation
       url: "/index.html"
     - title: Release Notes
       url: "/reference-releasenotes.html"
