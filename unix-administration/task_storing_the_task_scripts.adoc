@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_storing_the_task_scripts.html
+permalink: unix-administration/task_store_the_task_scripts.html
 sidebar: sidebar
 keywords: store, pretask, post-task, policy, task, script, backup, clone, create, restore, operation, directory, target, server, storing
 summary: "You must store the pretask, post-task, and policy task scripts in a specified directory on the target server where the backups or clones will be created. For the restore operation, the scripts must be placed in the specified directory on the target server where you want to restore the backup."
 ---
-= Storing the task scripts
+= Store the task scripts
 :icons: font
 :imagesdir: ../media/
 

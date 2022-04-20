@@ -77,8 +77,8 @@ entries:
         url: "/unix-administration/task_enable_role_based_access_control.html"
       - title: Set role-based access control capabilities and roles
         url: "/unix-administration/task_set_role_based_access_control_capabilities_and_roles.html"
-    - title: Storing encrypted passwords for custom scripts
-      url: "/unix-administration/task_storing_encrypted_passwords_for_custom_scripts.html"
+    - title: Store encrypted passwords for custom scripts
+      url: "/unix-administration/task_store_encrypted_passwords_for_custom_scripts.html"
     - title: Authorize access to the repository
       url: "/unix-administration/task_authorize_user_access_to_the_repository.html"
     - title: Authorize access to profiles
@@ -430,8 +430,8 @@ entries:
       url: "/unix-administration/task_viewing_sample_plugin_scripts.html"
     - title: Create task scripts
       url: "/unix-administration/task_create_task_scripts.html"
-    - title: Storing the task scripts
-      url: "/unix-administration/task_storing_the_task_scripts.html"
+    - title: Store the task scripts
+      url: "/unix-administration/task_store_the_task_scripts.html"
     - title: Verifying the installation of plug-in scripts
       url: "/unix-administration/task_verifying_installation_of_plugin_scripts.html"
     - title: Create a task specification file
