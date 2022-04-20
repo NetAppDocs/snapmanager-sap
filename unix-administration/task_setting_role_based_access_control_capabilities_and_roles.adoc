@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_setting_role_based_access_control_capabilities_and_roles.html
+permalink: unix-administration/task_set_role_based_access_control_capabilities_and_roles.html
 sidebar: sidebar
 keywords: enable, role-based, access, control, rbac, snapmanager, snapdrive, capabilities, capability, setting, role, operation
 summary: "After you enable role-based access control (RBAC) for SnapManager using SnapDrive, you can add RBAC capabilities and users to roles to perform SnapManager operations."
 ---
-= Setting role-based access control capabilities and roles
+= Set role-based access control capabilities and roles
 :icons: font
 :imagesdir: ../media/
 

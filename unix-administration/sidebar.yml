@@ -75,8 +75,8 @@ entries:
       entries:
       - title: Enable role-based access control
         url: "/unix-administration/task_enable_role_based_access_control.html"
-      - title: Setting role-based access control capabilities and roles
-        url: "/unix-administration/task_setting_role_based_access_control_capabilities_and_roles.html"
+      - title: Set role-based access control capabilities and roles
+        url: "/unix-administration/task_set_role_based_access_control_capabilities_and_roles.html"
     - title: Storing encrypted passwords for custom scripts
       url: "/unix-administration/task_storing_encrypted_passwords_for_custom_scripts.html"
     - title: Authorize access to the repository
