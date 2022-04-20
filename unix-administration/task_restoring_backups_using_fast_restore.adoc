@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_restoring_backups_using_fast_restore.html
+permalink: unix-administration/task_restore_backups_using_fast_restore.html
 sidebar: sidebar
 keywords: force, snapmanager, sap, volume-based, snaprestore, condition, restore, eligibility, restoring
 summary: "You can force SnapManager for SAP to use the volume-based SnapRestore process rather than other restore processes, if all mandatory fast restore eligibility conditions are met."
 ---
-= Restoring backups by using fast restore
+= Restore backups by using fast restore
 :icons: font
 :imagesdir: ../media/
 

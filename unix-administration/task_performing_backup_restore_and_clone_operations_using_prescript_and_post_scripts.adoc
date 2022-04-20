@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_performing_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html
+permalink: unix-administration/task_perform_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html
 sidebar: sidebar
 keywords: script, initiate, initiating, backup, restore, clone, operation, snapmanager, display, task-enabling, create, wizard, restore, recover, parameter, post-script
 summary: "You can use your own script while initiating a backup, restore, or clone operation. SnapManager displays a Task-enabling page in the Backup Create wizard, Restore or Recover wizard, or Clone Create wizard, where you can select the script and provide values for any parameters required by the script."
 ---
-= Performing backup, restore, and clone operations using prescript and post-scripts
+= Perform backup, restore, and clone operations using prescript and post-scripts
 :icons: font
 :imagesdir: ../media/
 

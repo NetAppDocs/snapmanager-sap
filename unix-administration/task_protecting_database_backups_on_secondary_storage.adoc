@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_protecting_database_backups_on_secondary_storage.html
+permalink: unix-administration/task_protect_database_backups_on_secondary_storage.html
 sidebar: sidebar
 keywords: snapmanager, protect, backup, copies, copy, secondary, tertiary, storage, system
 summary: "You can use SnapManager to protect the backup copies on secondary or tertiary storage systems."
 ---
-= Protecting database backups on secondary or tertiary storage
+= Protect database backups on secondary or tertiary storage
 :icons: font
 :imagesdir: ../media/
 

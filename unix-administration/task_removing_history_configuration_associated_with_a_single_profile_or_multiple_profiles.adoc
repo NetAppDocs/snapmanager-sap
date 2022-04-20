@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmanager, enable, remove, history, setting, operation, purge, information, associate, single, multiple, profile, removing
 summary: "SnapManager enables you to remove the history settings of a SnapManager operation. This operation purges all the history information associated with a single profile or multiple profiles."
 ---
-= Removing history settings associated with a single profile or multiple profiles
+= Remove history settings associated with a single profile or multiple profiles
 :icons: font
 :imagesdir: ../media/
 

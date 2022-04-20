@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_pruning_archive_log_files.html
+permalink: unix-administration/task_prune_archive_log_files.html
 sidebar: sidebar
 keywords: prune, archive, log, file, backup, pruning
 summary: "You can prune the archive log files from the archive log locations while creating a backup."
 ---
-= Pruning archive log files
+= Prune archive log files
 :icons: font
 :imagesdir: ../media/
 

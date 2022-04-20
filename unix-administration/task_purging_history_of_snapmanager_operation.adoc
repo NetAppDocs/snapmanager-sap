@@ -1,5 +1,5 @@
 ---
-permalink: unix-administration/task_purging_history_of_snapmanager_operation.html
+permalink: unix-administration/task_purge_history_of_snapmanager_operation.html
 sidebar: sidebar
 keywords: delete, history, snapmanager, operation, require, detail, deleting
 summary: "You can delete the history of the SnapManager operation, if you no longer require the history details."

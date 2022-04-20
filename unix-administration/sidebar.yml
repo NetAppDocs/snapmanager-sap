@@ -106,12 +106,12 @@ entries:
       url: "/unix-administration/task_create_profiles.html"
     - title: Snapshot copy naming
       url: "/unix-administration/concept_snapshot_copy_naming.html"
-    - title: Renaming profiles
-      url: "/unix-administration/task_renaming_profiles.html"
+    - title: Rename profiles
+      url: "/unix-administration/task_rename_profiles.html"
     - title: Change profile passwords
       url: "/unix-administration/task_change_profile_passwords.html"
-    - title: Resetting the profile password
-      url: "/unix-administration/task_resetting_profile_password.html"
+    - title: Reset the profile password
+      url: "/unix-administration/task_reset_profile_password.html"
     - title: Authorizing access to profiles
       url: "/unix-administration/task_authorizing_user_access_to_profiles.html"
     - title: Verifying profiles
@@ -143,14 +143,14 @@ entries:
     - title: Create database backups
       url: "/unix-administration/task_create_database_backups.html"
       entries:
-      - title: Pruning archive log files
-        url: "/unix-administration/task_pruning_archive_log_files.html"
+      - title: Prune archive log files
+        url: "/unix-administration/task_prune_archive_log_files.html"
       - title: Consolidate archive log backups
         url: "/unix-administration/task_consolidate_archive_log_backups.html"
-      - title: Scheduling archive log file pruning
-        url: "/unix-administration/task_scheduling_archive_log_file_pruning.html"
-      - title: Protecting archive log backups
-        url: "/unix-administration/task_protecting_archive_log_backups.html"
+      - title: Schedule archive log file pruning
+        url: "/unix-administration/task_schedule_archive_log_file_pruning.html"
+      - title: Protect archive log backups
+        url: "/unix-administration/task_protect_archive_log_backups.html"
     - title: What AutoSupport is
       url: "/unix-administration/concept_what_autosupport_is.html"
       entries:
@@ -166,20 +166,20 @@ entries:
     - title: Change the backup retention policy
       url: "/unix-administration/task_change_the_backup_retention_policy.html"
       entries:
-      - title: Retaining backups forever
-        url: "/unix-administration/task_retaining_backups_forever.html"
+      - title: Retain backups forever
+        url: "/unix-administration/task_retain_backups_forever.html"
       - title: Assign backups with a specific retention class
         url: "/unix-administration/task_assign_backups_with_a_specific_retention_class.html"
       - title: Change the retention policy default behavior
         url: "/unix-administration/task_change_the_retention_policy_default_behavior.html"
-      - title: Freeing or deleting retention policy exempt backups
-        url: "/unix-administration/task_freeing_or_deleting_retention_policy_exempt_backups.html"
+      - title: Free or delete retention policy exempt backups
+        url: "/unix-administration/task_free_or_delete_retention_policy_exempt_backups.html"
     - title: Viewing a list of backups
       url: "/unix-administration/task_viewing_a_list_of_backups.html"
     - title: Viewing backup details
       url: "/unix-administration/task_viewing_backup_details.html"
-    - title: Mounting backups
-      url: "/unix-administration/task_mounting_backups.html"
+    - title: Mount backups
+      url: "/unix-administration/task_mount_backups.html"
     - title: Unmounting backups
       url: "/unix-administration/task_unmounting_backups.html"
     - title: Free backups
@@ -197,8 +197,8 @@ entries:
       url: "/unix-administration/task_viewing_a_list_of_scheduled_operations.html"
     - title: Suspending backup schedules
       url: "/unix-administration/task_suspending_backup_schedules.html"
-    - title: Resuming backup schedules
-      url: "/unix-administration/task_resuming_backup_schedules.html"
+    - title: Resume backup schedules
+      url: "/unix-administration/task_resume_backup_schedules.html"
     - title: Delete backup schedules
       url: "/unix-administration/task_delete_backup_schedules.html"
   - title: Restoring database backups
@@ -220,14 +220,14 @@ entries:
         url: "/unix-administration/concept_database_state_needed_for_restore_process.html"
       - title: What restore preview plans are
         url: "/unix-administration/concept_restore_preview_plans.html"
-    - title: Previewing backup restore information
-      url: "/unix-administration/task_previewing_backup_restore_information.html"
-    - title: Restoring backups by using fast restore
-      url: "/unix-administration/task_restoring_backups_using_fast_restore.html"
-    - title: Restoring backups by using Single File SnapRestore
-      url: "/unix-administration/task_restoring_backup_using_single_file_snaprestore.html"
-    - title: Restoring backups on primary storage
-      url: "/unix-administration/task_restoring_backups_on_primary_storage.html"
+    - title: Preview backup restore information
+      url: "/unix-administration/task_preview_backup_restore_information.html"
+    - title: Restore backups by using fast restore
+      url: "/unix-administration/task_restore_backups_using_fast_restore.html"
+    - title: Restore backups by using Single File SnapRestore
+      url: "/unix-administration/task_restore_backup_using_single_file_snaprestore.html"
+    - title: Restore backups on primary storage
+      url: "/unix-administration/task_restore_backups_on_primary_storage.html"
     - title: Restore files from an alternate location
       url: "/unix-administration/concept_restore_files_from_an_alternate_location.html"
       entries:
@@ -242,8 +242,8 @@ entries:
           url: "/unix-administration/concept_restoration_of_the_data_from_raw_devices.html"
       - title: Create restore specifications
         url: "/unix-administration/task_create_restore_specifications.html"
-      - title: Restoring backups from an alternate location
-        url: "/unix-administration/task_restoring_backups_from_an_alternate_location.html"
+      - title: Restore backups from an alternate location
+        url: "/unix-administration/task_restore_backups_from_an_alternate_location.html"
   - title: Cloning database backup
     url: "/unix-administration/concept_cloning_database_backup.html"
     entries:
@@ -319,15 +319,15 @@ entries:
       entries:
       - title: Licences required for data protection in SnapManager
         url: "/unix-administration/concept_licenses_required_for_data_protection.html"
-    - title: Protecting database backups on secondary or tertiary storage
-      url: "/unix-administration/task_protecting_database_backups_on_secondary_storage.html"
+    - title: Protect database backups on secondary or tertiary storage
+      url: "/unix-administration/task_protect_database_backups_on_secondary_storage.html"
     - title: Restoring protected backups from secondary storage
       url: "/unix-administration/concept_restoring_protected_backups_from_secondary_storage.html"
       entries:
       - title: Restores of protected backups overview
         url: "/unix-administration/concept_restores_of_protected_backups_overview.html"
-      - title: Restoring backups from secondary storage
-        url: "/unix-administration/task_restoring_backups_from_secondary_storage.html"
+      - title: Restore backups from secondary storage
+        url: "/unix-administration/task_restore_backups_from_secondary_storage.html"
     - title: Clone protected backups
       url: "/unix-administration/task_clone_protected_backups.html"
   - title: SnapManager for SAP uses Protection Manager to protect a database backup
@@ -377,14 +377,14 @@ entries:
       url: "/unix-administration/task_viewing_a_list_of_operations.html"
     - title: Viewing operation details
       url: "/unix-administration/task_viewing_operation_details.html"
-    - title: Issuing commands from an alternate host
-      url: "/unix-administration/task_issuing_commands_from_an_alternate_host.html"
+    - title: Issue commands from an alternate host
+      url: "/unix-administration/task_issue_commands_from_an_alternate_host.html"
     - title: Check the SnapManager software version
       url: "/unix-administration/task_check_the_snapmanager_software_version.html"
     - title: Stopping the SnapManager host server
       url: "/unix-administration/task_stopping_the_snapmanager_host_server.html"
-    - title: Restarting the SnapManager UNIX host server
-      url: "/unix-administration/task_restarting_the_snapmanager_unix_host_server.html"
+    - title: Restart the SnapManager UNIX host server
+      url: "/unix-administration/task_restart_the_snapmanager_unix_host_server.html"
     - title: Uninstalling the software from a UNIX host
       url: "/unix-administration/task_uninstalling_the_software_from_a_unix_host.html"
   - title: Configuring an email notification
@@ -436,9 +436,9 @@ entries:
       url: "/unix-administration/task_verifying_installation_of_plugin_scripts.html"
     - title: Create a task specification file
       url: "/unix-administration/task_create_a_task_specification_file.html"
-    - title: Performing backup, restore, and clone operations using prescript and
+    - title: Perform backup, restore, and clone operations using prescript and
         post-scripts
-      url: "/unix-administration/task_performing_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html"
+      url: "/unix-administration/task_perform_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html"
   - title: Updating storage system name and target database host name associated with
       a profile
     url: "/unix-administration/concept_updating_storage_controller_name_and_database_hostname_associated_with_a_profile.html"
@@ -460,10 +460,10 @@ entries:
         a profile
       url: "/unix-administration/task_viewing_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html"
     - title: Deleting history of SnapManager operation
-      url: "/unix-administration/task_purging_history_of_snapmanager_operation.html"
-    - title: Removing history settings associated with a single profile or multiple
+      url: "/unix-administration/task_purge_history_of_snapmanager_operation.html"
+    - title: Remove history settings associated with a single profile or multiple
         profiles
-      url: "/unix-administration/task_removing_history_configuration_associated_with_a_single_profile_or_multiple_profiles.html"
+      url: "/unix-administration/task_remove_history_configuration_associated_with_a_single_profile_or_multiple_profiles.html"
     - title: Viewing SnapManager history configuration details
       url: "/unix-administration/task_viewing_snapmanger_history_operation_details.html"
   - title: Using BR*Tools with SnapManager for SAP
@@ -477,8 +477,8 @@ entries:
       url: "/unix-administration/concept_profile_usage_for_br_tools_backups.html"
     - title: Database backups created using BRBACKUP and BRARCHIVE
       url: "/unix-administration/concept_database_backups_created_using_brbackup_and_brarchive.html"
-    - title: Scheduling backups with SAP transaction DB13
-      url: "/unix-administration/task_scheduling_backups_with_sap_transaction_db13.html"
+    - title: Schedule backups with SAP transaction DB13
+      url: "/unix-administration/task_schedule_backups_with_sap_transaction_db13.html"
     - title: Database restore by using BRRESTORE and BRRECOVER
       url: "/unix-administration/concept_database_restore_by_using_brrestore_and_brrecover.html"
     - title: Backing up and restoring files using BR*Tools

@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_restoring_backups_from_an_alternate_location.html
+permalink: unix-administration/task_restore_backups_from_an_alternate_location.html
 sidebar: sidebar
 keywords: restore, backup, alternate, location, data, file, intermediate, system, block, raw, device, restoring
 summary: "You can restore backups from an alternate location to restore the data files from an intermediate file system to an active file system, or to restore the blocks of data from an intermediate raw device into an active raw device."
 ---
-= Restoring backups from an alternate location
+= Restore backups from an alternate location
 :icons: font
 :imagesdir: ../media/
 

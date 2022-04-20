@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_retaining_backups_forever.html
+permalink: unix-administration/task_retain_backups_forever.html
 sidebar: sidebar
 keywords: specify, backup, ineligible, deletion, retention, policy, indefinitely, retain, forever
 summary: "You can specify that a backup should be ineligible for deletion by the retention policy to keep the backup indefinitely."
 ---
-= Retaining backups forever
+= Retain backups forever
 :icons: font
 :imagesdir: ../media/
 

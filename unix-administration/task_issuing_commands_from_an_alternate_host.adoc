@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_issuing_commands_from_an_alternate_host.html
+permalink: unix-administration/task_issue_commands_from_an_alternate_host.html
 sidebar: sidebar
 keywords: issue, cli, command, host, database, snapmanager, route, issuing, alternate
 summary: "You can issue CLI commands from a host other than the database host and SnapManager will route the commands you enter to the appropriate host."
 ---
-= Issuing commands from an alternate host
+= Issue commands from an alternate host
 :icons: font
 :imagesdir: ../media/
 

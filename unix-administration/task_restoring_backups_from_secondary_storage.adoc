@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_restoring_backups_from_secondary_storage.html
+permalink: unix-administration/task_restore_backups_from_secondary_storage.html
 sidebar: sidebar
 keywords: restore, protect, backup, secondary, storage, copy, data, back, primary, storage, restoring
 summary: "You can restore protected backups from secondary storage and choose how you want to copy the data back to the primary storage."
 ---
-= Restoring backups from secondary storage
+= Restore backups from secondary storage
 :icons: font
 :imagesdir: ../media/
 

@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_resuming_backup_schedules.html
+permalink: unix-administration/task_resume_backup_schedules.html
 sidebar: sidebar
 keywords: administrator, option, suspend, backup, schedule, resuming, resume
 summary: "Administrators have the option to resume the suspended backup schedule."
 ---
-= Resuming backup schedules
+= Resume backup schedules
 :icons: font
 :imagesdir: ../media/
 
