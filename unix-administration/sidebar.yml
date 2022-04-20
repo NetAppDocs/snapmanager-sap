@@ -88,8 +88,8 @@ entries:
     - title: Clear user credentials for all hosts, repositories, and profiles
       url: "/unix-administration/task_clear_user_credentials_for_all_hosts_repositories_and_profiles.html"
       entries:
-      - title: Setting credentials after clearing the credential cache
-        url: "/unix-administration/task_setting_credentials_after_clearing_credential_cache.html"
+      - title: Set credentials after clearing the credential cache
+        url: "/unix-administration/task_set_credentials_after_clearing_credential_cache.html"
     - title: Delete credentials for individual resources
       url: "/unix-administration/task_delete_credentials_for_individual_resources.html"
       entries:
