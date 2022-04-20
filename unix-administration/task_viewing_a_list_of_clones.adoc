@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_viewing_a_list_of_clones.html
+permalink: unix-administration/task_view_a_list_of_clones.html
 sidebar: sidebar
 keywords: view, list, clone, associate, profile
 summary: "You can view a list of clones associated with a particular profile."
 ---
-= Viewing a list of clones
+= View a list of clones
 :icons: font
 :imagesdir: ../media/
 

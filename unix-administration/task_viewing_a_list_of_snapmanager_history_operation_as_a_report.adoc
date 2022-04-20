@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_viewing_a_list_of_snapmanager_history_operation_as_a_report.html
+permalink: unix-administration/task_view_a_list_of_snapmanager_history_operation_as_a_report.html
 sidebar: sidebar
 keywords: view, history, snapmanager, operation, report, base, retention, setting
 summary: "You can view the history of a specific or all SnapManager operations as a report based on the retention settings."
 ---
-= Viewing a list of SnapManager operation history
+= View a list of SnapManager operation history
 :icons: font
 :imagesdir: ../media/
 

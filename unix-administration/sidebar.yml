@@ -83,8 +83,8 @@ entries:
       url: "/unix-administration/task_authorize_user_access_to_the_repository.html"
     - title: Authorize access to profiles
       url: "/unix-administration/task_authorize_user_access_to_profiles.html"
-    - title: Viewing user credentials
-      url: "/unix-administration/task_viewing_user_credentials.html"
+    - title: View user credentials
+      url: "/unix-administration/task_view_user_credentials.html"
     - title: Clear user credentials for all hosts, repositories, and profiles
       url: "/unix-administration/task_clear_user_credentials_for_all_hosts_repositories_and_profiles.html"
       entries:
@@ -174,10 +174,10 @@ entries:
         url: "/unix-administration/task_change_the_retention_policy_default_behavior.html"
       - title: Free or delete retention policy exempt backups
         url: "/unix-administration/task_free_or_delete_retention_policy_exempt_backups.html"
-    - title: Viewing a list of backups
-      url: "/unix-administration/task_viewing_a_list_of_backups.html"
-    - title: Viewing backup details
-      url: "/unix-administration/task_viewing_backup_details.html"
+    - title: View a list of backups
+      url: "/unix-administration/task_view_a_list_of_backups.html"
+    - title: View backup details
+      url: "/unix-administration/task_view_backup_details.html"
     - title: Mount backups
       url: "/unix-administration/task_mount_backups.html"
     - title: Unmount backups
@@ -193,8 +193,8 @@ entries:
       url: "/unix-administration/task_create_backup_schedules.html"
     - title: Update a backup schedule
       url: "/unix-administration/task_update_a_backup_schedule.html"
-    - title: Viewing a list of scheduled operations
-      url: "/unix-administration/task_viewing_a_list_of_scheduled_operations.html"
+    - title: View a list of scheduled operations
+      url: "/unix-administration/task_view_a_list_of_scheduled_operations.html"
     - title: Suspend backup schedules
       url: "/unix-administration/task_suspend_backup_schedules.html"
     - title: Resume backup schedules
@@ -267,8 +267,8 @@ entries:
       entries:
       - title: Clone a database to an alternate host
         url: "/unix-administration/task_clone_a_database_to_an_alternate_host.html"
-    - title: Viewing a list of clones
-      url: "/unix-administration/task_viewing_a_list_of_clones.html"
+    - title: View a list of clones
+      url: "/unix-administration/task_view_a_list_of_clones.html"
     - title: Viewing detailed clone information
       url: "/unix-administration/task_viewing_detailed_clone_information.html"
     - title: Delete clones
@@ -276,14 +276,14 @@ entries:
     - title: Splitting a clone
       url: "/unix-administration/concept_splitting_a_clone.html"
       entries:
-      - title: Viewing a clone split estimate
-        url: "/unix-administration/task_viewing_clone_split_estimate.html"
+      - title: View a clone split estimate
+        url: "/unix-administration/task_view_clone_split_estimate.html"
       - title: Split a clone on primary or secondary storage
         url: "/unix-administration/task_split_a_clone_on_a_primary_or_secondary_storage.html"
-      - title: Viewing the status of the clone split process
-        url: "/unix-administration/task_viewing_status_of_clone_split_process.html"
-      - title: Viewing the result of the clone split process
-        url: "/unix-administration/task_viewing_the_result_of_the_clone_split_process.html"
+      - title: View the status of the clone split process
+        url: "/unix-administration/task_view_status_of_clone_split_process.html"
+      - title: View the result of the clone split process
+        url: "/unix-administration/task_view_the_result_of_the_clone_split_process.html"
       - title: Stop the clone split process
         url: "/unix-administration/task_stop_the_clone_split_process.html"
       - title: Delete a profile
@@ -373,10 +373,10 @@ entries:
   - title: Performing management operations
     url: "/unix-administration/concept_performing_management_operations.html"
     entries:
-    - title: Viewing a list of operations
-      url: "/unix-administration/task_viewing_a_list_of_operations.html"
-    - title: Viewing operation details
-      url: "/unix-administration/task_viewing_operation_details.html"
+    - title: View a list of operations
+      url: "/unix-administration/task_view_a_list_of_operations.html"
+    - title: View operation details
+      url: "/unix-administration/task_view_operation_details.html"
     - title: Issue commands from an alternate host
       url: "/unix-administration/task_issue_commands_from_an_alternate_host.html"
     - title: Check the SnapManager software version
@@ -426,8 +426,8 @@ entries:
         url: "/unix-administration/concept_variables_available_in_the_task_scripts_for_clone_operation.html"
       - title: Error handling in custom scripts
         url: "/unix-administration/concept_error_handling_in_custom_scripts.html"
-    - title: Viewing sample plug-in scripts
-      url: "/unix-administration/task_viewing_sample_plugin_scripts.html"
+    - title: View sample plug-in scripts
+      url: "/unix-administration/task_view_sample_plugin_scripts.html"
     - title: Create task scripts
       url: "/unix-administration/task_create_task_scripts.html"
     - title: Store the task scripts
@@ -445,8 +445,8 @@ entries:
     entries:
     - title: Update the storage system name associated with a profile
       url: "/unix-administration/task_update_storage_system_name_associated_with_a_profile.html"
-    - title: Viewing a list of storage systems associated with a profile
-      url: "/unix-administration/task_viewing_a_list_of_storage_controllers_associated_with_a_profile.html"
+    - title: View a list of storage systems associated with a profile
+      url: "/unix-administration/task_view_a_list_of_storage_controllers_associated_with_a_profile.html"
     - title: Update the target database host name associated with a profile
       url: "/unix-administration/task_update_target_database_hostname_associated_with_a_profile.html"
   - title: Maintaining history of SnapManager operations
@@ -454,18 +454,18 @@ entries:
     entries:
     - title: Configure history for SnapManager operation
       url: "/unix-administration/task_configure_history_for_backup_operation.html"
-    - title: Viewing a list of SnapManager operation history
-      url: "/unix-administration/task_viewing_a_list_of_snapmanager_history_operation_as_a_report.html"
-    - title: Viewing the detailed history of a specific operation associated with
+    - title: View a list of SnapManager operation history
+      url: "/unix-administration/task_view_a_list_of_snapmanager_history_operation_as_a_report.html"
+    - title: View the detailed history of a specific operation associated with
         a profile
-      url: "/unix-administration/task_viewing_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html"
+      url: "/unix-administration/task_view_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html"
     - title: Deleting history of SnapManager operation
       url: "/unix-administration/task_purge_history_of_snapmanager_operation.html"
     - title: Remove history settings associated with a single profile or multiple
         profiles
       url: "/unix-administration/task_remove_history_configuration_associated_with_a_single_profile_or_multiple_profiles.html"
-    - title: Viewing SnapManager history configuration details
-      url: "/unix-administration/task_viewing_snapmanger_history_operation_details.html"
+    - title: View SnapManager history configuration details
+      url: "/unix-administration/task_view_snapmanger_history_operation_details.html"
   - title: Using BR*Tools with SnapManager for SAP
     url: "/unix-administration/concept_using_br_tools_with_snapmanager_for_sap.html"
     entries:

@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_viewing_snapmanger_history_operation_details.html
+permalink: unix-administration/task_view_snapmanger_history_operation_details.html
 sidebar: sidebar
 keywords: view, history, setting, single, profile, snapmanager, configuration, detail
 summary: "You can view the history settings for a single profile."
 ---
-= Viewing SnapManager history configuration details
+= View SnapManager history configuration details
 :icons: font
 :imagesdir: ../media/
 

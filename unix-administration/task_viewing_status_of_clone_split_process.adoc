@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_viewing_status_of_clone_split_process.html
+permalink: unix-administration/task_view_status_of_clone_split_process.html
 sidebar: sidebar
 keywords: view, progress, split, start, process, clone
 summary: "You can view the progress of the split process you started."
 ---
-= Viewing the status of the clone split process
+= View the status of the clone split process
 :icons: font
 :imagesdir: ../media/
 

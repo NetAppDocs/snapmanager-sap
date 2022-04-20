@@ -1,10 +1,10 @@
 ---
-permalink: unix-administration/task_viewing_sample_plugin_scripts.html
+permalink: unix-administration/task_view_sample_plugin_scripts.html
 sidebar: sidebar
 keywords: snapmanager, include, script, example, basis, custom, view, sample, plug-in
 summary: "SnapManager includes scripts that you can use as examples for how to make your own scripts or as a basis for your custom scripts."
 ---
-= Viewing sample plug-in scripts
+= View sample plug-in scripts
 :icons: font
 :imagesdir: ../media/
 
