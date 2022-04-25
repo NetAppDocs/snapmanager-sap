@@ -1,7 +1,7 @@
 ---
 permalink: unix-installation-7mode/task_verify_the_oracle_listener_configuration.html
 sidebar: sidebar
-keywords: listener, client, connection, request, incoming, manage, traffic, request, database, connect, target, status, configuration, verify, oracle, configuration
+keywords: listener, client, connection, request, incoming, manage, traffic, request, database, connect, target, status, configuration, verify, oracle, configuration, listener
 summary: "The listener is a process that listens for client connection requests. It receives incoming client connection requests and manages the traffic of these requests to the database. Before connecting to a target database or repository database instance, you can use the STATUS command to verify the listener configuration."
 ---
 = Verify the Oracle listener configuration
