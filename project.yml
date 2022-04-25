@@ -11,7 +11,7 @@ sidebar:
   entries:
     - title: SnapManager for SAP docs
       url: "/index.html"
-    - title: Release Notes
+    - title: Release notes
       url: "/reference-releasenotes.html"
     - section: unix-administration
     - section: unix-installation-7mode
@@ -26,7 +26,7 @@ homepage:
       links:
         - title: Product overview
           url: /reference_smsap_isg_product_overview.html
-        - title: Release Notes
+        - title: Release notes
           url: reference-releasenotes.html
     - title: Administration
       links:
@@ -40,3 +40,9 @@ homepage:
           url: /unix-installation-7mode/reference_smsap_isg_deployment_workflow.html
         - title: Deployment workflow (Cluster Mode)
           url: /unix-installation-cmode/reference_smsap_isg_deployment_workflow.html
+    - title: More resources
+      links:
+        - title: NetApp Support
+          url: https://mysupport.netapp.com/site/global/dashboard
+        - title: NetApp Communities
+          url: https://community.netapp.com/
