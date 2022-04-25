@@ -1,17 +1,21 @@
 ---
-permalink: unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_for_a_local_backup.html
+permalink: unix-administration/task_use_snapmanager_for_oraclesnapmanager_for_sap_to_create_the_database_profile_for_a_local_backup.html
 sidebar: sidebar
-keywords: 
-summary: 'The database administrators use SnapManager to create a database profile that will be used to initiate a backup to local storage on a primary storage system. The entire profile creation and backup creation processes are performed entirely in SnapManager; they do not involve Protection Manager.'
+keywords: database, administrator, snapmanager, database, initiate, local, storage, primary, system, creation, process, involve, manager
+summary: "The database administrators use SnapManager to create a database profile that will be used to initiate a backup to local storage on a primary storage system. The entire profile creation and backup creation processes are performed entirely in SnapManager; they do not involve Protection Manager."
 ---
-= Using SnapManager for SAP to create the database profile for a local backup
+= Use SnapManager for SAP to create the database profile for a local backup
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 The database administrators use SnapManager to create a database profile that will be used to initiate a backup to local storage on a primary storage system. The entire profile creation and backup creation processes are performed entirely in SnapManager; they do not involve Protection Manager.
 
+*About this task*
+
 A profile contains the information about the database being managed, including its credentials, backup settings, and protection settings for backups. By creating a profile, you do not need to specify database details each time you perform an operation on that database, instead just provide the profile name. A profile can reference only one database. That same database can be referenced by more than one profile.
+
+.Steps
 
 . Go to the SnapManager for SAP client.
 . From the SnapManager Repositories tree, right-click the host you want associated with this profile, and select *Create Profile*.
@@ -46,7 +50,7 @@ For this example, do the following:
  .. Click *Next*.
 
 +
-The Snapshot naming convention of smsap_hostname_smsapprofile_dbsid_scope_mode_smid becomes "smsap_prpd01.sample.com_P01_BACKUP_P01_f_a_x" (where the "f" indicates a full backup, the "a" indicates the automatic mode, and the "x" represents the unique SMID).
+The Snapshot naming convention of `_smsap_hostname_smsapprofile_dbsid_scope_mode_smid_` becomes "smsap_prpd01.sample.com_P01_BACKUP_P01_f_a_x" (where the "f" indicates a full backup, the "a" indicates the automatic mode, and the "x" represents the unique SMID).
 
 . On the Perform Operation page, verify the information and click *Create*.
 . Click *Operation Details* to see information about the profile create operation and volume-based restore eligibility information.

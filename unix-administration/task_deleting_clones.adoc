@@ -1,15 +1,17 @@
 ---
-permalink: unix-administration/task_deleting_clones.html
+permalink: unix-administration/task_delete_clones.html
 sidebar: sidebar
-keywords: 
-summary: 'You can delete the clones when the size of the Snapshot copy reaches between 10% and 20% of the backup. This also guarantees that the clone has the most current data.'
+keywords: delete, clone, size, snapshot, copy, backup, guarantee, data, deleting
+summary: "You can delete the clones when the size of the Snapshot copy reaches between 10% and 20% of the backup. This also guarantees that the clone has the most current data."
 ---
-= Deleting clones
+= Delete clones
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can delete the clones when the size of the Snapshot copy reaches between 10% and 20% of the backup. This also guarantees that the clone has the most current data.
+
+*About this task*
 
 The label is the unique identifier for each clone in a profile. You can use the clone label or ID, but not the system identifier (SID) to delete the clone.
 
@@ -23,14 +25,16 @@ NOTE: You cannot delete a clone when the clone is used in other operations.
 
 You can optionally collect the dump files after a successful or failed clone delete operation.
 
-. Enter the following command: `smsap clone delete -profileprofile_name [-labellabel | -idguid] [-syspasswordsyspassword]| [login-usernamedb_username-password] db_password-portdb_port] [-asminstance-asmusernameasm_username-asmpasswordasm_password][-force][-dump][-quiet]|[-verbose]`
+.Step
 
+. Enter the following command:
++
+`*smsap clone delete -profile _profile_name_ [-label _label_ | -id _guid_] [-syspassword _syspassword_]| [login-username _db_username_ -password] _db_password_ -port _db_port_] [-asminstance- asmusername _asm_username_ -asmpassword _asm_password_][-force][-dump][-quiet]|[-verbose]*`
+
+---
 == Example
 
 ----
 smsap clone delete -profile targetdb1_prof1 -label sales0908_clone1
 ----
-
-*Related information*
-
-xref:reference_the_smosmsapclone_delete_command.adoc[The smsap clone delete command]
+---

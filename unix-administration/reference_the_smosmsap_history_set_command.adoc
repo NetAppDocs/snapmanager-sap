@@ -1,79 +1,79 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_history_set_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the history set command to configure the operations for which you want to view the history.'
+keywords: run, history, set, command, configure, operation, smsap
+summary: "You can run the history set command to configure the operations for which you want to view the history."
 ---
 = The smsap history set command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the history set command to configure the operations for which you want to view the history.
+You can run the `history set` command to configure the operations for which you want to view the history.
 
 == Syntax
 
+[subs=+macros]
 ----
-
-        smsap history set 
--profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
--repository 
--login \[password repo_password\]
--username repo_username
--host repo_host 
--dbname repo_dbname 
--port repo_port}
--operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\} 
+pass:quotes[smsap history set
+-profile {-name _profile_name_ [_profile_name1, profile_name2_\] | -all
+-repository -login [password _repo_password_\] -username _repo_username_
+-host _repo_host_
+-dbname _repo_dbname_
+-port _repo_port_}
+-operation {-operations _operation_name_ [_operation_name1, operation_name2_\] | -all}
 -retain
-{-count retain_count \| -daily daily_count \| -monthly monthly_count \| -weekly weekly_count}
-[-quiet | -verbose]
+{-count _retain_count_ | -daily _daily_count_ | -monthly _monthly_count_ | -weekly _weekly_count_}
+[-quiet | -verbose]]
 ----
 
 == Parameters
 
-* *-profile profile*
+* `*-profile profile*`
 +
 Specifies the name of the profile. The name can be up to 30 characters long and must be unique within the host.
 
-* *-repository*
+* `*-repository*`
 +
 Specifies the details of the database that stores the profile.
 
-* *-dbname repo_dbname*
+* `*-dbname _repo_dbname_*`
 +
 Specifies the name of the database that stores the profile. You can use either the global name or the system identifier.
 
-* *-host repo_host*
+* `*-host _repo_host_*`
 +
 Specifies the name or IP address of the host where the repository database resides.
 
-* *-login*
+* `*-login*`
 +
 Specifies the repository login details.
 
-* *-username repo_username*
+* `*-username _repo_username_*`
 +
 Specifies the user name required to access the repository database.
 
-* *-port repo_port*
+* `*-port _repo_port_*`
 +
 Specifies the Transmission Control Protocol (TCP) port number used to access the repository database.
 
-* *-operation {-operationsoperation_name [operation_name1, operation_name2] | -all*
+* `*-operation {-operations _operation_name_ [_operation_name1, operation_name2_] | -all*`
 +
 Specifies the SnapManager operations for which you want to configure the history.
 
-* *-retain {-countretain_count | -dailydaily_count | -monthly-monthly_count | -weeklyweekly_count}*
+* `*-retain {-count _retain_count_ | -daily _daily_count_ | -monthly _-monthly_count_ | -weekly _weekly_count_}*`
 +
 Specifies the retention class of the create backup, verify backup, restore and recover, and create and split clone operations. The retention class is set based on the operation count number, number of days, weeks, or months.
 
-* *-quiet*
+* `*-quiet*`
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* `*-verbose*`
 +
 Displays error, warning, and informational messages in the console.
+
+---
 
 == Example command
 
@@ -83,3 +83,4 @@ The following example displays information about the backup operation:
 smsap history set -profile -name PROFILE1 -operation -operations backup -retain -daily 6
  -verbose
 ----
+---

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_how_snapmanager_retains_backups_on_the_local_storage.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to create backups that meet retention policies, which specify how many successful backups on local storage should be retained. You can specify the number of successful backups that should be retained in the profile for a given database.'
+keywords: "snapmanager, enable, create, backup, retention, policies, policy, successful, storage, retain, local, database
+summary: SnapManager enables you to create backups that meet retention policies, which specify how many successful backups on local storage should be retained. You can specify the number of successful backups that should be retained in the profile for a given database."
 ---
 = How SnapManager retains backups on the local storage
 :icons: font
@@ -32,6 +32,7 @@ After a backup expires, SnapManager either frees or deletes the expired backup. 
 
 SnapManager counts only the number of successful backups for the retention count and does not consider the following:
 
+[cols="1a,1a" options="header"]
 |===
 | Backups not included in the retention count| Additional details
 a|
@@ -57,7 +58,7 @@ If SnapManager deletes the Snapshot copies for the backup on the primary storage
 |===
 When you free a backup from its primary storage resources, the primary resources (Snapshot copies) used by the backup are destroyed, but the backup metadata is still available. SnapManager does not consider freed backups in the backup retention count.
 
-SnapManager provides a default retention count and duration for each retention class. For example, for the hourly retention class count, SnapManager, by default, retains four hourly backups. You can override these defaults and set the values when creating or updating the profile or change the default values for retention count and duration in the smsap.config file.
+SnapManager provides a default retention count and duration for each retention class. For example, for the hourly retention class count, SnapManager, by default, retains four hourly backups. You can override these defaults and set the values when creating or updating the profile or change the default values for retention count and duration in the `smsap.config` file.
 
 Backups on primary storage can be protected by backing up to secondary storage. While SnapManager manages the retention and scheduling of backups on primary storage, the Protection Manager manages the retention and scheduling of backups on secondary storage.
 
@@ -66,10 +67,11 @@ When local backups expire based on their retention policy, they are either delet
 * If they are protected, the local backups are freed. Their storage resources or Snapshot copies are deleted, but the backups remain in the SnapManager repository and are available for restoration from the secondary storage. You do not have to free backups (for example, with the backup free command). Backups are freed until the backup no longer exists on the secondary storage, and at that point, the backup is deleted.
 * If they are not protected, the local backups are deleted.
 
-In an archivelog-only backup operation, SnapManager does not archive the redo log files, unlike in the online database backup process. You must add a pretask script to archive the redo log files before performing the archivelog-only backup operation. The pretask script must run the alter system switch logfile command.
+In an archivelog-only backup operation, SnapManager does not archive the redo log files, unlike in the online database backup process. You must add a pretask script to archive the redo log files before performing the archivelog-only backup operation. The pretask script must run the `alter system switch logfile` command.
 
 The following example shows the actions that SnapManager takes on various types of backups, based on a three-daily-backups retention policy (with the count set to retain 3):
 
+[cols="1a,1a,1a,1a" options="header"]
 |===
 | Backup date| Status| Retention policy action taken| Explanation
 a|
@@ -131,4 +133,4 @@ SnapManager counts this successful backup, but after SnapManager reaches three s
 |===
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

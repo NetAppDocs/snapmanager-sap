@@ -1,18 +1,23 @@
 ---
-permalink: unix-administration/task_protecting_archive_log_backups.html
+permalink: unix-administration/task_protect_archive_log_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'While creating profiles, you can enable protection for the archive log backups based on the archive log protection policy.'
+keywords: create, creating, profile, enable, protection, archive, log, backup, policy, protect
+summary: "While creating profiles, you can enable protection for the archive log backups based on the archive log protection policy."
 ---
-= Protecting archive log backups
+= Protect archive log backups
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 While creating profiles, you can enable protection for the archive log backups based on the archive log protection policy.
 
-. Enter the following command: `smsap profile create -profileprofile [-profile-passwordprofile_password] -repository-dbnamerepo_dbname-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] -osaccountosaccount-osgrouposgroup [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][-protect [-protection-policypolicy_name]] [-summary-notification] [-notification [-success-emailemail_address1, email_address2-subjectsubject_pattern] [-failure-emailemail_address1, email_address2-subjectsubject_pattern]][-separate-archivelog-backups-retain-archivelog-backups-hourshours | -daysdays | -weeksweeks| -monthsmonths [-protect [-protection-policypolicy_name] | -noprotect] [-include-with-online-backups | -no-include-with-online-backups]] [-dump]`
+.Step
+
+. Enter the following command:
 +
+`*smsap profile create -profile _profile_ [-profile-password _profile_password_] -repository -dbname _repo_dbname_ -host _repo_host_ -port _repo_port_ -login -username _repo_username_ -database -dbname _db_dbname_ -host _db_host_ [-sid _db_sid_] [-login-username _db_username_ -password _db_password_ -port _db_port_] [-rman {-controlfile | {-login-username _rman_username_ -password _rman_password_ -tnsname _rman_tnsname_} } ] -osaccount _osaccount_ -osgroup _osgroup_ [-retain [-hourly [-count _n_] [-duration _m_]] [-daily [-count _n_] [-duration _m_]] [-weekly [-count _n_] [-duration _m_]] [-monthly [-count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][-protect [-protection-policy _policy_name_]] [-summary-notification] [-notification [-success-email _email_address1, email_address2_ -subject _subject_pattern_] [-failure-email _email_address1, email_address2_ -subject _subject_pattern_]][-separate-archivelog-backups-retain-archivelog-backups-hours _hours_ | -days _days_ | -weeks _weeks_ | -months _months_ [-protect [-protection-policy _policy_name_] | -noprotect] [-include-with-online-backups | -no-include-with-online-backups]] [-dump]*`
++
+[cols="2a,5a" options="header"]
 |===
 | If...| Then...
 a|
@@ -20,9 +25,9 @@ a|
 a|
 Specify the following options:
 
- ** -separate-archivelog-backups enables you to separate the archive log files from the data files.
- ** -protect assigns a separate protection policy for the archive log archive log backups.
- ** -protection-policy assigns the protection policy for the archive log backups.
+ ** `-separate-archivelog-backups` enables you to separate the archive log files from the data files.
+ ** `-protect` assigns a separate protection policy for the archive log archive log backups.
+ ** `-protection-policy` assigns the protection policy for the archive log backups.
 
 +
 |===

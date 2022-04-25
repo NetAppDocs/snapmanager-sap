@@ -1,20 +1,21 @@
 ---
-permalink: unix-administration/task_defining_the_database_home_with_the_oratab_file.html
+permalink: unix-administration/task_define_the_database_home_with_the_oratab_file.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager uses the oratab file during operations to determine the Oracle database home directory. An entry for your Oracle database must be in the oratab file for SnapManager to work correctly. The oratab file is created during the Oracle software installation.'
+keywords: snapmanager, oratab, file, operation, determine, oracle, database, home, directory, software, installation, defining, define
+summary: "SnapManager uses the oratab file during operations to determine the Oracle database home directory. An entry for your Oracle database must be in the oratab file for SnapManager to work correctly. The oratab file is created during the Oracle software installation."
 ---
-= Defining the database home with the oratab file
+= Define the database home with the oratab file
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-SnapManager uses the oratab file during operations to determine the Oracle database home directory. An entry for your Oracle database must be in the oratab file for SnapManager to work correctly. The oratab file is created during the Oracle software installation.
+SnapManager uses the `oratab` file during operations to determine the Oracle database home directory. An entry for your Oracle database must be in the `oratab` file for SnapManager to work correctly. The `oratab` file is created during the Oracle software installation.
 
-NOTE: The Oracle home directory is set in the oratab file for SAP systems, just as it is for Oracle-only systems. SAP systems also have a database home directory, which is typically /oracle/SID/ xxx_yy, where xxx represents the database version and yy is either 32 or 64.
+NOTE: The Oracle home directory is set in the `oratab` file for SAP systems, just as it is for Oracle-only systems. SAP systems also have a database home directory, which is typically `/oracle/SID/ _xxx_yy_,` where `xxx` represents the database version and `yy` is either 32 or 64.
 
-The oratab file resides in different locations based on the host operating system as shown in the following table:
+The `oratab` file resides in different locations based on the host operating system as shown in the following table:
 
+[options="header"]
 |===
 | Host operating system| File location
 a|
@@ -30,7 +31,7 @@ IBM AIX
 a|
 /etc/oratab
 |===
-The sample oratab file contains the following information:
+The sample `oratab` file contains the following information:
 
 ----
 +ASM1:/u01/app/11.2.0/grid:N   # line added by Agent
@@ -39,4 +40,4 @@ oelpro:/u01/app/11.2.0/oracle:N         # line added by Agent
 smsapclone:/u01/app/11.2.0/oracle:N
 ----
 
-NOTE: After Oracle is installed, you must ensure that the oratab file resides in the location specified in the previous table. If the oratab file does not reside in the correct location per your operating system, you must contact technical support for assistance.
+NOTE: After Oracle is installed, you must ensure that the `oratab` file resides in the location specified in the previous table. If the `oratab` file does not reside in the correct location per your operating system, you must contact technical support for assistance.

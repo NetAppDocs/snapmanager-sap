@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_limitations.html
 sidebar: sidebar
-keywords: SnapManager
-summary: 'You must be aware of the scenarios and limitations that might affect your environment.'
+keywords: scenario, limitation, environment, snapmanager
+summary: "You must be aware of the scenarios and limitations that might affect your environment."
 ---
 = Limitations when working with SnapManager
 :icons: font
@@ -113,7 +113,7 @@ You should not delete all of the archive log files from the archive log destinat
 * SnapManager only supports splitting a FlexClone.
 * The cloning of online database backup of the RAC database that uses external archive log file location fails because of failure in recovery.
 +
-The cloning fails because Oracle fails to find and apply the archive log files for recovery from the external archive log location. This is an Oracle limitation. For more information, see the Oracle Bug ID: 13528007. Oracle does not apply archive log from the non-default location at the http://metalink.oracle.com/[Oracle support site]. You must have a valid Oracle metalink user name and password.
+The cloning fails because Oracle fails to find and apply the archive log files for recovery from the external archive log location. This is an Oracle limitation. For more information, see the Oracle Bug ID: 13528007. Oracle does not apply archive log from the non-default location at the http://metalink.oracle.com/[Oracle support site^]. You must have a valid Oracle metalink user name and password.
 
 * SnapManager 3.3 or later does not support using the clone specification XML file created in the releases before SnapManager 3.2.
 * If temporary tablespaces are located in a different location from the datafiles location, a clone operation creates the tablespaces in the datafiles location.
@@ -148,9 +148,9 @@ The following SnapManager operations are not supported when you change the targe
 
 *Limitations related to the SnapManager CLI or GUI*
 
-* The SnapManager CLI commands for the profile create operation that are generated from the SnapManager GUI do not have history configuration options.
+* The SnapManager CLI commands for the `profile create` operation that are generated from the SnapManager GUI do not have history configuration options.
 +
-You cannot use the profile create command to configure history retention settings from the SnapManager CLI.
+You cannot use the `profile create` command to configure history retention settings from the SnapManager CLI.
 
 * SnapManager does not display the GUI in Mozilla Firefox when there is no Java Runtime Environment (JRE) available on the UNIX client.
 * While updating the target database host name using the SnapManager CLI, if there are one or more open SnapManager GUI sessions, then all of the open SnapManager GUI sessions fail to respond.
@@ -162,7 +162,7 @@ You cannot use the profile create command to configure history retention setting
 +
 This is because of an ONTAP limitation, which does not allow you to break the relationship when doing a VBSR. However, you can perform a VBSR on the last or most recently created backup only when the volumes have SnapVault relationships established.
 
-* If you are using Data ONTAP operating in 7-Mode and want to perform a VBSR on the backups that were created in the volumes that have SnapMirror relationships established, you can set the override-vbsr-snapmirror-check option to ON in SnapDrive for UNIX.
+* If you are using Data ONTAP operating in 7-Mode and want to perform a VBSR on the backups that were created in the volumes that have SnapMirror relationships established, you can set the `override-vbsr-snapmirror-check` option to `*ON*` in SnapDrive for UNIX.
 +
 The SnapDrive documentation has more information about this.
 
@@ -182,4 +182,4 @@ You can delete the backup only when you break the relationship. This issue is be
 
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

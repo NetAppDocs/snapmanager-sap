@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_snapmanager_features_and_oracle_technologies_not_supported_on_windows.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager does not support some SnapManager features, platforms, and Oracle technologies on Windows.'
+keywords: snapmanager, support, feature, platform, oracle, technology, technologies, windows
+summary: "SnapManager does not support some SnapManager features, platforms, and Oracle technologies on Windows."
 ---
 = SnapManager features and Oracle technologies not supported on Windows
 :icons: font

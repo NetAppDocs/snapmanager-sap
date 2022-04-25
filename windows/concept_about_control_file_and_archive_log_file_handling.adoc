@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_about_control_file_and_archive_log_file_handling.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager includes the control files and optionally includes archive log files with each backup. Archive log files are used for recovery operations.'
+keywords: snapmanager, control, file, archive, log, backup, recovery, handle
+summary: "SnapManager includes the control files and optionally includes archive log files with each backup. Archive log files are used for recovery operations."
 ---
 = About control file and archive log file handling
 :icons: font
@@ -15,10 +15,11 @@ The database uses control files to identify names, locations, and sizes of the d
 
 The changes to a database are tracked by using the online redo logs, which are eventually archived and known as archived redo logs (or archive logs). SnapManager (3.2 or later) enables you to backup data files and archive log files separately with different retentions and frequencies. SnapManager can take backups of only the archive logs or combined backups of data files and archive logs. SnapManager provides complete automated management of archive logs, and does not require any manual intervention for database recovery and also allows pruning of archive logs from one or more archive log destinations after the backup is taken.
 
-NOTE: To see which tablespaces and data files are included in a backup, use the backup show command or the Backup Properties window.
+NOTE: To see which tablespaces and data files are included in a backup, use the `backup show command` or the Backup Properties window.
 
 The following table illustrates how SnapManager handles control and archive log files during each operation:
 
+[options="header"]
 |===
 | Type of operation| Control files| Archive log files
 a|

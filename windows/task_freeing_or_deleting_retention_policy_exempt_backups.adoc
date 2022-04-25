@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_freeing_or_deleting_retention_policy_exempt_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'Backups with the retention class of "unlimited" cannot be deleted or freed directly. To delete or free these backups, you must first assign another retention class, such as hourly, daily, weekly, or monthly. To delete or free a backup that is exempt from the retention policy, you must first update the backup to make it eligible for deletion or free it.'
+keywords: backup, retention, class, unlimited, delete, free, hourly, daily, weekly, monthly, policy, exempt
+summary: Backups with the retention class of "unlimited" cannot be deleted or freed directly. To delete or free these backups, you must first assign another retention class, such as hourly, daily, weekly, or monthly. To delete or free a backup that is exempt from the retention policy, you must first update the backup to make it eligible for deletion or free it.
 ---
 = Freeing or deleting retention policy exempt backups
 :icons: font

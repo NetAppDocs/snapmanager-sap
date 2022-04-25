@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_performing_a_rollback_on_a_single_host_or_multiple_hosts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can perform a rollback on a single or multiple SnapManager server hosts by using the command-line interface \(CLI\).'
+keywords: perform, rollback, single, multiple, snapmanager, server, host, command-line, interface, cli, multiple
+summary: You can perform a rollback on a single or multiple SnapManager server hosts by using the command-line interface \(CLI\).
 ---
 = Performing a rollback on a single host or multiple hosts
 :icons: font

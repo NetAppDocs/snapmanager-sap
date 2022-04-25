@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_deleting_profiles.html
 sidebar: sidebar
-keywords: 
-summary: 'You can delete a profile anytime, as long as it does not contain successful or incomplete backups. You can delete profiles that contain freed or deleted backups.'
+keywords: delete, profile, successful, incomplete, backup, free, deleting
+summary: You can delete a profile anytime, as long as it does not contain successful or incomplete backups. You can delete profiles that contain freed or deleted backups.
 ---
 = Deleting profiles
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_viewing_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view the detailed history of a specific SnapManager operation associated with a profile.'
+keywords: view, detail, history, snapmanager, operation, associate, profile
+summary: You can view the detailed history of a specific SnapManager operation associated with a profile.
 ---
 = Viewing the detailed history of a specific operation associated with a profile
 :icons: font

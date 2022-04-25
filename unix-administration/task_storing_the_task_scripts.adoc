@@ -1,67 +1,72 @@
 ---
-permalink: unix-administration/task_storing_the_task_scripts.html
+permalink: unix-administration/task_store_the_task_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'You must store the pretask, post-task, and policy task scripts in a specified directory on the target server where the backups or clones will be created. For the restore operation, the scripts must be placed in the specified directory on the target server where you want to restore the backup.'
+keywords: store, pretask, post-task, policy, task, script, backup, clone, create, restore, operation, directory, target, server, storing
+summary: "You must store the pretask, post-task, and policy task scripts in a specified directory on the target server where the backups or clones will be created. For the restore operation, the scripts must be placed in the specified directory on the target server where you want to restore the backup."
 ---
-= Storing the task scripts
+= Store the task scripts
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You must store the pretask, post-task, and policy task scripts in a specified directory on the target server where the backups or clones will be created. For the restore operation, the scripts must be placed in the specified directory on the target server where you want to restore the backup.
 
+.Steps
+
 . Create your script.
 . Save the script in one of the following locations:
 +
 *For the backup operation*
 +
+[cols="1a,2a" options="header"]
 |===
 | Directory| Description
 a|
-*<default_install_directory >/plugins/backup/create/policy*
+`*<default_install_directory >/plugins/backup/create/policy*`
 a|
 The policy scripts run before the backup operations.
 a|
-*<default_install_directory >/plugins/backup/create/pre*
+`*<default_install_directory >/plugins/backup/create/pre*`
 a|
 The preprocessing scripts run the before backup operations.
 a|
-*<default_install_directory >/plugins/backup/create/post*
+`*<default_install_directory >/plugins/backup/create/post*`
 a|
 The post-processing scripts run after the backup operations.
 |===
 *For the restore operation*
 +
+[cols="1a,2a" options="header"]
 |===
 | Directory| Description
 a|
-*<default_install_directory >/plugins/restore/create/policy*
+`*<default_install_directory >/plugins/restore/create/policy*`
 a|
 The policy scripts run before the restore operations.
 a|
-*<default_install_directory >/plugins/restore/create/pre*
+`*<default_install_directory >/plugins/restore/create/pre*`
 a|
 The preprocessing scripts run before the restore operations.
 a|
-*<default_install_directory >/plugins/restore/create/post*
+`*<default_install_directory >/plugins/restore/create/post*`
 a|
 The post-processing scripts run after the restore operations.
 |===
 *For the clone operation*
 +
+[cols="1a,2a" options="header"]
 |===
 | Directory| Description
 a|
-*<default_install_directory >/plugins/clone/create/policy*
+`*<default_install_directory >/plugins/clone/create/policy*`
 a|
 The policy scripts run before the clone operations.
 a|
-*<default_install_directory >/plugins/clone/create/pre*
+`*<default_install_directory >/plugins/clone/create/pre*`
 a|
 The preprocessing scripts run before the clone operations.
 a|
-*<default_install_directory >/plugins/clone/create/post*
+`*<default_install_directory >/plugins/clone/create/post*`
 a|
 The post-processing scripts run after the clone operations.
 |===

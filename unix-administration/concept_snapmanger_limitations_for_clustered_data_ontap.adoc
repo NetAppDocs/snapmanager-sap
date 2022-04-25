@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_snapmanger_limitations_for_clustered_data_ontap.html
 sidebar: sidebar
-keywords: 
-summary: 'You must know the limitations for some functionalities and SnapManager operations if you are using clustered Data ONTAP.'
+keywords: limitation, functionality, functionalities, snapmanager, cluster, data, ontap
+summary: "You must know the limitations for some functionalities and SnapManager operations if you are using clustered Data ONTAP."
 ---
 = SnapManager limitations for clustered Data ONTAP
 :icons: font

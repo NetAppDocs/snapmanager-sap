@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_clone_specifications.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP uses a clone specification XML file, which includes the mappings, options, and parameters for use in the clone operation. SnapManager uses this information to determine where to place the files it clones and how to handle diagnostic information, control files, parameters, and so on.'
+keywords: snapmanager, sap, clone, specification, xml, file, mapping, option, parameter, clone, operation, information, creating, create
+summary: SnapManager for SAP uses a clone specification XML file, which includes the mappings, options, and parameters for use in the clone operation. SnapManager uses this information to determine where to place the files it clones and how to handle diagnostic information, control files, parameters, and so on.
 ---
 = Creating clone specifications
 :icons: font

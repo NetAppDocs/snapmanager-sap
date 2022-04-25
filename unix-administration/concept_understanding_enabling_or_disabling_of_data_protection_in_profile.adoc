@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_understanding_enabling_or_disabling_of_data_protection_in_profile.html
 sidebar: sidebar
-keywords: 
-summary: 'You can enable or disable data protection while creating or updating a database profile.'
+keywords: enable, disable, data, protection, creating, create, update, updating, database, profile, understand, enabling, disabling
+summary: "You can enable or disable data protection while creating or updating a database profile."
 ---
 = Understanding enabling or disabling of data protection in profile
 :icons: font
@@ -13,6 +13,7 @@ You can enable or disable data protection while creating or updating a database 
 
 To create a protected backup of a database on the secondary storage resources, database administrators and storage administrators perform the following actions.
 
+[cols="1a,2a" options="header"]
 |===
 | If you want to...| Then...
 a|
@@ -32,7 +33,7 @@ When you disable backup protection, a warning message is displayed stating that 
 a|
 View the profile
 a|
-Because the storage administrator has not yet assigned storage resources to implement the protection policy, the profile shows up as nonconformant in both the SnapManager graphical user interface and the profile show command output.
+Because the storage administrator has not yet assigned storage resources to implement the protection policy, the profile shows up as nonconformant in both the SnapManager graphical user interface and the `profile show` command output.
 a|
 Assign storage resources in the Protection Manager Management Console
 a|
@@ -40,22 +41,22 @@ In the Protection Manager Management Console, the storage administrator views th
 a|
 View the conformant profile in SnapManager
 a|
-In SnapManager, the database administrator sees that the profile has changed to conformant state in both the graphical user interface and in the profile show command output, indicating that resources were assigned.
+In SnapManager, the database administrator sees that the profile has changed to conformant state in both the graphical user interface and in the `profile show` command output, indicating that resources were assigned.
 a|
 Create the backup
 a|
 
 * Select full backup.
 * Also, select whether the backup should be protected and select the primary retention class (for example, hourly or daily).
-* If you are using Data ONTAP operating in 7-Mode and want to protect the backup immediately to secondary storage overriding the Protection Manager protection schedule, specify the -protectnow option.
-* If you are using ONTAP and want to protect the backup immediately to the secondary storage, specify the protect option.
+* If you are using Data ONTAP operating in 7-Mode and want to protect the backup immediately to secondary storage overriding the Protection Manager protection schedule, specify the `-protectnow` option.
+* If you are using ONTAP and want to protect the backup immediately to the secondary storage, specify the `protect` option.
 +
-NOTE: The protectnow option is not applicable in clustered Data ONTAP.
+NOTE: The `protectnow` option is not applicable in clustered Data ONTAP.
 
 a|
 View the backup
 a|
-The new backup is shown as scheduled for protection, but not yet protected (in the SnapManager interface and in the backup show command output). The Protection state is shown as "`Not protected`".
+The new backup is shown as scheduled for protection, but not yet protected (in the SnapManager interface and in the `backup show` command output). The Protection state is shown as "`Not protected`".
 a|
 View the backup list
 a|

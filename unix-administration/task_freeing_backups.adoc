@@ -1,15 +1,17 @@
 ---
-permalink: unix-administration/task_freeing_backups.html
+permalink: unix-administration/task_free_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You can free backups, which deletes the Snapshot copies without deleting the backup metadata. This function frees the space occupied by the backup. You can use the smsap backup free command to free the backups.'
+keywords: free, backup, delete, snapshot, copies, copy, deleting, metadata, function, smsap, command
+summary: "You can free backups, which deletes the Snapshot copies without deleting the backup metadata. This function frees the space occupied by the backup. You can use the smsap backup free command to free the backups."
 ---
-= Freeing backups
+= Free backups
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can free backups, which deletes the Snapshot copies without deleting the backup metadata. This function frees the space occupied by the backup. You can use the smsap backup free command to free the backups.
+
+*What you'll need*
 
 For a backup to be eligible for freeing, you must ensure the following:
 
@@ -19,13 +21,16 @@ For a backup to be eligible for freeing, you must ensure the following:
 * Backup is not to be retained by using an unlimited retention policy
 * Backup is not already freed
 
+*About this task*
+
 If protection is enabled on the profile and the protection policy contains connections from the primary node that use a mirror relationship, then Snapshot copies are deleted on the primary node when a backup is freed. Those Snapshot copies are also deleted from the mirror nodes when the next transfer to secondary storage occurs.
 
 When you free a protected backup, SnapManager requests that Protection Manager remove the local Snapshot copies for the backup. If the backup free operation is successful for the protected backups, the Snapshot copies are deleted by Protection Manager in an asynchronous manner.
 
+[cols="2a,1a,3a,3a,4a" options="header"]
 |===
 | Protection state| Local status| Action on primary storage| Action on secondary storage| Explanation
-a|
+.2+a|
 Not requested (to be protected)
 a|
 Exists
@@ -43,7 +48,7 @@ a|
 No action required
 a|
 The local backup is already freed.
-a|
+.2+a|
 Not protected
 a|
 Exists
@@ -61,7 +66,7 @@ a|
 No action required
 a|
 The local backup is already freed.
-a|
+.2+a|
 Protected
 a|
 Exists
@@ -82,10 +87,8 @@ The local backup is already freed.
 |===
 You can specify the -dump option as an optional parameter to collect the dump files after the successful or failed backup free operation.
 
-. Enter the following command: `smsap backup free -profileprofile_name {-labellabel [data | -archivelogs] | -idid | -all} -force[-dump] [-quiet] [-force]`
+.Step
 
-*Related information*
-
-xref:concept_what_protection_states_are.adoc[What protection states are]
-
-xref:reference_the_smosmsapbackup_free_command.adoc[The smsap backup free command]
+. Enter the following command:
++
+`*smsap backup free -profile _profile_name_ {-label _label_ [data | -archivelogs] | -id _id_ | -all} -force[-dump] [-quiet] [-force]*`

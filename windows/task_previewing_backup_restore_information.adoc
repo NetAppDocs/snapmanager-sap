@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_previewing_backup_restore_information.html
 sidebar: sidebar
-keywords: 
-summary: 'You can preview information about a backup restore process before it occurs to see information about restore eligibility that SnapManager for SAP found on your backup. SnapManager analyzes data on your backup to determine whether the restore process can be completed successfully.'
+keywords: preview, information, backup, restore, process, snapmanager, sap, analyze, determine, successful
+summary: You can preview information about a backup restore process before it occurs to see information about restore eligibility that SnapManager for SAP found on your backup. SnapManager analyzes data on your backup to determine whether the restore process can be completed successfully.
 ---
 = Previewing backup restore information
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_viewing_a_list_of_clones.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view a list of clones associated with a particular profile.'
+keywords: view, list, clone, associate, particular, profile
+summary: You can view a list of clones associated with a particular profile.
 ---
 = Viewing a list of clones
 :icons: font

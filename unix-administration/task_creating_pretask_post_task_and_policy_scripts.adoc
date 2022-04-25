@@ -1,15 +1,17 @@
 ---
-permalink: unix-administration/task_creating_pretask_post_task_and_policy_scripts.html
+permalink: unix-administration/task_create_pretask_post_task_and_policy_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to create the scripts for the preprocessing activity, the post-processing activity, and policy tasks of the backup, restore, and clone operations. You must place the scripts in the correct installation directory to execute the preprocessing activity, post-processing activity, and policy tasks of the SnapManager operation.'
+keywords: snapmanager, enable, create, script, preprocessing, activity, post-processing, policy, task, backup, restore, clone, operation, pretask, post-task, creating
+summary: "SnapManager enables you to create the scripts for the preprocessing activity, the post-processing activity, and policy tasks of the backup, restore, and clone operations. You must place the scripts in the correct installation directory to execute the preprocessing activity, post-processing activity, and policy tasks of the SnapManager operation."
 ---
-= Creating pretask, post-task, and policy scripts
+= Create pretask, post-task, and policy scripts
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 SnapManager enables you to create the scripts for the preprocessing activity, the post-processing activity, and policy tasks of the backup, restore, and clone operations. You must place the scripts in the correct installation directory to execute the preprocessing activity, post-processing activity, and policy tasks of the SnapManager operation.
+
+*About this task*
 
 *Pretask and post-task script content*
 
@@ -39,6 +41,7 @@ The directory in which you install the script affects how it is used. You can pl
 
 NOTE: You must ensure that the plugins directory has the executable permission before using the scripts for the SnapManager operation.
 
+[cols="1a,3a,3a,3a" options="header"]
 |===
 | Activity| Backup| Restore| Clone
 a|
@@ -77,10 +80,11 @@ The following are some samples of the pretask and post-task scripts for the back
 
 *What you can change in the script*
 
-If you are creating a new script, you can change only the describe and execute operations. Each script must contain the following variables: context, timeout, and parameter.
+If you are creating a new script, you can change only the describe and execute operations. Each script must contain the following variables: `_context, timeout,_` and `_parameter_`.
 
-The variables you have described in the describe function of the script must be declared at the start of the script. You can add new parameter values in parameter=() and then use the parameters in the execute function.
+The variables you have described in the describe function of the script must be declared at the start of the script. You can add new parameter values in `parameter=()` and then use the parameters in the execute function.
 
+---
 == Sample script
 
 The following is a sample script with a user-specified return code for estimating the space in the SnapManager host:
@@ -168,3 +172,4 @@ The following is a sample script with a user-specified return code for estimatin
               ;;
      esac
 ----
+---

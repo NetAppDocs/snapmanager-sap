@@ -1,14 +1,18 @@
 ---
-permalink: unix-administration/task_adding_existing_profile_to_summary_notification.html
+permalink: unix-administration/task_add_existing_profile_to_summary_notification.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to add an existing profile to a summary email notification while updating that profile.'
+keywords: snapmanager, enable, exist, add, profile, summary, email, notification, update, updating
+summary: "SnapManager enables you to add an existing profile to a summary email notification while updating that profile."
 ---
-= Adding an existing profile to summary email notifications
+= Add an existing profile to summary email notifications
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 SnapManager enables you to add an existing profile to a summary email notification while updating that profile.
 
-. Enter the following command: `smsap profile update -profileprofile_name [-profile-passwordprofile_password] -repository-dbnamerepo_service_name-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] -osaccountosaccount-osgrouposgroup [-retain [-hourly-countn] [-durationm]] [-daily-countn] [-durationm]] [-weekly-countn] [-durationm]] [-monthly-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][-protect [-protection-policypolicy_name]] [-summary-notification]`
+.Step
+
+. Enter the following command:
++
+`*smsap profile update -profile _profile_name_ [-profile-password _profile_password_] -repository-dbname _repo_service_name_ -host _repo_host_ -port _repo_port_ -login -username _repo_username_ -database -dbname _db_dbname_ -host _db_host_ [-siddb_sid] [-login-username _db_username_ -password _db_password_ -port _db_port_] [-rman {-controlfile | {-login-username _rman_username_ -password _rman_password_ -tnsname _rman_tnsname_} } ] -osaccount _osaccount_ -osgroup _osgroup_ [-retain [-hourly-count _n_] [-duration _m_]] [-daily-count _n_] [-duration _m_]] [-weekly-count _n_] [-duration _m_]] [-monthly-count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][-protect [-protection-policy _policy_name_]] [-summary-notification]*`

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_advantages_of_using_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use SnapManager for SAP to perform different tasks on the databases and manage data efficiently.'
+keywords: snapmanager, sap, task, database, manage, data, advantage, use
+summary: "You can use SnapManager for SAP to perform different tasks on the databases and manage data efficiently."
 ---
 = Advantages of using SnapManager
 :icons: font

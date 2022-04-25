@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_upgrading_snapmanager_hosts_by_using_rolling_upgrade.html
 sidebar: sidebar
-keywords: 
-summary: 'The rolling upgrade approach that enables you to upgrade the hosts in a staggered, host-by-host manner is supported from SnapManager 3.1.'
+keywords: roll, upgrade, enable, host, stagger, host-by-host, manner, support, snapmanager
+summary: "The rolling upgrade approach that enables you to upgrade the hosts in a staggered, host-by-host manner is supported from SnapManager 3.1."
 ---
 = Upgrading SnapManager hosts by using rolling upgrade
 :icons: font
@@ -27,9 +27,3 @@ After successful completion of rolling upgrade, the SnapManager hosts, profiles,
 The upgraded SnapManager server can now communicate with the upgraded repository database. The hosts that were not upgraded can manage their target databases by using the repository of the earlier version of SnapManager and thereby can use the features available in the earlier version.
 
 NOTE: Before performing rolling upgrade, you must ensure that all the hosts under the repository database can be resolved. For information about how to resolve the hosts, see _Troubleshooting SnapManager for SAP_.
-
-*Related information*
-
-xref:concept_what_a_rollback_is.adoc[What a rollback is]
-
-xref:reference_troubleshooting_snapmanager.adoc[Troubleshooting SnapManager]

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_managing_profiles_for_efficient_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You must create a profile in SnapManager for the database on which you want to perform an operation. You must select the profile and then select the operation that you want to perform.'
+keywords: create, profile, snapmanager, database, perform, operation, manage, efficient, backup
+summary: "You must create a profile in SnapManager for the database on which you want to perform an operation. You must select the profile and then select the operation that you want to perform."
 ---
 = Managing profiles for efficient backups
 :icons: font
@@ -32,10 +32,11 @@ When you create a profile, you can specify a database and choose one of the foll
 +
 For OS authentication, you must enter the OS account user and group information.
 
-* Database authentication when sqlnet.authentication_services is set to NONE. SnapManager then uses the database user name and password for all the connections to the target database. SnapManager can also use the Windows native authentication when sqlnet.authentication_services is set to NTS.
+* Database authentication when `sqlnet.authentication_services` is set to *NONE*. SnapManager then uses the database user name and password for all the connections to the target database. SnapManager can also use the Windows native authentication when `sqlnet.authentication_services` is set to *NTS*.
 
-You can set sqlnet.authentication_services to NONE only in the following environments:
+You can set `sqlnet.authentication_services` to *NONE* only in the following environments:
 
+[options="header"]
 |===
 | Database layout| Oracle version| Is database authentication supported for the target database
 a|
@@ -45,10 +46,10 @@ Oracle 10g and Oracle 11g (lesser than 11.2.0.3)
 a|
 Yes
 |===
-*Note:* After you disable sqlnet.authentication_services and change the authentication method to database authentication, you must set sqlnet.authentication_services to NONE.
+
+[NOTE]
+====
+After you disable `sqlnet.authentication_services` and change the authentication method to database authentication, you must set `sqlnet.authentication_services` to *NONE*.
+====
 
 If you are accessing a profile for the first time, you must enter your profile password. After you enter your credentials, you can view the database backups within the profile.
-
-*Related information*
-
-xref:concept_what_profiles_are.adoc[What profiles are]

@@ -1,0 +1,18 @@
+---
+permalink: windows/task_delete_profiles.html
+sidebar: sidebar
+keywords: delete, profile, successful, incomplete, backup, free, deleting
+summary: "You can delete a profile anytime, as long as it does not contain successful or incomplete backups. You can delete profiles that contain freed or deleted backups."
+---
+= Delete profiles
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can delete a profile anytime, as long as it does not contain successful or incomplete backups. You can delete profiles that contain freed or deleted backups.
+
+.Step
+
+. To delete a profile, enter this command:
++
+`*smsap profile delete -profile _profile_name_*`

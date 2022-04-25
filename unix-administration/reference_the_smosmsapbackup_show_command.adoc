@@ -1,56 +1,57 @@
 ---
 permalink: unix-administration/reference_the_smosmsapbackup_show_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the backup show command to display detailed information about a backup, including its protection status, backup retention class, and backups on primary and secondary storage.'
+keywords: backup, show, command, display, detail, information, backup, protection, status, retention, class, primary, secondary, storage, smsap
+summary: "You can use the backup show command to display detailed information about a backup, including its protection status, backup retention class, and backups on primary and secondary storage."
 ---
 = The smsap backup show command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can use the backup show command to display detailed information about a backup, including its protection status, backup retention class, and backups on primary and secondary storage.
+You can use the `backup show` command to display detailed information about a backup, including its protection status, backup retention class, and backups on primary and secondary storage.
 
 == Syntax
 
+[subs=+macros]
 ----
-
-        smsap backup show 
--profile profile_name 
-[-label label \[-data \| -archivelogs\] \| \[-id id\] 
-\[-quiet \| -verbose\]
+pass:quotes[smsap backup show
+-profile _profile_name_
+[-label _label_ [-data | -archivelogs\] | [-id _id_\]
+[-quiet | -verbose\]]
 ----
 
 == Parameters
 
-* *-profile profile_name*
+* `*-profile _profile_name_*`
 +
 Specifies the profile for which to show backups. The profile contains the identifier of the database and other database information.
 
-* *-label label*
+* ``*-label _label_*``
 +
 Specifies the label of the backup.
 
-* *-data*
+* ``*-data*``
 +
 Specifies the data files.
 
-* *-archivelogs*
+* ``*-archivelogs*``
 +
 Specifies the archive log files.
 
-* *-id id*
+* ``*-id _id_*``
 +
 Specifies the backup ID.
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages in the console, as well as any clone and verification information.
 
+---
 == Example
 
 The following example shows detailed information about the backup:
@@ -96,7 +97,4 @@ Protected copies on Secondary Storage:
   14448939 - manow
   88309228 - graffe
 ----
-
-*Related information*
-
-xref:task_viewing_backup_details.adoc[Viewing backup details]
+---

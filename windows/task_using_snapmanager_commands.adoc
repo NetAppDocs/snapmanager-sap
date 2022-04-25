@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_using_snapmanager_commands.html
 sidebar: sidebar
-keywords: 
-summary: 'After you start the SnapManager host server, you can use SnapManager by entering commands at the prompt on your host.'
+keywords: start, snapmanager, host, server, enter, command, prompt
+summary: After you start the SnapManager host server, you can use SnapManager by entering commands at the prompt on your host.
 ---
 = Using SnapManager commands
 :icons: font

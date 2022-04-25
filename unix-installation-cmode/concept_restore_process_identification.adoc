@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/concept_restore_process_identification.html
 sidebar: sidebar
-keywords: 
-summary: 'All restore processes are not supported in all SnapManager for SAP versions. After upgrading SnapManager, you need to be aware of the restore process that you can use for restoring a backup.'
+keywords: restore, process, support, snapmanager, sap, version, upgrade, types
+summary: "All restore processes are not supported in all SnapManager for SAP versions. After upgrading SnapManager, you need to be aware of the restore process that you can use for restoring a backup."
 ---
 = Restore process types
 :icons: font
@@ -13,4 +13,4 @@ All restore processes are not supported in all SnapManager for SAP versions. Aft
 
 The backups that are created by using SnapManager 3.0 or later can be restored by using both fast restore and file-based restore processes. However, the backups that are created by using a version earlier than SnapManager 3.0 can be restored by using only the file-based restore process.
 
-You can determine the SnapManager version used to create the backup by running the -backup show command.
+You can determine the SnapManager version used to create the backup by running the `-backup show` command.

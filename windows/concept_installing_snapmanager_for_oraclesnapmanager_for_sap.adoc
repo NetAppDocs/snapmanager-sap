@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_installing_snapmanager_for_oraclesnapmanager_for_sap.html
 sidebar: sidebar
-keywords: 
-summary: 'You can download and install SnapManager for SAP in your environment and perform operations such as database backup, restore, recovery, and cloning.'
+keywords: download, install, snapmanager, sap, environment, perform, operation, database, backup, restore, recovery, clone
+summary: "You can download and install SnapManager for SAP in your environment and perform operations such as database backup, restore, recovery, and cloning."
 ---
 = Installing SnapManager for SAP
 :icons: font

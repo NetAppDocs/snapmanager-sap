@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_workflow_summary_for_local_and_secondary_database_backup.html
 sidebar: sidebar
-keywords: 
-summary: 'In this example, the DBA \(using SnapManager\) and the storage administrator \(using the NetApp Management Console data protection capability\) coordinate actions to configure local backup and secondary backup \(also known as a protected backup\) of the target database.'
+keywords: dba, snapmanager, storage, administrator, netapp, management, console, data, protection, capability, local, backup, protect, database, target, workflow, summary, local, secondary, backup
+summary: "In this example, the DBA (using SnapManager) and the storage administrator (using the NetApp Management Console data protection capability) coordinate actions to configure local backup and secondary backup (also known as a protected backup) of the target database."
 ---
 = Workflow summary for local and secondary database backup
 :icons: font
@@ -34,7 +34,7 @@ The DBA uses SnapManager to create or edit a profile of the target database that
 +
 Assigning the protection policy automatically includes the target database in a partially provisioned, but nonconformant the NetApp Management Console data protection capability dataset. When fully provisioned, the dataset configuration enables backup of the target database to secondary storage.
 +
-The dataset name uses this syntax: smsap_hostname_databasename, which translates to "smsap_prod01.sample.com_p01".
+The dataset name uses this syntax: `_smsap_hostname_databasename_`, which translates to "smsap_prod01.sample.com_p01".
 
 * *Secondary and tertiary storage provisioning*
 +

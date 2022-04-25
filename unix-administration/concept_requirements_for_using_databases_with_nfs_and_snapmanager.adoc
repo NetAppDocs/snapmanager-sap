@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_requirements_for_using_databases_with_nfs_and_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'You must know the requirements for using databases with Network File System \(NFS\) and SnapManager. The recommendations include running as root, attribute caching, and symbolic links.'
+keywords: requirement, database, network, file, system, nfs, snapmanager, root, attribute, caching, cache, sybolic, link
+summary: "You must know the requirements for using databases with Network File System (NFS) and SnapManager. The recommendations include running as root, attribute caching, and symbolic links."
 ---
 = Requirements for using databases with NFS and SnapManager
 :icons: font
@@ -15,8 +15,8 @@ You must know the requirements for using databases with Network File System (NFS
 +
 Set either of the following NFS export options to ensure that root can access the file systems:
 
- ** root=host name
- ** rw=host name, anon=0
+ ** root=`_host name_`
+ ** rw=`_host name_`, anon=0
 
 * You must disable attribute caching for all the volumes that contain database data files, control files, redo and archive logs, and the database home.
 +

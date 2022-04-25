@@ -1,42 +1,58 @@
 ---
-permalink: unix-administration/task_performing_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html
+permalink: unix-administration/task_perform_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use your own script while initiating a backup, restore, or clone operation. SnapManager displays a Task-enabling page in the Backup Create wizard, Restore or Recover wizard, or Clone Create wizard, where you can select the script and provide values for any parameters required by the script.'
+keywords: script, initiate, initiating, backup, restore, clone, operation, snapmanager, display, task-enabling, create, wizard, restore, recover, parameter, post-script
+summary: "You can use your own script while initiating a backup, restore, or clone operation. SnapManager displays a Task-enabling page in the Backup Create wizard, Restore or Recover wizard, or Clone Create wizard, where you can select the script and provide values for any parameters required by the script."
 ---
-= Performing backup, restore, and clone operations using prescript and post-scripts
+= Perform backup, restore, and clone operations using prescript and post-scripts
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can use your own script while initiating a backup, restore, or clone operation. SnapManager displays a Task-enabling page in the Backup Create wizard, Restore or Recover wizard, or Clone Create wizard, where you can select the script and provide values for any parameters required by the script.
 
+*What you'll need*
+
 * Install the plug-in scripts in the correct SnapManager installation location.
 * Verify that the plug-ins are installed correctly by using the command.
 * Ensure that you are using the BASH shell.
 
+*About this task*
+
 In the command-line interface (CLI), list the script name, select the parameters, and set the values.
 
-. To verify that you are using the BASH shell, enter the following command at the command prompt:``bash``
+.Steps
+
+. To verify that you are using the BASH shell, enter the following command at the command prompt:
 +
-Alternately, you can enter the which-bash command at the prompt, and use the command output as the start parameter of the script.
+`*bash*`
++
+Alternately, you can enter the `which-bash` command at the prompt, and use the command output as the start parameter of the script.
 +
 The BASH shell is operating properly if you do not see an error.
 
-. For the backup operation, enter the -taskspec option and provide the absolute path of the task specification XML file for performing a preprocessing or a post-processing activity to occur before or after the backup operation: `smsap backup create -profile profile_name {[-full {-online \| -offline \| -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited}] [-verify] | [-data [[-filesfiles [files]] | [-tablespaces-tablespaces [-tablespaces]] [-datalabellabel] {-online \| -offline \| -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited]} [-verify] | [-archivelogs [-labellabel] [-commentcomment] [-protect | -noprotect | -protectnow] [-backup-destpath1 [,[path2]]] [-exclude-destpath1 [,path2]]] [-prunelogs {-all | -untilSCNuntilSCN | -before {-dateyyyy-MM-dd HH:mm:ss | -months | -days | -weeks | -hours}} -prune-destprune_dest1,[prune_dest2]] [-taskspectaskspec] [-include-with-online-backups | -no-include-with-online-backups]} -dump [-force] [-quiet \| -verbose]`
+. For the backup operation, enter the `-taskspec` option and provide the absolute path of the task specification XML file for performing a preprocessing or a post-processing activity to occur before or after the backup operation:
++
+`*smsap backup create -profile _profile_name_ {[-full {-online | -offline | -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited}] [-verify] | [-data [[-files _files_ [_files_]] | [-tablespaces _-tablespaces_ [_-tablespaces_]] [-datalabel _label_] {-online | -offline | -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited]} [-verify] | [-archivelogs [-label _label_] [-comment _comment_] [-protect | -noprotect | -protectnow] [-backup-dest _path1_ [,[_path2_]]] [-exclude-dest _path1_ [,_path2_]]] [-prunelogs {-all | -untilSCN _untilSCN_ | -before {-date _yyyy-MM-dd HH:mm:ss_ | -months | -days | -weeks | -hours}} -prune-dest _prune_dest1_,[_prune_dest2_]] [-taskspec _taskspec_] [-include-with-online-backups | -no-include-with-online-backups]} -dump [-force] [-quiet | -verbose]*`
 +
 If the backup plug-in operation failed, only the plug-in name and return code are displayed. Your plug-in script must include log messages and redirect the messages to the user-defined log files.
 
-. For the backup restore operation, enter the -taskspec option and provide the absolute path of the task specification XML file for performing a preprocessing or a post-processing activity to occur before or after the restore operation:``smsap backup restore -profileprofile_name {-label<label\> | -id<id\>} {-files<files\>|-tablespaces<tablespaces\> | -complete | -controlfiles} [-recover {-alllogs \| -nologs \| -until <until\>}][-restorespec<restorespec\>] | -from-secondary [-temp-volume <temp_volume\>] [-copy-idid]][-taskspec<taskspec\>] [-verify][-force] backup restore -fast \[require \| override \| fallback \| off\] [-preview] -dump [-quiet \| -verbose]``
+. For the backup restore operation, enter the `-taskspec` option and provide the absolute path of the task specification XML file for performing a preprocessing or a post-processing activity to occur before or after the restore operation:
++
+`*smsap backup restore -profile _profile_name_ {-label _<label>_ | -id _<id>_} {-files _<files>_ |-tablespaces _<tablespaces>_ | -complete | -controlfiles} [-recover {_-alllogs_ | _-nologs_ | _-until_ _<until>_}][-restorespec _<restorespec>_] | -from-secondary [_-temp-volume <temp_volume>_] [-copy-id _id_]][-taskspec _<taskspec>_] [-verify][-force] backup restore -fast [require | override | fallback | off] [-preview] -dump [-quiet | -verbose]*`
 +
 If the restore plug-in operation failed, only the plug-in name and return code are displayed. Your plug-in script must include log messages and redirect the messages to the user-defined log files.
 
-. For the clone create operation, enter the -taskspec option and provide the absolute path of the task specification XML file for performing a preprocessing or a post-processing activity to occur before or after the clone operation: `smsap clone create -profileprofile_name {-backup-labelbackup_name | -backup-id<backup-id\>| -current} -newsidnew_sid-clonespecfull_path_to_clonespecfile [-reserve<yes, no, inherit\>] [-host<host\>] [-label<label\>] [-comment<comment\>] [-from-secondary [-copy-id<id\>]] {-taskspec<taskspec\>] -dump [-quiet \| -verbose]`
+. For the clone create operation, enter the -taskspec option and provide the absolute path of the task specification XML file for performing a preprocessing or a post-processing activity to occur before or after the clone operation:
++
+`*smsap clone create -profile _profile_name_ {-backup-label _backup_name_ | -backup-id _<backup-id>_ | -current} -newsid _new_sid_ -clonespec _full_path_to_clonespecfile_ [-reserve _<yes, no, inherit>_ ] [-host _<host>_] [-label _<label>_] [-comment _<comment>_] [-from-secondary [-copy-id _<id>_]] {-taskspec _<taskspec>_] -dump [-quiet | -verbose]*`
 +
 If the clone plug-in operation failed, only the plug-in name and return code are displayed. Your plug-in script must include log messages and redirect the messages to the user-defined log files.
 
+---
 == Example of creating a backup using the task specification XML file
 
 ----
 smsap backup create -profile SALES1 -full -online -taskspec sales1_taskspec.xml -force -verify
 ----
+---

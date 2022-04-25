@@ -1,18 +1,18 @@
 ---
-permalink: unix-administration/task_viewing_a_list_of_backups.html
+permalink: unix-administration/task_view_a_list_of_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'You can check which backups were created for a profile and the backup state by using the smsap backup list command. For each profile, the command displays the information about the most recent backup first and then continues until the information for all the backups is displayed.'
+keywords: check, backup, create, profile, state, smsap, list, command, information, information
+summary: "You can check which backups were created for a profile and the backup state by using the smsap backup list command. For each profile, the command displays the information about the most recent backup first and then continues until the information for all the backups is displayed."
 ---
-= Viewing a list of backups
+= View a list of backups
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can check which backups were created for a profile and the backup state by using the smsap backup list command. For each profile, the command displays the information about the most recent backup first and then continues until the information for all the backups is displayed.
+You can check which backups were created for a profile and the backup state by using the `smsap backup list` command. For each profile, the command displays the information about the most recent backup first and then continues until the information for all the backups is displayed.
 
-. Enter the following command: `smsap backup list -profileprofile_name [-delimitercharacter] [data | -archivelogs] [-quiet | -verbose]`
+.Step
 
-*Related information*
-
-xref:reference_the_smosmsapbackup_list_command.adoc[The smsap backup list command]
+. Enter the following command:
++
+`*smsap backup list -profile _profile_name_ [-delimiter _character_] [data | -archivelogs] [-quiet | -verbose]*`

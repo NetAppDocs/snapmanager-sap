@@ -1,23 +1,27 @@
 ---
-permalink: unix-administration/task_enabling_role_based_access_control.html
+permalink: unix-administration/task_enable_role_based_access_control.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager role-based access control \(RBAC\) is enabled using SnapDrive. Upon installation of SnapDrive, RBAC is disabled by default. After you enable RBAC in SnapDrive, SnapManager then performs operations with RBAC enabled.'
+keywords: snapmanager, role-based, access, control, rbac, enable, snapdrive, installation, disable, default, operation
+summary: "SnapManager role-based access control (RBAC) is enabled using SnapDrive. Upon installation of SnapDrive, RBAC is disabled by default. After you enable RBAC in SnapDrive, SnapManager then performs operations with RBAC enabled."
 ---
-= Enabling role-based access control
+= Enable role-based access control
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 SnapManager role-based access control (RBAC) is enabled using SnapDrive. Upon installation of SnapDrive, RBAC is disabled by default. After you enable RBAC in SnapDrive, SnapManager then performs operations with RBAC enabled.
 
-The snapdrive.config file in SnapDrive sets many options, one of which enables RBAC.
+*About this task*
+
+The `snapdrive.config` file in SnapDrive sets many options, one of which enables RBAC.
 
 The SnapDrive documentation contains details about SnapDrive.
 
-. Open the snapdrive.conf file in an editor.
-. Enable RBAC by changing the value of the rbac-method parameter from native to dfm.
-+
-The default value for this parameter is native, which disables RBAC.
+.Steps
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+. Open the `snapdrive.conf` file in an editor.
+. Enable RBAC by changing the value of the `rbac-method` parameter from `*native*` to `*dfm*`.
++
+The default value for this parameter is `*native*`, which disables RBAC.
+
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

@@ -1,0 +1,40 @@
+---
+permalink: windows/task_rename_profiles.html
+sidebar: sidebar
+keywords: snapmanager, enable, rename, profile, update, capabilities, capability, perform, retain
+summary: "SnapManager enables you to rename the profile when you update the profile. The SnapManager capabilities that are set on the profile and the operations that can be performed before renaming are retained for the renamed profile."
+---
+= Rename profiles
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to rename the profile when you update the profile. The SnapManager capabilities that are set on the profile and the operations that can be performed before renaming are retained for the renamed profile.
+
+== What you'll need
+
+* You must ensure that there are no SnapManager operations running on the profile while renaming the profile.
+
+== About this task
+
+You can rename the profile from both the SnapManager command-line interface (CLI) and graphical user interface (GUI). While updating the profile, SnapManager verifies and updates the profile name in the repository.
+
+NOTE: SnapManager does not support renaming the profile in the Multi-profile update window.
+
+When you provide a new profile name, the new profile name is added in the client-side credential cache and the earlier profile name is removed. When you rename the profile from a client, the credential cache of only that client is updated. You need to execute the `smsap profile sync` command from each of the clients to update the new credential cache with the new profile name.
+
+You can set the password for the profile by using the `smsap credential set` command.
+
+If the profile name was included in a Snapshot copy naming pattern, when you rename a profile, the new name for the profile gets updated. All the SnapManager operations that are performed on the profile use the new profile name. The backups created with earlier profile continue to have the earlier profile name and are used to perform other SnapManager operations.
+
+If you are performing rolling upgrade of SnapManager server hosts, you must ensure that you perform the complete upgrade before renaming the profile.
+
+The new name for the profile is updated only from the SnapManager client from which the request is made. The SnapManager clients that are connected to the SnapManager server are not notified about the change in profile name. You can check the operation log to know about the change in the profile name.
+
+NOTE: If a scheduled backup operation begins at the time of renaming the profile, then the scheduled operation fails.
+
+.Step
+
+. Enter the following command:
++
+`*smsap profile update -profile _profile_ [-new-profile _new_profile_name_]*`

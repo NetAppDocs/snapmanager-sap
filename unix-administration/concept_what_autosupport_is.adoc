@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_what_autosupport_is.html
 sidebar: sidebar
-keywords: AutoSupport,ASUP
-summary: 'The AutoSupport feature enables SnapManager server to send AutoSupport messages to the storage system after the backup operation is complete.'
+keywords: autosupport, enable, feature, snapmanager, server, storage, system, operation
+summary: "The AutoSupport feature enables SnapManager server to send AutoSupport messages to the storage system after the backup operation is complete."
 ---
 = What AutoSupport is
 :icons: font
@@ -13,17 +13,9 @@ The AutoSupport feature enables SnapManager server to send AutoSupport messages 
 
 NOTE: SnapManager sends AutoSupport messages only for the successful backup operations.
 
-You can enable or disable AutoSupport by assigning the following values to the auto_support.on configuration parameter in the smsap.config configuration file:
+You can enable or disable AutoSupport by assigning the following values to the `auto_support.on` configuration parameter in the `smsap.config` configuration file:
 
-* TRUE - Enables AutoSupport
-* FALSE - Disables AutoSupport
+* `*TRUE*` - Enables AutoSupport
+* `*FALSE*` - Disables AutoSupport
 
 NOTE: By default, AutoSupport is enabled in SnapManager.
-
-*Related information*
-
-xref:task_adding_storage_systems_to_the_snapmanager_server_host.adoc[Adding storage systems operating in clustered Data ONTAP to the SnapManager server host]
-
-xref:task_enabling_autosupport_in_snapmanager.adoc[Enabling AutoSupport in SnapManager]
-
-xref:task_disabling_autosupport_in_snapmanager.adoc[Disabling AutoSupport in SnapManager]

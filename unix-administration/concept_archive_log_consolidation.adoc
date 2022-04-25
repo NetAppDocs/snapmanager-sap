@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_archive_log_consolidation.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager \(3.2 or later\) for SAP consolidates the archive log backups to maintain a minimum number of backups for archive log files. SnapManager for SAP identifies and frees the backups that contain archive logs files that are subsets of other backups.'
+keywords: sap, consalidate, consolidation, archive, log, backup, minimum, number, snapmanager, file
+summary: "SnapManager (3.2 or later) for SAP consolidates the archive log backups to maintain a minimum number of backups for archive log files. SnapManager for SAP identifies and frees the backups that contain archive logs files that are subsets of other backups."
 ---
 = Archive log consolidation
 :icons: font

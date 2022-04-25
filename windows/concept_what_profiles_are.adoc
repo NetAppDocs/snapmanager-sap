@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_profiles_are.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager uses profiles to store the information necessary to perform operations on a given database. A profile contains the information about the database including its credentials, backups, and clones. By creating a profile, you do not have to specify database details each time you perform an operation on that database.'
+keywords: snapmanager, profile, store, information, perform, operation, database, credential, backup, clone
+summary: "SnapManager uses profiles to store the information necessary to perform operations on a given database. A profile contains the information about the database including its credentials, backups, and clones. By creating a profile, you do not have to specify database details each time you perform an operation on that database."
 ---
 = What profiles are
 :icons: font
@@ -44,7 +44,3 @@ SnapManager determines whether a backup should be retained by considering both t
 *Archive log retention duration*
 
 After the archive log backups are separated, they are retained based on the archive log retention duration. Archive log backups taken with data file backups are always retained along with those data file backups, regardless of the archive log retention duration.
-
-*Related information*
-
-xref:concept_managing_profiles_for_efficient_backups.adoc[Managing profiles for efficient backups]

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_performing_rolling_upgrade_on_a_single_host_or_multiple_hosts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can perform rolling upgrade on a single or multiple SnapManager server hosts by using the command-line interface \(CLI\). The upgraded SnapManager server host is then managed only with the later version of SnapManager.'
+keywords: perform, roll, upgrade, single, multiple, snapmanager, server, host, command-line, interface, cli
+summary: You can perform rolling upgrade on a single or multiple SnapManager server hosts by using the command-line interface \(CLI\). The upgraded SnapManager server host is then managed only with the later version of SnapManager.
 ---
 = Performing rolling upgrade on a single host or multiple hosts
 :icons: font

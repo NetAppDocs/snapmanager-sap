@@ -1,54 +1,70 @@
 ---
-permalink: unix-installation-7mode/task_smsap_isg_installing_snapmanager.html
+permalink: unix-installation-7mode/task_smsap_isg_install_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'You must install SnapManager on each host where the database you want to backup is running.'
+keywords: install, snapmanager, host, database, backup, run
+summary: "You must install SnapManager on each host where the database you want to backup is running."
 ---
-= Installing SnapManager
+= Install SnapManager
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You must install SnapManager on each host where the database you want to backup is running.
 
+*What you'll need*
+
 You must have installed SnapDrive for UNIX on the database host and established a connection to the storage system.
 
 For information about how to install SnapDrive and establish connection to storage system, see SnapDrive for UNIX documentation.
+
+*About this task*
 
 You must install one SnapManager instance per database host. If you are using a Real Application Cluster (RAC) database and want to back up the RAC database, you must install SnapManager on all the hosts of the RAC database.
 
 . Download the SnapManager for SAP install package for UNIX from the NetApp Support Siteand copy it to the host system.
 +
-http://mysupport.netapp.com/NOW/cgi-bin/software[NetApp Downloads: Software]
+http://mysupport.netapp.com/NOW/cgi-bin/software[NetApp Downloads: Software^]
 
 . Log in to the database host as the root user.
 . From the command prompt, navigate to the directory where you copied the install package.
-. Make the install package executable: `chmod 755install_package.bin`
-. Install SnapManager: `./install_package.bin`
-. Press Enter to continue.
-. Perform the following steps:
- .. Change the default value of the operating system user to orasid, where sid is the system identifier of the database.
- .. Press Enter to accept the default value for operating system group.
+. Make the install package executable:
 +
-The default value for the group is dba.
+`*chmod 755 _install_package.bin_*`
 
- .. Press Enter to accept the default value for the startup type.
+. Install SnapManager:
++
+`*_./install_package.bin_*`
+
+. Press `Enter` to continue.
+. Perform the following steps:
+ .. Change the default value of the operating system user to `*ora*` `_sid_`, where `_sid_` is the system identifier of the database.
+ .. Press Enter` to accept the default value for operating system group.
++
+The default value for the group is _dba_.
+
+ .. Press `Enter` to accept the default value for the startup type.
 
 +
 The configuration summary is displayed.
-. Review the configuration summary and press Enter to continue.
+. Review the configuration summary and press `Enter` to continue.
 +
-SnapManager for SAP and the required Java Runtime Environment (JRE) are installed and the smsap_setup script is executed automatically.
+SnapManager for SAP and the required Java Runtime Environment (JRE) are installed and the `smsap_setup` script is executed automatically.
 +
-SnapManager for SAP is installed at /opt/NetApp/smsap.
+SnapManager for SAP is installed at `/opt/NetApp/smsap`.
+
+*After you finish*
 
 You can verify if the installation was successful by performing the following steps:
 
-. Start the for SnapManager server by running the following command: `smsap_server start`
+. Start the for SnapManager server by running the following command:
++
+`*smsap_server start*`
 +
 A message is displayed stating that the for SnapManager server is running.
 
-. Verify that the SnapManager for SAP for system is running correctly by entering the following command: `smsap system verify`
+. Verify that the SnapManager for SAP for system is running correctly by entering the following command:
++
+`*smsap system verify*`
 +
 The following message is displayed: Operation Id number succeeded.
 +
@@ -56,10 +72,6 @@ number is the operation ID number.
 
 *Related information*
 
-xref:task_smsap_isg_integrating_with_sap_br_tools.adoc[Integrating with SAP BR* Tools]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30050[NetApp Documentation: SnapDrive for UNIX^]
 
-xref:task_setting_up_snapmanager.adoc[Setting up SnapManager]
-
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30050[NetApp Documentation: SnapDrive for UNIX]
-
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

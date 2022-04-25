@@ -1,21 +1,21 @@
 ---
 permalink: windows/reference_the_smosmsaphelp_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the help command to display information about the SnapManager commands and their options. If you do not supply a command name, it displays a list of valid commands. If you supply a command name, it displays the syntax for that command.'
+keywords: run, help, command, display, information, snapmanager, option, name, syntax, smsap
+summary: "You can run the help command to display information about the SnapManager commands and their options. If you do not supply a command name, it displays a list of valid commands. If you supply a command name, it displays the syntax for that command."
 ---
 = The smsap help command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the help command to display information about the SnapManager commands and their options. If you do not supply a command name, it displays a list of valid commands. If you supply a command name, it displays the syntax for that command.
+You can run the `help` command to display information about the SnapManager commands and their options. If you do not supply a command name, it displays a list of valid commands. If you supply a command name, it displays the syntax for that command.
 
 == Syntax
 
 ----
 
-        smsap help 
+        smsap help
 \[\]\[backup\|cmdfile\|clone\|credential\|help\|operation\|profile\|repository\|system\|version\|plugin\|diag\|history\|schedule\|notification\|storage\|get\]
 \[-quiet \| -verbose\]
 ----
@@ -24,20 +24,20 @@ You can run the help command to display information about the SnapManager comman
 
 The following are some command names you can use with this command:
 
-* backup
-* clone
-* cmdfile
-* credential
-* diag
-* get
-* notification
-* help
-* history
-* operation
-* plugin
-* profile
-* repository
-* schedule
-* storage
-* system
-* version
+* `backup`
+* `clone`
+* `cmdfile`
+* `credential`
+* `diag`
+* `get`
+* `notification`
+* `help`
+* `history`
+* `operation`
+* `plugin`
+* `profile`
+* `repository`
+* `schedule`
+* `storage`
+* `system`
+* `version`

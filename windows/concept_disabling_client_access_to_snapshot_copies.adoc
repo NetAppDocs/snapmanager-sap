@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_disabling_client_access_to_snapshot_copies.html
 sidebar: sidebar
-keywords: 
-summary: 'For any storage system volume that uses the NFS protocol and contains SAP data backed up using BR\*Tools, you must disable client access to the Snapshot copies of that volume. If client access is enabled, BR\*Tools will attempt to create backups of the hidden .snapshot directories that contain previous backups.'
+keywords: storage, system, volume, nfs, protocol, sap, data, back up, tools, disable, client, snapshot, copies, copy, disable
+summary: "For any storage system volume that uses the NFS protocol and contains SAP data backed up using BR*Tools, you must disable client access to the Snapshot copies of that volume. If client access is enabled, BR*Tools will attempt to create backups of the hidden .snapshot directories that contain previous backups."
 ---
 = Disabling client access to Snapshot copies
 :icons: font
@@ -13,7 +13,7 @@ For any storage system volume that uses the NFS protocol and contains SAP data b
 
 To disable client access, use one of the following methods.
 
-* Using Data ONTAP: Using the Data ONTAP command line interface, enter the following command: vol options volume_name nosnapdir on wherein volume_name is the name of the volume containing SAP data, for example, /vol/falls_sap_cer9i_data1
+* Using Data ONTAP: Using the Data ONTAP command line interface, enter the following command: `vol options volume_name nosnapdir on` wherein `volume_name` is the name of the volume containing SAP data, for example, `/vol/falls_sap_cer9i_data1`
 * Using FilerView: To disable access using the FilerView graphical user interface, you must already have a Snapshot copy of the volume.
  .. In the FilerView left pane, select *Volumes* > *Snapshots* > *Manage*.
  .. On the Manage Snapshots page, click the volume name in the Volume column.

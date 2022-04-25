@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_configuring_summary_e_mail_notification_for_multiple_profiles.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to configure a summary email notification for multiple profiles under a repository database.'
+keywords: snapmanager, enable, configure, summary, email, notification, multiple, profile, repository, database, configuring
+summary: SnapManager enables you to configure a summary email notification for multiple profiles under a repository database.
 ---
 = Configuring summary email notification for multiple profiles
 :icons: font

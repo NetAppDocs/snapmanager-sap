@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_fast_restore_eligibility_checks.html
 sidebar: sidebar
-keywords: 
-summary: 'When you choose to perform a fast restore of a backup, SnapManager first performs an eligibility check to determine whether the fast restore process can be used.'
+keywords: perform, restore, backup, snapmanager, eligibility, check, fast
+summary: "When you choose to perform a fast restore of a backup, SnapManager first performs an eligibility check to determine whether the fast restore process can be used."
 ---
 = Fast restore eligibility checks
 :icons: font
@@ -18,6 +18,7 @@ SnapManager provides the following types of checks:
 
 The following table lists issues that you might encounter and indicates whether the fast restore eligibility check can be overridden:
 
+[cola="2a,1a,3a" options="header"]
 |===
 | Issue| Pass required| Details
 a|
@@ -211,12 +212,12 @@ a|
 Performing a volume restore deletes all the Snapshot copies created after the Snapshot copy to which the volume is being restored. Therefore, any backups created after the backup that is being restored are either deleted or freed. Later backups are deleted in the following scenarios:
 
 * The backup state is not PROTECTED
-* retain.alwaysFreeExpiredBackups is false in smsap.config
+* `retain.alwaysFreeExpiredBackups` is `*false*` in `smsap.config`
 
 Later backups are freed in the following scenarios:
 
 * The backup state is PROTECTED
-* retain.alwaysFreeExpiredBackups is true false in smsap.config
+* `retain.alwaysFreeExpiredBackups` is true `*false*` in `smsap.config`
 
 Resolution: Restore from a later backup, or free or delete later backups.
 

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_upgrading_snapmanager_for_oraclesnapmanager_for_sap_hosts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can upgrade all the existing SnapManager hosts to use the latest version of SnapManager. All the hosts are upgraded simultaneously. However, this might result in downtime of all the SnapManager hosts and the scheduled operations during that time.'
+keywords: upgrade, exist, snapmanager, host, version, simultaneous, result, downtime, schedule, operation, time, upgrading
+summary: You can upgrade all the existing SnapManager hosts to use the latest version of SnapManager. All the hosts are upgraded simultaneously. However, this might result in downtime of all the SnapManager hosts and the scheduled operations during that time.
 ---
 = Upgrading SnapManager hosts
 :icons: font
@@ -16,6 +16,7 @@ You can upgrade all the existing SnapManager hosts to use the latest version of 
  .. In the left panel, click *Stop*.
 . Double-click the SnapManager installation file.
 +
+[options="header"]
 |===
 | If the operating system is...| Then use...
 a|

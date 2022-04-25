@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_limitations.html
 sidebar: sidebar
-keywords: SnapManager
-summary: 'You must be aware of the scenarios and limitations that might affect your environment.'
+keywords: aware, scenario, limitation, environment, work, snapmanager
+summary: "You must be aware of the scenarios and limitations that might affect your environment."
 ---
 = Limitations when working with SnapManager
 :icons: font
@@ -80,7 +80,7 @@ SnapManager 3.3 displays an error message when you try to perform a fast restore
 +
 However, if temporary tablespaces are Oracle Managed Files (OMFs) that are located in a different location from the datafiles location, the clone operation does not create the tablespaces in the datafiles location. The OMFs are not managed by SnapManager.
 
-* SnapManager fails to clone a RAC database if you select the -resetlogs option.
+* SnapManager fails to clone a RAC database if you select the `-resetlogs` option.
 
 *Limitations related to archive log files and backups*
 
@@ -108,9 +108,9 @@ The following SnapManager operations are not supported when you change the targe
 
 *Limitations related to the SnapManager CLI or GUI*
 
-* The SnapManager CLI commands for the profile create operation that are generated from the SnapManager GUI do not have history configuration options.
+* The SnapManager CLI commands for the `profile create` operation that are generated from the SnapManager GUI do not have history configuration options.
 +
-You cannot use the profile create command to configure history retention settings from the SnapManager CLI.
+You cannot use the `profile create` command to configure history retention settings from the SnapManager CLI.
 
 * SnapManager does not display the GUI in Mozilla Firefox when there is no Java Runtime Environment (JRE) available on the Windows client.
 * SnapManager 3.3 does not display the SnapManager GUI in Microsoft Internet Explorer 6 on Windows Server 2008 and Windows 7.
@@ -135,4 +135,4 @@ You can delete the backup only when you break the relationship. This issue is be
 
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

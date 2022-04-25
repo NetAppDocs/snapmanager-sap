@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_server_restart_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command restarts the SnapManager host server and is entered as root.'
+keywords: command, restart, snapmanager, host, server, enter, root, smsap_server
+summary: "This command restarts the SnapManager host server and is entered as root."
 ---
 = The smsap_server restart command
 :icons: font
@@ -14,20 +14,21 @@ This command restarts the SnapManager host server and is entered as root.
 == Syntax
 
 ----
-
-        smsap_server restart
+smsap_server restart
 [-quiet | -verbose]
 ----
 
 == Parameters
 
-* *-quiet*
+* `*-quiet*`
 +
 Specifies that only error messages are displayed on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* `*-verbose*`
 +
 Specifies that error, warning, and informational messages are displayed on the console.
+
+---
 
 == Example command
 
@@ -36,3 +37,4 @@ The following example restarts the host server.
 ----
 smsap_server restart
 ----
+---

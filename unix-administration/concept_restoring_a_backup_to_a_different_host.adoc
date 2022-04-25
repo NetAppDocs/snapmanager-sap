@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_restoring_a_backup_to_a_different_host.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use the BRRESTORE or smsap restore command to restore a backup that you made with BRBACKUP on a different host. The new host must also be running SnapManager for SAP.'
+keywords: brrestore, smsap, restore, command, backup, brbackup, different, host, snapmanager, restoring
+summary: "You can use the BRRESTORE or smsap restore command to restore a backup that you made with BRBACKUP on a different host. The new host must also be running SnapManager for SAP."
 ---
 = Restoring a backup to a different host
 :icons: font
@@ -15,12 +15,12 @@ You can use the BRRESTORE or smsap restore command to restore a backup that you 
 
 Before you can run BRRESTORE, you must make the SnapManager profile of the original host available to the new host. Complete the following steps:
 
-* Set credential for repository: Use the smsap credential set command to enable the new host to access the SnapManager repository used for the original backup.
-* Set credential for profile: Use the smsap credential setcommand to enable the new host to access the SnapManager profile used for the original backup.
-* Load the profile on the new host: Use the smsap profile sync command to load the SnapManager profile information onto the new host.
+* Set credential for repository: Use the `smsap credential set` command to enable the new host to access the SnapManager repository used for the original backup.
+* Set credential for profile: Use the `smsap credential set` command to enable the new host to access the SnapManager profile used for the original backup.
+* Load the profile on the new host: Use the `smsap profile sync` command to load the SnapManager profile information onto the new host.
 
 == Run BRRESTORE
 
 Configure new storage on the new host with the same paths as the original storage on the original host.
 
-Use the BRRESTORE command to restore the backup to the new host. By default, the files are restored to the original path locations. You can specify an alternate path for the restored files using the -m option of the BRRESTORE command. See the SAP documentation for more information on BRRESTORE.
+Use the `BRRESTORE` command to restore the backup to the new host. By default, the files are restored to the original path locations. You can specify an alternate path for the restored files using the `-m` option of the `BRRESTORE` command. See the SAP documentation for more information on `BRRESTORE`.

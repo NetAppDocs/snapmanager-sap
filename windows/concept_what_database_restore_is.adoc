@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_database_restore_is.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to perform file-based backup and restore operations.'
+keywords: snapmanager, enable, perform, file-based, backup, restore, operation, database
+summary: "SnapManager enables you to perform file-based backup and restore operations."
 ---
 = What database restore is
 :icons: font
@@ -13,6 +13,7 @@ SnapManager enables you to perform file-based backup and restore operations.
 
 The following table describes the restore methods:
 
+[options="header"]
 |===
 | Restore process| Details
 a|

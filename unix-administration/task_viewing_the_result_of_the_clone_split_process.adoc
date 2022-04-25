@@ -1,18 +1,24 @@
 ---
-permalink: unix-administration/task_viewing_the_result_of_the_clone_split_process.html
+permalink: unix-administration/task_view_the_result_of_the_clone_split_process.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view the result of the clone split process you started.'
+keywords: view, result, clone, split, process
+summary: "You can view the result of the clone split process you started."
 ---
-= Viewing the result of the clone split process
+= View the result of the clone split process
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can view the result of the clone split process you started.
 
-. To view the result of the clone split process, enter the following command: `smsap clone split-result -profileprofile [-hosthostname] [-labelsplit-label | -idsplit-id] [-quiet \| -verbose]`
+.Step
 
+. To view the result of the clone split process, enter the following command:
++
+`*smsap clone split-result -profile _profile_ [-host _hostname_] [-label _split-label_ | -id _split-id_] [-quiet | -verbose]*`
+
+---
 ----
 smsap clone split-result -profile p1 -id 8abc01ec0e78f3e2010e78f3fdd00001
 ----
+---

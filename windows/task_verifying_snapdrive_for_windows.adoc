@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_verifying_snapdrive_for_windows.html
 sidebar: sidebar
-keywords: 
-summary: 'If you have installed SnapDrive for Windows, verify that you can create a Snapshot copy before using SnapManager.'
+keywords: install, snapdrive, windows, snapshot, verify, create, copy
+summary: If you have installed SnapDrive for Windows, verify that you can create a Snapshot copy before using SnapManager.
 ---
 = Verifying SnapDrive for Windows
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_licenses_required_for_data_protection.html
 sidebar: sidebar
-keywords: 
-summary: 'You must ensure that licenses required for data protection are installed and enabled on the primary and secondary storage systems.'
+keywords: ensure, license, require, data, protection, install, enable, primary, secondary, storage, system
+summary: "You must ensure that licenses required for data protection are installed and enabled on the primary and secondary storage systems."
 ---
 = Licences required for data protection in SnapManager
 :icons: font

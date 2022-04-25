@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_variables_available_in_the_task_scripts_for_backup_operation.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager provides context information in the form of environment variables related to the backup operation that is being performed. For example, your script can retrieve the name of the original host, the name of the retention policy, and the label of the backup.'
+keywords: snapmanager, provide, context, information, environment, variable, relate, backup, operation, perform, example, original, host, retention, policy, label, script
+summary: "SnapManager provides context information in the form of environment variables related to the backup operation that is being performed. For example, your script can retrieve the name of the original host, the name of the retention policy, and the label of the backup."
 ---
 = Variables available in the task scripts for the backup operation
 :icons: font
@@ -13,144 +13,173 @@ SnapManager provides context information in the form of environment variables re
 
 The following table lists the environment variables that you can use in your scripts:
 
+[options="header"]
 |===
 | Variables| Description| Format
 a|
-SM_OPERATION_ID
+`_SM_OPERATION_ID_`
 a|
 Specifies the ID of the current operation
 a|
 string
 a|
-SM_PROFILE_NAME
+`_SM_PROFILE_NAME_`
 a|
 Specifies the name of the profile used
 a|
 string
 a|
-SM_SID
+`_SM_SID_`
 a|
 Specifies the system identifier of the database
 a|
 string
 a|
-SM_HOST
+`_SM_HOST_`
 a|
 Specifies the host name of the database
 a|
 string
 a|
-SM_OS_USER
+`_SM_OS_USER_`
 a|
 Specifies the operating system (OS) owner of the database
 a|
 string
 a|
-SM_OS_GROUP
+`_SM_OS_GROUP_`
 a|
 Specifies the OS group of the database
 a|
 string
 a|
-SM_BACKUP_TYPE
+`_SM_BACKUP_TYPE_`
 a|
 Specifies the type of the backup (online, offline, or auto)
 a|
 string
 a|
-SM_BACKUP_LABEL
+`_SM_BACKUP_LABEL_`
 a|
 Specifies the label of the backup
 a|
 string
 a|
-SM_BACKUP_ID
+`_SM_BACKUP_ID_`
 a|
 Specifies the ID of the backup
 a|
 string
 a|
-SM_BACKUP_RETENTION
+`_SM_BACKUP_RETENTION_`
 a|
 Specifies the retention period
 a|
 string
 a|
-SM_BACKUP_PROFILE
+`_SM_BACKUP_PROFILE_`
 a|
 Specifies the profile used for this backup
 a|
 string
 a|
-SM_ALLOW_DATABASE_SHUTDOWN
+`_SM_ALLOW_DATABASE_SHUTDOWN_`
 a|
 Specifies if you want to start up or shut down the databaseIf required you can use the -force option from the command-line interface.
 
 a|
 boolean
 a|
-SM_BACKUP_SCOPE
+`_SM_BACKUP_SCOPE_`
 a|
 Specifies the scope of the backup (full or partial)
 a|
 string
 a|
-SM_TARGET_FILER_NAME
+`_SM_TARGET_FILER_NAME_`
 a|
-Specifies the target storage system name *Note:* If more than one storage system is used, then the storage system names must be separated by commas.
+Specifies the target storage system name
+[NOTE]
+====
+If more than one storage system is used, then the storage system names must be separated by commas.
+====
 
 a|
 string
 a|
-SM_TARGET_VOLUME_NAME
+`_SM_TARGET_VOLUME_NAME_`
 a|
-Specifies the target volume name *Note:* The target volume name must be prefixed with storage device name, for example, SM_TARGET_FILER_NAME/SM_TARGET_VOLUME_NAME.
+Specifies the target volume name
+[NOTE]
+====
+The target volume name must be prefixed with storage device name, for example, SM_TARGET_FILER_NAME/SM_TARGET_VOLUME_NAME.
+====
 
 a|
 string
 a|
-SM_HOST_FILE_SYSTEM
+`_SM_HOST_FILE_SYSTEM_`
 a|
 Specifies the host file system
 a|
 string
 a|
-SM_SNAPSHOT_NAMES
+`_SM_SNAPSHOT_NAMES_`
 a|
-Specifies the Snapshot list *Note:* Name of the Snapshot copies must be prefixed with the storage system name and volume name. Names of the Snapshot copies are separated by commas.
+Specifies the Snapshot list
+[NOTE]
+====
+Name of the Snapshot copies must be prefixed with the storage system name and volume name. Names of the Snapshot copies are separated by commas.
+====
 
 a|
 string array
 a|
-SM_ARCHIVE_LOGS_DIRECTORY
+`_SM_ARCHIVE_LOGS_DIRECTORY_`
 a|
-Specifies the archive logs directory *Note:* If the archive logs are located in more than one directory, then the names of those directories are separated by commas.
+Specifies the archive logs directory
+[NOTE]
+====
+If the archive logs are located in more than one directory, then the names of those directories are separated by commas.
+====
 
 a|
 string array
 a|
-SM_REDO_LOGS_DIRECTORY
+`_SM_REDO_LOGS_DIRECTORY_`
 a|
-Specifies the redo logs directory *Note:* If the redo logs are located in more than one directory, then the names of those directories are separated by commas.
+Specifies the redo logs directory
+[NOTE]
+====
+If the redo logs are located in more than one directory, then the names of those directories are separated by commas.
+====
 
 a|
 string array
 a|
-SM_CONTROL_FILES_DIRECTORY
+`_SM_CONTROL_FILES_DIRECTORY_`
 a|
-Specifies the control files directory *Note:* If the control files are located in more than one directory, then the names of those directories are separated by commas.
+Specifies the control files directory
+[NOTE]
+====
+If the control files are located in more than one directory, then the names of those directories are separated by commas.
+====
 
 a|
 string array
 a|
-SM_DATA_FILES_DIRECTORY
+`_SM_DATA_FILES_DIRECTORY_`
 a|
-Specifies the data files directory *Note:* If the data files are located in more than one directory, then the names of those directories are separated by commas.
+Specifies the data files directory
+[NOTE]
+====
+If the data files are located in more than one directory, then the names of those directories are separated by commas.
+====
 
 a|
 string array
 a|
-user_defined
+`_user_defined_`
 a|
 Specifies additional parameters defined by the user. User-defined parameters are not available for plug-ins that are used as policies.
 a|

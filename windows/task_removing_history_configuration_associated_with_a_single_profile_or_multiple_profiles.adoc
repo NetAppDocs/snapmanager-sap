@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_removing_history_configuration_associated_with_a_single_profile_or_multiple_profiles.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to remove the history settings of a SnapManager operation. This operation purges all the history information associated with a single profile or multiple profiles.'
+keywords: snapmanager, remove, history, setting, operation, purge, information, profile, single, multiple, removing, associate
+summary: SnapManager enables you to remove the history settings of a SnapManager operation. This operation purges all the history information associated with a single profile or multiple profiles.
 ---
 = Removing history settings associated with a single profile or multiple profiles
 :icons: font

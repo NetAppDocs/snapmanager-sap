@@ -1,18 +1,21 @@
 ---
-permalink: unix-installation-cmode/task_modifying_the_backup_retention_class.html
+permalink: unix-installation-cmode/task_modify_the_backup_retention_class.html
 sidebar: sidebar
-keywords: 
-summary: 'After upgrading, SnapManager assigns the default backup retention class to the existing backups. You can modify the default retention class values to meet your backup requirements.'
+keywords: upgrade, snapmanager, assign, default, backup, retention, exist, default, class, value, requirement, modify, class
+summary: "After upgrading, SnapManager assigns the default backup retention class to the existing backups. You can modify the default retention class values to meet your backup requirements."
 ---
-= Modifying the backup retention class
+= Modify the backup retention class
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 After upgrading, SnapManager assigns the default backup retention class to the existing backups. You can modify the default retention class values to meet your backup requirements.
 
+== About this task
+
 The default backup retention class assigned to the existing backups are as follows:
 
+[options="header"]
 |===
 | Backup type| Retention class assignment after upgrade
 a|
@@ -24,18 +27,25 @@ Other backups
 a|
 Daily
 |===
-*Note:* You can delete the backups that are retained forever without changing the retention class.
+[NOTE]
+====
+You can delete the backups that are retained forever without changing the retention class.
+====
 
 If you upgrade to SnapManager 3.0 or later, the greater of the following two values are assigned to the existing profiles:
 
 * Previous retention count for the profile
-* Default values for the retention count and duration of daily backups as specified in the smsap.config file
+* Default values for the retention count and duration of daily backups as specified in the `smsap.config` file
 
-. Modify the values assigned to retain.hourly.count and retain.hourly.duration in the smsap.config file.
+.Step
+
+. Modify the values assigned to `retain.hourly.count` and `retain.hourly.duration` in the `smsap.config` file.
 +
-The smsap.config file is located at default installation location/properties/smsap.config.
+The `smsap.config` file is located at `default installation location/properties/smsap.config`.
++
+*Example*
 +
 You can enter the following values:
 
- ** retain.hourly.count = 12
- ** retain.hourly.duration = 2
+ ** `retain.hourly.count` = *12*
+ ** `retain.hourly.duration` = *2*

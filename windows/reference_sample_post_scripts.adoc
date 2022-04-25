@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_sample_post_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can refer the sample scripts and create customized scripts based on your environment to perform mirroring and vaulting. The sample scripts are available at default_install_directory\\plugins\\backup\\create\\post.'
+keywords: refer, sample, script, create, customize, environment, perform, mirror, vault, default, install, directory, post-script
+summary: "You can refer the sample scripts and create customized scripts based on your environment to perform mirroring and vaulting. The sample scripts are available at default_install_directory\\plugins\\backup\\create\\post."
 ---
 = Sample post-scripts
 :icons: font
@@ -382,7 +382,7 @@ REM Split the colon-separated SM_PRIMARY_SNAPSHOTS_AND_MOUNT_POINTS And SnapVaul
 	echo "execution started"
 
 	powershell.exe -file "c:\snapvault.ps1" %SM_PRIMARY_FULL_SNAPSHOT_NAME_FOR_TAG%  %SNAPSHOT_LABEL% < CON
-		
+
         if "%ERRORLEVEL%" NEQ "0" (
            set /a EXIT=4
            exit /b %EXIT%

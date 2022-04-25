@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_schedule_list_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command lists the scheduled operations associated with a profile.'
+keywords: command, list, schedule, operation, associate, profile, smsap
+summary: "This command lists the scheduled operations associated with a profile."
 ---
 = The smsap schedule list command
 :icons: font
@@ -13,15 +13,14 @@ This command lists the scheduled operations associated with a profile.
 
 == Syntax
 
+[subs=+macros]
 ----
-
-        smsap schedule list
--profile profile_name 
-\[-quiet \| -verbose\]
+pass:quotes[smsap schedule list -profile _profile_name_
+[-quiet | -verbose\]]
 ----
 
 == Parameters
 
-* *-profile profile_name*
+* `*-profile _profile_name_*`
 +
 Specifies the name of the profile related to the database, using which you can view a list of scheduled operations. The profile contains the identifier of the database and other database information.

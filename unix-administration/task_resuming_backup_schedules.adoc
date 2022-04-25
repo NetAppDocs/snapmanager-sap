@@ -1,16 +1,20 @@
 ---
-permalink: unix-administration/task_resuming_backup_schedules.html
+permalink: unix-administration/task_resume_backup_schedules.html
 sidebar: sidebar
-keywords: 
-summary: 'Administrators have the option to resume the suspended backup schedule.'
+keywords: administrator, option, suspend, backup, schedule, resuming, resume
+summary: "Administrators have the option to resume the suspended backup schedule."
 ---
-= Resuming backup schedules
+= Resume backup schedules
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 Administrators have the option to resume the suspended backup schedule.
 
-If you try to resume the active schedules, you might encounter the error message: "Cannot resume: schedule <schedulename> already in resume state".
+*About this task*
 
-. To resume the suspended backup schedule, enter this command: `smsap schedule resume -profile profile_name-schedule-nameschedulename [-quiet | -verbose]`
+If you try to resume the active schedules, you might encounter the error message: `"Cannot resume: schedule <schedulename> already in resume state"`.
+
+. To resume the suspended backup schedule, enter this command:
++
+`*smsap schedule resume -profile _profile_name_ -schedule-name _schedulename_ [-quiet | -verbose]*`

@@ -1,0 +1,38 @@
+---
+permalink: windows/task_delete_clones.html
+sidebar: sidebar
+keywords: delete, clone, size, snapshot, copy, backup, data
+summary: "You can delete the clones when the size of the Snapshot copy reaches between 10% and 20% of the backup. This also guarantees that the clone has the most current data."
+---
+= Delete clones
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can delete the clones when the size of the Snapshot copy reaches between 10% and 20% of the backup. This also guarantees that the clone has the most current data.
+
+== About this task
+
+The label is the unique identifier for each clone in a profile. You can use the clone label or ID, but not the system identifier (SID) to delete the clone.
+
+NOTE: The clone SID and the clone label are not the same.
+
+When you are deleting a clone, the database must be running. Otherwise, many files and directories for the existing clone will not be deleted, resulting in more work before another clone can be created.
+
+The directories specified for certain Oracle parameters in the clone are destroyed when the clone is deleted, and should only contain data for the cloned database: Archive Log Destinations, Background, Core, and User Dump Destinations. The audit files are not deleted.
+
+NOTE: You cannot delete a clone when the clone is used in other operations.
+
+You can optionally collect the dump files after a successful or failed clone delete operation.
+
+.Step
+
+. Enter the following command:
++
+`*smsap clone delete -profile _profile_name_ [-label _label_ | -id _guid_] [-force][-dump][-quiet]|[-verbose]*`
+
+== Example
+
+----
+smsap clone delete -profile targetdb1_prof1 -label sales0908_clone1
+----

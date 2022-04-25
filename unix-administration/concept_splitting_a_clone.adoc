@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_splitting_a_clone.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to split and manage an existing clone that was created by using the FlexClone technology. In the FlexClone technology, the clone and original database share the same physical data blocks.'
+keywords: snapmanager, enable, split, manage, clone, exist, flexclone, technology, data, block, database
+summary: "SnapManager enables you to split and manage an existing clone that was created by using the FlexClone technology. In the FlexClone technology, the clone and original database share the same physical data blocks."
 ---
 = Splitting a clone
 :icons: font

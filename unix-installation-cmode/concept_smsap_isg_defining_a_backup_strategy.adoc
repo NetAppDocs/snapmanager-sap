@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/concept_smsap_isg_defining_a_backup_strategy.html
 sidebar: sidebar
-keywords: 
-summary: 'Defining a backup strategy before creating your backups ensures that you have backups to successfully restore your databases. SnapManager provides flexible granular backup schedule to meet your Service Level Agreement \(SLA\).'
+keywords: define, backup, strategy, create, successful, restore, database, snapmanager, service, level, agreement, sla
+summary: "Defining a backup strategy before creating your backups ensures that you have backups to successfully restore your databases. SnapManager provides flexible granular backup schedule to meet your Service Level Agreement (SLA)."
 ---
 = Defining a backup strategy
 :icons: font
@@ -17,6 +17,7 @@ NOTE: For SnapManager best practices, see _TR 3761_.
 
 SnapManager supports two modes of backups:
 
+[options="header"]
 |===
 | Backup mode| Description
 a|
@@ -33,6 +34,7 @@ Creates a backup of the database when the database is either in a mounted or shu
 
 SnapManager supports three types of backups:
 
+[options="header"]
 |===
 | Backup type| Description
 a|
@@ -54,6 +56,7 @@ Creates a backup of only the archive log files.You must select *Backup Archivelo
 
 SnapManager creates backups based on whether the database profile separates the archive log backups from the data file backups.
 
+[options="header"]
 |===
 | Profile type| Description
 a|
@@ -110,4 +113,4 @@ If you use SnapMirror or SnapVault, you can verify backup copies using the Snaps
 
 *Related information*
 
-http://www.netapp.com/us/media/tr-3761.pdf[NetApp Technical Report 3761: SnapManager for Oracle: Best Practices]
+http://www.netapp.com/us/media/tr-3761.pdf[NetApp Technical Report 3761: SnapManager for Oracle: Best Practices^]

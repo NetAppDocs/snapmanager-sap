@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_error_message_classifications.html
 sidebar: sidebar
-keywords: 
-summary: 'You can determine the cause of an error if you know the message classifications.'
+keywords: determine, cause, error, message, classification
+summary: "You can determine the cause of an error if you know the message classifications."
 ---
 = Error message classifications
 :icons: font
@@ -13,6 +13,7 @@ You can determine the cause of an error if you know the message classifications.
 
 The following table provides information about the numerical ranges for the different types of messages you might see with SnapManager:
 
+[cols="2a,1a,3a" options="header"]
 |===
 | Group| Range| Usage
 a|

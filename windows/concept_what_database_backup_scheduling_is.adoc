@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_database_backup_scheduling_is.html
 sidebar: sidebar
-keywords: 
-summary: 'You can schedule, update, and monitor backups for databases by using the Schedule tab of the graphical user interface.'
+keywords: schedule, update, monitor, backup, database, graphical, user, interface
+summary: "You can schedule, update, and monitor backups for databases by using the Schedule tab of the graphical user interface."
 ---
 = What database backup scheduling is
 :icons: font
@@ -13,6 +13,7 @@ You can schedule, update, and monitor backups for databases by using the Schedul
 
 The following table addresses some common scheduling questions:
 
+[options="header"]
 |===
 | Question| Answer
 a|

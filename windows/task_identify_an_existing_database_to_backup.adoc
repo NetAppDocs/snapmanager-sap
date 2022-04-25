@@ -1,0 +1,23 @@
+---
+permalink: windows/task_identify_an_existing_database_to_backup.html
+sidebar: sidebar
+keywords: identify, system, identifier, sid, snapmanager, database, profile, exist, backup
+summary: "You can identify the system identifier (SID) of the SnapManager database which is used in creating a profile."
+---
+= Identify an existing database to backup
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can identify the system identifier (SID) of the SnapManager database which is used in creating a profile.
+
+== About this task
+
+The standard Oracle user ID for SAP systems is ora `_sid_` where `_sid_` is a three-character, alphanumeric value, for example, PRD, PR1, DEV, or QA3.
+
+.Steps
+
+. Click *Start* > *Control Panel* > *Administrative Tools* > *Services*.
+. Verify the Oracle service, `OracleServiceSID`.
++
+If the service is called OracleServiceFASDB, then the database SID is FASDB.

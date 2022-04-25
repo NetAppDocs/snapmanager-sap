@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_troubleshooting_known_issues.html
 sidebar: sidebar
-keywords: 
-summary: 'You should be aware of some known issues that might occur when you use SnapManager, and how to work around them.'
+keywords: aware, snapmanager, troubleshooting, known, issue
+summary: "You should be aware of some known issues that might occur when you use SnapManager, and how to work around them."
 ---
 = Troubleshooting known issues
 :icons: font
@@ -13,33 +13,33 @@ You should be aware of some known issues that might occur when you use SnapManag
 
 == SnapManager for SAP fails to identify the profile as a Cluster-Mode profile
 
-If the Cluster-Mode profile name is not present in the cmode_profiles.config file in the SnapManager for SAP installation directory, the following error message might trigger:
+If the Cluster-Mode profile name is not present in the `cmode_profiles.config` file in the SnapManager for SAP installation directory, the following error message might trigger:
 
-Please configure DFM server using snapdrive config set -dfm user_name appliance_name.
+`Please configure DFM server using snapdrive config set -dfm user_name appliance_name.`
 
-Also, while upgrading the SnapManager for SAP, if you delete the /opt/NetApp/smsap/* folder, then the cmode_profiles.config file that has the Cluster-Mode profile names also get deleted. This issue also triggers the same error message.
+Also, while upgrading the SnapManager for SAP, if you delete the ``/opt/NetApp/smsap/*`` folder, then the `cmode_profiles.config` file that has the Cluster-Mode profile names also get deleted. This issue also triggers the same error message.
 
 *Workaround*
 
-Update the profile: `smsap profile update-profile <profile_name\>`
+Update the profile: `*smsap profile update-profile _<profile_name>_*`
 
-NOTE: If SnapManager for SAP is installed in the /opt/NetApp/smsap/ path, then the file location will be /opt/NetApp/smsap/cmode_profile/cmode_profiles.config.
+NOTE: If SnapManager for SAP is installed in the ``/opt/NetApp/smsap/`` path, then the file location will be ``/opt/NetApp/smsap/cmode_profile/cmode_profiles.config.``
 
 == The server fails to start
 
 When starting the server, you might see an error message similar to the following:
 
-SMSAP-01104: Error invoking command: SMSAP-17107: SnapManager Server failed to start on port 8074 because of the following errors: java.net.BindException: Address already in use
+`SMSAP-01104: Error invoking command: SMSAP-17107: SnapManager Server failed to start on port 8074 because of the following errors: java.net.BindException: Address already in use`
 
 This might be because the SnapManager listening ports (27314 and 27315, by default) are currently in use by another application.
 
-This error can also occur if the smsap_server command is already running, but SnapManager does not detect the existing process.
+This error can also occur if the `smsap_server` command is already running, but SnapManager does not detect the existing process.
 
 *Workaround*
 
 You can reconfigure either SnapManager or the other application to use different ports.
 
-To reconfigure SnapManager, edit the following file: /opt/NTAP/smsap/properties/smsap.config
+To reconfigure SnapManager, edit the following file: ``/opt/NTAP/smsap/properties/smsap.config``
 
 You assign the following values:
 
@@ -49,14 +49,14 @@ You assign the following values:
 +
 The remote.registry.ocijdbc.port must be the same as Server.rmiRegistry.port.
 
-To start the SnapManager server, enter the following command: `smsap_server start`
+To start the SnapManager server, enter the following command: `*smsap_server start*`
 
 NOTE: An error message is displayed if the server is already running.
 
 If the server is already running, perform the following steps:
 
-. Stop the server by entering the following command: `smsap_server stop`
-. Restart the server by entering the following command: `smsap_server start`
+. Stop the server by entering the following command: `*smsap_server stop*`
+. Restart the server by entering the following command: `*smsap_server start*`
 
 == Terminating a currently running SnapManager operation
 
@@ -68,11 +68,15 @@ SnapManager works with both SnapManager and Protection Manager. You must perform
 
 . List all SnapDrive processes that are running: `ps`
 +
-Example: `ps | grep snapdrive`
-
-. Stop the SnapDrive process or processes: `kill <pid>`
+`*ps*`
 +
-pid is the list of processes you found using the ps command.
+Example:
++
+`*ps  | rep snapdrive*`
+
+. Stop the SnapDrive process or processes: `*kill <pid>*`
++
+`_pid_` is the list of processes you found using the `ps` command.
 +
 NOTE: Do not stop all SnapDrive processes. You might want to end only the last process that is running.
 
@@ -85,8 +89,8 @@ NOTE: Do not stop all SnapDrive processes. You might want to end only the last p
  .. Log in as a root user.
  .. List the processes by using the ps command.
 +
-Example: `ps | grep java`
-. End the SnapManager process: `kill <pid>`
+Example: `*ps | grep java*`
+. End the SnapManager process: `*kill <pid>*`
 
 == Unable to delete or free the last protected backup
 
@@ -116,7 +120,7 @@ To delete only the backup, perform the following steps:
 
 While creating an archive log backup, if the user excludes a destination that is part of other destination names, then the other destination names are also excluded.
 
-For example, assume that there are three destinations available to be excluded: /dest, /dest1, and /dest2. While creating the archive log file backup, if you exclude /dest by using the command
+For example, assume that there are three destinations available to be excluded: ``/dest, /dest1,`` and ``/dest2.`` While creating the archive log file backup, if you exclude ``/dest`` by using the command
 
 ----
 smsap backup create -profile almsamp1 -data -online -archivelogs  -exclude-dest /dest
@@ -126,7 +130,7 @@ smsap backup create -profile almsamp1 -data -online -archivelogs  -exclude-dest 
 
 *Workaround*
 
-* Add a path separator after destinations are configured in v$archive_dest. For example, change the /dest to /dest/.
+* Add a path separator after destinations are configured in `v$archive_dest`. For example, change the ``/dest`` to ``/dest/``.
 * While creating a backup, include destinations instead of excluding any destination.
 
 == Restoring control files that are multiplexed on Automatic Storage Management (ASM) and non-ASM storage fails
@@ -137,9 +141,9 @@ When the control files are multiplexed on ASM and non-ASM storage, the backup op
 
 When you clone a backup in SnapManager, the DataFabric Manager server might fail to discover volumes, and display the following error message:
 
-SMSAP-13032: Cannot perform operation: Clone Create. Root cause: SMSAP-11007: Error cloning from snapshot: FLOW-11019: Failure in ExecuteConnectionSteps: SD-00018: Error discovering storage for /mnt/datafile_clone3: SD-10016: Error executing snapdrive command "/usr/sbin/snapdrive storage show -fs /mnt/datafile_clone3": 0002-719 Warning: Could not check SD.Storage.Read access on volume filer:/vol/SnapManager_20091122235002515_vol1 for user user-vm5\oracle on Operations Manager servers x.x.x.x
+`SMSAP-13032: Cannot perform operation: Clone Create. Root cause: SMSAP-11007: Error cloning from snapshot: FLOW-11019: Failure in ExecuteConnectionSteps: SD-00018: Error discovering storage for /mnt/datafile_clone3: SD-10016: Error executing snapdrive command "/usr/sbin/snapdrive storage show -fs /mnt/datafile_clone3": 0002-719 Warning: Could not check SD.Storage.Read access on volume filer:/vol/SnapManager_20091122235002515_vol1 for user user-vm5\oracle on Operations Manager servers x.x.x.x`
 
-Reason: Invalid resource specified. Unable to find its Id on Operations Manager server 10.x.x.x
+`Reason: Invalid resource specified. Unable to find its Id on Operations Manager server 10.x.x.x`
 
 This occurs if the storage system has large number of volumes.
 
@@ -147,22 +151,27 @@ This occurs if the storage system has large number of volumes.
 
 You must perform one of the following:
 
-* From the Data Fabric Manager server, run `dfm host discover storage_system`.
+* From the Data Fabric Manager server, run
++
+`*dfm host discover _storage_system_*`
 +
 You can also add the command in a shell script file and schedule a job in the DataFabric Manager server to run the script at a frequent interval.
 
-* Increase the value of dfm-rbac-retries in the Snapdrive.conf file.
+* Increase the value of `_dfm-rbac-retries_` in the `Snapdrive.conf` file.
 +
-SnapDrive uses the default refresh interval value and default number of retries. The default value of dfm-rbac-retry-sleep-secs is 15 seconds and dfm-rbac-retries is 12 iterations.
+SnapDrive uses the default refresh interval value and default number of retries. The default value of `_dfm-rbac-retry-sleep-secs_` is 15 seconds and `_dfm-rbac-retries_` is 12 iterations.
 +
 NOTE: The Operations Manager refresh interval depends on the number of storage systems, number of storage objects in the storage system, and the load on the DataFabric Manager server.
-+
+
 As a recommendation, perform the following:
 
- .. From the DataFabric Manager server, manually run the following command for all the secondary storage systems associated with the dataset: `dfm host discover storage_system`
- .. Double the time taken to perform the host discovery operation and assign that value to dfm-rbac-retry-sleep-secs.
+1. From the DataFabric Manager server, manually run the following command for all the secondary storage systems associated with the dataset:
 +
-For example, if the operation took 11 seconds, you can set the value of dfm-rbac-retry-sleep-secs to 22 (11*2).
+`*dfm host discover _storage_system_*`
+
+2. Double the time taken to perform the host discovery operation and assign that value to `_dfm-rbac-retry-sleep-secs_`.
++
+For example, if the operation took 11 seconds, you can set the value of `_dfm-rbac-retry-sleep-secs_` to 22 (11*2).
 
 == Repository database size grows with time and not with the number of backups
 
@@ -178,20 +187,21 @@ SnapManager operations fail and you cannot access the GUI when the repository da
 
 The following table lists the different actions you might want to perform, and their exceptions:
 
+[cols="1a,3a" options="header"]
 |===
 | Operations| Exceptions
 a|
 Opening a closed repository
 a|
-The following error message is logged in sm_gui.log: [WARN ]: SMSAP-01106: Error occurred while querying the repository: Closed Connection java.sql.SQLException: Closed Connection.
+The following error message is logged in `sm_gui.log: [WARN ]: SMSAP-01106: Error occurred while querying the repository: Closed Connection java.sql.SQLException: Closed Connection.`
 a|
 Refreshing an opened repository by pressing F5
 a|
-A repository exception is displayed in the GUI and also logs a NullPointerException in the sm_gui.log file.
+A repository exception is displayed in the GUI and also logs a NullPointerException in the `sm_gui.log` file.
 a|
 Refreshing the host server
 a|
-A NullPointerException is logged in the sumo_gui.log file.
+A NullPointerException is logged in the `sumo_gui.log` file.
 a|
 Creating a new profile
 a|
@@ -199,15 +209,15 @@ A NullPointerException is displayed in the Profile Configuration window.
 a|
 Refreshing a profile
 a|
-The following SQL exception is logged in sm_gui.log: [WARN ]: SMSAP-01106: Error occurred while querying the repository: Closed Connection.
+The following SQL exception is logged in `sm_gui.log: [WARN ]: SMSAP-01106: Error occurred while querying the repository: Closed Connection.`
 a|
 Accessing a backup
 a|
-The following error message is logged in sm_gui.log: Failed to lazily initialize a collection.
+The following error message is logged in ``sm_gui.log: Failed to lazily initialize a collection.``
 a|
 Viewing clone properties
 a|
-The following error message is logged in sm_gui.log and sumo_gui.log: Failed to lazily initialize a collection.
+The following error message is logged in `sm_gui.log` and ``sumo_gui.log: Failed to lazily initialize a collection.``
 |===
 *Workaround*
 
@@ -226,14 +236,14 @@ You must perform either of the following:
 
 == Unable to migrate the protocol from NFSv3 to NFSv4
 
-You can migrate the protocol from NFSv3 to NFSv4 by enabling the enable-migrate-nfs-version parameter in the snapdrive.conf file. During the migration, SnapDrive considers only the protocol version, irrespective of the mount point options such as rw, largefiles, nosuid, and so on.
+You can migrate the protocol from NFSv3 to NFSv4 by enabling the `enable-migrate-nfs-version` parameter in the `snapdrive.conf` file. During the migration, SnapDrive considers only the protocol version, irrespective of the mount point options such as `rw, largefiles, nosuid,` and so on.
 
 However, after migrating the protocol to NFSv4, when you restore the backup that was created by using NFSv3, the following occurs:
 
 * If NFSv3 and NFSv4 are enabled at the storage level, the restore operation is successful but is mounted with the mount point options that were available during backup.
 * If only NFSv4 is enabled at the storage level, the restore operation is successful and only the protocol version (NFSv4) is retained.
 +
-However, the other mount point options such as rw, largefiles, nosuid, and so on are not retained.
+However, the other mount point options such as `rw, largefiles, nosuid,` and so on are not retained.
 
 *Workaround*
 

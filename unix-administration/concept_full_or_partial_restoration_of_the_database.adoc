@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_full_or_partial_restoration_of_the_database.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager provides the flexibility to restore full databases, specific tablespaces, files, control files, or a combination of these entities. SnapManager enables you to restore data by using a file-based restore process or a faster, volume-based restore process. Database administrators can select the process they want to use or let SnapManager decide which process is appropriate.'
+keywords: snapmanager, provide, flexibility, restore, full, database, specific, tablespace, control, file, combination, full, partial
+summary: "SnapManager provides the flexibility to restore full databases, specific tablespaces, files, control files, or a combination of these entities. SnapManager enables you to restore data by using a file-based restore process or a faster, volume-based restore process. Database administrators can select the process they want to use or let SnapManager decide which process is appropriate."
 ---
 = Full or partial restoration of databases
 :icons: font

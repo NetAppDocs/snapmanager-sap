@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_preinstallation_tasks.html
 sidebar: sidebar
-keywords: 
-summary: 'Before installing SnapManager for SAP, you must perform some additional tasks to set up your environment. The tasks that you have to perform depend on the operating system and the database version you want to use.'
+keywords: install, snapmanager, sap, additional, task, environment, perform, operate, system, database, version, preinstallation
+summary: "Before installing SnapManager for SAP, you must perform some additional tasks to set up your environment. The tasks that you have to perform depend on the operating system and the database version you want to use."
 ---
 = Preinstallation tasks
 :icons: font
@@ -14,7 +14,7 @@ Before installing SnapManager for SAP, you must perform some additional tasks to
 * Install licensed operating system with the appropriate patches.
 * Set the operating system's and the Oracle database's languages to English.
 +
-For example, to set the language of the Oracle database to English assign NLS_LANG = AMERICAN_AMERICA.WE8MSWIN1252. For more information about how to set the language, see the _Troubleshooting SnapManager for SAP_ section.
+For example, to set the language of the Oracle database to English assign `NLS_LANG = AMERICAN_AMERICA.WE8MSWIN1252`. For more information about how to set the language, see the _Troubleshooting SnapManager for SAP_ section.
 
 * Install Data ONTAP with licenses enabled for SnapRestore and the supported protocols such as Fibre Channel (FC) and Internet Small Computer System Interface (iSCSI) on all the storage systems.
 * Install the following Oracle patches, if you are using Oracle databases 11.2.0.2 and 11.2.0.3:
@@ -24,10 +24,6 @@ For example, to set the language of the Oracle database to English assign NLS_LA
 
 *Related information*
 
-xref:task_integrating_with_sap_br_tools.adoc[Integrating with SAP BR* Tools]
+http://support.netapp.com/NOW/products/interoperability/[NetApp Interoperability Matrix: support.netapp.com/NOW/products/interoperability^]
 
-xref:reference_troubleshooting_snapmanager.adoc[Troubleshooting SnapManager]
-
-http://support.netapp.com/NOW/products/interoperability/[NetApp Interoperability Matrix: support.netapp.com/NOW/products/interoperability]
-
-http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices: media.netapp.com/documents/tr-3823.pdf]
+http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices: media.netapp.com/documents/tr-3823.pdf^]

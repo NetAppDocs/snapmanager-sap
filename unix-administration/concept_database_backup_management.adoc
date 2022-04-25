@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_database_backup_management.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables the backing up of data on local storage resources by using post-processing scripts or by protecting backups on secondary or tertiary storage resources. The choice to back up to secondary storage provides an additional layer that preserves data in the case of a disaster.'
+keywords: snapmanager, enable, data, local, storage, resource, post-processing, script, protect, secondary, tertiary, additional, layer, disaster, back, up, database
+summary: "napManager enables the backing up of data on local storage resources by using post-processing scripts or by protecting backups on secondary or tertiary storage resources. The choice to back up to secondary storage provides an additional layer that preserves data in the case of a disaster."
 ---
 = Backing up databases
 :icons: font

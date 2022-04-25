@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_a_task_specification_file.html
 sidebar: sidebar
-keywords: 
-summary: 'You can create the task specification files by using graphical user interface \(GUI\), command-line interface \(CLI\), or a text editor. These files are used for performing preprocessing or post-processing activity of the backup, restore, or clone operations.'
+keywords: create, task, specification, file, graphical, user, interface, gui, command-line, interface, cli, text, editor, preprocess, post-process, backup, restore, operation, creating
+summary: You can create the task specification files by using graphical user interface \(GUI\), command-line interface \(CLI\), or a text editor. These files are used for performing preprocessing or post-processing activity of the backup, restore, or clone operations.
 ---
 = Creating a task specification file
 :icons: font

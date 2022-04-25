@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsap_history_purge_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command enables you to delete the history of SnapManager operation.'
+keywords: command, enable, delete, history, snapmanager, operation, smsap, purge
+summary: "This command enables you to delete the history of SnapManager operation."
 ---
 = The smsap history purge command
 :icons: font
@@ -15,57 +15,57 @@ This command enables you to delete the history of SnapManager operation.
 
 ----
 
-        smsap history purge 
+        smsap history purge
 -profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
--repository 
+-repository
 -login \[-password repo_password\]
 -username repo_username
--host repo_host 
--dbname repo_dbname 
+-host repo_host
+-dbname repo_dbname
 -port repo_port}
--operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\} 
+-operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\}
 \[-quiet \| -verbose\]
 ----
 
 == Parameters
 
-* *-profile profile*
+* *`-profile _profile_`*
 +
 Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
 
-* *-repository*
+* *`-repository`*
 +
 The options that follow -repository specify the details of the database that stores the profile.
 
-* *-dbname repo_dbname*
+* *`-dbname _repo_dbname_`*
 +
 Specifies the name of the database that stores the profile. Use either the global name or the SID.
 
-* *-host repo_host*
+* *`-host _repo_host_`*
 +
 Specifies the name or IP address of the host computer the repository database runs on.
 
-* *-login*
+* *`-login`*
 +
 Starts the repository login details.
 
-* *-username repo_username*
+* *`-username _repo_username_`*
 +
 Specifies the user name needed to access the database that stores the repository.
 
-* *-port repo_port*
+* *`-port _repo_port_`*
 +
 Specifies the TCP port number used to access the database that stores the repository.
 
-* *-operation {-operationsoperation_name [operation_name1, operation_name2] | -all*
+* *`-operation {-operationsoperation_name [_operation_name1, operation_name2_] | -all`*
 +
 Specifies the SnapManager operation for which you configure the history.
 
-* *-quiet*
+* *`-quiet`*
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Displays error, warning, and informational messages on the console.
 

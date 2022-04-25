@@ -1,31 +1,31 @@
 ---
 permalink: windows/reference_the_smosmsap_server_status_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the smsap_server status command to view the status of the SnapManager host server.'
+keywords: run, smsap_server, smsap, server, status, command, snapmanager, host
+summary: "You can run the smsap_server status command to view the status of the SnapManager host server."
 ---
 = The smsap_server status command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the smsap_server status command to view the status of the SnapManager host server.
+You can run the `smsap_server status` command to view the status of the SnapManager host server.
 
 == Syntax
 
 ----
 
-        smsap_server status 
+        smsap_server status
 \[-quiet \| -verbose\]
 ----
 
 == Parameters
 
-* *-quiet*
+* *`-quiet`*
 +
 Specifies that only error messages are displayed in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Specifies that error, warning, and informational messages are displayed in the console.
 

@@ -1,15 +1,17 @@
 ---
-permalink: unix-administration/task_using_snapmanager_for_oraclesnapmanager_for_sapto_confirm_backup_protection.html
+permalink: unix-administration/task_use_snapmanager_for_oraclesnapmanager_for_sapto_confirm_backup_protection.html
 sidebar: sidebar
-keywords: 
-summary: 'Using SnapManager for SAP, you can view a list of backups associated with a profile, determine whether the backups were enabled for protection, and view the retention class \(daily or weekly, in this example\).'
+keywords: snapmanager, sap, backup, associate, profile, enable, protection, view, retention, class, daily, weekly
+summary: "Using SnapManager for SAP, you can view a list of backups associated with a profile, determine whether the backups were enabled for protection, and view the retention class (daily or weekly, in this example)."
 ---
-= Using SnapManager for SAP to confirm backup protection
+= Use SnapManager for SAP to confirm backup protection
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 Using SnapManager for SAP, you can view a list of backups associated with a profile, determine whether the backups were enabled for protection, and view the retention class (daily or weekly, in this example).
+
+*About this task*
 
 At first, the new backup in this example shows as scheduled for protection, but not yet protected (in the SnapManager graphical user interface and in the backup show command output). After the storage administrator ensures that the backup has been copied to secondary storage, SnapManager changes the backup protection state from "Not protected" to "Protected" in both the graphical user interface and with the backup list command.
 

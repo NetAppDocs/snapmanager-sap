@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/concept_what_a_rollback_is.html
 sidebar: sidebar
-keywords: 
-summary: 'The rollback operation enables you to revert to an earlier version of SnapManager after you perform a rolling upgrade.'
+keywords: rollback, operation, enable, revert, earlier, version, snapmanager, perform, roll, upgrade, what, is
+summary: "The rollback operation enables you to revert to an earlier version of SnapManager after you perform a rolling upgrade."
 ---
 = What a rollback is
 :icons: font

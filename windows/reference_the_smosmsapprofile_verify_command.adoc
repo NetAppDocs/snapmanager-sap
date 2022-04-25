@@ -1,36 +1,36 @@
 ---
 permalink: windows/reference_the_smosmsapprofile_verify_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the profile verify command to verify the profile set up. You must mount the database before running this command.'
+keywords: run, profile, verify, command, mount, database, smsap
+summary: "You can run the profile verify command to verify the profile set up. You must mount the database before running this command."
 ---
 = The smsap profile verify command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the profile verify command to verify the profile set up. You must mount the database before running this command.
+You can run the `profile verify` command to verify the profile set up. You must mount the database before running this command.
 
 == Syntax
 
 ----
 
-        smsap profile verify 
--profile profile_name 
+        smsap profile verify
+-profile profile_name
 \[-quiet \| -verbose\]
 ----
 
 == Parameters
 
-* *-profile*
+* *`-profile`*
 +
 Specifies the profile to verify. The profile contains the identifier of the database and other database information.
 
-* *-quiet*
+* *`-quiet`*
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Displays error, warning, and informational messages in the console.
 
@@ -87,7 +87,3 @@ smsap profile verify -profile profileA -verbose
 [ INFO] SMSAP-13049: Elapsed Time: 0:19:06.949
 Operation Id [N5bc18bd5c3be27a795ce3857093a926a] succeeded.
 ----
-
-*Related information*
-
-xref:task_verifying_profiles.adoc[Verifying profiles]

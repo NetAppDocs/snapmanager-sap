@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_performing_management_operations.html
 sidebar: sidebar
-keywords: 
-summary: 'You can perform management tasks after you have set up and configured SnapManager. These tasks enable you to manage normal operations beyond backing up, restoring, and cloning.'
+keywords: perform, management, task, configure, snapmanager, restore, back, up, restoring, restore, cloning, clone, operation
+summary: "You can perform management tasks after you have set up and configured SnapManager. These tasks enable you to manage normal operations beyond backing up, restoring, and cloning."
 ---
 = Performing management operations
 :icons: font

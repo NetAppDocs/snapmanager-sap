@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_maintaining_history_of_snapmanager_operations.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP enables you to maintain the history of SnapManager operations associated with a single profile or multiple profiles. You can maintain the history either from the SnapManager command-line interface \(CLI\) or graphical user interface \(GUI\). You can view the history of the operations as a report, and use the report for audit compliance purposes.'
+keywords: snapmanager, sap, enable, maintain, history, operation, single, profile, graphical, user, interface, gui, report
+summary: "SnapManager for SAP enables you to maintain the history of SnapManager operations associated with a single profile or multiple profiles. You can maintain the history either from the SnapManager command-line interface (CLI) or graphical user interface (GUI). You can view the history of the operations as a report, and use the report for audit compliance purposes."
 ---
 = Maintaining history of SnapManager operations
 :icons: font

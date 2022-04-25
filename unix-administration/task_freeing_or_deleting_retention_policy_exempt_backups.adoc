@@ -1,21 +1,26 @@
 ---
-permalink: unix-administration/task_freeing_or_deleting_retention_policy_exempt_backups.html
+permalink: unix-administration/task_free_or_delete_retention_policy_exempt_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'Backups with the retention class of "unlimited" cannot be deleted or freed directly. To delete or free these backups, you must first assign another retention class, such as hourly, daily, weekly, or monthly. To delete or free a backup that is exempt from the retention policy, you must first update the backup to make it eligible for deletion or free it.'
+keywords: backup, retention, class, unlimited, delete, free, directly, assign, hourly, daily, weekly, monthly, deletion, eligible, exempt
+summary: "Backups with the retention class of unlimited cannot be deleted or freed directly. To delete or free these backups, you must first assign another retention class, such as hourly, daily, weekly, or monthly. To delete or free a backup that is exempt from the retention policy, you must first update the backup to make it eligible for deletion or free it."
 ---
-= Freeing or deleting retention policy exempt backups
+= Free or delete retention policy exempt backups
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 Backups with the retention class of "unlimited" cannot be deleted or freed directly. To delete or free these backups, you must first assign another retention class, such as hourly, daily, weekly, or monthly. To delete or free a backup that is exempt from the retention policy, you must first update the backup to make it eligible for deletion or free it.
 
-. To update the backup to make it eligible for deletion by the retention policy, enter this command: `smsap backup update -profileprofile_name {-labellabel [data | -archivelogs] | -idid} -retain \[-hourly \| -daily \| -weekly \| -monthly\]`
+.Steps
+
+. To update the backup to make it eligible for deletion by the retention policy, enter this command:
++
+`*smsap backup update -profile _profile_name_ {-label _label_ [data | -archivelogs] | -id _id_} -retain [-hourly | -daily | -weekly | -monthly]*`
 . After updating the backup so it is eligible for deletion, you can either delete the backup or free backup resources.
- ** To delete the backup, enter this command: `smsap backup delete -profileprofile_name {-labellabel [data | -archivelogs] | -idid | -all}`
- ** To free the backup resources, rather than delete the backup, enter this command:``smsap backup free -profileprofile_name {-labellabel [data | -archivelogs] | -idid | -all} [-force] [ -dump] [-quiet | -verbose]``
+ ** To delete the backup, enter this command:
++
+`*smsap backup delete -profile _profile_name_ {-label _label_ [data | -archivelogs] | -id _id_ | -all}*`
 
-*Related information*
-
-xref:reference_the_smosmsapbackup_update_command.adoc[The smsap backup update command]
+ ** To free the backup resources, rather than delete the backup, enter this command:
++
+`*smsap backup free -profile _profile_name_ {-label _label_ [data | -archivelogs] | -id _id_ | -all} [-force] [ -dump] [-quiet | -verbose]*`

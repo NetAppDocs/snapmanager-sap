@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_details_of_the_target_database.html
 sidebar: sidebar
-keywords: 
-summary: 'This example of integrated database protection describes the protection of a payroll database. The following data is used in the example.'
+keywords: example, integrate, database, protection, payroll, example, detail, target
+summary: "This example of integrated database protection describes the protection of a payroll database. The following data is used in the example."
 ---
 = Details of the target database
 :icons: font
@@ -22,5 +22,5 @@ When creating a profile in SnapManager, you need the following data:
  ** Database ID: P01
  ** Profile name: P01_BACKUP
  ** Connection mode: Database authentication
- ** Snapshot naming scheme: smsap_hostname_dbsid_smsapprofile_scope_mode_smid (which translates to "smsap_prod01.sample.com_p01_p01_backup_f_h_x")
+ ** Snapshot naming scheme: `_smsap_hostname_dbsid_smsapprofile_scope_mode_smid_` (which translates to "smsap_prod01.sample.com_p01_p01_backup_f_h_x")
  ** Repository user: <sid>rep, which translates to p01rep.

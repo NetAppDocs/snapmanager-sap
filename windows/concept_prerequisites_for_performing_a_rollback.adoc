@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_prerequisites_for_performing_a_rollback.html
 sidebar: sidebar
-keywords: 
-summary: 'Before performing a rollback, you must ensure that your environment meets certain requirements.'
+keywords: perform, rollback, ensure, environment, certain, requirement, prerequisite
+summary: "Before performing a rollback, you must ensure that your environment meets certain requirements."
 ---
 = Prerequisites for performing a rollback
 :icons: font
@@ -38,6 +38,4 @@ NOTE: The rollback operation runs for a longer time as the cumulative number of 
 
 *Related information*
 
-xref:task_installing_snapmanager_for_oracle_snapmanager_for_sap.adoc[Installing SnapManager for SAP]
-
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

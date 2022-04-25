@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_updating_target_database_hostname_associated_with_a_profile.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager \(3.2 or later\) for SAP provides the ability to update the host name of the target database in the SnapManager profile.'
+keywords: snapmanager, sap, provide, ability, update, host, name, target, database, profile, updating, associate
+summary: SnapManager \(3.2 or later\) for SAP provides the ability to update the host name of the target database in the SnapManager profile.
 ---
 = Updating the target database host name associated with a profile
 :icons: font
@@ -37,6 +37,7 @@ Other options for this command are as follows:
 +
 [quiet | -verbose]
 +
+[options="header"]
 |===
 | If you want to...| Then...
 a|

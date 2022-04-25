@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_snapmanager_repository.html
 sidebar: sidebar
-keywords: 
-summary: 'The repository stores information related to different SnapManager operations, for example, the time of backups, tablespaces and data files backed up, storage systems used, clones made, and Snapshot copies created.'
+keywords: repository, store, information, snapmanager, operation, time, backup, tablespace, data, data, file, storage, system, clone, snapshot, copies, copy, create
+summary: "The repository stores information related to different SnapManager operations, for example, the time of backups, tablespaces and data files backed up, storage systems used, clones made, and Snapshot copies created."
 ---
 = SnapManager repository
 :icons: font

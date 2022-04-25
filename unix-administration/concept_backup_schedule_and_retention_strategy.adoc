@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_backup_schedule_and_retention_strategy.html
 sidebar: sidebar
-keywords: 
-summary: 'The DBA wants to ensure that backups are available in case of a loss of data, in case of a disaster, and for regulatory reasons. This requires a carefully thought out retention policy for the various databases.'
+keywords: dba, ensure, backup, loss, data, disaster, regulatory, reason, retention, policy, database, schedule
+summary: "The DBA wants to ensure that backups are available in case of a loss of data, in case of a disaster, and for regulatory reasons. This requires a carefully thought out retention policy for the various databases."
 ---
 = Backup schedule and retention strategy
 :icons: font
@@ -13,6 +13,7 @@ The DBA wants to ensure that backups are available in case of a loss of data, in
 
 For the production payroll database, the DBA adheres to the following TechCo retention strategy:
 
+[cols="1a,1a,1a,1a" options="header"]
 |===
 | Backup frequency| Retention duration| Backup time| Type of storage
 a|

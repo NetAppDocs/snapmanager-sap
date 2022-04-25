@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_editing_the_configuration_parameters.html
 sidebar: sidebar
-keywords: 
-summary: 'Depending on your environment, you can change the default values assigned to the configuration parameter.'
+keywords: environment, default, value, assign, configuration, parameter, edit
+summary: Depending on your environment, you can change the default values assigned to the configuration parameter.
 ---
 = Editing the configuration parameters
 :icons: font

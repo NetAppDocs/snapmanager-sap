@@ -1,22 +1,25 @@
 ---
-permalink: unix-installation-cmode/task_upgrading_snapmanager_for_oracle_snapmanager_for_sap_hosts.html
+permalink: unix-installation-cmode/task_upgrade_snapmanager_for_oracle_snapmanager_for_sap_hosts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can upgrade all of the existing hosts to use the latest version of SnapManager. All of the hosts are upgraded simultaneously. However, this might result in downtime of all the SnapManager hosts and the scheduled operations during that time.'
+keywords: upgrade, exist, host, version, snapmanager, simultaneous, result, downtime
+summary: "You can upgrade all of the existing hosts to use the latest version of SnapManager. All of the hosts are upgraded simultaneously. However, this might result in downtime of all the SnapManager hosts and the scheduled operations during that time."
 ---
-= Upgrading the SnapManager hosts
+= Upgrade the SnapManager hosts
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can upgrade all of the existing hosts to use the latest version of SnapManager. All of the hosts are upgraded simultaneously. However, this might result in downtime of all the SnapManager hosts and the scheduled operations during that time.
 
+.Steps
+
 . Log in to the host system as the root user.
 . From the command-line interface (CLI), navigate to the location where you have downloaded the installation file.
-. If the file is not executable, change the permissions: `chmod 544 netapp.smsap*`
+. Optional: If the file is not executable, change the permissions: `chmod 544 netapp.smsap*`
 . Stop the SnapManager server: `smsap_server stop`
 . Depending on the UNIX host, install SnapManager:
 +
+[options="header"]
 |===
 | If the operating system is...| Then run...
 a|
@@ -41,15 +44,15 @@ a|
 `\# ./netapp.smsap.linux-x64-version_number.bin`
 |===
 
-. On the Introduction page, press *Enter* to continue.
+. On the *Introduction* page, press *Enter* to continue.
 +
-The following message is displayed: Existing SnapManager For SAP Detected.
+The following message is displayed: `Existing SnapManager For SAP Detected.`
 
 . Press *Enter*.
 . At the command prompt, perform the following:
- .. Change the default value of the operating system user to orasid.
+ .. Change the default value of the operating system user to *ora* `_sid_`.
 +
-sid is the system identifier of the SAP database.
+`_sid_` is the system identifier of the SAP database.
 
  .. Enter the correct value for the operating system group or press *Enter* to accept the default value.
  .. Enter the correct value for the server startup type or press *Enter* to accept the default value.
@@ -58,6 +61,6 @@ sid is the system identifier of the SAP database.
 The configuration summary is displayed.
 . Press *Enter* to continue.
 +
-The following message is displayed: Uninstall of Existing SnapManager For SAP has started.
+The following message is displayed: `Uninstall of Existing SnapManager For SAP has started`.
 +
 The uninstallation is completed and the latest version of SnapManager is installed.

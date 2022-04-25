@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_where_to_go_for_more_information.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information about the basic tasks involved in installing and using SnapManager.'
+keywords: information, basic, task, install, snapmanager, where, to, go
+summary: "You can find information about the basic tasks involved in installing and using SnapManager."
 ---
 = Where to go for more information
 :icons: font
@@ -11,6 +11,7 @@ summary: 'You can find information about the basic tasks involved in installing 
 [.lead]
 You can find information about the basic tasks involved in installing and using SnapManager.
 
+[cols="2a,3a",options="header"]
 |===
 | Document| Description
 a|
@@ -20,26 +21,26 @@ This page provides information about SnapManager, pointers to online documentati
 a|
 _Data ONTAP SAN Configuration Guide for 7-Mode_
 a|
-This document is available at http://mysupport.netapp.com/[mysupport.netapp.com].
+This document is available at http://mysupport.netapp.com/[mysupport.netapp.com^].
 
 It is a dynamic, online document that contains the most up-to-date information about the requirements for setting up a system in a SAN environment. It provides the current details about storage systems and host platforms, cabling issues, switch issues, and configurations.
 
 a|
 SnapManager and SnapDrive Compatibility Matrix
 a|
-This document is available in the Interoperability section at http://mysupport.netapp.com/matrix[mysupport.netapp.com/matrix].
+This document is available in the Interoperability section at http://mysupport.netapp.com/matrix[mysupport.netapp.com/matrix^].
 
 It is a dynamic, online document that contains the most up-to-date information specific to SnapManager and its platform requirements.
 
 a|
 SnapManager Release Notes
 a|
-This document comes with SnapManager. You can also download a copy from http://mysupport.netapp.com/[mysupport.netapp.com]. It contains any last-minute information that you need to get the configuration up and running smoothly.
+This document comes with SnapManager. You can also download a copy from http://mysupport.netapp.com/[mysupport.netapp.com^]. It contains any last-minute information that you need to get the configuration up and running smoothly.
 
 a|
 NetApp host attach and support kits documentation
 a|
-http://mysupport.netapp.com/[mysupport.netapp.com].
+http://mysupport.netapp.com/[mysupport.netapp.com^].
 
 a|
 Host operating system and database information

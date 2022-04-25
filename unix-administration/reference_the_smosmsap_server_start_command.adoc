@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsap_server_start_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command starts the host server running the SnapManager for SAP software.'
+keywords: command, start, host, server, run, snapmanager, sap, software, smsap_server
+summary: "This command starts the host server running the SnapManager for SAP software."
 ---
 = The smsap_server start command
 :icons: font
@@ -14,20 +14,21 @@ This command starts the host server running the SnapManager for SAP software.
 == Syntax
 
 ----
-
-        smsap_server start 
-\[-quiet \| -verbose\]
+smsap_server start
+[-quiet | -verbose]
 ----
 
 == Parameters
 
-* *-quiet*
+* `*-quiet*`
 +
 Specifies that only error messages are displayed on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* `*-verbose*`
 +
 Specifies that error, warning, and informational messages are displayed on the console.
+
+---
 
 == Example command
 
@@ -37,3 +38,4 @@ The following example starts the host server.
 smsap_server start
 SMSAP-17100: SnapManager Server started on secure port 25204 with PID 11250
 ----
+---

@@ -1,0 +1,91 @@
+---
+permalink: windows/task_perform_roll_upgrade_on_a_single_host_or_multiple_hosts.html
+sidebar: sidebar
+keywords: perform, roll, upgrade, single, multiple, snapmanager, server, host, command-line, interface, cli
+summary: "You can perform rolling upgrade on a single or multiple SnapManager server hosts by using the command-line interface (CLI). The upgraded SnapManager server host is then managed only with the later version of SnapManager."
+---
+= Perform roll upgrade on a single host or multiple hosts
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can perform rolling upgrade on a single or multiple SnapManager server hosts by using the command-line interface (CLI). The upgraded SnapManager server host is then managed only with the later version of SnapManager.
+
+== What you'll need
+
+You must ensure that all the prerequisites for performing rolling upgrade are completed.
+
+.Steps
+
+. To perform a rolling upgrade on a single host, enter the following command:
++
+`*smsap repository rollingupgrade -repository-dbname _repo_service_name_ -host _repo_host- _login -username _repo_username -port _repo_port_ upgrade host _host_with_target_database_ -force [-quiet | -verbose]*`
++
+*Example*
++
+The following command performs the rolling upgrade of all target databases mounted on hostA and a repository database named repoA located on repo_host:
++
+----
+
+smsap repository rollingupgrade
+    -repository
+      -dbname repoA
+      -host repo_host
+      -login
+       -username repouser
+       -port 1521
+     -upgradehost hostA
+----
+
+. To perform a rolling upgrade on multiple hosts, enter the following command:
++
+`*smsap repository rollingupgrade -repository-dbname _repo_service_name_ -host _repo_host_ -login -username _repo_username_ -port _repo_port_ -upgradehost _host_with_target_database1,host_with_target_database2_ -force [-quiet | -verbose]*`
++
+NOTE: For multiple hosts, enter the host names separated by a comma and ensure that you do not include any space between the comma and the next host name.Also, ensure that you enter all the host names within double quotation marks.
++
+*Example*
++
+The following command performs the rolling upgrade of all the target databases mounted on the hosts, hostA and hostB and a repository database named repoA located on repo_host:
++
+----
+
+smsap repository rollingupgrade
+    -repository
+      -dbname repoA
+      -host repo_host
+      -login
+       -username repouser
+       -port 1521
+     -upgradehost hostA,hostB
+----
+
+. To perform a rolling upgrade on all the hosts on a repository database, enter the following command:
++
+`*smsap repository rollingupgrade -repository -dbname _repo_service_name_ -host _repo_host_ -login -username _repo_username_ -port _repo_port_ -allhosts -force [-quiet | -verbose]*`
++
+After successfully upgrading the repository database, you can perform all the SnapManager operations on the target database.
++
+*Example*
++
+The following command performs the rolling upgrade of all the target databases available on a repository database named repoA located on repo_host:
++
+----
+
+smsap repository rollingupgrade
+    -repository
+      -dbname repoA
+      -host repo_host
+      -login
+       -username repouser
+       -port 1521
+      -allhosts
+----
+
+== After you finish
+
+* If the SnapManager server starts automatically, you must restart the server to ensure that you can view the schedules.
+* If you upgrade one of the two related hosts, you must upgrade the second host after upgrading the first.
++
+For example, if you have created a clone from host A to host B or mounted a backup from host A to host B, the hosts A and B are related to each other. When you upgrade host A, a warning message is displayed asking you to upgrade the host B soon after upgrading host A.
++
+NOTE: The warning messages are displayed even though the clone is deleted or the backup is unmounted from host B during the rolling upgrade of host A. This is because metadata exists in the repository for the operations performed on the remote host.

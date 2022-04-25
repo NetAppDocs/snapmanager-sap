@@ -1,0 +1,24 @@
+---
+permalink: windows/task_edit_the_configuration_parameters.html
+sidebar: sidebar
+keywords: environment, default, value, assign, configuration, parameter, edit
+summary: "Depending on your environment, you can change the default values assigned to the configuration parameter."
+---
+= Edit the configuration parameters
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Depending on your environment, you can change the default values assigned to the configuration parameter.
+
+.Steps
+
+. Open the configuration file from the following default location:
++
+`default installation location\properties\smsap.config`
+
+. Change the default values of the configuration parameters.
++
+NOTE: You can also add supported configuration parameters that are not included in the configuration file, and assign values to them.
+
+. Restart the SnapManager for SAP server.

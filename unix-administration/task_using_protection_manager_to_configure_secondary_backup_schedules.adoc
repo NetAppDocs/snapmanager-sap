@@ -1,21 +1,25 @@
 ---
-permalink: unix-administration/task_using_protection_manager_to_configure_secondary_backup_schedules.html
+permalink: unix-administration/task_use_protection_manager_to_configure_secondary_backup_schedules.html
 sidebar: sidebar
-keywords: 
-summary: 'To support backup of the database to secondary storage, the storage administrator uses Protection Manager to configure a backup schedule.'
+keywords: support, backup, database, secondary, storage, administrator, protection, manager, configure, schedule
+summary: "To support backup of the database to secondary storage, the storage administrator uses Protection Manager to configure a backup schedule."
 ---
-= Using Protection Manager to configure secondary backup schedules
+= Use Protection Manager to configure secondary backup schedules
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 To support backup of the database to secondary storage, the storage administrator uses Protection Manager to configure a backup schedule.
 
+*What you'll need*
+
 Before configuring the schedule for secondary backups, the storage administrator confers with the DBA partner for the following information:
 
 * The schedule that the DBA wants the secondary backups to follow.
 +
 In this case, once-daily backups occur at 7 p.m. and once-weekly backups occur on Saturday at 1 a.m.
+
+.Steps
 
 . Go to the Protection Manager's NetApp Management Console.
 . From the menu bar, click *Policies* > *Protection* > *Schedules*.

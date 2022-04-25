@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_profile_level_dump_files.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find log information about a particular profile by using the smsap profile dump command with the name of the profile.'
+keywords: find, log, information, particular, profile, smsap, dump, command, name, profile-level, creating, create
+summary: You can find log information about a particular profile by using the smsap profile dump command with the name of the profile.
 ---
 = Creating profile-level dump files
 :icons: font

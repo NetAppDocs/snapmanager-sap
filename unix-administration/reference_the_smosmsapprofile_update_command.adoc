@@ -1,227 +1,227 @@
 ---
 permalink: unix-administration/reference_the_smosmsapprofile_update_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the profile update command to update the information for an existing profile.'
+keywords: run, profile, update, command, information, exist, smsap
+summary: "You can run the profile update command to update the information for an existing profile."
 ---
 = The smsap profile update command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the profile update command to update the information for an existing profile.
+You can run the `profile update` command to update the information for an existing profile.
 
 == Syntax
 
+[subs=+macros]
 ----
-
-        smsap profile update 
+pass:quotes[smsap profile update
 -profile profile
-\[-new-profile new_profile_name\]
-\[-profile-password profile_password\]
-[-database  
--dbname db_dbname 
--host db_host 
-\[-sid db_sid\] 
-[-login 
-\[-username db_username -password db_password -port db_port\] 
- \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]   
-[\{-rman  \{-controlfile \| \{\{-login  
--username  rman_username  
--password  rman_password \} 
-\[-tnsname  tnsname\]\}\}\} \| 
--remove-rman\] 
--osaccount osaccount 
--osgroup osgroup 
-[-retain 
-\[-hourly \[-count n\] \[-duration m\]\] 
-\[-daily \[-count n\] \[-duration m\]] 
-\[-weekly \[-count n\] \[-duration m\]] 
-\[-monthly \[-count n\] \[-duration m\]]]] 
--comment comment 
--snapname-patternpattern 
-[-protect \[-protection-policy policy_name\] \| \[-noprotect\]] 
-[-summary-notification] 
-[-notification 
-\[-success 
--email email_address1,email_address2 
--subject subject_pattern\] 
-\[-failure  
--email email_address1,email_address2 
--subject subject_pattern]
-[-separate-archivelog-backups
+[-new-profile _new_profile_name_\]
+[-profile-password _profile_password_\]
+[-database
+-dbname _db_dbname_
+-host _db_host_
+[-sid _db_sid_\]
+[-login
+[-username _db_username_ -password _db_password_ -port _db_port_\]
+[-asminstance -asmusername _asminstance_username_  -asmpassword _asminstance_password_\]]
+pass:quotes[[{-rman  {-controlfile | {{-login
+-username  _rman_username_
+-password  _rman_password_ }
+[-tnsname  _tnsname_\]}}} |
+-remove-rman\]
+-osaccount _osaccount_
+-osgroup _osgroup_
+[-retain
+[-hourly [-count _n_\] [-duration _m_\]\]
+[-daily [-count _n_\] [-duration _m_\]]
+pass:quotes[[-weekly [-count _n_] pass:quotes[[-duration _m_]]
+pass:quotes[[-monthly [-count _n_] pass:quotes[[-duration _m_]]]]
+pass:quotes[-comment _comment_
+-snapname-pattern _pattern_
+[-protect [-protection-policy _policy_name_\] | [-noprotect\]]
+[-summary-notification]
+[-notification
+[-success
+pass:quotes[-email _email_address1,email_address2_
+-subject _subject_pattern_\]
+[-failure
+-email _email_address1,email_address2_
+-subject _subject_pattern_]
+pass:quotes[[-separate-archivelog-backups
 -retain-archivelog-backups
--hours  hours |
--days days |
--weeks weeks |
--months months
-[-protect \[-protection-policy policy_name\] \| \[-noprotect\]]
-[-include-with-online-backups \| -no-include-with-online-backups]]
-[-dump] 
-\[-quiet \| -verbose\]
+-hours  _hours_ |
+-days _days_ |
+-weeks _weeks_ |
+-months _months_
+[-protect [-protection-policy _policy_name_\] | [-noprotect\]]
+[-include-with-online-backups | -no-include-with-online-backups]]
+[-dump]
+[-quiet | -verbose]]
 ----
 
 == Parameters
 
 If protection policy is set on the profile, you cannot change the policy using SnapManager. You must change the policy using the Protection Manager's console.
 
-* *-profile profile*
+* ``*-profile _profile_*``
 +
 Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
 
-* *-profile-password profile_password*
+* ``*-profile-password _profile_password_*``
 +
 Specifies the password for the profile.
 
-* *-new-profile new_profile_name*
+* ``*-new-profile _new_profile_name_*``
 +
 Specifies the new name that you can provide for a profile.
 
-* *-database*
+* ``*-database*``
 +
 Specifies the details of the database that the profile describes. This is the database that will be backed up, restored, and so on.
 
-* *-dbname db_dbname*
+* ``*-dbname _db_dbname_*``
 +
 Specifies the name of the database that the profile describes. You can use either the global name or the system identifier.
 
-* *-host db_host*
+* ``*-host _db_host_*``
 +
 Specifies the name or IP address of the host computer on which the database runs.
 
-* *-sid db_sid*
+* ``*-sid _db_sid_*``
 +
 Specifies the system identifier of the database that the profile describes. By default, SnapManager uses the database name as the system identifier. If the system identifier is different from the database name, you must specify it using the -sid option.
 +
 For example, if you are using Oracle Real Application Clusters (RAC), you must specify the SID system identifier of the RAC instance on the RAC node from which SnapManager is executed.
 
-* *-login*
+* ``*-login*``
 +
 Specifies the repository login details.
 
-* *-username repo_username*
+* ``*-username _repo_username_*``
 +
 Specifies the user name required to access the repository database.
 
-* *-port repo_port*
+* ``*-port _repo_port_*``
 +
 Specifies the TCP port number required to access the repository database.
 
-* *-database*
+* ``*-database*``
 +
 Specifies the details of the database that the profile describes. This is the database that will be backed up, restored, or cloned.
 
-* *-dbname db_dbname*
+* ``*-dbname _db_dbname_*``
 +
 Specifies the name of the database that the profile describes. You can use either the global name or the system identifier.
 
-* *-host db_host*
+* ``*-host _db_host_*``
 +
 Specifies the name or IP address of the host computer on which the database runs.
 
-* *-login*
+* ``*-login*``
 +
 Specifies the database login details.
 
-* *-username db_username*
+* ``*-username _db_username_*``
 +
 Specifies the user name required to access the database that the profile describes.
 
-* *-password db_password*
+* ``*-password _db_password_*``
 +
 Specifies the password required to access the database that the profile describes.
 
-* *-port db_port*
+* ``*-port _db_port_*``
 +
 Specifies the TCP port number required to access the database that the profile describes.
 
-* *-asminstance*
+* ``*-asminstance*``
 +
 Specifies the credentials that are used to log in to the Automatic Storage Management (ASM) instance.
 
-* *-asmusername asminstance_username*
+* ``*-asmusername _asminstance_username_*``
 +
 Specifies the user name used to log in to the ASM instance.
 
-* *-asmpassword asminstance_password*
+* ``*-asmpassword _asminstance_password_*``
 +
 Specifies the password used to log in to ASM instance.
 
-* *-osaccount osaccount*
+* ``*-osaccount _osaccount_*``
 +
 Specifies the name of the Oracle database user account. SnapManager uses this account to perform the Oracle operations such as startup and shutdown. It is typically the user who owns the Oracle software on the host, for example, orasid.
 
-* *-osgroup osgroup*
+* ``*-osgroup _osgroup_*``
 +
 Specifies the name of the Oracle database group name associated with the orasid account.
 
-* *-retain [-hourly [-countn] [-duration m]] [-daily [-count n] [-duration m]] [-weekly [-count n][-duration m]] [-monthly [-count n][-duration m]]*
+* ``*-retain [-hourly [-count _n_] [-duration _m_]] [-daily [-count _n_] [-duration _m_]] [-weekly [-count _n_][-duration _m_]] [-monthly [-count _n_][-duration _m_]]*``
 +
 Specifies the retention class (hourly, daily, weekly, monthly) for a backup.
 +
 For each retention class, a retention count or a retention duration or both can be specified. The duration is in units of the class (for example, hours for hourly or days for daily). For instance, if the user specifies only a retention duration of 7 for daily backups, then SnapManager will not limit the number of daily backups for the profile (because the retention count is 0), but SnapManager will automatically delete daily backups created over 7 days ago.
 
-* *-comment comment*
+* ``*-comment comment*``
 +
 Specifies the comment for a profile.
 
-* *-snapname-pattern pattern*
+* ``*-snapname-pattern _pattern_*``
 +
 Specifies the naming pattern for Snapshot copies. You can also include custom text, for example, HAOPS for highly available operations, in all Snapshot copy names. You can change the Snapshot copy naming pattern when you create a profile or after the profile has been created. The updated pattern applies only to Snapshot copies that have not yet occurred. Snapshot copies that exist retain the previous Snapname pattern. You can use several variables in the pattern text.
 
-* *-protect [-protection-policypolicy_name] | [-noprotect]*
+* ``*-protect [-protection-policy _policy_name_] | [-noprotect]*``
 +
 Indicates whether the backup should be protected to secondary storage or not.
 +
-NOTE: If -protect is specified without -protection-policy, then the dataset will not have a protection policy. If -protect is specified and -protection-policy is not set when the profile is created, then it may be set later bysmsap profile update command or set by the storage administrator by using the Protection Manager's console .
+NOTE: If `-protect` is specified without `-protection-policy`, then the dataset will not have a protection policy. If `-protect` is specified and `-protection-policy` is not set when the profile is created, then it may be set later by `smsap profile update` command or set by the storage administrator by using the Protection Manager's console .
 +
-The -noprotect option specifies not to protect the profile to secondary storage.
+The `-noprotect` option specifies not to protect the profile to secondary storage.
 
-* *-summary-notification*
+* ``*-summary-notification*``
 +
 Specifies that summary email notification is enabled for the existing profile.
 
-* *-notification  [-success-email  e-mail_address1,e-mail address2  -subject  subject_pattern]*
+* ``*-notification  [-success-email  _e-mail_address1,e-mail address2_  -subject  _subject_pattern_]*``
 +
 Enables email notification for the existing profile so that emails are received by recipients when the SnapManager operation succeeds. You must enter a single email address or multiple email addresses to which email alerts will be sent and an email subject pattern for the existing profile.
 +
 You can change the subject text while updating the profile or include custom subject text. The updated subject applies only to the emails that are not sent. You can use several variables for the email subject.
 
-* *-notification  [-failure  -email  e-mail_address1,e-mail address2  -subject  subject_pattern]*
+* ``*-notification  [-failure  -email  _e-mail_address1,e-mail address2_  -subject  _subject_pattern_]*``
 +
 Enables email notification for the existing profile so that emails are received by recipients when the SnapManager operation fails. You must enter a single email address or multiple email addresses to which email alerts will be sent and an email subject pattern for the existing profile.
 +
 You can change the subject text while updating the profile or include custom subject text. The updated subject applies only to the emails that are not sent. You can use several variables for the email subject.
 
-* *-separate-archivelog-backups*
+* ``*-separate-archivelog-backups*``
 +
 Separates the archive log backup from datafile backup. This is an optional parameter you can provide while creating the profile. After you separate the backups are separated using this option, you can create either data files-only backup or archive logs-only backup.
 
-* *-retain-archivelog-backups -hours hours | -daysdays | -weeksweeks| -monthsmonths*
+* ``*-retain-archivelog-backups -hours _hours_ | -days _days_ | -weeks _weeks_| -months _months_*``
 +
 Specifies that the archive log backups are retained based on the archive log retention duration (hourly, daily, weekly, monthly).
 
-* *-protect [-protection-policypolicy_name] | -noprotect*
+* ``*-protect [-protection-policy _policy_name_] | -noprotect*``
 +
 Specifies that the archive log files are protected based on the archive log protection policy.
 +
-Specifies that the archive log files are not protected by using the -noprotect option.
+Specifies that the archive log files are not protected by using the `-noprotect` option.
 
-* *-include-with-online-backups | -no-include-with-online-backups*
+* ``*-include-with-online-backups | -no-include-with-online-backups*``
 +
 Specifies that the archive log backup is included along with the online database backup.
 +
 Specifies that the archive log backups are not included along with the online database backup.
 
-* *-dump*
+* ``*-dump*``
 +
 Specifies that the dump files are collected after the successful profile create operation.
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages in the console.
 
@@ -235,9 +235,3 @@ smsap profile update -profile SALES1 -database -dbname SALESDB
 -host server1 -profile-notification -success -e-mail Preston.Davis@org.com -subject success
 Operation Id [8abc01ec0e78ec33010e78ec3b410001] succeeded.
 ----
-
-*Related information*
-
-xref:task_changing_profile_passwords.adoc[Changing profile passwords]
-
-xref:concept_how_snapmanager_retains_backups_on_the_local_storage.adoc[How SnapManager retains backups on the local storage]

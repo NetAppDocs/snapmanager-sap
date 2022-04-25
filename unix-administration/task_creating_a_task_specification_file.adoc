@@ -1,17 +1,21 @@
 ---
-permalink: unix-administration/task_creating_a_task_specification_file.html
+permalink: unix-administration/task_create_a_task_specification_file.html
 sidebar: sidebar
-keywords: 
-summary: 'You can create the task specification files by using graphical user interface \(GUI\), command-line interface \(CLI\), or a text editor. These files are used for performing preprocessing or post-processing activity of the backup, restore, or clone operations.'
+keywords: create, task, specification, file, graphical, user, interface, gui, command-line, interface, cli, text, editor, preprocessing, post-processing, activity, backup, resotre, clone, operation, creating
+summary: "You can create the task specification files by using graphical user interface (GUI), command-line interface (CLI), or a text editor. These files are used for performing preprocessing or post-processing activity of the backup, restore, or clone operations."
 ---
-= Creating a task specification file
+= Create a task specification file
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can create the task specification files by using graphical user interface (GUI), command-line interface (CLI), or a text editor. These files are used for performing preprocessing or post-processing activity of the backup, restore, or clone operations.
 
+.Steps
+
 . Create a task specification file by using GUI, CLI, or a text editor.
++
+*Example*
 +
 You can create the specification file based on the structure of the following sample task specification file:
 +
@@ -43,6 +47,7 @@ You can create the specification file based on the structure of the following sa
 . Enter the parameter name and the value assigned to the parameter.
 . Save the XML file in the correct installation directory.
 
+---
 == Task specification example
 
 ----
@@ -73,9 +78,10 @@ You can create the specification file based on the structure of the following sa
         <parameter>
           <name>ORADBUSR_FILE</name>
           <value\>/mnt/sam/oradbusr.sql</value\>
-										
+
         </parameter>
       </task>
       </post-tasks>
   </task-specification>
 ----
+---

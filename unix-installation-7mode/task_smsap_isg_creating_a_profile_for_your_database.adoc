@@ -1,26 +1,33 @@
 ---
-permalink: unix-installation-7mode/task_smsap_isg_creating_a_profile_for_your_database.html
+permalink: unix-installation-7mode/task_smsap_isg_create_a_profile_for_your_database.html
 sidebar: sidebar
-keywords: 
-summary: 'You must create a profile for your database to perform any operation on that database. The profile contains information about the database and can reference only one database; however, a database can be referenced by multiple profiles. A backup that is created using one profile cannot be accessed from a different profile, even if both profiles are associated with the same database.'
+keywords: create, profile, database, information, reference, multiple, creating
+summary: "You must create a profile for your database to perform any operation on that database. The profile contains information about the database and can reference only one database; however, a database can be referenced by multiple profiles. A backup that is created using one profile cannot be accessed from a different profile, even if both profiles are associated with the same database."
 ---
-= Creating a profile for your database
+= Create a profile for your database
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You must create a profile for your database to perform any operation on that database. The profile contains information about the database and can reference only one database; however, a database can be referenced by multiple profiles. A backup that is created using one profile cannot be accessed from a different profile, even if both profiles are associated with the same database.
 
-You must ensure that target database details are included in the /etc/oratab file.
+*What you'll need*
+
+You must ensure that target database details are included in the `/etc/oratab` file.
+
+*About this task*
 
 These steps show how to create a profile for your database using the SnapManager UI. You can also use the CLI if you prefer.
 
 For information about how to create profiles using the CLI, see the _SnapManager for SAP Administration guide for UNIX_.
 
+.Steps
+
 . From the Repositories tree, right-click the repository or the host and select *Create Profile*.
-. On the Profile Configuration Information page, enter the custom name and password for the profile.
-. On the Database Configuration Information page, enter the following information:
+. On the *Profile Configuration Information* page, enter the custom name and password for the profile.
+. On the *Database Configuration Information* page, enter the following information:
 +
+[options="header"]
 |===
 | In this field...| Do this...
 a|
@@ -43,11 +50,11 @@ a|
 *Host Group*
 a|
 Enter the Oracle user group name.    The default value is dba.
-+
 |===
 
 . On the Database Connection Information page, select one of the following:
 +
+[cols="1a,3a",options="header"]
 |===
 | Choose this...| If you want to...
 a|
@@ -72,13 +79,15 @@ Allow Automatic Storage Management (ASM) database instance to authenticate an ad
 
  ** In the *SYSDBA/SYSASM Privileged User Name* field, enter the user name of the ASM instance administrator with administrative privileges.
  ** In the *Password* field, enter password of the administrator.
-
 +
 |===
-*Note:* You can select the ASM authentication mode only if you have an ASM instance on the database host.
 
+NOTE: You can select the ASM authentication mode only if you have an ASM instance on the database host.
+
+[start=5]
 . On the RMAN Configuration Information page, select one of the following:
 +
+[options="header"]
 |===
 | Choose this...| If...
 a|
@@ -93,26 +102,25 @@ a|
 ***Use RMAN via Recovery Catalog***
 a|
 You are managing the RMAN repository using recovery catalog database.     Enter the user name who has access to recovery catalog database, password, and the Oracle net service name of the database that manages the Transparent Network Substrate (TNS) connection.
-+
 |===
 
-. On the Snapshot Naming Information page, select the variables to specify a naming format for the Snapshot copy.
+. On the *Snapshot Naming Information* page, select the variables to specify a naming format for the Snapshot copy.
 +
-You must include the smid variable in the naming format. The smid variable creates a unique Snapshot identifier.
+You must include the `_smid_` variable in the naming format. The `_smid_` variable creates a unique Snapshot identifier.
 
-. On the Policy Settings page, perform the following:
+. On the *Policy Settings* page, perform the following:
  .. Enter the retention count and duration for each retention class.
  .. From the *Protection Policy* drop-down list, select the Protection Manager policy.
  .. If you want to back up archive logs separately, select the *Backup Archivelogs Separately* checkbox, specify the retention, and select the protection policy.
 +
 You can select a policy which is different from the policy associated for datafiles. For example, if you have selected one of the Protection Manager policy for datafiles, you can select a different Protection Manager policy for archive logs.
-. On the Configure Notification Settings page, specify the email notification settings.
-. On the History Configuration Information page, select one of the options to maintain the history of SnapManager operations.
-. On the Perform Profile Create Operation page, verify the information and click *Create*.
+. On the *Configure Notification Settings* page, specify the email notification settings.
+. On the *History Configuration Information* page, select one of the options to maintain the history of SnapManager operations.
+. On the *Perform Profile Create Operation* page, verify the information and click *Create*.
 . Click *Finish* to close the wizard.
 +
 If the operation fails, click *Operation Details* to view what caused the operation to fail.
 
 *Related information*
 
-https://library.netapp.com/ecm/ecm_download_file/ECMP12481453[SnapManager 3.4.1 for SAP Administration Guide for UNIX]
+https://library.netapp.com/ecm/ecm_download_file/ECMP12481453[SnapManager 3.4.1 for SAP Administration Guide for UNIX^]

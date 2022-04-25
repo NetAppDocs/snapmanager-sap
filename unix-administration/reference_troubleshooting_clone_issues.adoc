@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_troubleshooting_clone_issues.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information about that might occur during clone operations and how you can resolve them.'
+keywords: information, clone, operation, resolve, troubleshooting, issue
+summary: "You can find information about that might occur during clone operations and how you can resolve them."
 ---
 = Troubleshooting clone issues
 :icons: font
@@ -11,16 +11,17 @@ summary: 'You can find information about that might occur during clone operation
 [.lead]
 You can find information about that might occur during clone operations and how you can resolve them.
 
+[options="header"]
 |===
 | Symptom| Explanation| Workaround
 a|
-The clone operation fails when the archive destination is set to USE_DB_RECOVERY_FILE_DEST.
+The clone operation fails when the archive destination is set to `_USE_DB_RECOVERY_FILE_DEST_.`
 a|
 When the archive destination is referring to USE_DB_RECOVERY_FILE_DEST, Flash recovery area (FRA) actively manages the archive log. SnapManager does not use the FRA location during clone or restore operations and thus the operations fail.
 a|
 Change the archive destination to actual archive log location instead of the FRA location.
 a|
-The clone operation fails with the following error message: Cannot perform operation: Clone Create. Root cause: ORACLE-00001: Error executing SQL: [ALTER DATABASE OPEN RESETLOGS;]. The command returned: ORA-01195: online backup of file 1 needs more recovery to be consistent.
+The clone operation fails with the following error message: `Cannot perform operation: Clone Create. Root cause: ORACLE-00001: Error executing SQL: [ALTER DATABASE OPEN RESETLOGS;]. The command returned: ORA-01195: online backup of file 1 needs more recovery to be consistent.`
 a|
 This issue occurs if Oracle listener fails to connect to the database.
 a|
@@ -31,9 +32,9 @@ If you are using SnapManager GUI to clone a backup, perform the following action
 . On the Clone Initialization page, enter the mandatory values and select the clone specification method.
 . On the Clone Specification page, select *Parameters*.
 . Click the *+Parameter* tab.
-. In the *Parameter Name* field, enter the name as local_listener and click *OK*.
+. In the *Parameter Name* field, enter the name as `_local_listener_` and click *OK*.
 . Select the *Override Default* check box for the local_listener row.
-. Click any parameter, then double-click the local_listener parameter, and enter the following value:``(ADDRESS=(PROTOCOL=TCP)(HOST=<your_host_name>)(PORT=<port#>))``
+. Click any parameter, then double-click the local_listener parameter, and enter the following value:``*(ADDRESS=(PROTOCOL=TCP)(HOST=<your_host_name>)(PORT=<port#>))*``
 . Click *Save To File*.
 . Click *Next* and continue with the clone create wizard.
 
@@ -76,7 +77,7 @@ SnapManager fails to generate a new profile after the clone split operation and 
 a|
 SnapManager fails to prompt if a new profile is not created after the clone split operation. Because the prompt is not displayed, you might assume that the profile is created.
 a|
-From the SnapManager command-line interface (CLI), enter the clone split-result command to view the detailed result of the clone split operation.
+From the SnapManager command-line interface (CLI), enter the `clone split-result` command to view the detailed result of the clone split operation.
 a|
 SnapManager for SAP fails to clone Oracle 10gR2 (10.2.0.5) physical Oracle Data Guard Standby databases.
 a|
@@ -85,7 +86,7 @@ SnapManager for SAP does not disable the managed recovery mode while performing 
 a|
 Upgrade the Oracle database to the Oracle 11gR1 (11.1.0.7 patch).
 a|
-Cloning a backup to a remote host fails with the following error message Error: Access is denied.
+Cloning a backup to a remote host fails with the following error message `Error: Access is denied.`
 a|
 While mounting, if the IP address of the host is provided to the snap mount command, the cloning operation might fail. This issue occurs if the host on which the database resides is in workgroup while the remote host is in domain, or vice-versa.
 a|

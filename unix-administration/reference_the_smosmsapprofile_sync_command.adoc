@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_the_smosmsapprofile_sync_command.html
 sidebar: sidebar
-keywords: 
-summary: 'This command loads the profile-to-repository mappings for that repository to a file in your home directory on the local host.'
+keywords: command, load, profile-to-repository, mappings, repository, file, home, directory, local, host, smsap
+summary: "This command loads the profile-to-repository mappings for that repository to a file in your home directory on the local host."
 ---
 = The smsap profile sync command
 :icons: font
@@ -13,49 +13,50 @@ This command loads the profile-to-repository mappings for that repository to a f
 
 == Syntax
 
+[subs=+macros]
+----
+pass:quotes[smsap profile sync
+-repository
+-dbname _repo_service_name_
+-host _repo_host_
+-port _repo_port_
+-login
+-username _repo_username_                  [-quiet | -verbose]]
 ----
 
-        smsap profile sync 
--repository 
--dbname repo_service_name 
--host repo_host 
--port repo_port 
--login 
--username repo_username
-				\[-quiet \| -verbose\]
-----
+
 
 == Parameters
 
-* *-repository*
+* ``*-repository*``
 +
 The options that follow -repository specify the details of the database for the repository.
 
-* *-dbname repo_service_name*
+* ``*-dbname _repo_service_name_*``
 +
 Specifies the repository database for the profile to synchronize.
 
-* *-host*
+* ``*-host*``
 +
 Specifies the database host.
 
-* *-port*
+* ``*-port*``
 +
 Specifies the port for the host.
 
-* *-login*
+* ``*-login*``
 +
 Specifies the log in process for the host user.
 
-* *-username*
+* ``*-username*``
 +
 Specifies the username for the host.
 
-* *-quiet*
+* ``*-quiet*``
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* ``*-verbose*``
 +
 Displays error, warning, and informational messages on the console.
 

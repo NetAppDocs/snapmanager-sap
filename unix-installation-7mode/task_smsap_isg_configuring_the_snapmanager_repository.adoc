@@ -1,19 +1,23 @@
 ---
-permalink: unix-installation-7mode/task_smsap_isg_configuring_the_snapmanager_repository.html
+permalink: unix-installation-7mode/task_smsap_isg_configure_the_snapmanager_repository.html
 sidebar: sidebar
-keywords: 
-summary: 'You must configure the SnapManager repository in the repository database instance. The repository database stores metadata for databases managed by SnapManager.'
+keywords: configure, snapmanager, repository, database, instance, store, manage, configuring
+summary: "You must configure the SnapManager repository in the repository database instance. The repository database stores metadata for databases managed by SnapManager."
 ---
-= Configuring the SnapManager repository
+= Configure the SnapManager repository
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You must configure the SnapManager repository in the repository database instance. The repository database stores metadata for databases managed by SnapManager.
 
+*What you'll need*
+
 * You must have created the repository database instance.
 * You must have created the Oracle user for the repository database instance with required privileges.
-* You must have included the repository database instance details in the tnsnames.ora file.
+* You must have included the repository database instance details in the `tnsnames.ora` file.
+
+*About this task*
 
 You can configure the SnapManager repository either from the SnapManager user interface (UI) or command-line interface (CLI). These steps show how to create a repository using the SnapManager UI. You can also use the CLI if you prefer.
 
@@ -21,8 +25,9 @@ For information about how to create the repository by using CLI, see the _SnapMa
 
 . In the left pane of the SnapManager UI, right-click *Repositories*.
 . Select *Create New Repository* and click *Next*.
-. In the Repository Database Configuration Information window, enter the following information:
+. In the *Repository Database Configuration Information* window, enter the following information:
 +
+[options="header"]
 |===
 | In this field...| Do this...
 a|
@@ -44,11 +49,10 @@ Enter the port used to connect to the repository database instance.    The defau
 a|
 *Service Name*
 a|
-Enter the name that SnapManager uses to connect to the repository database instance.    Depending on the details included in the tnsnames.ora file, this might be the short service name or the fully qualified service name.
-+
+Enter the name that SnapManager uses to connect to the repository database instance.    Depending on the details included in the `tnsnames.ora` file, this might be the short service name or the fully qualified service name.
 |===
 
-. In the Perform Repository Add Operation window, review the configuration summary and click *Add*.
+. In the *Perform Repository Add Operation* window, review the configuration summary and click *Add*.
 +
 If the operation fails, click the *Operation Details* tab to view what caused the operation to fail. The error details are also captured in the operation log located at /var/log/smsap.
 
@@ -58,4 +62,4 @@ The repository is listed in the left pane under the *Repositories* tree. If you 
 
 *Related information*
 
-https://library.netapp.com/ecm/ecm_download_file/ECMP12481453[SnapManager 3.4.1 for SAP Administration Guide for UNIX]
+https://library.netapp.com/ecm/ecm_download_file/ECMP12481453[SnapManager 3.4.1 for SAP Administration Guide for UNIX^]

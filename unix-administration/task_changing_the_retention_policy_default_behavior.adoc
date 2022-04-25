@@ -1,15 +1,17 @@
 ---
-permalink: unix-administration/task_changing_the_retention_policy_default_behavior.html
+permalink: unix-administration/task_change_the_retention_policy_default_behavior.html
 sidebar: sidebar
-keywords: 
-summary: 'When a backup expires based on the retention policy, SnapManager determines whether to delete the backup based on the retention settings. Deletion of backups is the default behavior. You can change this default behavior and choose to free the unprotected backups instead.'
+keywords: backup, expire, base, retention, policy, snapmanager, determine, delete, back, up, setting, behavior, unprotect, protect, changing, change
+summary: "When a backup expires based on the retention policy, SnapManager determines whether to delete the backup based on the retention settings. Deletion of backups is the default behavior. You can change this default behavior and choose to free the unprotected backups instead."
 ---
-= Changing the retention policy default behavior
+= Change the retention policy default behavior
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 When a backup expires based on the retention policy, SnapManager determines whether to delete the backup based on the retention settings. Deletion of backups is the default behavior. You can change this default behavior and choose to free the unprotected backups instead.
+
+*About this task*
 
 By default, SnapManager deletes or frees backups depending on whether they are protected or not as follows:
 
@@ -26,15 +28,15 @@ This enables the transfer of backups to secondary storage before the retention p
 
 * The copy was subsequently deleted from secondary storage.
 
+.Steps
+
 . Access the following default location:
 +
-default smsap installation location/properties/smsap.config
+`_default smsap installation location_/properties/smsap.config`
 
-. Edit the smsap.config file.
-. Set the retain.alwaysFreeExpiredBackups property in the smsap.config file to true.
+. Edit the `smsap.config` file.
+. Set the `retain.alwaysFreeExpiredBackups` property in the `smsap.config` file to true.
 +
-For example, `retain.alwaysFreeExpiredBackups = true`
-
-*Related information*
-
-xref:reference_the_smosmsapbackup_update_command.adoc[The smsap backup update command]
+For example,
++
+`*retain.alwaysFreeExpiredBackups = true*`

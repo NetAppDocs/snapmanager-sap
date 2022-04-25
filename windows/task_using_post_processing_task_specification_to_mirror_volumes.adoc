@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_using_post_processing_task_specification_to_mirror_volumes.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager for SAP enables you to use the script to mirror the volumes after the backup operation occurs in a Windows environment.'
+keywords: snapmanager, sap, enable, script, mirror, volume, backup, operation, windows, environment, post-process, task, specification
+summary: SnapManager for SAP enables you to use the script to mirror the volumes after the backup operation occurs in a Windows environment.
 ---
 = Using post-processing task specification to mirror volumes
 :icons: font

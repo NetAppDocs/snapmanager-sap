@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/reference_error_messages.html
 sidebar: sidebar
-keywords: 
-summary: 'You can find information about the error messages associated with different SnapManager operations.'
+keywords: information, error, message, associate, snapmanager, operation
+summary: "You can find information about the error messages associated with different SnapManager operations."
 ---
 = Error messages
 :icons: font
@@ -15,197 +15,142 @@ You can find information about the error messages associated with different Snap
 
 The following table lists some of the most common and important errors associated with SnapManager for SAP:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SD-10038: File system is not writable.
-a|
-SnapManager process does not have write access to the file system.
-a|
-You must ensure that the SnapManager process has write access to the file system. After correcting this, you may need to take another snapshot.
-a|
-SMSAP-05075: Unable to create Profile. You must configure the DP/XDP relationship properly or choose the correct protection policy per the underlying relationship.
-a|
-The underlying volumes are not in a SnapVault or SnapMirror relationship.
-a|
-You must configure a data protection relationship between the source and destination volumes and initialize the relationship.
-a|
-[SMSAP-05503] You have specified the same name to the profile. Specify a different name to rename the profile.
-a|
-Profiles with identical names cannot exist in a repository.
-a|
-Provide a profile name that is not in use.
-a|
-SMSAP-05505: Unable to update dataset metadata.
-a|
-Dataset might have been deleted or does not exist.
-a|
-Before updating the dataset metadata, verify that the dataset exists by using the NetApp Management Console.
-a|
-SMSAP-05506: You cannot update the profile since there are operation(s) running on the profile. You must wait until the operation(s) complete and then update the profile
-a|
-Profile cannot be updated when backup, restore, and cloning operations are in progress.
-a|
-Update the profile after completion of the current operation.
-a|
-SMSAP-05509: Invalid archivelog primary retention duration - Specify a positive integer value.
-a|
-Retention duration of archive log backups cannot be negative.
-a|
-Specify a positive value for the retention duration of archive log backups.
-a|
-SMSAP-07463: This backup restore requires the database to be in required state. Failed to bring the database to the required state.
-a|
-Database is not in the required state for a backup operation.
-a|
-Check that the database is in a relevant state before creating a backup copy. The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included.
-a|
-SMSAP-09315: After performing repository upgrade or update operation, you might not receive the summary notification for notifications set in previous version unless you update the summary notification with the notification host details.
-a|
-Notification settings are not configured for the repository after a rolling upgrade.
-a|
-After a rolling upgrade, update summary notification settings to receive notifications.
-a|
-SMSAP-02076: Label name should not contain any special characters other than underscore.
-a|
-Label name contains special characters other than the underscore.
-a|
-The label name must be unique within the profile. The name can contain letters, numbers, an underscore (_), and a hyphen (-) (but cannot start with a hyphen). Ensure that labels do not contain any special characters except the underscore.
+// header row
+| Error message
+| Explanation
+| Resolution
 
-a|
-SMSAP-06308: Exception when attempting to start schedule: java.lang.NullPointerException
-a|
-The fully qualified domain name (FQDN) of the profile host is configured instead of the system's host name and the FQDN of the profile host cannot be resolved.
-a|
-Ensure that you use the system's host name and not the FQDN.
-a|
-Failure in ExecuteRestoreSteps: ORACLE-10003: Error executing SQL "DROP DISKGROUP;control diskgroup name; INCLUDING CONTENTS" against Oracle database +ASM1: ORA-15039: diskgroup not dropped ORA-15027: active use of diskgroup; "control diskgroup name;" precludes its dismount
-a|
-The operation to restore a backup with control files fails to drop the control disk group. This issue occurs if there are stale backed up control files in the control disk group.
-a|
-Identify the stale backed up control files and manually delete them.
-a|
-RMAN-06004: ORACLE error from recovery catalog database: ORA-01424: missing or illegal character following the escape character
-a|
-Backup create operation failed to remove the backup copy from the catalog when SnapManager is integrated with RMAN.
-a|
-Check if there are any external scripts used for removing the backups from RMAN. Execute the `CROSSCHECK BACKUP` command in RMAN to update the RMAN repository and the `resync catalog` command to synchronize the control file of the target database with the recovery catalog.
-a|
-[DEBUG]: Exception while pruning backup. java.lang.IllegalStateException: [Assertion failed] - this state invariant must be true
-a|
-Multiple Snapshot copies are created for a single operation ID.
-a|
-Delete the Snapshot copies manually and use scripts to delete the entries from the repository.
-a|
-System time and the time displayed by SnapManager in the log files do not match or not synchronized.
-a|
-A time zone change is not yet supported by Java 7.
-a|
-Apply the tzupdater patch provided by Oracle.
-a|
-DISC-00001: Unable to discover storage: The following identifier does not exist or is not of the expected type: ASM File
-a|
-Data or control files or redo logs are multiplexed in an ASM database.
-a|
-Remove the Oracle multiplexing.
-a|
-0001-DS-10021: Unable to set protection policy of dataset <dataset-name> to <new-protection-policy> because the protection policy is already set to <old-protection-policy>. Please use Protection Manager to change the protection policy
-a|
-After the protection policy of a dataset is set, SnapManager will not allow you to change the protection policy, because it might require realigning the baseline relationships and result in the loss of existing backups on the secondary storage.
-a|
-Update the protection policy using Protection Manager's Management Console, which provides more options on migrating from one protection policy to another.
-a|
-0001-SD-10028: SnapDrive Error (id:2618 code:102) Unable to discover the device associated with "lun_path". If multipathing in use, possible multipathing configuration error. Please verify configuration and retry.
-a|
-The host is not able to discover LUNs created on the storage systems.
-a|
-Ensure that the transport protocol is properly installed and configured. Ensure that SnapDrive can create and discover a LUN on the storage system.
-a|
-0001-SD-10028: SnapDrive Error (id:2836 code:110) Failed to acquire dataset lock on volume "storage name":"temp_volume_name"
-a|
-You tried to restore using the indirect storage method and the temporary volume specified does not exist on the primary storage.
-a|
-Create a temporary volume on the primary storage. Or, specify the correct volume name, if a temporary volume is already created.
-a|
-0001-SMSAP-02016: There may have been external tables in the database not backed up as part of this backup operation (since the database was not OPEN during this backup ALL_EXTERNAL_LOCATIONS could not be queried to determine whether or not external tables exist).
-a|
-SnapManager does not backup external tables (for example, tables that are not stored in .dbf files). This issue occurs because the database was not open during the backup, SnapManager cannot determine if any external tables are being used.
-a|
-There might have been external tables in the database that are not backed up as part of this operation (because the database was not open during the backup).
-a|
-0001-SMSAP-11027: Cannot clone or mount snapshots from secondary storage because the snapshots are busy. Try cloning or mounting from an older backup.
-a|
-You tried to create a clone or mount Snapshot copies from the secondary storage of the latest protected backup.
-a|
-Clone or mount from an older backup.
-a|
-0001-SMSAP-12346: Cannot list protection policies because Protection Manager product is not installed or SnapDrive is not configured to use it. Please install Protection Manager and/or configure SnapDrive...
-a|
-You tried to list protection policies on a system where SnapDrive is not configured to use Protection Manager.
-a|
-Install Protection Manager and configure SnapDrive to use Protection Manager.
-a|
-0001-SMSAP-13032: Cannot perform operation: Backup Delete. Root cause: 0001-SMSAP-02039: Unable to delete backup of dataset: SD-10028: SnapDrive Error (id:2406 code:102) Failed to delete backup id: "backup_id" for dataset, error(23410):Snapshot "snapshot_name" on volume "volume_name" is busy.
-a|
-You tried to free or delete the latest protected backup or a backup containing Snapshot copies that are baselines in a mirror relationship.
-a|
-Free or delete the protected backup.
-a|
-0002-332 Admin error: Could not check SD.SnapShot.Clone access on volume "volume_name" for user username on Operations Manager server(s) "dfm_server". Reason: Invalid resource specified. Unable to find its ID on Operations Manager server "dfm_server"
-a|
-Proper access privileges and roles are not set.
-a|
-Set access privileges or roles for the users who are trying to execute the command.
-a|
-[WARN] FLOW-11011: Operation aborted [ERROR] FLOW-11008: Operation failed: Java heap space.
-a|
-There are more number of archive log files in the database than the maximum allowed.
-a|
+| `SD-10038: File system is not writable.`
+| SnapManager process does not have write access to the file system.
+| You must ensure that the SnapManager process has write access to the file system. After correcting this, you may need to take another snapshot.
 
-. Navigate to the SnapManager installation directory.
-. Open the launch-java file.
+| `SMSAP-05075: Unable to create Profile. You must configure the DP/XDP relationship properly or choose the correct protection policy per the underlying relationship.`
+| The underlying volumes are not in a SnapVault or SnapMirror relationship.
+| You must configure a data protection relationship between the source and destination volumes and initialize the relationship.
+
+| `[SMSAP-05503] You have specified the same name to the profile. Specify a different name to rename the profile.`
+| Profiles with identical names cannot exist in a repository.
+| Provide a profile name that is not in use.
+
+| `SMSAP-05505: Unable to update dataset metadata.`
+| Dataset might have been deleted or does not exist.
+| Before updating the dataset metadata, verify that the dataset exists by using the NetApp Management Console.
+
+| `SMSAP-05506: You cannot update the profile since there are operation(s) running on the profile. You must wait until the operation(s) complete and then update the profile`
+| Profile cannot be updated when backup, restore, and cloning operations are in progress.
+| Update the profile after completion of the current operation.
+
+| `SMSAP-05509: Invalid archivelog primary retention duration - Specify a positive integer value.`
+| Retention duration of archive log backups cannot be negative.
+| Specify a positive value for the retention duration of archive log backups.
+
+| `SMSAP-07463: This backup restore requires the database to be in required state. Failed to bring the database to the required state.`
+| Database is not in the required state for a backup operation.
+| Check that the database is in a relevant state before creating a backup copy. The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included.
+
+| `SMSAP-09315: After performing repository upgrade or update operation, you might not receive the summary notification for notifications set in previous version unless you update the summary notification with the notification host details.`
+| Notification settings are not configured for the repository after a rolling upgrade.
+| After a rolling upgrade, update summary notification settings to receive notifications.
+
+| `SMSAP-02076: Label name should not contain any special characters other than underscore.`
+| Label name contains special characters other than the underscore.
+| The label name must be unique within the profile. The name can contain letters, numbers, an underscore (_), and a hyphen (-) (but cannot start with a hyphen). Ensure that labels do not contain any special characters except the underscore.
+
+| `SMSAP-06308: Exception when attempting to start schedule: java.lang.NullPointerException`
+| The fully qualified domain name (FQDN) of the profile host is configured instead of the system's host name and the FQDN of the profile host cannot be resolved.
+| Ensure that you use the system's host name and not the FQDN.
+
+| `Failure in ExecuteRestoreSteps: ORACLE-10003: Error executing SQL "DROP DISKGROUP;control diskgroup name; INCLUDING CONTENTS" against Oracle database +ASM1: ORA-15039: diskgroup not dropped ORA-15027: active use of diskgroup; "control diskgroup name;" precludes its dismount`
+| The operation to restore a backup with control files fails to drop the control disk group. This issue occurs if there are stale backed up control files in the control disk group.
+| Identify the stale backed up control files and manually delete them.
+
+| `RMAN-06004: ORACLE error from recovery catalog database: ORA-01424: missing or illegal character following the escape character`
+| Backup create operation failed to remove the backup copy from the catalog when SnapManager is integrated with RMAN.
+| Check if there are any external scripts used for removing the backups from RMAN. Execute the `*CROSSCHECK BACKUP*` command in RMAN to update the RMAN repository and the `*resync catalog*` command to synchronize the control file of the target database with the recovery catalog.
+
+| `[DEBUG]: Exception while pruning backup. java.lang.IllegalStateException: [Assertion failed] - this state invariant must be true`
+| Multiple Snapshot copies are created for a single operation ID.
+| Delete the Snapshot copies manually and use scripts to delete the entries from the repository.
+
+| System time and the time displayed by SnapManager in the log files do not match or not synchronized.
+| A time zone change is not yet supported by Java 7.
+| Apply the `tzupdater` patch provided by Oracle.
+
+| `DISC-00001: Unable to discover storage: The following identifier does not exist or is not of the expected type: ASM File`
+| Data or control files or redo logs are multiplexed in an ASM database.
+| Remove the Oracle multiplexing.
+
+| `0001-DS-10021: Unable to set protection policy of dataset <dataset-name> to <new-protection-policy> because the protection policy is already set to <old-protection-policy>. Please use Protection Manager to change the protection policy`
+| After the protection policy of a dataset is set, SnapManager will not allow you to change the protection policy, because it might require realigning the baseline relationships and result in the loss of existing backups on the secondary storage.
+| Update the protection policy using Protection Manager's Management Console, which provides more options on migrating from one protection policy to another.
+
+| `0001-SD-10028: SnapDrive Error (id:2618 code:102) Unable to discover the device associated with "lun_path". If multipathing in use, possible multipathing configuration error. Please verify configuration and retry.`
+| The host is not able to discover LUNs created on the storage systems.
+| Ensure that the transport protocol is properly installed and configured. Ensure that SnapDrive can create and discover a LUN on the storage system.
+
+| `0001-SD-10028: SnapDrive Error (id:2836 code:110) Failed to acquire dataset lock on volume "storage name":"temp_volume_name"`
+| You tried to restore using the indirect storage method and the temporary volume specified does not exist on the primary storage.
+| Create a temporary volume on the primary storage. Or, specify the correct volume name, if a temporary volume is already created.
+
+| `0001-SMSAP-02016: There may have been external tables in the database not backed up as part of this backup operation (since the database was not OPEN during this backup ALL_EXTERNAL_LOCATIONS could not be queried to determine whether or not external tables exist).`
+| SnapManager does not backup external tables (for example, tables that are not stored in .dbf files). This issue occurs because the database was not open during the backup, SnapManager cannot determine if any external tables are being used.
+| There might have been external tables in the database that are not backed up as part of this operation (because the database was not open during the backup).
+
+| `0001-SMSAP-11027: Cannot clone or mount snapshots from secondary storage because the snapshots are busy. Try cloning or mounting from an older backup.`
+| You tried to create a clone or mount Snapshot copies from the secondary storage of the latest protected backup.
+| Clone or mount from an older backup.
+
+| `0001-SMSAP-12346: Cannot list protection policies because Protection Manager product is not installed or SnapDrive is not configured to use it. Please install Protection Manager and/or configure SnapDrive...`
+| You tried to list protection policies on a system where SnapDrive is not configured to use Protection Manager.
+| Install Protection Manager and configure SnapDrive to use Protection Manager.
+
+| `0001-SMSAP-13032: Cannot perform operation: Backup Delete. Root cause: 0001-SMSAP-02039: Unable to delete backup of dataset: SD-10028: SnapDrive Error (id:2406 code:102) Failed to delete backup id: "backup_id" for dataset, error(23410):Snapshot "snapshot_name" on volume "volume_name" is busy.`
+| You tried to free or delete the latest protected backup or a backup containing Snapshot copies that are baselines in a mirror relationship.
+| Free or delete the protected backup.
+
+| `0002-332 Admin error: Could not check SD.SnapShot.Clone access on volume "volume_name" for user username on Operations Manager server(s) "dfm_server". Reason: Invalid resource specified. Unable to find its ID on Operations Manager server "dfm_server"`
+| Proper access privileges and roles are not set.
+| Set access privileges or roles for the users who are trying to execute the command.
+
+| `[WARN] FLOW-11011: Operation aborted [ERROR] FLOW-11008: Operation failed: Java heap space.`
+| There are more number of archive log files in the database than the maximum allowed.
+| . Navigate to the SnapManager installation directory.
+. Open the `launch-java` file.
 . Increase the value of the `java -Xmx160m` Java heap space parameter . For example, you can modify the value from the default value of 160m to 200m as `java -Xmx200m`.
 
-a|
-SD-10028: SnapDrive Error (id:2868 code:102) Could not locate remote snapshot or remote qtree.
-a|
-SnapManager displays the backups as protected even if the protection job in Protection Manager is only partially successful. This condition occurs when dataset conformance is in progress (when the baseline Snapshots are getting mirrored).
-a|
-Take a new backup after the dataset is conformant.
-a|
-SMSAP-21019: The archive log pruning failed for the destination: "/mnt/destination_name/" with the reason: "ORACLE-00101: Error executing RMAN command: [DELETE NOPROMPT ARCHIVELOG '/mnt/destination_name/']
-a|
-Archive log pruning fails in one of the destinations. In such a scenario, SnapManager continues to prune the archive log files from the other destinations. If any files are manually deleted from the active file system, the RMAN fails to prune the archive log files from that destination.
-a|
-Connect to RMAN from the SnapManager host. Run the RMAN `CROSSCHECK ARCHIVELOG ALL` command and perform the pruning operation on the archive log files again.
-a|
-SMSAP-13032: Cannot perform operation: Archive log Prune. Root cause: RMAN Exception: ORACLE-00101: Error executing RMAN command.
-a|
-The archive log files are manually deleted from the archive log destinations.
-a|
-Connect to RMAN from the SnapManager host. Run the RMAN `CROSSCHECK ARCHIVELOG ALL` command and perform the pruning operation on the archive log files again.
-a|
-Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,18 lastmatch=]) does not match (name:backup_script) Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,25 lastmatch=]) does not match (description:backup script)
+| `SD-10028: SnapDrive Error (id:2868 code:102) Could not locate remote snapshot or remote qtree.`
+| SnapManager displays the backups as protected even if the protection job in Protection Manager is only partially successful. This condition occurs when dataset conformance is in progress (when the baseline Snapshots are getting mirrored).
+| Take a new backup after the dataset is conformant.
 
-Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,9 lastmatch=]) does not match (timeout:0)
+| `SMSAP-21019: The archive log pruning failed for the destination: "/mnt/destination_name/" with the reason: "ORACLE-00101: Error executing RMAN command: [DELETE NOPROMPT ARCHIVELOG '/mnt/destination_name/']`
+| Archive log pruning fails in one of the destinations. In such a scenario, SnapManager continues to prune the archive log files from the other destinations. If any files are manually deleted from the active file system, the RMAN fails to prune the archive log files from that destination.
+| Connect to RMAN from the SnapManager host. Run the RMAN `*CROSSCHECK ARCHIVELOG ALL*` command and perform the pruning operation on the archive log files again.
 
-a|
-Environment variables are set not set correctly in the pre-task or post-task scripts.
-a|
-Check if the pre-task or post-task scripts follow the standard SnapManager plug-in structure. For additional information about using the environmental variables in the script, see xref:concept_operations_in_task_scripts.adoc[Operations in task scripts].
-a|
-ORA-01450: maximum key length (6398) exceeded.
-a|
-When you perform an upgrade from SnapManager 3.2 for SAP to SnapManager 3.3 for SAP, the upgrade operation fails with this error message. This issue might occur because of one of the following reasons:
+| `SMSAP-13032: Cannot perform operation: Archive log Prune. Root cause: RMAN Exception: ORACLE-00101: Error executing RMAN command.`
+| The archive log files are manually deleted from the archive log destinations.
+| Connect to RMAN from the SnapManager host. Run the RMAN `*CROSSCHECK ARCHIVELOG ALL*` command and perform the pruning operation on the archive log files again.
+
+| `Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,18 lastmatch=]) does not match (name:backup_script)`
+
+`Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,25 lastmatch=]) does not match (description:backup script)`
+
+`Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,9 lastmatch=]) does not match (timeout:0)`
+
+| Environment variables are set not set correctly in the pre-task or post-task scripts.
+| Check if the pre-task or post-task scripts follow the standard SnapManager plug-in structure. For additional information about using the environmental variables in the script, see xref:concept_operations_in_task_scripts.adoc[Operations in task scripts].
+
+| `ORA-01450: maximum key length (6398) exceeded.`
+| When you perform an upgrade from SnapManager 3.2 for SAP to SnapManager 3.3 for SAP, the upgrade operation fails with this error message. This issue might occur because of one of the following reasons:
 
 * The block size of the tablespace in which the repository exists is less than 8k.
-* The nls_length_semantics parameter is set to char.
+* The `nls_length_semantics` parameter is set to char.
 
-a|
-You must assign the values to the following parameters:
+| You must assign the values to the following parameters:
 
-* block_size=8192
-* nls_length=byte
+* `block_size=*8192*`
+* `nls_length=*byte*`
 
 After modifying the parameter values, you must restart the database.
 
@@ -217,169 +162,126 @@ For more information, see the Knowledge Base article 2017632.
 
 The following table lists the common errors associated with the database backup process:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-02066: You cannot delete or free the archive log backup "data-logs" as the backup is associated with data backup "data-logs".
-a|
-The archive log backup is taken along with the data files backup, and you tried to delete the archive log backup.
-a|
-Use the -force option to delete or free the backup.
-a|
-SMSAP-02067: You cannot delete, or free the archive log backup "data-logs" as the backup is associated with data backup "data-logs" and is within the assigned retention duration.
-a|
-The archive log backup is associated with the database backup and is within the retention period, and you tried to delete the archive log backup.
-a|
-Use the -force option to delete or free the backup.
-a|
-SMSAP-07142: Archived Logs excluded due to exclusion pattern <exclusion> pattern.
-a|
-You exclude some archive log files during the profile create or backup create operation.
-a|
-No action is required.
-a|
-SMSAP-07155: <count> archived log files do not exist in the active file system. These archived log files will not be included in the backup.
-a|
-The archive log files do not exist in the active file system during the profile create or backup create operation. These archived log files are not included in the backup.
-a|
-No action is required.
-a|
-SMSAP-07148: Archived log files are not available.
-a|
-No archive log files are created for the current database during the profile create or backup create operation.
-a|
-No action is required.
-a|
-SMSAP-07150: Archived log files are not found.
-a|
-All the archive log files are missing from the file system or excluded during the profile create or backup create operation.
-a|
-No action is required.
-a|
-SMSAP-13032: Cannot perform operation: Backup Create. Root cause: ORACLE-20001: Error trying to change state to OPEN for database instance dfcln1: ORACLE-20004: Expecting to be able to open the database without the RESETLOGS option, but oracle is reporting that the database needs to be opened with the RESETLOGS option. To keep from unexpectedly resetting the logs, the process will not continue. Please ensure that the database can be opened without the RESETLOGS option and try again.
-a|
-You try to back up the cloned database that was created with the -no-resetlogs option. The cloned database is not a complete database.However, you can perform SnapManager operations such as creating profiles and backups, splitting clones, and so on with the cloned database, but the SnapManager operations fail because the cloned database is not configured as a complete database.
+// header row
+| Error message
+| Explanation
+| Resolution
 
-a|
-Recover the cloned database or convert the database into a Data Guard Standby database.
+| `SMSAP-02066: You cannot delete or free the archive log backup "data-logs" as the backup is associated with data backup "data-logs".`
+| The archive log backup is taken along with the data files backup, and you tried to delete the archive log backup.
+| Use the `_-force_` option to delete or free the backup.
+
+| `SMSAP-02067: You cannot delete, or free the archive log backup "data-logs" as the backup is associated with data backup "data-logs" and is within the assigned retention duration.`
+| The archive log backup is associated with the database backup and is within the retention period, and you tried to delete the archive log backup.
+| Use the `_-force_` option to delete or free the backup.
+
+| `SMSAP-07142: Archived Logs excluded due to exclusion pattern <exclusion> pattern.`
+| You exclude some archive log files during the profile create or backup create operation.
+| No action is required.
+
+| `SMSAP-07155: <count> archived log files do not exist in the active file system. These archived log files will not be included in the backup.`
+| The archive log files do not exist in the active file system during the profile create or backup create operation. These archived log files are not included in the backup.
+| No action is required.
+
+| `SMSAP-07148: Archived log files are not available.`
+| No archive log files are created for the current database during the profile create or backup create operation.
+| No action is required.
+
+| `SMSAP-07150: Archived log files are not found.`
+| All the archive log files are missing from the file system or excluded during the profile create or backup create operation.
+| No action is required.
+
+| `SMSAP-13032: Cannot perform operation: Backup Create. Root cause: ORACLE-20001: Error trying to change state to OPEN for database instance dfcln1: ORACLE-20004: Expecting to be able to open the database without the RESETLOGS option, but oracle is reporting that the database needs to be opened with the RESETLOGS option. To keep from unexpectedly resetting the logs, the process will not continue. Please ensure that the database can be opened without the RESETLOGS option and try again.`
+| You try to back up the cloned database that was created with the -no-resetlogs option. The cloned database is not a complete database.However, you can perform SnapManager operations such as creating profiles and backups, splitting clones, and so on with the cloned database, but the SnapManager operations fail because the cloned database is not configured as a complete database.
+| Recover the cloned database or convert the database into a Data Guard Standby database.
+
 |===
 
 == Data protection errors
 
 The following table shows the common errors associated with data protection:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-Backup protection is requested but the database profile does not have a protection policy. Please update the protection policy in the database profile or do not use the 'protect' option when creating backups.
-a|
-You try to create a backup with protection to secondary storage; however, the profile associated with this backup does not have a protection policy specified.
-a|
-Edit the profile and select a protection policy. Re-create the backup.
-a|
-Cannot delete profile because data protection is enabled but the Protection Manager is temporarily unavailable. Please try again later.
-a|
-You try to delete a profile that has protection enabled; however, Protection Manager is unavailable.
-a|
-Ensure that appropriate backups are stored in either primary or secondary storage. Disable protection in the profile. When Protection Manager is available again, return to the profile and delete it.
-a|
-Cannot list protection policies because Protection Manager is temporarily unavailable. Please try again later.
-a|
-While setting up the backup profile, you enabled protection on the backup so that the backup would be stored on secondary storage. However, SnapManager cannot retrieve the protection policies from Protection Manager Management Console.
-a|
-Disable protection in the profile temporarily. Continue creating a new profile or updating an existing profile. When Protection Manager is available again, return to the profile.
-a|
-Cannot list protection policies because Protection Manager product is not installed or SnapDrive is not configured to use it. Please install Protection Manager and/or configure SnapDrive.
-a|
-While setting up the backup profile, you enabled protection on the backup so that the backup would be stored on secondary storage. However, SnapManager cannot retrieve the protection policies from Protection Manager's Management Console. The Protection Manager is not installed or SnapDrive is not configured.
-a|
-Install Protection Manager. Configure SnapDrive.
+// header row
+| Error message
+| Explanation
+| Resolution
+
+| `Backup protection is requested but the database profile does not have a protection policy. Please update the protection policy in the database profile or do not use the 'protect' option when creating backups.`
+| You try to create a backup with protection to secondary storage; however, the profile associated with this backup does not have a protection policy specified.
+| Edit the profile and select a protection policy. Re-create the backup.
+
+| `Cannot delete profile because data protection is enabled but the Protection Manager is temporarily unavailable. Please try again later.`
+| You try to delete a profile that has protection enabled; however, Protection Manager is unavailable.
+| Ensure that appropriate backups are stored in either primary or secondary storage. Disable protection in the profile. When Protection Manager is available again, return to the profile and delete it.
+
+| `Cannot list protection policies because Protection Manager is temporarily unavailable. Please try again later.`
+| While setting up the backup profile, you enabled protection on the backup so that the backup would be stored on secondary storage. However, SnapManager cannot retrieve the protection policies from Protection Manager Management Console.
+| Disable protection in the profile temporarily. Continue creating a new profile or updating an existing profile. When Protection Manager is available again, return to the profile.
+
+| `Cannot list protection policies because Protection Manager product is not installed or SnapDrive is not configured to use it. Please install Protection Manager and/or configure SnapDrive.`
+| While setting up the backup profile, you enabled protection on the backup so that the backup would be stored on secondary storage. However, SnapManager cannot retrieve the protection policies from Protection Manager's Management Console. The Protection Manager is not installed or SnapDrive is not configured.
+| Install Protection Manager. Configure SnapDrive.
 
 Return to the profile, reenable protection, and select the protection policies available in Protection Manager's Management Console.
 
-a|
-Cannot set protection policy because Protection Manager is temporarily unavailable. Please try again later.
-a|
-While setting up the backup profile, you enabled protection on the backup so that the backup would be stored on secondary storage. However, SnapManager cannot retrieve the protection policies from Protection Manager's Management Console.
-a|
-Disable protection in the profile temporarily. Continue creating or updating the profile. When Protection Manager's Management Console is available, return to the profile.
-a|
-Creating new dataset <dataset_name> for database <dbname> on host <host>.
-a|
-You attempted to create a backup profile. SnapManager creates a dataset for this profile.
-a|
-No action necessary.
-a|
-Data protection is not available because Protection Manager is not installed.
-a|
-While setting up the backup profile, you attempted to enable protection on the backup so that the backup would be stored on secondary storage. However, SnapManager cannot access protection policies from Protection Manager's Management Console. The Protection Manager is not installed.
-a|
-Install Protection Manager.
-a|
-Deleted dataset <dataset_name> for this database.
-a|
-You deleted a profile. SnapManager will delete the associated dataset.
-a|
-No action is necessary.
-a|
-Deleting profile with protection enabled and Protection Manager is no longer configured. Deleting profile from SnapManager but not cleaning up dataset in Protection Manager.
-a|
-You attempted to delete a profile that has protection enabled; however, Protection Manager is no longer installed, or no longer configured, or has expired. SnapManager will delete the profile, but not the profile's dataset from Protection Manager's Management Console.
-a|
-Reinstall or reconfigure Protection Manager. Return to the profile and delete it.
-a|
-Invalid retention class. Use "smsap help backup" to see a list of available retention classes.
-a|
-When setting up the retention policy, you attempted to use an invalid retention class.
-a|
-Create a list of valid retention classes by entering this command: `smsap help backup`
+| `Cannot set protection policy because Protection Manager is temporarily unavailable. Please try again later.`
+| While setting up the backup profile, you enabled protection on the backup so that the backup would be stored on secondary storage. However, SnapManager cannot retrieve the protection policies from Protection Manager's Management Console.
+| Disable protection in the profile temporarily. Continue creating or updating the profile. When Protection Manager's Management Console is available, return to the profile.
+
+| `Creating new dataset <dataset_name> for database <dbname> on host <host>.`
+| You attempted to create a backup profile. SnapManager creates a dataset for this profile.
+| No action necessary.
+
+| `Data protection is not available because Protection Manager is not installed.`
+| While setting up the backup profile, you attempted to enable protection on the backup so that the backup would be stored on secondary storage. However, SnapManager cannot access protection policies from Protection Manager's Management Console. The Protection Manager is not installed.
+| Install Protection Manager.
+
+| `Deleted dataset <dataset_name> for this database.`
+| You deleted a profile. SnapManager will delete the associated dataset.
+| No action is necessary.
+
+| `Deleting profile with protection enabled and Protection Manager is no longer configured. Deleting profile from SnapManager but not cleaning up dataset in Protection Manager.`
+| You attempted to delete a profile that has protection enabled; however, Protection Manager is no longer installed, or no longer configured, or has expired. SnapManager will delete the profile, but not the profile's dataset from Protection Manager's Management Console.
+| Reinstall or reconfigure Protection Manager. Return to the profile and delete it.
+
+| `Invalid retention class. Use "smsap help backup" to see a list of available retention classes.`
+| When setting up the retention policy, you attempted to use an invalid retention class.
+| Create a list of valid retention classes by entering this command: `*smsap help backup*`
 
 Update the retention policy with one of the available classes.
 
-a|
-Specified protection policy is not available. Use "smsap protection-policy list" to see a list of available protection policies.
-a|
-While setting up the profile, you enabled protection and entered a protection policy that is not available.
-a|
-Identify available protection policies, by entering the following command: `smsap protection-policy list`
+| `Specified protection policy is not available. Use "smsap protection-policy list" to see a list of available protection policies.`
+| While setting up the profile, you enabled protection and entered a protection policy that is not available.
+| Identify available protection policies, by entering the following command: `*smsap protection-policy list*`
 
-a|
-Using existing dataset <dataset_name> for database <dbname> on host <host> since the dataset already existed.
-a|
-You attempted to create a profile; however, the dataset for the same database profile already exists.
-a|
-Check the options from the existing profile and ensure that they match what you need in the new profile.
-a|
-Using existing dataset <dataset_name> for RAC database <dbname> since profile <profile_name> for the same RAC database already exists for instance <SID> on host <hostname>.
-a|
-You attempted to create a profile for a RAC database; however, the dataset for the same RAC database profile already exists.
-a|
-Check the options from the existing profile and ensure that they match what you need in the new profile.
-a|
-The dataset <dataset_name> with protection policy <existing_policy_name> already exists for this database. You have specified protection policy <new_policy_name>. The dataset's protection policy will be changed to <new_policy_name>. You can change the protection policy by updating the profile.
-a|
-You attempted to create a profile with protection enabled and a protection policy selected. However, the dataset for the same database profile already exists, but has a different protection policy. SnapManager will use the newly specified policy for the existing dataset.
-a|
-Review this protection policy and determine if this is the policy you want to use for the dataset. If not, edit the profile and change the policy.
-a|
-Protection Manager deletes the local backups created by SnapManager for SAP
-a|
-The Protection Manager's Management Console deletes or frees the local backups created by SnapManager based on the retention policy defined in the Protection Manager. The retention class set for the local backups is not considered while deleting or freeing the local backups.When the local backups are transferred to a secondary storage system, the retention class set for the local backups on the primary storage system are not considered. The retention class specified in the transfer schedule is assigned to the remote backup.
+| `Using existing dataset <dataset_name> for database <dbname> on host <host> since the dataset already existed.`
+| You attempted to create a profile; however, the dataset for the same database profile already exists.
+| Check the options from the existing profile and ensure that they match what you need in the new profile.
 
-a|
-Run the dfpm dataset fix_smsap command from the Protection Manager server every time a new dataset is created.Now the backups are not deleted based on the retention policy set in Protection Manager's Management Console.
+| `Using existing dataset <dataset_name> for RAC database <dbname> since profile <profile_name> for the same RAC database already exists for instance <SID> on host <hostname>.`
+| You attempted to create a profile for a RAC database; however, the dataset for the same RAC database profile already exists.
+| Check the options from the existing profile and ensure that they match what you need in the new profile.
 
-a|
-You have selected to disable protection for this profile. This could potentially delete the associated dataset in Protection Manager and destroy the replication relationships created for that dataset. You will also not be able to perform SnapManager operations such as restoring or cloning the secondary or tertiary backups for this profile. Do you wish to continue (Y/N)?
-a|
-You tried to disable protection for a protected profile while updating the profile from the SnapManager CLI or GUI. You can disable protection for the profile using the -noprotect option from the SnapManager CLI or clearing the *Protection Manager Protection Policy* check box in the Policies properties window from the SnapManager GUI. When you disable protection for the profile, SnapManager for SAP deletes the dataset from Protection Manager's Management Console, which unregisters all of the secondary and tertiary backup copies associated with that dataset.
+| `The dataset <dataset_name> with protection policy <existing_policy_name> already exists for this database. You have specified protection policy <new_policy_name>. The dataset's protection policy will be changed to <new_policy_name>. You can change the protection policy by updating the profile.`
+| You attempted to create a profile with protection enabled and a protection policy selected. However, the dataset for the same database profile already exists, but has a different protection policy. SnapManager will use the newly specified policy for the existing dataset.
+| Review this protection policy and determine if this is the policy you want to use for the dataset. If not, edit the profile and change the policy.
+
+| `Protection Manager deletes the local backups created by SnapManager for SAP`
+| The Protection Manager's Management Console deletes or frees the local backups created by SnapManager based on the retention policy defined in the Protection Manager. The retention class set for the local backups is not considered while deleting or freeing the local backups.When the local backups are transferred to a secondary storage system, the retention class set for the local backups on the primary storage system are not considered. The retention class specified in the transfer schedule is assigned to the remote backup.
+| Run the dfpm dataset fix_smsap command from the Protection Manager server every time a new dataset is created.Now the backups are not deleted based on the retention policy set in Protection Manager's Management Console.
+
+| `You have selected to disable protection for this profile. This could potentially delete the associated dataset in Protection Manager and destroy the replication relationships created for that dataset. You will also not be able to perform SnapManager operations such as restoring or cloning the secondary or tertiary backups for this profile. Do you wish to continue (Y/N)?`
+| You tried to disable protection for a protected profile while updating the profile from the SnapManager CLI or GUI. You can disable protection for the profile using the `-noprotect` option from the SnapManager CLI or clearing the *Protection Manager Protection Policy* check box in the Policies properties window from the SnapManager GUI. When you disable protection for the profile, SnapManager for SAP deletes the dataset from Protection Manager's Management Console, which unregisters all of the secondary and tertiary backup copies associated with that dataset.
 
 After a dataset is deleted, all secondary and tertiary backup copies are orphaned. Neither the Protection Manager nor SnapManager for SAP have the ability to access those backup copies. The backup copies can no longer be restored by using SnapManager for SAP.
 
 NOTE: The same warning message is displayed even when the profile is not protected.
 
-a|
-This is a known issue in SnapManager for SAP and expected behavior within Protection Manager when destroying a dataset. There is no workaround.The orphaned backups need to be managed manually.
+| This is a known issue in SnapManager for SAP and expected behavior within Protection Manager when destroying a dataset. There is no workaround.The orphaned backups need to be managed manually.
 
 |===
 
@@ -387,142 +289,125 @@ This is a known issue in SnapManager for SAP and expected behavior within Protec
 
 The following table shows the common errors associated with the restore process:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-03031:Restore specification is required to restore backup <variable> because the storage resources for the backup has already been freed.
-a|
-You attempted to restore a backup that has its storage resources freed without specifying a restore specification.
-a|
-Specify a restore specification.
-a|
-SMSAP-03032:Restore specification must contain mappings for the files to restore because the storage resources for the backup has already been freed. The files that need mappings are: <variable> from Snapshots: <variable>
-a|
-You attempted to restore a backup that has its storage resources freed along with a restore specification that does not contain mapping for all the files to be restored.
-a|
-Correct the restore specification file so that the mappings match the files to be restored.
-a|
-ORACLE-30028: Unable to dump log file <filename>. The file may be missing/inaccessible/corrupted. This log file will not be used for recovery.
-a|
-The online redo log files or archive log files cannot be used for recovery.This error occurs due to following reasons:
+// header row
+| Error message
+| Explanation
+| Resolution
+
+| `SMSAP-03031:Restore specification is required to restore backup <variable> because the storage resources for the backup has already been freed.`
+| You attempted to restore a backup that has its storage resources freed without specifying a restore specification.
+| Specify a restore specification.
+
+| `SMSAP-03032:Restore specification must contain mappings for the files to restore because the storage resources for the backup has already been freed. The files that need mappings are: <variable> from Snapshots: <variable>`
+| You attempted to restore a backup that has its storage resources freed along with a restore specification that does not contain mapping for all the files to be restored.
+| Correct the restore specification file so that the mappings match the files to be restored.
+
+| `ORACLE-30028: Unable to dump log file <filename>. The file may be missing/inaccessible/corrupted. This log file will not be used for recovery.`
+| The online redo log files or archive log files cannot be used for recovery.This error occurs due to following reasons:
 
 * The online redo log files or archived log files mentioned in the error message do not have sufficient change numbers to apply for recovery. This occurs when the database is online without any transactions. The redo log or archived log files do not have any valid change numbers that can be applied for recovery.
 * The online redo log file or archived log file mentioned in the error message does not have sufficient access privileges for Oracle.
 * The online redo log file or archived log file mentioned in the error message is corrupted and cannot be read by Oracle.
 * The online redo log file or archived log file mentioned in the error message is not found in the path mentioned.
+| If the file mentioned in the error message is an archived log file and if you have manually provided for recovery, ensure that the file has full access permissions to Oracle.Even if the file has full permissions, and the message continues, the archive log file does not have any change numbers to be applied for recovery, and this message can be ignored.
 
-a|
-If the file mentioned in the error message is an archived log file and if you have manually provided for recovery, ensure that the file has full access permissions to Oracle.Even if the file has full permissions, and the message continues, the archive log file does not have any change numbers to be applied for recovery, and this message can be ignored.
+| `SMSAP-03038: Cannot restore from secondary because the storage resources still exist on primary. Please restore from primary instead.`
+| You tried to restore from secondary storage, but Snapshot copies exist on the primary storage.
+| Always restore from the primary if the backup has not been freed.
 
-a|
-SMSAP-03038: Cannot restore from secondary because the storage resources still exist on primary. Please restore from primary instead.
-a|
-You tried to restore from secondary storage, but Snapshot copies exist on the primary storage.
-a|
-Always restore from the primary if the backup has not been freed.
-a|
-SMSAP-03054: Mounting backup archbkp1 to feed archivelogs. DS-10001: Connecting mountpoints. [ERROR] FLOW-11019: Failure in ExecuteConnectionSteps: SD-10028: SnapDrive Error (id:2618 code:305). The following files could not be deleted. The corresponding volumes might be read-only. Retry the command with older snapshots.[ERROR] FLOW-11010: Operation transitioning to abort due to prior failure.
-a|
-During recovery, SnapManager tries to mount the latest backup from secondary to feed the archive log files from secondary.Though, if there are any other backups, the recovery can succeed. But, if there are no other backups, the recovery might fail.
+| `SMSAP-03054: Mounting backup archbkp1 to feed archivelogs. DS-10001: Connecting mountpoints. [ERROR] FLOW-11019: Failure in ExecuteConnectionSteps: SD-10028: SnapDrive Error (id:2618 code:305). The following files could not be deleted. The corresponding volumes might be read-only. Retry the command with older snapshots.[ERROR] FLOW-11010: Operation transitioning to abort due to prior failure.`
+| During recovery, SnapManager tries to mount the latest backup from secondary to feed the archive log files from secondary.Though, if there are any other backups, the recovery can succeed. But, if there are no other backups, the recovery might fail.
 
-a|
-Do not delete the latest backups from primary, so that SnapManager can use the primary backup for recovery.
+| Do not delete the latest backups from primary, so that SnapManager can use the primary backup for recovery.
+
 |===
 
 == Error messages associated with the clone process (4000 series)
 
 The following table shows the common errors associated with the clone process:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-04133: Dump destination must not exist
-a|
-You are using SnapManager to create new clones; however, the dump destinations to be used by the new clone already exist. SnapManager cannot create a clone if the dump destinations exist.
-a|
-Remove or rename the old dump destinations before you create a clone.
-a|
-SMSAP-04908: Not a FlexClone.
-a|
-The clone is a LUN clone. This applies for Data ONTAP 8.1 7-mode as well as clustered Data ONTAP.
-a|
-SnapManager supports clone split on the FlexClone technology only.
-a|
-SMSAP-04904: No clone split operation running with split-idsplit_id
-a|
-The operation ID is invalid or no clone split operation is in progress.
-a|
-Provide a valid split ID or split label for the clone split status, result, and stop operations.
-a|
-SMSAP-04906: Stop clone split operation failed with split-idsplit_id
-a|
-The split operation is complete.
-a|
-Check whether the split process is in progress by using the `clone split-status` or `clone split-result` command.
-a|
-SMSAP-13032:Cannot perform operation: Clone Create. Root cause: ORACLE-00001: Error executing SQL: [ALTER DATABASE OPEN RESETLOGS;]. The command returned: ORA-38856: cannot mark instance UNNAMED_INSTANCE_2 (redo thread 2) as enabled.
-a|
-The clone creation fails when you create the clone from the standby database using the following setup:
+// header row
+| Error message
+| Explanation
+| Resolution
+
+| `SMSAP-04133: Dump destination must not exist`
+| You are using SnapManager to create new clones; however, the dump destinations to be used by the new clone already exist. SnapManager cannot create a clone if the dump destinations exist.
+| Remove or rename the old dump destinations before you create a clone.
+
+| `SMSAP-04908: Not a FlexClone.`
+| The clone is a LUN clone. This applies for Data ONTAP 8.1 7-mode as well as clustered Data ONTAP.
+| SnapManager supports clone split on the FlexClone technology only.
+
+| `SMSAP-04904: No clone split operation running with _split-idsplit_id_`| The operation ID is invalid or no clone split operation is in progress.
+| Provide a valid split ID or split label for the clone split status, result, and stop operations.
+
+| `SMSAP-04906: Stop clone split operation failed with _split-idsplit_id_`
+| The split operation is complete.
+| Check whether the split process is in progress by using the `*clone split-status*` or `*clone split-result*` command.
+
+| `SMSAP-13032:Cannot perform operation: Clone Create. Root cause: ORACLE-00001: Error executing SQL: [ALTER DATABASE OPEN RESETLOGS;]. The command returned: ORA-38856: cannot mark instance UNNAMED_INSTANCE_2 (redo thread 2) as enabled.`
+| The clone creation fails when you create the clone from the standby database using the following setup:
 
 * The primary database is a RAC setup and the standby database is standalone.
 * The standby is created by using RMAN for taking the data files backup.
 
-a|
-Add the _no_recovery_through_resetlogs=TRUE parameter in the clone specification file before creating the clone. See Oracle documentation (ID 334899.1) for additional information. Ensure that you have your Oracle metalink user name and password.
+| Add the `_no_recovery_through_resetlogs=TRUE` parameter in the clone specification file before creating the clone. See Oracle documentation (ID 334899.1) for additional information. Ensure that you have your Oracle metalink user name and password.
 
-a|
-[INFO] Operation failed. Syntax errors in clone specification: [error: cvc-complex-type.2.4c: Expected elements 'value@http://www.example.com default@http://www.example.com' before the end of the content in element parameter@http://www.example.com]
-a|
-You did not provide a value for a parameter in the clone specification file.
-a|
-You must either provide a value for the parameter or delete that parameter if it is not required from the clone specification file.
+
+| `[INFO] Operation failed. Syntax errors in clone specification: [error: cvc-complex-type.2.4c: Expected elements 'value@http://www.example.com default@http://www.example.com' before the end of the content in element parameter@http://www.example.com]`
+| You did not provide a value for a parameter in the clone specification file.
+| You must either provide a value for the parameter or delete that parameter if it is not required from the clone specification file.
+
 |===
 
 == Error messages associated with the managing profile process (5000 series)
 
 The following table shows the common errors associated with the clone process:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-20600: Profile "profile1" not found in repository "repo_name". Please run "profile sync" to update your profile-to-repository mappings.
-a|
-The dump operation cannot be performed when profile creation fails.
-a|
-Use smsapsystem dump.
+// header row
+| Error message
+| Explanation
+| Resolution
+
+| `SMSAP-20600: Profile "profile1" not found in repository "repo_name". Please run "profile sync" to update your profile-to-repository mappings.`
+| The dump operation cannot be performed when profile creation fails.
+| Use `smsapsystem dump`.
+
 |===
 
 == Error messages associated with freeing backup resources (backups 6000 series)
 
 The following table shows the common errors associated with backup tasks:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-06030: Cannot remove backup because it is in use: <variable>
-a|
-You attempted to perform the backup free operation using commands, when the backup is mounted or is marked to be retained on an unlimited basis.
-a|
-Unmount the backup or change the unlimited retention policy. If clones exist, delete them.
+// header row
+| Error message
+| Explanation
+| Resolution
 
-a|
-SMSAP-06045: Cannot free backup <variable> because the storage resources for the backup have already been freed
-a|
-You attempted to perform the backup free operation using commands, when the backup has been already freed.
-a|
-You cannot free the backup if it is already freed.
-a|
-SMSAP-06047: Only successful backups can be freed. The status of backup <ID> is <status>.
-a|
-You attempted to perform the backup free operation using commands, when the backup status is not successful.
-a|
-Try again after a successful backup.
-a|
-SMSAP-13082: Cannot perform operation <variable> on backup <ID> because the storage resources for the backup have been freed.
-a|
-Using commands, you attempted to mount a backup that has its storage resources freed.
-a|
-You cannot mount, clone, verify, or perform backint restore on a backup that has its storage resources freed.
+| `SMSAP-06030: Cannot remove backup because it is in use: <variable>`
+| You attempted to perform the backup free operation using commands, when the backup is mounted or is marked to be retained on an unlimited basis.
+| Unmount the backup or change the unlimited retention policy. If clones exist, delete them.
+
+| `SMSAP-06045: Cannot free backup <variable> because the storage resources for the backup have already been freed`
+| You attempted to perform the backup free operation using commands, when the backup has been already freed.
+| You cannot free the backup if it is already freed.
+
+| `SMSAP-06047: Only successful backups can be freed. The status of backup <ID> is <status>.`
+| You attempted to perform the backup free operation using commands, when the backup status is not successful.
+| Try again after a successful backup.
+
+| `SMSAP-13082: Cannot perform operation <variable> on backup <ID> because the storage resources for the backup have been freed.`
+| Using commands, you attempted to mount a backup that has its storage resources freed.
+| You cannot mount, clone, verify, or perform backint restore on a backup that has its storage resources freed.
 
 |===
 
@@ -530,23 +415,24 @@ You cannot mount, clone, verify, or perform backint restore on a backup that has
 
 The following table shows the common errors associated with virtual storage interface tasks:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-08017 Error discovering storage for /.
-a|
-SnapManager attempted to locate storage resources, but found data files, control files, or logs in the root/ directory. These files should reside in a subdirectory. The root file system might be a hard drive in your local machine. SnapDrive cannot take Snapshot copies at this location and SnapManager cannot perform operations on these files.
+// header row
+| Error message
+| Explanation
+| Resolution
 
-a|
-Check to see if data files, control files, or redo logs are in the root directory. If so, move them to their correct locations or re-create control files or redo logs in their correct locations. The basic mountpoint is always
+| `SMSAP-08017 Error discovering storage for /.`
+| SnapManager attempted to locate storage resources, but found data files, control files, or logs in the `root/` directory. These files should reside in a subdirectory. The root file system might be a hard drive in your local machine. SnapDrive cannot take Snapshot copies at this location and SnapManager cannot perform operations on these files.
+| Check to see if data files, control files, or redo logs are in the `root` directory. If so, move them to their correct locations or re-create control files or redo logs in their correct locations. The basic mountpoint is always
 
-* /oracle/<SID> on UNIX-based environments
-* [drive:]\oracle\<SID> on Windows-based environments
+* `/oracle/<SID>` on UNIX-based environments
+* `[drive:]\oracle\<SID>` on Windows-based environments
 
 SAP uses four redo log groups with two members:
 
-* One member is stored in origlog{A|B}.
-* The other member is mirrored to mirrlog{A|B}.
+* One member is stored in origlog{A\|B}.
+* The other member is mirrored to mirrlog{A\|B}.
 
 |===
 
@@ -554,64 +440,57 @@ SAP uses four redo log groups with two members:
 
 The following table shows the common errors associated with the rolling upgrade process:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-09234:Following hosts does not exist in the old repository. <hostnames>.
-a|
-You tried to perform rolling upgrade of a host, which does not exist in the previous repository version.
-a|
-Check whether the host exists in the previous repository using the repository show-repository command from the earlier version of the SnapManager CLI.
-a|
-SMSAP-09255:Following hosts does not exist in the new repository. <hostnames>.
-a|
-You tried to perform roll back of a host, which does not exist in the new repository version.
-a|
-Check whether the host exists in the new repository using the repository show-repository command from the later version of the SnapManager CLI.
-a|
-SMSAP-09256:Rollback not supported, since there exists new profiles <profilenames>.for the specified hosts <hostnames>.
-a|
-You tried to roll back a host that contains new profiles existing in the repository. However, these profiles did not exist in the host of the earlier SnapManager version.
-a|
-Delete new profiles in the later or upgraded version of SnapManager before the rollback.
-a|
-SMSAP-09257:Rollback not supported, since the backups <backupid> are mounted in the new hosts.
-a|
-You tried to roll back a later version of the SnapManager host that has mounted backups. These backups are not mounted in the earlier version of the SnapManager host.
-a|
-Unmount the backups in the later version of the SnapManager host, and then perform the rollback.
-a|
-SMSAP-09258:Rollback not supported, since the backups <backupid> are unmounted in the new hosts.
-a|
-You tried to roll back a later version of the SnapManager host that has backups that are being unmounted.
-a|
-Mount the backups in the later version of the SnapManager host, and then perform the rollback.
-a|
-SMSAP-09298:Cannot update this repository since it already has other hosts in the higher version. Please perform rollingupgrade for all hosts instead.
-a|
-You performed a rolling upgrade on a single host and then updated the repository for that host.
-a|
-Perform a rolling upgrade on all the hosts.
-a|
-SMSAP-09297: Error occurred while enabling constraints. The repository might be in inconsistent state. It is recommended to restore the backup of repository you have taken before the current operation.
-a|
-You attempted to perform a rolling upgrade or rollback operation if the repository database is left in an inconsistent state.
-a|
-Restore the repository that you backed up earlier.
+// header row
+| Error message
+| Explanation
+| Resolution
+
+| `SMSAP-09234:Following hosts does not exist in the old repository. <hostnames>.`
+| You tried to perform rolling upgrade of a host, which does not exist in the previous repository version.
+| Check whether the host exists in the previous repository using the `repository show-repository` command from the earlier version of the SnapManager CLI.
+
+| `SMSAP-09255:Following hosts does not exist in the new repository. <hostnames>.`
+| You tried to perform roll back of a host, which does not exist in the new repository version.
+| Check whether the host exists in the new repository using the `repository show-repository` command from the later version of the SnapManager CLI.
+
+| `SMSAP-09256:Rollback not supported, since there exists new profiles <profilenames>.for the specified hosts <hostnames>.`
+| You tried to roll back a host that contains new profiles existing in the repository. However, these profiles did not exist in the host of the earlier SnapManager version.
+| Delete new profiles in the later or upgraded version of SnapManager before the rollback.
+
+| `SMSAP-09257:Rollback not supported, since the backups <backupid> are mounted in the new hosts.`
+| You tried to roll back a later version of the SnapManager host that has mounted backups. These backups are not mounted in the earlier version of the SnapManager host.
+| Unmount the backups in the later version of the SnapManager host, and then perform the rollback.
+
+| `SMSAP-09258:Rollback not supported, since the backups <backupid> are unmounted in the new hosts.`
+| You tried to roll back a later version of the SnapManager host that has backups that are being unmounted.
+| Mount the backups in the later version of the SnapManager host, and then perform the rollback.
+
+| `SMSAP-09298:Cannot update this repository since it already has other hosts in the higher version. Please perform rollingupgrade for all hosts instead.`
+| You performed a rolling upgrade on a single host and then updated the repository for that host.
+| Perform a rolling upgrade on all the hosts.
+
+| `SMSAP-09297: Error occurred while enabling constraints. The repository might be in inconsistent state. It is recommended to restore the backup of repository you have taken before the current operation.`
+| You attempted to perform a rolling upgrade or rollback operation if the repository database is left in an inconsistent state.
+| Restore the repository that you backed up earlier.
+
 |===
 
 == Execution of operations (12,000 series)
 
 The following table shows the common errors associated with operations:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-12347 [ERROR]: SnapManager server not running on host <host> and port <port>. Please run this command on a host running the SnapManager server.
-a|
-While setting up the profile, you entered information about the host and port. However, SnapManager cannot perform these operations because the SnapManager server is not running on the specified host and port.
-a|
-Enter the command on a host running the SnapManager server. You can check the port with the lsnrctl status command and see the port on which the database is running. Change the port in the backup command, if needed.
+// header row
+| Error message
+| Explanation
+| Resolution
+
+| `SMSAP-12347 [ERROR]: SnapManager server not running on host <host> and port <port>. Please run this command on a host running the SnapManager server.`
+| While setting up the profile, you entered information about the host and port. However, SnapManager cannot perform these operations because the SnapManager server is not running on the specified host and port.
+| Enter the command on a host running the SnapManager server. You can check the port with the `lsnrctl status` command and see the port on which the database is running. Change the port in the backup command, if needed.
 
 |===
 
@@ -619,222 +498,174 @@ Enter the command on a host running the SnapManager server. You can check the po
 
 The following table shows the common errors associated with the process component of SnapManager:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-13083: Snapname pattern with value "x" contains characters other than letters, numbers, underscore, dash, and curly braces.
-a|
-When creating a profile, you customized the Snapname pattern; however, you included special characters that are not allowed.
-a|
-Remove special characters other than letters, numbers, underscore, dash, and braces.
-a|
-SMSAP-13084: Snapname pattern with value "x" does not contain the same number of left and right braces.
-a|
-When you were creating a profile, you customized the Snapname pattern; however, the left and right braces do not match.
-a|
-Enter matching opening and closing brackets in the Snapname pattern.
-a|
-SMSAP-13085: Snapname pattern with value "x" contains an invalid variable name of "y".
-a|
-When you were creating a profile, you customized the Snapname pattern; however, you included a variable that is not allowed.
-a|
-Remove the offending variable. To see a list of acceptable variables, see xref:concept_snapshot_copy_naming.adoc[Snapshot copy naming].
-a|
-SMSAP-13086 Snapname pattern with value "x" must contain variable "smid".
-a|
-When you were creating a profile, you customized the Snapname pattern; however, you omitted the required smid variable.
-a|
-Insert the required smid variable.
-a|
-SMSAP-13902: Clone Split Start failed.
-a|
-There could be multiple reasons for this error:
+// header row
+| Error message
+| Explanation
+| Resolution
+
+| `SMSAP-13083: Snapname pattern with value "x" contains characters other than letters, numbers, underscore, dash, and curly braces.`
+| When creating a profile, you customized the Snapname pattern; however, you included special characters that are not allowed.
+| Remove special characters other than letters, numbers, underscore, dash, and braces.
+
+| `SMSAP-13084: Snapname pattern with value "x" does not contain the same number of left and right braces.`
+| When you were creating a profile, you customized the Snapname pattern; however, the left and right braces do not match.
+| Enter matching opening and closing brackets in the Snapname pattern.
+
+| `SMSAP-13085: Snapname pattern with value "x" contains an invalid variable name of "y".`
+| When you were creating a profile, you customized the Snapname pattern; however, you included a variable that is not allowed.
+| Remove the offending variable. To see a list of acceptable variables, see xref:concept_snapshot_copy_naming.adoc[Snapshot copy naming].
+
+| `SMSAP-13086 Snapname pattern with value "x" must contain variable "smid".`
+| When you were creating a profile, you customized the Snapname pattern; however, you omitted the required `_smid_` variable.
+| Insert the required `_smid_` variable.
+
+| `SMSAP-13902: Clone Split Start failed.`
+| There could be multiple reasons for this error:
 
 * No space in the volume.
 * SnapDrive is not running.
 * Clone could be a LUN clone.
 * FlexVol volume has restricted Snapshot copies.
+| Check for the available space in the volume by using the `*clone split-estimate*` command. Confirm that the FlexVol volume has no restricted Snapshot copies.
 
-a|
-Check for the available space in the volume by using the `clone split-estimate` command. Confirm that the FlexVol volume has no restricted Snapshot copies.
+| `SMSAP-13904: Clone Split Result failed.`
+| This could be due to failure in the SnapDrive or storage system.
+| Try working on a new clone.
 
-a|
-SMSAP-13904: Clone Split Result failed.
-a|
-This could be due to failure in the SnapDrive or storage system.
-a|
-Try working on a new clone.
-a|
-SMSAP-13906: Split operation already running for clone labelclone-label or IDclone-id.
-a|
-You are trying to split a clone that is already split.
-a|
-The clone is already split and the clone related metadata will be removed.
-a|
-SMSAP-13907: Split operation already running for clone labelclone-label or IDclone-id.
-a|
-You are trying to split a clone that is undergoing the split process.
-a|
-You must wait until the split operation completes.
+| `SMSAP-13906: Split operation already running for clone label _clone-label_ or ID _clone-id_.`
+| You are trying to split a clone that is already split.
+| The clone is already split and the clone related metadata will be removed.
+
+|`SMSAP-13907: Split operation already running for clone label _clone-label_ or ID _clone-id_`.
+| You are trying to split a clone that is undergoing the split process.
+| You must wait until the split operation completes.
 |===
 
 == Error messages associated with SnapManager Utilities (14,000 series)
 
 The following table shows the common errors associated with SnapManager utilities:
 
+[cols="1a,1a,1a" options="header"]
 |===
-| Error message| Explanation| Resolution
-a|
-SMSAP-14501: Mail ID cannot be blank.
-a|
-You did not enter the email address.
-a|
-Enter a valid email address.
-a|
-SMSAP-14502: Mail subject cannot be blank.
-a|
-You did not enter the email subject.
-a|
-Enter the appropriate email subject.
-a|
-SMSAP-14506: Mail server field cannot be blank.
-a|
-You did not enter the email server host name or IP address.
-a|
-Enter the valid mail server host name or IP address.
-a|
-SMSAP-14507: Mail Port field cannot be blank.
-a|
-You did not enter the email port number.
-a|
-Enter the email server port number.
-a|
-SMSAP-14508: From Mail ID cannot be blank.
-a|
-You did not enter the sender's email address.
-a|
-Enter a valid sender's email address.
-a|
-SMSAP-14509: Username cannot be blank.
-a|
-You enabled authentication and did not provide the user name.
-a|
-Enter the email authentication user name.
-a|
-SMSAP-14510: Password cannot be blank. Please enter the password.
-a|
-You enabled authentication and did not provide the password.
-a|
-Enter the email authentication password.
-a|
-SMSAP-14550: Email status <success/failure>.
-a|
-The port number, mail server, or receiver's email address is invalid.
-a|
-Provide proper values during email configuration.
-a|
-SMSAP-14559: Sending email notification failed: <error>.
-a|
-This could be due to invalid port number, invalid mail server, or invalid receiver's mail address.
-a|
-Provide proper values during email configuration.
-a|
-SMSAP-14560: Notification failed: Notification configuration is not available.
-a|
-Notification sending failed, because notification configuration is not available.
-a|
-Add notification configuration.
-a|
-SMSAP-14565: Invalid time format. Please enter time format in HH:mm.
-a|
-You have entered time in an incorrect format.
-a|
-Enter the time in the format: hh:mm.
-a|
-SMSAP-14566: Invalid date value. Valid date range is 1-31.
-a|
-The date configured is incorrect.
-a|
-Date should be in the range from 1 through 31.
-a|
-SMSAP-14567: Invalid day value. Valid day range is 1-7.
-a|
-The day configured is incorrect.
-a|
-Enter the day range from 1 through 7.
-a|
-SMSAP-14569: Server failed to start Summary Notification schedule.
-a|
-The SnapManager server got shut down due to unknown reasons.
-a|
-Start the SnapManager server.
-a|
-SMSAP-14570: Summary Notification not available.
-a|
-You have not configured summary notification.
-a|
-Configure the summary notification.
-a|
-SMSAP-14571: Both profile and summary notification cannot be enable.
-a|
-You have selected both the profile and summary notification options.
-a|
-Enable either the profile notification or summary notification.
-a|
-SMSAP-14572: Provide success or failure option for notification.
-a|
-You have not enabled the success or failure options.
-a|
-You must select either success or failure option or both.
+// header row
+| Error message
+| Explanation
+| Resolution
+
+| `SMSAP-14501: Mail ID cannot be blank.`
+| You did not enter the email address.
+| Enter a valid email address.
+
+| `SMSAP-14502: Mail subject cannot be blank.`
+| You did not enter the email subject.
+| Enter the appropriate email subject.
+
+| `SMSAP-14506: Mail server field cannot be blank.`
+| You did not enter the email server host name or IP address.
+| Enter the valid mail server host name or IP address.
+
+| `SMSAP-14507: Mail Port field cannot be blank.`
+| You did not enter the email port number.
+| Enter the email server port number.
+
+| `SMSAP-14508: From Mail ID cannot be blank.`
+| You did not enter the sender's email address.
+| Enter a valid sender's email address.
+
+| `SMSAP-14509: Username cannot be blank.`
+| You enabled authentication and did not provide the user name.
+| Enter the email authentication user name.
+
+| `SMSAP-14510: Password cannot be blank. Please enter the password.`
+| You enabled authentication and did not provide the password.
+| Enter the email authentication password.
+
+| `SMSAP-14550: Email status <success/failure>.`
+| The port number, mail server, or receiver's email address is invalid.
+| Provide proper values during email configuration.
+
+| `SMSAP-14559: Sending email notification failed: <error>.`
+| This could be due to invalid port number, invalid mail server, or invalid receiver's mail address.
+| Provide proper values during email configuration.
+
+| `SMSAP-14560: Notification failed: Notification configuration is not available.`
+| Notification sending failed, because notification configuration is not available.
+| Add notification configuration.
+
+| `SMSAP-14565: Invalid time format. Please enter time format in HH:mm.`
+| You have entered time in an incorrect format.
+| Enter the time in the format: hh:mm.
+
+| `SMSAP-14566: Invalid date value. Valid date range is 1-31.`
+| The date configured is incorrect.
+| Date should be in the range from 1 through 31.
+
+| `SMSAP-14567: Invalid day value. Valid day range is 1-7.`
+| The day configured is incorrect.
+| Enter the day range from 1 through 7.
+
+| `SMSAP-14569: Server failed to start Summary Notification schedule.`
+| The SnapManager server got shut down due to unknown reasons.
+| Start the SnapManager server.
+
+| `SMSAP-14570: Summary Notification not available.`
+| You have not configured summary notification.
+| Configure the summary notification.
+
+| `SMSAP-14571: Both profile and summary notification cannot be enable.`
+| You have selected both the profile and summary notification options.
+| Enable either the profile notification or summary notification.
+
+| `SMSAP-14572: Provide success or failure option for notification.`
+| You have not enabled the success or failure options.
+| You must select either success or failure option or both.
+
 |===
 
 == Common SnapDrive for UNIX error messages
 
 The following table shows the common errors related to SnapDrive for UNIX:
 
+[cols="1a,1a" options="header"]
 |===
-| Error message| Explanation
-a|
-0001-136 Admin error: Unable to log on to filer: <filer> Please set user name and/or password for <filer>
-a|
-Initial configuration error
-a|
-0001-382 Admin error: Multipathing rescan failed
-a|
-LUN discovery error
-a|
-0001-462 Admin error: Failed to unconfigure multipathing for <LUN>: spd5: cannot stop device. Device busy.
-a|
-LUN discovery error
-a|
-0001-476 Admin error: Unable to discover the device associated with...
-a|
-LUN discovery error
-a|
-0001-680 Admin error: Host OS requires an update to internal data to allow LUN creation or connection. Use 'snapdrive config prepare luns' or update this information manually...
-a|
-LUN discovery error
-a|
-0001-710 Admin error: OS refresh of LUN failed...
-a|
-LUN discovery error
-a|
-0001-817 Admin error: Failed to create volume clone... : FlexClone not licensed
-a|
-Initial configuration error
-a|
-0001-817 Admin error: Failed to create volume clone... : Request failed as space cannot be guaranteed for the clone.
-a|
-Space issue
-a|
-0001-878 Admin error: HBA assistant not found. Commands involving LUNs should fail.
-a|
-LUN discovery error
-a|
-SMSAP-12111: Error executing snapdrive command "<snapdrive command>": <snapdrive error>
-a|
-SnapDrive for UNIX generic error
+// header row
+| Error message
+| Explanation
+
+| `0001-136 Admin error: Unable to log on to filer: <filer> Please set user name and/or password for <filer>`
+| Initial configuration error
+
+| `0001-382 Admin error: Multipathing rescan failed`
+| LUN discovery error
+
+| `0001-462 Admin error: Failed to unconfigure multipathing for <LUN>: spd5: cannot stop device. Device busy.`
+| LUN discovery error
+
+| `0001-476 Admin error: Unable to discover the device associated with...`
+| LUN discovery error
+
+| `0001-680 Admin error: Host OS requires an update to internal data to allow LUN creation or connection. Use 'snapdrive config prepare luns' or update this information manually...`
+| LUN discovery error
+
+| `0001-710 Admin error: OS refresh of LUN failed...`
+| LUN discovery error
+
+| `0001-817 Admin error: Failed to create volume clone... : FlexClone not licensed`
+| Initial configuration error
+
+| `0001-817 Admin error: Failed to create volume clone... : Request failed as space cannot be guaranteed for the clone`.
+| Space issue
+
+| `0001-878 Admin error: HBA assistant not found. Commands involving LUNs should fail.`
+| LUN discovery error
+
+| `SMSAP-12111: Error executing snapdrive command "<snapdrive command>": <snapdrive error>`
+| SnapDrive for UNIX generic error
+
 |===
+
 *Related information*
 
 xref:concept_snapshot_copy_naming.adoc[Snapshot copy naming]

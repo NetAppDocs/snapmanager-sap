@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_viewing_sample_plugin_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager includes scripts that you can use as examples for how to make your own scripts or as a basis for your custom scripts.'
+keywords: snapmanager, include, script, example, basis, custom, view, sample, plug-in
+summary: SnapManager includes scripts that you can use as examples for how to make your own scripts or as a basis for your custom scripts.
 ---
 = Viewing sample plug-in scripts
 :icons: font
@@ -25,6 +25,7 @@ The directory that contains the sample plug-in scripts includes the following su
 
 The following table describes the sample scripts:
 
+[options="header"]
 |===
 | Script name| Description| Type of script
 a|
@@ -127,7 +128,7 @@ if /i "%1" == "-describe" goto :describe
 :check
 	set /a EXIT=0
 	goto :exit
-	
+
 :describe
 	echo SM_PI_NAME:%name%
 	echo SM_PI_DESCRIPTION:%description%
@@ -136,14 +137,14 @@ if /i "%1" == "-describe" goto :describe
 
 :execute
 	set /a EXIT=0
-	
+
 	rem SM_TARGET_SID must be set
 	if "%SM_TARGET_SID%" == "" (
 		set /a EXIT=4
 		echo SM_TARGET_SID not set
 		goto :exit
 	)
-	
+
 	rem exactly three alphanumeric characters, with starting with a letter
 	echo %SM_TARGET_SID% | findstr "\<[a-zA-Z][a-zA-Z0-9][a-zA-Z0-9]\>" >nul
 	if %ERRORLEVEL% == 1 (
@@ -151,7 +152,7 @@ if /i "%1" == "-describe" goto :describe
 		echo SID is defined as a 3 digit value starting with a letter. [%SM_TARGET_SID%] is not valid.
 		goto :exit
 	)
-	
+
 	rem not a SAP reserved SID
 	echo %INVALID_SIDS% | findstr /i \"%SM_TARGET_SID%\" >nul
 	if %ERRORLEVEL% == 0 (
@@ -159,7 +160,7 @@ if /i "%1" == "-describe" goto :describe
 		echo SID [%SM_TARGET_SID%] is reserved by SAP
 		goto :exit
 	)
-	
+
 	goto :exit
 
 

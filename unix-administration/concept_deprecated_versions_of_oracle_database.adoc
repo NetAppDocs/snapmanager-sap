@@ -1,8 +1,8 @@
 ---
 permalink: unix-administration/concept_deprecated_versions_of_oracle_database.html
 sidebar: sidebar
-keywords: 
-summary: 'Oracle database 9i is not supported by SnapManager 3.2 or later, and Oracle database 10gR2 \(earlier than 10.2.0.4\) is not supported by SnapManager 3.3.1 or later.'
+keywords: oracle, database, 9i, snapmanager, 10gr2, deprecate
+summary: "Oracle database 9i is not supported by SnapManager 3.2 or later, and Oracle database 10gR2 (earlier than 10.2.0.4) is not supported by SnapManager 3.3.1 or later."
 ---
 = Deprecated versions of Oracle database
 :icons: font

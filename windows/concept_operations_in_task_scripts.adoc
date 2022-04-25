@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_operations_in_task_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'The pretask or post-task scripts that you create must follow a standard SnapManager for SAP plug-in structure.'
+keywords: pretask, post-task, script, create, standard, snapmanager, sap, plug-in, structure
+summary: "The pretask or post-task scripts that you create must follow a standard SnapManager for SAP plug-in structure."
 ---
 = Operations in task scripts
 :icons: font
@@ -19,24 +19,25 @@ The pretask and post-task scripts must include the following operations:
 
 If any one of these operations is not specified in the pretask or post-task script, then the script becomes invalid.
 
-When you run the smsap plugin check command for the pretask or post-task scripts, the returned status of the scripts display error (because the returned status value is not zero).
+When you run the `smsap plugin check` command for the pretask or post-task scripts, the returned status of the scripts display error (because the returned status value is not zero).
 
+[options="header"]
 |===
 | Operation| Description
 a|
 check
 a|
-The SnapManager server runs the plugin.sh -check command to ensure that the system has execution permission on the plug-in scripts. You might also include file permission checking on the remote system.
+The SnapManager server runs the `plugin.sh -check` command to ensure that the system has execution permission on the plug-in scripts. You might also include file permission checking on the remote system.
 a|
 describe
 a|
-The SnapManager server runs the plugin.sh -describe command to obtain information about your script and match the elements provided by the specification file. Your plug-in script must contain the following description information:
+The SnapManager server runs the `plugin.sh -describe` command to obtain information about your script and match the elements provided by the specification file. Your plug-in script must contain the following description information:
 
-* SM_PI_NAME: Script name. You must provide a value for this parameter.
-* SM_PI_DESCRIPTION: Description of the script's purpose. You must provide a value for this parameter.
-* SM_PI_CONTEXT: Context in which the script should run-for example, root or orasid. You must provide a value for this parameter.
-* SM_PI_TIMEOUT: The maximum time (in milliseconds) that SnapManager should wait for the script to complete processing and terminate execution. You must provide a value for this parameter.
-* SM_PI_PARAMETER: One or more custom parameters necessary for your plug-in script to perform processing. Each parameter should be listed in a new output line and include the name of the parameter and a description. When the script completes processing, the parameter value will be provided to your script by an environment variable.
+* `SM_PI_NAME`: Script name. You must provide a value for this parameter.
+* `SM_PI_DESCRIPTION`: Description of the script's purpose. You must provide a value for this parameter.
+* `SM_PI_CONTEXT`: Context in which the script should run-for example, root or orasid. You must provide a value for this parameter.
+* `SM_PI_TIMEOUT`: The maximum time (in milliseconds) that SnapManager should wait for the script to complete processing and terminate execution. You must provide a value for this parameter.
+* `SM_PI_PARAMETER`: One or more custom parameters necessary for your plug-in script to perform processing. Each parameter should be listed in a new output line and include the name of the parameter and a description. When the script completes processing, the parameter value will be provided to your script by an environment variable.
 
 The following is the sample output of the Followup_activities script.
 
@@ -55,5 +56,5 @@ Command complete.
 a|
 execute
 a|
-The SnapManager server runs the plugin.sh -execute command to start your script to execute the script.
+The SnapManager server runs the `plugin.sh -execute` command to start your script to execute the script.
 |===

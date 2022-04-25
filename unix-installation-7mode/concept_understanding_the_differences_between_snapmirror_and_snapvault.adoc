@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-7mode/concept_understanding_the_differences_between_snapmirror_and_snapvault.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapMirror is disaster recovery technology, designed for failover from primary storage to secondary storage at a geographically remote site. SnapVault is disk-to-disk backup replication technology, designed for standards compliance and other governance-related purposes.'
+keywords: snapmirror, disaster, recovery, technology, design, failover, primary, storage, secondary, geographical, remote, site, snapvault, disk-to-disk, replication, governance-related
+summary: "SnapMirror is disaster recovery technology, designed for failover from primary storage to secondary storage at a geographically remote site. SnapVault is disk-to-disk backup replication technology, designed for standards compliance and other governance-related purposes."
 ---
 = Understanding the differences between SnapMirror and SnapVault
 :icons: font

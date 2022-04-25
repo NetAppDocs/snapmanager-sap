@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_task_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'You can create the pretask, post-task, and policy task scripts for backup, restore, and clone operations, write your script, and include the predefined environment variables in your parameters. You can either create a new script or modify one of the SnapManager sample scripts.'
+keywords: pretask, post-task, policy, task, script, backup, restore, clone, operation, environment, variable, parameter, snapmanager, sample, creating, create
+summary: You can create the pretask, post-task, and policy task scripts for backup, restore, and clone operations, write your script, and include the predefined environment variables in your parameters. You can either create a new script or modify one of the SnapManager sample scripts.
 ---
 = Creating task scripts
 :icons: font

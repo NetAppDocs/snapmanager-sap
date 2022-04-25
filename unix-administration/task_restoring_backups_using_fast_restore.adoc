@@ -1,30 +1,34 @@
 ---
-permalink: unix-administration/task_restoring_backups_using_fast_restore.html
+permalink: unix-administration/task_restore_backups_using_fast_restore.html
 sidebar: sidebar
-keywords: 
-summary: 'You can force SnapManager for SAP to use the volume-based SnapRestore process rather than other restore processes, if all mandatory fast restore eligibility conditions are met.'
+keywords: force, snapmanager, sap, volume-based, snaprestore, condition, restore, eligibility, restoring
+summary: "You can force SnapManager for SAP to use the volume-based SnapRestore process rather than other restore processes, if all mandatory fast restore eligibility conditions are met."
 ---
-= Restoring backups by using fast restore
+= Restore backups by using fast restore
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can force SnapManager for SAP to use the volume-based SnapRestore process rather than other restore processes, if all mandatory fast restore eligibility conditions are met.
 
-You can use the backup restore command with -fast: `backup restore -fast [require | override | fallback | off]`
+*About this task*
 
-You can use the -fast option only if you want to perform a complete restore of a full backup. The -fast option includes the following parameters:
+You can use the backup restore command with `-fast`:
 
-* require: Enables you to perform a volume restore, if all mandatory restore eligibility conditions are met and no overridable checks are found.
+`*backup restore -fast [require | override | fallback | off]*`
+
+You can use the `-fast` option only if you want to perform a complete restore of a full backup. The `-fast` option includes the following parameters:
+
+* `require`: Enables you to perform a volume restore, if all mandatory restore eligibility conditions are met and no overridable checks are found.
 +
-If you specify the -fast option, but do not specify any parameter for -fast, SnapManager uses the-require parameter as a default.
+If you specify the `-fast` option, but do not specify any parameter for `-fast`, SnapManager uses the `-require` parameter as a default.
 
-* override: Enables you to override non-mandatory eligibility checks and perform the volume-based fast restore.
-* fallback: Enables you to restore the database using any method that SnapManager determines.
+* `override`: Enables you to override non-mandatory eligibility checks and perform the volume-based fast restore.
+* `fallback`: Enables you to restore the database using any method that SnapManager determines.
 +
-If you do not specify -fast, SnapManager uses the -fallback parameter as the default.
+If you do not specify `-fast`, SnapManager uses the `-fallback` parameter as the default.
 
-* off: Enables you to avoid the time required to perform all the eligibility checks, to perform a file-based restore process rather than the fast restore process.
+* `off`: Enables you to avoid the time required to perform all the eligibility checks, to perform a file-based restore process rather than the fast restore process.
 
 If the backup does not pass the mandatory eligibility checks, the fast restore cannot complete successfully.
 
@@ -32,7 +36,13 @@ SnapManager performs volume-based fast restores in UNIX-based environments only;
 
 While performing VBSR on the data file backup, if the data files and the archive log files are present in the same volume and if the archive log files are not present in the active file system, the restore and recovery of the database succeeds. However, the future archive log Snapshots are deleted as a part of the VBSR resulting in a stale entry of the archive log backup in the repository.
 
-. Enter the following command:``smsap backup restore -profileprofile_name-labellabel-complete-fast require-verbose``
+.Steps
+
+. Enter the following command:
++
+`*smsap backup restore -profile _profile_name_ -label _label_ -complete-fast require-verbose*`
++
+*Example*
 +
 ----
 smsap backup restore -profile targetdb1_prof1
@@ -40,12 +50,6 @@ smsap backup restore -profile targetdb1_prof1
 ----
 
 . Review the fast restore eligibility checks.
-. If the eligibility check determines that no mandatory checks failed, if certain conditions can be overridden, and if you want to continue with the restore process, enter the following command: `backup restore -fast override`
-
-*Related information*
-
-xref:task_creating_pretask_post_task_and_policy_scripts.adoc[Creating pretask, post-task, and policy scripts]
-
-xref:concept_variables_available_in_custom_script_for_restore_operation.adoc[Variables available in the task scripts for the restore operation]
-
-xref:task_storing_the_task_scripts.adoc[Storing the task scripts]
+. If the eligibility check determines that no mandatory checks failed, if certain conditions can be overridden, and if you want to continue with the restore process, enter the following command:
++
+`*backup restore -fast override*`

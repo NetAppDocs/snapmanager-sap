@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_cloning_databases_and_using_custom_plugin_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager provides a method for using your custom scripts before and after a clone operation occurs. For example, you might have created a custom script that validates a clone database SID and ensures the SID is allowed by your naming policy. Using the SnapManager clone plug-in, you can include your custom scripts and have them run automatically before or after a SnapManager clone operation.'
+keywords: snapmanager, method, custom, script, clone, operation, sid, policy, naming, name, plug-in
+summary: SnapManager provides a method for using your custom scripts before and after a clone operation occurs. For example, you might have created a custom script that validates a clone database SID and ensures the SID is allowed by your naming policy. Using the SnapManager clone plug-in, you can include your custom scripts and have them run automatically before or after a SnapManager clone operation.
 ---
 = Cloning databases and using custom plug-in scripts
 :icons: font

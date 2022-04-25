@@ -1,28 +1,32 @@
 ---
-permalink: unix-administration/task_unmounting_backups.html
+permalink: unix-administration/task_unmount_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager automatically unmounts the backup to make it unavailable to the host server. SnapManager also allows you to unmount if you are using an external tool, such as Oracle Recovery Manager \(RMAN\), to access the files in the backup, and to change the state of the backup to remove access.'
+keywords: snapmanager, automatic, unmount, backup, unavailable, host, server, unmount, external, tool, oracle, recovery, manager, rman, file, backup, state, remove, access
+summary: "SnapManager automatically unmounts the backup to make it unavailable to the host server. SnapManager also allows you to unmount if you are using an external tool, such as Oracle Recovery Manager (RMAN), to access the files in the backup, and to change the state of the backup to remove access."
 ---
-= Unmounting backups
+= Unmount backups
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 SnapManager automatically unmounts the backup to make it unavailable to the host server. SnapManager also allows you to unmount if you are using an external tool, such as Oracle Recovery Manager (RMAN), to access the files in the backup, and to change the state of the backup to remove access.
 
+*About this task*
+
 If you are unmounting a database backup from a remote host, you must ensure that the Automatic Storage Management (ASM) credentials are same on both the hosts.
 
 You can optionally collect the dump files after a successful or failed unmount backup operation.
 
-The unmount operation might fail sometime with an error message if the mount point is busy, for example, --[ERROR] FLOW-11019: Failure in Disconnect: SD-10046: You cannot unmount the backup as the mount point is busy with the following mount paths and PID's: /opt/NetApp/smsap/mnt/-mnt-neuse_nfsvrdb_arch-20120427052319903_0 with PID 6598.
+The unmount operation might fail sometime with an error message if the mount point is busy, for example, `--[ERROR] FLOW-11019: Failure in Disconnect: SD-10046: You cannot unmount the backup as the mount point is busy with the following mount paths and PID's: /opt/NetApp/smsap/mnt/-mnt-neuse_nfsvrdb_arch-20120427052319903_0 with PID 6598.`
 
-You must identify the PID of the session that is resulting in the failure of the unmount operation. Stop the session by running the following command: `kill pid`
+You must identify the PID of the session that is resulting in the failure of the unmount operation. Stop the session by running the following command:
+
+`*kill _pid_*`
 
 You can then run the unmount operation successfully.
 
-. Enter the following command: `smsap backup unmount -profile profile_name {labellabel [data | -archivelogs] | -idid} [-quiet | -verbose]`
+.Step
 
-*Related information*
-
-xref:reference_the_smosmsapbackup_unmount_command.adoc[The smsap backup unmount command]
+. Enter the following command:
++
+`*smsap backup unmount -profile _profile_name_ {label _label_ [data | -archivelogs] | -id _id_} [-quiet | -verbose]*`

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_snapmanager_host.html
 sidebar: sidebar
-keywords: 
-summary: 'The SnapManager host is a Windows server, which also runs other NetApp products.'
+keywords: snapmanager, host, windows, server, netapp, product
+summary: "The SnapManager host is a Windows server, which also runs other NetApp products."
 ---
 = SnapManager host
 :icons: font

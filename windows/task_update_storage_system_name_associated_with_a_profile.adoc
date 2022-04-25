@@ -1,0 +1,65 @@
+---
+permalink: windows/task_update_storage_system_name_associated_with_a_profile.html
+sidebar: sidebar
+keywords: snapmanager, ability, update, host, name, ip, address, storage, system, associate, profile
+summary: "SnapManager 3.3 or later provides the ability to update the host name or IP address of a storage system associated with a profile."
+---
+= Update the storage system name associated with a profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager 3.3 or later provides the ability to update the host name or IP address of a storage system associated with a profile.
+
+== What you'll need
+
+You must ensure the following:
+
+* The profile has at least one backup.
++
+If the profile does not have any backup, then there is no necessity to update the storage system name for that profile.
+
+* No operation is running for the profile.
+
+== About this task
+
+You can update the storage system name or IP address by using the SnapManager command-line interface (CLI). While updating the storage system name, the metadata stored in the repository database alone is updated. After renaming the storage system name, you can perform all the SnapManager operations as earlier.
+
+NOTE: You cannot change the storage system name by using the SnapManager graphical user interface (GUI).
+
+You must ensure that Snapshot copies are available in the new storage system. SnapManager does not verify the existence of the Snapshot copies in the storage system.
+
+However, you must remember the following while performing rolling upgrade and rollback of the host after renaming the storage system name:
+
+* If you are performing rolling upgrade of the host after renaming the storage system name, you must update the profile with the new storage system name.
+* If you are rolling back the host after renaming the storage system, you must ensure that you change the storage system name back to the earlier storage system name so that you can use the profiles, backups, and clones of the earlier storage system for performing SnapManager operations.
+
+.Step
+
+. Enter the following command:
++
+`*smsap storage rename -profile _profile_ -oldname _old_storage_name_ -newname _new_storage_name_ [quiet | -verbose]*`
++
+[options="header"]
+|===
+| If you want to...| Then...
+a|
+Update the storage system name associated with a profile
+a|
+Specify the `-profile` option.
+a|
+Update the storage system name or IP address associated with a profile
+a|
+Specify the following options and variables:
+
+ ** `-oldnameold_storage_name` is the host name or IP address of the storage system.
+ ** `-newnamenew_storage_name` is the host name or IP address of the storage system.
+
++
+|===
+
+The following example shows the storage system name being updated:
+
+----
+smsap storage rename -profile mjullian -oldname lech -newname hudson -verbose
+----

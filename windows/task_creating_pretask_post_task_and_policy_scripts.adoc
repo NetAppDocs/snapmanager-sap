@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_creating_pretask_post_task_and_policy_scripts.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager enables you to create the scripts for the preprocessing activity, the post-processing activity, and policy tasks of the backup, restore, and clone operations. You must place the scripts in the correct installation directory to execute the preprocessing activity, post-processing activity, and policy tasks of the SnapManager operation.'
+keywords: snapmanager, enable, create, script, preprocess, activity, post-process, policy, task, backup, restore, clone, operation, installation, directory, pretask, post-task, creating
+summary: SnapManager enables you to create the scripts for the preprocessing activity, the post-processing activity, and policy tasks of the backup, restore, and clone operations. You must place the scripts in the correct installation directory to execute the preprocessing activity, post-processing activity, and policy tasks of the SnapManager operation.
 ---
 = Creating pretask, post-task, and policy scripts
 :icons: font
@@ -115,7 +115,7 @@ if /i "%1" == "-describe" goto :describe
 :check
 	set /a EXIT=0
 	goto :exit
-	
+
 :describe
 	echo SM_PI_NAME:%name%
 	echo SM_PI_DESCRIPTION:%description%
@@ -124,14 +124,14 @@ if /i "%1" == "-describe" goto :describe
 
 :execute
 	set /a EXIT=0
-	
+
 	rem SM_TARGET_SID must be set
 	if "%SM_TARGET_SID%" == "" (
 		set /a EXIT=4
 		echo SM_TARGET_SID not set
 		goto :exit
 	)
-	
+
 	rem exactly three alphanumeric characters, with starting with a letter
 	echo %SM_TARGET_SID% | findstr "\<[a-zA-Z][a-zA-Z0-9][a-zA-Z0-9]\>" >nul
 	if %ERRORLEVEL% == 1 (
@@ -139,7 +139,7 @@ if /i "%1" == "-describe" goto :describe
 		echo SID is defined as a 3 digit value starting with a letter. [%SM_TARGET_SID%] is not valid.
 		goto :exit
 	)
-	
+
 	rem not a SAP reserved SID
 	echo %INVALID_SIDS% | findstr /i \"%SM_TARGET_SID%\" >nul
 	if %ERRORLEVEL% == 0 (
@@ -147,7 +147,7 @@ if /i "%1" == "-describe" goto :describe
 		echo SID [%SM_TARGET_SID%] is reserved by SAP
 		goto :exit
 	)
-	
+
 	goto :exit
 
 

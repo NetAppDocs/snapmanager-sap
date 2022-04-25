@@ -1,18 +1,18 @@
 ---
-permalink: unix-administration/task_deleting_profiles.html
+permalink: unix-administration/task_delete_profiles.html
 sidebar: sidebar
-keywords: 
-summary: 'You can delete a profile anytime, as long as it does not contain successful or incomplete backups. You can delete profiles that contain freed or deleted backups.'
+keywords: delete, profile, successful, incomplete, deleting, backup
+summary: "You can delete a profile anytime, as long as it does not contain successful or incomplete backups. You can delete profiles that contain freed or deleted backups."
 ---
-= Deleting profiles
+= Delete profiles
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can delete a profile anytime, as long as it does not contain successful or incomplete backups. You can delete profiles that contain freed or deleted backups.
 
-. To delete a profile, enter this command:``smsap profile delete -profileprofile_name``
+.Step
 
-*Related information*
-
-xref:reference_the_smosmsapprofile_delete_command.adoc[The smsap profile delete command]
+. To delete a profile, enter this command:
++
+`*smsap profile delete -profile _profile_name_*`

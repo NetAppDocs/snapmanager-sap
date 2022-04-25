@@ -1,30 +1,32 @@
 ---
-permalink: unix-administration/task_mounting_backups.html
+permalink: unix-administration/task_mount_backups.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager automatically handles the mounting of a backup to make it available to the host. You can also mount backups in scenarios where you use an external tool, such as Oracle Recovery Manager \(RMAN\), to access the files in the backup.'
+keywords: snapmanager, automatic, handle, mount, backup, available, host, scenario, external, tool, oracle, recovery, manager, rman, access, file
+summary: "SnapManager automatically handles the mounting of a backup to make it available to the host. You can also mount backups in scenarios where you use an external tool, such as Oracle Recovery Manager (RMAN), to access the files in the backup."
 ---
-= Mounting backups
+= Mount backups
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 SnapManager automatically handles the mounting of a backup to make it available to the host. You can also mount backups in scenarios where you use an external tool, such as Oracle Recovery Manager (RMAN), to access the files in the backup.
 
-The smsap backup mount command displays a list of paths where the Snapshot copies consisting of the backup have been mounted.
+*About this task*
 
-You can use the -from-secondary option to mount the backup from secondary storage. If you do not use this option, SnapManager mounts the backup from primary storage.
+The `smsap backup mount` command displays a list of paths where the Snapshot copies consisting of the backup have been mounted.
 
-You must specify the -copy-id option whenever you specify the -from-secondary option. If there is more than one backup on the secondary storage system, the -copy-id option is used to specify which backup copy on the secondary storage should be used to mount the backup.6
+You can use the `-from-secondary` option to mount the backup from secondary storage. If you do not use this option, SnapManager mounts the backup from primary storage.
 
-NOTE: If you are using Data ONTAP operating in 7-Mode, you must specify a valid value for the -copy-id option. However, if you are using clustered Data ONTAP, the -copy-id option is not required.
+You must specify the `-copy-id` option whenever you specify the `-from-secondary` option. If there is more than one backup on the secondary storage system, the `-copy-id` option is used to specify which backup copy on the secondary storage should be used to mount the backup.6
+
+NOTE: If you are using Data ONTAP operating in 7-Mode, you must specify a valid value for the `-copy-id` option. However, if you are using clustered Data ONTAP, the `-copy-id` option is not required.
 
 If you are mounting a database backup to a remote host, you must ensure that the Automatic Storage Management (ASM) credentials are the same on both the hosts.
 
 NOTE: You can optionally collect the dump files after a successful or failed backup mount operation.
 
-. To Mount a backup enter the following command: `smsap backup mount -profile profile_namelabel [data | -archivelogs] | -idid} [-host-host] [-from-secondary [-copy-id id]] [-dump] [-quiet | -verbose]`
+.Step
 
-*Related information*
-
-xref:reference_the_smosmsapbackup_mount_command.adoc[The smsap backup mount command]
+. To Mount a backup enter the following command:
++
+`*smsap backup mount -profile _profile_name label_ [data | -archivelogs] | -id _id_} [-host _-host_] [-from-secondary [-copy-id _id_]] [-dump] [-quiet | -verbose]*`

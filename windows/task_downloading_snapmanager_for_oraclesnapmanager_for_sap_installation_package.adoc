@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_downloading_snapmanager_for_oraclesnapmanager_for_sap_installation_package.html
 sidebar: sidebar
-keywords: 
-summary: 'You can download the SnapManager for SAP installation package from the NetApp Support Site.'
+keywords: download, snapmanager, sap, installation, package, netapp, support, site
+summary: You can download the SnapManager for SAP installation package from the NetApp Support Site.
 ---
 = Downloading the SnapManager for SAP installation package
 :icons: font

@@ -1,15 +1,15 @@
 ---
 permalink: windows/concept_what_user_authentication_is.html
 sidebar: sidebar
-keywords: 
-summary: 'SnapManager authenticates the user by using an operating system \(OS\) login on the host where the SnapManager server is running. You can enable user authentication either through password prompts on operations or by using the smo credential You can enable user authentication either through password prompts on operations or by using the smsap credential set.'
+keywords: snapmanager, authenticate, user, operate, system, os, login, host, server, enable, password, smo, credential, smsap, set
+summary: "SnapManager authenticates the user by using an operating system (OS) login on the host where the SnapManager server is running. You can enable user authentication either through password prompts on operations or by using the smo credential You can enable user authentication either through password prompts on operations or by using the smsap credential set."
 ---
 = What user authentication is
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-SnapManager authenticates the user by using an operating system (OS) login on the host where the SnapManager server is running. You can enable user authentication either through password prompts on operations or by using the smo credential You can enable user authentication either through password prompts on operations or by using the smsap credential set.
+SnapManager authenticates the user by using an operating system (OS) login on the host where the SnapManager server is running. You can enable user authentication either through password prompts on operations or by using the smo credential You can enable user authentication either through password prompts on operations or by using the `smsap credential set`.
 
 User authentication requirements depend on where the operation is performed.
 
@@ -19,17 +19,17 @@ You are not prompted for a password because you are already logged in to the hos
 
 * If the SnapManager client and the SnapManager server are on different hosts, SnapManager needs to authenticate you with both OS credentials.
 +
-SnapManager prompts you for passwords for any operation, if you have not saved your OS credentials in your SnapManager user credential cache. If you enter the smsap credential set -host command, you save the OS credentials in your SnapManager credential cache file and so SnapManager does not prompt for the password for any operation.
+SnapManager prompts you for passwords for any operation, if you have not saved your OS credentials in your SnapManager user credential cache. If you enter the `smsap credential set -host` command, you save the OS credentials in your SnapManager credential cache file and so SnapManager does not prompt for the password for any operation.
 
 If you are authenticated with the SnapManager server, you are considered the effective user. The effective user for any operation must be a valid user account on the host on which the operation is executed. For example, if you execute a clone operation, you should be able to log in to the destination host for the clone.
 
-NOTE: SnapManager for SAP might fail in authorizing users created in Central Active Directory Services, such as LDAP and ADS. To ensure the authentication does not fail, you must set configurable auth.disableServerAuthorization to true.
+NOTE: SnapManager for SAP might fail in authorizing users created in Central Active Directory Services, such as LDAP and ADS. To ensure the authentication does not fail, you must set configurable `auth.disableServerAuthorization` to *true*.
 
 As an effective user you can manage credentials in the following ways:
 
 * Optionally, you can configure SnapManager to store user credentials in the SnapManager user credentials file.
 +
-By default, SnapManager does not store host credentials. You might want to change this, for example, if you have custom scripts that require access on a remote host. The remote clone operation is an example of a SnapManager operation that needs the login credentials of a user for a remote host. To have SnapManager remember user host login credentials in the SnapManager user credentials cache, set the host.credentials.persist property to true in the smsap.config file.
+By default, SnapManager does not store host credentials. You might want to change this, for example, if you have custom scripts that require access on a remote host. The remote clone operation is an example of a SnapManager operation that needs the login credentials of a user for a remote host. To have SnapManager remember user host login credentials in the SnapManager user credentials cache, set the `host.credentials.persist` property to *true* in the `smsap.config` file.
 
 * You can authorize user access to the repository.
 * You can authorize user access to profiles.

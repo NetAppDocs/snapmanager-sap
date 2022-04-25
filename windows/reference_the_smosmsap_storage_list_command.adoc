@@ -1,27 +1,27 @@
 ---
 permalink: windows/reference_the_smosmsap_storage_list_command.html
 sidebar: sidebar
-keywords: 
-summary: 'You can run the storage list command to display the list of storage systems associated with a particular profile.'
+keywords: run, storage, list, command, display, system, associate, profile, smsap
+summary: "You can run the storage list command to display the list of storage systems associated with a particular profile."
 ---
 = The smsap storage list command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can run the storage list command to display the list of storage systems associated with a particular profile.
+You can run the `storage list` command to display the list of storage systems associated with a particular profile.
 
 == Syntax
 
 ----
 
-        smsap storage list 
+        smsap storage list
 -profile profile
 ----
 
 == Parameters
 
-* *-profile profile*
+* *`-profile _profile_`*
 +
 Specifies the name of the profile. The name can be up to 30 characters long and must be unique within the host.
 

@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_viewing_a_list_of_snapmanager_history_operation_as_a_report.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view the history of a specific or all SnapManager operations as a report based on the retention settings.'
+keywords: view, history, snapmanager, operation, report, base, retention, setting, list
+summary: You can view the history of a specific or all SnapManager operations as a report based on the retention settings.
 ---
 = Viewing a list of SnapManager operation history
 :icons: font

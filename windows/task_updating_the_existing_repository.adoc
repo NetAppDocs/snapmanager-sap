@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_updating_the_existing_repository.html
 sidebar: sidebar
-keywords: SnapManager
-summary: 'You do need not to update the existing repository if you are upgrading from SnapManager 3.3.x to SnapManager 3.4 or later, but for all other upgrade paths you must update the existing repository so that you can access it after the upgrade.'
+keywords: update, exist, repository, upgrading, upgrade, snapmanager, path, updating
+summary: You do need not to update the existing repository if you are upgrading from SnapManager 3.3.x to SnapManager 3.4 or later, but for all other upgrade paths you must update the existing repository so that you can access it after the upgrade.
 ---
 = Updating the existing repository
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_what_cloning_is.html
 sidebar: sidebar
-keywords: 
-summary: 'You can clone a database to create an exact replica of the original database. You can create the clone from a full backup or from the current state of the database.'
+keywords: clone, database, create, replica, original, full, backup
+summary: "You can clone a database to create an exact replica of the original database. You can create the clone from a full backup or from the current state of the database."
 ---
 = What Cloning is
 :icons: font
@@ -13,6 +13,7 @@ You can clone a database to create an exact replica of the original database. Yo
 
 Some of the advantages of creating a clone by using SnapManager are as follows:
 
+[options="header"]
 |===
 | Advantages| Details
 a|
@@ -35,8 +36,8 @@ You can clone a database to any host by using SnapManager commands.
 |===
 You must ensure that the following prerequisites are met before a database can be cloned:
 
-* Delete the spfile<SID>.ora file from $ORACLE_HOME\database.
-* Delete the init<SID>.ora file from $ORACLE_HOME\database.
+* Delete the `spfile<SID>.ora` file from `$ORACLE_HOME\database`.
+* Delete the `init<SID>.ora` file from `$ORACLE_HOME\database`.
 * Delete Oracle dump destinations that are specified in the clone specification file.
 * Delete the Oracle control files that are specified in the clone specification file.
 * Delete the Oracle redo log files that are specified in the clone specification file.
@@ -45,10 +46,10 @@ You must give the clone a new system identifier. You cannot simultaneously run t
 
 When you enter a label, you should not include spaces or special characters.
 
-As part of the cloning process, SnapManager creates the necessary Oracle files and parameters for the cloned database. An example of a necessary Oracle file is init<SID>.ora.
+As part of the cloning process, SnapManager creates the necessary Oracle files and parameters for the cloned database. An example of a necessary Oracle file is `init<SID>.ora`.
 
-When you clone a database, SnapManager creates a new init<SID>.ora file for the database in the $ORACLE_HOME\database directory.
+When you clone a database, SnapManager creates a new `init<SID>.ora` file for the database in the `$ORACLE_HOME\database` directory.
 
 You can clone a database backup to the host in which the database resides or to an alternate host.
 
-If the database you cloned was using a spfile, SnapManager creates an spfile for the clone. It places this file in the $ORACLE_HOME\database directory and creates the directory structure for the diagnostic files. The file name is spfile <SID>.ora.
+If the database you cloned was using a `spfile`, SnapManager creates an `spfile` for the clone. It places this file in the `$ORACLE_HOME\database` directory and creates the directory structure for the diagnostic files. The file name is `spfile <SID>.ora`.

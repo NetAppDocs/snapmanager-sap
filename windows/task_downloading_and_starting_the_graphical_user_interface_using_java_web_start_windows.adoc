@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_downloading_and_starting_the_graphical_user_interface_using_java_web_start_windows.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use Java Web Start if SnapManager is not installed on the host. Java Web Start downloads SnapManager components and starts the graphical user interface \(GUI\). The supported JRE versions are 1.5, 1.6, and 1.7.'
+keywords: java, web, start, snapmanager, install, host, download, graphical, user, interface, gui, jre
+summary: You can use Java Web Start if SnapManager is not installed on the host. Java Web Start downloads SnapManager components and starts the graphical user interface \(GUI\). The supported JRE versions are 1.5, 1.6, and 1.7.
 ---
 = Downloading and starting the graphical user interface using Java Web Start
 :icons: font

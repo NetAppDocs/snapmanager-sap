@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_disabling_email_notification_for_multiple_profiles.html
 sidebar: sidebar
-keywords: 
-summary: 'After you enable the summary email notification for multiple profiles, you can disable them to no longer receive email alerts.'
+keywords: enable, summary, email, notification, multiple, profile, disable, alert, disabling
+summary: After you enable the summary email notification for multiple profiles, you can disable them to no longer receive email alerts.
 ---
 = Disabling email notification for multiple profiles
 :icons: font

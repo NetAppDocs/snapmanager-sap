@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_requirements_for_running_snapmanager.html
 sidebar: sidebar
-keywords: 
-summary: 'Before deploying SnapManager in your environment, you should know the different requirements.'
+keywords: deploy, snapmanager, environment, requirement, run
+summary: "Before deploying SnapManager in your environment, you should know the different requirements."
 ---
 = Requirements for running SnapManager
 :icons: font
@@ -24,4 +24,4 @@ NOTE: Contact your sales representative if you need a SnapManager configuration 
 
 *Related information*
 
-http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix: support.netapp.com/NOW/products/interoperability]
+http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix: support.netapp.com/NOW/products/interoperability^]

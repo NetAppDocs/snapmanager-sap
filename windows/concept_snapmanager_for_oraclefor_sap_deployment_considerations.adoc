@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_snapmanager_for_oraclefor_sap_deployment_considerations.html
 sidebar: sidebar
-keywords: 
-summary: 'Before deploying SnapManager in your environment, you should know the other applications and technologies required for different operations.'
+keywords: deploy, snapmanager, environment, application, technology, technologies, operation, sap, deployment, consideration
+summary: "Before deploying SnapManager in your environment, you should know the other applications and technologies required for different operations."
 ---
 = SnapManager for SAP deployment considerations
 :icons: font
@@ -13,6 +13,7 @@ Before deploying SnapManager in your environment, you should know the other appl
 
 The following table lists the different applications and technologies:
 
+[options="header"]
 |===
 | Applications and technologies| Details
 a|
@@ -41,4 +42,4 @@ To use BR*Tools commands, the appropriate version of SAP BR*Tools must be instal
 
 *Related information*
 
-http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices: media.netapp.com/documents/tr-3823.pdf]
+http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices: media.netapp.com/documents/tr-3823.pdf^]

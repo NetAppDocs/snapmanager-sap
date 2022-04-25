@@ -1,15 +1,17 @@
 ---
-permalink: unix-administration/task_viewing_operation_details.html
+permalink: unix-administration/task_view_operation_details.html
 sidebar: sidebar
-keywords: 
-summary: 'You can view detailed information about a particular profile to verify the success or failure of an operation. It can also help you determine the storage resources in use for a particular operation.'
+keywords: view, detail, information, particular, profile, success, failure, operation, storage, resource, operation
+summary: "You can view detailed information about a particular profile to verify the success or failure of an operation. It can also help you determine the storage resources in use for a particular operation."
 ---
-= Viewing operation details
+= View operation details
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You can view detailed information about a particular profile to verify the success or failure of an operation. It can also help you determine the storage resources in use for a particular operation.
+
+*About this task*
 
 You can view the following details about a particular operation:
 
@@ -21,8 +23,8 @@ You can view the following details about a particular operation:
 * Repository information
 * Storage resources in use
 
-. To view the detailed information for a specific operation ID, enter the following command: `smsap operation show -profileprofile_name [-labellabel | -idid] [-quiet | -verbose]`
+.Step
 
-*Related information*
-
-xref:reference_the_smosmsap_operation_show_command.adoc[The smsap operation show command]
+. To view the detailed information for a specific operation ID, enter the following command:
++
+`*smsap operation show -profile _profile_name_ [-label _label_ | -id _id_] [-quiet | -verbose]*`

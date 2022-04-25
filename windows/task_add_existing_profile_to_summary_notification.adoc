@@ -1,0 +1,18 @@
+---
+permalink: windows/task_add_existing_profile_to_summary_notification.html
+sidebar: sidebar
+keywords: snapmanager, enable, add, exist, profile, summary, email, notification, updating, update
+summary: "SnapManager enables you to add an existing profile to a summary email notification while updating that profile."
+---
+= Add an existing profile to summary email notifications
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to add an existing profile to a summary email notification while updating that profile.
+
+.Step
+
+. Enter the following command:
++
+`*smsap profile update -profile _profile_name_ [-profile-password _profile_password_] -repository -dbname _repo_service_name_ -host _repo_host_ -port _repo_port_ -login -username _repo_username_ -database -dbname _db_dbname_ -host _db_host_ [-sid _db_sid_] [-login -username _db_username_ -password _db_password_ -port _db_port_] [-rman {-controlfile | {-login -username _rman_username_ -password _rman_password_ -tnsname _rman_tnsname_} } ] [-retain [-hourly -count _n_] [-duration _m_]] [-daily -count _n_] [-duration _m_]] [-weekly -count _n_] [-duration _m_]] [-monthly -count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][ [ ]] [-summary-notification]*`
