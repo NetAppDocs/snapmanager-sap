@@ -1,0 +1,34 @@
+---
+permalink: windows/task_view_detailed_clone_information.html
+sidebar: sidebar
+keywords: view, detail, information, specific, clone, show, command
+summary: "You can view detailed information about a specific clone by using the clone show command."
+---
+= View detailed clone information
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can view detailed information about a specific clone by using the `clone show` command.
+
+== About this task
+
+The `clone show` command displays the following information:
+
+* Clone system identifier and clone ID
+* Clone operation status
+* Clone create start and end date or time
+* Clone label
+* Clone comment
+* Backup label and ID
+* Source database
+* Backup start and end time
+* Database name, tablespaces, and data files
+* Host name and file systems containing data files
+* Storage system volumes and Snapshot copies backing the clone
+
+.Step
+
+. Enter the following command:
++
+`*smsap clone show -profile _profile_name_ [-label _label_ | -id _guid_]*`

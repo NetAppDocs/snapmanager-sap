@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_restore_preview_plans.html
 sidebar: sidebar
-keywords: snapmanager, restore, plan, operation, preview, review, analyze, regarding, regard, method
-summary: SnapManager provides restore plans before and after a restore operation is completed. The restore plans are used to preview, review, and analyze regarding different restore methods.
+keywords: snapmanager, restore, plan, operation, preview, review, analyze, regard, method
+summary: "SnapManager provides restore plans before and after a restore operation is completed. The restore plans are used to preview, review, and analyze regarding different restore methods."
 ---
 = What restore preview plans are
 :icons: font

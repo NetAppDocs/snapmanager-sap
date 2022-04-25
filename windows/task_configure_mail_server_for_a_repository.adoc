@@ -1,0 +1,57 @@
+---
+permalink: windows/task_configure_mail_server_for_a_repository.html
+sidebar: sidebar
+keywords: snapmanager, enable, mail, server, detail, email, alert, configure, repository
+summary: "SnapManager enables you to specify the mail server details from which the email alerts are sent."
+---
+= Configure a mail server for a repository
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to specify the mail server details from which the email alerts are sent.
+
+== About this task
+
+SnapManager enables you to specify the sender's email server host name or IP address, and the email server port number for a repository database name that requires email notification. You can configure the mail server port number in a range from 0 through 65535; the default value is 25. If you require authentication for the email address, you can specify the user name and password.
+
+You must specify name or IP address of the host server that handles the email notification.
+
+.Step
+
+. To configure the mail server to send email alerts, enter the following command:
++
+`*smsap notification set -sender-email _email_address_ -mailhost _mailhost_ -mailport _mailport_ [-authentication -username _username_ -password _password_] -repository -port _repo_port_ -dbname _repo_service_name_ -host _repo_host_ -login -username _repo_username_*`
++
+Other options for this command are as follows:
++
+[`-force`]
++
+[`quiet` | `-verbose`]
++
+[options="header"]
+|===
+| To do the following...| Then...
+a|
+*To specify the sender's email address.*
+a|
+Specify the `-sender-email` option. From SnapManager 3.2 for SAP, you can include hyphen (-) while specifying the domain name of the email address. For example, you can specify the sender email address as -`+sender-emailuser@org-corp.com+`.
+a|
+*To specify the sender's email server host name or IP address.*
+a|
+Specify the `-mailhost` option.
+a|
+*To specify the email server port number for a repository database name that requires email notification. You can configure the mail server port number in a range from zero through 65535; the default value is 25.*
+a|
+Specify the `-mailport` option.
+a|
+*Specify the user name and password if you require authentication for the email address.*
+a|
+Specify `-authentication` option followed by the user name and password.
+|===
+
+The following example configures the mail server.
+
+----
+smsap notification set -sender-email admin1@org.com -mailhost hostname.org.com -mailport 25 authentication -username admin1 -password admin1 -repository -port 1521 -dbname SMSAPREPO -host hotspur -login -username grabal21 -verbose
+----

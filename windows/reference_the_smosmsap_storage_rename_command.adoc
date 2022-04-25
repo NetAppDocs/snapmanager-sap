@@ -2,7 +2,7 @@
 permalink: windows/reference_the_smosmsap_storage_rename_command.html
 sidebar: sidebar
 keywords: command, update, name, ip, address, storage, system, smsap, rename
-summary: This command updates the name or IP address of the storage system.
+summary: "This command updates the name or IP address of the storage system."
 ---
 = The smsap storage rename command
 :icons: font
@@ -24,23 +24,23 @@ This command updates the name or IP address of the storage system.
 
 == Parameters
 
-* *-profile profile*
+* *`-profile _profile_`*
 +
 Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
 
-* *-oldname old_storage_name*
+* *`-oldname _old_storage_name_`*
 +
-Specifies the IP address or name of the storage system before the storage system is renamed. You must enter the IP address or name of the storage system that is displayed when you run the smsap storage list command.
+Specifies the IP address or name of the storage system before the storage system is renamed. You must enter the IP address or name of the storage system that is displayed when you run the smsap `storage list` command.
 
-* *-newname new_storage_name*
+* *`-newname _new_storage_name_`*
 +
 Specifies the IP address or name of the storage system after the storage system is renamed.
 
-* *-quiet*
+* *`-quiet`*
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Displays error, warning, and informational messages in the console.
 

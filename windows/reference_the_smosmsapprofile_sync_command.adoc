@@ -1,8 +1,8 @@
 ---
 permalink: windows/reference_the_smosmsapprofile_sync_command.html
 sidebar: sidebar
-keywords: command, profile-to-repository, mapping, repository, file, home, directory, local, host, smsap
-summary: This command loads the profile-to-repository mappings for that repository to a file in your home directory on the local host.
+keywords: command, profile-to-repository, map, repository, file, home, directory, local, host, smsap
+summary: "This command loads the profile-to-repository mappings for that repository to a file in your home directory on the local host."
 ---
 = The smsap profile sync command
 :icons: font
@@ -27,35 +27,35 @@ This command loads the profile-to-repository mappings for that repository to a f
 
 == Parameters
 
-* *-repository*
+* *`-repository`*
 +
-The options that follow -repository specify the details of the database for the repository.
+The options that follow `-repository` specify the details of the database for the repository.
 
-* *-dbname repo_service_name*
+* *`-dbname _repo_service_name_`*
 +
 Specifies the repository database for the profile to synchronize.
 
-* *-host*
+* *`-host`*
 +
 Specifies the database host.
 
-* *-port*
+* *`-port`*
 +
 Specifies the port for the host.
 
-* *-login*
+* *`-login`*
 +
 Specifies the log in process for the host user.
 
-* *-username*
+* *`-username`*
 +
 Specifies the username for the host.
 
-* *-quiet*
+* *`-quiet`*
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Displays error, warning, and informational messages on the console.
 

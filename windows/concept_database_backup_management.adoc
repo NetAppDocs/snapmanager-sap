@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_database_backup_management.html
 sidebar: sidebar
-keywords: snapmanager, enable, back, up, data, local, storage, resource, post-processing, script, database
-summary: SnapManager enables the backing up of data on local storage resources by using post-processing scripts.
+keywords: snapmanager, enable, back up, data, local, storage, resource, post-process, script, database
+summary: "SnapManager enables the backing up of data on local storage resources by using post-processing scripts."
 ---
 = Backing up databases
 :icons: font

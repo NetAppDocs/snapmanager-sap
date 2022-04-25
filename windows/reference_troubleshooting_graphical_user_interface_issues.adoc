@@ -2,7 +2,7 @@
 permalink: windows/reference_troubleshooting_graphical_user_interface_issues.html
 sidebar: sidebar
 keywords: information, graphical, user, interface, gui, resolve, troubleshoot, issue
-summary: You can find information about some common known graphical user interface \(GUI\) issues that might help you resolve them.
+summary: "You can find information about some common known graphical user interface (GUI) issues that might help you resolve them."
 ---
 = Troubleshooting graphical user interface issues
 :icons: font
@@ -15,7 +15,7 @@ You can find information about some common known graphical user interface (GUI) 
 |===
 | Issue| Explanation| Workaround
 a|
-While accessing the SnapManager GUI to perform an operation, the following error message might be displayed: SMSAP-20111 : Authentication failed for user on host.
+While accessing the SnapManager GUI to perform an operation, the following error message might be displayed: `SMSAP-20111 : Authentication failed for user on host`.
 a|
 This issue occurs if the password of the user is changed in the host on which the SnapManager server is running.After the password is changed, the credential cache that is created for the user who launched the GUI becomes invalid. SnapManager GUI still uses the credentials in the cache to authenticate and thus the authentication fails.
 
@@ -23,9 +23,9 @@ a|
 You must perform one of following tasks:
 
 * Delete the credentials of the user whose password was changed and then add the new credentials in the cache by running the following commands:
- .. smsap credential delete
- .. smsap credential set
-* Clear the entire cache by running the smsap credential clear command. Re-open the GUI and set the credentials, if prompted.
+ .. `smsap credential delete`
+ .. `smsap credential set`
+* Clear the entire cache by running the `smsap credential clear` command. Re-open the GUI and set the credentials, if prompted.
 
 a|
 Security warning is displayed while using Java Web Start to access SnapManager GUI.
@@ -65,7 +65,7 @@ NOTE: You only need to authenticate the profile once as long as the credentials 
 a|
 The GUI installation on Windows succeeds, but with errors.
 a|
-The user account used to install the GUI does not have enough permissions to set up the icons and shortcuts for all the users. The user account does not have permissions to modify the C:\Documents and Settings\All Users directory.
+The user account used to install the GUI does not have enough permissions to set up the icons and shortcuts for all the users. The user account does not have permissions to modify the `C:\Documents and Settings\All Users` directory.
 
 a|
 
@@ -76,13 +76,13 @@ In Choose Icon Availability, clear the *Make these shortcuts available to all us
 * Log in using a user account that is not restricted and reinstall the GUI.
 
 a|
-When you open the first repository in the GUI, an error message similar to the following is displayed: The Profile name XXXX clashes with previously loaded repository.
+When you open the first repository in the GUI, an error message similar to the following is displayed: `The Profile name XXXX clashes with previously loaded repository`.
 a|
 Identically named profiles cannot exist in a repository. Also, you can open only one repository at a time.
 a|
-Reference the conflicting profiles from two different operating system (OS) users or rename the profile by issuing an SQL statement for the repository: `UPDATE SMSAP_33_PROFILE SET NAME = 'NEW_NAME' WHERE NAME = 'OLD_NAME'`
+Reference the conflicting profiles from two different operating system (OS) users or rename the profile by issuing an SQL statement for the repository: `*UPDATE SMSAP_33_PROFILE SET NAME = 'NEW_NAME' WHERE NAME = 'OLD_NAME'*`
 a|
-An error message similar to the following is displayed: SMSAP-01092: Unable to initialize repository repo1@ does not exist:repo1SMSAP-11006: Cannot resolve host does not exist
+An error message similar to the following is displayed: `SMSAP-01092: Unable to initialize repository repo1@ does not exist:repo1SMSAP-11006: Cannot resolve host does not exist`
 a|
 The repository is inaccessible, perhaps because it no longer exists. The GUI initializes the list of repositories from the credentials file.
 a|

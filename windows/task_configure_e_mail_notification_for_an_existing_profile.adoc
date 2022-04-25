@@ -1,0 +1,29 @@
+---
+permalink: windows/task_configure_e_mail_notification_for_an_existing_profile.html
+sidebar: sidebar
+keywords: update, profile, configure, receive, email, notification, completion, database, operation, exist
+summary: "When you are updating an profile, you can configure to receive an email notification on completion of the database operation."
+---
+= Configure email notification for an existing profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you are updating an profile, you can configure to receive an email notification on completion of the database operation.
+
+== What you'll need
+
+* You must configure the email address from which the alerts are sent.
+* You must enter a single email address or multiple email addresses to which alerts will be sent.
++
+You can use a comma-separated list for multiple addresses. You must ensure that there is no space between the comma and the next email address. Optionally, you can add a subject to the email as well.
++
+NOTE: You must ensure that you enter the set of multiple email addresses within double quotation marks.
+
+.Step
+
+. Enter the following command:
++
+`*smsap profile update -profile _profile_ [-profile-password _profile_password_][-database -dbname _db_dbname_ -host _db_host_ [-sid _db_sid_] [-login -username _db_username_ -password _db_password_ -port _db_port_]] [{-rman{-controlfile | {-login  -username _rman_username_ -password  _rman_password_ -tnsname  _rman_tnsname_}}} | -remove-rman] [-retain [-hourly [-count _n_] [-duration _m_]] [-daily [-count _n_] [-duration _m_]] [-weekly [-count _n_] [-duration _m_]] [-monthly [-count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][[ [ ]]| [[]] [-notification [-success -email _email_address1_,_email_address2_ -subject _subject_pattern_] [-failure -email _email_address1_,_email_address2_ -subject _subject_pattern_]]*`
++
+You can use the `success` option to receive a notification only for successful database operations and the `failure` option to receive a notification only for failed database operations.

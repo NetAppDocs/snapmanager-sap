@@ -2,7 +2,7 @@
 permalink: windows/concept_supported_general_configurations.html
 sidebar: sidebar
 keywords: install, snapmanager, general, configuration, requirement, support
-summary: Before installing SnapManager, you must know the general configuration requirements.
+summary: "Before installing SnapManager, you must know the general configuration requirements."
 ---
 = Supported general configurations
 :icons: font

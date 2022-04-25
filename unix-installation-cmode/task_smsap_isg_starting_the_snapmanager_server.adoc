@@ -1,22 +1,28 @@
 ---
-permalink: unix-installation-cmode/task_smsap_isg_starting_the_snapmanager_server.html
+permalink: unix-installation-cmode/task_smsap_isg_start_the_snapmanager_server.html
 sidebar: sidebar
 keywords: start, snapmanager, server, target, database, host
-summary: You must start the SnapManager server from the target database host.
+summary: "You must start the SnapManager server from the target database host."
 ---
-= Starting the SnapManager server
+= Start the SnapManager server
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You must start the SnapManager server from the target database host.
 
-. Log in to the target database host and start the SnapManager server: `smsap_server start`
+.Step
+
+. Log in to the target database host and start the SnapManager server:
 +
-The following message is displayed: SnapManager Server started on secure port port_number with PID PID_number.
+`*smsap_server start*`
++
+The following message is displayed: `SnapManager Server started on secure port port_number with PID PID_number.`
 +
 NOTE: The default port is 27214.
 
-You can verify that SnapManager is running correctly: `smsap_server verify`
+You can verify that SnapManager is running correctly:
 
-The following message is displayed: Operation Id operation_ID_number succeeded.
+`*smsap_server verify*`
+
+The following message is displayed: `Operation Id _operation_ID_number_ succeeded.`

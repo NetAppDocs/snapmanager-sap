@@ -2,7 +2,7 @@
 permalink: windows/reference_the_smosmsap_history_list_command.html
 sidebar: sidebar
 keywords: command, enable, view, list, history, detail, snapmanager, operation, smsap
-summary: This command enables you to view a list of history details of the SnapManager operation.
+summary: "This command enables you to view a list of history details of the SnapManager operation."
 ---
 = The smsap history list command
 :icons: font
@@ -30,43 +30,43 @@ This command enables you to view a list of history details of the SnapManager op
 
 == Parameters
 
-* *-profile profile*
+* *`-profile _profile_`*
 +
 Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
 
-* *-repository*
+* *`-repository`*
 +
 The options that follow -repository specify the details of the database that stores the profile.
 
-* *-dbname repo_dbname*
+* *`-dbname _repo_dbname_`*
 +
 Specifies the name of the database that stores the profile. Use either the global name or the SID.
 
-* *-host repo_host*
+* *`-host _repo_host_`*
 +
 Specifies the name or IP address of the host computer the repository database runs on.
 
-* *-login*
+* *`-login`*
 +
 Starts the repository login details.
 
-* *-username repo_username*
+* *`-username _repo_username_`*
 +
 Specifies the user name needed to access the database that stores the repository.
 
-* *-port repo_port*
+* *`-port _repo_port_`*
 +
 Specifies the TCP port number used to access the database that stores the repository.
 
-* *-operation {-operationsoperation_name [operation_name1, operation_name2] | -all*
+* *`-operation {-operationsoperation_name [operation_name1, operation_name2] | -all`*
 +
 Specifies the SnapManager operation for which you configure the history.
 
-* *-quiet*
+* *`-quiet`*
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Displays error, warning, and informational messages on the console.
 

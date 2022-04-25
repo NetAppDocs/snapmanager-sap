@@ -2,7 +2,7 @@
 permalink: windows/reference_sample_post_scripts.html
 sidebar: sidebar
 keywords: refer, sample, script, create, customize, environment, perform, mirror, vault, default, install, directory, post-script
-summary: You can refer the sample scripts and create customized scripts based on your environment to perform mirroring and vaulting. The sample scripts are available at default_install_directory\\plugins\\backup\\create\\post.
+summary: "You can refer the sample scripts and create customized scripts based on your environment to perform mirroring and vaulting. The sample scripts are available at default_install_directory\\plugins\\backup\\create\\post."
 ---
 = Sample post-scripts
 :icons: font

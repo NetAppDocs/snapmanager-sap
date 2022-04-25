@@ -2,7 +2,7 @@
 permalink: windows/concept_snapmanager_for_oraclefor_sap_command_reference.html
 sidebar: sidebar
 keywords: snapmanager, command, reference, valid, syntax, parameter, argument, example, sap
-summary: The SnapManager command reference includes the valid usage syntax, options, parameters, and arguments you should supply with the commands, along with examples.
+summary: "The SnapManager command reference includes the valid usage syntax, options, parameters, and arguments you should supply with the commands, along with examples."
 ---
 = SnapManager for SAP command reference
 :icons: font
@@ -15,7 +15,7 @@ The following issues apply to command usage:
 
 * Commands are case-sensitive.
 * SnapManager accepts up to 200 characters and labels up to 80 characters.
-* If the shell on your host limits the number of characters that can appear on a command line, you can use the cmdfile command.
+* If the shell on your host limits the number of characters that can appear on a command line, you can use the `cmdfile` command.
 * Do not use spaces in profile names or label names.
 * In the clone specification, do not use spaces in the clone location.
 
@@ -27,7 +27,7 @@ SnapManager can display three levels of messages to the console:
 
 You can specify how you want messages displayed. If you specify nothing, SnapManager displays only error messages and warnings to the console. To control the amount of output that SnapManager displays on the console, use one of the following command line options:
 
-* -quiet: Displays only error messages to the console.
-* -verbose: Displays error, warning, and informational messages to the console.
+* `-quiet`: Displays only error messages to the console.
+* `-verbose`: Displays error, warning, and informational messages to the console.
 
 NOTE: Regardless of the default behavior, or the level of detail you specify for the display, SnapManager always writes all message types to the log files.

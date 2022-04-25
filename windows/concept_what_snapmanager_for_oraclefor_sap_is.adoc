@@ -2,7 +2,7 @@
 permalink: windows/concept_what_snapmanager_for_oraclefor_sap_is.html
 sidebar: sidebar
 keywords: snapmanager, tools, perform, policy-driven, data, management, schedule, create, database, backup, restore, primary, storage, post-process, sap
-summary: SnapManager provides the tools required to perform policy-driven data management, schedule and create regular database backups, restore data from these backups in the event of data loss or disaster, and create database clones. You can create backups on primary storage and create protected backups on secondary storage by using post-processing scripts.
+summary: "SnapManager provides the tools required to perform policy-driven data management, schedule and create regular database backups, restore data from these backups in the event of data loss or disaster, and create database clones. You can create backups on primary storage and create protected backups on secondary storage by using post-processing scripts."
 ---
 = What SnapManagerfor SAP is
 :icons: font

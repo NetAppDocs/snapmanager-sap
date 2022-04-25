@@ -2,7 +2,7 @@
 permalink: windows/reference_examples_of_backup_restore_and_recover_operations.html
 sidebar: sidebar
 keywords: information, backup, restore, recover, scenario, accomplish, data, protection, goal, operation
-summary: You can find information about some of the backup, restore, and recover scenarios that you can use to accomplish your data protection goals.
+summary: "You can find information about some of the backup, restore, and recover scenarios that you can use to accomplish your data protection goals."
 ---
 = Examples of backup, restore, and recover operations
 :icons: font
@@ -24,12 +24,12 @@ The following tables describe some full and partial backup, restore, and recover
 [options="header"]
 |===
 | Full backup| Restore| Recover
-a|
+.5+a|
 SnapManager makes a backup of everything in database DB1, including the data files, archive logs, and control files.
 a|
 Complete restore with control files SnapManager restores all data files, tablespaces, and control files in the backup.
 
-a|
+.2+a|
 You can specify one of the following:
 
 * SCN - Enter an SCN, such as 384641.
@@ -45,7 +45,7 @@ Restore either data files or tablespaces with control files Specify one of the f
 * Tablespaces
 * Data files
 
-a|
+.3+a|
 SnapManager recovers the data to the last transaction made to the database.
 a|
 Restore either data files or tablespaces without control filesSnapManager restores one of the following:

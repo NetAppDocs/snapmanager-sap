@@ -2,7 +2,7 @@
 permalink: windows/concept_how_to_organize_repositories.html
 sidebar: sidebar
 keywords: organize, snapmanager, repository, repositories, business, application, type, usage
-summary: You can organize the SnapManager repositories to meet your business needs. You can organize them in several ways, including by application type and usage.
+summary: "You can organize the SnapManager repositories to meet your business needs. You can organize them in several ways, including by application type and usage."
 ---
 = How to organize repositories
 :icons: font

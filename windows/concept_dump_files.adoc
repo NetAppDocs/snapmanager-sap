@@ -2,7 +2,7 @@
 permalink: windows/concept_dump_files.html
 sidebar: sidebar
 keywords: dump, file, compress, log, contain, information, snapmanager, environment, operation, profile, system
-summary: The dump files are compressed log files containing information about SnapManager and its environment. The different types of log files created are operation, profile, and system dump file.
+summary: "The dump files are compressed log files containing information about SnapManager and its environment. The different types of log files created are operation, profile, and system dump file."
 ---
 = Dump files
 :icons: font
@@ -53,11 +53,11 @@ SnapManager also includes the following information in the file:
 * BACKINT interface versions
 * BR tool version
 * Patch level
-* Output of the system verify command
+* Output of the `system verify` command
 
 The dump file also lists the SnapManager limitations on Windows.
 
-SnapManager dump files also contain the SnapDrive data collector file and the Oracle alert log file. You can collect the Oracle alert log file by using the smsap operation dump and smsap profile dump commands.
+SnapManager dump files also contain the SnapDrive data collector file and the Oracle alert log file. You can collect the Oracle alert log file by using the `smsap operation dump` and `smsap profile dump` commands.
 
 NOTE: System dump does not contain Oracle alert logs; however, the profile and operation dumps contain the alert logs.
 

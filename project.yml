@@ -19,7 +19,7 @@ sidebar:
     - section: windows
     - title: Legal notices
       url: "/legal-notices.html"
-      
+
 homepage:
   tiles:
     - title: Get started
@@ -28,27 +28,15 @@ homepage:
           url: /reference_smsap_isg_product_overview.html
         - title: Release Notes
           url: reference-releasenotes.html
-    - title: Administration Guide for UNIX
+    - title: Administration
       links:
-        - title: Product overview
-          url: /reference_smsap_isg_product_overview.html
-    - title: Installation and Setup For UNIX For Data ONTAP Operating in 7-Mode
+        - title: Configuring SnapManager for UNIX
+          url: /unix-administration/concept_configuring_snapmanager_for_oraclesap.html
+        - title: Configuring SnapManager for Windows
+          url: /windows/concept_configuring_snapmanager_for_oraclesap.html
+    - title: Installation and Setup
       links:
-        - title: Product overviews
-          url: /reference_smsap_isg_product_overview.html
-    - title: Installation and Setup For UNIX For Clustered Data ONTAP
-      links:
-        - title: Product overview
-          url: /reference_smsap_isg_product_overview.html
-    - title: Installation and Administration Guide for Windows
-      links:
-        - title: Product overviews
-          url: /reference_smsap_isg_product_overview.html
-    - title: More resources
-      links:
-        - title: SnapManager for SAP videos
-          url:
-        - title: SnapManager for SAP blogs
-          url:
-        - title: Documentation for earlier versions
-          url:
+        - title: Deployment workflow (7-Mode)
+          url: /unix-installation-7mode/reference_smsap_isg_deployment_workflow.html
+        - title: Deployment workflow (Cluster Mode)
+          url: /unix-installation-cmode/reference_smsap_isg_deployment_workflow.html

@@ -44,8 +44,8 @@ entries:
       url: "/windows/concept_what_snapmanager_operation_states_are.html"
     - title: How SnapManager maintains security
       url: "/windows/concept_snapmanager_security.html"
-    - title: Accessing and printing online Help
-      url: "/windows/task_accessing_and_printing_online_help.html"
+    - title: Access and print online Help
+      url: "/windows/task_access_and_print_online_help.html"
   - title: SnapManager for SAP deployment considerations
     url: "/windows/concept_snapmanager_for_oraclefor_sap_deployment_considerations.html"
     entries:
@@ -83,33 +83,33 @@ entries:
       entries:
       - title: Preinstallation tasks
         url: "/windows/concept_preinstallation_tasks.html"
-      - title: Downloading the SnapManager for SAP installation package
-        url: "/windows/task_downloading_snapmanager_for_oraclesnapmanager_for_sap_installation_package.html"
-    - title: Installing SnapManager for SAP
-      url: "/windows/task_installing_snapmanager_for_oracle_snapmanager_for_sap.html"
-    - title: Integrating with SAP BR* Tools
-      url: "/windows/task_integrating_with_sap_br_tools.html"
+      - title: Download the SnapManager for SAP installation package
+        url: "/windows/task_download_snapmanager_for_oraclesnapmanager_for_sap_installation_package.html"
+    - title: Install SnapManager for SAP
+      url: "/windows/task_install_snapmanager_for_oracle_snapmanager_for_sap.html"
+    - title: Integrate with SAP BR* Tools
+      url: "/windows/task_integrate_with_sap_br_tools.html"
   - title: Upgrading SnapManager
     url: "/windows/concept_upgrading_snapmanager_for_oracle_snapmanager_for_sap.html"
     entries:
     - title: Preparing to upgrade SnapManager
       url: "/windows/concept_preparing_to_upgrade_snapmanager_for_oracle_snapmanager_for_sap.html"
-    - title: Upgrading SnapManager hosts
-      url: "/windows/task_upgrading_snapmanager_for_oraclesnapmanager_for_sap_hosts.html"
+    - title: Upgrade SnapManager hosts
+      url: "/windows/task_upgrade_snapmanager_for_oraclesnapmanager_for_sap_hosts.html"
     - title: Post-upgrade tasks
       url: "/windows/concept_post_upgrade_tasks.html"
       entries:
-      - title: Updating the existing repository
-        url: "/windows/task_updating_the_existing_repository.html"
-      - title: Modifying the backup retention class
-        url: "/windows/task_modifying_the_backup_retention_class.html"
+      - title: Update the existing repository
+        url: "/windows/task_update_the_existing_repository.html"
+      - title: Modify the backup retention class
+        url: "/windows/task_modify_the_backup_retention_class.html"
     - title: Upgrading SnapManager hosts by using rolling upgrade
       url: "/windows/concept_upgrading_snapmanager_hosts_by_using_rolling_upgrade.html"
       entries:
       - title: Prerequisites for performing rolling upgrades
         url: "/windows/concept_prerequisites_for_performing_rolling_upgrade.html"
-      - title: Performing rolling upgrade on a single host or multiple hosts
-        url: "/windows/task_performing_rolling_upgrade_on_a_single_host_or_multiple_hosts.html"
+      - title: Perform roll upgrade on a single host or multiple hosts
+        url: "/windows/task_perform_roll_upgrade_on_a_single_host_or_multiple_hosts.html"
       - title: What a rollback is
         url: "/windows/concept_what_a_rollback_is.html"
         entries:
@@ -117,8 +117,8 @@ entries:
           url: "/windows/concept_limitations_for_performing_a_rollback.html"
         - title: Prerequisites for performing a rollback
           url: "/windows/concept_prerequisites_for_performing_a_rollback.html"
-        - title: Performing a rollback on a single host or multiple hosts
-          url: "/windows/task_performing_a_rollback_on_a_single_host_or_multiple_hosts.html"
+        - title: Perform a rollback on a single host or multiple hosts
+          url: "/windows/task_perform_a_rollback_on_a_single_host_or_multiple_hosts.html"
         - title: Post rollback tasks
           url: "/windows/task_post_rollback_tasks.html"
   - title: Configuring SnapManager
@@ -127,41 +127,41 @@ entries:
     - title: SnapManager configuration parameters
       url: "/windows/reference_snapmanager_configuration_parameters.html"
       entries:
-      - title: Editing the configuration parameters
-        url: "/windows/task_editing_the_configuration_parameters.html"
-  - title: Starting SnapManagerfor SAP
-    url: "/windows/task_starting_snapmanager_for_oraclefor_sap.html"
+      - title: Edit the configuration parameters
+        url: "/windows/task_edit_the_configuration_parameters.html"
+  - title: Start SnapManagerfor SAP
+    url: "/windows/task_start_snapmanager_for_oraclefor_sap.html"
     entries:
-    - title: Identifying an existing database to backup
-      url: "/windows/task_identifying_an_existing_database_to_backup.html"
-    - title: Verifying the Oracle listener status
-      url: "/windows/task_verifying_the_oracle_listener_status.html"
-    - title: Creating Oracle users for the repository database
-      url: "/windows/task_creating_oracle_users_for_the_repository_database.html"
-    - title: Creating an Oracle user for the target database
-      url: "/windows/task_creating_an_oracle_user_for_the_target_database.html"
+    - title: Identify an existing database to backup
+      url: "/windows/task_identify_an_existing_database_to_backup.html"
+    - title: Verify the Oracle listener status
+      url: "/windows/task_verify_the_oracle_listener_status.html"
+    - title: Create Oracle users for the repository database
+      url: "/windows/task_create_oracle_users_for_the_repository_database.html"
+    - title: Create an Oracle user for the target database
+      url: "/windows/task_create_an_oracle_user_for_the_target_database.html"
     - title: Accessing SnapManager
       url: "/windows/concept_accessing_snapmanager.html"
       entries:
-      - title: Starting the SnapManager host server
-        url: "/windows/task_starting_the_snapmanager_windows_host_server.html"
+      - title: Start the SnapManager host server
+        url: "/windows/task_start_the_snapmanager_windows_host_server.html"
         entries:
-        - title: Verifying the SnapManager host server status
-          url: "/windows/task_verifying_the_snapmanager_windows_host_server_status.html"
-      - title: Using SnapManager commands
-        url: "/windows/task_using_snapmanager_commands.html"
-      - title: Starting the SnapManager GUI
-        url: "/windows/task_starting_the_snapmanager_graphical_user_interface.html"
-      - title: Downloading and starting the graphical user interface using Java Web
+        - title: Verify the SnapManager host server status
+          url: "/windows/task_verify_the_snapmanager_windows_host_server_status.html"
+      - title: Use SnapManager commands
+        url: "/windows/task_use_snapmanager_commands.html"
+      - title: Start the SnapManager GUI
+        url: "/windows/task_start_the_snapmanager_graphical_user_interface.html"
+      - title: Download and start the graphical user interface using Java Web
           Start
-        url: "/windows/task_downloading_and_starting_the_graphical_user_interface_using_java_web_start_windows.html"
-    - title: Verifying the environment
-      url: "/windows/task_verifying_the_environment.html"
+        url: "/windows/task_download_and_start_the_graphical_user_interface_using_java_web_start_windows.html"
+    - title: Verify the environment
+      url: "/windows/task_verify_the_environment.html"
       entries:
-      - title: Verifying SnapDrive for Windows
-        url: "/windows/task_verifying_snapdrive_for_windows.html"
-    - title: Creating repositories
-      url: "/windows/task_creating_repositories.html"
+      - title: Verify SnapDrive for Windows
+        url: "/windows/task_verify_snapdrive_for_windows.html"
+    - title: Create repositories
+      url: "/windows/task_create_repositories.html"
       entries:
       - title: How to organize repositories
         url: "/windows/concept_how_to_organize_repositories.html"
@@ -172,49 +172,49 @@ entries:
     entries:
     - title: What user authentication is
       url: "/windows/concept_what_user_authentication_is.html"
-    - title: Storing encrypted passwords for custom scripts
-      url: "/windows/task_storing_encrypted_passwords_for_custom_scripts.html"
-    - title: Authorizing access to the repository
-      url: "/windows/task_authorizing_user_access_to_the_repository.html"
-    - title: Authorizing access to profiles
-      url: "/windows/task_authorizing_user_access_to_profiles.html"
-    - title: Viewing user credentials
-      url: "/windows/task_viewing_user_credentials.html"
-    - title: Clearing user credentials for all hosts, repositories, and profiles
-      url: "/windows/task_clearing_user_credentials_for_all_hosts_repositories_and_profiles.html"
+    - title: Store encrypted passwords for custom scripts
+      url: "/windows/task_store_encrypted_passwords_for_custom_scripts.html"
+    - title: Authorize access to the repository
+      url: "/windows/task_authorize_user_access_to_the_repository.html"
+    - title: Authorize access to profiles
+      url: "/windows/task_authorize_user_access_to_profiles.html"
+    - title: View user credentials
+      url: "/windows/task_view_user_credentials.html"
+    - title: Clear user credentials for all hosts, repositories, and profiles
+      url: "/windows/task_clear_user_credentials_for_all_hosts_repositories_and_profiles.html"
       entries:
-      - title: Setting credentials after clearing the credential cache
-        url: "/windows/task_setting_credentials_after_clearing_credential_cache.html"
-    - title: Deleting credentials for individual resources
-      url: "/windows/task_deleting_credentials_for_individual_resources.html"
+      - title: Set credentials after clearing the credential cache
+        url: "/windows/task_set_credentials_after_clearing_credential_cache.html"
+    - title: Delete credentials for individual resources
+      url: "/windows/task_delete_credentials_for_individual_resources.html"
       entries:
-      - title: Deleting user credentials for repositories
-        url: "/windows/task_deleting_user_credentials_for_repositories.html"
-      - title: Deleting user credentials for hosts
-        url: "/windows/task_deleting_user_credentials_for_hosts.html"
-      - title: Deleting user credentials for profiles
-        url: "/windows/task_deleting_user_credentials_for_profiles.html"
+      - title: Delete user credentials for repositories
+        url: "/windows/task_delete_user_credentials_for_repositories.html"
+      - title: Delete user credentials for hosts
+        url: "/windows/task_delete_user_credentials_for_hosts.html"
+      - title: Delete user credentials for profiles
+        url: "/windows/task_delete_user_credentials_for_profiles.html"
   - title: Managing profiles for efficient backups
     url: "/windows/concept_managing_profiles_for_efficient_backups.html"
     entries:
-    - title: Creating profiles
-      url: "/windows/task_creating_profiles.html"
+    - title: Create profiles
+      url: "/windows/task_create_profiles.html"
     - title: Snapshot copy naming
       url: "/windows/concept_snapshot_copy_naming.html"
-    - title: Renaming profiles
-      url: "/windows/task_renaming_profiles.html"
-    - title: Changing profile passwords
-      url: "/windows/task_changing_profile_passwords.html"
-    - title: Resetting the profile password
-      url: "/windows/task_resetting_profile_password.html"
-    - title: Authorizing access to profiles
-      url: "/windows/task_authorizing_user_access_to_profiles.html"
-    - title: Verifying profiles
-      url: "/windows/task_verifying_profiles.html"
-    - title: Updating profiles
-      url: "/windows/task_updating_profiles.html"
-    - title: Deleting profiles
-      url: "/windows/task_deleting_profiles.html"
+    - title: Rename profiles
+      url: "/windows/task_rename_profiles.html"
+    - title: Change profile passwords
+      url: "/windows/task_change_profile_passwords.html"
+    - title: Reset the profile password
+      url: "/windows/task_reset_profile_password.html"
+    - title: Authorize access to profiles
+      url: "/windows/task_authorize_user_access_to_profiles.html"
+    - title: Verify profiles
+      url: "/windows/task_verify_profiles.html"
+    - title: Update profiles
+      url: "/windows/task_update_profiles.html"
+    - title: Delete profiles
+      url: "/windows/task_delete_profiles.html"
   - title: Backing up databases
     url: "/windows/concept_database_backup_management.html"
     entries:
@@ -235,65 +235,65 @@ entries:
       url: "/windows/concept_about_control_file_and_archive_log_file_handling.html"
     - title: What database backup scheduling is
       url: "/windows/concept_what_database_backup_scheduling_is.html"
-    - title: Creating database backups
-      url: "/windows/task_creating_database_backups.html"
+    - title: Create database backups
+      url: "/windows/task_create_database_backups.html"
       entries:
-      - title: Pruning archive log files
-        url: "/windows/task_pruning_archive_log_files.html"
-      - title: Consolidating archive log backups
-        url: "/windows/task_consolidating_archive_log_backups.html"
-      - title: Scheduling archive log file pruning
-        url: "/windows/task_scheduling_archive_log_file_pruning.html"
+      - title: Prune archive log files
+        url: "/windows/task_prune_archive_log_files.html"
+      - title: Consolidate archive log backups
+        url: "/windows/task_consolidate_archive_log_backups.html"
+      - title: Schedule archive log file pruning
+        url: "/windows/task_schedule_archive_log_file_pruning.html"
     - title: What AutoSupport is
       url: "/windows/concept_what_autosupport_is.html"
       entries:
-      - title: Adding storage systems operating in clustered Data ONTAP to the SnapManager
+      - title: Add storage systems operating in clustered Data ONTAP to the SnapManager
           server host
-        url: "/windows/task_adding_storage_systems_to_the_snapmanager_server_host.html"
-      - title: Enabling AutoSupport in SnapManager
-        url: "/windows/task_enabling_autosupport_in_snapmanager.html"
-      - title: Disabling AutoSupport in SnapManager
-        url: "/windows/task_disabling_autosupport_in_snapmanager.html"
-    - title: Verifying database backups
-      url: "/windows/task_verifying_database_backups.html"
-    - title: Changing the backup retention policy
-      url: "/windows/task_changing_the_backup_retention_policy.html"
+        url: "/windows/task_add_storage_systems_to_the_snapmanager_server_host.html"
+      - title: Enable AutoSupport in SnapManager
+        url: "/windows/task_enable_autosupport_in_snapmanager.html"
+      - title: Disable AutoSupport in SnapManager
+        url: "/windows/task_disable_autosupport_in_snapmanager.html"
+    - title: Verify database backups
+      url: "/windows/task_verify_database_backups.html"
+    - title: Change the backup retention policy
+      url: "/windows/task_change_the_backup_retention_policy.html"
       entries:
-      - title: Retaining backups forever
-        url: "/windows/task_retaining_backups_forever.html"
-      - title: Assigning backups with a specific retention class
-        url: "/windows/task_assigning_backups_with_a_specific_retention_class.html"
-      - title: Changing the retention policy default behavior
-        url: "/windows/task_changing_the_retention_policy_default_behavior.html"
-      - title: Freeing or deleting retention policy exempt backups
-        url: "/windows/task_freeing_or_deleting_retention_policy_exempt_backups.html"
-    - title: Viewing a list of backups
-      url: "/windows/task_viewing_a_list_of_backups.html"
-    - title: Viewing backup details
-      url: "/windows/task_viewing_backup_details.html"
-    - title: Mounting backups
-      url: "/windows/task_mounting_backups.html"
-    - title: Unmounting backups
-      url: "/windows/task_unmounting_backups.html"
-    - title: Freeing backups
-      url: "/windows/task_freeing_backups.html"
-    - title: Deleting backups
-      url: "/windows/task_deleting_backups.html"
+      - title: Retain backups forever
+        url: "/windows/task_retain_backups_forever.html"
+      - title: Assign backups with a specific retention class
+        url: "/windows/task_assign_backups_with_a_specific_retention_class.html"
+      - title: Change the retention policy default behavior
+        url: "/windows/task_change_the_retention_policy_default_behavior.html"
+      - title: Free or delete retention policy exempt backups
+        url: "/windows/task_free_or_delete_retention_policy_exempt_backups.html"
+    - title: View a list of backups
+      url: "/windows/task_view_a_list_of_backups.html"
+    - title: View backup details
+      url: "/windows/task_view_backup_details.html"
+    - title: Mount backups
+      url: "/windows/task_mount_backups.html"
+    - title: Unmount backups
+      url: "/windows/task_unmount_backups.html"
+    - title: Free backups
+      url: "/windows/task_free_backups.html"
+    - title: Delete backups
+      url: "/windows/task_delete_backups.html"
   - title: Scheduling database backups
     url: "/windows/concept_scheduling_database_backups.html"
     entries:
-    - title: Creating backup schedules
-      url: "/windows/task_creating_backup_schedules.html"
-    - title: Updating a backup schedule
-      url: "/windows/task_updating_a_backup_schedule.html"
-    - title: Viewing a list of scheduled operations
-      url: "/windows/task_viewing_a_list_of_scheduled_operations.html"
-    - title: Suspending backup schedules
-      url: "/windows/task_suspending_backup_schedules.html"
-    - title: Resuming backup schedules
-      url: "/windows/task_resuming_backup_schedules.html"
-    - title: Deleting backup schedules
-      url: "/windows/task_deleting_backup_schedules.html"
+    - title: Create backup schedules
+      url: "/windows/task_create_backup_schedules.html"
+    - title: Update a backup schedule
+      url: "/windows/task_update_a_backup_schedule.html"
+    - title: View a list of scheduled operations
+      url: "/windows/task_view_a_list_of_scheduled_operations.html"
+    - title: Suspend backup schedules
+      url: "/windows/task_suspend_backup_schedules.html"
+    - title: Resume backup schedules
+      url: "/windows/task_resume_backup_schedules.html"
+    - title: Delete backup schedules
+      url: "/windows/task_delete_backup_schedules.html"
   - title: Restoring database backups
     url: "/windows/concept_restoring_database_backup.html"
     entries:
@@ -306,10 +306,10 @@ entries:
         url: "/windows/concept_database_state_needed_for_restore_process.html"
       - title: What restore preview plans are
         url: "/windows/concept_restore_preview_plans.html"
-    - title: Previewing backup restore information
-      url: "/windows/task_previewing_backup_restore_information.html"
-    - title: Restoring backups on primary storage
-      url: "/windows/task_restoring_backups_on_primary_storage.html"
+    - title: Preview backup restore information
+      url: "/windows/task_preview_backup_restore_information.html"
+    - title: Restore backups on primary storage
+      url: "/windows/task_restore_backups_on_primary_storage.html"
     - title: Restore files from an alternate location
       url: "/windows/concept_restore_files_from_an_alternate_location.html"
       entries:
@@ -320,10 +320,10 @@ entries:
           url: "/windows/concept_restoration_of_the_data_from_files.html"
         - title: Restoration of data from the file system
           url: "/windows/concept_restoration_of_the_data_from_file_systems.html"
-      - title: Creating restore specifications
-        url: "/windows/task_creating_restore_specifications.html"
-      - title: Restoring backups from an alternate location
-        url: "/windows/task_restoring_backups_from_an_alternate_location.html"
+      - title: Create restore specifications
+        url: "/windows/task_create_restore_specifications.html"
+      - title: Restore backups from an alternate location
+        url: "/windows/task_restore_backups_from_an_alternate_location.html"
   - title: Cloning database backup
     url: "/windows/concept_cloning_database_backup.html"
     entries:
@@ -331,28 +331,28 @@ entries:
       url: "/windows/concept_what_cloning_is.html"
     - title: Cloning methods
       url: "/windows/concept_cloning_methods.html"
-    - title: Creating clone specifications
-      url: "/windows/task_creating_clone_specifications.html"
+    - title: Create clone specifications
+      url: "/windows/task_create_clone_specifications.html"
       entries:
-      - title: Cloning databases and using custom plug-in scripts
-        url: "/windows/task_cloning_databases_and_using_custom_plugin_scripts.html"
-    - title: Cloning databases from backups
-      url: "/windows/task_cloning_databases_from_backups.html"
-    - title: Cloning databases in the current state
-      url: "/windows/task_cloning_databases_in_the_current_state.html"
-    - title: Cloning database backups without resetlogs
-      url: "/windows/task_cloning_database_backups_without_resetlogs.html"
+      - title: Clone databases and using custom plug-in scripts
+        url: "/windows/task_clone_databases_and_using_custom_plugin_scripts.html"
+    - title: Clone databases from backups
+      url: "/windows/task_clone_databases_from_backups.html"
+    - title: Clone databases in the current state
+      url: "/windows/task_clone_databases_in_the_current_state.html"
+    - title: Clone database backups without resetlogs
+      url: "/windows/task_clone_database_backups_without_resetlogs.html"
     - title: Considerations for cloning a database to an alternate host
       url: "/windows/concept_considerations_for_cloning_a_database_to_an_alternate_host.html"
       entries:
-      - title: Cloning a database to an alternate host
-        url: "/windows/task_cloning_a_database_to_an_alternate_host.html"
-    - title: Viewing a list of clones
-      url: "/windows/task_viewing_a_list_of_clones.html"
-    - title: Viewing detailed clone information
-      url: "/windows/task_viewing_detailed_clone_information.html"
-    - title: Deleting clones
-      url: "/windows/task_deleting_clones.html"
+      - title: Clone a database to an alternate host
+        url: "/windows/task_clone_a_database_to_an_alternate_host.html"
+    - title: View a list of clones
+      url: "/windows/task_view_a_list_of_clones.html"
+    - title: View detailed clone information
+      url: "/windows/task_view_detailed_clone_information.html"
+    - title: Delete clones
+      url: "/windows/task_delete_clones.html"
   - title: Introduction to data protection in SnapManager
     url: "/windows/concept_introduction_to_data_protection_in_snapmanager.html"
     entries:
@@ -368,61 +368,61 @@ entries:
       entries:
       - title: Sample post-scripts
         url: "/windows/reference_sample_post_scripts.html"
-      - title: Creating or updating the post scripts
-        url: "/windows/task_creating_or_updating_post_scripts.html"
+      - title: Create or update the post scripts
+        url: "/windows/task_create_or_update_post_scripts.html"
         entries:
-        - title: Creating post-processing, task-specification files
-          url: "/windows/task_creating_post_processing_task_specification_file.html"
+        - title: Create post-process, task-specification files
+          url: "/windows/task_create_post_process_task_specification_file.html"
           entries:
-          - title: Using post-processing task specification to mirror volumes
-            url: "/windows/task_using_post_processing_task_specification_to_mirror_volumes.html"
-          - title: Using post-processing task specification to vault qtrees
-            url: "/windows/task_using_post_processing_task_specification_to_vault_qtrees.html"
+          - title: Use post-processing task specification to mirror volumes
+            url: "/windows/task_use_post_processing_task_specification_to_mirror_volumes.html"
+          - title: Use post-processing task specification to vault qtrees
+            url: "/windows/task_use_post_processing_task_specification_to_vault_qtrees.html"
   - title: Performing management operations
     url: "/windows/concept_performing_management_operations.html"
     entries:
-    - title: Viewing a list of operations
-      url: "/windows/task_viewing_a_list_of_operations.html"
-    - title: Viewing operation details
-      url: "/windows/task_viewing_operation_details.html"
-    - title: Issuing commands from an alternate host
-      url: "/windows/task_issuing_commands_from_an_alternate_host.html"
-    - title: Checking the SnapManager software version
-      url: "/windows/task_checking_the_snapmanager_software_version.html"
-    - title: Stopping the SnapManager host server
-      url: "/windows/task_stopping_the_snapmanager_host_server.html"
-    - title: Restarting the SnapManager host server
-      url: "/windows/task_restarting_the_snapmanager_windows_host_server.html"
-    - title: Uninstalling SnapManager
-      url: "/windows/task_uninstalling_the_software_from_a_windows_host.html"
+    - title: View a list of operations
+      url: "/windows/task_view_a_list_of_operations.html"
+    - title: View operation details
+      url: "/windows/task_view_operation_details.html"
+    - title: Issue commands from an alternate host
+      url: "/windows/task_issue_commands_from_an_alternate_host.html"
+    - title: Check the SnapManager software version
+      url: "/windows/task_check_the_snapmanager_software_version.html"
+    - title: Stop the SnapManager host server
+      url: "/windows/task_stop_the_snapmanager_host_server.html"
+    - title: Restart the SnapManager host server
+      url: "/windows/task_restart_the_snapmanager_windows_host_server.html"
+    - title: Uninstall SnapManager
+      url: "/windows/task_uninstall_the_software_from_a_windows_host.html"
   - title: Configuring an email notification
     url: "/windows/concept_configuring_e_mail_notification.html"
     entries:
-    - title: Configuring a mail server for a repository
-      url: "/windows/task_configuring_mail_server_for_a_repository.html"
-    - title: Configuring email notification for a new profile
-      url: "/windows/task_configuring_e_mail_notification_for_a_new_profile.html"
+    - title: Configure a mail server for a repository
+      url: "/windows/task_configure_mail_server_for_a_repository.html"
+    - title: Configure email notification for a new profile
+      url: "/windows/task_configure_e_mail_notification_for_a_new_profile.html"
       entries:
-      - title: Customizing the email subject for a new profile
-        url: "/windows/task_customizing_e_mail_subject_for_a_new_profile.html"
-    - title: Configuring email notification for an existing profile
-      url: "/windows/task_configuring_e_mail_notification_for_an_existing_profile.html"
+      - title: Customize the email subject for a new profile
+        url: "/windows/task_customize_e_mail_subject_for_a_new_profile.html"
+    - title: Configure email notification for an existing profile
+      url: "/windows/task_configure_e_mail_notification_for_an_existing_profile.html"
       entries:
-      - title: Customizing the email subject for an existing profile
-        url: "/windows/task_customizing_the_email_subject_for_an_existing_profile.html"
-    - title: Configuring summary email notification for multiple profiles
-      url: "/windows/task_configuring_summary_e_mail_notification_for_multiple_profiles.html"
-    - title: Adding a new profile to summary email notifications
-      url: "/windows/task_adding_new_profile_to_summary_notification.html"
-    - title: Adding an existing profile to summary email notifications
-      url: "/windows/task_adding_existing_profile_to_summary_notification.html"
-    - title: Disabling email notification for multiple profiles
-      url: "/windows/task_disabling_email_notification_for_multiple_profiles.html"
+      - title: Customize the email subject for an existing profile
+        url: "/windows/task_customize_the_email_subject_for_an_existing_profile.html"
+    - title: Configure summary email notification for multiple profiles
+      url: "/windows/task_configure_summary_e_mail_notification_for_multiple_profiles.html"
+    - title: Add a new profile to summary email notifications
+      url: "/windows/task_add_new_profile_to_summary_notification.html"
+    - title: Add an existing profile to summary email notifications
+      url: "/windows/task_add_existing_profile_to_summary_notification.html"
+    - title: Disable email notification for multiple profiles
+      url: "/windows/task_disable_email_notification_for_multiple_profiles.html"
   - title: Creating task specification file and scripts for SnapManager operations
     url: "/windows/concept_creating_task_specification_file_and_scripts_for_snapmanager_operations.html"
     entries:
-    - title: Creating pretask, post-task, and policy scripts
-      url: "/windows/task_creating_pretask_post_task_and_policy_scripts.html"
+    - title: Create pretask, post-task, and policy scripts
+      url: "/windows/task_create_pretask_post_task_and_policy_scripts.html"
       entries:
       - title: Operations in task scripts
         url: "/windows/concept_operations_in_task_scripts.html"
@@ -434,52 +434,52 @@ entries:
         url: "/windows/concept_variables_available_in_the_task_scripts_for_clone_operation.html"
       - title: Error handling in custom scripts
         url: "/windows/concept_error_handling_in_custom_scripts.html"
-    - title: Viewing sample plug-in scripts
-      url: "/windows/task_viewing_sample_plugin_scripts.html"
-    - title: Creating task scripts
-      url: "/windows/task_creating_task_scripts.html"
-    - title: Storing the task scripts
-      url: "/windows/task_storing_the_task_scripts.html"
-    - title: Verifying the installation of plug-in scripts
-      url: "/windows/task_verifying_installation_of_plugin_scripts.html"
-    - title: Creating a task specification file
-      url: "/windows/task_creating_a_task_specification_file.html"
-    - title: Performing backup, restore, and clone operations using prescript and
+    - title: View sample plug-in scripts
+      url: "/windows/task_view_sample_plugin_scripts.html"
+    - title: Create task scripts
+      url: "/windows/task_create_task_scripts.html"
+    - title: Store the task scripts
+      url: "/windows/task_store_the_task_scripts.html"
+    - title: Verify the installation of plug-in scripts
+      url: "/windows/task_verify_installation_of_plugin_scripts.html"
+    - title: Create a task specification file
+      url: "/windows/task_create_a_task_specification_file.html"
+    - title: Perform backup, restore, and clone operations using prescript and
         post-scripts
-      url: "/windows/task_performing_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html"
+      url: "/windows/task_perform_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html"
   - title: Updating storage system name and target database host name associated with
       a profile
     url: "/windows/concept_updating_storage_controller_name_and_database_hostname_associated_with_a_profile.html"
     entries:
-    - title: Updating the storage system name associated with a profile
-      url: "/windows/task_updating_storage_system_name_associated_with_a_profile.html"
-    - title: Viewing a list of storage systems associated with a profile
-      url: "/windows/task_viewing_a_list_of_storage_controllers_associated_with_a_profile.html"
-    - title: Updating the target database host name associated with a profile
-      url: "/windows/task_updating_target_database_hostname_associated_with_a_profile.html"
+    - title: Update the storage system name associated with a profile
+      url: "/windows/task_update_storage_system_name_associated_with_a_profile.html"
+    - title: View a list of storage systems associated with a profile
+      url: "/windows/task_view_a_list_of_storage_controllers_associated_with_a_profile.html"
+    - title: Update the target database host name associated with a profile
+      url: "/windows/task_update_target_database_hostname_associated_with_a_profile.html"
   - title: Maintaining history of SnapManager operations
     url: "/windows/concept_maintaining_history_of_snapmanager_operations.html"
     entries:
-    - title: Configuring history for SnapManager operation
-      url: "/windows/task_configuring_history_for_backup_operation.html"
-    - title: Viewing a list of SnapManager operation history
-      url: "/windows/task_viewing_a_list_of_snapmanager_history_operation_as_a_report.html"
-    - title: Viewing the detailed history of a specific operation associated with
+    - title: Configure history for SnapManager operation
+      url: "/windows/task_configure_history_for_backup_operation.html"
+    - title: View a list of SnapManager operation history
+      url: "/windows/task_view_a_list_of_snapmanager_history_operation_as_a_report.html"
+    - title: View the detailed history of a specific operation associated with
         a profile
-      url: "/windows/task_viewing_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html"
-    - title: Deleting history of SnapManager operation
-      url: "/windows/task_purging_history_of_snapmanager_operation.html"
-    - title: Removing history settings associated with a single profile or multiple
+      url: "/windows/task_view_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html"
+    - title: Delete history of SnapManager operation
+      url: "/windows/task_purge_history_of_snapmanager_operation.html"
+    - title: Remove history settings associated with a single profile or multiple
         profiles
-      url: "/windows/task_removing_history_configuration_associated_with_a_single_profile_or_multiple_profiles.html"
-    - title: Viewing SnapManager history configuration details
-      url: "/windows/task_viewing_snapmanger_history_operation_details.html"
+      url: "/windows/task_remove_history_configuration_associated_with_a_single_profile_or_multiple_profiles.html"
+    - title: View SnapManager history configuration details
+      url: "/windows/task_view_snapmanger_history_operation_details.html"
   - title: Using BR*Tools with SnapManager for SAP
     url: "/windows/concept_using_br_tools_with_snapmanager_for_sap.html"
     entries:
     - title: What BR*Tools are
       url: "/windows/concept_what_br_tools_are.html"
-    - title: Setting the path for BR*Tools
+    - title: Set the path for BR*Tools
       url: "/windows/task_set_the_path_for_br_tools.html"
     - title: Disabling client access to Snapshot copies
       url: "/windows/concept_disabling_client_access_to_snapshot_copies.html"
@@ -487,8 +487,8 @@ entries:
       url: "/windows/concept_profile_usage_for_br_tools_backups.html"
     - title: Database backups created using BRBACKUP and BRARCHIVE
       url: "/windows/concept_database_backups_created_using_brbackup_and_brarchive.html"
-    - title: Scheduling backups with SAP transaction DB13
-      url: "/windows/task_scheduling_backups_with_sap_transaction_db13.html"
+    - title: Schedule backups with SAP transaction DB13
+      url: "/windows/task_schedule_backups_with_sap_transaction_db13.html"
     - title: Database restore by using BRRESTORE and BRRECOVER
       url: "/windows/concept_database_restore_by_using_brrestore_and_brrecover.html"
     - title: Backing up and restoring files using BR*Tools
@@ -636,12 +636,12 @@ entries:
     - title: Dump files
       url: "/windows/concept_dump_files.html"
       entries:
-      - title: Creating operation-level dump files
-        url: "/windows/task_creating_operation_level_dump_files.html"
-      - title: Creating profile-level dump files
-        url: "/windows/task_creating_profile_level_dump_files.html"
-      - title: Creating system-level dump files
-        url: "/windows/task_creating_system_level_dump_files.html"
+      - title: Create operation-level dump files
+        url: "/windows/task_create_operation_level_dump_files.html"
+      - title: Create profile-level dump files
+        url: "/windows/task_create_profile_level_dump_files.html"
+      - title: Create system-level dump files
+        url: "/windows/task_create_system_level_dump_files.html"
       - title: How to locate dump files
         url: "/windows/reference_how_to_locate_dump_files.html"
       - title: How to collect dump files

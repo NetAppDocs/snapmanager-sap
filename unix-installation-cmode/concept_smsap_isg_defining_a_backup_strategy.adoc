@@ -1,8 +1,8 @@
 ---
 permalink: unix-installation-cmode/concept_smsap_isg_defining_a_backup_strategy.html
 sidebar: sidebar
-keywords: defining, define, backup, strategy, creating, create, successful, restore, database, snapmanager, service, level, agreement, sla
-summary: Defining a backup strategy before creating your backups ensures that you have backups to successfully restore your databases. SnapManager provides flexible granular backup schedule to meet your Service Level Agreement \(SLA\).
+keywords: define, backup, strategy, create, successful, restore, database, snapmanager, service, level, agreement, sla
+summary: "Defining a backup strategy before creating your backups ensures that you have backups to successfully restore your databases. SnapManager provides flexible granular backup schedule to meet your Service Level Agreement (SLA)."
 ---
 = Defining a backup strategy
 :icons: font
@@ -113,4 +113,4 @@ If you use SnapMirror or SnapVault, you can verify backup copies using the Snaps
 
 *Related information*
 
-http://www.netapp.com/us/media/tr-3761.pdf[NetApp Technical Report 3761: SnapManager for Oracle: Best Practices]
+http://www.netapp.com/us/media/tr-3761.pdf[NetApp Technical Report 3761: SnapManager for Oracle: Best Practices^]

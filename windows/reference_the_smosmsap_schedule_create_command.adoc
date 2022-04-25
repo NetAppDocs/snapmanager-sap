@@ -2,14 +2,14 @@
 permalink: windows/reference_the_smosmsap_schedule_create_command.html
 sidebar: sidebar
 keywords: schedule, create, command, backup, smsap
-summary: You can use the schedule create command to schedule a backup to be created at a specific time.
+summary: "You can use the schedule create command to schedule a backup to be created at a specific time."
 ---
 = The smsap schedule create command
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can use the schedule create command to schedule a backup to be created at a specific time.
+You can use the `schedule create` command to schedule a backup to be created at a specific time.
 
 == Syntax
 
@@ -45,35 +45,35 @@ You can use the schedule create command to schedule a backup to be created at a 
 
 == Parameters
 
-* *-profile profile_name*
+* *`-profile _profile_name_`*
 +
 Specifies the name of the profile related to the database that you want to schedule the backup for. The profile contains the identifier of the database and other database information.
 
-* *-auto option*
+* *`-auto option`*
 +
-If the database is in the mounted or offline state, SnapManager performs an offline backup. If the database is in the open or online state, SnapManager performs an online backup. If you use the -force option with the -offline option, SnapManager forces an offline backup even if the database is currently online.
+If the database is in the mounted or offline state, SnapManager performs an offline backup. If the database is in the open or online state, SnapManager performs an online backup. If you use the `-force` option with the `-offline` option, SnapManager forces an offline backup even if the database is currently online.
 
-* *-online option*
+* *`-online option`*
 +
 Specifies an online database backup.
 
-* *-offline option*
+* *`-offline option`*
 +
-Specifies an offline backup while the database is in the shutdown state. If the database is in the open or mounted state, the backup fails. If the -force option is used, SnapManager attempts to alter the database state to shut down the database for an offline backup.
+Specifies an offline backup while the database is in the shutdown state. If the database is in the open or mounted state, the backup fails. If the `-force` option is used, SnapManager attempts to alter the database state to shut down the database for an offline backup.
 
-* *-full option*
+* *`-full option`*
 +
-Backs up the entire database. This includes all of the data, archived log, and control files. The archived redo logs and control files are backed up no matter what type of backup you perform. If you want to back up only a portion of the database, use the -files option or -tablespaces option.
+Backs up the entire database. This includes all of the data, archived log, and control files. The archived redo logs and control files are backed up no matter what type of backup you perform. If you want to back up only a portion of the database, use the `-files` option or `-tablespaces` option.
 
-* *-files list*
+* *`-files _list_`*
 +
 Backs up only the specified data files plus the archived log and control files. Separate the list of file names with spaces. If the database is in open state, SnapManager verifies that the appropriate tablespaces are in online backup mode.
 
-* *-tablespaces tablespaces*
+* *`-tablespaces _tablespaces_`*
 +
 Backs up only the specified database tablespaces plus the archived log and control files. Separate the tablespace names with spaces. If the database is in open state, SnapManager verifies that the appropriate tablespaces are in online backup mode.
 
-* *-label name*
+* *`-label _name_`*
 +
 Specifies an optional name for this backup. This name must be unique within the profile. The name can contain letters, numbers, underscore (_), and hyphen (-). It cannot start with a hyphen.
 +
@@ -88,58 +88,58 @@ SnapManager uses a 24-hour clock.
 +
 For example, if you performed a full backup with the database offline on 16th January 2007, at 5:45:16 p.m. Eastern Standard Time, SnapManager would create the label F_C_20070116174516EST.
 
-* *-comment string*
+* *`-comment _string_`*
 +
 Specifies an optional comment to describe this backup. Enclose the string within single quotation marks (').
 +
 NOTE: Some shells strip quotation marks off. If that is true for your shell, you must include the quotation mark with a backslash (\). For example, you might need to enter: `\' this is a comment\'`.
 
-* *-verify option*
+* *`-verify option`*
 +
 Verifies that the files in the backup are not corrupt by running the Oracle dbv utility.
 +
-NOTE: If you specify the -verify option, the backup operation is not completed until the verify operation is complete.
+NOTE: If you specify the `-verify` option, the backup operation is not completed until the verify operation is complete.
 
-* *-force option*
+* *`-force option`*
 +
 Forces a state change if the database is not in the correct state. For example, SnapManager might change the state of the database from online to offline, based on the type of backup you specify and the state that the database is in.
 
- ** If the local instance is in shutdown state and at least one instance is open, you can change the local instance to mounted by using -force option.
- ** If no instance is open, you can change the local instance to open by using -force option.
+ ** If the local instance is in shutdown state and at least one instance is open, you can change the local instance to mounted by using `-force` option.
+ ** If no instance is open, you can change the local instance to open by using `-force` option.
 
-* *-retain { -hourly | -daily | -weekly | -monthly | -unlimited}*
+* *`-retain { -hourly | -daily | -weekly | -monthly | -unlimited}`*
 +
-Specifies whether the backup should be retained on an hourly, daily, weekly, monthly, or unlimited basis. If -retain option is not specified, the retention class defaults to -hourly. To retain backups forever, use the -unlimited option. The -unlimited option makes the backup ineligible for deletion by the retention policy.
+Specifies whether the backup should be retained on an hourly, daily, weekly, monthly, or unlimited basis. If `-retain` option is not specified, the retention class defaults to `-hourly`. To retain backups forever, use the `-unlimited` option. The `-unlimited` option makes the backup ineligible for deletion by the retention policy.
 
-* *-archivelogs*
+* *`-archivelogs`*
 +
 Specifies creation of an archive log backup.
 
-* *-backup-dest path1, [, [path2]]*
+* *`-backup-dest _path1_, [, [_path2_]]`*
 +
 Specifies the archive log destinations for archive log backup.
 
-* *-exclude-dest path1, [, [path2]]*
+* *`-exclude-dest _path1_, [, [_path2_]]`*
 +
 Specifies the archive log destinations to be excluded from the backup.
 
-* *-prunelogs {-all | -until-scnuntil-scn | -until-dateyyyy-MM-dd:HH:mm:ss | -before {-months | -days | -weeks | -hours}*
+* *`-prunelogs {-all | -until-scnuntil-scn | -until-date _yyyy-MM-dd:HH:mm:ss_ | -before {-months | -days | -weeks | -hours}`*
 +
-Specifies whether to delete the archive log files from the archive log destinations based on options provided while creating a backup. The -all option deletes all of the archive log files from the archive log destinations. The -until-scn option deletes the archive log files until a specified system change number (SCN). The -until-date option deletes the archive log files until the specified time period. The -before option deletes the archive log files before the specified time period (days, months, weeks, hours).
+Specifies whether to delete the archive log files from the archive log destinations based on options provided while creating a backup. The `-all` option deletes all of the archive log files from the archive log destinations. The `-until-scn` option deletes the archive log files until a specified system change number (SCN). The `-until-date` option deletes the archive log files until the specified time period. The `-before` option deletes the archive log files before the specified time period (days, months, weeks, hours).
 
-* *-schedule-name schedule_name*
+* *`-schedule-name _schedule_name_`*
 +
 Specifies the name that you provide for the schedule.
 
-* *-schedule-comment schedule_comment*
+* *`-schedule-comment _schedule_comment_`*
 +
 Specifies an optional comment to describe about scheduling the backup.
 
-* *-interval { -hourly | -daily | -weekly | -monthly | -onetimeonly}*
+* *`-interval { -hourly | -daily | -weekly | -monthly | -onetimeonly}`*
 +
 Specifies the time interval by which the backups are created. You can schedule the backup on an hourly, daily, weekly, monthly, or one time only basis.
 
-* *-cronstring cron_string*
+* *`-cronstring _cron_string_`*
 +
 Specifies scheduling the backup using cronstring. Cron expressions are used to configure instances of CronTrigger. Cron expressions are strings that are made up of the following subexpressions:
 
@@ -151,22 +151,22 @@ Specifies scheduling the backup using cronstring. Cron expressions are used to c
  ** 6 refers to a day in a week.
  ** 7 refers to the year (optional).
 
-* *-start-time yyyy-MM-dd HH:mm*
+* *`-start-time _yyyy-MM-dd HH:mm_`*
 +
 Specifies the start time of the scheduled operation. The schedule start time should be included in the yyyy-MM-dd HH:mm format.
 
-* *-runasuser runasuser*
+* *`-runasuser _runasuser_`*
 +
 Specifies changing the user (root user or Oracle user) of the scheduled backup operation while scheduling the backup.
 
-* *-taskspec taskspec*
+* *`-taskspec _taskspec_`*
 +
-Specifies the task specification XML file that can be used for preprocessing activity or post-processing activity of the backup operation. The complete path of the XML file must be provided with the -taskspec option.
+Specifies the task specification XML file that can be used for preprocessing activity or post-processing activity of the backup operation. The complete path of the XML file must be provided with the `-taskspec` option.
 
-* *-quiet*
+* *`-quiet`*
 +
 Displays only error messages in the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Displays error, warning, and informational messages in the console.

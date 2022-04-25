@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_configuring_e_mail_notification.html
 sidebar: sidebar
-keywords: snapmanager, enable, email, notification, completion, status, profile-executed, database, operation, profile, execute, generate, status, configuring, configure
-summary: SnapManager enables you to receive an email notification about the completion status of the profile-executed database operations. SnapManager generates the email and helps you to take appropriate action based on the database operation completion status. Configuring email notification is an optional parameter.
+keywords: snapmanager, enable, email, notification, completion, status, profile-executed, database, operation, profile, execute, generate, status, configure
+summary: "SnapManager enables you to receive an email notification about the completion status of the profile-executed database operations. SnapManager generates the email and helps you to take appropriate action based on the database operation completion status. Configuring email notification is an optional parameter."
 ---
 = Configuring an email notification
 :icons: font

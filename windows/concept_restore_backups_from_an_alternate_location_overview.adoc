@@ -2,7 +2,7 @@
 permalink: windows/concept_restore_backups_from_an_alternate_location_overview.html
 sidebar: sidebar
 keywords: restore, database, backup, alternate, location, section, overview
-summary: To restore a database backup from an alternate location, use the following major steps, each of which is further described in this section.
+summary: "To restore a database backup from an alternate location, use the following major steps, each of which is further described in this section."
 ---
 = Restore backups from an alternate location overview
 :icons: font

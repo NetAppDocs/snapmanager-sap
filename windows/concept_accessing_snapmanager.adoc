@@ -2,7 +2,7 @@
 permalink: windows/concept_accessing_snapmanager.html
 sidebar: sidebar
 keywords: access, snapmanager, command-line, interface, cli, graphical, user, interface, gui
-summary: You can access SnapManager by using either the command-line interface \(CLI\) or graphical user interface \(GUI\).
+summary: "You can access SnapManager by using either the command-line interface (CLI) or graphical user interface (GUI)."
 ---
 = Accessing SnapManager
 :icons: font
@@ -24,7 +24,3 @@ To access the CLI, click *Start* > *All Programs* > *NetApp* > *SnapManager for 
 The GUI provides simple and easy-to-use wizards to help you perform different operations.
 
 * By using SAP BR*Tools commands.
-
-*Related information*
-
-xref:concept_snapmanager_for_oraclefor_sap_command_reference.adoc[SnapManager for SAP command reference]

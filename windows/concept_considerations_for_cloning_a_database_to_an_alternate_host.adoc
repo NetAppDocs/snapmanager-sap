@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_considerations_for_cloning_a_database_to_an_alternate_host.html
 sidebar: sidebar
-keywords: clone, host, database, reside, requirement, consideration, cloning, alternate
-summary: Before you can clone to a host other than the one on which the database resides, there are some requirements that must be met.
+keywords: clone, host, database, reside, requirement, consideration, clone, alternate
+summary: "Before you can clone to a host other than the one on which the database resides, there are some requirements that must be met."
 ---
 = Considerations for cloning a database to an alternate host
 :icons: font

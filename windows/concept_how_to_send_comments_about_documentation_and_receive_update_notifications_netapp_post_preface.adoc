@@ -2,7 +2,7 @@
 permalink: windows/concept_how_to_send_comments_about_documentation_and_receive_update_notifications_netapp_post_preface.html
 sidebar: sidebar
 keywords: improve, quality, documentation, feedback, receive, automatic, notification, production-level, ga, fcs, release, change, exist, document, comment, update, send
-summary: You can help us to improve the quality of our documentation by sending us your feedback. You can receive automatic notification when production-level \(GA/FCS\) documentation is initially released or important changes are made to existing production-level documents.
+summary: "You can help us to improve the quality of our documentation by sending us your feedback. You can receive automatic notification when production-level (GA/FCS) documentation is initially released or important changes are made to existing production-level documents."
 ---
 = How to send comments about documentation and receive update notifications
 :icons: font
@@ -13,7 +13,7 @@ You can help us to improve the quality of our documentation by sending us your f
 
 If you have suggestions for improving this document, send us your comments by email.
 
-link:mailto:doccomments@netapp.com[doccomments@netapp.com]
+link:mailto:doccomments@netapp.com[doccomments@netapp.com^]
 
 To help us direct your comments to the correct division, include in the subject line the product name, version, and operating system.
 

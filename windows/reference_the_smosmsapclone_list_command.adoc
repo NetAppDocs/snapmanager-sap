@@ -2,7 +2,7 @@
 permalink: windows/reference_the_smosmsapclone_list_command.html
 sidebar: sidebar
 keywords: command, list, clone, database, profile, smsap
-summary: This command lists the clones of the database for a given profile.
+summary: "This command lists the clones of the database for a given profile."
 ---
 = The smsap clone list command
 :icons: font
@@ -23,19 +23,19 @@ This command lists the clones of the database for a given profile.
 
 == Parameters
 
-* *-profile profile_name*
+* *`-profile _profile_name_`*
 +
 Specifies the list of clones associated with the profile. The profile contains the identifier of the database and other database information.
 
-* *-delimiter character*
+* *`-delimiter _character_`*
 +
 When this parameter is specified, the command lists the attributes in each row separated by the character specified.
 
-* *-quiet*
+* *`-quiet`*
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Displays error, warning, and informational messages on the console.
 
@@ -52,7 +52,3 @@ ID Status SID Host Label Comment
 -------- ------- ----- ------- ---------- -------
 8ab...01 SUCCESS hsdbc server1 back1clone test comment
 ----
-
-*Related information*
-
-xref:task_viewing_a_list_of_clones.adoc[Viewing a list of clones]

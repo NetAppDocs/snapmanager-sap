@@ -1,8 +1,8 @@
 ---
 permalink: windows/task_order_of_performing_operations.html
 sidebar: sidebar
-keywords: snapmanager, enable, perform, operation, create, creating, profile, backup, cloning, clone, order
-summary: SnapManager enables you to perform various operations such as creating profiles, performing backups, and cloning backups. These operations must be performed in a specific order.
+keywords: snapmanager, enable, perform, operation, create, profile, backup, clone, order
+summary: "SnapManager enables you to perform various operations such as creating profiles, performing backups, and cloning backups. These operations must be performed in a specific order."
 ---
 = Order of performing operations
 :icons: font
@@ -11,9 +11,13 @@ summary: SnapManager enables you to perform various operations such as creating 
 [.lead]
 SnapManager enables you to perform various operations such as creating profiles, performing backups, and cloning backups. These operations must be performed in a specific order.
 
-. Create a profile on an existing repository by using the smsap profile create command.
+.Steps
+
+. Create a profile on an existing repository by using the `smsap profile create` command.
 +
 NOTE: The Oracle user specified for the target database must have sysdba privileges.
++
+*Example*
 +
 The following example shows the command to create a profile:
 +
@@ -23,7 +27,9 @@ smsap profile create -profile prof1 -profile-password prof1cred
 -database -dbname SID -host db_server1 -port 1527
 ----
 
-. Create a backup on an existing profile by using the smsap backup create command.
+. Create a backup on an existing profile by using the `smsap backup create` command.
++
+*Example*
 +
 The following example shows the command to create a backup:
 +
@@ -31,7 +37,9 @@ The following example shows the command to create a backup:
 smsap backup create -profile prof1 -full -offline -label full_backup_prof1 -force
 ----
 
-. Restore and recover a database backup on primary storage by using the smsap backup restore command.
+. Restore and recover a database backup on primary storage by using the `smsap backup restore` command.
++
+*Example*
 +
 The following example shows the command to restore a backup:
 +
@@ -40,13 +48,15 @@ smsap backup restore -profile prof1 -label full_backup_prof1
 -complete -recover -alllogs
 ----
 
-. Create a clone specification by using the smsap clone template command.
+. Create a clone specification by using the `smsap clone template` command.
 +
 You can use the Clone wizard in the graphical user interface (GUI) to create a template clone specification. You can also create the clone specification file by using a text editor.
 
-. Clone a database with an existing backup by using the smsap clone create command.
+. Clone a database with an existing backup by using the `smsap clone create` command.
 +
 You must have an existing clone specification or create a clone specification to specify the storage and database specifications for the clone.
++
+*Example*
 +
 The following example shows the command to create a clone:
 +

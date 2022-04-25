@@ -2,7 +2,7 @@
 permalink: windows/reference_the_smosmsapsystem_verify_command.html
 sidebar: sidebar
 keywords: command, component, environment, snapmanager, set, up, smsap, system, verify
-summary: This command confirms that all the components of the environment required to run SnapManager are set up correctly.
+summary: "This command confirms that all the components of the environment required to run SnapManager are set up correctly."
 ---
 = The smsap system verify command
 :icons: font
@@ -21,11 +21,11 @@ This command confirms that all the components of the environment required to run
 
 == Parameters
 
-* *-quiet*
+* *`-quiet`*
 +
 Displays only error messages on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Displays error, warning, and informational messages on the console.
 

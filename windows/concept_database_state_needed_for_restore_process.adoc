@@ -2,7 +2,7 @@
 permalink: windows/concept_database_state_needed_for_restore_process.html
 sidebar: sidebar
 keywords: state, database, restore, depend, process, perform, type, file
-summary: The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included.
+summary: "The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included."
 ---
 = Database state needed for the restore process
 :icons: font
@@ -45,6 +45,6 @@ No system files
 a|
 Mount or Open
 |===
-The database state required by SnapManager for a restore operation depends on the type of restore being performed (complete, partial, or control files). SnapManager does not transition the database to a lower state (for example, from Open to Mount) unless the force option is specified.
+The database state required by SnapManager for a restore operation depends on the type of restore being performed (complete, partial, or control files). SnapManager does not transition the database to a lower state (for example, from Open to Mount) unless the `force` option is specified.
 
 SnapManager for SAP does not verify whether SAP is running. SnapManager for SAP waits for a timeout to elapse and then shuts down the database, which can add an hour of additional restore time.

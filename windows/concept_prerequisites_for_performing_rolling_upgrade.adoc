@@ -2,7 +2,7 @@
 permalink: windows/concept_prerequisites_for_performing_rolling_upgrade.html
 sidebar: sidebar
 keywords: perform, roll, upgrade, ensure, environment, requirement, prerequisite
-summary: Before performing a rolling upgrade, you must ensure that your environment meets certain requirements.
+summary: "Before performing a rolling upgrade, you must ensure that your environment meets certain requirements."
 ---
 = Prerequisites for performing rolling upgrades
 :icons: font
@@ -42,6 +42,4 @@ NOTE: The rolling upgrade runs for longer as the number of backups of the hosts 
 
 *Related information*
 
-xref:task_installing_snapmanager_for_oracle_snapmanager_for_sap.adoc[Installing SnapManager for SAP]
-
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

@@ -1,8 +1,8 @@
 ---
 permalink: windows/concept_restoring_database_backup.html
 sidebar: sidebar
-keywords: snapmanager, sap, enable, restore, database, snapshot, copy, backup, mean-time-to-recovery, mttrm restoring
-summary: SnapManager for SAP enables you to restore a database to the state it was when a Snapshot copy was taken. Because backups are created more frequently, the number of logs that need to be applied is reduced, thus reducing the mean-time-to-recovery \(MTTR\) for a database.
+keywords: snapmanager, sap, enable, restore, database, snapshot, copy, backup, mean-time-to-recovery, mttrm restore
+summary: "SnapManager for SAP enables you to restore a database to the state it was when a Snapshot copy was taken. Because backups are created more frequently, the number of logs that need to be applied is reduced, thus reducing the mean-time-to-recovery (MTTR) for a database."
 ---
 = Restoring database backups
 :icons: font
@@ -31,9 +31,3 @@ For more information, see the .
 You can restore a backup made by a previous version of SnapManager by using SnapManager 3.0 and later versions.
 
 Administrators can perform restore or recovery operations by using the SnapManager graphical user interface (GUI) or by using the command-line interface (CLI).
-
-*Related information*
-
-xref:concept_database_backup_management.adoc[Backing up databases]
-
-xref:reference_the_smosmsapbackup_restore_command.adoc[The smsap backup restore command]

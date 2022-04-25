@@ -2,7 +2,7 @@
 permalink: windows/concept_snapmanger_limitations_for_clustered_data_ontap.html
 sidebar: sidebar
 keywords: limitation, functionalities, functionality, snapmanager, operation, cluster, data, ontap
-summary: You must know the limitations for some functionalities and SnapManager operations if you are using clustered Data ONTAP.
+summary: "You must know the limitations for some functionalities and SnapManager operations if you are using clustered Data ONTAP."
 ---
 = SnapManager limitations for clustered Data ONTAP
 :icons: font

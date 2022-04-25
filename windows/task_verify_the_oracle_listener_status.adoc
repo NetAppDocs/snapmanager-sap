@@ -1,0 +1,32 @@
+---
+permalink: windows/task_verify_the_oracle_listener_status.html
+sidebar: sidebar
+keywords: verify, oracle, listener, lsnrctl, status, command
+summary: "You can verify the Oracle listener status by using the lsnrctl status command."
+---
+= Verify the Oracle listener status
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can verify the Oracle listener status by using the `lsnrctl status` command.
+
+== What you'll need
+
+* You must connect to the database.
+
+== About this task
+
+The listener port details are as follows:
+
+* A standard SAP Oracle installation sets the listener port to 1527.
+* Anything that references a managed database listener port should have the value as 1527.
+* Anything that references the repository database listener port should have the value as 1521.
+
+The Oracle listener's log is located at ``%ORACLE_HOME%\network\log where ORACLE_HOME is \oracle\SID\oracle version`.
+
+.Step
+
+. At the command prompt, enter the command:
++
+`*lsnrctl status*`

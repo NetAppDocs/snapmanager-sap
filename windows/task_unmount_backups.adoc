@@ -1,0 +1,22 @@
+---
+permalink: windows/task_unmount_backups.html
+sidebar: sidebar
+keywords: snapmanager, automatic, unmount, backup, available, external, tool, oracle, recovery, manager, rman, file, remove, access
+summary: "SnapManager automatically unmounts the backup to make it unavailable to the host server. SnapManager also allows you to unmount if you are using an external tool, such as Oracle Recovery Manager (RMAN), to access the files in the backup, and to change the state of the backup to remove access."
+---
+= Unmount backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager automatically unmounts the backup to make it unavailable to the host server. SnapManager also allows you to unmount if you are using an external tool, such as Oracle Recovery Manager (RMAN), to access the files in the backup, and to change the state of the backup to remove access.
+
+== About this task
+
+You can optionally collect the dump files after a successful or failed unmount backup operation.
+
+.Step
+
+. Enter the following command:
++
+`*smsap backup unmount -profile _profile_name_ {label _label_ [data | -archivelogs] | -id _id_} [-quiet | -verbose]*`

@@ -2,7 +2,7 @@
 permalink: windows/reference_the_smosmsap_server_stop_command.html
 sidebar: sidebar
 keywords: command, stop, snapmanager, host, server, enter, root, smsap_server, smsap
-summary: This command stops the SnapManager host server and is entered at the root.
+summary: "This command stops the SnapManager host server and is entered at the root."
 ---
 = The smsap_server stop command
 :icons: font
@@ -21,17 +21,17 @@ This command stops the SnapManager host server and is entered at the root.
 
 == Parameters
 
-* *-quiet*
+* *`-quiet`*
 +
 Specifies that only error messages are displayed on the console. The default is to display error and warning messages.
 
-* *-verbose*
+* *`-verbose`*
 +
 Specifies that error, warning, and informational messages are displayed on the console.
 
 == Example command
 
-The following example uses the smsap_server stop command.
+The following example uses the `smsap_server stop` command.
 
 ----
 smsap_server stop

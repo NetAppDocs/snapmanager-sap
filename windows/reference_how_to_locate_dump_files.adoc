@@ -2,7 +2,7 @@
 permalink: windows/reference_how_to_locate_dump_files.html
 sidebar: sidebar
 keywords: dump, file, locate, client, system, access, troubleshoot, problem, profile, operation
-summary: The dump file is located at the client system for easy access. These files are helpful if you need to troubleshoot a problem related to profile, system, or any operation.
+summary: "The dump file is located at the client system for easy access. These files are helpful if you need to troubleshoot a problem related to profile, system, or any operation."
 ---
 = How to locate dump files
 :icons: font
@@ -34,11 +34,11 @@ The dump file contains the output of the dump command. The name of the file depe
 a|
 Operation dump command with operation ID
 a|
-smsap_dump_operation-id.jar
+`smsap_dump_operation-id.jar`
 a|
 Operation dump command with no operation ID
 a|
-smsap operation dump -profile VH1 -verbose The following output is displayed:
+`smsap operation dump -profile VH1 -verbose` The following output is displayed:
 
 ----
 smsap operation dump -profile VH1 -verbose
@@ -51,9 +51,9 @@ Path: user_home\Application Data\ontap\smsap\3.3.0\smsap_dump_VH1_kaw.rtp.foo.co
 a|
 System dump command
 a|
-smsap_dump_host-name.jar
+`smsap_dump_host-name.jar`
 a|
 Profile dump command
 a|
-smsap_dump_profile-name_host-name.jar
+`smsap_dump_profile-name_host-name.jar`
 |===

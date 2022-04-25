@@ -2,7 +2,7 @@
 permalink: windows/concept_limitations_for_performing_a_rollback.html
 sidebar: sidebar
 keywords: aware, scenario, perform, rollback, additional, task, limitation
-summary: You must be aware of the scenarios in which you cannot perform a rollback. However, for some of these scenarios you can perform some additional tasks before performing rollback.
+summary: "You must be aware of the scenarios in which you cannot perform a rollback. However, for some of these scenarios you can perform some additional tasks before performing rollback."
 ---
 = Limitations for performing a rollback
 :icons: font

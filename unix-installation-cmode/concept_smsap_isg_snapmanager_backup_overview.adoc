@@ -2,7 +2,7 @@
 permalink: unix-installation-cmode/concept_smsap_isg_snapmanager_backup_overview.html
 sidebar: sidebar
 keywords: snapmanager, netapp, snapshot, technology, create, backup, database, dbverify, utility, verify, integrity, overview
-summary: SnapManager uses NetApp Snapshot technology to create backups of databases. You can use the DBVERIFY utility, or you can use SnapManager to verify the integrity of the backups.
+summary: "SnapManager uses NetApp Snapshot technology to create backups of databases. You can use the DBVERIFY utility, or you can use SnapManager to verify the integrity of the backups."
 ---
 = SnapManager backup overview
 :icons: font

@@ -2,7 +2,7 @@
 permalink: unix-installation-cmode/concept_prerequisites_for_performing_rolling_upgrade.html
 sidebar: sidebar
 keywords: perform, roll, upgrade, ensure, environment, certain, requirement, prerequisite
-summary: Before performing a rolling upgrade, you must ensure that your environment meets certain requirements.
+summary: "Before performing a rolling upgrade, you must ensure that your environment meets certain requirements."
 ---
 = Prerequisites for performing rolling upgrades
 :icons: font
@@ -40,4 +40,4 @@ If you use profiles with the same name, the rolling upgrade involving that repos
 
 NOTE: The rolling upgrade runs for longer as the number of backups of the hosts being upgraded together increases. The duration of the upgrade can vary depending on the number of profiles and backups associated with a given host.
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]

@@ -2,7 +2,7 @@
 permalink: windows/concept_general_layout_and_configuration.html
 sidebar: sidebar
 keywords: information, recommend, general, database, layout, storage, configuration, issue, disk, group, file, type, tablespace
-summary: You can find information about the recommended general database layouts and storage configurations to avoid issues related to disk groups, file types, and tablespaces.
+summary: "You can find information about the recommended general database layouts and storage configurations to avoid issues related to disk groups, file types, and tablespaces."
 ---
 = General layout and configuration
 :icons: font
@@ -23,7 +23,7 @@ The following are some guidelines for volume separation:
 * You must use separate volumes for each of the following file classifications: database binaries, data files, online redo log files, archived redo log files, and control files.
 * You do not need to create a separate volume for temporary database files, because SnapManager does not back up temporary database files.
 
-SAP uses a standard layout for Oracle database installations. In this layout, SAP places copies of the Oracle control file in E:\oracle\SID\origlogA, E:\oracle\SID\origlogB, and E:\oracle\SID\sapdata1 file systems.
+SAP uses a standard layout for Oracle database installations. In this layout, SAP places copies of the Oracle control file in `E:\oracle\SID\origlogA, E:\oracle\SID\origlogB, and E:\oracle\SID\sapdata1 file systems`.
 
 NOTE: Because BR*Tools backups include the Oracle and SAP profiles located in the database subdirectory of the Oracle installation, the Oracle installation must be located on storage.
 
@@ -33,4 +33,4 @@ For more information, see the _SnapManager for SAP Best Practices_.
 
 *Related information*
 
-http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices: media.netapp.com/documents/tr-3823.pdf]
+http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices: media.netapp.com/documents/tr-3823.pdf^]
