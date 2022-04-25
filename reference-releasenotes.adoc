@@ -8,4 +8,4 @@ summary: "Describes new features, upgrade notes, fixed issues, known limitations
 
 The release notes describe new features, upgrade notes, fixed issues, known limitations, and known issues.
 
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2849494[SnapManager for SAP 3.4.2 Release Notes]
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2849494[SnapManager for SAP 3.4.2 Release Notes^]
