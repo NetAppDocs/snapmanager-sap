@@ -34,7 +34,7 @@ homepage:
           url: /unix-administration/concept_configuring_snapmanager_for_oraclesap.html
         - title: Configuring SnapManager for Windows
           url: /windows/concept_configuring_snapmanager_for_oraclesap.html
-    - title: Installation and Setup
+    - title: Installation and setup
       links:
         - title: Deployment workflow (7-Mode)
           url: /unix-installation-7mode/reference_smsap_isg_deployment_workflow.html
