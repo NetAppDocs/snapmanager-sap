@@ -1,0 +1,70 @@
+---
+permalink: unix-administration/task-configure-snapdrive-when-rbac-is-enabled.html
+sidebar: sidebar
+keywords: role-based, access, control, rbac, enable, configure, datafabric, manager, server, capability, capabilities, snapdrive, create, storage, system, regiser, configure, configuring
+summary: "When role-based access control (RBAC) is enabled, you must configure the DataFabric Manager server to include the RBAC capabilities. You must also register the SnapDrive user created in the DataFabric Manager server and root user of the storage system in SnapDrive."
+---
+= Configure DataFabric Manager server and SnapDrive when RBAC is enabled
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When role-based access control (RBAC) is enabled, you must configure the DataFabric Manager server to include the RBAC capabilities. You must also register the SnapDrive user created in the DataFabric Manager server and root user of the storage system in SnapDrive.
+
+.Steps
+
+. Configure the DataFabric Manager server.
+ .. To refresh the DataFabric Manager server to update the changes made directly on the storage system by the target database, enter the following command:
+ +
+ `*dfm host discover _storage_system_*`
+ .. Create a new user in the DataFabric Manager server and set the password.
+ .. To add the operating system user to the DataFabric Manager server administration list, enter the following command:
+ +
+`*dfm user add _sd-admin_*`
+ .. To create a new role in the DataFabric Manager server, enter the following command:
+ +
+`*dfm role create _sd-admin-role_*`
+ .. To add the DFM.Core.AccessCheck Global capability to the role, enter the following command:
+ +
+`*dfm role add _sd-admin-role_ DFM.Core.AccessCheck Global*`
+ .. To add `sd-admin-role` to the operating system user, enter the following command:
+ +
+`*dfm user role set _sd-adminsd-admin-role_*`
+ .. To create another role in the DataFabric Manager server for the SnapDrive root user, enter the following command:
+ +
+`*dfm role create _sd-protect_*`
+ .. To add RBAC capabilities to the role created for the SnapDrive root user or the administrator, enter the following commands:
+ +
+`*dfm role add _sd-protect_ SD.Config.Read Global*`
++
+`*dfm role add _sd-protect_ SD.Config.Write Global*`
++
+`*dfm role add _sd-protect_ SD.Config.Delete Global*`
++
+`*dfm role add _sd-protect_ SD.Storage.Read Global*`
++
+`*dfm role add _sd-protect_ DFM.Database.Write Global*`
++
+`*dfm role add _sd-protect_ GlobalDataProtection*`
+ .. To add the target database oracle user to the list of administrators in the DataFabric Manager server and assign the sd-protect role, enter the following command:
+ +
+`*dfm user add -r _sd-protecttardb_host1_\oracle*`
+ .. To add the storage system used by the target database in the DataFabric Manager server, enter the following command:
+ +
+`*dfm host set _storage_system_ hostLogin=oracle hostPassword=_password_*`
+ .. To create a new role in the storage system used by the target database in the DataFabric Manager server, enter the following command:
+ +
+`*dfm host role create -h _storage_system-c_ "api-**,login-*" _storage-rbac-role_**`
+ .. To create a new group in the storage system and assign the new role created in the DataFabric Manager server, enter the following command:
+ +
+`*dfm host usergroup create -h _storage_system_-r _storage-rbac-rolestorage-rbac-group_*`
+ .. To create a new user in the storage system and assign the new role and the group created in the DataFabric Manager server, enter the following command:
+ +
+`*dfm host user create -h _storage_system_-r _storage-rbac-role_ -p _password_ -g _storage-rbac-grouptardb_host1_*`
+. Configure SnapDrive.
+ .. To register the credentials of the `_sd-admin_` user with SnapDrive, enter the following command:
+ +
+`*snapdrive config set -dfm _sd-admindfm_host_*`
+ .. To register the root user or the administrator of the storage system with SnapDrive, enter the following command:
+ +
+`*snapdrive config set _tardb_host1storage_system_*`

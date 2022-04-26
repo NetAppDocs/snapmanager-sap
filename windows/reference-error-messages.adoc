@@ -1,0 +1,551 @@
+---
+permalink: windows/reference-error-messages.html
+sidebar: sidebar
+keywords: information, error, message, associate, snapmanager, operation
+summary: "You can find information about the error messages associated with different SnapManager operations."
+---
+= Error messages
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can find information about the error messages associated with different SnapManager operations.
+
+== Most common error messages
+
+The following table lists some of the most common and important errors associated with SnapManager for SAP:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SD-10038: File system is not writable`.
+a|
+SnapManager process does not have write access to the file system.
+a|
+You must ensure that the SnapManager process has write access to the file system. After correcting this, you may need to take another snapshot.
+a|
+`SMSAP-05075: Unable to create Profile. You must configure the DP/XDP relationship properly or choose the correct protection policy per the underlying relationship`.
+a|
+The underlying volumes are not in a SnapVault or SnapMirror relationship.
+a|
+You must configure a data protection relationship between the source and destination volumes and initialize the relationship.
+a|
+`[SMSAP-05503] You have specified the same name to the profile. Specify a different name to rename the profile`.
+a|
+Profiles with identical names cannot exist in a repository.
+a|
+Provide a profile name that is not in use.
+a|
+`SMSAP-05505: Unable to update dataset metadata`.
+a|
+Dataset might have been deleted or does not exist.
+a|
+Before updating the dataset metadata, verify that the dataset exists by using the NetApp Management Console.
+a|
+`SMSAP-05506: You cannot update the profile since there are operation(s) running on the profile. You must wait until the operation(s) complete and then update the profile`
+a|
+Profile cannot be updated when backup, restore, and cloning operations are in progress.
+a|
+Update the profile after completion of the current operation.
+a|
+`SMSAP-05509: Invalid archivelog primary retention duration - Specify a positive integer value`.
+a|
+Retention duration of archive log backups cannot be negative.
+a|
+Specify a positive value for the retention duration of archive log backups.
+a|
+`SMSAP-07463: This backup restore requires the database to be in required state. Failed to bring the database to the required state`.
+a|
+Database is not in the required state for a backup operation.
+a|
+Check that the database is in a relevant state before creating a backup copy. The state of the database that is to be restored depends on the type of restore process that you want to perform and the type of files that are to be included.
+a|
+`SMSAP-09315: After performing repository upgrade or update operation, you might not receive the summary notification for notifications set in previous version unless you update the summary notification with the notification host details`.
+a|
+Notification settings are not configured for the repository after a rolling upgrade.
+a|
+After a rolling upgrade, update summary notification settings to receive notifications.
+a|
+`SMSAP-02076: Label name should not contain any special characters other than underscore`.
+a|
+Label name contains special characters other than the underscore.
+a|
+The label name must be unique within the profile. The name can contain letters, numbers, an underscore (_), and a hyphen (-) (but cannot start with a hyphen). Ensure that labels do not contain any special characters except the underscore.
+
+a|
+`SMSAP-06308: Exception when attempting to start schedule: java.lang.NullPointerException`
+a|
+The fully qualified domain name (FQDN) of the profile host is configured instead of the system's host name and the FQDN of the profile host cannot be resolved.
+a|
+Ensure that you use the system's host name and not the FQDN.
+a|
+`Failure in ExecuteRestoreSteps: ORACLE-10003: Error executing SQL "DROP DISKGROUP;control diskgroup name; INCLUDING CONTENTS" against Oracle database +ASM1: ORA-15039: diskgroup not dropped ORA-15027: active use of diskgroup; "control diskgroup name;" precludes its dismount`
+a|
+The operation to restore a backup with control files fails to drop the control disk group. This issue occurs if there are stale backed up control files in the control disk group.
+a|
+Identify the stale backed up control files and manually delete them.
+a|
+`RMAN-06004: ORACLE error from recovery catalog database: ORA-01424: missing or illegal character following the escape character`
+a|
+Backup create operation failed to remove the backup copy from the catalog when SnapManager is integrated with RMAN.
+a|
+Check if there are any external scripts used for removing the backups from RMAN. Execute the `CROSSCHECK BACKUP` command in RMAN to update the RMAN repository and the `resync catalog` command to synchronize the control file of the target database with the recovery catalog.
+a|
+`[DEBUG]: Exception while pruning backup. java.lang.IllegalStateException: [Assertion failed] - this state invariant must be true`
+a|
+Multiple Snapshot copies are created for a single operation ID.
+a|
+Delete the Snapshot copies manually and use scripts to delete the entries from the repository.
+a|
+System time and the time displayed by SnapManager in the log files do not match or not synchronized.
+a|
+A time zone change is not yet supported by Java 7.
+a|
+Apply the `tzupdater` patch provided by Oracle.
+a|
+`DISC-00001: Unable to discover storage: The following identifier does not exist or is not of the expected type: ASM File`
+a|
+Data or control files or redo logs are multiplexed in an ASM database.
+a|
+Remove the Oracle multiplexing.
+a|
+`0001-SMSAP-02016: There may have been external tables in the database not backed up as part of this backup operation (since the database was not OPEN during this backup ALL_EXTERNAL_LOCATIONS could not be queried to determine whether or not external tables exist)``.
+a|
+SnapManager does not backup external tables (for example, tables that are not stored in .dbf files). This issue occurs because the database was not open during the backup, SnapManager cannot determine if any external tables are being used.
+a|
+There might have been external tables in the database that are not backed up as part of this operation (because the database was not open during the backup).
+a|
+`0002-332 Admin error: Could not check SD.SnapShot.Clone access on volume "volume_name" for user username on Operations Manager server(s) "dfm_server". Reason: Invalid resource specified. Unable to find its ID on Operations Manager server "dfm_server"`
+a|
+Proper access privileges and roles are not set.
+a|
+Set access privileges or roles for the users who are trying to execute the command.
+a|
+`[WARN] FLOW-11011: Operation aborted [ERROR] FLOW-11008: Operation failed: Java heap space`.
+a|
+There are more number of archive log files in the database than the maximum allowed.
+a|
+
+. Navigate to the SnapManager installation directory.
+. Open the `launch-java` file.
+. Increase the value of the `java -Xmx160m` Java heap space parameter . For example, you can modify the value from the default value of 160m to 200m as `java -Xmx200m`.
+
+a|
+`SMSAP-21019: The archive log pruning failed for the destination: "E:\dest" with the reason: "ORACLE-00101: Error executing RMAN command: [DELETE NOPROMPT ARCHIVELOG 'E:\dest']`
+a|
+Archive log pruning fails in one of the destinations. In such a scenario, SnapManager continues to prune the archive log files from the other destinations. If any files are manually deleted from the active file system, the RMAN fails to prune the archive log files from that destination.
+a|
+Connect to RMAN from the SnapManager host. Run the RMAN `CROSSCHECK ARCHIVELOG ALL` command and perform the pruning operation on the archive log files again.
+a|
+`SMSAP-13032: Cannot perform operation: Archive log Prune. Root cause: RMAN Exception: ORACLE-00101: Error executing RMAN command`.
+a|
+The archive log files are manually deleted from the archive log destinations.
+a|
+Connect to RMAN from the SnapManager host. Run the RMAN `CROSSCHECK ARCHIVELOG ALL` command and perform the pruning operation on the archive log files again.
+a|
+`Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,18 lastmatch=]) does not match (name:backup_script) Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,25 lastmatch=]) does not match (description:backup script)`
+
+`Unable to parse shell output: (java.util.regex.Matcher[pattern=Command complete. region=0,9 lastmatch=]) does not match (timeout:0)`
+
+a|
+Environment variables are set not set correctly in the pre-task or post-task scripts.
+a|
+Check if the pre-task or post-task scripts follow the standard SnapManager plug-in structure. For additional information about using the environmental variables in the script, see xref:concept-operations-in-task-scripts.adoc[Operations in task scripts].
+a|
+`ORA-01450: maximum key length (6398) exceeded`.
+a|
+When you perform an upgrade from SnapManager 3.2 for SAP to SnapManager 3.3 for SAP, the upgrade operation fails with this error message. This issue might occur because of one of the following reasons:
+
+* The block size of the tablespace in which the repository exists is less than 8k.
+* The `nls_length_semantics` parameter is set to `char`.
+
+a|
+You must assign the values to the following parameters:
+
+* `block_size`=*8192*
+* `nls_length`=*byte*
+
+After modifying the parameter values, you must restart the database.
+
+For more information, see the Knowledge Base article 2017632.
+
+|===
+
+== Error messages associated with the database backup process (2000 series)
+
+The following table lists the common errors associated with the database backup process:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-02066: You cannot delete or free the archive log backup "data-logs" as the backup is associated with data backup "data-logs"`.
+a|
+The archive log backup is taken along with the data files backup, and you tried to delete the archive log backup.
+a|
+Use the `_-force_` option to delete or free the backup.
+a|
+`SMSAP-02067: You cannot delete, or free the archive log backup "data-logs" as the backup is associated with data backup "data-logs" and is within the assigned retention duration`.
+a|
+The archive log backup is associated with the database backup and is within the retention period, and you tried to delete the archive log backup.
+a|
+Use the `-force` option to delete or free the backup.
+a|
+`SMSAP-07142: Archived Logs excluded due to exclusion pattern <exclusion> pattern`.
+a|
+You exclude some archive log files during the profile create or backup create operation.
+a|
+No action is required.
+a|
+`SMSAP-07155: <count> archived log files do not exist in the active file system. These archived log files will not be included in the backup`.
+a|
+The archive log files do not exist in the active file system during the profile create or backup create operation. These archived log files are not included in the backup.
+a|
+No action is required.
+a|
+`SMSAP-07148: Archived log files are not available`.
+a|
+No archive log files are created for the current database during the profile create or backup create operation.
+a|
+No action is required.
+a|
+`SMSAP-07150: Archived log files are not found`.
+a|
+All the archive log files are missing from the file system or excluded during the profile create or backup create operation.
+a|
+No action is required.
+a|
+`SMSAP-13032: Cannot perform operation: Backup Create. Root cause: ORACLE-20001: Error trying to change state to OPEN for database instance dfcln1: ORACLE-20004: Expecting to be able to open the database without the RESETLOGS option, but oracle is reporting that the database needs to be opened with the RESETLOGS option. To keep from unexpectedly resetting the logs, the process will not continue. Please ensure that the database can be opened without the RESETLOGS option and try again`.
+a|
+You try to back up the cloned database that was created with the -`no-resetlogs` option. The cloned database is not a complete database.However, you can perform SnapManager operations such as creating profiles and backups, and so on with the cloned database, but the SnapManager operations fail because the cloned database is not configured as a complete database.
+
+a|
+Recover the cloned database or convert the database into a Data Guard Standby database.
+|===
+
+== Error messages associated with the restore process (3000 series)
+
+The following table shows the common errors associated with the restore process:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-03031:Restore specification is required to restore backup <variable> because the storage resources for the backup has already been freed`.
+a|
+You attempted to restore a backup that has its storage resources freed without specifying a restore specification.
+a|
+Specify a restore specification.
+a|
+`SMSAP-03032:Restore specification must contain mappings for the files to restore because the storage resources for the backup has already been freed. The files that need mappings are: <variable> from Snapshots: <variable>`
+a|
+You attempted to restore a backup that has its storage resources freed along with a restore specification that does not contain mapping for all the files to be restored.
+a|
+Correct the restore specification file so that the mappings match the files to be restored.
+a|
+`ORACLE-30028: Unable to dump log file <filename>. The file may be missing/inaccessible/corrupted. This log file will not be used for recovery`.
+a|
+The online redo log files or archive log files cannot be used for recovery.This error occurs due to following reasons:
+
+* The online redo log files or archived log files mentioned in the error message do not have sufficient change numbers to apply for recovery. This occurs when the database is online without any transactions. The redo log or archived log files do not have any valid change numbers that can be applied for recovery.
+* The online redo log file or archived log file mentioned in the error message does not have sufficient access privileges for Oracle.
+* The online redo log file or archived log file mentioned in the error message is corrupted and cannot be read by Oracle.
+* The online redo log file or archived log file mentioned in the error message is not found in the path mentioned.
+
+a|
+If the file mentioned in the error message is an archived log file and if you have manually provided for recovery, ensure that the file has full access permissions to Oracle.Even if the file has full permissions, and the message continues, the archive log file does not have any change numbers to be applied for recovery, and this message can be ignored.
+
+|===
+
+== Error messages associated with the clone process (4000 series)
+
+The following table shows the common errors associated with the clone process:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-04133: Dump destination must not exist`
+a|
+You are using SnapManager to create new clones; however, the dump destinations to be used by the new clone already exist. SnapManager cannot create a clone if the dump destinations exist.
+a|
+Remove or rename the old dump destinations before you create a clone.
+a|
+`SMSAP-13032:Cannot perform operation: Clone Create. Root cause: ORACLE-00001: Error executing SQL: [ALTER DATABASE OPEN RESETLOGS;]. The command returned: ORA-38856: cannot mark instance UNNAMED_INSTANCE_2 (redo thread 2) as enabled`.
+a|
+The clone creation fails when you create the clone from the standby database using the following setup:
+
+* The standby is created by using RMAN for taking the data files backup.
+
+a|
+Add the `_no_recovery_through_resetlogs=TRUE` parameter in the clone specification file before creating the clone. See Oracle documentation (ID 334899.1) for additional information. Ensure that you have your Oracle metalink user name and password.
+
+a|
+[INFO] Operation failed. Syntax errors in clone specification: [error: cvc-complex-type.2.4c: Expected elements 'value@http://www.example.com default@http://www.example.com' before the end of the content in element parameter@http://www.example.com]
+a|
+You did not provide a value for a parameter in the clone specification file.
+a|
+You must either provide a value for the parameter or delete that parameter if it is not required from the clone specification file.
+|===
+
+== Error messages associated with the managing profile process (5000 series)
+
+The following table shows the common errors associated with the clone process:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-20600: Profile "profile1" not found in repository "repo_name". Please run "profile sync" to update your profile-to-repository mappings`.
+a|
+The dump operation cannot be performed when profile creation fails.
+a|
+Use `smsap system dump`.
+|===
+
+== Error messages associated with freeing backup resources (backups 6000 series)
+
+The following table shows the common errors associated with backup tasks:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-06030: Cannot remove backup because it is in use: <variable>`
+a|
+You attempted to perform the backup free operation using commands, when the backup is mounted or is marked to be retained on an unlimited basis.
+a|
+Unmount the backup or change the unlimited retention policy. If clones exist, delete them.
+
+a|
+`SMSAP-06045: Cannot free backup <variable> because the storage resources for the backup have already been freed`
+a|
+You attempted to perform the backup free operation using commands, when the backup has been already freed.
+a|
+You cannot free the backup if it is already freed.
+a|
+`SMSAP-06047: Only successful backups can be freed. The status of backup <ID> is <status>`.
+a|
+You attempted to perform the backup free operation using commands, when the backup status is not successful.
+a|
+Try again after a successful backup.
+a|
+`SMSAP-13082: Cannot perform operation <variable> on backup <ID> because the storage resources for the backup have been freed`.
+a|
+Using commands, you attempted to mount a backup that has its storage resources freed.
+a|
+You cannot mount, clone, verify, or perform backint restore on a backup that has its storage resources freed.
+
+|===
+
+== Error messages associated with the rolling upgrade process (9000 series)
+
+The following table shows the common errors associated with the rolling upgrade process:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-09234:Following hosts does not exist in the old repository. <hostnames>`.
+a|
+You tried to perform rolling upgrade of a host, which does not exist in the previous repository version.
+a|
+Check whether the host exists in the previous repository using the `repository show-repository` command from the earlier version of the SnapManager CLI.
+a|
+`SMSAP-09255:Following hosts does not exist in the new repository. <hostnames>`.
+a|
+You tried to perform roll back of a host, which does not exist in the new repository version.
+a|
+Check whether the host exists in the new repository using the `repository show-repository` command from the later version of the SnapManager CLI.
+a|
+`SMSAP-09256:Rollback not supported, since there exists new profiles <profilenames>.for the specified hosts <hostnames>`.
+a|
+You tried to roll back a host that contains new profiles existing in the repository. However, these profiles did not exist in the host of the earlier SnapManager version.
+a|
+Delete new profiles in the later or upgraded version of SnapManager before the rollback.
+a|
+`SMSAP-09257:Rollback not supported, since the backups <backupid> are mounted in the new hosts`.
+a|
+You tried to roll back a later version of the SnapManager host that has mounted backups. These backups are not mounted in the earlier version of the SnapManager host.
+a|
+Unmount the backups in the later version of the SnapManager host, and then perform the rollback.
+a|
+`SMSAP-09258:Rollback not supported, since the backups <backupid> are unmounted in the new hosts`.
+a|
+You tried to roll back a later version of the SnapManager host that has backups that are being unmounted.
+a|
+Mount the backups in the later version of the SnapManager host, and then perform the rollback.
+a|
+`SMSAP-09298:Cannot update this repository since it already has other hosts in the higher version. Please perform rollingupgrade for all hosts instead`.
+a|
+You performed a rolling upgrade on a single host and then updated the repository for that host.
+a|
+Perform a rolling upgrade on all the hosts.
+a|
+`SMSAP-09297: Error occurred while enabling constraints. The repository might be in inconsistent state. It is recommended to restore the backup of repository you have taken before the current operation`.
+a|
+You attempted to perform a rolling upgrade or rollback operation if the repository database is left in an inconsistent state.
+a|
+Restore the repository that you backed up earlier.
+|===
+
+== Execution of operations (12,000 series)
+
+The following table shows the common errors associated with operations:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-12347 [ERROR]: SnapManager server not running on host <host> and port <port>. Please run this command on a host running the SnapManager server`.
+a|
+While setting up the profile, you entered information about the host and port. However, SnapManager cannot perform these operations because the SnapManager server is not running on the specified host and port.
+a|
+Enter the command on a host running the SnapManager server. You can check the port with the `lsnrctl status` command and see the port on which the database is running. Change the port in the backup command, if needed.
+
+|===
+
+== Execution of process components (13,000 series)
+
+The following table shows the common errors associated with the process component of SnapManager:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-13083: Snapname pattern with value "x" contains characters other than letters, numbers, underscore, dash, and curly braces`.
+a|
+When creating a profile, you customized the Snapname pattern; however, you included special characters that are not allowed.
+a|
+Remove special characters other than letters, numbers, underscore, dash, and braces.
+a|
+`SMSAP-13084: Snapname pattern with value "x" does not contain the same number of left and right braces`.
+a|
+When you were creating a profile, you customized the Snapname pattern; however, the left and right braces do not match.
+a|
+Enter matching opening and closing brackets in the Snapname pattern.
+a|
+`SMSAP-13085: Snapname pattern with value "x" contains an invalid variable name of "y"``.
+a|
+When you were creating a profile, you customized the Snapname pattern; however, you included a variable that is not allowed.
+a|
+Remove the offending variable. To see a list of acceptable variables, see xref:concept-snapshot-copy-naming.adoc[Snapshot copy naming].
+a|
+`SMSAP-13086 Snapname pattern with value "x" must contain variable "smid"`.
+a|
+When you were creating a profile, you customized the Snapname pattern; however, you omitted the required `smid` variable.
+a|
+Insert the required `smid` variable.
+|===
+
+== Error messages associated with SnapManager Utilities (14,000 series)
+
+The following table shows the common errors associated with SnapManager utilities:
+
+[options="header"]
+|===
+| Error message| Explanation| Resolution
+a|
+`SMSAP-14501: Mail ID cannot be blank`.
+a|
+You did not enter the email address.
+a|
+Enter a valid email address.
+a|
+`SMSAP-14502: Mail subject cannot be blank`.
+a|
+You did not enter the email subject.
+a|
+Enter the appropriate email subject.
+a|
+`SMSAP-14506: Mail server field cannot be blank`.
+a|
+You did not enter the email server host name or IP address.
+a|
+Enter the valid mail server host name or IP address.
+a|
+`SMSAP-14507: Mail Port field cannot be blank`.
+a|
+You did not enter the email port number.
+a|
+Enter the email server port number.
+a|
+`SMSAP-14508: From Mail ID cannot be blank`.
+a|
+You did not enter the sender's email address.
+a|
+Enter a valid sender's email address.
+a|
+`SMSAP-14509: Username cannot be blank`.
+a|
+You enabled authentication and did not provide the user name.
+a|
+Enter the email authentication user name.
+a|
+`SMSAP-14510: Password cannot be blank. Please enter the password`.
+a|
+You enabled authentication and did not provide the password.
+a|
+Enter the email authentication password.
+a|
+`SMSAP-14550: Email status <success/failure>`.
+a|
+The port number, mail server, or receiver's email address is invalid.
+a|
+Provide proper values during email configuration.
+a|
+`SMSAP-14559: Sending email notification failed: <error>`.
+a|
+This could be due to invalid port number, invalid mail server, or invalid receiver's mail address.
+a|
+Provide proper values during email configuration.
+a|
+`SMSAP-14560: Notification failed: Notification configuration is not available`.
+a|
+Notification sending failed, because notification configuration is not available.
+a|
+Add notification configuration.
+a|
+`SMSAP-14565: Invalid time format. Please enter time format in HH:mm`.
+a|
+You have entered time in an incorrect format.
+a|
+Enter the time in the format: hh:mm.
+a|
+`SMSAP-14566: Invalid date value. Valid date range is 1-31`.
+a|
+The date configured is incorrect.
+a|
+Date should be in the range from 1 through 31.
+a|
+`SMSAP-14567: Invalid day value. Valid day range is 1-7`.
+a|
+The day configured is incorrect.
+a|
+Enter the day range from 1 through 7.
+a|
+`SMSAP-14569: Server failed to start Summary Notification schedule`.
+a|
+The SnapManager server got shut down due to unknown reasons.
+a|
+Start the SnapManager server.
+a|
+`SMSAP-14570: Summary Notification not available`.
+a|
+You have not configured summary notification.
+a|
+Configure the summary notification.
+a|
+`SMSAP-14571: Both profile and summary notification cannot be enable`.
+a|
+You have selected both the profile and summary notification options.
+a|
+Enable either the profile notification or summary notification.
+a|
+`SMSAP-14572: Provide success or failure option for notification`.
+a|
+You have not enabled the success or failure options.
+a|
+You must select either success or failure option or both.
+|===

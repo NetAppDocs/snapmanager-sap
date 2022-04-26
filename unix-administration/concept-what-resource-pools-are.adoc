@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/concept-what-resource-pools-are.html
+sidebar: sidebar
+keywords: resource, pool, collection, physical, storage, system, volume, lun, provision, assign, aggregate
+summary: "A resource pool is a collection of unused physical storage (such as storage systems or aggregates) from which new volumes or LUNs can be provisioned to contain data. If you assign a storage system to a resource pool, all the aggregates on that storage system become available for provisioning."
+---
+= What resource pools are
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+A resource pool is a collection of unused physical storage (such as storage systems or aggregates) from which new volumes or LUNs can be provisioned to contain data. If you assign a storage system to a resource pool, all the aggregates on that storage system become available for provisioning.
+
+Storage administrators use the Protection Manager's console to assign a resource pool to the backup and mirror copies. The provision application can then automatically provision volumes out of the physical resources in the resource pool to contain backups and mirror copies.
+
+For protected profiles, SnapManager displays information about a profile and indicates whether a storage resource pool has been assigned to that profile. If not, the profile is considered "non-conformant." After a storage resource pool has been assigned to the corresponding profile's dataset, the profile is considered "conformant".

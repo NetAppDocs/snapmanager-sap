@@ -1,0 +1,12 @@
+---
+permalink: unix-administration/task-protected-backup-configuration-and-execution.html
+sidebar: sidebar
+keywords: configure, snapmanager, protection, manager, support, database, backup, secondary, administrator, coordinate, action, protect, configuration, execution
+summary: "You must configure SnapManager and Protection Manager to support database backup to secondary storage. The database administrator and the storage administrator must coordinate their actions."
+---
+= Protected backup configuration and execution
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must configure SnapManager and Protection Manager to support database backup to secondary storage. The database administrator and the storage administrator must coordinate their actions.

@@ -1,0 +1,81 @@
+---
+permalink: unix-administration/concept-managing-profiles-for-efficient-backups.html
+sidebar: sidebar
+keywords: create, profile, snapmanager, database, operation, manage, managing, efficient
+summary: "You must create a profile in SnapManager for the database on which you want to perform an operation. You must select the profile and then select the operation that you want to perform."
+---
+= Managing profiles for efficient backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must create a profile in SnapManager for the database on which you want to perform an operation. You must select the profile and then select the operation that you want to perform.
+
+== Tasks related to profiles
+
+You can perform the following tasks:
+
+* Create profiles to enable full or partial backups and backups to primary, secondary, or even tertiary storage.
++
+You can also create profiles to separate the archive log backups from the data file backups.
+
+* Verify profiles.
+* Update profiles.
+* Delete profiles.
+
+== About profiles and authentication
+
+When you create a profile, you can specify a database and choose one of the following methods to connect to the database:
+
+* Oracle authentication with a user name, password, and port
+* Operating system (OS) authentication with no user name, password, or port.
++
+For OS authentication, you must enter the OS account user and group information.
++
+NOTE: To use OS authentication for the Real Application Cluster (RAC) databases, the SnapManager server must be running on each node of the RAC environment and the database password must be the same for all Oracle instances in a RAC environment. SnapManager uses the database user name and password to connect to every RAC instance in the profile.
+
+* Database authentication when `sqlnet.authentication_services` is set to `*NONE*`. SnapManager then uses the database user name and password for all the connections to the target database.
++
+NOTE: To use database authentication for an Automatic Storage Management (ASM) instance, you must enter the user name and password that you use to log in to the ASM instance.
+
+You can set `sqlnet.authentication_services` to `*NONE*` only in the following environments:
+
+[cols="1a,1a,1a,1a" options="header"]
+|===
+| Database layout| Oracle version| Is database authentication supported for the target database| Is database authentication supported for the ASM instance
+a|
+Any non-ASM and non-RAC database
+a|
+Oracle 10g and Oracle 11g (lesser than 11.2.0.3)
+a|
+Yes
+a|
+No
+a|
+Stand-alone ASM database on UNIX
+a|
+Oracle 11.2.0.3 and later
+a|
+Yes
+a|
+Yes
+a|
+ASM instance on RAC database on UNIX
+a|
+Oracle 11.2.0.3
+a|
+No
+a|
+No
+a|
+RAC database on NFS
+a|
+Oracle 11.2.0.3
+a|
+Yes
+a|
+No
+|===
+*Note:* After you disable `sqlnet.authentication_services` and change the authentication method to database authentication, you must set `sqlnet.authentication_services` to `*NONE*`.
+
+If you are accessing a profile for the first time, you must enter your profile password. After you enter your credentials, you can view the database backups within the profile.

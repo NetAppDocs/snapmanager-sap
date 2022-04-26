@@ -1,0 +1,39 @@
+---
+permalink: unix-administration/task-use-snapmanager-for-oraclesnapmanager-for-sap-to-restore-backups-from-secondary-storage.html
+sidebar: sidebar
+keywords: administrator, restore, protect, backup, secondary, storage, copy, data, back, primary, snapmanager
+summary: "Administrators can restore protected backups from secondary storage and can choose how they want to copy the data back to the primary storage."
+---
+= Use SnapManager for SAP to restore backups from secondary storage
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Administrators can restore protected backups from secondary storage and can choose how they want to copy the data back to the primary storage.
+
+*What you'll need*
+
+Before you attempt to restore the backup, check the properties of the backup and ensure that the backup is freed on the primary storage system and is protected on secondary storage.
+
+.Steps
+
+. From the SnapManager for SAP Repository tree, right-click the backup you want to restore, and select *Restore*.
+. In the Restore and Recovery Wizard Welcome page, click *Next*.
+. In the Restore Configuration Information page, click *Complete Datafile/Tablespace Restore with Control Files*.
+. Click *Allow shutdown of database if necessary*, and then click *Next*.
++
+SnapManager changes the database state, if necessary. For example, if the database is offline and it needs to be online, SnapManager forces it online.
+
+. At the Recovery Configuration Information page, click *All Logs*. Then, click *Next*.
++
+SnapManager restores and recovers the database to the last transaction and applies all required logs.
+
+. In the Restore Source Location Configuration page, select the ID of the protected backup source and click *Next*.
+. In the Volume Restore Configuration Information page, click *Attempt volume restore* to attempt volume restore.
+. Click *Fallback to file-based restore*.
++
+This allows SnapManager to use the file-based restore method if the volume restore method cannot be completed.
+
+. To see the eligibility checks for fast restore and information about mandatory and overridable checks, click *Preview*.
+. At the Perform Operation page, verify the information you have supplied and click *Restore*.
+. To view details about the process, click *Operation Details*.

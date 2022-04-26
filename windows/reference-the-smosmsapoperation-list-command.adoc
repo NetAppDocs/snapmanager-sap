@@ -1,0 +1,60 @@
+---
+permalink: windows/reference-the-smosmsapoperation-list-command.html
+sidebar: sidebar
+keywords: command, list, summary, information, operation, record, profile, smsap
+summary: "This command lists the summary information of all operations recorded against a specified profile."
+---
+= The smsap operation list command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command lists the summary information of all operations recorded against a specified profile.
+
+== Syntax
+
+----
+
+        smsap operation list
+-profile profile_name
+\[-delimiter character\]
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *`-profile _profile_name_`*
++
+Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
+
+* *`-delimiter _character_`*
++
+(Optional) When this parameter is specified, the command lists each row on a separate line and the attributes in that row are separated by the character specified.
+
+* *`-quiet`*
++
+(Optional) Displays only error messages on the console. The default is to display error and warning messages.
+
+* *`-verbose`*
++
+(Optional) Displays error, warning, and informational messages on the console.
+
+== Example command
+
+The following example lists the summary information of all the operations logged against the specified profile.
+
+----
+smsap operation list -profile myprofile
+----
+
+----
+Start Date Status Operation ID Type Host
+-------------------- ---------- -------------------------------- ------------------ --
+2007-07-16 16:03:57 SUCCESS 8abc01c813d0a1530113d0a15c5f0005 Profile Create Host3
+2007-07-16 16:04:55 FAILED 8abc01c813d0a2370113d0a241230001 Backup Host3
+2007-07-16 16:50:56 SUCCESS 8abc01c813d0cc580113d0cc60ad0001 Profile Update Host3
+2007-07-30 15:44:30 SUCCESS 8abc01c81418a88e011418a8973e0001 Remove Backup Host3
+2007-08-10 14:31:27 SUCCESS 8abc01c814510ba20114510bac320001 Backup Host3
+2007-08-10 14:34:43 SUCCESS 8abc01c814510e9f0114510ea98f0001 Mount Host3
+2007-08-10 14:51:59 SUCCESS 8abc01c814511e6e0114511e78d40001 Unmount Host3
+----

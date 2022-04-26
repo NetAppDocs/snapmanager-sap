@@ -1,0 +1,51 @@
+---
+permalink: windows/task-update-the-existing-repository.html
+sidebar: sidebar
+keywords: update, exist, repository, upgrade, snapmanager, path
+summary: "You do need not to update the existing repository if you are upgrading from SnapManager 3.3.x to SnapManager 3.4 or later, but for all other upgrade paths you must update the existing repository so that you can access it after the upgrade."
+---
+= Update the existing repository
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You do need not to update the existing repository if you are upgrading from SnapManager 3.3.x to SnapManager 3.4 or later, but for all other upgrade paths you must update the existing repository so that you can access it after the upgrade.
+
+== What you'll need
+
+* The upgraded SnapManager server must have been started and verified.
+* A backup of the existing repository must exist.
+
+== About this task
+
+* If you are upgrading from any version earlier than SnapManager 3.1 to SnapManager 3.3 or later, you must first upgrade to SnapManager 3.2.
++
+After upgrading to SnapManager 3.2, you can then upgrade to SnapManager 3.3 or later.
+
+* After you update the repository, you cannot use the repository with an earlier version of SnapManager.
+
+.Step
+
+. Update the existing repository:
++
+`*smsap repository update -repository -dbname _repository_service_name_ -host _repository_host_name_ -login -username _repository_user_name_ -port _repository_port_*`
+ ** The repository user name, repository service name, and repository host name can consist of alphanumeric characters, a minus sign, an underscore, and a period.
+ ** The repository port can be any valid port number.
+The other options used while updating the existing repository are as follows:
+
+ ** The `force` option
+ ** The `noprompt` option
+ ** The `quiet` option
+ ** The `verbose` option
+
++
+*Example*
+
+----
+smsap repository update -repository -dbname HR1
+-host server1 -login -username admin -port 1521
+----
+
+== After you finish
+
+Restart the SnapManager server to restart any associated schedules.

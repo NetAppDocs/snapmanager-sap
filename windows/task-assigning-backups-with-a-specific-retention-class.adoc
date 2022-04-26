@@ -1,0 +1,14 @@
+---
+permalink: windows/task-assigning-backups-with-a-specific-retention-class.html
+sidebar: sidebar
+keywords: dba, retention, class, hourly, daily, weekly, monthly, backup, eligible, assign
+summary: DBAs can assign a specific retention class of hourly, daily, weekly, or monthly to backups. Assigning a specific retention class makes the backups performed under this change eligible for deletion.
+---
+= Assigning backups with a specific retention class
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+DBAs can assign a specific retention class of hourly, daily, weekly, or monthly to backups. Assigning a specific retention class makes the backups performed under this change eligible for deletion.
+
+. To assign a specific backup retention class, enter this command:``smsap backup update -profileprofile_name {-labellabel [data | -archivelogs] | -idid} -retain \[-hourly \| -daily \| -weekly \| -monthly \]``

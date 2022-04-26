@@ -1,0 +1,23 @@
+---
+permalink: unix-installation-7mode/concept-what-a-rollback-is.html
+sidebar: sidebar
+keywords: rollback, operation, enable, revert, version, snapmanager, perform, roll, upgrade
+summary: "The rollback operation enables you to revert to an earlier version of SnapManager after you perform a rolling upgrade."
+---
+= What a rollback is
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The rollback operation enables you to revert to an earlier version of SnapManager after you perform a rolling upgrade.
+
+NOTE: Before performing a rollback, you must ensure that all the hosts under the repository database can be resolved.
+
+When you perform a rollback, the following are rolled back:
+
+* Backups that were created, freed, and deleted by using the SnapManager version from which you are rolling back
+* Clones created from a backup that was created by using the SnapManager version from which you are rolling back
+* Profile credentials modified by using the SnapManager version from which you are rolling back
+* Protection status of the backup modified by using the SnapManager version from which you are rolling back
+
+The features that were available in the SnapManager version that you were using but are not available in the version to which you are rolling back, are not supported. For example, when you perform a rollback from SnapManager 3.3 or later to SnapManager 3.1, the history configuration set for profiles in SnapManager 3.3 or later is not rolled back to the profiles in SnapManager 3.1. This is because the history configuration feature was not available in SnapManager 3.1.

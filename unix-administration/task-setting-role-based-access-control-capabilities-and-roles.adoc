@@ -1,0 +1,253 @@
+---
+permalink: unix-administration/task-set-role-based-access-control-capabilities-and-roles.html
+sidebar: sidebar
+keywords: enable, role-based, access, control, rbac, snapmanager, snapdrive, capabilities, capability, setting, role, operation
+summary: "After you enable role-based access control (RBAC) for SnapManager using SnapDrive, you can add RBAC capabilities and users to roles to perform SnapManager operations."
+---
+= Set role-based access control capabilities and roles
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After you enable role-based access control (RBAC) for SnapManager using SnapDrive, you can add RBAC capabilities and users to roles to perform SnapManager operations.
+
+*What you'll need*
+
+You must create a group in the Data Fabric Manager server and add the group to both primary and secondary storage systems. Run the following commands:
+
+* `dfm group create _smsap_grp_`
+* `dfm group add _smsap_grpprimary_storage_system_`
+* `dfm group add _smsap_grpsecondary_storage_system_`
+
+*About this task*
+
+You can use either the Operations Manager web interface or the Data Fabric Manager server command-line interface (CLI) to modify RBAC capabilities and roles.
+
+The table lists the RBAC capabilities required to perform SnapManager operations:
+
+[cols="1a,2a,3a" options="header"]
+|===
+| SnapManager operations| RBAC capabilities required when data protection is not enabled| RBAC capabilities required when data protection is enabled
+a|
+Profile create or profile update
+a|
+SD.Storage.Read (smsap_grp)
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+a|
+Profile protection
+a|
+DFM.Database.Write (smsap_grp)
+
+SD.Storage.Read (smsap_grp)
+
+SD.Config.Read (smsap_grp)
+
+SD.Config.Write (smsap_grp)
+
+SD.Config.Delete (smsap_grp)
+
+GlobalDataProtection
+
+a|
+None
+a|
+Backup create
+a|
+SD.Storage.Read (smsap_grp)
+
+SD.Snapshot.Write (smsap_grp)
+
+SD.Snapshot.Read (smsap_grp)
+
+SD.Snapshot.Delete (smsap_grp)
+
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Write (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Delete (SMSAP `__profile_` dataset)
+
+a|
+Backup create (with DBverify)
+a|
+SD.Storage.Read (smsap_grp)
+
+SD.Snapshot.Write (smsap_grp)
+
+SD.Snapshot.Read (smsap_grp)
+
+SD.Snapshot.Delete (smsap_grp)
+
+SD.SnapShot.Clone (smsap_grp)
+
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Write (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Delete (SMSAP `__profile_` dataset)
+
+SD.SnapShot.Clone (SMSAP `__profile_` dataset)
+
+a|
+Backup create (with RMAN)
+a|
+SD.Storage.Read (smsap_grp)
+
+SD.Snapshot.Write (smsap_grp)
+
+SD.Snapshot.Read (smsap_grp)
+
+SD.Snapshot.Delete (smsap_grp)
+
+SD.SnapShot.Clone (smsap_grp)
+
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Write (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Delete (SMSAP `__profile_` dataset)
+
+SD.SnapShot.Clone (SMSAP `__profile_` dataset)
+
+a|
+Backup restore
+a|
+SD.Storage.Read (smsap_grp)
+
+SD.Snapshot.Write (smsap_grp)
+
+SD.Snapshot.Read (smsap_grp)
+
+SD.Snapshot.Delete (smsap_grp)
+
+SD.SnapShot.Clone (smsap_grp)
+
+SD.Snapshot.Restore (smsap_grp)
+
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Write (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Delete (SMSAP `__profile_` dataset)
+
+SD.SnapShot.Clone (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Restore (SMSAP `__profile_` dataset)
+
+a|
+Backup delete
+a|
+SD.Snapshot.Delete (smsap_grp)
+a|
+SD.Snapshot.Delete (SMSAP `__profile_` dataset)
+a|
+Backup verify
+a|
+SD.Storage.Read (smsap_grp)
+
+SD.Snapshot.Read (smsap_grp)
+
+SD.Snapshot.Clone (smsap_grp))
+
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Clone (SMSAP `__profile_` dataset)
+
+a|
+Backup mount
+a|
+SD.Storage.Read (smsap_grp)
+
+SD.Snapshot.Read (smsap_grp)
+
+SD.Snapshot.Clone (smsap_grp)
+
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Clone (SMSAP `__profile_` dataset)
+
+a|
+Backup unmount
+a|
+SD.Snapshot.Clone (smsap_grp)
+a|
+SD.Snapshot.Clone (SMSAP `__profile_` dataset)
+a|
+Clone create
+a|
+SD.Storage.Read (smsap_grp)
+
+SD.Snapshot.Read (smsap_grp)
+
+SD.SnapShot.Clone (smsap_grp)
+
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Read (SMSAP `__profile_` dataset)
+
+SD.SnapShot.Clone (SMSAP `__profile_` dataset)
+
+a|
+Clone delete
+a|
+SD.Snapshot.Clone (smsap_grp)
+a|
+SD.Snapshot.Clone (SMSAP `__profile_` dataset)
+a|
+Clone split
+a|
+SD.Storage.Read (smsap_grp)
+
+SD.Snapshot.Read (smsap_grp)
+
+SD.SnapShot.Clone (smsap_grp)
+
+SD.Snapshot.Delete (smsap_grp)
+
+SD.Storage.Write (smsap_grp)
+
+a|
+SD.Storage.Read (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Read (SMSAP `__profile_` dataset)
+
+SD.SnapShot.Clone (SMSAP `__profile_` dataset)
+
+SD.Snapshot.Delete (SMSAP `__profile_` dataset)
+
+SD.Storage.Write (SMSAP `__profile_` dataset)
+
+|===
+For details about defining RBAC capabilities, see the _OnCommand Unified Manager Operations Manager Administration Guide_.
+
+.Steps
+
+. Access the Operations Manager console.
+. From the Setup menu, select *Roles*.
+. Select an existing role or create a new one.
+. To assign operations to your database storage resources, click *Add capabilities*.
+. On the Edit Role Settings page, to save your changes to the role, click *Update*.
+
+*Related information*
+
+http://support.netapp.com/documentation/productsatoz/index.html[_OnCommand Unified Manager Operations Manager Administration Guide_: [mysupport.netapp.com/documentation/productsatoz/index.html\^](https://mysupport.netapp.com/documentation/productsatoz/index.html)^]

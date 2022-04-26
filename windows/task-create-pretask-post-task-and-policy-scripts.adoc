@@ -1,0 +1,161 @@
+---
+permalink: windows/task-create-pretask-post-task-and-policy-scripts.html
+sidebar: sidebar
+keywords: snapmanager, enable, create, script, preprocess, activity, post-process, policy, task, backup, restore, clone, operation, installation, directory, pretask, post-task
+summary: "SnapManager enables you to create the scripts for the preprocessing activity, the post-processing activity, and policy tasks of the backup, restore, and clone operations. You must place the scripts in the correct installation directory to execute the preprocessing activity, post-processing activity, and policy tasks of the SnapManager operation."
+---
+= Create pretask, post-task, and policy scripts
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to create the scripts for the preprocessing activity, the post-processing activity, and policy tasks of the backup, restore, and clone operations. You must place the scripts in the correct installation directory to execute the preprocessing activity, post-processing activity, and policy tasks of the SnapManager operation.
+
+== About this task
+
+*Pretask and post-task script content*
+
+All scripts must include the following:
+
+* Specific operations (check, describe, and execute)
+* (Optional) Predefined environment variables
+* Specific error handling code (return code (rc))
+
+NOTE: You must include correct error handling code to validate the script.
+
+You can use the pretask scripts for many purposes, for example, cleaning up a disk space before the SnapManager operation starts. You can also use the post-task scripts, for instance, to estimate whether SnapManager has enough disk space to complete the operation.
+
+*Policy task script content*
+
+You can execute the policy script without using specific operations such as check, describe, and execute. The script includes the predefined environmental variables (optional) and specific error handling code.
+
+The policy script is executed before the backup, restore, and clone operations.
+
+*Supported format*
+
+A command file with a .cmd extension can be used as the prescript and post-script.
+
+NOTE: If you select the shell script file, the SnapManager operation does not respond. To resolve this, you must provide the command file in the plug-in directory, and perform the SnapManager operation again.
+
+*Script installation directory*
+
+The directory in which you install the script affects how it is used. You can place the scripts in the directory and execute the script before or after the backup, restore, or clone operation takes place. You must place the script in the directory specified in the table and use it on an optional basis when you specify the backup, restore, or clone operation.
+
+NOTE: You must ensure that the plugins directory has the executable permission before using the scripts for the SnapManager operation.
+
+[cols="4*",options="header"]
+|===
+| Activity| Backup| Restore| Clone
+a|
+Preprocessing
+a|
+<default_installation_directory>\plugins\backup\create\pre
+a|
+<default_installation_directory>\plugins\restore\create\pre
+a|
+<default_installation_directory>\plugins\clone\create\pre
+a|
+Post-processing
+a|
+<default_installation_directory>\plugins\backup\create\post
+a|
+<default_installation_directory>\plugins\restore\create\post
+a|
+<default_installation_directory>\plugins\clone\create\post
+a|
+Policy-based
+a|
+<default_installation_directory>\plugins\backup\create\policy
+a|
+<default_installation_directory>\plugins\restore\create\policy
+a|
+<default_installation_directory>\plugins\clone\create\policy
+|===
+*Sample scripts locations*
+
+The following are some samples of the pretask and post-task scripts for the backup and clone operations available in the installation directory path:
+
+* <default_installation_directory>\plugins\examples\backup\create\pre
+* <default_installation_directory>\plugins\examples\backup\create\post
+* <default_installation_directory>\plugins\examples\clone\create\pre
+* <default_installation_directory>\plugins\examples\clone\create\post
+
+*What you can change in the script*
+
+If you are creating a new script, you can change only the describe and execute operations. Each script must contain the following variables: `context`, `timeout`, and `parameter`.
+
+The variables you have described in the describe function of the script must be declared at the start of the script. You can add new parameter values in `parameter=()` and then use the parameters in the execute function.
+
+== Sample script
+
+The following is a sample script with a user-specified return code for estimating the space in the SnapManager host:
+
+----
+@echo off
+REM $Id: //depot/prod/capstan/Rcapstan_ganges/src/plugins/windows/examples/clone/create/policy/validate_sid.cmd#1 $
+REM $Revision: #1 $ $Date: 2011/12/06 $
+REM
+REM
+
+set /a EXIT=0
+
+set name="Validate SID"
+set description="Validate SID used on the target system"
+set parameter=()
+
+rem reserved system IDs
+set INVALID_SIDS=("ADD" "ALL" "AND" "ANY" "ASC" "COM" "DBA" "END" "EPS" "FOR" "GID" "IBM" "INT" "KEY" "LOG" "MON" "NIX" "NOT" "OFF" "OMS" "RAW" "ROW" "SAP" "SET" "SGA" "SHG" "SID" "SQL" "SYS" "TMP" "UID" "USR" "VAR")
+
+if /i "%1" == "-check" goto :check
+if /i "%1" == "-execute" goto :execute
+if /i "%1" == "-describe" goto :describe
+
+:usage:
+	echo usage: %0 "{ -check | -describe | -execute }"
+	set /a EXIT=99
+	goto :exit
+
+:check
+	set /a EXIT=0
+	goto :exit
+
+:describe
+	echo SM_PI_NAME:%name%
+	echo SM_PI_DESCRIPTION:%description%
+	set /a EXIT=0
+	goto :exit
+
+:execute
+	set /a EXIT=0
+
+	rem SM_TARGET_SID must be set
+	if "%SM_TARGET_SID%" == "" (
+		set /a EXIT=4
+		echo SM_TARGET_SID not set
+		goto :exit
+	)
+
+	rem exactly three alphanumeric characters, with starting with a letter
+	echo %SM_TARGET_SID% | findstr "\<[a-zA-Z][a-zA-Z0-9][a-zA-Z0-9]\>" >nul
+	if %ERRORLEVEL% == 1 (
+		set /a EXIT=4
+		echo SID is defined as a 3 digit value starting with a letter. [%SM_TARGET_SID%] is not valid.
+		goto :exit
+	)
+
+	rem not a SAP reserved SID
+	echo %INVALID_SIDS% | findstr /i \"%SM_TARGET_SID%\" >nul
+	if %ERRORLEVEL% == 0 (
+		set /a EXIT=4
+		echo SID [%SM_TARGET_SID%] is reserved by SAP
+		goto :exit
+	)
+
+	goto :exit
+
+
+
+:exit
+	echo Command complete.
+	exit /b %EXIT%
+----

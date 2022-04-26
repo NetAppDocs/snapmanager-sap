@@ -1,0 +1,32 @@
+---
+permalink: unix-installation-cmode/task-smsap-isg-access-the-snapmanager-user-interface.html
+sidebar: sidebar
+keywords: access, snapmanager, user, interface, ui, remote, web, browser, system, operate, support, target, database, smsapgui, command
+summary: "You can access the SnapManager user interface (UI) remotely by using a web browser from any system running on an operating system supported by SnapManager. You can also access the SnapManager UI from the target database host by running the smsapgui command."
+---
+= Access the SnapManager user interface
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can access the SnapManager user interface (UI) remotely by using a web browser from any system running on an operating system supported by SnapManager. You can also access the SnapManager UI from the target database host by running the `smsapgui` command.
+
+== What you'll need
+
+* You must ensure that SnapManager is running.
+* You must ensure that the supported operating system and Java are installed on the system where you want to access the SnapManager UI.
++
+For information about the supported operating system and Java, see the Interoperability Matrix tool.
+
+.Steps
+. In the web browser window, enter the following:``*+https://server_name.domain.com:port_number+*``
+ ** `_server_name_` is the name of the target database host where SnapManager is installed.
++
+You can also enter the IP address of the target database host.
+
+ ** `_port_number_` is the port on which SnapManager is running.
++
+The default value is 27214.
+. Click the *Launch SnapManager for SAP* link.
++
+The SnapManager for SAP UI is displayed.

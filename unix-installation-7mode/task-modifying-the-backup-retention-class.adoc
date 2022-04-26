@@ -1,0 +1,47 @@
+---
+permalink: unix-installation-7mode/task-modify-the-backup-retention-class.html
+sidebar: sidebar
+keywords: upgrading, upgrade, snapmanager, assign, default, backup, retention, class, exist, modify, value, requirement, modify
+summary: "After upgrading, SnapManager assigns the default backup retention class to the existing backups. You can modify the default retention class values to meet your backup requirements."
+---
+= Modify the backup retention class
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After upgrading, SnapManager assigns the default backup retention class to the existing backups. You can modify the default retention class values to meet your backup requirements.
+
+*About this task*
+
+The default backup retention class assigned to the existing backups are as follows:
+
+[cols="2a,3a",options="header"]
+|===
+| Backup type| Retention class assignment after upgrade
+a|
+Backups to be retained forever
+a|
+Unlimited
+a|
+Other backups
+a|
+Daily
+|===
+
+NOTE: You can delete the backups that are retained forever without changing the retention class.
+
+If you upgrade to SnapManager 3.0 or later, the greater of the following two values are assigned to the existing profiles:
+
+* Previous retention count for the profile
+* Default values for the retention count and duration of daily backups as specified in the `smsap.config` file
+
+.Step
+
+. Modify the values assigned to `retain.hourly.count` and `retain.hourly.duration` in the `smsap.config` file.
++
+The `smsap.config` file is located at `_default installation location_/properties/smsap.config`.
++
+You can enter the following values:
+
+ ** retain.hourly.count = `*12*`
+ ** retain.hourly.duration = `*2*`

@@ -25,21 +25,21 @@ homepage:
     - title: Get started
       links:
         - title: Product overview
-          url: /reference_smsap_isg_product_overview.html
+          url: /reference-smsap-isg-product-overview.html
         - title: Release notes
           url: reference-releasenotes.html
     - title: Administration
       links:
         - title: Configuring SnapManager for UNIX
-          url: /unix-administration/concept_configuring_snapmanager_for_oraclesap.html
+          url: /unix-administration/concept-configuring-snapmanager-for-oraclesap.html
         - title: Configuring SnapManager for Windows
-          url: /windows/concept_configuring_snapmanager_for_oraclesap.html
+          url: /windows/concept-configuring-snapmanager-for-oraclesap.html
     - title: Installation and setup
       links:
         - title: Deployment workflow (7-Mode)
-          url: /unix-installation-7mode/reference_smsap_isg_deployment_workflow.html
+          url: /unix-installation-7mode/reference-smsap-isg-deployment-workflow.html
         - title: Deployment workflow (Cluster Mode)
-          url: /unix-installation-cmode/reference_smsap_isg_deployment_workflow.html
+          url: /unix-installation-cmode/reference-smsap-isg-deployment-workflow.html
     - title: More resources
       links:
         - title: NetApp Support

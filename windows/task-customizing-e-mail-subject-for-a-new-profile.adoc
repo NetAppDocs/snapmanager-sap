@@ -1,0 +1,64 @@
+---
+permalink: windows/task-customizing-e-mail-subject-for-a-new-profile.html
+sidebar: sidebar
+keywords: customize, email, subject, profile, create, cusomtizing
+summary: You can customize the email subject for the new profile when you create it.
+---
+= Customizing the email subject for a new profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can customize the email subject for the new profile when you create it.
+
+You can customize the email subject by using the \{profile}_\{operation-name}_\{db-sid}_\{db-host}_\{start-date}_\{end-date}_\{status} pattern or enter your own text.
+
+[options="header"]
+|===
+| Variable name| Description| Example value
+a|
+profile
+a|
+Profile name used for the database operation
+a|
+PROF1
+a|
+operation-name
+a|
+Database operation name
+a|
+Backup, Data Backup, Data and Archive Logs Backup
+a|
+db-sid
+a|
+SID of the database
+a|
+DB1
+a|
+db-host
+a|
+Name of the host server
+a|
+hostA
+a|
+start-date
+a|
+Start time of the database operation in the mmdd:hh:ss yyyy format
+a|
+April 27 21:00:45 PST 2012
+a|
+end-date
+a|
+End time of the database operation in the mmdd:hh:ss yyyy format
+a|
+April 27 21:10:45 PST 2012
+a|
+status
+a|
+Database operation status
+a|
+Success
+|===
+If you do not provide any value for the variables, then SnapManager displays the following error message: Missing value(s) -subject.
+
+. Enter the following command: `smsap profile create -profileprofile [-profile-passwordprofile_password] -repository-dbnamerepo_service_name-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][ [ ]] [-notification [-success-emailemail_address1,email_address2-subjectsubject_pattern] [-failure-emailemail_address1,email_address2-subjectsubject_pattern]]`

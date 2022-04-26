@@ -1,0 +1,82 @@
+---
+permalink: unix-administration/concept-restore-preview-plans.html
+sidebar: sidebar
+keywords: snapmanager, restore, plan, before, after, operation, preview, review, analyze
+summary: "SnapManager provides restore plans before and after a restore operation is completed. The restore plans are used to preview, review, and analyze regarding different restore methods."
+---
+= What restore preview plans are
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager provides restore plans before and after a restore operation is completed. The restore plans are used to preview, review, and analyze regarding different restore methods.
+
+== Structure of the restore plan
+
+The restore plan consists of the following two sections:
+
+* Preview/Review: This section describes how SnapManager will restore (or has restored) each file.
+* Analysis: This section describes why some restore mechanisms were not used during the restore operation.
+
+== The Preview/Review section
+
+This section shows how each file will be or has been restored. When you view the restore plan before a restore operation, it is called a preview. When you view it after a restore operation is completed, it is called a review.
+
+The following preview example shows that the files are restored using fast volume-based restore, storage-side file system restore, and storage-side system restore methods. To determine why all the files would not be restored by using the same restore method, see the Analysis section.
+
+----
+Preview:
+The following files will be restored completely via: fast restore
++DG1/rac6/users.dbf
+
+The following files will be restored completely via: storage side file system restore
++DG2/rac6/sysaux.dbf
++DG2/rac6/system.dbf
+The following files will be restored completely via: storage side system restore
++DG2/rac6/undotbs1.dbf
++DG2/rac6/undotbs2.dbf
+----
+
+Each restore method has one subsection that contains information about the files that can be restored using that restore method. The subsections are ordered according to decreasing levels of storage method efficiency. In the example above, the fast restore method is more efficient than the storage file system restore method and so is displayed first.
+
+It is possible for one file to be restored by multiple restore methods. Multiple restore methods are used when the underlying logical unit numbers (LUNs) used for a file system are spread among different storage system volumes and some volumes are eligible for volume restore, while others are not. If multiple restore methods are used to restore the same file, the preview section will be similar to the following:
+
+----
+The following files will be restored via a combination of:
+[fast restore, storage side file system restore. storage side system restore]
+----
+
+== The Analysis section
+
+The Analysis section presents the reasons why some restore mechanisms will not be or were not used. You can use this information to determine what is required to enable more efficient restore mechanisms.
+
+The following example shows an Analysis section:
+
+----
+Analysis:
+
+The following reasons prevent certain files from being
+restored completely via: fast restore
+   * LUNs present in snapshot of volume fas960:
+        /vol/rac_6_asm_disks may not be consistent when reverted:
+        [fas960:/vol/rac6_asm_disks/DG4D1.lun]
+     Mapped LUNs in volume fas960:/vol/rac_6_asm_disks
+        not part of the restore scope will be reverted: [DG4D1.lun]
+
+Files to restore:
+     +DG2/rac6/sysaux.dbf
+     +DG2/rac6/system.dbf
+     +DG2/rac6/undotbs1.dbf
+     +DG2/rac6/undotbs2.dbf
+
+* Reasons denoted with an asterisk (*) are overridable.
+----
+
+In the example, the first failure is overridable by using `-fast -override` from the command-line interface (CLI), or by selecting *Override* in the graphical user interface (GUI). The second failure about mapped LUNs in the volume is mandatory and not overridable.
+
+You can resolve checks by doing the following:
+
+* To resolve a mandatory check failure, change the environment so that the check will pass.
+* To resolve an overridable check failure, you can change the environment, or override the check.
++
+However, you must be careful because overriding the check can result in undesired consequences.

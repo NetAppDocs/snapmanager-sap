@@ -1,0 +1,246 @@
+---
+permalink: unix-administration/task-create-database-backups.html
+sidebar: sidebar
+keywords: create, backup, entire, database, portion, tablespace, data, file, control, creating
+summary: "You can create backups of entire databases or portions of databases, including tablespaces, data files, or control files."
+---
+= Create database backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can create backups of entire databases or portions of databases, including tablespaces, data files, or control files.
+
+*About this task*
+
+SnapManager provides Snapshot copy capabilities for databases across many host-side storage stacks, including NFS, Veritas, and others.
+
+NOTE: For Real Application Clusters (RAC) configurations, SnapManager performs the backup on the host side in the profile.
+
+Administrators can optionally register backups with Oracle RMAN, which facilitates the use of RMAN to restore and recover the database at finer granularities such as blocks.
+
+While defining the profile, you can customize the names of the Snapshot copies created by backups of that profile. For example, you might insert a prefix string of
+
+`*HOPS*`
+
+to denote High Operations backups.
+
+In addition to defining unique names for Snapshot copies created by backups, you can also create unique labels for the backups themselves. When you create a backup, it is a good practice to supply a name for the backup so you have an easy way to identify it by using the `-label` parameter. This name must be unique for all backups created within a particular profile. The name can contain letters, numbers, underscore (_), and hyphen (-). It cannot start with a hyphen. Labels are case-sensitive. You might want to append information such as operating system environment variables, system date, and backup type.
+
+If you do not supply a label, SnapManager creates a default label name in the form `_scope_mode_datestring_`, where scope is full or partial and mode is offline, online, or automatic (the letter c for cold, h for hot, or a for automatic).
+
+From SnapManager 3.4, you can provide your own backup label by overriding the default backup label created by SnapManager. You must set the value of the `override.default.backup.pattern` parameter to true and specify the new backup label in the `new.default.backup.pattern` parameter. The backup label pattern can contain keywords such as database name, profile name, scope, mode and hostname, which has to be separated by underscore. For example, `new.default.backup.pattern=_dbname_profile_hostname_scope_mode_.`
+
+NOTE: The timestamp will be included automatically at the end of the generated label.
+
+When you enter a comment, you can include spaces and special characters. In contrast, when you enter a label, do not include spaces or special characters.
+
+For each backup, SnapManager automatically generates a GUID, which is a 32-character HEX string. To determine the GUID, you must run the `backup list` command with the `-verbose` option.
+
+You can create a full backup of a database while it is online or offline. To let SnapManager handle backing up a database regardless of whether it is online or offline, you should use the `-auto` option.
+
+While creating a backup, if you have enabled pruning and the summary notification was enabled in the profile, two separate emails are triggered. One email is for the backup operation and the other for the pruning. You can correlate these emails by comparing the backup name and backup ID contained in these emails.
+
+You can create a cold backup when the database is in the shutdown state. If the database is in a mounted state, change it to a shutdown state and perform the offline backup (cold backup).
+
+SnapManager (3.2 or later) enables you to back up the archive log files separately from the data files, enabling you to manage the archive log files efficiently.
+
+To create the archive log backups separately, you must create a new profile or update the existing profile to separate the archive log backups by using the `-separate-archivelog-backups` option. Using the profile, you can perform the following SnapManager operations:
+
+* Create an archive log backup.
+* Delete an archive log backup.
+* Mount an archive log backup.
+* Free an archive log backup.
+
+The backup options vary depending on the profile settings:
+
+* Using a profile that is not separated to take archive log backups separately allows you to do the following:
+ ** Create a full backup.
+ ** Create a partial backup.
+ ** Specify archive log destinations to be backed up for archive log files.
+ ** Specify archive log destinations to be excluded from the backup.
+ ** Specify the pruning options for deleting the archive log files from the archive log destinations.
+* Using a profile that is separated to take archive log backups allows you to do the following:
+ ** Create a data files-only backup.
+ ** Create an archivelogs-only backup.
+ ** While creating a data files-only backup, include the archive log backup along with the online data files only backup for cloning.
++
+If you have included archive log backups along with data files in the *Profile Settings* page of the *Profile Create* wizard from the SnapManager GUI, and if you have not selected the *Archivelogs* option in the *Backup Create* wizard, SnapManager always creates the archive log backup along with data files for all online backups.
++
+In such a situation, from the SnapManager CLI, you can consider all the archive log destinations for backup except for the exclude destinations specified in the SnapManager configuration file. But you cannot prune these archive log files. However, you can still use the `-archivelogs` option to specify the archive log file destination and prune the archive log files from the SnapManager CLI.
++
+If you are creating the backup using the `-auto` option and specify the `--archivelogs` option, SnapManager creates either an online or offline backup based on the current status of the backup.
+
+  *** SnapManager creates an offline backup when the database is offline and does not include the archive log files in the backup.
+  *** SnapManager creates an online backup including archive log files when the database is online.
+
+ ** While creating the archivelogs-only backup:
+  *** Specify the archive log destination to be backed up along with the archivelogs-only backup
+  *** Specify the archive log destinations to be excluded from the archive logs-only backup
+  *** Specify the pruning options for deleting the archive log files from the archive log destinations
+* *Scenarios not supported*
+ ** You cannot create the archivelog-only backup along with an offline data files-only backup.
+ ** You cannot prune the archive log files when the archive log files are not backed up.
+ ** You cannot prune the archive log files when Flash Recovery Area (FRA) is enabled for archive log files.
++
+If you specify the archive log location in Flash Recovery Area, you must ensure that you also specify the archive log location in the `archive_log_dest` parameter.
+
+When you specify the label for online data files backup with included archive log backup, the label is applied for data files backup, and the archive log backup will be suffixed with `(_logs)`. This suffix can be configured by changing the parameter `suffix.backup.label.with.logs` parameter in the SnapManager configuration file.
+
+For example, you can specify the value as `suffix.backup.label.with.logs=arc` so that the _logs default value is changed to `_arc`.
+
+If you have not specified any archive log destinations to be included in the backup, then SnapManager includes all the archive log destinations configured in the database.
+
+If any archive log files are missing in any one of the destinations, SnapManager skips all these archive log files created before the missing archive log files even if these files are available in other archive log destination.
+
+While creating archive log backups, you must specify the archive log file destinations to be included in the backup, and can set the configuration parameter to include the archive log files always beyond the missing files in the backup.
+
+NOTE: By default, this configuration parameter is set to `*true*` to include all the archive log files, beyond missing files. If you are using your own archive log pruning scripts or manually deleting archive log files from the archive log destinations, you can disable this parameter, so that SnapManager can skip the archive log files and proceed further with the backup.
+
+SnapManager does not support the following SnapManager operations for archive log backups:
+
+* Clone the archive log backup
+* Restore archive log backup
+* Verify archive log backup
+
+SnapManager also supports backing up the archive log files from the flash recovery area destinations.
+
+. Enter the following command:
++
+`*smsap backup create -profile _profile_name_ {[-full {-online | -offline | -auto} [-retain {-hourly | -daily | -weekly | -monthly | -unlimited}] [-verify] | [-data [[-files _files_ [_files_]] | [-tablespaces _-tablespaces_ [_-tablespaces_]] [-datalabel _label_] {-online | -offline | -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited]} [-verify] | [-archivelogs [-label _label_] [-comment _comment_] [-snapvaultlabel _SnapVault_label_][-protect | -noprotect | -protectnow] [-backup-destpath1 [,[_path2_]]] [-exclude-dest _path1_ [_,path2_]]] [-prunelogs {-all | -untilSCN _untilSCN_ | -until-date _yyyy-MM-dd:HH:mm:ss_ | -before {-months | -days | -weeks | -hours}} -prune-dest _prune_dest1_,[_prune_dest2_]] [-taskspec _taskspec_]} [-dump] [-force] [-quiet | -verbose]*`
++
+[cols="1a,3a" options="header"]
+|===
+| If you want to...| Then...
+a|
+*Create a backup on secondary storage using _SnapManager_cDOT_Vault_ protection policy*
+a|
+Specify `-snapvaultlabel`.
+
+You must provide the SnapMirror label that you specified in the rules of the SnapMirror policy while setting up the SnapVault relationship as the value.
+a|
+*Specify whether you want to take a backup of an online or offline database, rather than allowing SnapManager to handle whether it is online or offline*
+a|
+Specify `-offline` to take a backup of the offline database.
+
+Specify `-online` to take a backup of the online database.
+
+If you use these options, you cannot use the `-auto` option.
+a|
+*Specify whether you want to let SnapManager handle backing up a database regardless of whether it is online or offline*
+a|
+Specify the `-auto` option. If you use this option, you cannot use the `--offline` or `-online` option.
+a|
+*Specify whether you want to perform a partial backup of specific files*
+a|
+Specify the `-data-files` option and then list the `_files_`, separated by commas. For example, list the file names f1, f2, and f3 after the option.
+
+Example for creating a partial datafile backup on UNIX
+
+----
+smsap backup create -profile nosep -data -files /user/user.dbf -online
+-label partial_datafile_backup -verbose
+----
+
+a|
+*Specify whether you want to perform a partial backup of specific tablespaces*
+a|
+Specify the `-data-tablespaces` option and then list the `_tablespaces_`, separated by commas. For example, use ts1, ts2, and ts3 after the option.
+
+SnapManager supports backing up of read-only tablespaces. While creating the backup, SnapManager changes the read-only table spaces to read-write. After creating the backup, the tablespaces are changed to read-only.
+
+Example for creating a partial tablespace backup
+
+----
+smsap backup create -profile nosep -data -tablespaces tb2 -online -label partial_tablespace_bkup -verbose
+----
+a|
+*Specify whether you want to create a unique label for each backup in the following format: full_hot_mybackup_label*
+a|
+For Linux, you might enter this example:
+
+----
+smsap backup create -profile targetdb1_prof1
+-label full_hot_my_backup_label -online -full  -verbose
+----
+a|
+*Specify whether you want to create backup of the archive log files separately from the data files*
+a|
+Specify the following options and variables:
+
+ ** `-archivelogs` creates a backup of the archive log files.
+ ** `-backup-dest` specifies the archive log file destinations to be backed up.
+ ** `-exclude-dest` specifies the archive log destinations to be excluded.
+ ** `-label` specifies the label for the archive log file backup.
+ ** `-protect` enables protection to the archive log backups.
+ +
+*Note:* You must provide either the `-backup-dest` option or the `-exclude-dest` option.
+
++
+Providing both these options together along with the backup displays error message `You have specified an invalid backup option. Specify any one of the options: -backup-dest, or exclude-dest.`
++
+Example for creating archive log file backups separately on UNIX
++
+----
+smsap backup create -profile nosep -archivelogs -backup-dest /mnt/archive_dest_2/ -label archivelog_bkup -verbose
+----
+a|
+*Specify whether you want to create backup of data files and archive log files together*
+a|
+Specify the following options and variables:
+
+ ** `-data` option to specify the data files.
+ ** `-archivelogs` option to specify the archive log files.
+ Example for backing up data files and archive log files together on UNIX
+
++
+----
+
+smsap backup create -profile nosep -data -online -archivelogs -backup-dest  mnt/archive_dest_2 -label data_arch_backup
+-verbose
+----
+a|
+*Specify whether you want to prune the archive log files while creating a backup*
+a|
+Specify the following options and variables:
+
+ ** `-prunelogs` specifies to delete the archive log files from the archive log destinations.
+  *** `-all` specifies to delete all the archive log files from the archive log destinations.
+  *** `-until-scn _until-scn_` specifies to delete the archive log files until a specified SCN.
+  *** `-until-date _yyyy-MM-dd:HH:mm:ss_` specifies to delete the archive log files until the specified time period.
+  *** `-before` option specifies to delete the archive log files before the specified time period (days, months, weeks, hours).
+  *** `-prune-destprune_ _dest1,[prune_dest2_` specifies to delete the archive log files from the archive log destinations while creating the backup.
+
+*Note:* You cannot prune the archive log files when Flash Recovery Area (FRA) is enabled for archive log files.
+
+Example for pruning all archive log files while creating a backup on UNIX
+
+----
+smsap backup create -profile nosep
+ -archivelogs -label archive_prunebackup1 -backup-dest /mnt/arc_1,/mnt/arc_2  -prunelogs -all -prune-dest /mnt/arc_1,/mnt/arc_2 -verbose
+----
+a|
+*Specify whether you want to add a comment about the backup*
+a|
+Specify `-comment` followed by the description string.
+a|
+*Specify whether you want to force the database into the state you have specified to back it up, regardless of the state it is currently in*
+a|
+Specify the `-force` option.
+a|
+*Specify whether you want to verify the backup at the same time you create it*
+a|
+Specify the `-verify` option.
+a|
+*Specify whether you want to collect the dump files after the database backup operation*
+a|
+Specify `-dump` option at the end of the backup create command.
+|===
+
+---
+== Example
+
+----
+smsap backup create -profile targetdb1_prof1 -full -online -force  -verify
+----
+---

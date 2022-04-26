@@ -1,0 +1,21 @@
+---
+permalink: unix-administration/concept-what-protection-policies-are.html
+sidebar: sidebar
+keywords: protection, policy, policies, govern, database, backup, profile
+summary: "Protection policies are rules that govern how database backups are protected. You can select the protection policies while creating the profile."
+---
+= What protection policies are
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Protection policies are rules that govern how database backups are protected. You can select the protection policies while creating the profile.
+
+A protection policy defines the following parameters:
+
+* When to transfer copies to secondary storage
+* The maximum amount of data that should be transferred at scheduled times
+* How long to retain copies for each backup location
+* Warning and error thresholds for lag times
+
+When protection is enabled, SnapManager creates a dataset for the database. A dataset consists of a collection of storage sets along with configuration information associated with their data. The storage sets associated with a dataset include a primary storage set used to export data to clients, and the set of replicas and archives that exist on other storage sets. Datasets represent exportable user data. If the administrator disables protection for a database, SnapManager deletes the dataset.

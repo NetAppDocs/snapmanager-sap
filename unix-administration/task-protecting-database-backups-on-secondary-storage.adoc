@@ -1,0 +1,90 @@
+---
+permalink: unix-administration/task-protect-database-backups-on-secondary-storage.html
+sidebar: sidebar
+keywords: snapmanager, protect, backup, copies, copy, secondary, tertiary, storage, system
+summary: "You can use SnapManager to protect the backup copies on secondary or tertiary storage systems."
+---
+= Protect database backups on secondary or tertiary storage
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use SnapManager to protect the backup copies on secondary or tertiary storage systems.
+
+*About this task*
+
+You cannot immediately protect the backup created by using the BRBACKUP command to secondary storage after performing successful backup on the primary storage.
+
+.Step
+
+. Enter the following command:
++
+`*smsap backup create -profile _profile_name_ {[-full {-online | -offline | -auto} [-retain {-hourly | -daily | -weekly | -monthly | -unlimited}] [-verify] | [-data [[-files _files_ [_files_]] | [-tablespaces _-tablespaces_ [_-tablespaces_]] [-datalabel _label_] {-online | -offline | -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited]} [-verify] | [-archivelogs [-label _label_] [-comment _comment_] [-snapvaultlabel _SnapVault_label_][-protect | -noprotect | -protectnow] [-backup-dest _path1_ [,[_path2_]]] [-exclude-dest _path1_ [_,path2_]]] [-prunelogs {-all | -untilSCN _untilSCN_ | -until-date _yyyy-MM-dd:HH:mm:ss_ | -before {-months | -days | -weeks | -hours}} -prune-dest _prune_dest1_,[_prune_dest2_]] [-taskspec _taskspec_]} [-dump] [-force] [-quiet | -verbose]*`
++
+[cols="1a,3a" options="header"]
+|===
+| If you want to...| Then do this...
+a|
+*Create a backup of an online or offline database, rather than allowing SnapManager to manage whether it is online or offline*
+a|
+Specify the `-offline` or `-online` option to create a backup of the offline database or online database.     If you use the `-offline` or `-online` option, you cannot use the -auto option.
+a|
+*Let SnapManager manage backing up a database, regardless of whether it is online or offline*
+a|
+Specify the `-auto` option. If you use the -auto option, you cannot use the `-offline` or `-online` option.
+a|
+*Add a comment about the backup*
+a|
+Specify the `-comment` option, followed by the description string.
+a|
+*Force the database into the state in which you have specified to back it up, regardless of the state it is currently in*
+a|
+Specify the `-force` option.
+a|
+*Verify the backup at the time of creation*
+a|
+Specify the `-verify` option.
+a|
+*Create a backup on secondary storage*
+a|
+Specify the `-protect` option.
+
+ ** If you are using ONTAP and want to protect the backup immediately to the secondary storage, specify the `-protect` option.
++
+NOTE: The `-protectnow` option is not applicable in clustered Data ONTAP.
+
+ ** If you are using Data ONTAP operating in 7-Mode and want to protect the backup immediately to secondary storage overriding the Protection Manager protection schedule, specify the `-protectnow` option.
+ ** To prevent the backup to secondary storage, specify the `-noprotect` option.
+If you are using ONTAP and you selected the _SnapManager_cDOT_Vault_ protection policy while creating the profile, you must specify the `-snapvaultlabel` option. You must provide the SnapMirror label that you specified in the rules of the SnapMirror policy while setting up the SnapVault relationship as the value.
+
+a|
+*Specify the retention class values*
+a|
+Specify the `-retain` option and indicate whether the backup should be retained depending on one of the following retention classes:
+
+ ** `-hourly`
+ ** `-daily`
+ ** `-weekly`
+ ** `-monthly`
+ ** `-unlimited`
+
+If you do not specify the retention class, SnapManager uses -hourly by default.
+
+
+|===
+
+---
+== Examples
+
+The following command protects a database backup:
+
+----
+smsap backup create -profile PAYDB -protect -retain -daily -full auto -label full_bkup_sales
+----
+
+The following command immediately protects a database backup:
+
+----
+smsap backup create -profile PAYDB -protectnow -retain -daily -full auto -label full_bkup_sales
+----
+---

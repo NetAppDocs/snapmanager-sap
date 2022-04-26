@@ -1,0 +1,22 @@
+---
+permalink: windows/task-creating-profile-level-dump-files.html
+sidebar: sidebar
+keywords: find, log, information, particular, profile, smsap, dump, command, name, profile-level, creating, create
+summary: You can find log information about a particular profile by using the smsap profile dump command with the name of the profile.
+---
+= Creating profile-level dump files
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can find log information about a particular profile by using the smsap profile dump command with the name of the profile.
+
+. Enter the following command: `smsap profile dump -profileprofile_name`
++
+Dump file location:
++
+----
+Path:\<user-home>\Application Data\NetApp\smsap\3.3.0\smsap_dump_8abc01c814649ebd0114649ec69d0001.jar
+----
++
+NOTE: If you encounter an error while creating a profile, use the smsapsystem dump command. After you have successfully created a profile, use the smsapoperation dump and smsapprofile dump commands.

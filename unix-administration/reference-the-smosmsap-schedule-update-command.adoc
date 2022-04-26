@@ -1,0 +1,66 @@
+---
+permalink: unix-administration/reference-the-smosmsap-schedule-update-command.html
+sidebar: sidebar
+keywords: command, update, schedule, backup, smsap
+summary: "This command updates the schedule for a backup."
+---
+= The smsap schedule update command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command updates the schedule for a backup.
+
+== Syntax
+
+[subs=+macros]
+----
+pass:quotes[smsap schedule update -profile _profile_name_
+-schedule-name _schedule_name_ [-schedule-comment _schedule_comment_\]
+-interval {_-hourly_ | _-daily_ | _-weekly_ | _-monthly_ | _-onetimeonly_}
+-cronstring _cron_string_  -start-time {_start_time < yyyy-MM-dd HH:mm>_}
+-runasuser _runasuser_ [-taskspec _taskspec_\] -force
+[-quiet | -verbose\]]
+----
+
+== Parameters
+
+* `*-profile _profile_name_*`
++
+Specifies the name of the profile related to the database you want to schedule the back up. The profile contains the identifier of the database and other database information.
+
+* `*-schedule-name _schedule_name_*`
++
+Specifies the name that you provide for the schedule.
+
+* `*-schedule-comment _schedule_comment_*`
++
+Specifies an optional comment to describe about scheduling the backup.
+
+* `*-interval { -hourly | -daily | -weekly | -monthly | -onetimeonly}*`
++
+Indicates the time interval by which the backups are created. You can schedule the backup on an hourly, daily, weekly, monthly, or one time only.
+
+* `*-cronstring _cron_string_*`
++
+Specifies to schedule the backup using cronstring. Cron expressions are used to configure instances of CronTrigger. Cron expressions are strings that are actually made up of seven sub-expressions:
+
+ ** 1 refers to seconds
+ ** 2 refers to minutes
+ ** 3 refers to hours
+ ** 4 refers to a day in a month
+ ** 5 refers to the month
+ ** 6 refers to a day in a week
+ ** 7 refers to the year (optional)
+
+* `*-start-time yyyy-MM-dd HH:mm*`
++
+Specifies the start time of the schedule operation. The schedule start time should be included in the format of yyyy-MM-dd HH:mm.
+
+* `*-runasuser _runasuser_*`
++
+Specifies to change the user of the scheduled backup operation while scheduling the backup.
+
+* `*-taskspec _taskspec_*`
++
+Specifies the task specification XML file that can be used for pre-processing activity or post-processing activity of the backup operation. The complete path of the XML file should be provided which give the -taskspec option.

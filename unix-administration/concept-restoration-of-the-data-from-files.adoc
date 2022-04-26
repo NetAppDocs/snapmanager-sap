@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/concept-restoration-of-the-data-from-files.html
+sidebar: sidebar
+keywords: restore, alternate, location, file, snapvault, restoration, data
+summary: "Before you restore from an alternate location, you need to restore the necessary files from any storage media and restore the files from applications like SnapVault or SnapMirror to a file system mounted on the local host."
+---
+= Restoration of the data from files
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before you restore from an alternate location, you need to restore the necessary files from any storage media and restore the files from applications like SnapVault or SnapMirror to a file system mounted on the local host.
+
+You can use the restore from an alternate location operation to copy the files from an alternate file system to an active file system.
+
+You need to specify the alternate locations from which to restore the original files by creating a restore specification.

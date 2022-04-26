@@ -1,0 +1,82 @@
+---
+permalink: windows/reference-the-smosmsaprepository-create-command.html
+sidebar: sidebar
+keywords: command, create, repository, store, database, profile, associate, credential, adequate, smsap
+summary: "This command creates a repository in which to store database profiles and associated credentials. This command also checks to see that the block size is adequate."
+---
+= The smsap repository create command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+== Syntax
+
+This command creates a repository in which to store database profiles and associated credentials. This command also checks to see that the block size is adequate.
+
+----
+
+        smsap repository create
+-repository
+-port repo_port
+-dbname repo_service_name
+-host repo_host
+-login -username repo_username
+[-force] [-noprompt]
+\[-quiet \| -verbose\]
+----
+
+== Parameters
+
+* *`-repository`*
++
+The options that follow -repository specify the details of the database for the repository
+
+* *`-port _repo_port_`*
++
+Specifies the TCP port number used to access the database that stores the repository.
+
+* *`-dbname _repo_service_name_`*
++
+Specifies the name of the database that stores the repository. Use either the global name or the SID.
+
+* *`-host _repo_host_`*
++
+Specifies the name or IP address of the host computer the repository database runs on.
+
+* *`-login`*
++
+Starts the repository login details.
+
+* *`-username _repo_username_`*
++
+Specifies the user name needed to access the database that stores the repository.
+
+* *`-force`*
++
+Attempts to force the creation of the repository. Using this option results in SnapManager prompting you to backup the repository before creating the repository.
+
+* *`-noprompt`*
++
+Does not display the prompt to backup the repository before creating it if you use the `-force` option. Using the `-noprompt` option ensures the prompt does not appear, making it easier to create repositories using a script.
+
+* *`-quiet`*
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* *`-verbose`*
++
+Displays error, warning, and informational messages on the console.
+
+== Command example
+
+The following example creates a repository in the database SMSAPREPO on the host hotspur.
+
+----
+smsap repository create -repository -port 1521 -dbname SMSAPREPO -host hotspur -login -username grabal21 -verbose
+SMSAP-09202 [INFO ]: Creating new schema as grabal21 on jdbc:oracle:thin:@//hotspur:1521/SMSAPREPO.
+SMSAP-09205 [INFO ]: Schema generation complete.
+SMSAP-09209 [INFO ]: Performing repository version INSERT.
+SMSAP-09210 [INFO ]: Repository created with version: 30
+SMSAP-13037 [INFO ]: Successfully completed operation: Repository Create
+SMSAP-13049 [INFO ]: Elapsed Time: 0:00:08.844
+----

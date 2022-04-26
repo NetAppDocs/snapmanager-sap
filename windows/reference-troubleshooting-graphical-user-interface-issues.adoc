@@ -1,0 +1,134 @@
+---
+permalink: windows/reference-troubleshooting-graphical-user-interface-issues.html
+sidebar: sidebar
+keywords: information, graphical, user, interface, gui, resolve, troubleshoot, issue
+summary: "You can find information about some common known graphical user interface (GUI) issues that might help you resolve them."
+---
+= Troubleshooting graphical user interface issues
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can find information about some common known graphical user interface (GUI) issues that might help you resolve them.
+
+[options="header"]
+|===
+| Issue| Explanation| Workaround
+a|
+While accessing the SnapManager GUI to perform an operation, the following error message might be displayed: `SMSAP-20111 : Authentication failed for user on host`.
+a|
+This issue occurs if the password of the user is changed in the host on which the SnapManager server is running.After the password is changed, the credential cache that is created for the user who launched the GUI becomes invalid. SnapManager GUI still uses the credentials in the cache to authenticate and thus the authentication fails.
+
+a|
+You must perform one of following tasks:
+
+* Delete the credentials of the user whose password was changed and then add the new credentials in the cache by running the following commands:
+ .. `smsap credential delete`
+ .. `smsap credential set`
+* Clear the entire cache by running the `smsap credential clear` command. Re-open the GUI and set the credentials, if prompted.
+
+a|
+Security warning is displayed while using Java Web Start to access SnapManager GUI.
+a|
+While accessing SnapManager GUI using Java Web Start, a security warning is displayed.This issue occurs because JNLP jars are self-signed and Java version used by SnapManager does not allow self-signed jars at high security level.
+
+a|
+Either change the security settings to medium in the java control panel or add the SnapManager GUI URL to the exception list.
+a|
+The SnapManager web start GUI displays the incorrect version.
+a|
+After downgrading SnapManager from a later version to an earlier version when you launch the web start GUI, the later version of the SnapManager web start GUI is launched.
+a|
+You must also clear the cache by performing the following steps:
+
+. Click *Start* and select *Run*.
+. Enter the following: `javaws -viewer`
+. On the Java cache viewer screen, right-click the SnapManager application and select *Delete*.
+
+a|
+When you restart the GUI and try to check the backups for a certain profile, you see only the names of the profiles.
+a|
+SnapManager does not display any information about a profile until you open it.
+a|
+Perform the following steps:
+
+. Right-click the profile and select *Open* from the menu.
++
+SnapManager displays the Profile Authentication dialog box.
+
+. Enter the host user name and password.
++
+SnapManager displays the backup list.
+
+NOTE: You only need to authenticate the profile once as long as the credentials are valid and remain in the cache.
+
+a|
+The GUI installation on Windows succeeds, but with errors.
+a|
+The user account used to install the GUI does not have enough permissions to set up the icons and shortcuts for all the users. The user account does not have permissions to modify the `C:\Documents and Settings\All Users` directory.
+
+a|
+
+* Reinstall the GUI with different settings.
++
+In Choose Icon Availability, clear the *Make these shortcuts available to all users of this PC* check box.
+
+* Log in using a user account that is not restricted and reinstall the GUI.
+
+a|
+When you open the first repository in the GUI, an error message similar to the following is displayed: `The Profile name XXXX clashes with previously loaded repository`.
+a|
+Identically named profiles cannot exist in a repository. Also, you can open only one repository at a time.
+a|
+Reference the conflicting profiles from two different operating system (OS) users or rename the profile by issuing an SQL statement for the repository: `*UPDATE SMSAP_33_PROFILE SET NAME = 'NEW_NAME' WHERE NAME = 'OLD_NAME'*`
+a|
+An error message similar to the following is displayed: `SMSAP-01092: Unable to initialize repository repo1@ does not exist:repo1SMSAP-11006: Cannot resolve host does not exist`
+a|
+The repository is inaccessible, perhaps because it no longer exists. The GUI initializes the list of repositories from the credentials file.
+a|
+The error message asks if you would like to remove this repository so that no attempt is made to load it in the future. If you do not need to access this repository, click *Delete* to remove it from the GUI view. This removes the reference to the repository in the credentials file and the GUI does not attempt to load the repository again.
+a|
+SnapManager takes a longer time to load the database tree structure and results in a timeout error message being displayed on the SnapManager GUI.
+a|
+When you try to perform a partial backup operation from the SnapManager GUI, SnapManager tries to load the credentials for all the profiles, and if there are any invalid entries, SnapManager tries to validate the entry and this results in a timeout error message being displayed.
+a|
+Delete the credentials of the unused host, repository, and profile by using the credential delete command from the SnapManager command-line interface (CLI).
+a|
+The custom scripts for the preprocessing or postprocessing activity to occur before or after the backup, restore, or clone operations, are not visible from the SnapManager GUI.
+a|
+When you add custom scripts in the custom backup, restore, or clone script location after you start the respective wizard, the custom scripts are not displayed under the Available Scripts list.
+a|
+Restart the SnapManager host server and then open the SnapManager GUI.
+a|
+You cannot use the clone specification XML file created in SnapManager (3.1 or earlier) for the clone operation.
+a|
+From SnapManager 3.2 for SAP, the task specification section (task-specification) is provided as a separate task specification XML file.
+a|
+If you are using SnapManager 3.2 for SAP, you must remove the task specification section from the clone specification XML or create a new clone specification XML file.SnapManager 3.3 or later does not support the clone specification XML file created in SnapManager 3.2 or earlier releases.
+
+a|
+SnapManager operation on the GUI does not proceed after you have cleared user credentials by using the smsap credential clear command from the SnapManager CLI or by clicking *Admin* > *Credentials* > *Clear* > *Cache* from the SnapManager GUI.
+a|
+The credentials set for the repositories, hosts, and profiles are cleared. SnapManager verifies user credentials before starting any operation.When user credentials are invalid, SnapManager fails to authenticate. When a host or a profile is deleted from the repository, the user credentials are still available in the cache. These unnecessary credential entries slow down the SnapManager operations from the GUI.
+
+a|
+Restart the SnapManager GUI depending on how the cache is cleared. *Note:*
+
+* If you have cleared the credential cache from the SnapManager GUI, you do not need to exit the SnapManager GUI.
+* If you have cleared the credential cache from the SnapManager CLI, you must restart the SnapManager GUI.
+* If you have deleted the encrypted credential file manually, you must restart the SnapManager GUI.
+
+Set the credentials that you have given for the repository, profile host, and profile. From the SnapManager GUI, if there is no repository mapped under the Repositories tree, perform the following steps:
+
+. Click *Tasks* > *Add Exisiting repository*
+. Right-click the repository, click *Open*, and enter the user credentials in the *Repository Credentials Authentication* window.
+. Right-click the host under the repository, click *Open*, and enter the user credentials in *Host Credentials Authentication*.
+. Right-click the profile under the host, click *Open*, and enter the user credentials in *Profile Credentials Authentication*.
+
+a|
+You cannot open the SnapManager GUI by using Java Web Start GUI due to weaker Secure Sockets Layer (SSL) cipher strength of the browser.
+a|
+SnapManager does not support SSL ciphers weaker than 128 bits.
+a|
+Upgrade the browser version and check the cipher strength.
+|===

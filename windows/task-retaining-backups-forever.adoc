@@ -1,0 +1,18 @@
+---
+permalink: windows/task-retaining-backups-forever.html
+sidebar: sidebar
+keywords: specify, backup, ineligible, deletion, retention, policy, indefinite, retain, forever
+summary: You can specify that a backup should be ineligible for deletion by the retention policy to keep the backup indefinitely.
+---
+= Retaining backups forever
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can specify that a backup should be ineligible for deletion by the retention policy to keep the backup indefinitely.
+
+. To specify that a backup be retained on an unlimited basis, enter this command:``smsap backup update -profileprofile_name {-labellabel [data | -archivelogs] | -idid} -retain -unlimited``
+
+*Related information*
+
+xref:reference-the-smosmsapbackup-update-command.adoc[The smsap backup update command]

@@ -1,0 +1,26 @@
+---
+permalink: unix-administration/concept-deprecated-versions-of-oracle-database.html
+sidebar: sidebar
+keywords: oracle, database, 9i, snapmanager, 10gr2, deprecate
+summary: "Oracle database 9i is not supported by SnapManager 3.2 or later, and Oracle database 10gR2 (earlier than 10.2.0.4) is not supported by SnapManager 3.3.1 or later."
+---
+= Deprecated versions of Oracle database
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Oracle database 9i is not supported by SnapManager 3.2 or later, and Oracle database 10gR2 (earlier than 10.2.0.4) is not supported by SnapManager 3.3.1 or later.
+
+If you are using Oracle 9i or 10gR2 (earlier than 10.2.0.4) databases and want to upgrade to SnapManager 3.2 or later, you cannot create new profiles; a warning message is displayed.
+
+If you are using Oracle 9i or 10gR2 (earlier than 10.2.0.4) databases and want to upgrade to SnapManager 3.2 or later, you must perform one of the following:
+
+* Upgrade Oracle 9i or 10gR2 (earlier than 10.2.0.4) databases to either Oracle 10gR2 (10.2.0.5), 11gR1, or 11gR2 databases, and then upgrade to SnapManager 3.2 or 3.3.
++
+If you are upgrading to Oracle 12__c__, then you must upgrade to SnapManager 3.3.1 or later.
++
+NOTE: Oracle database 12__c__ is supported only from SnapManager 3.3.1.
+
+* Manage the Oracle 9i databases using a patch version of SnapManager 3.1.
++
+You can use SnapManager 3.2 or 3.3 if you want to manage Oracle 10gR2, 11gR1, or 11gR2 databases and use SnapManager 3.3.1 or later if you want to manage Oracle 12__c__ databases along with the other supported databases.

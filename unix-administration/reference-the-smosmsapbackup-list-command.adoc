@@ -1,0 +1,69 @@
+---
+permalink: unix-administration/reference-the-smosmsapbackup-list-command.html
+sidebar: sidebar
+keywords: run, backup, list, command, display, information, profile, information, status, retention, class, smsap
+summary: You can run the backup list command to display information about the backups in a profile, including information about the retention class and protection status.
+---
+= The smsap backup list command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can run the `backup list` command to display information about the backups in a profile, including information about the retention class and protection status.
+
+== Syntax
+
+[subs=+macros]
+----
+pass:quotes[smsap backup list
+-profile _profile_name_
+-delimiter _character_
+[-data | -archivelogs | -all]]
+[-quiet | -verbose]]
+----
+
+== Parameters
+
+* `*-profile _profile_name_*`
++
+Specifies the profile you want to list backups for. The profile contains the identifier of the database and other database information.
+
+* `*-delimiter character*`
++
+Displays each row on a separate line. The attributes in the row are separated by the character specified.
+
+* `*-data*`
++
+Specifies the data files.
+
+* `*-archivelogs*`
++
+Specifies the archive log files.
+
+* `*-quiet*`
++
+Displays only error messages in the console. The default is to display error and warning messages.
+
+* `*-verbose*`
++
+Displays error, warning, and informational messages in the console. Include the -verbose option to display the backup IDs.
+---
+
+== Example
+
+The following example lists the backups for the SALES1 profile:
+
+----
+smsap backup list -profile SALES1 -verbose
+Start Date          Status  Scope  Mode    Primary  Label      Retention   Protection
+------------------- ------- ------ ------- -------- -----      --------    ----------
+2007-08-10 14:31:27 SUCCESS FULL   ONLINE  EXISTS   backup1    DAILY       PROTECTED
+2007-08-10 14:12:31 SUCCESS FULL   ONLINE  EXISTS   backup2    HOURLY      NOT PROTECTED
+2007-08-10 10:52:06 SUCCESS FULL   ONLINE  EXISTS   backup3    HOURLY      PROTECTED
+2007-08-05 12:08:37 SUCCESS FULL   ONLINE  EXISTS   backup4    UNLIMITED   NOT PROTECTED
+2007-08-05 09:22:08 SUCCESS FULL   OFFLINE EXISTS   backup5    HOURLY      PROTECTED
+2007-08-04 22:03:09 SUCCESS FULL   ONLINE  EXISTS   backup6    UNLIMITED   NOT REQUESTED
+2007-07-30 18:31:05 SUCCESS FULL   OFFLINE EXISTS   backup7    HOURLY      PROTECTED
+----
+
+---

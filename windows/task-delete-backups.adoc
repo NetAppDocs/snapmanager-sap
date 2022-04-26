@@ -1,0 +1,35 @@
+---
+permalink: windows/task-delete-backups.html
+sidebar: sidebar
+keywords: delete, backup, free, space, occupy, remove, snapshot, copies, copy, volume
+summary: "You must delete backups when you no longer need them, which frees the space those backups occupy. If you remove backups, you reduce the chance of reaching the limit of 255 Snapshot copies per volume."
+---
+= Delete backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must delete backups when you no longer need them, which frees the space those backups occupy. If you remove backups, you reduce the chance of reaching the limit of 255 Snapshot copies per volume.
+
+== What you'll need
+
+* You must ensure that the backup was not used to create a clone.
+
+== About this task
+
+You can delete backups retained on an unlimited basis without changing the retention class.
+
+You can optionally collect the dump files after the successful or failed backup delete operation.
+
+If you want to delete the archive log backups, you need to check for the retention duration set for the archive log backup. If the archive log backup is within the retention duration and the archive log files are required for recovery of a restored database, you cannot delete the archive log backup.
+
+.Steps
+
+. Verify that the operations are complete by entering the following command:
++
+`*smsap operation list -profile _profile_name_-dump -quiet -verbose*`
+. To delete a backup, enter the following command:
++
+`*smsap backup delete -profile _profile_name_ [-label _label_ [data | -archivelogs] | -id _id_ | -all] [-force] [ -dump] [-quiet | -verbose]*`
++
+Use the `-force` option to force the removal of the backup. Forcing the removal of a backup that has incomplete operations might leave the backup in an inconsistent state.

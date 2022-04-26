@@ -1,0 +1,19 @@
+---
+permalink: unix-installation-7mode/task-smsap-isg-prepare-for-deployment.html
+sidebar: sidebar
+keywords: deploy, snapmanager, ensure, storage, system, unix, host, minimum, resource, requirement, preparing, prepare, deployment
+summary: "Before you deploy SnapManager, you must ensure your storage system and UNIX hosts meet the minimum resource requirements."
+---
+= Prepare for deployment
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before you deploy SnapManager, you must ensure your storage system and UNIX hosts meet the minimum resource requirements.
+
+.Steps
+
+. Verify that you have the required licenses.
+. Verify the supported configurations.
+. Verify the supported storage types.
+. Verify that your UNIX hosts meet SnapManager requirements.

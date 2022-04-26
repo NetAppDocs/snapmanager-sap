@@ -1,0 +1,85 @@
+---
+permalink: unix-administration/reference-the-smosmsap-repository-rollingback-command.html
+sidebar: sidebar
+keywords: command, enable, roll, back, revert, version, snapmanager, original, version, upgrade, smsap, repository, rollback
+summary: "This command enables you to roll back or revert from a higher version of SnapManager to the original version from which you upgraded."
+---
+= The smsap repository rollback command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command enables you to roll back or revert from a higher version of SnapManager to the original version from which you upgraded.
+
+== Syntax
+
+[subs=+macros]
+----
+pass:quotes[smsap repository rollback
+-repository
+-dbname _repo_service_name_
+-host _repo_host_
+-login -username _repo_username_
+-port _repo_port_
+-rollbackhost _host_with_target_database_
+[-force]]
+[-quiet | -verbose]
+----
+
+== Parameters
+
+* `*-repository*`
++
+The options that follow -repository specify the details of the database for the repository.
+
+* `*-dbname _repo_service_name_*`
++
+Specifies the name of the database that stores the repository. Use either the global name or the SID.
+
+* `*-host _repo_host_*`
++
+Specifies the name or IP address of the host computer the repository database runs on.
+
+* `*-login*`
++
+Starts the repository login details.
+
+* `*-username _repo_username_*`
++
+Specifies the user name needed to access the database that stores the repository.
+
+* `*-rollbackhost _host_with_target_database_*`
++
+Specifies the name of the host which will be rolled back from a higher version of SnapManager to the original lower version.
+
+* `*-port _repo_port_*`
++
+Specifies the TCP port number used to access the database that stores the repository.
+
+* `*-force*`
++
+Attempts to force the update of the repository. SnapManager prompts you to make a backup of the current repository before updating.
+
+* `*-noprompt*`
++
+Does not display the prompt before updating the repository database. Using the -noprompt option ensures the prompt does not appear, making it easier to update repositories using a script.
+
+* `*-quiet*`
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* `*-verbose*`
++
+Displays error, warning, and informational messages on the console.
+
+---
+
+== Example command
+
+The following example updates the repository in the SALESDB database.
+
+----
+smsap repository rollback -repository -dbname SALESDB
+-host server1 -login -username admin -port 1521 -rollbackhost hostA
+----
+---

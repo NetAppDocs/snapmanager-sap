@@ -1,0 +1,18 @@
+---
+permalink: windows/task-checking-the-snapmanager-software-version.html
+sidebar: sidebar
+keywords: version, product, run, local, host, command, check, snapmanager, software
+summary: You can determine which version of the product you are running on your local host by running the version command.
+---
+= Checking the SnapManager software version
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can determine which version of the product you are running on your local host by running the version command.
+
+. To check the SnapManager version, enter this command: `smsap version`
+
+*Related information*
+
+xref:reference-the-smosmsapversion-command.adoc[The smsap version command]
