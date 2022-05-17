@@ -20,13 +20,13 @@ SnapManager for SAP enables you to maintain the history of SnapManager operation
 ---
 ----
 
-        smsap
+smsap
 history set -profile -name PROFILE1 -operation -operations backup -retain -daily 6 -verbose
 ----
 
 ----
 
-        smsap
+smsap
 history set -profile -name PROFILE1 -operation -all -retain -weekly 3 -verbose
 ----
 ---

@@ -33,7 +33,9 @@ You can use a combination of the BR*Tools and the SnapManager for SAP graphical 
 a|
 List, restore, recover, and delete database backups (backups that include data files, control files, or online redo log files) created using BRBACKUP
 a|
-SnapManager for SAP CLI and GUI**Note:** BR*Tools can list and restore only backups created by using BR*Tools.
+SnapManager for SAP CLI and GUI
+
+NOTE: BR*Tools can list and restore only backups created by using BR*Tools.
 
 a|
 List and delete backups of other file sets created with BRBACKUP

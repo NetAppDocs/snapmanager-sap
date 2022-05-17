@@ -30,4 +30,4 @@ Minimizes the amount of time each tablespace spends in backup mode. SnapManager 
 a|
 The backup can require creating Snapshot copies of multiple tablespaces in the same volume. This method can cause SnapManager to create multiple Snapshot copies of a single volume during the backup operation.
 |===
-*Note:* Although you can perform a partial backup, you must always perform a full backup of the entire database.
+NOTE: Although you can perform a partial backup, you must always perform a full backup of the entire database.

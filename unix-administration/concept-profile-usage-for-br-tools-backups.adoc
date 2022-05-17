@@ -74,7 +74,7 @@ a|
 * Key: protect
 * Value: yes \| no \| left blank
 
-NOTE: The different options mentioned for value parameter are similar to the -protect option used in command-line interface.
+NOTE: The different options mentioned for value parameter are similar to the `-protect` option used in command-line interface.
 
 a|
 Back up data from the secondary storage to a location set as per users preferences

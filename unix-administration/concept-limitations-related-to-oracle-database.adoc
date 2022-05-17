@@ -22,4 +22,4 @@ NOTE: Identify the different versions of Oracle databases supported by referring
 
 *Related information*
 
-http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix: support.netapp.com/NOW/products/interoperability^]
+http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix^]

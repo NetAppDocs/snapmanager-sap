@@ -45,9 +45,9 @@ After you update the target database host name, you cannot deleteor split the cl
 +
 Other options for this command are as follows:
 +
-[-force] [-noprompt]
+``[-force] [-noprompt]``
 +
-[-quiet | -verbose]
+``[-quiet | -verbose]``
 +
 [cols="1a,2a" options="header"]
 |===

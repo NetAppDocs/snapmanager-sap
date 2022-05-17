@@ -65,7 +65,7 @@ Volume restore is disabled
 a|
 Yes
 a|
-Volume restore has been disabled. Resolution: Enable volume restore by selecting different options when starting the restore. In the command-line interface, do not use -fast -off.
+Volume restore has been disabled. Resolution: Enable volume restore by selecting different options when starting the restore. In the command-line interface, do not use `-fast -off`.
 
 Cannot override.
 

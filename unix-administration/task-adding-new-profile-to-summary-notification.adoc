@@ -19,6 +19,6 @@ After you configure a summary email notification for the repository database, yo
 +
 Other options for this command are as follows:
 +
-[-force]
+``[-force]``
 +
-[-quiet | -verbose]
+``[-quiet | -verbose]``

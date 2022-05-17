@@ -24,4 +24,4 @@ The SnapDrive documentation contains details about SnapDrive.
 +
 The default value for this parameter is `*native*`, which disables RBAC.
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

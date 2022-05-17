@@ -31,7 +31,7 @@ Failed
 a|
 The operation failed. SnapManager has automatically executed the abort process and cleaned the operation.
 
-*Note:* You can split the clone that is created. When you stop the clone split operation you started and the operation is stopped successfully, the clone split operation state displays as failed.
+NOTE: You can split the clone that is created. When you stop the clone split operation you started and the operation is stopped successfully, the clone split operation state displays as failed.
 
 |===
 

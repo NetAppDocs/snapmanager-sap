@@ -26,9 +26,9 @@ You must ensure that there is no space between the comma and the next email addr
 +
 Other options for this command are as follows:
 +
-[-force]
+``[-force]``
 +
-[-quiet | -verbose]
+``[-quiet | -verbose]``
 +
 NOTE: SnapManager supports up to 1000 characters for email addresses.
 +

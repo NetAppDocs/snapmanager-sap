@@ -85,14 +85,18 @@ string
 a|
 `_SM_TARGET_FILER_NAME_`
 a|
-Specifies the target storage system name *Note:* If more than one storage system is used, then the storage system names must be separated by commas.
+Specifies the target storage system name
+
+NOTE: If more than one storage system is used, then the storage system names must be separated by commas.
 
 a|
 string
 a|
 `_SM_TARGET_VOLUME_NAME_`
 a|
-Specifies the target volume name *Note:* The target volume name must be prefixed with storage device name, for example, SM_TARGET_FILER_NAME/SM_TARGET_VOLUME_NAME.
+Specifies the target volume name
+
+NOTE: The target volume name must be prefixed with storage device name, for example, SM_TARGET_FILER_NAME/SM_TARGET_VOLUME_NAME.
 
 a|
 string
@@ -105,35 +109,45 @@ string
 a|
 `_SM_SNAPSHOT_NAMES_`
 a|
-Specifies the Snapshot list *Note:* Name of the Snapshot copies must be prefixed with the storage system name and volume name. Names of the Snapshot copies are separated by commas.
+Specifies the Snapshot list
+
+NOTE: Name of the Snapshot copies must be prefixed with the storage system name and volume name. Names of the Snapshot copies are separated by commas.
 
 a|
 string array
 a|
 `_SM_ARCHIVE_LOGS_DIRECTORY_`
 a|
-Specifies the archive logs directory *Note:* If the archive logs are located in more than one directory, then the names of those directories are separated by commas.
+Specifies the archive logs directory
+
+NOTE: If the archive logs are located in more than one directory, then the names of those directories are separated by commas.
 
 a|
 string array
 a|
 `_SM_REDO_LOGS_DIRECTORY_`
 a|
-Specifies the redo logs directory *Note:* If the redo logs are located in more than one directory, then the names of those directories are separated by commas.
+Specifies the redo logs directory
+
+NOTE: If the redo logs are located in more than one directory, then the names of those directories are separated by commas.
 
 a|
 string array
 a|
 `_SM_CONTROL_FILES_DIRECTORY_`
 a|
-Specifies the control files directory *Note:* If the control files are located in more than one directory, then the names of those directories are separated by commas.
+Specifies the control files directory
+
+NOTE: If the control files are located in more than one directory, then the names of those directories are separated by commas.
 
 a|
 string array
 a|
 `_SM_DATA_FILES_DIRECTORY_`
 a|
-Specifies the data files directory *Note:* If the data files are located in more than one directory, then the names of those directories are separated by commas.
+Specifies the data files directory
+
+NOTE: If the data files are located in more than one directory, then the names of those directories are separated by commas.
 
 a|
 string array

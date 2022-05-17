@@ -25,9 +25,9 @@ SnapManager (3.2 or later) enables you to update the profile to separate archive
 +
 Other options for this command are as follows:
 +
-[-force] [-noprompt]
+``[-force] [-noprompt]``
 +
-[-quiet | verbose]
+``[-quiet | verbose]``
 +
 [cols="2a,4a" options="header"]
 |===
@@ -121,4 +121,4 @@ a|
 Specify the `-dump` option.
 |===
 
-. To view the updated profile, enter the following command: smsap profile show
+. To view the updated profile, enter the following command: `smsap profile show`

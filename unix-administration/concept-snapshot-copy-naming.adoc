@@ -115,4 +115,4 @@ Custom text that you can enter.
 a|
 prod
 |===
-*Note:* SnapManager for SAP does not support the colon (:) symbol in the long forms of the names for Snapshot copies.
+NOTE: SnapManager for SAP does not support the colon (:) symbol in the long forms of the names for Snapshot copies.

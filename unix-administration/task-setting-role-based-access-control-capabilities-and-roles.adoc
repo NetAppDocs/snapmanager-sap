@@ -250,4 +250,4 @@ For details about defining RBAC capabilities, see the _OnCommand Unified Manager
 
 *Related information*
 
-http://support.netapp.com/documentation/productsatoz/index.html[_OnCommand Unified Manager Operations Manager Administration Guide_: [mysupport.netapp.com/documentation/productsatoz/index.html\^](https://mysupport.netapp.com/documentation/productsatoz/index.html)^]
+http://support.netapp.com/documentation/productsatoz/index.html[OnCommand Unified Manager Operations Manager Administration Guide^]

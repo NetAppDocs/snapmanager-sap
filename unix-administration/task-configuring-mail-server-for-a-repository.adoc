@@ -23,9 +23,9 @@ You must specify name or IP address of the host server that handles the email no
 +
 Other options for this command are as follows:
 +
-[-force]
+``[-force]``
 +
-[-quiet | -verbose]
+``[-quiet | -verbose]``
 +
 [cols="2a,4a" options="header"]
 |===

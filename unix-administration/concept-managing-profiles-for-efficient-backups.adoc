@@ -76,6 +76,7 @@ Yes
 a|
 No
 |===
-*Note:* After you disable `sqlnet.authentication_services` and change the authentication method to database authentication, you must set `sqlnet.authentication_services` to `*NONE*`.
+
+NOTE: After you disable `sqlnet.authentication_services` and change the authentication method to database authentication, you must set `sqlnet.authentication_services` to `*NONE*`.
 
 If you are accessing a profile for the first time, you must enter your profile password. After you enter your credentials, you can view the database backups within the profile.

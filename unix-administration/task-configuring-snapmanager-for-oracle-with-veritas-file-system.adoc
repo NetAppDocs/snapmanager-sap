@@ -25,4 +25,4 @@ For information about how to create a shared disk group and file system, see Sna
 . Install and configure the SAP database that is to be mounted on the shared file systems.
 . Start a database instance on any one node of the RAC.
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

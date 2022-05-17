@@ -135,4 +135,4 @@ You can delete the backup only when you break the relationship. This issue is be
 
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

@@ -44,9 +44,9 @@ NOTE: If you encounter an error while creating a profile, use the `smsap system 
 +
 Other options for this command are as follows:
 +
-[-force] [-noprompt]
+``[-force] [-noprompt]``
 +
-[-quiet | verbose]
+``[-quiet | verbose]``
 +
 NOTE: For Real Application Clusters (RAC) environments, when creating a new profile you must provide the value of the `db_unique_name` parameter as `_db_dbname_`.
 +
@@ -126,7 +126,8 @@ NOTE: The profile create operation fails in the following scenarios:
   *** If you have not created either SnapMirror or SnapVault relationship but selected either _SnapManager_cDOT_Vault_ or _SnapManager_cDOT_Mirror_ policy
 
  ** `-noprotect` indicates not to protect the database backups created using the profile.
-*Note:* If `-protect` is specified without `-protection-policy`, then the dataset will not have a protection policy. If `-protect` is specified and `-protection-policy` is not set when the profile is created, then it can be set later by the `smsap profile update` command or set by the storage administrator by using Protection Manager console.
+ 
+NOTE: If `-protect` is specified without `-protection-policy`, then the dataset will not have a protection policy. If `-protect` is specified and `-protection-policy` is not set when the profile is created, then it can be set later by the `smsap profile update` command or set by the storage administrator by using Protection Manager console.
 
 a|
 *You want to enable email notification for the completion status of the database operations*

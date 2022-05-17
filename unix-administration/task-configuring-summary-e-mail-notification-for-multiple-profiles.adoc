@@ -42,9 +42,9 @@ If you select not to add a customized subject, SnapManager displays an error mes
 +
 Other options for this command are as follows:
 +
-[-force] [-noprompt]
+``[-force] [-noprompt]``
 +
-[-quiet | -verbose]
+``[-quiet | -verbose]``
 
 ---
 ----

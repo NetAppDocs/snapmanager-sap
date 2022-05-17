@@ -120,7 +120,7 @@ The cloning fails because Oracle fails to find and apply the archive log files f
 +
 However, if temporary tablespaces are Oracle Managed Files (OMFs) that are located in a different location from the datafiles location, the clone operation does not create the tablespaces in the datafiles location. The OMFs are not managed by SnapManager.
 
-* SnapManager fails to clone a RAC database if you select the -resetlogs option.
+* SnapManager fails to clone a RAC database if you select the `-resetlogs` option.
 
 *Limitations related to archive log files and backups*
 
@@ -182,4 +182,4 @@ You can delete the backup only when you break the relationship. This issue is be
 
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

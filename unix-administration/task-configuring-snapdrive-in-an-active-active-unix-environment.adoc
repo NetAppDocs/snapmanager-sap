@@ -9,7 +9,7 @@ summary: "If you have included the host-cluster-sw-restore-warn parameter in sna
 :imagesdir: ../media/
 
 [.lead]
-If you have included the `host-cluster-sw-restore-warn` parameter in snapdrive.conf and have assigned the value on, you must change the value to support the restore operation in the active/active Veritas Storage Foundation for Oracle RAC (SFRAC) environment.
+If you have included the `host-cluster-sw-restore-warn` parameter in `snapdrive.conf` and have assigned the value on, you must change the value to support the restore operation in the active/active Veritas Storage Foundation for Oracle RAC (SFRAC) environment.
 
 When you are using the active/active Veritas Storage Foundation for Oracle RAC (SFRAC) environment, if the `host-cluster-sw-restore-warn` parameter is set to `*on*`, a warning message is displayed and the restore operation is stopped. If you want to perform the restore operation in an active/active Veritas SFRAC environment, you must set `host-cluster-sw-restore-warn` to `*off*`.
 
@@ -27,4 +27,4 @@ After configuring, restart the SnapDrive for UNIX server.
 
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

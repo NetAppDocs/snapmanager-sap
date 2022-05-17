@@ -11,7 +11,7 @@ summary: "You can clone a database using one of two methods. The method you choo
 [.lead]
 You can clone a database using one of two methods. The method you choose affects the `clone create` operation.
 
-The following table describes the cloning methods and their effect on the `clone create` operation and its -reserve option. A LUN can be cloned using either method.
+The following table describes the cloning methods and their effect on the `clone create` operation and its `-reserve` option. A LUN can be cloned using either method.
 
 [cols="1a,1a,2a" options="header"]
 |===
