@@ -32,7 +32,7 @@ Specifies that error, warning, and informational messages are displayed on the c
 
 == Example command
 
-The following example uses the smsap_server stop command.
+The following example uses the `smsap_server` stop command.
 
 ----
 smsap_server stop

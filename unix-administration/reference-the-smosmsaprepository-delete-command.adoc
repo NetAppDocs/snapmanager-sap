@@ -56,7 +56,7 @@ Attempts to force the deletion of the repository, even if there are incomplete o
 
 * ``*-noprompt*``
 +
-Does not prompt you before deleting the repository. Using the -noprompt option ensures the prompt does not appear, making it easier to delete repositories using a script.
+Does not prompt you before deleting the repository. Using the `-noprompt` option ensures the prompt does not appear, making it easier to delete repositories using a script.
 
 * ``*-quiet*``
 +

@@ -91,7 +91,7 @@ Specifies the name or IP address of the host computer on which the database runs
 
 * ``*-sid _db_sid_*``
 +
-Specifies the system identifier of the database that the profile describes. By default, SnapManager uses the database name as the system identifier. If the system identifier is different from the database name, you must specify it using the -sid option.
+Specifies the system identifier of the database that the profile describes. By default, SnapManager uses the database name as the system identifier. If the system identifier is different from the database name, you must specify it using the `-sid` option.
 +
 For example, if you are using Oracle Real Application Clusters (RAC), you must specify the SID system identifier of the RAC instance on the RAC node from which SnapManager is executed.
 

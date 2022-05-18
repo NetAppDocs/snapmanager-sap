@@ -18,7 +18,8 @@ You must set the `preferred_backup_locations` and `restore_from_nearest_backup_l
 +
 NOTE: The `PREFERRED_BACKUP_LOCATIONS` environment variable overrides the value set for the `preferred_backup_locations` parameter in the initSID.utl file.
 
-*NOTE*:
-
+[NOTE]
+====
 * If the value for `preferred_backup_locations` does not match any protection policy node names and `restore_from_nearest_backup_location` is set to `*No*`, the operation fails.
 * If either the value for `preferred_backup_locations` is not set or `restore_from_nearest_backup_location` is set to `*Yes*`, the restore operation can be performed from the nearest backup location.
+====

@@ -38,4 +38,4 @@ NOTE: The rollback operation runs for a longer time as the cumulative number of 
 
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

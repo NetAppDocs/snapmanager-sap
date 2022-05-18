@@ -9,7 +9,7 @@ summary: "You can use the smsap system dump command to get log information about
 :imagesdir: ../media/
 
 [.lead]
-You can use the smsap system dump command to get log information about the SnapManager host and environment. You can specify different log levels to collect information about a specific operation, profile, or host and environment.
+You can use the `smsap system dump` command to get log information about the SnapManager host and environment. You can specify different log levels to collect information about a specific operation, profile, or host and environment.
 
 .Step
 

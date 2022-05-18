@@ -11,4 +11,4 @@ summary: "The environment in which you are installing SnapManager for SAP must m
 [.lead]
 The environment in which you are installing SnapManager for SAP must meet certain software, hardware, browser, database, and operating system requirements. For the latest information about the requirements, see the Interoperability Matrix.
 
-http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix: support.netapp.com/NOW/products/interoperability^]
+http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix^]

@@ -108,7 +108,9 @@ You can assign false to ignore the missing archive log files.
 a|
 `srvctl.timeout`
 a|
-This parameter enables you to define the timeout value for the `srvctl` command. *Note:* The Server Control (SRVCTL) is a utility to manage RAC instances.
+This parameter enables you to define the timeout value for the `srvctl` command.
+
+NOTE: The Server Control (SRVCTL) is a utility to manage RAC instances.
 
 When SnapManager takes more time to execute the srvctl command than the timeout value, the SnapManager operation fails with this error message: `Error: Timeout occurred while executing command: srvctl status`.
 
@@ -170,7 +172,9 @@ a|
 * `<db-unique-name>.archivedLogs.exclude.fileslike`
 
 a|
-These parameters allow SnapManager to exclude the archive log files from the profiles and backups if the database is not on a Snapshot copy-enabled storage system and you want to perform SnapManager operations on that storage system.*Note:* You must include the exclude parameters in the configuration file before creating a profile.
+These parameters allow SnapManager to exclude the archive log files from the profiles and backups if the database is not on a Snapshot copy-enabled storage system and you want to perform SnapManager operations on that storage system.
+
+NOTE: You must include the exclude parameters in the configuration file before creating a profile.
 
 The values assigned to these parameters can either be a top-level directory or a mount point where the archive log files are present or a subdirectory.
 

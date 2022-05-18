@@ -56,7 +56,7 @@ Attempts to force the creation of the repository. Using this option results in S
 
 * ``*-noprompt*``
 +
-Does not display the prompt to backup the repository before creating it if you use the -force option. Using the `-noprompt` option ensures the prompt does not appear, making it easier to create repositories using a script.
+Does not display the prompt to backup the repository before creating it if you use the `-force` option. Using the `-noprompt` option ensures the prompt does not appear, making it easier to create repositories using a script.
 
 * ``*-quiet*``
 +

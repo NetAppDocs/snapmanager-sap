@@ -62,7 +62,7 @@ Attempts to force the update of the repository. SnapManager prompts you to make 
 
 * `*-noprompt*`
 +
-Does not display the prompt before updating the repository database. Using the -noprompt option ensures the prompt does not appear, making it easier to update repositories using a script.
+Does not display the prompt before updating the repository database. Using the `-noprompt` option ensures the prompt does not appear, making it easier to update repositories using a script.
 
 * `*-quiet*`
 +

@@ -125,7 +125,7 @@ Specifies the name or IP address of the host computer on which the database resi
 
 * `*-sid _db_sid_*`
 +
-Specifies the system identifier of the database that the profile describes. By default, SnapManager uses the database name as the system identifier. If the system identifier is different from the database name, you must specify it using the -sid option.
+Specifies the system identifier of the database that the profile describes. By default, SnapManager uses the database name as the system identifier. If the system identifier is different from the database name, you must specify it using the `-sid` option.
 
 * `*-login*`
 +
@@ -147,7 +147,7 @@ Specifies the name of the Oracle database user account. SnapManager uses this ac
 +
 Specifies the name of the Oracle database group name associated with the orasid account.
 +
-NOTE: The -osaccount and -osgroup variables are required for UNIX but not allowed for databases running on Windows.
+NOTE: The `-osaccount` and `-osgroup` variables are required for UNIX but not allowed for databases running on Windows.
 
 * `*-retain [-hourly [-count n] [-duration m]] [-daily [-count n] [-duration m]] [-weekly [-count n] [-duration m]] [-monthly [-count n] [-duration m]]*`
 +
@@ -167,7 +167,7 @@ Specifies the naming pattern for Snapshot copies. You can also include custom te
 +
 Specifies whether the backup should be protected to secondary storage.
 +
-NOTE: If -protect is specified without -protection-policy, then the dataset will not have a protection policy. If -protect is specified and -protection-policy is not set when the profile is created, then it may be set later by the smsap profile update command or set by the storage administrator by using the Protection Manager's console.
+NOTE: If `-protect` is specified without `-protection-policy`, then the dataset will not have a protection policy. If `-protect` is specified and `-protection-policy` is not set when the profile is created, then it may be set later by the `smsap profile update` command or set by the storage administrator by using the Protection Manager's console.
 
 * `*-summary-notification*`
 +

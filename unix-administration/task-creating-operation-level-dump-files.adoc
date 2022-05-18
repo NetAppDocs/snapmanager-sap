@@ -17,7 +17,7 @@ You can use the `smsap operation` dump command with the name or ID of the failed
 +
 `*smsap operation dump -id _guid_*`
 
-NOTE: The smsap operation dump command provides a super set of the information provided by the smsap profile dump command, which in turn provides a super set of the information provided by the smsap system dump command.
+NOTE: The smsap operation dump command provides a super set of the information provided by the `smsap profile dump` command, which in turn provides a super set of the information provided by the smsap system dump command.
 
 Dump file location:
 

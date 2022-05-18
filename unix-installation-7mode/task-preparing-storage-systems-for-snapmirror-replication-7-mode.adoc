@@ -21,7 +21,7 @@ You cannot use SnapManager for synchronous mirroring. SnapManager supports async
 
 IMPORTANT: If you are storing database files and transaction logs on different volumes, you must create relationships between the source and destination volumes for the database files and between the source and destination volumes for the transaction logs.
 
-. On the source system console, use the options snapmirror.access command to specify the host names of systems that are allowed to copy data directly from the source system.
+. On the source system console, use the `options snapmirror.access` command to specify the host names of systems that are allowed to copy data directly from the source system.
 +
 *Example*
 +
@@ -31,7 +31,7 @@ The following entry allows replication to destination_systemB:
 options snapmirror.access host=destination_systemB
 ----
 
-. On the destination system, create or edit the /etc/snapmirror.conf file to specify the volume to be copied.
+. On the destination system, create or edit the `/etc/snapmirror.conf` file to specify the volume to be copied.
 +
 *Example*
 +
@@ -41,7 +41,7 @@ The following entry specifies replication from vol0 of source_systemA to vol2 of
 source_systemA:vol0 destination_systemB:vol2
 ----
 
-. On both the source and destination system consoles, use the snapmirror on command to enable SnapMirror.
+. On both the source and destination system consoles, use the `snapmirror on` command to enable SnapMirror.
 +
 *Example*
 +
@@ -51,7 +51,7 @@ The following command enables SnapMirror:
 snapmirror on
 ----
 
-. On the destination system console, use the vol create command to create a SnapMirror destination volume that is the same or greater in size than the source volume.
+. On the destination system console, use the `vol create` command to create a SnapMirror destination volume that is the same or greater in size than the source volume.
 +
 *Example*
 +
@@ -71,7 +71,7 @@ The following command marks the destination volume vol2 as restricted:
 vol restrict vol2
 ----
 
-. On the source system console, use the snap sched command to disable any scheduled transfers.
+. On the source system console, use the `snap sched` command to disable any scheduled transfers.
 +
 *Example*
 +

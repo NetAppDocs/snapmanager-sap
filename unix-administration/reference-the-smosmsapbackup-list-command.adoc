@@ -46,7 +46,7 @@ Displays only error messages in the console. The default is to display error and
 
 * `*-verbose*`
 +
-Displays error, warning, and informational messages in the console. Include the -verbose option to display the backup IDs.
+Displays error, warning, and informational messages in the console. Include the `-verbose` option to display the backup IDs.
 ---
 
 == Example

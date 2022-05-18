@@ -29,7 +29,7 @@ pass:quotes[smsap notification remove-summary-notification
 
 * `*-repository*`
 +
-The options that follow -repository specify the details of the database for the repository.
+The options that follow `-repository` specify the details of the database for the repository.
 
 * `*-port _repo_port_*`
 +

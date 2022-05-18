@@ -70,7 +70,7 @@ Recovers the database after restoring it. You must also specify the point to whi
 You can use this parameter for online or offline backups.
 
  ** `-alllogs`: Recovers the database to the last transaction or commit, and applies all required logs.
- ** -until date: Recovers the database up to the date and time specified.
+ ** `-until date`: Recovers the database up to the date and time specified.
 +
 You must use the year-month-date: hour: minute: second (_yyyy-mm-dd:hh:mm:ss_) format. For hours, use either 12-hour or 24-hour format, depending on the database setting.
 

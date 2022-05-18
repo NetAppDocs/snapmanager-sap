@@ -35,7 +35,7 @@ Windows x64
 a|
 `netapp.smsap.windows-x64-version.exe`
 |===
-The following message is displayed: The publisher could not be verified. Are you sure you want to run this software?
+The following message is displayed: `The publisher could not be verified. Are you sure you want to run this software?`
 
 . Click *OK*.
 . In the *Introduction* window, click *Next*.
@@ -76,4 +76,4 @@ number is the operation ID number.
 
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

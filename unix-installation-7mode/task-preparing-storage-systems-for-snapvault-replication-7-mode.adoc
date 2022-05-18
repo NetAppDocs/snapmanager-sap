@@ -48,7 +48,7 @@ The following command allows copied data to be restored to source_systemA:
 options snapvault.access host=destination_systemA
 ----
 
-. On the source system console, use the ndmpd on command to enable NDMP.
+. On the source system console, use the `ndmpd on` command to enable NDMP.
 +
 *Example*
 +
@@ -58,7 +58,7 @@ The following command enables NDMP:
 ndmpd on
 ----
 
-. On the destination system console, use the vol create command to create a SnapMirror destination volume that is the same or greater in size than the source volume.
+. On the destination system console, use the `vol create` command to create a SnapMirror destination volume that is the same or greater in size than the source volume.
 +
 *Example*
 +

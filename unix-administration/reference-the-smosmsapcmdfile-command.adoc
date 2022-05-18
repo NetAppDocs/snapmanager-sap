@@ -42,7 +42,7 @@ Specifies that error, warning, and informational messages are displayed in the c
 ---
 == Example
 
-This example creates a profile by including the profile create command in command.txt located at /tmp. You can then run the smsap cmdfile command.
+This example creates a profile by including the `profile create` command in `command.txt` located at `/tmp`. You can then run the `smsap cmdfile` command.
 
 The text file contains the following information:
 
@@ -53,7 +53,7 @@ profile create -profile SALES1 -repository -dbname SNAPMGRR
 -host Host2 -osaccount oracle -osgroup db2
 ----
 
-You can now create the profile by running the smsap cmdfile command with the command.txt file:
+You can now create the profile by running the `smsap cmdfile` command with the `command.txt` file:
 
 ----
 smsap cmdfile -file /tmp/command.txt
