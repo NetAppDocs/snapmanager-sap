@@ -112,7 +112,7 @@ The following example displays the redo log directory structure for cloning:
  ** Background dump
  ** Core dump
  ** User dump
- ** (Optional) Archive logs
+ ** *Optional:* Archive logs
 +
 NOTE: If the parameter values are not set correctly, the clone operation is stopped and you receive an error message.
 

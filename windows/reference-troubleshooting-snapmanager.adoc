@@ -164,6 +164,7 @@ The schedule file names can be in the following formats:
 
  ** repository#repo_username#repository_database_name#repository_host#repo_port
  ** repository-repo_usernamerepository_database_name-repository_host-repo_port
+ 
 NOTE: You must ensure that you delete the schedule file in the format that matches the repository details.
 
 . Restart the SnapManager server.

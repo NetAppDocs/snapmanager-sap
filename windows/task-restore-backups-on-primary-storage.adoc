@@ -115,4 +115,4 @@ You can specify the `-dump` option as an optional parameter to collect the dump 
 
 |===
 
-. Specify external archive log locations by using the -recover-from-location option.
+. Specify external archive log locations by using the `-recover-from-location` option.

@@ -112,11 +112,14 @@ a|
 The credentials set for the repositories, hosts, and profiles are cleared. SnapManager verifies user credentials before starting any operation.When user credentials are invalid, SnapManager fails to authenticate. When a host or a profile is deleted from the repository, the user credentials are still available in the cache. These unnecessary credential entries slow down the SnapManager operations from the GUI.
 
 a|
-Restart the SnapManager GUI depending on how the cache is cleared. *Note:*
+Restart the SnapManager GUI depending on how the cache is cleared.
 
+[NOTE]
+====
 * If you have cleared the credential cache from the SnapManager GUI, you do not need to exit the SnapManager GUI.
 * If you have cleared the credential cache from the SnapManager CLI, you must restart the SnapManager GUI.
 * If you have deleted the encrypted credential file manually, you must restart the SnapManager GUI.
+====
 
 Set the credentials that you have given for the repository, profile host, and profile. From the SnapManager GUI, if there is no repository mapped under the Repositories tree, perform the following steps:
 

@@ -9,7 +9,7 @@ summary: "You can use the clone create command to clone a database backup on an 
 :imagesdir: ../media/
 
 [.lead]
-You can use the clone create command to clone a database backup on an alternate host.
+You can use the `clone create` command to clone a database backup on an alternate host.
 
 == What you'll need
 

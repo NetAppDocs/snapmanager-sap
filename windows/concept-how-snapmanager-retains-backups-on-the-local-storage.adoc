@@ -122,4 +122,4 @@ SnapManager counts this successful backup, but after SnapManager reaches three s
 |===
 *Related information*
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

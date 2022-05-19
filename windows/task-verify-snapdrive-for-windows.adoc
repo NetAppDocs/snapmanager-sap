@@ -23,4 +23,4 @@ If you have successfully found disk information for the SnapDrive product, SnapD
 
 *Related information*
 
-http://support.netapp.com/documentation/productsatoz/index.html[_SnapDrive for Windows Installation and Administration Guide_: [mysupport.netapp.com/documentation/productsatoz/index.html\](https://mysupport.netapp.com/documentation/productsatoz/index.html)^]
+http://support.netapp.com/documentation/productsatoz/index.html[SnapDrive for Windows Installation and Administration Guide^]

@@ -22,4 +22,4 @@ The SnapDrive for UNIX documentation on the NetApp Support Site contains additio
 +
 SnapVault post-script supports clustered Data ONTAP volumes and the SnapMirror relation types DP and XDP. The ONTAP documentation on the NetApp Support Site contains information about configuring SnapMirror and SnapVault.
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]

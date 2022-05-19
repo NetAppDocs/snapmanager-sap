@@ -26,4 +26,4 @@ SnapVault post-script supports clustered Data ONTAP volumes and the SnapMirror r
 +
 For example, `*snapdrive config set -mgmtpath f3050-197-91 f3050-197-91 f3050-197-91 f3050-220-91*`, where `f3050-197-91` is the management path and `f3050-220-91` is the data path.
 
-http://mysupport.netapp.com/[Documentation on the NetApp Support Site: mysupport.netapp.com^]
+http://mysupport.netapp.com/[Documentation on the NetApp Support Site^]
