@@ -112,10 +112,10 @@ entries:
       url: "/unix-administration/task-change-profile-passwords.html"
     - title: Reset the profile password
       url: "/unix-administration/task-reset-profile-password.html"
-    - title: Authorizing access to profiles
-      url: "/unix-administration/task-authorizing-user-access-to-profiles.html"
+    - title: Authorize access to profiles
+      url: "/unix-administration/task-authorize-user-access-to-profiles.html"
     - title: Verify profiles
-      url: "/unix-administration/task-verif-profiles.html"
+      url: "/unix-administration/task-verify-profiles.html"
     - title: Update profiles
       url: "/unix-administration/task-update-profiles.html"
     - title: Delete profiles
@@ -459,7 +459,7 @@ entries:
     - title: View the detailed history of a specific operation associated with
         a profile
       url: "/unix-administration/task-view-the-detailed-history-of-a-specific-operation-associated-with-a-profile.html"
-    - title: Deleting history of SnapManager operation
+    - title: Delete history of SnapManager operation
       url: "/unix-administration/task-purge-history-of-snapmanager-operation.html"
     - title: Remove history settings associated with a single profile or multiple
         profiles

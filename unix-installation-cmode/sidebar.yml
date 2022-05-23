@@ -8,8 +8,8 @@ entries:
       url: "/unix-installation-cmode/reference-smsap-isg-snapmanager-architecture.html"
   - title: Deployment workflow
     url: "/unix-installation-cmode/reference-smsap-isg-deployment-workflow.html"
-  - title: Preparing for deployment
-    url: "/unix-installation-cmode/task-smsap-isg-preparing-for-deployment.html"
+  - title: Prepare for deployment
+    url: "/unix-installation-cmode/task-smsap-isg-prepare-for-deployment.html"
     entries:
     - title: SnapManager licensing
       url: "/unix-installation-cmode/reference-smsap-isg-snapmanager-licensing.html"
@@ -19,8 +19,8 @@ entries:
       url: "/unix-installation-cmode/reference-supported-storage-types.html"
     - title: UNIX host requirements
       url: "/unix-installation-cmode/reference-smsap-isg-host-requirements.html"
-  - title: Configuring databases
-    url: "/unix-installation-cmode/task-smsap-isg-configuring-databases.html"
+  - title: Configure databases
+    url: "/unix-installation-cmode/task-smsap-isg-configure-databases.html"
     entries:
     - title: Configuring the target database
       url: "/unix-installation-cmode/task-smsap-isg-configuring-the-target-database.html"

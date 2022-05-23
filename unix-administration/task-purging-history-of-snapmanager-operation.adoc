@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, history, snapmanager, operation, require, detail, deleting
 summary: "You can delete the history of the SnapManager operation, if you no longer require the history details."
 ---
-= Deleting history of SnapManager operation
+= Delete history of SnapManager operation
 :icons: font
 :imagesdir: ../media/
 

@@ -1,5 +1,5 @@
 ---
-permalink: unix-administration/task-removing-history-configuration-associated-with-a-single-profile-or-multiple-profiles.html
+permalink: unix-administration/task-remove-history-configuration-associated-with-a-single-profile-or-multiple-profiles.html
 sidebar: sidebar
 keywords: snapmanager, enable, remove, history, setting, operation, purge, information, associate, single, multiple, profile, removing
 summary: "SnapManager enables you to remove the history settings of a SnapManager operation. This operation purges all the history information associated with a single profile or multiple profiles."
