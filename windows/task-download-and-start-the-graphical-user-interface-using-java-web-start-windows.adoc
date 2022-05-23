@@ -26,13 +26,19 @@ You must ensure that the following conditions are met:
 +
 NOTE: You must enter `https` in the browser window.
 +
-`A dialog box with the message There is a problem with the site's security certificate...Do you want to proceed?` is displayed.
+
+A dialog box with the following message is displayed.
+
+IMPORTANT: `A dialog box with the message There is a problem with the site's security certificate...Do you want to proceed?`
 
 . Click *Yes* or *Continue*.
 . Click on the link labeled *Click here to download and install JRE 6.0 and the application*.
 +
-A link labeled Download Java Web Start with the message `This site might require the following ActiveX control: Java Plug-in 1.6"... "Click here to install` is displayed.
+A link labeled Download Java Web Start with the following message is displayed.
 
+IMPORTANT: `This site might require the following ActiveX control: Java Plug-in 1.6"... "Click here to install`
+
+[start=3]
 . In the *Install* window, perform the following steps:
  .. Click the message labeled `Click here to install....`
 +
@@ -40,7 +46,9 @@ An *Install ActiveX Control* menu is displayed.
 
  .. Select *Install ActiveX Control...*.
 +
-The message `Internet Explorer - Security Warning" containing the following text: "Do you want to install this software? Name: Java Plug-in 1.6` is displayed.
+The following message is displayed.
+
+IMPORTANT: `Internet Explorer - Security Warning" containing the following text: "Do you want to install this software? Name: Java Plug-in 1.6`
 
  .. Click *Install*.
 +
@@ -72,8 +80,13 @@ The steps to change the Windows configuration settings varies based on the versi
  .. Enter the SnapManager URL that you have specified in the step 1.
 
 +
-The SnapManager download starts on the Windows client and a Warning - security dialog box is displayed.
+The SnapManager download starts on the windows client and the following warning is displayed
+
+WARNING: `security dialog box is displayed.`
+
+[start=4]
 . Perform the following steps.
+
 +
 The message contents and button labels vary based on platform.
 
@@ -87,7 +100,9 @@ The Warning - Security dialog box with a message about the signature of the Snap
 
  .. Click *Run*.
 +
-A dialog box with the title Java Installer - Security Warning and the message `Warning Security - the application's digital signature has an error. Do you want run the application`, is displayed.
+A dialog box with the title Java Installer - Security Warning and the following message is displayed.
+
+WARNING: `Warning Security - the application's digital signature has an error. Do you want run the application`
 
  .. Click *Run*.
 +
