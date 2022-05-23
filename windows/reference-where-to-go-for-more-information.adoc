@@ -21,26 +21,28 @@ This page provides information about SnapManager, pointers to online documentati
 a|
 _Data ONTAP SAN Configuration Guide for 7-Mode_
 a|
-This document is available at http://mysupport.netapp.com/[mysupport.netapp.com].
+This document is available at http://mysupport.netapp.com/[NetApp Support^].
 
 It is a dynamic, online document that contains the most up-to-date information about the requirements for setting up a system in a SAN environment. It provides the current details about storage systems and host platforms, cabling issues, switch issues, and configurations.
 
 a|
 SnapManager and SnapDrive Compatibility Matrix
 a|
-This document is available in the Interoperability section at http://mysupport.netapp.com/matrix[mysupport.netapp.com/matrix].
+This document is available in the Interoperability section at http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^].
 
 It is a dynamic, online document that contains the most up-to-date information specific to SnapManager and its platform requirements.
 
 a|
 SnapManager Release Notes
 a|
-This document comes with SnapManager. You can also download a copy from http://mysupport.netapp.com/[mysupport.netapp.com]. It contains any last-minute information that you need to get the configuration up and running smoothly.
+This document comes with SnapManager. You can also download a copy from http://mysupport.netapp.com/[NetApp Support^].
+
+It contains any last-minute information that you need to get the configuration up and running smoothly.
 
 a|
 NetApp host attach and support kits documentation
 a|
-http://mysupport.netapp.com/[mysupport.netapp.com].
+http://mysupport.netapp.com/[NetApp Support^].
 
 a|
 Host operating system and database information

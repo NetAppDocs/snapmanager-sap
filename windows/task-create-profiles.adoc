@@ -34,7 +34,11 @@ By using the new profile options to separate the archive log backups, you can pe
 * Mount an archive log backup
 * Free an archive log backup
 
-While creating the profile to separate archive log backups from the data files backup, if the archive log files do not exist in the database for which the profile is created, then a warning message `Archived log file does not exist in the active file system. The archived log file versions earlier than the <archive log thread version> log file will not be included in the backup` is displayed. Even if you create backups for this database, the archive log files are not available in the database backups.
+While creating the profile to separate archive log backups from the data files backup, if the archive log files do not exist in the database for which the profile is created, then a warning message is displayed.
+
+WARNING: `Archived log file does not exist in the active file system. The archived log file versions earlier than the <archive log thread version> log file will not be included in the backup`
+
+Even if you create backups for this database, the archive log files are not available in the database backups.
 
 NOTE: If you encounter an error while creating a profile, use the `smsap system dump` command. After you create a profile, if you encounter an error, use the `smsap operation dump` and `smsap profile dump` commands.
 

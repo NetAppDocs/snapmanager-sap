@@ -11,7 +11,7 @@ summary: "The hosts on which you are installing SnapManager must meet the specif
 [.lead]
 The hosts on which you are installing SnapManager must meet the specified software, browser, database, and operating system requirements. You must verify support for your configuration before you install or upgrade SnapManager.
 
-For information about supported configurations, see the Interoperability Matrix tool.
+For information about supported configurations, see the http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^].
 
 *Related information*
 

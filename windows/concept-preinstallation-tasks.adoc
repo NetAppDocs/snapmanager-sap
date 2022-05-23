@@ -24,6 +24,6 @@ For example, to set the language of the Oracle database to English assign `NLS_L
 
 *Related information*
 
-http://support.netapp.com/NOW/products/interoperability/[NetApp Interoperability Matrix: support.netapp.com/NOW/products/interoperability^]
+http://support.netapp.com/NOW/products/interoperability/[NetApp Interoperability Matrix^]
 
-http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices: media.netapp.com/documents/tr-3823.pdf^]
+http://media.netapp.com/documents/tr-3823.pdf[SnapManager for SAP Best Practices^]

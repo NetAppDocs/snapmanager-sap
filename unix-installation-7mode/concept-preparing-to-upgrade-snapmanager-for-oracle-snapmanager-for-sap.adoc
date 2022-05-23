@@ -9,7 +9,7 @@ summary: "The environment in which you want to upgrade SnapManager must meet the
 :imagesdir: ../media/
 
 [.lead]
-The environment in which you want to upgrade SnapManager must meet the specific software, hardware, browser, database, and operating system requirements. For the latest information about the requirements, see the Interoperability Matrix.
+The environment in which you want to upgrade SnapManager must meet the specific software, hardware, browser, database, and operating system requirements. For the latest information about the requirements, see the http://support.netapp.com/NOW/products/interoperability/[Interoperability Matrix^].
 
 You must ensure that you perform the following tasks before upgrading:
 
