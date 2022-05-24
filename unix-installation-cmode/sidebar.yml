@@ -42,19 +42,19 @@ entries:
     entries:
     - title: Start the SnapManager server
       url: "/unix-installation-cmode/task-smsap-isg-start-the-snapmanager-server.html"
-    - title: Accessing the SnapManager user interface
-      url: "/unix-installation-cmode/task-smsap-isg-accessing-the-snapmanager-user-interface.html"
-    - title: Configuring the SnapManager repository
-      url: "/unix-installation-cmode/task-smsap-isg-configuring-the-snapmanager-repository.html"
+    - title: Access the SnapManager user interface
+      url: "/unix-installation-cmode/task-smsap-isg-access-the-snapmanager-user-interface.html"
+    - title: Configure the SnapManager repository
+      url: "/unix-installation-cmode/task-smsap-isg-configure-the-snapmanager-repository.html"
   - title: Preparing storage systems for SnapMirror and SnapVault replication
     url: "/unix-installation-cmode/reference-prepare-storage-systems-for-snapmirror-and-snapvault-replication.html"
     entries:
     - title: Understanding the differences between SnapMirror and SnapVault
       url: "/unix-installation-cmode/concept-understanding-the-differences-between-snapmirror-and-snapvault.html"
-    - title: Preparing storage systems for SnapMirror replication
-      url: "/unix-installation-cmode/task-preparing-storage-systems-for-snapmirror-replication.html"
-    - title: Preparing storage systems for SnapVault replication
-      url: "/unix-installation-cmode/task-preparing-storage-systems-for-snapvault-replication.html"
+    - title: Prepare storage systems for SnapMirror replication
+      url: "/unix-installation-cmode/task-prepare-storage-systems-for-snapmirror-replication.html"
+    - title: Prepare storage systems for SnapVault replication
+      url: "/unix-installation-cmode/task-prepare-storage-systems-for-snapvault-replication.html"
   - title: Backing up and verifying your databases
     url: "/unix-installation-cmode/concept-backing-up-and-verifying-your-databases.html"
     entries:
@@ -62,30 +62,30 @@ entries:
       url: "/unix-installation-cmode/concept-smsap-isg-snapmanager-backup-overview.html"
     - title: Defining a backup strategy
       url: "/unix-installation-cmode/concept-smsap-isg-defining-a-backup-strategy.html"
-    - title: Creating a profile for your database
-      url: "/unix-installation-cmode/task-smsap-isg-creating-a-profile-for-your-database.html"
-    - title: Backing up your database
-      url: "/unix-installation-cmode/task-smsap-isg-backing-up-your-database.html"
-    - title: Verifying database backups
-      url: "/unix-installation-cmode/task-smsap-isg-verifying-database-backups.html"
-    - title: Scheduling recurring backups
-      url: "/unix-installation-cmode/task-smsap-isg-scheduling-recurring-backups.html"
-  - title: Uninstalling the software from a UNIX host
-    url: "/unix-installation-cmode/task-smsap-isg-uninstalling-the-software-from-a-unix-host.html"
+    - title: Create a profile for your database
+      url: "/unix-installation-cmode/task-smsap-isg-create-a-profile-for-your-database.html"
+    - title: Back up your database
+      url: "/unix-installation-cmode/task-smsap-isg-back-up-your-database.html"
+    - title: Verify database backups
+      url: "/unix-installation-cmode/task-smsap-isg-verify-database-backups.html"
+    - title: Schedule recurring backups
+      url: "/unix-installation-cmode/task-smsap-isg-schedule-recurring-backups.html"
+  - title: Uninstall the software from a UNIX host
+    url: "/unix-installation-cmode/task-smsap-isg-uninstall-the-software-from-a-unix-host.html"
   - title: Upgrading SnapManager
     url: "/unix-installation-cmode/concept-upgrading-snapmanager-for-oracle-snapmanager-for-sap.html"
     entries:
     - title: Preparing to upgrade SnapManager
       url: "/unix-installation-cmode/concept-preparing-to-upgrade-snapmanager-for-oracle-snapmanager-for-sap.html"
-    - title: Upgrading the SnapManager hosts
-      url: "/unix-installation-cmode/task-upgrading-snapmanager-for-oracle-snapmanager-for-sap-hosts.html"
+    - title: Upgrade the SnapManager hosts
+      url: "/unix-installation-cmode/task-upgrade-snapmanager-for-oracle-snapmanager-for-sap-hosts.html"
     - title: Post-upgrade tasks
       url: "/unix-installation-cmode/concept-post-upgrade-tasks.html"
       entries:
-      - title: Updating the existing repository
-        url: "/unix-installation-cmode/task-updating-the-existing-repository.html"
-      - title: Modifying the backup retention class
-        url: "/unix-installation-cmode/task-modifying-the-backup-retention-class.html"
+      - title: Update the existing repository
+        url: "/unix-installation-cmode/task-update-the-existing-repository.html"
+      - title: Modify the backup retention class
+        url: "/unix-installation-cmode/task-modify-the-backup-retention-class.html"
       - title: Restore process types
         url: "/unix-installation-cmode/concept-restore-process-identification.html"
     - title: Upgrading SnapManager hosts by using rolling upgrade
@@ -93,8 +93,8 @@ entries:
       entries:
       - title: Prerequisites for performing rolling upgrades
         url: "/unix-installation-cmode/concept-prerequisites-for-performing-rolling-upgrade.html"
-      - title: Performing rolling upgrade on a single host or multiple hosts
-        url: "/unix-installation-cmode/task-performing-rolling-upgrade-on-a-single-host-or-multiple-hosts.html"
+      - title: Perform rolling upgrade on a single host or multiple hosts
+        url: "/unix-installation-cmode/task-perform-rolling-upgrade-on-a-single-host-or-multiple-hosts.html"
       - title: What a rollback is
         url: "/unix-installation-cmode/concept-what-a-rollback-is.html"
         entries:
@@ -102,8 +102,8 @@ entries:
           url: "/unix-installation-cmode/concept-limitations-for-performing-a-rollback.html"
         - title: Prerequisites for performing a rollback
           url: "/unix-installation-cmode/concept-prerequisites-for-performing-a-rollback.html"
-        - title: Performing a rollback on a single host or multiple hosts
-          url: "/unix-installation-cmode/task-performing-a-rollback-on-a-single-host-or-multiple-hosts.html"
+        - title: Perform a rollback on a single host or multiple hosts
+          url: "/unix-installation-cmode/task-perform-a-rollback-on-a-single-host-or-multiple-hosts.html"
         - title: Post rollback tasks
           url: "/unix-installation-cmode/task-post-rollback-tasks.html"
   - title: Where to go next
