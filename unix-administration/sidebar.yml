@@ -269,8 +269,8 @@ entries:
         url: "/unix-administration/task-clone-a-database-to-an-alternate-host.html"
     - title: View a list of clones
       url: "/unix-administration/task-view-a-list-of-clones.html"
-    - title: Viewing detailed clone information
-      url: "/unix-administration/task-viewing-detailed-clone-information.html"
+    - title: View detailed clone information
+      url: "/unix-administration/task-view-detailed-clone-information.html"
     - title: Delete clones
       url: "/unix-administration/task-delete-clones.html"
     - title: Splitting a clone
