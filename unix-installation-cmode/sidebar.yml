@@ -32,13 +32,13 @@ entries:
       url: "/unix-installation-cmode/task-create-an-oracle-user-for-the-repository-database-instance.html"
     - title: Verify the Oracle listener configuration
       url: "/unix-installation-cmode/task-verify-the-oracle-listener-configuration.html"
-  - title: Installing SnapManager
-    url: "/unix-installation-cmode/task-smsap-isg-installing-snapmanager.html"
+  - title: Install SnapManager
+    url: "/unix-installation-cmode/task-smsap-isg-install-snapmanager.html"
     entries:
     - title: Integrate with SAP BR* Tools
       url: "/unix-installation-cmode/task-smsap-isg-integrate-with-sap-br-tools.html"
-  - title: Setting up SnapManager
-    url: "/unix-installation-cmode/task-setting-up-snapmanager.html"
+  - title: Set up SnapManager
+    url: "/unix-installation-cmode/task-set-up-snapmanager.html"
     entries:
     - title: Start the SnapManager server
       url: "/unix-installation-cmode/task-smsap-isg-start-the-snapmanager-server.html"
