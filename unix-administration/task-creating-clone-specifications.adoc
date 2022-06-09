@@ -198,7 +198,8 @@ If a parameter has multiple values, then you can provide the parameter values se
 
 If you want to move the log files from one location to another, then following you can use the `log_file_name_convert` parameter and specify the log file paths separated by commas, as seen in the example:
 
-. Optional: Specify arbitrary SQL statements to execute against the clone when it is online.
+[start=7]
+. *Optional:* Specify arbitrary SQL statements to execute against the clone when it is online.
 +
 You can use the SQL statements to perform tasks such as re-creating the `temp files` in the cloned database.
 +
@@ -216,12 +217,11 @@ The following is a sample SQL statement that you execute as part of the clone op
    </sql-statement>
 </sql-statements>
 ----
-
-== Clone specification example
-
++
+*Clone specification example*
++
 The following example displays the clone specification structure, including both the storage and database specification components:
-
----
++
 ----
 <clone-specification xmlns="http://www.example.com>
 
