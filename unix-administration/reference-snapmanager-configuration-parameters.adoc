@@ -111,7 +111,7 @@ a|
 a|
 This pruning parameter enables you to prune the archive log files backed up from the specified archive log destinations or backed up from external archive log destinations. The possible values that you can assign are as follows:
 
-* When you want to prune the archive log files from the specified destinations and if the archive log files are backed up from the specified destinations by using ``-prune-dest`, you must assign `*false*` to
+* When you want to prune the archive log files from the specified destinations and if the archive log files are backed up from the specified destinations by using `-prune-dest`, you must assign `*false*` to
 +
 `prune.archivelogs.backedup.from.otherdestination`.
 
@@ -137,7 +137,7 @@ a|
 a|
 This parameter enables you to specify the suffix that you want to add to differentiate the label names of the data backup and the archive log backup.
 
-For example, when you assign `*logs*`` to `suffix.backup.label.with.logs`, _logs is added as a suffix to the archive log backup label. The archive log backup label would then be `arch_logs`.
+For example, when you assign `*logs*` to `suffix.backup.label.with.logs`, _logs is added as a suffix to the archive log backup label. The archive log backup label would then be `arch_logs`.
 
 a|
 `backup.archivelogs.beyond.missingfiles`
@@ -218,7 +218,7 @@ a|
 
 * `archivedLogs.exclude`
 * `archivedLogs.exclude.fileslike`
-* ``<db-unique-name>.archivedLogs.exclude.fileslike`
+* `<db-unique-name>.archivedLogs.exclude.fileslike`
 
 a|
 These parameters allow SnapManager to exclude the archive log files from the profiles and backups if the database is not on a Snapshot copy-enabled storage system and you want to perform SnapManager operations on that storage system.

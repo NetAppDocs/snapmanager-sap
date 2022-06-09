@@ -135,7 +135,7 @@ smsap backup create -profile nosep -data -files "J:\\mnt\\user\\user.dbf" -onlin
 a|
 *Specify whether you want to perform a partial backup of specific tablespaces*
 a|
-    Specify the `-data -tablespaces` option and then list the tablespaces, separated by commas. For example, use ts1, ts2, and ts3 after the option.
+Specify the `-data -tablespaces` option and then list the tablespaces, separated by commas. For example, use ts1, ts2, and ts3 after the option.
 
 SnapManager supports backing up of read-only tablespaces. While creating the backup, SnapManager changes the read-only table spaces to read-write. After creating the backup, the tablespaces are changed to read-only.
 
@@ -143,22 +143,22 @@ Example for creating a partial tablespace backup
 
 ----
 
-                smsap backup create -profile nosep -data -tablespaces tb2 -online -label partial_tablespace_bkup -verbose
+smsap backup create -profile nosep -data -tablespaces tb2 -online -label partial_tablespace_bkup -verbose
 ----
 a|
 *Specify whether you want to create a unique label for each backup in the following format: full_hot_mybackup_label*
 a|
-    For Windows, you might enter this example:
+For Windows, you might enter this example:
 
 ----
 
-                smsap backup create -online -full -profile targetdb1_prof1
+smsap backup create -online -full -profile targetdb1_prof1
 -label full_hot_my_backup_label   -verbose
 ----
 a|
 *Specify whether you want to create backup of the archive log files separately from the data files*
 a|
-    Specify the following options and variables:
+Specify the following options and variables:
 
  ** `-archivelogs` creates a backup of the archive log files.
  ** `-backup-dest` specifies the archive log file destinations to be backed up.
@@ -182,7 +182,7 @@ smsap backup create -profile nosep -archivelogs -backup-dest "J:\\mnt\\archive_d
 a|
 *Specify whether you want to create backup of data files and archive log files together*
 a|
-    Specify the following options and variables:
+Specify the following options and variables:
 
  ** `-data` option to specify the data files.
  ** `-archivelogs` option to specify the archive log files.
@@ -197,7 +197,7 @@ smsap backup create -profile nosep -data -online -archivelogs -backup-dest "J:\\
 a|
 *Specify whether you want to prune the archive log files while creating a backup*
 a|
-    Specify the following options and variables:
+Specify the following options and variables:
 
  ** `-prunelogs` specifies to delete the archive log files from the archive log destinations.
   *** `-all` specifies to delete all the archive log files from the archive log destinations.

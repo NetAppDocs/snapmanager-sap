@@ -15,12 +15,12 @@ You can run the `backup mount` command to mount a backup in order to perform a r
 
 ----
 
-        smsap backup mount
+smsap backup mount
 -profile profile_name
-[-label label \[-data \| -archivelogs\] \| \[-id id\]
+[-label label [-data | -archivelogs] | [-id id]
 [-host  host]
 
-\[-dump\]
+[-dump]
 [-quiet | -verbose]
 ----
 

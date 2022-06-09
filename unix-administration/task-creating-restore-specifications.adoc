@@ -47,7 +47,7 @@ File mapping specifies where a file is restored from. The original location is t
 </mountpoint-mapping>
 ----
 +
-Mountpoint refers to directory path ``/mnt/myfs/`). The mountpoint mapping specifies the mountpoint from which the files are restored. The original location is the location of the mountpoint in the active file system at the time of backup. The alternate location is the mountpoint from which the files in the original location are restored. The `_snapname_` is the name of the Snapshot copy in which the original files were backed up.
+Mountpoint refers to directory path `/mnt/myfs/`). The mountpoint mapping specifies the mountpoint from which the files are restored. The original location is the location of the mountpoint in the active file system at the time of backup. The alternate location is the mountpoint from which the files in the original location are restored. The `_snapname_` is the name of the Snapshot copy in which the original files were backed up.
 +
 NOTE: The Snapshot copy name is a necessary component because the same file system can be used multiple times in a single backup operation (for example, once for the data files and once for the logs).
 

@@ -19,8 +19,8 @@ pass:quotes[smsap backup mount
 -profile _profile_name_
 [-label _label_ [-data | -archivelogs\] | [-id _id_\]
 [-host  _host_]
-[-from-secondary {-copy-id _id_\}]
-[-dump\]
+[-from-secondary {-copy-id _id_}]
+[-dump]
 [-quiet | -verbose]]
 ----
 
@@ -50,7 +50,7 @@ Specifies the archive log files.
 +
 Mounts the backup from secondary storage. If this option is not specified, SnapManager mounts the backup from primary storage. You can use this option if the backup is freed.
 +
-You must specify the `-copy-id`option whenever you specify the `-from-secondary` option. If there is more than one backup on the secondary storage system, the `-copy-id` option is used to specify which backup copy on the secondary storage should be used to mount the backup.
+You must specify the `-copy-id` option whenever you specify the  `-from-secondary` option. If there is more than one backup on the secondary storage system, the `-copy-id` option is used to specify which backup copy on the secondary storage should be used to mount the backup.
 +
 NOTE: If you are using Data ONTAP operating in 7-Mode, you must specify a valid value for the `-copy-id` option. However, if you are using clustered Data ONTAP, the `-copy-id` option is not required.
 

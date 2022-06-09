@@ -46,7 +46,7 @@ a|
 Specify the credentials for ASM instance authentication.
 
  ** `-asmusername _asminstance_username_` is the user name used to log in to the ASM instance.
- ** ``-asmpassword _asminstance_password_` is the password used to log in to the ASM instance.
+ ** `-asmpassword _asminstance_password_` is the password used to log in to the ASM instance.
 
 a|
 *Use a catalog as the Oracle Recovery Manager (RMAN) repository, or you want to remove RMAN*
@@ -114,7 +114,7 @@ If the dataset exists, it is reused when a profile is created.
 a|
 *Change the host name of the target database*
 a|
-Specify ``-host _new_db_host_` to change the host name of the profile.
+Specify `-host _new_db_host_` to change the host name of the profile.
 a|
 *Collect the dump files after the profile update operation*
 a|

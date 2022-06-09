@@ -38,7 +38,7 @@ http://mysupport.netapp.com/NOW/cgi-bin/software[NetApp Downloads: Software^]
 . Press `Enter` to continue.
 . Perform the following steps:
  .. Change the default value of the operating system user to `*ora*` `_sid_`, where `_sid_` is the system identifier of the database.
- .. Press Enter` to accept the default value for operating system group.
+ .. Press `Enter` to accept the default value for operating system group.
 +
 The default value for the group is _dba_.
 

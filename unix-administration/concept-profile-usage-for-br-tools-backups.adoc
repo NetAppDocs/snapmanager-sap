@@ -46,7 +46,7 @@ The BR*Tools command can optionally pass a backup utility parameter (.utl parame
 
 By default, BR*Tools uses the parameter file specified by the `_util_par_file_` parameter in the `initSID.sap file`. The backup utility parameter file is normally stored in the same directory as the `initSID.sap file`.
 
-Add `profile_name = <profile>`` to the `.utl` file and save. The `_profile_` is the name of the SnapManager profile you want to use for the BR*Tools commands.
+Add `profile_name = <profile>` to the `.utl` file and save. The `_profile_` is the name of the SnapManager profile you want to use for the BR*Tools commands.
 
 The following table lists additional backup utility parameters included in the `.utl` file for operations like backup retention, fast restore, and data protection:
 

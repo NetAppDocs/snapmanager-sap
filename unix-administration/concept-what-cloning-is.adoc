@@ -39,8 +39,8 @@ You can clone a backup on the primary (local) storage or a protected backup that
 You must ensure that the following prerequisites are met before a database can be cloned:
 
 * Ensure that the `[/etc|/var/opt/oracle]/oratab` directory does not contain an entry pointing to the target system identifier.
-* Delete the `spfile<SID>.ora` file from ``$ORACLE_HOME/dbs`.
-* Delete the `init<SID>.ora` file from ``$ORACLE_HOME/dbs`.
+* Delete the `spfile<SID>.ora` file from `$ORACLE_HOME/dbs`.
+* Delete the `init<SID>.ora` file from `$ORACLE_HOME/dbs`.
 * Delete Oracle dump destinations that are specified in the clone specification file.
 * Delete the Oracle control files that are specified in the clone specification file.
 * Delete the Oracle redo log files that are specified in the clone specification file.
@@ -51,10 +51,10 @@ When you enter a label, you should not include spaces or special characters.
 
 As part of the cloning process, SnapManager creates the necessary Oracle files and parameters for the cloned database. An example of a necessary Oracle file is `init<SID>.ora`.
 
-When you clone a database, SnapManager creates a new `init<SID>.ora` file for the database in the ``$ORACLE_HOME/dbs` directory.
+When you clone a database, SnapManager creates a new `init<SID>.ora` file for the database in the `$ORACLE_HOME/dbs` directory.
 
 You can clone a Real Application Cluster (RAC) database as well as a nonclustered database. A RAC clone starts as a single database.
 
 You can clone a database backup to the host in which the database resides or to an alternate host.
 
-If the database you cloned was using a `spfile`, SnapManager creates an `spfile` for the clone. It places this file in the ``$ORACLE_HOME/dbs` directory and creates the directory structure for the diagnostic files. The file name is `spfile <SID>.ora`.
+If the database you cloned was using a `spfile`, SnapManager creates an `spfile` for the clone. It places this file in the `$ORACLE_HOME/dbs` directory and creates the directory structure for the diagnostic files. The file name is `spfile <SID>.ora`.

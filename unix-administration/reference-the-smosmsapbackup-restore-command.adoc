@@ -150,7 +150,7 @@ Specifies to collect the dump files after the restore operation.
 
 * `*-force*`
 +
-Changes the database state to a lower state than its current state, if necessary. For Real Application Clusters (RAC), you must include the `-force`option if SnapManager has to change the state of any RAC instance to a lower state.
+Changes the database state to a lower state than its current state, if necessary. For Real Application Clusters (RAC), you must include the `-force` option if SnapManager has to change the state of any RAC instance to a lower state.
 +
 By default, SnapManager can change the database state to a higher state during an operation. This option is not required for SnapManager to change the database to a higher state.
 

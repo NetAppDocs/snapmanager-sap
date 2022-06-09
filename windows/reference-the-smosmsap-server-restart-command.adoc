@@ -14,8 +14,7 @@ This command restarts the SnapManager host server and is entered as root.
 == Syntax
 
 ----
-
-        smsap_server restart
+smsap_server restart
 [-quiet | -verbose]
 ----
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: release, notes, new, features, fixed, issues, known, limitations, oncommand, workflow, automation, netapp, 5.0, 5.0.1
 summary: "Describes new features, upgrade notes, fixed issues, known limitations, and known issues."
 ---
-= SnapManager for SAP Release Notes
+= Release Notes
 
 The release notes describe new features, upgrade notes, fixed issues, known limitations, and known issues.
 

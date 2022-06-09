@@ -27,7 +27,7 @@ NOTE: Though mount point and ASM disk group information are editable from the GU
 
 You can execute a task multiple times, either with the same or different parameter and value combinations.
 
-SAP uses specific Oracle settings for database configuration. You can find these settings in `init<SID>.ora` located at ``$ORACLE_HOME/dbs`. You should include these in your clone specification.
+SAP uses specific Oracle settings for database configuration. You can find these settings in `init<SID>.ora` located at `$ORACLE_HOME/dbs`. You should include these in your clone specification.
 
 .Steps
 

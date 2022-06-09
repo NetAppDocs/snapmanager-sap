@@ -15,17 +15,17 @@ You can run the `history set` command to configure the operations for which you 
 
 ----
 
-        smsap history set
--profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
+smsap history set
+-profile {-name profile_name [profile_name1, profile_name2] | -all
 -repository
--login \[password repo_password\]
+-login [password repo_password]
 -username repo_username
 -host repo_host
 -dbname repo_dbname
 -port repo_port}
--operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\}
+-operation {-operations operation_name [operation_name1, operation_name2] | -all}
 -retain
-{-count retain_count \| -daily daily_count \| -monthly monthly_count \| -weekly weekly_count}
+{-count retain_count | -daily daily_count | -monthly monthly_count | -weekly weekly_count}
 [-quiet | -verbose]
 ----
 
@@ -59,7 +59,7 @@ Specifies the user name required to access the repository database.
 +
 Specifies the Transmission Control Protocol (TCP) port number used to access the repository database.
 
-* *`-operation {-operations `operation_name [operation_name1, operation_name2`] | -all*
+* *`-operation {-operations _operation_name_ [operation_name1, operation_name2] | -all`*
 +
 Specifies the SnapManager operations for which you want to configure the history.
 
