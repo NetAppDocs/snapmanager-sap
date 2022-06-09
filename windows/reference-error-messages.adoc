@@ -110,7 +110,7 @@ Data or control files or redo logs are multiplexed in an ASM database.
 a|
 Remove the Oracle multiplexing.
 a|
-`0001-SMSAP-02016: There may have been external tables in the database not backed up as part of this backup operation (since the database was not OPEN during this backup ALL_EXTERNAL_LOCATIONS could not be queried to determine whether or not external tables exist)``.
+`0001-SMSAP-02016: There may have been external tables in the database not backed up as part of this backup operation (since the database was not OPEN during this backup ALL_EXTERNAL_LOCATIONS could not be queried to determine whether or not external tables exist)`.
 a|
 SnapManager does not backup external tables (for example, tables that are not stored in .dbf files). This issue occurs because the database was not open during the backup, SnapManager cannot determine if any external tables are being used.
 a|
@@ -426,7 +426,7 @@ When you were creating a profile, you customized the Snapname pattern; however, 
 a|
 Enter matching opening and closing brackets in the Snapname pattern.
 a|
-`SMSAP-13085: Snapname pattern with value "x" contains an invalid variable name of "y"``.
+`SMSAP-13085: Snapname pattern with value "x" contains an invalid variable name of "y"`.
 a|
 When you were creating a profile, you customized the Snapname pattern; however, you included a variable that is not allowed.
 a|

@@ -31,7 +31,7 @@ If you are using SnapManager GUI to clone a backup, perform the following action
 . Right-click the backup that you want to clone and select *Clone*.
 . On the Clone Initialization page, enter the mandatory values and select the clone specification method.
 . On the Clone Specification page, select *Parameters*.
-. Click the *+Parameter* tab.
+. Click the *Parameter* tab.
 . In the *Parameter Name* field, enter the name as `_local_listener_` and click *OK*.
 . Select the *Override Default* check box for the local_listener row.
 . Click any parameter, then double-click the local_listener parameter, and enter the following value:``*(ADDRESS=(PROTOCOL=TCP)(HOST=<your_host_name>)(PORT=<port#>))*``

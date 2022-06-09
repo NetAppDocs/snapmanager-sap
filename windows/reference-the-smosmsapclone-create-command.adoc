@@ -89,18 +89,17 @@ The following table describes the cloning methods and their effect on the clone 
 |===
 | Cloning method| Description| Result
 a|
-    LUN cloning
+LUN cloning
 a|
-    A new clone LUN is created within the same volume.
+A new clone LUN is created within the same volume.
 a|
-    When the -reserve option for a LUN is set to yes, space is reserved for the full LUN size within the volume.
+When the -reserve option for a LUN is set to yes, space is reserved for the full LUN size within the volume.
 a|
-    Volume cloning
+Volume cloning
 a|
-    A new FlexClone is created, and the clone LUN exists within the new clone volume. Uses the FlexClone technology.
+A new FlexClone is created, and the clone LUN exists within the new clone volume. Uses the FlexClone technology.
 a|
-    When the -reserve option for a volume is set to yes, space is reserved for the full volume size within the aggregate.
-+
+When the -reserve option for a volume is set to yes, space is reserved for the full volume size within the aggregate.
 |===
 
 * *`-no-resetlogs`*

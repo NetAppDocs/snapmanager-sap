@@ -108,7 +108,7 @@ a|
 *Specify whether you want to take a backup of an online or offline database, rather than allowing SnapManager to handle whether it is online or offline*
 a|
 Specify -offline to take a backup of the offline database.     Specify -online to take a backup of the online database.
-+
+
 If you use these options, you cannot use the -auto option.
 a|
 *Specify whether you want to let SnapManager handle backing up a database regardless of whether it is online or offline*
@@ -118,9 +118,9 @@ a|
 *Specify whether you want to perform a partial backup of specific files*
 a|
     Specify the -data-files option and then list the files, separated by commas. For example, list the file names f1, f2, and f3 after the option.
-+
+
 Example for creating a partial datafile backup on Windows
-+
+
 ----
 
 smsap backup create -profile nosep -data -files "J:\\mnt\\user\\user.dbf" -online
@@ -129,15 +129,14 @@ smsap backup create -profile nosep -data -files "J:\\mnt\\user\\user.dbf" -onlin
 a|
 *Specify whether you want to perform a partial backup of specific tablespaces*
 a|
-    Specify the -data-tablespaces option and then list the tablespaces, separated by commas. For example, use ts1, ts2, and ts3 after the option.
+Specify the -data-tablespaces option and then list the tablespaces, separated by commas. For example, use ts1, ts2, and ts3 after the option.
 +
 SnapManager supports backing up of read-only tablespaces. While creating the backup, SnapManager changes the read-only table spaces to read-write. After creating the backup, the tablespaces are changed to read-only.
 +
 Example for creating a partial tablespace backup
 +
 ----
-
-                smsap backup create -profile nosep -data -tablespaces tb2 -online -label partial_tablespace_bkup -verbose
+smsap backup create -profile nosep -data -tablespaces tb2 -online -label partial_tablespace_bkup -verbose
 ----
 a|
 *Specify whether you want to create a unique label for each backup in the following format: full_hot_mybackup_label*
@@ -146,7 +145,7 @@ a|
 +
 ----
 
-                smsap backup create -online -full -profile targetdb1_prof1
+smsap backup create -online -full -profile targetdb1_prof1
 -label full_hot_my_backup_label   -verbose
 ----
 a|
@@ -158,13 +157,14 @@ a|
  ** -backup-dest specifies the archive log file destinations to be backed up.
  ** -exclude-dest specifies the archive log destinations to be excluded.
  ** -label specifies the label for the archive log file backup.
-*Note:* You must provide either the -backup-dest option or the -exclude-dest option.
+
+NOTE: You must provide either the -backup-dest option or the -exclude-dest option.
 
 +
 Providing both these options together along with the backup displays error message You have specified an invalid backup option. Specify any one of the options: -backup-dest, or exclude-dest.
-+
+
 Example for creating archive log file backups separately on Windows
-+
+
 ----
 
 smsap backup create -profile nosep -archivelogs -backup-dest "J:\\mnt\\archive_dest_2\\" -label archivelog_backup -verbose
@@ -197,9 +197,9 @@ a|
   *** -prune-destprune_dest1,[prune_dest2 specifies to delete the archive log files from the archive log destinations while creating the backup.
  *Note:* You cannot prune the archive log files when Flash Recovery Area (FRA) is enabled for archive log files.
 
-+
+
 Example for pruning all archive log files while creating a backup on Windows
-+
+
 ----
 
 smsap backup create -profile nosep

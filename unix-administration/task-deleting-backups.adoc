@@ -92,7 +92,7 @@ If you want to delete the archive log backups, you need to check for the retenti
 . Verify that the operations are complete by entering the following command:
 +
 `*smsap operation list -profile _profile_name_-dump-quiet-verbose*`
-. To delete a backup, enter the following command: +
+. To delete a backup, enter the following command: 
 +
 `*smsap backup delete -profile _profile_name_ [-label _label_ [data | -archivelogs] | -id _id_ | -all] [-force] [ -dump] [-quiet | -verbose]*`
 +

@@ -208,8 +208,8 @@ Specify the following options and variables:
 
 [NOTE]
 ====
- You cannot prune the archive log files when Flash Recovery Area (FRA) is enabled for archive log files.
- ====
+You cannot prune the archive log files when Flash Recovery Area (FRA) is enabled for archive log files.
+====
 
 
 Example for pruning all archive log files while creating a backup on Windows

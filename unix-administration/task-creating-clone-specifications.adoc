@@ -137,9 +137,11 @@ NOTE: If the parameter values are not set correctly, the clone operation is stop
 
 +
 If you do not specify the location where archive logs are stored, SnapManager creates the clone in `noarchivelog` mode. SnapManager copies this parameter information into the `init.ora` file of the clone.
- +
++
+
 *Example*
- +
+
++
 The following example displays the parameter syntax that you use in clone specification:
  +
 ----

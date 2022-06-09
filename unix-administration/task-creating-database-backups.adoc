@@ -173,7 +173,7 @@ Specify the following options and variables:
  ** `-exclude-dest` specifies the archive log destinations to be excluded.
  ** `-label` specifies the label for the archive log file backup.
  ** `-protect` enables protection to the archive log backups.
- +
+ 
 
 NOTE: You must provide either the `-backup-dest` option or the `-exclude-dest` option.
 
