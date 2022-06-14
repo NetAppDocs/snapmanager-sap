@@ -153,7 +153,3 @@ To prevent reaching the 255 Snapshot copy maximum, you can manage backups in the
 SnapManager for SAP then automatically deletes older backups as needed.
 
 * You can manually delete backups that are no longer needed by using the SnapManager for SAP CLI or GUI.
-
-*Related information*
-
-xref:concept-profile-usage-for-br-tools-backups.adoc[Profile usage for BR*Tools backups]
