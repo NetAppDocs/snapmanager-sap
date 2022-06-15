@@ -11,7 +11,10 @@ summary: You can specify that a backup should be ineligible for deletion by the 
 [.lead]
 You can specify that a backup should be ineligible for deletion by the retention policy to keep the backup indefinitely.
 
-. To specify that a backup be retained on an unlimited basis, enter this command:``smsap backup update -profileprofile_name {-labellabel [data | -archivelogs] | -idid} -retain -unlimited``
+.Step
+. To specify that a backup be retained on an unlimited basis, enter this command:
++
+`smsap backup update -profileprofile_name {-labellabel [data | -archivelogs] | -idid} -retain -unlimited`
 
 *Related information*
 

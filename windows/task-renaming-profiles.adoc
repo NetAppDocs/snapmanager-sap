@@ -29,4 +29,6 @@ The new name for the profile is updated only from the SnapManager client from wh
 
 NOTE: If a scheduled backup operation begins at the time of renaming the profile, then the scheduled operation fails.
 
-. Enter the following command: `smsap profile update -profileprofile [-new-profilenew_profile_name]`
+. Enter the following command:
++
+`smsap profile update -profileprofile [-new-profilenew_profile_name]`

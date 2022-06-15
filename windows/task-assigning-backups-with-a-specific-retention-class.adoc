@@ -11,4 +11,7 @@ summary: DBAs can assign a specific retention class of hourly, daily, weekly, or
 [.lead]
 DBAs can assign a specific retention class of hourly, daily, weekly, or monthly to backups. Assigning a specific retention class makes the backups performed under this change eligible for deletion.
 
-. To assign a specific backup retention class, enter this command:``smsap backup update -profileprofile_name {-labellabel [data | -archivelogs] | -idid} -retain \[-hourly \| -daily \| -weekly \| -monthly \]``
+.Step
+. To assign a specific backup retention class, enter this command:
++
+`smsap backup update -profileprofile_name {-labellabel [data | -archivelogs] | -idid} -retain [-hourly | -daily | -weekly | -monthly ]`

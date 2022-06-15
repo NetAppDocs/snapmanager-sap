@@ -99,7 +99,10 @@ SnapManager does not support the following SnapManager operations for archive lo
 
 SnapManager also supports backing up the archive log files from the flash recovery area destinations.
 
-. Enter the following command: `smsap backup create -profile profile_name {[-full {-online \| -offline \| -auto} [-retain {-hourly | -daily | -weekly | -monthly | -unlimited}] [-verify] | [-data [[-filesfiles [files]] | [-tablespaces-tablespaces [-tablespaces]] [-datalabellabel] {-online \| -offline \| -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited]} [-verify] | [-archivelogs [-labellabel] [-commentcomment] [-backup-destpath1 [,[path2]]] [-exclude-destpath1 [,path2]]] [-prunelogs {-all | -untilSCNuntilSCN | -until-date yyyy-MM-dd:HH:mm:ss | -before {-months | -days | -weeks | -hours}} -prune-destprune_dest1,[prune_dest2]] [-taskspectaskspec]} [-dump] [-force] [-quiet \| -verbose]`
+.Step
+. Enter the following command:
++
+`smsap backup create -profile profile_name {[-full {-online | -offline | -auto} [-retain {-hourly | -daily | -weekly | -monthly | -unlimited}] [-verify] | [-data [[-filesfiles [files]] | [-tablespaces-tablespaces [-tablespaces]] [-datalabellabel] {-online | -offline | -auto} [-retain {-hourly | [-daily | -weekly | -monthly | -unlimited]} [-verify] | [-archivelogs [-labellabel] [-commentcomment] [-backup-destpath1 [,[path2]]] [-exclude-destpath1 [,path2]]] [-prunelogs {-all | -untilSCNuntilSCN | -until-date yyyy-MM-dd:HH:mm:ss | -before {-months | -days | -weeks | -hours}} -prune-destprune_dest1,[prune_dest2]] [-taskspectaskspec]} [-dump] [-force] [-quiet | -verbose]`
 +
 [options="header"]
 |===
@@ -117,7 +120,7 @@ Specify the -auto option. If you use this option, you cannot use the --offline o
 a|
 *Specify whether you want to perform a partial backup of specific files*
 a|
-    Specify the -data-files option and then list the files, separated by commas. For example, list the file names f1, f2, and f3 after the option.
+Specify the -data-files option and then list the files, separated by commas. For example, list the file names f1, f2, and f3 after the option.
 
 Example for creating a partial datafile backup on Windows
 
@@ -130,19 +133,19 @@ a|
 *Specify whether you want to perform a partial backup of specific tablespaces*
 a|
 Specify the -data-tablespaces option and then list the tablespaces, separated by commas. For example, use ts1, ts2, and ts3 after the option.
-+
+
 SnapManager supports backing up of read-only tablespaces. While creating the backup, SnapManager changes the read-only table spaces to read-write. After creating the backup, the tablespaces are changed to read-only.
-+
+
 Example for creating a partial tablespace backup
-+
+
 ----
 smsap backup create -profile nosep -data -tablespaces tb2 -online -label partial_tablespace_bkup -verbose
 ----
 a|
 *Specify whether you want to create a unique label for each backup in the following format: full_hot_mybackup_label*
 a|
-    For Windows, you might enter this example:
-+
+For Windows, you might enter this example:
+
 ----
 
 smsap backup create -online -full -profile targetdb1_prof1
@@ -151,7 +154,7 @@ smsap backup create -online -full -profile targetdb1_prof1
 a|
 *Specify whether you want to create backup of the archive log files separately from the data files*
 a|
-    Specify the following options and variables:
+Specify the following options and variables:
 
  ** -archivelogs creates a backup of the archive log files.
  ** -backup-dest specifies the archive log file destinations to be backed up.
@@ -160,7 +163,6 @@ a|
 
 NOTE: You must provide either the -backup-dest option or the -exclude-dest option.
 
-+
 Providing both these options together along with the backup displays error message You have specified an invalid backup option. Specify any one of the options: -backup-dest, or exclude-dest.
 
 Example for creating archive log file backups separately on Windows

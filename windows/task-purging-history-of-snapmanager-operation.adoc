@@ -11,4 +11,7 @@ summary: You can delete the history of the SnapManager operation, if you no long
 [.lead]
 You can delete the history of the SnapManager operation, if you no longer require the history details.
 
-. To delete the history of the SnapManager operation, enter the following command: `smsap history purge -profile {-name, profile_nameprofile_name1, profile_name2] | all-repository-login [-passwordrepo_password] -usernamerepo_username-dbnamerepo_dbname-hostrepo_host-portrepo_port} -operation {-operationsoperation_name [operation_name1, operation_name2] | -all} [-quiet | -verbose]`
+.Step
+. To delete the history of the SnapManager operation, enter the following command:
++
+`smsap history purge -profile {-name, profile_nameprofile_name1, profile_name2] | all-repository-login [-passwordrepo_password] -usernamerepo_username-dbnamerepo_dbname-hostrepo_host-portrepo_port} -operation {-operationsoperation_name [operation_name1, operation_name2] | -all} [-quiet | -verbose]`

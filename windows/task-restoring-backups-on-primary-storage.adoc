@@ -69,7 +69,9 @@ If the backup is already mounted, SnapManager does not mount the backup again an
 
 You can specify the -dump option as an optional parameter to collect the dump files after the successful or failed restore operation.
 
-. Enter the following command:``smsap backup restore -profileprofile_name-labellabel-complete-recover -alllogs [-recover-from-locationpath [,path2]]-dump-verbose``
+. Enter the following command:
++
+`smsap backup restore -profileprofile_name-labellabel-complete-recover -alllogs [-recover-from-locationpath [,path2]]-dump-verbose`
 +
 `smsap backup restore -profile targetdb1_prof1 -label full_bkup_sales_nov_08 - complete -recover -alllogs -verbose`
 

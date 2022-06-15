@@ -11,7 +11,11 @@ summary: SnapManager enables you to set a password for a profile to prevent unau
 [.lead]
 SnapManager enables you to set a password for a profile to prevent unauthorized access.
 
-. Enter the following command: `smsap credential set -profile -name profile_name [-password password]`
+.Step
+
+. Enter the following command:
++
+`smsap credential set -profile -name profile_name [-password password]`
 
 *Related information*
 

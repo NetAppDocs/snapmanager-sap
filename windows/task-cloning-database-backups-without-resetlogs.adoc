@@ -35,7 +35,10 @@ NOTE: The cloned database created with the -no-resetlogs option is not a complet
 
 If you do not specify the -no-resetlogs option, SnapManager applies the archive log files, and opens the database with resetlogs.
 
-. Enter the following command: `smsap clone create -profileprofile_name [-backup-labelbackup_name | -backup-idbackup_id | current] -newsidnew_sid-clonespecfull_path_to_clonespecfile-no-resetlogs`
+.Step
+. Enter the following command:
++
+`smsap clone create -profileprofile_name [-backup-labelbackup_name | -backup-idbackup_id | current] -newsidnew_sid-clonespecfull_path_to_clonespecfile-no-resetlogs`
 +
 If you try to specify both -no-resetlogs and recover-from-location options, SnapManager does not allow you to specify both these options together, and displays the error message: SMSAP-04084: You must specify either one of the options: -no-resetlogs or -recover-from-location.
 

@@ -18,7 +18,10 @@ You must ensure that there is no space between the comma and the next email addr
 +
 NOTE: You must ensure you enter the set of email addresses within double quotation marks.
 
-. Enter the following command: `smsap profile create -profileprofile [-profile-passwordprofile_password] -repository-dbnamerepo_service_name-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][-protect [ ]][-notification [-success-emailemail_address1,email_address2-subjectsubject_pattern] [-failure-emailemail_address1,email_address2-subjectsubject_pattern]]`
+.Step
+. Enter the following command: 
++
+`smsap profile create -profileprofile [-profile-passwordprofile_password] -repository-dbnamerepo_service_name-hostrepo_host-portrepo_port-login-usernamerepo_username-database-dbnamedb_dbname-hostdb_host [-siddb_sid] [-login-usernamedb_username-passworddb_password-portdb_port] [-rman {-controlfile | \{-login-usernamerman_username-passwordrman_password-tnsnamerman_tnsname} } ] [-retain [-hourly [-countn] [-durationm]] [-daily [-countn] [-durationm]] [-weekly [-countn] [-durationm]] [-monthly [-countn] [-durationm]]] [-commentcomment][-snapname-patternpattern][-protect [ ]][-notification [-success-emailemail_address1,email_address2-subjectsubject_pattern] [-failure-emailemail_address1,email_address2-subjectsubject_pattern]]`
 +
 Other options for this command are as follows:
 +

@@ -15,7 +15,10 @@ SnapManager enables you to specify the sender's email server host name or IP add
 
 You must specify name or IP address of the host server that handles the email notification.
 
-. To configure the mail server to send email alerts, enter the following command: `smsap notification set -sender-emailemail_address-mailhostmailhost-mailportmailport [-authentication-usernameusername-passwordpassword] -repository-portrepo_port-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username`
+.Step
+. To configure the mail server to send email alerts, enter the following command:
++
+`smsap notification set -sender-emailemail_address-mailhostmailhost-mailportmailport [-authentication-usernameusername-passwordpassword] -repository-portrepo_port-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username`
 +
 Other options for this command are as follows:
 +

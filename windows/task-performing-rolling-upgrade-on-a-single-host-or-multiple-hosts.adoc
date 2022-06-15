@@ -13,7 +13,9 @@ You can perform rolling upgrade on a single or multiple SnapManager server hosts
 
 You must ensure that all the prerequisites for performing rolling upgrade are completed.
 
-. To perform a rolling upgrade on a single host, enter the following command: `smsaprepository rollingupgrade-repository-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username-portrepo_port-upgradehosthost_with_target_database-force [-quiet | -verbose]`
+. To perform a rolling upgrade on a single host, enter the following command:
++
+`smsaprepository rollingupgrade-repository-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username-portrepo_port-upgradehosthost_with_target_database-force [-quiet | -verbose]`
 +
 The following command performs the rolling upgrade of all target databases mounted on hostA and a repository database named repoA located on repo_host:
 +

@@ -13,7 +13,10 @@ SnapManager automatically unmounts the backup to make it unavailable to the host
 
 You can optionally collect the dump files after a successful or failed unmount backup operation.
 
-. Enter the following command: `smsap backup unmount -profile profile_name {labellabel [data | -archivelogs] | -idid} [-quiet | -verbose]`
+.Step
+. Enter the following command:
++
+`smsap backup unmount -profile profile_name {labellabel [data | -archivelogs] | -idid} [-quiet | -verbose]`
 
 *Related information*
 

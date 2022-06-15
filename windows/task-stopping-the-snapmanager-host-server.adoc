@@ -11,7 +11,9 @@ summary: When you have finished using SnapManager, you might want to stop the se
 [.lead]
 When you have finished using SnapManager, you might want to stop the server.
 
-. To stop the server, enter the following command, as a root user: `smsap_server stop`
+. To stop the server, enter the following command, as a root user:
++
+`smsap_server stop`
 
 *Related information*
 

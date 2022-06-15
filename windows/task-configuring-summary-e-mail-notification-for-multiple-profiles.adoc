@@ -36,7 +36,10 @@ SnapManager allows you to add a customized email subject using the following var
 
 If you select not to add a customized subject, SnapManager displays an error message: Missing value -subject.
 
-. Enter the following command: `+smsap notification update-summary-notification -repository-portrepo_port-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username-emailemail_address1,email_address2-subjectsubject-pattern-frequency {-daily-timedaily_time | -hourly-timehourly_time | -monthly-timemonthly_time-date {1\|2...\|31} | -weekly-timeweekly_time-day {1\|2\|3\|4\|5\|6\|7}} -profilesprofile1profile2-notification-hostnotification-host+`
+.Step
+. Enter the following command:
++
+`+smsap notification update-summary-notification -repository-portrepo_port-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username-emailemail_address1,email_address2-subjectsubject-pattern-frequency {-daily-timedaily_time | -hourly-timehourly_time | -monthly-timemonthly_time-date {1|2...|31} | -weekly-timeweekly_time-day {1|2|3|4|5|6|7}} -profilesprofile1profile2-notification-hostnotification-host+`
 +
 Other options for this command are as follows:
 +

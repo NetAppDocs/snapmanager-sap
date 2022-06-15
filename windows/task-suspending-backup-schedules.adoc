@@ -13,4 +13,6 @@ SnapManager enables you to suspend a backup schedule until the backup schedule i
 
 You can suspend the active schedules. If you try to suspend the backup schedule that is already suspended, you might encounter error message "Cannot suspend: schedule <schedulename> already in suspend state".
 
-. To suspend the backup schedule temporarily, enter this command: `smsap schedule suspend -profile profile_name-schedule-nameschedulename [-quiet | -verbose]`
+. To suspend the backup schedule temporarily, enter this command:
++
+`smsap schedule suspend -profile profile_name-schedule-nameschedulename [-quiet | -verbose]`

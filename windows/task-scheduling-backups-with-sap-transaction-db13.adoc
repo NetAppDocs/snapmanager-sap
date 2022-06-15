@@ -13,7 +13,7 @@ There are several steps required to enable backups by SnapManager for SAP to wor
 
 . Change the permissions of the /oracle/SID/sapbackup directory to allow write access by the sidadm user identifier.
 +
-Use the following command as orasid:``chmod 775 /oracle/SID/sapbackup``
+Use the following command as orasid: `chmod 775 /oracle/SID/sapbackup`
 +
 This will allow members of the dbagroup to write to that directory. The user identifier sidadm is a member of the dba group.
 

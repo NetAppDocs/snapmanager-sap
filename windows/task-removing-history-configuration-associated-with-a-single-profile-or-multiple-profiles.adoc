@@ -11,4 +11,6 @@ summary: SnapManager enables you to remove the history settings of a SnapManager
 [.lead]
 SnapManager enables you to remove the history settings of a SnapManager operation. This operation purges all the history information associated with a single profile or multiple profiles.
 
-. To remove the history of SnapManager operations associated with a single profile or multiple profiles, enter the following command: `smsap history remove -profile {-name, profile_name [profile_name1, profile_name2] | all-repository-login [-passwordrepo_password] -usernamerepo_username-dbnamerepo_dbname-hostrepo_host-portrepo_port} -operation {-operationsoperation_name [operation_name1, operation_name2] | -all} [-quiet | -verbose]`
+. To remove the history of SnapManager operations associated with a single profile or multiple profiles, enter the following command:
++
+`smsap history remove -profile {-name, profile_name [profile_name1, profile_name2] | all-repository-login [-passwordrepo_password] -usernamerepo_username-dbnamerepo_dbname-hostrepo_host-portrepo_port} -operation {-operationsoperation_name [operation_name1, operation_name2] | -all} [-quiet | -verbose]`

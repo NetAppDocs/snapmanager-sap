@@ -21,7 +21,9 @@ For a backup to be eligible for freeing, you must ensure the following:
 
 You can specify the -dump option as an optional parameter to collect the dump files after the successful or failed backup free operation.
 
-. Enter the following command: `smsap backup free -profileprofile_name {-labellabel [data | -archivelogs] | -idid | -all} -force[-dump] [-quiet] [-force]`
+. Enter the following command:
++
+`smsap backup free -profile profile_name {-label label [data | -archivelogs] | -id id | -all} -force[-dump] [-quiet] [-force]`
 
 *Related information*
 

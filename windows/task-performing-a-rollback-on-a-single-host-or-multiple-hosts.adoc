@@ -13,7 +13,9 @@ You can perform a rollback on a single or multiple SnapManager server hosts by u
 
 You must ensure that all the prerequisites for performing a rollback are complete.
 
-. To perform a rollback on a single host, enter the following command: `smsaprepository rollback-repository-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username-portrepo_port-rollbackhosthost_with_target_database`
+. To perform a rollback on a single host, enter the following command:
++
+`smsaprepository rollback-repository-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username-portrepo_port-rollbackhosthost_with_target_database`
 +
 The following example shows the command to roll back all the target databases that are mounted on hostA and a repository database named repoA located on the repository host, repo_host:
 +

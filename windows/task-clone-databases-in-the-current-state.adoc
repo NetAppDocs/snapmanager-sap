@@ -19,7 +19,9 @@ In the profile setting, if you have enabled the backup of data files and archive
 
 .Step
 
-. To clone the database in its current state, enter the following command: `*smsap clone create -profileprofile_name-current -labelclone_name-clonespecclonespec.xml*`
+. To clone the database in its current state, enter the following command:
++
+`*smsap clone create -profileprofile_name-current -labelclone_name-clonespecclonespec.xml*`
 +
 This command takes a full automatic backup (generating the backup label) and immediately makes a clone from that backup, using an existing clone specification that you want to use.
 +

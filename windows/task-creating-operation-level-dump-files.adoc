@@ -11,7 +11,9 @@ summary: You can use the smsap operation dump command with the name or ID of the
 [.lead]
 You can use the smsap operation dump command with the name or ID of the failed operation to get log information about a particular operation. You can specify different log levels to gather information about a specific operation, profile, host, or environment.
 
-. Enter the following command:``smsap operation dump -idguid``
+. Enter the following command:
++
+`smsap operation dump -idguid`
 +
 NOTE: The smsap operation dump command provides a super set of the information provided by the smsap profile dump command, which in turn provides a super set of the information provided by the smsap system dump command.
 +

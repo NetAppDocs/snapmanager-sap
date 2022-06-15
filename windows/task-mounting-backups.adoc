@@ -15,7 +15,9 @@ The smsap backup mount command displays a list of paths where the Snapshot copie
 
 NOTE: You can optionally collect the dump files after a successful or failed backup mount operation.
 
-. To Mount a backup enter the following command: `smsap backup mount -profile profile_namelabel [data | -archivelogs] | -idid} [-host-host] [-dump] [-quiet | -verbose]`
+. To Mount a backup enter the following command:
++
+`smsap backup mount -profile profile_name label [data | -archivelogs] | -id id} [-host-host] [-dump] [-quiet | -verbose]`
 
 *Related information*
 

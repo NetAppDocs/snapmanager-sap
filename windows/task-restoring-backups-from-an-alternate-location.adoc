@@ -15,7 +15,9 @@ You can restore from an alternate location to restore the data files from an int
 
 You can use the smsap backup restore command and specify the restore specification XML file you created to restore the backup from an alternate location.
 
-. Enter the following command: `smsap backup restore -profileprofile-labellabel-complete-alllogs-restorespecrestorespec`
+. Enter the following command:
++
+`smsap backup restore -profileprofile-labellabel-complete-alllogs-restorespecrestorespec`
 
 *Related information*
 

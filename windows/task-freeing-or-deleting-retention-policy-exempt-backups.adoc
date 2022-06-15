@@ -11,10 +11,16 @@ summary: Backups with the retention class of "unlimited" cannot be deleted or fr
 [.lead]
 Backups with the retention class of "unlimited" cannot be deleted or freed directly. To delete or free these backups, you must first assign another retention class, such as hourly, daily, weekly, or monthly. To delete or free a backup that is exempt from the retention policy, you must first update the backup to make it eligible for deletion or free it.
 
-. To update the backup to make it eligible for deletion by the retention policy, enter this command: `smsap backup update -profileprofile_name {-labellabel [data | -archivelogs] | -idid} -retain \[-hourly \| -daily \| -weekly \| -monthly\]`
+. To update the backup to make it eligible for deletion by the retention policy, enter this command:
++
+`smsap backup update -profile profile_name {-label label [data | -archivelogs] | -id id} -retain [-hourly | -daily | -weekly | -monthly]`
 . After updating the backup so it is eligible for deletion, you can either delete the backup or free backup resources.
- ** To delete the backup, enter this command: `smsap backup delete -profileprofile_name {-labellabel [data | -archivelogs] | -idid | -all}`
- ** To free the backup resources, rather than delete the backup, enter this command:``smsap backup free -profileprofile_name {-labellabel [data | -archivelogs] | -idid | -all} [-force] [ -dump] [-quiet | -verbose]``
+ ** To delete the backup, enter this command:
+ +
+ `smsap backup delete -profile profile_name {-label label [data | -archivelogs] | -id id | -all}`
+ ** To free the backup resources, rather than delete the backup, enter this command:
+ +
+ `smsap backup free -profile profile_name {-label label [data | -archivelogs] | -id id | -all} [-force] [ -dump] [-quiet | -verbose]`
 
 *Related information*
 
