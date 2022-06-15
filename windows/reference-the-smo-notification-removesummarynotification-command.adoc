@@ -15,13 +15,13 @@ This command disables summary notification for multiple profiles on a repository
 
 ----
 
-        smsap notification remove-summary-notification
+smsap notification remove-summary-notification
 -repository
 -dbname repo_service_name
 -port repo_port
 -host repo_host
 -login -username repo_username
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

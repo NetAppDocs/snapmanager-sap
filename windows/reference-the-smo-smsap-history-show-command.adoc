@@ -15,7 +15,7 @@ This command enables you to view a detailed history information for a specific p
 
 ----
 
-        smsap history show
+smsap history show
 -profile profile
 ----
 

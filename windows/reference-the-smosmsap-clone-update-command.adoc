@@ -15,11 +15,11 @@ This command updates information about the clone. You can update the comment.
 
 ----
 
-        smsap clone update
+smsap clone update
 -profile profile_name
-\[-label label \| -id id\]
+[-label label | -id id]
 -comment  commment_text
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

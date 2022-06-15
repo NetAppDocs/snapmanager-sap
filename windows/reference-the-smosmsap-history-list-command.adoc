@@ -15,17 +15,17 @@ This command enables you to view a list of history details of the SnapManager op
 
 ----
 
-        smsap history list
--profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
+smsap history list
+-profile {-name profile_name [profile_name1, profile_name2] | -all
 -repository
--login \[-password repo_password\]
+-login [-password repo_password]
 -username repo_username
 -host repo_host
 -dbname repo_dbname
 -port repo_port}
--operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\}
-\[-delimiter character\]
-\[-quiet \| -verbose\]
+-operation {-operations operation_name [operation_name1, operation_name2] | -all}
+[-delimiter character]
+[-quiet | -verbose]
 ----
 
 == Parameters
@@ -73,5 +73,5 @@ Displays error, warning, and informational messages on the console.
 == Example command
 
 ----
- smsap history list -profile -name PROFILE1 -operation -operations backup -verbose
+smsap history list -profile -name PROFILE1 -operation -operations backup -verbose
 ----

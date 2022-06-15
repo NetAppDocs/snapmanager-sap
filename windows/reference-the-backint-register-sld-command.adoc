@@ -15,7 +15,7 @@ If you want to use SAP BR*Tools, you can run the `backint register-sld` command 
 
 ----
 
-        backint register-sld
+backint register-sld
 -host  host_name
 -port  port_id
 -username username
