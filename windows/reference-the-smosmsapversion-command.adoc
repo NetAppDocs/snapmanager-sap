@@ -15,8 +15,8 @@ You can run the `version` command to determine which version of SnapManager you 
 
 ----
 
-        smsap version
-\[-quiet \| -verbose\]
+smsap version
+[-quiet | -verbose]
 ----
 
 == Parameters

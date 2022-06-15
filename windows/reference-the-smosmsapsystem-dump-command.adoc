@@ -15,8 +15,8 @@ You can run the `system dump` command to create a JAR file that contains diagnos
 
 ----
 
-        smsap system dump
-\[-quiet \| -verbose\]
+smsap system dump
+[-quiet | -verbose]
 ----
 
 == Parameters

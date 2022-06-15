@@ -15,7 +15,7 @@ This command deletes a repository used to store database profiles and associated
 
 ----
 
-        smsap repository delete
+smsap repository delete
 -repository
 -port repo_port
 -dbname repo_service_name

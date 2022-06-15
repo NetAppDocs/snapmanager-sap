@@ -15,8 +15,8 @@ This command confirms that all the components of the environment required to run
 
 ----
 
-        smsap system verify
-\[-quiet \| -verbose\]
+smsap system verify
+[-quiet | -verbose]
 ----
 
 == Parameters

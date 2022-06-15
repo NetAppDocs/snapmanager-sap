@@ -15,9 +15,9 @@ You can run the `profile verify` command to verify the profile set up. You must 
 
 ----
 
-        smsap profile verify
+smsap profile verify
 -profile profile_name
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

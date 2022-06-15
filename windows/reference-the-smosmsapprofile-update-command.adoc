@@ -15,38 +15,38 @@ You can run the `profile update` command to update the information for an existi
 
 ----
 
-        smsap profile update
+smsap profile update
 -profile profile
-\[-new-profile new_profile_name\]
-\[-profile-password profile_password\]
+[-new-profile new_profile_name]
+[-profile-password profile_password]
 [-database
 -dbname db_dbname
 -host db_host
-\[-sid db_sid\]
+[-sid db_sid]
 [-login
-\[-username db_username -password db_password -port db_port\]
- ]
-[\{-rman  \{-controlfile \| \{\{-login
+[-username db_username -password db_password -port db_port]
+]
+[{-rman  {-controlfile | {{-login
 -username  rman_username
--password  rman_password \}
-\[-tnsname  tnsname\]\}\}\} \|
--remove-rman\]
+-password  rman_password }
+[-tnsname  tnsname]}}} |
+-remove-rman]
 
 
 [-retain
-\[-hourly \[-count n\] \[-duration m\]\]
-\[-daily \[-count n\] \[-duration m\]]
-\[-weekly \[-count n\] \[-duration m\]]
-\[-monthly \[-count n\] \[-duration m\]]]]
+[-hourly [-count n] [-duration m]]
+[-daily [-count n] [-duration m]]
+[-weekly [-count n] [-duration m]]
+[-monthly [-count n] [-duration m]]]]
 -comment comment
 -snapname-patternpattern
 []
 [-summary-notification]
 [-notification
-\[-success
+[-success
 -email email_address1,email_address2
--subject subject_pattern\]
-\[-failure
+-subject subject_pattern]
+[-failure
 -email email_address1,email_address2
 -subject subject_pattern]
 [-separate-archivelog-backups
@@ -56,9 +56,9 @@ You can run the `profile update` command to update the information for an existi
 -weeks weeks |
 -months months
 []
-[-include-with-online-backups \| -no-include-with-online-backups]]
+[-include-with-online-backups | -no-include-with-online-backups]]
 [-dump]
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters
@@ -193,7 +193,7 @@ The following example changes the login information for the database described b
 
 ----
 smsap profile update -profile SALES1 -database -dbname SALESDB
- -sid SALESDB -login -username admin2 -password d4jPe7bw -port 1521
+-sid SALESDB -login -username admin2 -password d4jPe7bw -port 1521
 -host server1 -profile-notification -success -e-mail Preston.Davis@org.com -subject success
 Operation Id [8abc01ec0e78ec33010e78ec3b410001] succeeded.
 ----

@@ -15,14 +15,14 @@ This command updates the repository that stores database profiles and associated
 
 ----
 
-        smsap repository update
+smsap repository update
 -repository
 -dbname repo_service_name
 -host repo_host
 -login -username repo_username
 -port repo_port
 [-force] [-noprompt]
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

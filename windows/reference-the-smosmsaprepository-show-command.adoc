@@ -15,13 +15,13 @@ This command displays information about the repository.
 
 ----
 
-        smsap repository show
+smsap repository show
 -repository
 -dbname repo_service_name
 -host repo_host
 -port repo_port
 -login -username repo_username
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

@@ -15,14 +15,14 @@ This command creates a repository in which to store database profiles and associ
 
 ----
 
-        smsap repository create
+smsap repository create
 -repository
 -port repo_port
 -dbname repo_service_name
 -host repo_host
 -login -username repo_username
 [-force] [-noprompt]
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters
