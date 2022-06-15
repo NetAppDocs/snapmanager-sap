@@ -11,4 +11,7 @@ summary: You can view a list of scheduled operations for a profile.
 [.lead]
 You can view a list of scheduled operations for a profile.
 
-. To display information about scheduled operation, enter this command: `smsap schedule list -profile profile_name\[-quiet \| -verbose\]`
+.Step
+. To display information about scheduled operation, enter this command:
++
+`smsap schedule list -profile profile_name[-quiet | -verbose]`

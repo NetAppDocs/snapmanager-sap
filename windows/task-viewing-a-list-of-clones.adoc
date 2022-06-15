@@ -21,7 +21,10 @@ The list includes the following information about the clones in a profile:
 
 If you specify the -verbose option, the output also shows the comments entered for the clone.
 
-. To display a list of all clones for a profile, enter the following command `smsap clone list -profileprofile_name [-quiet | -verbose]`
+.Step
+. To display a list of all clones for a profile, enter the following command:
++
+`smsap clone list -profileprofile_name [-quiet | -verbose]`
 
 *Related information*
 

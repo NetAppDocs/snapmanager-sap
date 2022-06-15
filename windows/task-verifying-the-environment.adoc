@@ -13,7 +13,10 @@ You can verify the environment to make sure SnapDrive and SnapManager are set up
 
 Download, install, and set up the required prerequisites. Make sure SnapManager is installed and the host server is running.
 
-. To verify that SnapDrive is installed and can be run from the root account, run the following command: `smsap system verify`
+.Step
+. To verify that SnapDrive is installed and can be run from the root account, run the following command:
++
+`smsap system verify`
 
 *Related information*
 

@@ -11,7 +11,10 @@ summary: You can verify that an existing profile is set up correctly. When you v
 [.lead]
 You can verify that an existing profile is set up correctly. When you verify a profile, SnapManager checks the environment for the profile you specify and verifies that the profile is set up and the database in this profile is accessible.
 
-. To verify if the profile is set up correctly, enter this command: `smsap profile verify -profileprofile_name`
+.Step
+. To verify if the profile is set up correctly, enter this command:
++
+`smsap profile verify -profile profile_name`
 
 *Related information*
 

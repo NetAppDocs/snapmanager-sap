@@ -57,7 +57,10 @@ However, archive log file backup contains the following additional information:
 * Incarnation
 * Log file name
 
-. Enter the following command:``smsap backup show -profileprofile_name {-labellabel [data | -archivelogs] | -id id [-quiet | -verbose]``
+.Step
+. Enter the following command:
++
+`smsap backup show -profile profile_name {-label label [data | -archivelogs] | -id id [-quiet | -verbose]`
 
 *Related information*
 

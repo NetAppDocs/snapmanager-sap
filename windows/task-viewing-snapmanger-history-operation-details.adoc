@@ -17,4 +17,6 @@ The SnapManager history operation displays the following information for each pr
 * Retention class
 * Retention count
 
-. To display information about the SnapManager history operation for a specific profile, enter the following command: `smsap history show -profileprofile_name`
+. To display information about the SnapManager history operation for a specific profile, enter the following command:
++
+`smsap history show -profile profile_name`

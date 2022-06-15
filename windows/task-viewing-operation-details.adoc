@@ -21,7 +21,9 @@ You can view the following details about a particular operation:
 * Repository information
 * Storage resources in use
 
-. To view the detailed information for a specific operation ID, enter the following command: `smsap operation show -profileprofile_name [-labellabel | -idid] [-quiet | -verbose]`
+. To view the detailed information for a specific operation ID, enter the following command:
++
+`smsap operation show -profile profile_name [-label label | -id id] [-quiet | -verbose]`
 
 *Related information*
 

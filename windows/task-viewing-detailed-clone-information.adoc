@@ -25,7 +25,10 @@ The clone show command displays the following information:
 * Host name and file systems containing data files
 * Storage system volumes and Snapshot copies backing the clone
 
-. Enter the following command: `smsap clone show -profileprofile_name [-labellabel | -idguid]`
+.Step
+. Enter the following command:
++
+`smsap clone show -profile profile_name [-label label | -idguid]`
 
 *Related information*
 

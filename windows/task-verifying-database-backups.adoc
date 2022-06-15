@@ -17,7 +17,9 @@ NOTE: The backup verify operation fails in a Windows environment if you are usin
 
 NOTE: You can specify -dump to collect the dump files after the backup verify operation.
 
-. Enter the following command: `smsap backup verify -profileprofile_name [-label label | -idid] [-force] [ -dump] [-quiet | -verbose]`
+. Enter the following command:
++
+`smsap backup verify -profile profile_name [-label label | -id id] [-force] [ -dump] [-quiet | -verbose]`
 
 *Related information*
 

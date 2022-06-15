@@ -19,6 +19,6 @@ The listener port details are as follows:
 * Anything that references a managed database listener port should have the value as 1527.
 * Anything that references the repository database listener port should have the value as 1521.
 
-The Oracle listener's log is located at ``%ORACLE_HOME%\network\log` where `ORACLE_HOME is \oracle\SID\oracle version`.
+The Oracle listener's log is located at `%ORACLE_HOME%\network\log` where `ORACLE_HOME is \oracle\SID\oracle version`.
 
-. At the command prompt, enter the command:``lsnrctl status``
+. At the command prompt, enter the command: `lsnrctl status`
