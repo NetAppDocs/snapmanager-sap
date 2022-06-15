@@ -15,8 +15,8 @@ This command starts the host server running the SnapManager for SAP software.
 
 ----
 
-        smsap_server start
-\[-quiet \| -verbose\]
+smsap_server start
+[-quiet | -verbose]
 ----
 
 == Parameters

@@ -15,16 +15,16 @@ This command enables you to delete the history of SnapManager operation.
 
 ----
 
-        smsap history purge
--profile \{-name profile_name \[profile_name1, profile_name2\] \| -all
+smsap history purge
+-profile {-name profile_name [profile_name1, profile_name2] | -all
 -repository
--login \[-password repo_password\]
+-login [-password repo_password]
 -username repo_username
 -host repo_host
 -dbname repo_dbname
 -port repo_port}
--operation \{-operations operation_name \[operation_name1, operation_name2\] \| -all\}
-\[-quiet \| -verbose\]
+-operation {-operations operation_name [operation_name1, operation_name2] | -all}
+[-quiet | -verbose]
 ----
 
 == Parameters
@@ -72,6 +72,6 @@ Displays error, warning, and informational messages on the console.
 == Example command
 
 ----
- smsap history purge -profile -name PROFILE1 -operation -operations backup
- -verbose
+smsap history purge -profile -name PROFILE1 -operation -operations backup
+-verbose
 ----

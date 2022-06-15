@@ -15,7 +15,7 @@ This command performs rolling upgrade on a single host or multiple hosts and the
 
 ----
 
-        smsap repository rollingupgrade
+smsap repository rollingupgrade
 -repository
 -dbname repo_service_name
 -host repo_host
@@ -23,7 +23,7 @@ This command performs rolling upgrade on a single host or multiple hosts and the
 -port repo_port
 -upgradehost host_with_target_database
 [-force] [-noprompt]
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

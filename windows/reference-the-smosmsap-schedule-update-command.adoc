@@ -15,17 +15,17 @@ This command updates the schedule for a backup.
 
 ----
 
-        smsap schedule update
+smsap schedule update
 -profile profile_name
 -schedule-name schedule_name
-\[-schedule-comment schedule_comment\]
--interval \{-hourly \| -daily \| -weekly \| -monthly \| -onetimeonly\}
+[-schedule-comment schedule_comment]
+-interval {-hourly | -daily | -weekly | -monthly | -onetimeonly}
 -cronstring cron_string
--start-time \{start_time <yyyy-MM-dd HH:mm\>\}
+-start-time {start_time <yyyy-MM-dd HH:mm>}
 -runasuser runasuser
-\[-taskspec taskspec\]
+[-taskspec taskspec]
 -force
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

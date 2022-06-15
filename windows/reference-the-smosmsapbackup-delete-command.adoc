@@ -15,12 +15,12 @@ You can run the `backup delete` command to remove backups that are not automatic
 
 ----
 
-        smsap backup delete
+smsap backup delete
 -profile profile_name
-[-label label \[-data \| -archivelogs\] \| \[-id guid \| -all\]
+[-label label [-data | -archivelogs] | [-id guid | -all]
 -force
-\[-dump\]
-\[-quiet \| -verbose\]
+[-dump]
+[-quiet | -verbose]
 ----
 
 == Parameters

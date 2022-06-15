@@ -15,7 +15,7 @@ This command enables you to roll back or revert from a higher version of SnapMan
 
 ----
 
-        smsap repository rollback
+smsap repository rollback
 -repository
 -dbname repo_service_name
 -host repo_host
@@ -23,7 +23,7 @@ This command enables you to roll back or revert from a higher version of SnapMan
 -port repo_port
 -rollbackhost host_with_target_database
 [-force]
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

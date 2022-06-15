@@ -15,10 +15,10 @@ This command deletes a backup schedule when it is are no longer necessary.
 
 ----
 
-        smsap schedule delete
+smsap schedule delete
 -profile profile_name
 -schedule-name schedule_name
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

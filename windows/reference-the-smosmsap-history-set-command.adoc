@@ -81,5 +81,5 @@ The following example displays information about the backup operation:
 
 ----
 smsap history set -profile -name PROFILE1 -operation -operations backup -retain -daily 6
- -verbose
+-verbose
 ----

@@ -15,10 +15,10 @@ This command resumes the suspended backup schedule.
 
 ----
 
-        smsap schedule resume
+smsap schedule resume
 -profile profile_name
 -schedule-name schedule_name
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

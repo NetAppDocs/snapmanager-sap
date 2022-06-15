@@ -15,7 +15,7 @@ You can run the `notification update-summary-notification` command to enable sum
 
 ----
 
-        smsap notification update-summary-notification
+smsap notification update-summary-notification
 -repository
 -port repo_port
 -dbname  repo_service_name
@@ -24,13 +24,13 @@ You can run the `notification update-summary-notification` command to enable sum
 -email email-address1,email-address2
 -subject subject-pattern
 -frequency
-[-daily –time daily_time \|
--hourly –time hourly_time \|
--monthly –time monthly_time -date \[1\|2\|3\|...\|31\] \|
--weekly  –time weekly_time -day \[1\|2\|3\|4\|5\|6\|7\]\]
+[-daily –time daily_time |
+-hourly –time hourly_time |
+-monthly –time monthly_time -date [1|2|3|...|31] |
+-weekly  –time weekly_time -day [1|2|3|4|5|6|7]]
 -profiles profile1,profile2
 -notification-host notification-host
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

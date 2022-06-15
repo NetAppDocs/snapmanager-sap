@@ -15,10 +15,10 @@ This command enables you to view the history of a specific SnapManager operation
 
 ----
 
-        smsap history operation-show
+smsap history operation-show
 -profile profile
-\{-label label \| -id id\}
-\[-quiet \| -verbose\]
+{-label label | -id id}
+[-quiet | -verbose]
 ----
 
 == Parameters
@@ -42,5 +42,5 @@ Displays error, warning, and informational messages on the console.
 == Example command
 
 ----
- smsap history operation-show -profile PROFILE1 -label backup1 -verbose
+smsap history operation-show -profile PROFILE1 -label backup1 -verbose
 ----

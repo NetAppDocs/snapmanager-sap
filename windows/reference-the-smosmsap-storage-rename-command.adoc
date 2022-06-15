@@ -15,11 +15,11 @@ This command updates the name or IP address of the storage system.
 
 ----
 
-        smsap storage rename
+smsap storage rename
 -profile profile
 -oldname old_storage_name
 -newname new_storage_name
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

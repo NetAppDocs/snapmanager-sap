@@ -15,7 +15,7 @@ You can use the `notification set` command to configure the mail server.
 
 ----
 
-        smsap notification set
+smsap notification set
 -sender-email email_address
 -mailhost mailhost
 -mailport mailport

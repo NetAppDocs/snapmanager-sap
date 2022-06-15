@@ -15,7 +15,7 @@ You can run the `storage list` command to display the list of storage systems as
 
 ----
 
-        smsap storage list
+smsap storage list
 -profile profile
 ----
 

@@ -15,9 +15,9 @@ This command lists the scheduled operations associated with a profile.
 
 ----
 
-        smsap schedule list
+smsap schedule list
 -profile profile_name
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

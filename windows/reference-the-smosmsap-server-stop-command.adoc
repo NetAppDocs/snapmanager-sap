@@ -15,8 +15,8 @@ This command stops the SnapManager host server and is entered at the root.
 
 ----
 
-        smsap_server stop
-\[-quiet \| -verbose\]
+smsap_server stop
+[-quiet | -verbose]
 ----
 
 == Parameters

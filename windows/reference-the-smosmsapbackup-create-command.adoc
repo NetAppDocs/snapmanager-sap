@@ -17,22 +17,22 @@ NOTE: Before you run this command, you must create a database profile by using t
 
 ----
 
-        smsap backup create
+smsap backup create
 -profile profile_name
-{\[-full\{-auto \| -online \| -offline\}\[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\} \[-verify\]  |
-\[-data \[\[-files files \[files\]\] \|
-\[-tablespaces tablespaces \[tablespaces\]\] \[-label label\] \{-auto \| -online \| -offline\}
-\[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\} \[-verify\] |
-\[-archivelogs \[-label label\]\] \[-comment comment\]}
+{[-full{-auto | -online | -offline}[-retain {-hourly | -daily | -weekly | -monthly | -unlimited} [-verify]  |
+[-data [[-files files [files]] |
+[-tablespaces tablespaces [tablespaces]] [-label label] {-auto | -online | -offline}
+[-retain {-hourly | -daily | -weekly | -monthly | -unlimited} [-verify] |
+[-archivelogs [-label label]] [-comment comment]}
 
-\[-backup-dest path1 \[ , path2\]\]
-\[-exclude-dest path1 \[ , path2\]\]
-\[-prunelogs \{-all \| -until-scn until-scn \| -until-date yyyy-MM-dd:HH:mm:ss\] \| -before \{-months \| -days \| -weeks \| -hours}}
--prune-dest prune_dest1,\[prune_dest2\]\]
-\[-taskspec taskspec\]
-\[-dump\]
+[-backup-dest path1 [ , path2]]
+[-exclude-dest path1 [ , path2]]
+[-prunelogs {-all | -until-scn until-scn | -until-date yyyy-MM-dd:HH:mm:ss] | -before {-months | -days | -weeks | -hours}}
+-prune-dest prune_dest1,[prune_dest2]]
+[-taskspec taskspec]
+[-dump]
 -force
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters
