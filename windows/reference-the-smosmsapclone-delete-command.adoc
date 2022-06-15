@@ -15,16 +15,16 @@ You can run the `clone delete` command to delete a clone. You cannot delete a cl
 
 ----
 
-        smsap clone delete
+smsap clone delete
 -profile profile_name
-\[-id guid \| -label clone_name\]
+[-id guid | -label clone_name]
 [-login
-\[-username db_username -password db_password -port db_port\]
- ]
-\[-syspassword syspassword\]
+[-username db_username -password db_password -port db_port]
+]
+[-syspassword syspassword]
 -force
-\[-dump\]
-\[-quiet \| -verbose\]
+[-dump]
+[-quiet | -verbose]
 ----
 
 == Parameters

@@ -15,11 +15,11 @@ You can run the `backup list` command to display information about the backups i
 
 ----
 
-        smsap backup list
+smsap backup list
 -profile profile_name
 -delimiter character
 [-data | -archivelogs | -all]
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

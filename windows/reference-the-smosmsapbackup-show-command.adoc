@@ -15,10 +15,10 @@ You can use the `backup show` command to display detailed information about a ba
 
 ----
 
-        smsap backup show
+smsap backup show
 -profile profile_name
-[-label label \[-data \| -archivelogs\] \| \[-id id\]
-\[-quiet \| -verbose\]
+[-label label [-data | -archivelogs] | [-id id]
+[-quiet | -verbose]
 ----
 
 == Parameters

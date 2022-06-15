@@ -15,10 +15,10 @@ This command lists the summary information of all operations recorded against a 
 
 ----
 
-        smsap operation list
+smsap operation list
 -profile profile_name
-\[-delimiter character\]
-\[-quiet \| -verbose\]
+[-delimiter character]
+[-quiet | -verbose]
 ----
 
 == Parameters

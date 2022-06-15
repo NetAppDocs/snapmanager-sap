@@ -15,10 +15,10 @@ You can run the `clone show` command to display information about the database c
 
 ----
 
-        smsap clone show
+smsap clone show
 -profile profile_name
-\[-id  guid \| -label clone_name\]
-\[-quiet \| -verbose\]
+[-id  guid | -label clone_name]
+[-quiet | -verbose]
 ----
 
 == Parameters

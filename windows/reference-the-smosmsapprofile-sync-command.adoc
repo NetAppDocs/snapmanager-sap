@@ -15,14 +15,14 @@ This command loads the profile-to-repository mappings for that repository to a f
 
 ----
 
-        smsap profile sync
+smsap profile sync
 -repository
 -dbname repo_service_name
 -host repo_host
 -port repo_port
 -login
 -username repo_username
-				\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

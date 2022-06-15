@@ -15,12 +15,12 @@ You can run the `backup unmount` command to unmount a backup.
 
 ----
 
-        smsap backup unmount
+smsap backup unmount
 -profile profile_name
-[-label label \[-data \| -archivelogs\] \| \[-id id\]
-\[-force\]
-\[-dump\]
-\[-quiet \| -verbose\]
+[-label label [-data | -archivelogs] | [-id id]
+[-force]
+[-dump]
+[-quiet | -verbose]
 ----
 
 == Parameters

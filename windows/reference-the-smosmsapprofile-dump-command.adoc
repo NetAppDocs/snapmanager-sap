@@ -15,9 +15,9 @@ You can run the `profile dump` command to create the `.jar` file that contains d
 
 ----
 
-        smsap profile dump
+smsap profile dump
 -profile profile_name
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

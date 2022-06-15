@@ -15,9 +15,9 @@ You can run the `profile show` command to display the information about a profil
 
 ----
 
-        smsap profile show
+smsap profile show
 -profile profile_name
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

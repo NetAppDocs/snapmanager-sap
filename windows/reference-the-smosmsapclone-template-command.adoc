@@ -15,10 +15,10 @@ This command lets you create a clone specification template.
 
 ----
 
-        smsap clone template
+smsap clone template
 -profile name
-\[-backup-id guid  \| -backup-label backup_name\]
-\[-quiet \| -verbose\]
+[-backup-id guid  | -backup-label backup_name]
+[-quiet | -verbose]
 ----
 
 == Parameters

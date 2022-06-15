@@ -15,21 +15,21 @@ You can run the `backup restore` command to restore backups of a database or a p
 
 ----
 
-        smsap backup restore
+smsap backup restore
 -profile profile_name
-\[-label label \| -id id\]
-\[-files files \[files...\] \|
--tablespaces tablespaces \[tablespaces...\]\] \|
--complete \| -controlfiles\]
-\[-recover \{-alllogs \| -nologs \| -until until\} \[-using-backup-controlfile\] \]
-\[-restorespec restorespec \| \]\]
-\[-preview\]
+[-label label | -id id]
+[-files files [files...] |
+-tablespaces tablespaces [tablespaces...]] |
+-complete | -controlfiles]
+[-recover {-alllogs | -nologs | -until until} [-using-backup-controlfile]]
+[-restorespec restorespec | ]]
+[-preview]
 
-\[-recover-from-location path1 \[, path2\]\]
-\[-taskspec taskspec\]
-\[-dump\]
-\[-force\]
-\[-quiet \| -verbose\]
+[-recover-from-location path1 [, path2]]
+[-taskspec taskspec]
+[-dump]
+[-force]
+[-quiet | -verbose]
 ----
 
 == Parameters

@@ -15,21 +15,21 @@ You can run the `clone create` command to create a clone of a backed-up database
 
 ----
 
-        smsap clone create
+smsap clone create
 -profile profile_name
-[-backup-id backup_guid \| -backup-label backup_label_name \| -current\]
+[-backup-id backup_guid | -backup-label backup_label_name | -current]
 -newsid new_sid
-\[-host target_host\]
+[-host target_host]
 [-label clone_label]
-\[-comment string\]
+[-comment string]
 -clonespec full_path_to_clonespec_file
 ]
-\[-syspassword syspassword\]
-\[-reserve \{yes \| no \| inherit\}\]
+[-syspassword syspassword]
+[-reserve {yes | no | inherit}]
 
-\[-no-resetlogs \| -recover-from-location path1 \[, path2\]\]\[-taskspec taskspec\]
-\[-dump\]
-\[-quiet \| -verbose\]
+[-no-resetlogs | -recover-from-location path1 [, path2]][-taskspec taskspec]
+[-dump]
+[-quiet | -verbose]
 ----
 
 == Parameters

@@ -15,9 +15,9 @@ You can run the `profile delete` command to delete a profile of the database.
 
 ----
 
-        smsap profile delete
+smsap profile delete
 -profile profile
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

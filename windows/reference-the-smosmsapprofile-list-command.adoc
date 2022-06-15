@@ -15,8 +15,8 @@ This command displays a list of the current profiles.
 
 ----
 
-        smsap profile list
-\[-quiet \| -verbose\]
+smsap profile list
+[-quiet | -verbose]
 ----
 
 == Parameters

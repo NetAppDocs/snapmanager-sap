@@ -15,10 +15,10 @@ This command lists the clones of the database for a given profile.
 
 ----
 
-        smsap clone list
+smsap clone list
 -profile profile_name
 -delimiter character
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 == Parameters

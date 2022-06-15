@@ -15,9 +15,9 @@ You can run the `profile create` command to create a profile of a database in a 
 
 ----
 
-        smsap profile create
+smsap profile create
 -profile profile
-\[-profile-password profile_password\]
+[-profile-password profile_password]
 -repository
 -dbname repo_service_name
 -host repo_host
@@ -26,39 +26,39 @@ You can run the `profile create` command to create a profile of a database in a 
 -database
 -dbname db_dbname
 -host db_host
-[-sid  db_sid\]
+[-sid  db_sid]
 [-login
-\[-username db_username -password db_password -port db_port\]
- ]
-[-rman \{-controlfile \| \{-login
--username  rman_username -password  rman_password\}
--tnsname  rman_tnsname\}\}]
+[-username db_username -password db_password -port db_port]
+]
+[-rman {-controlfile | {-login
+-username  rman_username -password  rman_password}
+-tnsname  rman_tnsname}}]
 
 
 [-retain
-\[-hourly \[-count n\] \[-duration m\]\]
-\[-daily \[-count n\] \[-duration m\]]
-\[-weekly \[-count n\] \[-duration m\]]
-\[-monthly \[-count n\] \[-duration m\]]]]
+[-hourly [-count n] [-duration m]]
+[-daily [-count n] [-duration m]]
+[-weekly [-count n] [-duration m]]
+[-monthly [-count n] [-duration m]]]]
 -comment comment
 -snapname-pattern pattern
 []
 [-summary-notification]
 [-notification
-\[-success
+[-success
 -email email_address1,email_address2
--subject subject_pattern\]
-\[-failure
+-subject subject_pattern]
+[-failure
 -email email_address1,email_address2
 -subject subject_pattern]
 [-separate-archivelog-backups
 -retain-archivelog-backups
- -hours hours |
+-hours hours |
 -days days |
 -weeks weeks |
 -months months
 []
-[-include-with-online-backups \| -no-include-with-online-backups]]
+[-include-with-online-backups | -no-include-with-online-backups]]
 [-dump]
 [-quiet | -verbose]
 ----

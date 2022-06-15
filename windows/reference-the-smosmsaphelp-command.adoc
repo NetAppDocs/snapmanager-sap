@@ -15,9 +15,9 @@ You can run the `help` command to display information about the SnapManager comm
 
 ----
 
-        smsap help
-\[\]\[backup\|cmdfile\|clone\|credential\|help\|operation\|profile\|repository\|system\|version\|plugin\|diag\|history\|schedule\|notification\|storage\|get\]
-\[-quiet \| -verbose\]
+smsap help
+[][backup|cmdfile|clone|credential|help|operation|profile|repository|system|version|plugin|diag|history|schedule|notification|storage|get]
+[-quiet | -verbose]
 ----
 
 == Parameters

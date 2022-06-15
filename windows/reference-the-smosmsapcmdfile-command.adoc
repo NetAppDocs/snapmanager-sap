@@ -15,9 +15,9 @@ You can use the `cmdfile` command to run any command if the shell on your host l
 
 ----
 
-        smsap cmdfile
+smsap cmdfile
 -file file_name
-\[-quiet \| -verbose\]
+[-quiet | -verbose]
 ----
 
 You can include the command in a text file and use the `smsap cmdfile` command to execute the command. You can add only one command in a text file. You must not include smsap in the command syntax.

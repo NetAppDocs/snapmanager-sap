@@ -15,11 +15,11 @@ You can run the `backup update` command to update the backup retention policy.
 
 ----
 
-        smsap backup update
+smsap backup update
 -profile profile_name
-[-label label \[-data \| -archivelogs\] \| \[-id guid\]
-\[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\}\]
-\[-comment comment_text\]
+[-label label [-data | -archivelogs] | [-id guid]
+[-retain {-hourly | -daily | -weekly | -monthly | -unlimited}]
+[-comment comment_text]
 [-quiet | -verbose]
 ----
 

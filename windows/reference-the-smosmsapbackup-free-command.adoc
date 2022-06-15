@@ -15,12 +15,12 @@ You can run the `backup free` command to free the Snapshot copies of the backups
 
 ----
 
-        smsap backup free
+smsap backup free
 -profile profile_name
-[-label label \[-data \| -archivelogs\] \| \[-id guid \| -all\]
+[-label label [-data | -archivelogs] | [-id guid | -all]
 -force
-\[-dump\]
-\[-quiet \| -verbose\]
+[-dump]
+[-quiet | -verbose]
 ----
 
 == Parameters
