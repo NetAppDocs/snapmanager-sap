@@ -1,5 +1,5 @@
 section: unix-administration
-title: Administration Guide for UNIX
+title: Administration (UNIX)
 entries:
   - title: Product overview
     url: "/unix-administration/reference-smsap-isg-product-overview.html"
