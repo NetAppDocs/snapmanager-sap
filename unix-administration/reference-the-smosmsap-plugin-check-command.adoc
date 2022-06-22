@@ -1,0 +1,59 @@
+---
+permalink: unix-administration/reference-the-smosmsap-plugin-check-command.html
+sidebar: sidebar
+keywords: snapmanager, enable, install, custom, script, operation, backup, restore, clone, plug-in, automate, custom, restore, smsap, plugin, check
+summary: "SnapManager enables you to install and use custom scripts for various operations. SnapManager offers backup, restore, and clone plug-ins to automate your custom scripts before and after the backup, restore, and clone operations. Before you use the backup, restore, and clone plug-in, you can run the plugin check command to verify the installation of plug-in scripts. Custom scripts are stored in three directories: policy (for scripts that should always be run before the backup, restore, or clone operation occurs), pre (for preprocessing scripts), and post (for post-processing scripts)."
+---
+= The smsap plugin check command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to install and use custom scripts for various operations. SnapManager offers backup, restore, and clone plug-ins to automate your custom scripts before and after the backup, restore, and clone operations. Before you use the backup, restore, and clone plug-in, you can run the plugin check command to verify the installation of plug-in scripts. Custom scripts are stored in three directories: policy (for scripts that should always be run before the backup, restore, or clone operation occurs), pre (for preprocessing scripts), and post (for post-processing scripts).
+
+== Syntax
+
+----
+ smsap plugin check
+-osaccount os_db_user_name
+----
+
+== Parameter
+
+* `*-osaccount*`
++
+Specifies the operating system (OS) database user name. If you do not enter the -osaccount option, SnapManager checks the plug-in scripts as root user rather than for a specific user.
+
+---
+
+== Example
+
+The following example shows that the plugin check command found the policy1 custom script stored in the policy directory as an executable. The example also shows that the two other custom scripts stored in the pre directory return no error messages (shown with a status of 0); however, the fourth custom script (post-plug-in1), which was found in the post directory, contains errors (shown with a status of 3).
+
+----
+smsap plugin check
+Checking plugin directory structure ...
+<installdir>/plugins/clone/policy
+OK: 'policy1' is executable
+<installdir>/plugins/clone/pre
+OK: 'pre-plugin1' is executable and returned status 0
+OK: 'pre-plugin2' is executable and returned status 0
+<installdir>/plugins/clone/post
+ERROR: 'post-plugin1' is executable and returned status 3
+<installdir>/plugins/backup/policy
+OK: 'policy1' is executable
+<installdir>/plugins/backup/pre
+OK: 'pre-plugin1' is executable and returned status 0
+OK: 'pre-plugin2' is executable and returned status 0
+<installdir>/plugins/backup/post
+ERROR: 'post-plugin1' is executable and returned status 3
+<installdir>/plugins/restore/policy
+OK: 'policy1' is executable
+<installdir>/plugins/restore/pre
+OK: 'pre-plugin1' is executable and returned status 0
+OK: 'pre-plugin2' is executable and returned status 0
+<installdir>/plugins/restore/post
+ERROR: 'post-plugin1' is executable and returned status 3
+Command complete.
+----
+---

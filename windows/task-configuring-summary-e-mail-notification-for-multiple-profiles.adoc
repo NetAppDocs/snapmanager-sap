@@ -1,0 +1,53 @@
+---
+permalink: windows/task-configuring-summary-e-mail-notification-for-multiple-profiles.html
+sidebar: sidebar
+keywords: snapmanager, enable, configure, summary, email, notification, multiple, profile, repository, database, configuring
+summary: SnapManager enables you to configure a summary email notification for multiple profiles under a repository database.
+---
+= Configuring summary email notification for multiple profiles
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to configure a summary email notification for multiple profiles under a repository database.
+
+You can set the SnapManager server host as a notification host from which the summary notification email is sent to the recipients. If the SnapManager server host name or IP address is changed, then the notification host can also be updated.
+
+You can select any one of the schedule times at which you require an email notification:
+
+* Hourly: To receive an email notification every hour
+* Daily: To receive an email notification daily
+* Weekly: To receive an email notification weekly
+* Monthly: To receive an email notification monthly
+
+You need to enter a single email address or a comma-separated list of email addresses to receive notifications for operations performed using those profiles. You must ensure that there is no space between the comma and the next email address when you enter multiple email addresses.
+
+NOTE: You must ensure that you enter the set of multiple email addresses within double quotation marks.
+
+SnapManager allows you to add a customized email subject using the following variables:
+
+* Profile name used for the database operation.
+* Database name
+* SID of the database
+* Name of the host server
+* Start time of the database operation in the yyyymmdd:hh:ss format
+* End time of the database operation in the yyyymmdd:hh:ss format
+* Database operation status
+
+If you select not to add a customized subject, SnapManager displays an error message: Missing value -subject.
+
+.Step
+. Enter the following command:
++
+`+smsap notification update-summary-notification -repository-portrepo_port-dbnamerepo_service_name-hostrepo_host-login-usernamerepo_username-emailemail_address1,email_address2-subjectsubject-pattern-frequency {-daily-timedaily_time | -hourly-timehourly_time | -monthly-timemonthly_time-date {1|2...|31} | -weekly-timeweekly_time-day {1|2|3|4|5|6|7}} -profilesprofile1profile2-notification-hostnotification-host+`
++
+Other options for this command are as follows:
++
+[-force] [-noprompt]
++
+[quiet | -verbose]
+
+----
+
+smsap notification update-summary-notification –repository –port 1521 –dbname repo2 –host 10.72.197.133 –login –username oba5 –email-address admin@org.com –subject success –frequency -daily -time 19:30:45 –profiles sales1 -notification-host wales
+----

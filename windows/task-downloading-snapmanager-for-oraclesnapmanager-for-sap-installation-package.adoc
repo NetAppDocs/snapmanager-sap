@@ -1,0 +1,41 @@
+---
+permalink: windows/task-downloading-snapmanager-for-oraclesnapmanager-for-sap-installation-package.html
+sidebar: sidebar
+keywords: download, snapmanager, sap, installation, package, netapp, support, site
+summary: You can download the SnapManager for SAP installation package from the NetApp Support Site.
+---
+= Downloading the SnapManager for SAP installation package
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can download the SnapManager for SAP installation package from the NetApp Support Site.
+
+. Log in to the NetApp Support Site.
+. On the the NetApp Support Site page, click *Downloads* > *Software*.
+. In the Software Download table, go to the SnapManager product row and select *SAP (Windows)* from the Select Platform drop-down list.
+. Click *Go*.
++
+The SnapManager releases are listed.
+
+. Click *View & Download* for the SnapManager release that you want to install.
++
+The description page is displayed.
++
+NOTE: You should read the information available on this page.
+
+. At the bottom of this page, click *Continue*.
++
+The license agreement page is displayed.
++
+NOTE: You should read the information available on this page.
+
+. Click *Accept*.
++
+The download page is displayed.
+
+. Download the installation package for your host.
++
+You can download the installation file to any location on the machine on which you want to install SnapManager for SAP.
+
+http://mysupport.netapp.com/[NetApp Support Site: mysupport.netapp.com]

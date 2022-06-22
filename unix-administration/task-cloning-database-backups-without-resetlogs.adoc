@@ -1,0 +1,54 @@
+---
+permalink: unix-administration/task-clone-database-backups-without-resetlogs.html
+sidebar: sidebar
+keywords: snapmanager, enable, perform, flexible, cloning, clone, recover, database, manual, desire, point, resetlog, configure, data, guard, standby
+summary: "SnapManager enables you to perform flexible cloning so that you can recover the cloned database manually to a desired point in time without opening the database by using resetlogs. You can also manually configure the cloned database as a Data Guard Standby database."
+---
+= Clone database backups without resetlogs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to perform flexible cloning so that you can recover the cloned database manually to a desired point in time without opening the database by using resetlogs. You can also manually configure the cloned database as a Data Guard Standby database.
+
+*About this task*
+
+When you can select the `-no-resetlogs` option while creating the clone, SnapManager performs the following activities to create the cloned database:
+
+. Executes the preprocessing task activity, if specified, before starting the clone operation
+. Creates the cloned database with the user-specified SID
+. Executes the SQL statements issued against the cloned database.
++
+Only the SQL statements that can be executed in mount state are successfully executed.
+
+. Executes the post-processing task activity, if specified.
+
+*What tasks you need to do to recover the cloned database manually*
+
+. Mount the archive log backups and recover the cloned database manually by using the archive log files from the mounted path.
+. After performing manual recovery, open the recovered cloned database with `-resetlogs` option.
+. Create temporary tablespaces, if required.
+. Run the DBNEWID utility.
+. Grant sysdba privilege to the credentials of the cloned database.
+
+While cloning the database backups using the `-no-resetlogs` option, SnapManager leaves the cloned database in the mounted state for manual recovery.
+
+NOTE: The cloned database created with the `-no-resetlogs` option is not a complete database. Therefore you must not perform any SnapManager operations on this database, though SnapManager does not restrict you from performing any operations.
+
+If you do not specify the `-no-resetlogs` option, SnapManager applies the archive log files, and opens the database with resetlogs.
+
+.Step
+
+. Enter the following command:
++
+`*smsap clone create -profile _profile_name_ [-backup-label _backup_name_ | -backup-id _backup_id_ | current] -newsid _new_sid_ -clonespec _full_path_to_clonespecfile_ -no-resetlogs*`
++
+If you try to specify both `-no-resetlogs` and `recover-from-location` options, SnapManager does not allow you to specify both these options together, and displays the error message: `SMSAP-04084: You must specify either one of the options: -no-resetlogs or -recover-from-location`.
+
+---
+== Example
+
+----
+smsap clone create -profile product -backup-label full_offline -newsid PROD_CLONE -clonespec prod_clonespec.xml -label prod_clone-reserve -no-reset-logs
+----
+---

@@ -1,0 +1,56 @@
+---
+permalink: unix-administration/concept-what-snapmanager-operation-states-are.html
+sidebar: sidebar
+keywords: snapmanager, operation, backup, restore, clone, state
+summary: "SnapManager operations (backup, restore, and clone) can be in different states, with each state indicating the progress of the operation."
+---
+= What SnapManager operation states are
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager operations (backup, restore, and clone) can be in different states, with each state indicating the progress of the operation.
+
+[cols="1a,4a" options="header"]
+|===
+| Operation state| Description
+a|
+Succeeded
+a|
+The operation completed successfully.
+a|
+Running
+a|
+The operation has started, but is not finished. For instance, a backup, which takes two minutes, is scheduled to occur at 11:00 a.m.. When you view the *Schedule* tab at 11:01 a.m., the operation appears as Running.
+a|
+No operation found
+a|
+The schedule has not run or the last run backup was deleted.
+a|
+Failed
+a|
+The operation failed. SnapManager has automatically executed the abort process and cleaned the operation.
+
+NOTE: You can split the clone that is created. When you stop the clone split operation you started and the operation is stopped successfully, the clone split operation state displays as failed.
+
+|===
+
+== Recoverable and unrecoverable events
+
+A recoverable SnapManager event has the following problems:
+
+* The database is not stored on a storage system that runs Data ONTAP.
+* SnapDrive for UNIX is not installed or cannot access the storage system.
+* SnapManager fails to create a Snapshot copy or provision storage if the volume is out of space, the maximum number of Snapshot copies has been reached, or an unanticipated exception occurs.
+
+When a recoverable event occurs, SnapManager performs an abort process and attempts to return the host, database, and storage system to the starting state. If the abort process fails, SnapManager treats the incident as an unrecoverable event.
+
+An unrecoverable (out-of-band) event occurs when any of the following happens:
+
+* A system issue occurs, such as when a host fails.
+* The SnapManager process is stopped.
+* An in-band abort operation fails when the storage system fails, the logical unit number (LUN) or storage volume is offline, or the network fails.
+
+When an unrecoverable event occurs, SnapManager performs an abort process immediately. The host, database, and storage system might not have returned to the initial states. If this is the case, you must perform a cleanup after the SnapManager operation fails by deleting the orphaned Snapshot copy and removing the SnapManager lock file.
+
+If you want to delete the SnapManager lock file, navigate to `$ORACLE_HOME` on the target machine and delete the `sm_lock_ _TargetDBName_` file. After deleting the file, you must restart the SnapManager for SAP server.

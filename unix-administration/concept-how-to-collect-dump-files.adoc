@@ -1,0 +1,35 @@
+---
+permalink: unix-administration/concept-how-to-collect-dump-files.html
+sidebar: sidebar
+keywords: dump, snapmanager, command, collect, file, successful, fail, operation
+summary: "You can include -dump in the SnapManager command to collect the dump files after a successful or failed SnapManager operation."
+---
+= How to collect dump files
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can include `-dump` in the SnapManager command to collect the dump files after a successful or failed SnapManager operation.
+
+You can collect dump files for the following SnapManager operations:
+
+* Creating profiles
+* Updating profiles
+* Creating backups
+* Verifying backups
+* Deleting backups
+* Freeing backups
+* Mounting backups
+* Unmounting backups
+* Restoring backups
+* Creating clones
+* Deleting clones
+* Splitting clones
+
+NOTE: When you create a profile, you can collect dump files only if the operation is successful. If you encounter an error while creating a profile, you must use the `smsap system dump` command. For successful profiles, you can use the `smsap operation dump` and `smsap profile dump` commands to collect the dump files.
+
+*Example*
+
+----
+ smsap backup create -profile targetdb1_prof1 -auto -full -online -dump
+----

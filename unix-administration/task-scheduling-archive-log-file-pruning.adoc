@@ -1,0 +1,58 @@
+---
+permalink: unix-administration/task-schedule-archive-log-file-pruning.html
+sidebar: sidebar
+keywords: create, backup, schedule, pruning, prune, archive, log, file, scheduling
+summary: "When you create a backup, you can schedule the pruning of archive log files to occur at a specified time."
+---
+= Schedule archive log file pruning
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you create a backup, you can schedule the pruning of archive log files to occur at a specified time.
+
+*About this task*
+
+SnapManager allows you to prune the archive log files periodically from the active file system.
+
+.Step
+
+. Enter the following command:
++
+`*smsap schedule create -profile _profile_name_ {[-full {-online | -offline | -auto}[-retain [-hourly | -daily | -weekly | -monthly | -unlimited] [-verify]] | [-data [-files _files_ [_files_]] | [-tablespaces _-tablespaces_ [_-tablespaces_]] {-online | -offline | -auto}[-retain [-hourly | -daily | -weekly | -monthly | -unlimited] [-verify]] | [-archivelogs]} [-comment _comment_] [-protect | -protectnow | -noprotect] [-backup-dest _path1_ [,[_path2_]] [-exclude-dest _path1_ [_,path2_]] [-prunelogs{-all | -untilSCN _untilSCN_ | -before {-date _yyyy-MM-dd HH:mm:ss_ | -months _months_ | -weeks _weeks_ | -days _days_ | -hours _hours_}} -prune-dest _prune_dest1,,prune_dest2_] -schedule-name _schedule_name_ [-schedule-commentschedule_comment] -interval {_-hourly_ | _-daily_ | _-weekly_ | _-monthly_ | _-onetimeonly_} -cronstring _cronstring_ -start-time {_start-time start_time <yyyy-MM-dd HH:mm>_} -runasuser _-runasuser_ [-force] [-quiet | -verbose]*`
++
+[cols="2a,4a" options="header"]
+|===
+| If you want to...| Then...
+a|
+*Schedule pruning of archive log files*
+a|
+Specify the following options:
+
+ ** `-prunelogs` to schedule pruning of the archive log files
+ ** `-prune-dest` to prune archive log files from the archive log destinations
+
+a|
+*Include a name for the schedule*
+a|
+Specify the `-schedule-name` option.
+a|
+*Schedule pruning of archive log files at specific time interval*
+a|
+Specify the `interval` option and indicate whether the archive log files should be pruned based on the following interval classes:
+
+ ** `-hourly`
+ ** `-daily`
+ ** `-weekly`
+ ** `-monthly`
+ ** `-onetimeonly`
+
+a|
+*Add a comment about the schedule operation*
+a|
+Specify the `-schedule-comment` option followed by the description string.
+a|
+*Specify the start time of the schedule operation*
+a|
+Specify the `-start-time` option in the yyyy-mm-dd hh:mm format.
+|===

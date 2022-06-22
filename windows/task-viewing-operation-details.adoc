@@ -1,0 +1,30 @@
+---
+permalink: windows/task-viewing-operation-details.html
+sidebar: sidebar
+keywords: view, detail, information, particular, profile, verify, success, failure, operation, resource, operation
+summary: You can view detailed information about a particular profile to verify the success or failure of an operation. It can also help you determine the storage resources in use for a particular operation.
+---
+= Viewing operation details
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can view detailed information about a particular profile to verify the success or failure of an operation. It can also help you determine the storage resources in use for a particular operation.
+
+You can view the following details about a particular operation:
+
+* Operation ID
+* Type of operation
+* Whether the operation was forced
+* Runtime information, including status, start and end date of the operation
+* The host on which the operation ran, including the Process ID and SnapManager version
+* Repository information
+* Storage resources in use
+
+. To view the detailed information for a specific operation ID, enter the following command:
++
+`smsap operation show -profile profile_name [-label label | -id id] [-quiet | -verbose]`
+
+*Related information*
+
+xref:reference-the-smosmsap-operation-show-command.adoc[The smsap operation show command]

@@ -1,0 +1,43 @@
+---
+permalink: windows/concept-integration-with-other-netapp-applications-and-technologies.html
+sidebar: sidebar
+keywords: snapmanager, sap, stand-alone, product, integrate, feature, netapp, enable, backup, amount, space, integration, application, technology, technologies
+summary: "SnapManager for SAP is a stand-alone product that integrates the features from other NetApp products to enable fast backups that require only a small amount of space."
+---
+= Integration with other NetApp applications and technologies
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager for SAP is a stand-alone product that integrates the features from other NetApp products to enable fast backups that require only a small amount of space.
+
+SnapManager integrates with the following NetApp applications and technologies:
+
+[options="header"]
+|===
+| Applications and technologies| Description
+a|
+SnapDrive
+a|
+SnapManager uses SnapDrive to create Snapshot copies of the storage. Snapshot copies ensure that backups are space-efficient and faster to create than the disk-to-disk backups.
+a|
+FlexClone (a licensed feature of Data ONTAP)
+a|
+SnapManager uses the FlexClone feature to create fast, space-efficient clones of backups.
+a|
+Snapshot (a feature of Data ONTAP)
+a|
+Snapshot technology creates point-in-time copies of the database.
+a|
+SnapRestore (a licensed feature of Data ONTAP)
+a|
+SnapManager reduces the mean time to recover a database by using SnapRestore. SnapRestore can recover individual files to a multi-terabyte volume so that operations can resume quickly.
+a|
+SnapVault (a licensed feature of Data ONTAP)
+a|
+SnapVault leverages disk-based backups for reliable, low-overhead backup and recovery of databases.
+a|
+SnapMirror (a licensed feature of Data ONTAP)
+a|
+SnapMirror replicates database data across a global network at high speeds in a simple, reliable, and cost-effective manner.
+|===

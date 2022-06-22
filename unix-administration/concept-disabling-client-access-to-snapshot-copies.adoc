@@ -1,0 +1,22 @@
+---
+permalink: unix-administration/concept-disabling-client-access-to-snapshot-copies.html
+sidebar: sidebar
+keywords: storage, system, volume, nfs, protocol, sap, tools, snapshot, copies, copy, snapshot, directory, directories, backup, diable, disabling, client, access
+summary: "For any storage system volume that uses the NFS protocol and contains SAP data backed up using BR*Tools, you must disable client access to the Snapshot copies of that volume. If client access is enabled, BR*Tools will attempt to create backups of the hidden .snapshot directories that contain previous backups."
+---
+= Disabling client access to Snapshot copies
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+For any storage system volume that uses the NFS protocol and contains SAP data backed up using BR*Tools, you must disable client access to the Snapshot copies of that volume. If client access is enabled, BR*Tools will attempt to create backups of the hidden .snapshot directories that contain previous backups.
+
+To disable client access, use one of the following methods.
+
+* Using Data ONTAP: Using the Data ONTAP command line interface, enter the following command: vol options volume_name nosnapdir on wherein volume_name is the name of the volume containing SAP data, for example, `/vol/falls_sap_cer9i_data1`
+* Using FilerView: To disable access using the FilerView graphical user interface, you must already have a Snapshot copy of the volume.
+ .. In the FilerView left pane, select *Volumes* > *Snapshots* > *Manage*.
+ .. On the Manage Snapshots page, click the volume name in the Volume column.
+ .. On the Configure Snapshots page, clear the Snapshot Directory Visible check box, and click *Apply.*
+
+For more information about disabling client access to Snapshot copies, see the chapter about Snapshot Management of the _Data ONTAP Data Protection Online Backup and Recovery Guide_ for your version of Data ONTAP.

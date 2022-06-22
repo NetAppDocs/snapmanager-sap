@@ -1,0 +1,24 @@
+---
+permalink: windows/task-authorize-user-access-to-the-repository.html
+sidebar: sidebar
+keywords: snapmanager, enable, set, credential, user, repository, restrict, prevent, access, host, database, authorize
+summary: "SnapManager enables you to set credentials for database users to access the repository. Using credentials, you can restrict or prevent access to the SnapManager hosts, repositories, profiles, and databases."
+---
+= Authorize access to the repository
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to set credentials for database users to access the repository. Using credentials, you can restrict or prevent access to the SnapManager hosts, repositories, profiles, and databases.
+
+== About this task
+
+If you set credentials by using the `credential set` command, SnapManager does not prompt you for a password.
+
+You can set user credentials when you install SnapManager or later.
+
+.Step
+
+. Enter the following command:
++
+`*smsap credential set -repository -dbname _repo_service_name_ -host _repo_host_ -login -username _repo_username_ [-password _repo_password_] -port _repo_port_*`

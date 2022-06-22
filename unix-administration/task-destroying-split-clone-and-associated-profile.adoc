@@ -1,0 +1,24 @@
+---
+permalink: unix-administration/task-destroy-split-clone-and-associated-profile.html
+sidebar: sidebar
+keywords: snapmanager, enable, destroy, profile, associate, split, clone, database, storage, remove. backup
+summary: "SnapManager enables you to destroy the profile associated with the split clone (database) along with the underlying storage. Before destroying the profile, ensure you remove the associated backups and clones."
+---
+= Destroy a profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to destroy the profile associated with the split clone (database) along with the underlying storage. Before destroying the profile, ensure you remove the associated backups and clones.
+
+.Step
+
+. To destroy a profile created using the split clone operation as well as the split clone database, enter the following command:
++
+`*smsap profile destroy -profileprofile [-host _hostname_] [-quiet | -verbose]*`
+
+---
+----
+smsap profile destroy -profile AUTO-REVEN
+----
+---

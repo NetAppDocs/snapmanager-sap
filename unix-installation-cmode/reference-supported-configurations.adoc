@@ -1,0 +1,18 @@
+---
+permalink: unix-installation-cmode/reference-supported-configurations.html
+sidebar: sidebar
+keywords: host, install, snapmanager, software, browser, database, operate, system, requirement, upgrade, support, configuration
+summary: "The hosts on which you are installing SnapManager must meet the specified software, browser, database, and operating system requirements. You must verify support for your configuration before you install or upgrade SnapManager."
+---
+= Supported configurations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The hosts on which you are installing SnapManager must meet the specified software, browser, database, and operating system requirements. You must verify support for your configuration before you install or upgrade SnapManager.
+
+For information about supported configurations, see the Interoperability Matrix tool.
+
+*Related information*
+
+http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^]

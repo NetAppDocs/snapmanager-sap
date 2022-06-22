@@ -1,0 +1,281 @@
+---
+permalink: unix-administration/concept-fast-restore-eligibility-checks.html
+sidebar: sidebar
+keywords: perform, restore, backup, snapmanager, eligibility, check, fast
+summary: "When you choose to perform a fast restore of a backup, SnapManager first performs an eligibility check to determine whether the fast restore process can be used."
+---
+= Fast restore eligibility checks
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you choose to perform a fast restore of a backup, SnapManager first performs an eligibility check to determine whether the fast restore process can be used.
+
+SnapManager provides the following types of checks:
+
+* Mandatory checks: SnapManager can perform the fast restore process only if all the conditions under this check pass.
+* Overridable checks: If the conditions under this check fail, administrators can override the check to force a fast restore process. However, you must override these checks with caution.
+
+The following table lists issues that you might encounter and indicates whether the fast restore eligibility check can be overridden:
+
+[cola="2a,1a,3a" options="header"]
+|===
+| Issue| Pass required| Details
+a|
+ACFS, Voting Disk, or OCR is present on ASM Disk group in 11gR2
+a|
+Yes
+a|
+Fast restore cannot be performed. Resolution: None
+
+Cannot override.
+
+a|
+Only backups created with SnapManager 3.0 or later can be fast restored
+a|
+Yes
+a|
+Cannot override.
+a|
+Only Snapshot copies created with SnapDrive for UNIX 4.0 or later can be fast restored
+a|
+Yes
+a|
+Cannot override.
+a|
+Volume is a root volume
+a|
+Yes
+a|
+Volume being restored is a root volume on the storage system. Resolution: Do not use the root volume on the storage system.
+
+Cannot override.
+
+a|
+Volume restore is not available on Windows
+a|
+Yes
+a|
+Volume being restored is a root volume on the storage system. Resolution: None
+
+Cannot override.
+
+a|
+Volume restore is disabled
+a|
+Yes
+a|
+Volume restore has been disabled. Resolution: Enable volume restore by selecting different options when starting the restore. In the command-line interface, do not use `-fast -off`.
+
+Cannot override.
+
+a|
+Control files and data files on the same volume
+a|
+Yes
+a|
+For online backups, control files and data files cannot be on the same volume because SnapManager takes two Snapshot copies of the volume (one in which the data files are consistent in hot backup mode, and one in which the backup control files are consistent after hot backup mode is complete). The volume restore will revert to the first Snapshot copy, which deletes the second Snapshot copy containing the backup control files. When a data file-only restore occurs, the control files are reverted to an inconsistent state, and SnapManager restores the backup control file and then opens the database with the resetlogs option, which is not desired behavior.
+
+Resolution: Migrate control files and data files onto separate file systems that do not share the same underlying volume. This does not help the restore in which the check failed, but will help future backup restore operations.
+
+Cannot override.
+
+a|
+Archive logs and data files must not exist on the same volume
+a|
+Yes
+a|
+Database archive logs and data files reside in file systems backed by the same storage system volume. If a volume restore was performed, SnapManager cannot open the database after a restore of an online backup because the archived log file that is written after the database is taken out of hot backup mode is not available. Also, you would not be able to roll forward through later transactions that might have been in the archive log files.
+
+Resolution: Migrate archive logs and data files onto separate file systems that do not share the same underlying storage system volume. This does not help the restore in which the check failed, but will help future backup restore operations.
+
+Cannot override.
+
+a|
+Online logs and data files must not exist on the same volume
+a|
+Yes
+a|
+Database online redo logs and data files reside in file systems backed by the same storage system volume. If a volume restore was performed, recovery cannot use the online redo logs because they would have been reverted.
+
+Resolution: Migrate online redo logs and data files onto separate file systems that do not share the same underlying storage system volume. This does not help the restore in which the check failed, but will help future backup restore operations.
+
+Cannot override.
+
+a|
+Files in the file system not part of the restore scope are reverted
+a|
+Yes
+a|
+Files visible on the host, other than the files being restored, exist in a file system on the volume. If a fast restore or a storage side file system restore was performed, the files visible on the host would be reverted to their original content when the Snapshot copy is created. If SnapManager discovers 20 or less files, they are listed in the eligibility check. Otherwise, SnapManager displays a message that you should investigate the file system.
+
+Resolution: Migrate the files not used by the database onto a different file system that uses a different volume. Alternatively, delete the files.
+
+If SnapManager cannot determine the file purpose, you can override the check failure. If you override the check, the files not in the restore scope are reverted. Override this check only if you are certain that reverting the files will not adversely affect anything.
+
+a|
+File systems in the specified volume group not part of the restore scope are reverted
+a|
+No
+a|
+Multiple file systems are in the same volume group, but not all file systems are requested to be restored. Storage side file system restore and fast restore cannot be used to restore individual file systems within a volume group because the LUNs used by the volume group contain data from all file systems. All file systems within a volume group must be restored at the same time to use fast restore or storage side file system restore. If SnapManager discovers 20 or less files, SnapManager lists them in the eligibility check. Otherwise, SnapManager provides a message that you should investigate the file system.
+
+Resolution: Migrate the files not used by the database onto a different volume group. Alternatively, delete the file systems in the volume group.
+
+Can override.
+
+a|
+Host volumes in specified volume group not part of the restore scope are reverted
+a|
+No
+a|
+Multiple host volumes (logical volumes) are in the same volume group, but not all host volumes are requested to be restored. This check is similar to File systems in volume group not part of the restore scope will be reverted except that the other host volumes in the volume group are not mounted as file systems on the host. Resolution: Migrate host volumes used by the database onto a different volume group. Or, delete the other host volumes in the volume group.
+
+If you override the check, all the host volumes in the volume group are restored. Override this check only if you are certain that reverting the other host volumes does not adversely affect anything.
+
+a|
+File extents have changed since the last backup
+a|
+Yes
+a|
+Cannot override.
+a|
+Mapped LUNs in volume not part of restore scope are reverted
+a|
+Yes
+a|
+LUNs other than those requested to be restored in the volume are currently mapped to a host. A volume restore cannot be performed because other hosts or applications using these LUNs will become unstable. If the LUN names end with an underscore and an integer index (for example, _0 or _1), these LUNs are typically clones of other LUNs within the same volume. It is possible that another backup of the database is mounted, or a clone of another backup exists.
+
+Resolution: Migrate LUNs not used by the database onto a different volume. If the mapped LUNs are clones, look for mounted backups of the same database or clones of the database, and unmount the backup or remove the clone.
+
+Cannot override.
+
+a|
+Unmapped LUNS in volume not part of the restore scope are reverted
+a|
+No
+a|
+LUNs other than those requested to be restored in the volume exist. These LUNs are not currently mapped to any host, so restoring them does not disrupt any active processes. However, the LUNs may be temporarily unmapped. Resolution: Migrate LUNs not used by the database onto a different volume, or delete the LUNs.
+
+If you override this check, the volume restore will revert these LUNs to the state at which the Snapshot copy was made. If the LUN did not exist when the Snapshot copy was made, the LUN will not exist after the volume restore. Override this check only if you are certain that reverting the LUNs does not adversely affect anything.
+
+a|
+LUNs present in Snapshot copy of volume might not be consistent when reverted
+a|
+No
+a|
+During Snapshot copy creation, LUNs other than those for which the Snapshot copy was requested, existed in the volume. These other LUNs may not be in a consistent state. Resolution: Migrate LUNs not used by the database onto a different volume, or delete the LUNs. This does not help the restore process in which the check failed, but will help restores of future backups taken after the LUNs are moved or deleted.
+
+If you override this check, the LUNs reverts to the inconsistent state at which the Snapshot copy was made. Override this check only if you are certain that reverting the LUNs does not adversely affect anything.
+
+a|
+New Snapshot copies have volume clone
+a|
+Yes
+a|
+Clones have been created of Snapshot copies that were created after the Snapshot copy is requested to be restored. Because a volume restore will delete later Snapshot copies, and a Snapshot copy cannot be deleted if it has a clone, a volume restore cannot be performed. Resolution: Delete clones of later Snapshot copies.
+
+Cannot override.
+
+a|
+Newer backups are mounted
+a|
+Yes
+a|
+Backups taken after the backup is restored are mounted. Because a volume restore deletes later Snapshot copies, a Snapshot copy cannot be deleted if it has a clone, a backup mount operation creates cloned storage, and a volume restore cannot be performed. Resolution: Unmount the later backup, or restore from a backup taken after the mounted backup.
+
+Cannot override.
+
+a|
+Clones of newer backups exist
+a|
+Yes
+a|
+Backups taken after the backup is restored have been cloned. Because a volume restore deletes later Snapshot copies, and a Snapshot copy cannot be deleted if it has a clone, a volume restore cannot be performed. Resolution: Delete the clone of the newer backup, or restore from a backup taken after the backups that have clones.
+
+Cannot override.
+
+a|
+New Snapshot copies of volume is lost
+a|
+No
+a|
+Performing a volume restore deletes all Snapshot copies created after the Snapshot copy to which the volume is being restored. If SnapManager can map a later Snapshot copy back to a SnapManager backup in the same profile, then the "Newer backups will be freed or deleted" message appears. If SnapManager cannot map a later Snapshot copy back to a SnapManager backup in the same profile, this message does not appear. Resolution: Restore from a later backup, or delete the later Snapshot copies.
+
+Can override.
+
+a|
+Newer backups will be freed or deleted
+a|
+No
+a|
+Performing a volume restore deletes all the Snapshot copies created after the Snapshot copy to which the volume is being restored. Therefore, any backups created after the backup that is being restored are either deleted or freed. Later backups are deleted in the following scenarios:
+
+* The backup state is not PROTECTED
+* `retain.alwaysFreeExpiredBackups` is `*false*` in `smsap.config`
+
+Later backups are freed in the following scenarios:
+
+* The backup state is PROTECTED
+* `retain.alwaysFreeExpiredBackups` is true `*false*` in `smsap.config`
+
+Resolution: Restore from a later backup, or free or delete later backups.
+
+If you override this check, backups created after the backup that is being restored are deleted or freed.
+
+a|
+SnapMirror relationship for volume is lost
+a|
+Yes (If RBAC is disabled or you do not have RBAC permission)
+a|
+Restoring a volume to a Snapshot copy earlier than the baseline Snapshot copy in a SnapMirror relationship destroys the relationship. Resolution: Restore from a backup created after the relationship's baseline Snapshot copy. Alternatively, break the storage relationship manually (and then re-create and re-baseline the relationship after the restore is complete).
+
+Can override, if RBAC is enabled and you have RBAC permission.
+
+a|
+SnapVault relationship for volume is lost if the fast restore process occurred
+a|
+Yes (If RBAC is disabled or you do not have RBAC permission)
+a|
+Restoring a volume to a Snapshot copy earlier than the baseline Snapshot copy in a SnapVault relationship destroys the relationship. Resolution: Restore from a backup created after the relationship's baseline Snapshot copy. Alternatively, break the storage relationship manually (and then re-create and re-baseline the relationship after the restore is complete).
+
+Cannot override, if RBAC is enabled and you have RBAC permission.
+
+a|
+NFS files in volume not part of the restore scope are reverted
+a|
+No
+a|
+Files present in the storage system volume, which are not visible on the host, are reverted if a volume restore is performed. Resolution: Migrate files not used by the database onto a different volume or delete the files.
+
+Can override. If you override this check failure, the LUNs are deleted.
+
+a|
+CIFS shares exist for volume
+a|
+No
+a|
+The volume being restored has CIFS shares. Other hosts might be accessing files in the volume during the volume restore. Resolution: Remove unneeded CIFS shares.
+
+Can override.
+
+a|
+Restoring from alternate location
+a|
+Yes
+a|
+A restore specification was provided for the restore operation that specifies that the files be restored from an alternate location. Only host-side copy utilities can be used to restore from an alternate location.
+
+Resolution: None.
+
+Cannot override.
+
+a|
+Storage side file system restore is not supported in a RAC database
+
+a|
+Yes
+a|
+Cannot override.
+
+|===

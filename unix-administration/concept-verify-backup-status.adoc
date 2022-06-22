@@ -1,0 +1,14 @@
+---
+permalink: unix-administration/concept-verify-backup-status.html
+sidebar: sidebar
+keywords: snapmanager, integrity, backup, oracle, backup, verification, operation, verify, status
+summary: "SnapManager can confirm the integrity of the backup using standard Oracle backup verification operations."
+---
+= Verify backup status
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager can confirm the integrity of the backup using standard Oracle backup verification operations.
+
+Database administrators (DBAs) can perform the verification as part of the backup operation, or at another time. DBAs can set the verify operation to occur during an off-peak time when the load on the host servers is less, or during a scheduled maintenance window.

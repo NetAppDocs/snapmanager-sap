@@ -1,0 +1,139 @@
+---
+permalink: unix-administration/reference-error-message-classifications.html
+sidebar: sidebar
+keywords: determine, cause, error, message, classification
+summary: "You can determine the cause of an error if you know the message classifications."
+---
+= Error message classifications
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can determine the cause of an error if you know the message classifications.
+
+The following table provides information about the numerical ranges for the different types of messages you might see with SnapManager:
+
+[cols="2a,1a,3a" options="header"]
+|===
+| Group| Range| Usage
+a|
+ENVIRONMENT
+a|
+1000-1999
+a|
+Used to log the state or issues with the operating environment of SnapManager. This group includes messages about the systems that SnapManager interacts with, such as the host, storage system, database, and so on.
+a|
+BACKUP
+a|
+2000-2999
+a|
+Associated with the database backup process.
+a|
+RESTORE
+a|
+3000-3999
+a|
+Associated with the database restore process.
+a|
+CLONE
+a|
+4000-4999
+a|
+Associated with the database clone process.
+a|
+PROFILE
+a|
+5000-5999
+a|
+Used for managing profiles.
+a|
+MANAGE
+a|
+6000-6999
+a|
+Used for managing backups.
+a|
+VIRTUAL DATABASE INTERFACE
+a|
+7000-7999
+a|
+Associated with the virtual database interface.
+a|
+VIRTUAL STORAGE INTERFACE
+a|
+8000-8999
+a|
+Associated with the virtual storage interface.
+a|
+REPOSITORY
+a|
+9000-9999
+a|
+Associated with the Repository interface.
+a|
+METRICS
+a|
+10000-10999
+a|
+Associated with the size of the database backup, elapsed time to perform the backup, time to restore the database, the number of times a database has been cloned, and so on.
+a|
+VIRTUAL HOST INTERFACE
+a|
+11000-11999
+a|
+Associated with the virtual host interface. This is the interface to the host operating system.
+a|
+EXECUTION
+a|
+12000-12999
+a|
+Associated with the execution package, including spawning and processing operating system calls.
+a|
+PROCESS
+a|
+13000-13999
+a|
+Associated with the process component of SnapManager.
+a|
+UTILITIES
+a|
+14000-14999
+a|
+Associated with SnapManager utilities, global context, and so on.
+a|
+DUMP/DIAGNOSTICS
+a|
+15000-15999
+a|
+Associated with dump or diagnostic operations.
+a|
+HELP
+a|
+16000-16999
+a|
+Associated with help.
+a|
+SERVER
+a|
+17000-17999
+a|
+Used in the SnapManager server administration.
+a|
+API
+a|
+18000-18999
+a|
+Associated with the API.
+a|
+BACKINT
+a|
+19000-19999
+a|
+Associated with BACKINT.
+a|
+AUTH
+a|
+20000-20999
+a|
+Associated with the authorization of credentials.
+|===

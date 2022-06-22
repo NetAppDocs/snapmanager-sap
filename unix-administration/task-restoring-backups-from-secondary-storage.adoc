@@ -1,0 +1,64 @@
+---
+permalink: unix-administration/task-restore-backups-from-secondary-storage.html
+sidebar: sidebar
+keywords: restore, protect, backup, secondary, storage, copy, data, back, primary, storage, restoring
+summary: "You can restore protected backups from secondary storage and choose how you want to copy the data back to the primary storage."
+---
+= Restore backups from secondary storage
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can restore protected backups from secondary storage and choose how you want to copy the data back to the primary storage.
+
+*About this task*
+
+You can use the `backup restore` command with the `-from-secondary` option to restore the data from secondary storage. If you do not specify the `-from-secondary` option, SnapManager restores the data from the Snapshot copies on primary storage.
+
+You cannot use the `-from-secondary` option if the backup exists on primary storage; the primary backup must be freed before a backup can be restored from secondary storage. If you use a temporary volume, you must specify the volume by using the `-temp-volume` option.
+
+You must specify the `-copy-id` option whenever you specify the `-from-secondary` option. If there is more than one backup on the secondary storage system, the `-copy-id` option is used to specify which backup copy on the secondary storage should be used for the restore operation.
+
+NOTE: If you are using Data ONTAP operating in 7-Mode, you must specify a valid value for the `-copy-id` option. However, if you are using clustered Data ONTAP, the `-copy-id` option is not required.
+
+When restoring data from secondary storage, SnapManager first attempts to restore data directly from the secondary storage system to the primary storage system (without involving the host). If SnapManager cannot perform this type of restore (for example, if the files are not part of the file system), then SnapManager will fall back to a host-side file copy restore. SnapManager has two methods of performing a host-side file copy restore from secondary storage. The method that SnapManager selects is configured in the `smsap.config` file.
+
+* If `_restore.secondaryAccessPolicy_ = *direct*`, SnapManager clones the data on secondary storage, mounts the cloned data from the secondary storage system to the host, and then copies data out of the clone into the active environment.
++
+This is the default secondary access policy.
+
+* If `_restore.secondaryAccessPolicy_ = *indirect*`, SnapManager first copies the data to a temporary volume on primary storage, mounts the data from the temporary volume to the host, and then copies data out of the temporary volume into the active environment.
++
+This policy should be used only if the host does not have direct access to the secondary storage system. Restores using the indirect method will take twice as long as the direct method because two copies of the data are created.
+
+.Step
+
+. Perform one of the following actions:
++
+[cols="1a,3a" options="header"]
+|===
+| If you want to...| Then...
+a|
+Restore a complete database if the selected backup exists on primary storage
+a|
+Enter the following command:
+
+`*smsap backup restore -profile _profile_name_ -label _label_ -complete -recover -alllogs[-copy-id _id_]*`
+a|
+Restore a complete database if the selected backup does not exist on primary storage
+a|
+Enter the following command:
+`*smsap backup restore -profile _profile_name_ -label _label_ -complete-recover -alllogs-from-secondary [-temp-volume _<temp_volume>_] [-copy-id _id_]*`
+|===
+
+---
+== Example
+
+The following command restores a protected backup from the secondary storage system:
+
+----
+smsap backup restore -profile PAYDB -label daily_monday -complete
+-recover alllogs -from-secondary -copy-id 3042 -temp-volume smsap_scratch_restore_volume
+Operation Id [8abc011215d385920115d38599470001] succeeded.
+----
+---

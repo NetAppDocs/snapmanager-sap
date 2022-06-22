@@ -1,0 +1,23 @@
+---
+permalink: windows/task-starting-the-snapmanager-graphical-user-interface.html
+sidebar: sidebar
+keywords: snapmanager, install, host, graphical, user, interface, gui, list, program, start
+summary: If SnapManager is installed on the host, start the graphical user interface \(GUI\) for SnapManager by selecting the program from a list of programs.
+---
+= Starting the SnapManager GUI
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If SnapManager is installed on the host, start the graphical user interface (GUI) for SnapManager by selecting the program from a list of programs.
+
+* Ensure that the SnapManager server is started.
+
+You can start the SnapManager GUI in one of the following ways:
+
+* In the SnapManager host, click *Start* > *All Programs* > *NetApp* > *SnapManager for SAP* > *Start SMSAP GUI*.
+* If SnapManager is not installed on the host, use Java Web Start, which downloads SnapManager components and starts the GUI.
+
+*Related information*
+
+xref:task-downloading-and-starting-the-graphical-user-interface-using-java-web-start-windows.adoc[Downloading and starting the graphical user interface using Java Web Start]
