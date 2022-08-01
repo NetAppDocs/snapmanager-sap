@@ -1,5 +1,5 @@
 section: unix-installation-7mode
-title: Installation and Setup For UNIX For Data ONTAP Operating in 7-Mode
+title: Installation and Setup for UNIX for 7-mode
 entries:
   - title: Product overview
     url: "/unix-installation-7mode/reference-smsap-isg-product-overview.html"
