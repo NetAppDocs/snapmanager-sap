@@ -1,5 +1,5 @@
 section: unix-installation-cmode
-title: Installation and Setup For UNIX For Clustered Data ONTAP
+title: Installation and Setup for UNIX for Clustered Data ONTAP
 entries:
   - title: Product overview
     url: "/unix-installation-cmode/reference-smsap-isg-product-overview.html"
