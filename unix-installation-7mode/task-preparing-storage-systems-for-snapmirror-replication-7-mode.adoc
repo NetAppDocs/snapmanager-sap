@@ -1,0 +1,96 @@
+---
+permalink: unix-installation-7mode/task-prepare-storage-systems-for-snapmirror-replication-7-mode.html
+sidebar: sidebar
+keywords: snapmanager, snapmirror, technology, mirror, snapshot, copies, copy, configure, initialize, data-protection, relationship, destination, volume, prepare, preparing, storage, system, replication
+summary: "Before you can use SnapManager’s integrated SnapMirror technology to mirror Snapshot copies, you must configure and initialize a data-protection relationship between the source and destination volumes. On initialization, SnapMirror makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks it references to the destination volume. It also transfers any other, less recent Snapshot copies on the source volume to the destination volume."
+---
+= Prepare storage systems for SnapMirror replication
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before you can use SnapManager's integrated SnapMirror technology to mirror Snapshot copies, you must configure and initialize a _data-protection relationship_ between the source and destination volumes. On initialization, SnapMirror makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks it references to the destination volume. It also transfers any other, less recent Snapshot copies on the source volume to the destination volume.
+
+*About this task*
+
+You can use the ONTAP CLI or OnCommand System Manager to perform these tasks. The procedure below is based on the assumption that you are using the CLI. For more information, see the https://library.netapp.com/ecm/ecm_download_file/ECMP1368826[Data ONTAP 8.2 Data Protection Online Backup and Recovery Guide for 7-Mode^].
+
+NOTE: You cannot use SnapManager to mirror qtrees. SnapManager supports volume mirroring only.
+
+You cannot use SnapManager for synchronous mirroring. SnapManager supports asynchronous mirroring only.
+
+IMPORTANT: If you are storing database files and transaction logs on different volumes, you must create relationships between the source and destination volumes for the database files and between the source and destination volumes for the transaction logs.
+
+. On the source system console, use the `options snapmirror.access` command to specify the host names of systems that are allowed to copy data directly from the source system.
++
+*Example*
++
+The following entry allows replication to destination_systemB:
++
+----
+options snapmirror.access host=destination_systemB
+----
+
+. On the destination system, create or edit the `/etc/snapmirror.conf` file to specify the volume to be copied.
++
+*Example*
++
+The following entry specifies replication from vol0 of source_systemA to vol2 of destination_systemB:
++
+----
+source_systemA:vol0 destination_systemB:vol2
+----
+
+. On both the source and destination system consoles, use the `snapmirror on` command to enable SnapMirror.
++
+*Example*
++
+The following command enables SnapMirror:
++
+----
+snapmirror on
+----
+
+. On the destination system console, use the `vol create` command to create a SnapMirror destination volume that is the same or greater in size than the source volume.
++
+*Example*
++
+The following command creates a 2-GB destination volume named vol2 on the aggregate aggr1:
++
+----
+vol create vol2 aggr1 2g
+----
+
+. On the destination system console, use the vol restrict command to mark the destination volume as restricted.
++
+*Example*
++
+The following command marks the destination volume vol2 as restricted:
++
+----
+vol restrict vol2
+----
+
+. On the source system console, use the `snap sched` command to disable any scheduled transfers.
++
+*Example*
++
+You must disable scheduled transfers to avoid scheduling conflicts with SnapDrive.
++
+The following command disables scheduled transfers:
++
+----
+snap sched vol1 -----
+----
+
+. On the destination system console, use the `snapmirror initialize` command to create a relationship between the source and destination volumes, and initialize the relationship.
++
+The initialization process performs a _baseline transfer_ to the destination volume. SnapMirror makes a Snapshot copy of the source volume, then transfers the copy and all the data blocks it references to the destination volume. It also transfers any other Snapshot copies on the source volume to the destination volume.
++
+*Example*
++
+The following command creates a SnapMirror relationship between the source volume vol0 on source_systemA and the destination volume vol2 on destination_systemB, and initializes the relationship:
++
+----
+snapmirror initialize -S source_systemA:vol0 destination_systemB:vol2
+----

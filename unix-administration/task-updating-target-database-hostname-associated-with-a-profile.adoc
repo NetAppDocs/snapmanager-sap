@@ -1,0 +1,63 @@
+---
+permalink: unix-administration/task-update-target-database-hostname-associated-with-a-profile.html
+sidebar: sidebar
+keywords: snapmanager, sap, ability, update, host, name, target, database, profile
+summary: "SnapManager (3.2 or later) for SAP provides the ability to update the host name of the target database in the SnapManager profile."
+---
+= Update the target database host name associated with a profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager (3.2 or later) for SAP provides the ability to update the host name of the target database in the SnapManager profile.
+
+*What you'll need*
+
+* The local user's home directory must be aware of the profile-to-repository mappings.
+* The SnapManager graphical user interface (GUI) sessions must be closed.
+* In a Real Application Clusters (RAC) environment, the clones or mounted backups available on the host specified in the profile must be deleted and unmounted.
+
+*About this task*
+
+You can update the profile with the new host name by using only the CLI.
+
+*Scenarios not supported for changing the target database host name in profile*
+
+The following scenarios not supported for changing the target database host name in the profile:
+
+* Changing the target database host name by using the SnapManager GUI
+* Rolling back of the repository database after updating the target database host name of the profile
+* Updating multiple profiles for a new target database host name by running a single command
+* Changing the target database host name when any SnapManager operation is running
+* Changing the target database host name if SnapManager is installed on Solaris and if the database logical unit numbers (LUNs) are created by using host-mounted file system with SVM stack.
+
+NOTE: After you update the target database host name in the profile, only the target database host name is changed. All the other configuration parameters set on the profile are retained.
+
+After you update the new target database host name in a protection-enabled profile, the same dataset and protection policies are retained for the updated profile.
+
+After you change the host name for the target host, you must ensure that you update the host name for all the existing protected profiles before creating the new protected profiles. To update the host name for a profile, run the `smsap profile update` command.
+
+After you update the target database host name, you cannot deleteor split the clone or unmount the backup if the clone or mounted backup is not available in the new host. In such scenarios, running the SnapManager operations from the new host lead to failure as well as stale entries in the earlier host. To perform SnapManager operations, you must revert to the earlier host name by using `profile update`.
+
+. Enter the following command:
++
+`*smsap profile update -profile _profile_ [-profile-password _profile_password_][-database-dbname _db_dbname_ -host _db_host_ [-sid _db_sid_] [-login-username _db_username_ -password _db_password_ -port _db_port_]] [{-rman{-controlfile | {-login-username _rman_username_ -password _rman_password_ -tnsname _rman_tnsname_}}} | -remove-rman]-osaccount _osaccount_ -osgroup _osgroup_ [-retain [-hourly [-count _n_] [-duration _m_]] [-daily [-count _n_] [-duration _m_]] [-weekly [-count _n_] [-duration _m_]] [-monthly [-count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][[-protect [-protection-policy _policy_name_]]| [[-noprotect]] [-summary-notification] [-notification [-success -email _email_address1, email_address2_ -subject _subject_pattern_] [-failure -email _email_address1, email_address2_ -subject _subject_pattern_]] [-separate-archivelog-backups-retain-archivelog-backups -hours _hours_ | -days _days_ | -weeks _weeks_ | -months _months_ [-protect [-protection-policy _policy_name_] | -noprotect] [-include-with-online-backups | -no-include-with-online-backups]] [-dump]*`
++
+Other options for this command are as follows:
++
+``[-force] [-noprompt]``
++
+``[-quiet | -verbose]``
++
+[cols="1a,2a" options="header"]
+|===
+| If you want to...| Then...
+a|
+*Change the target database host name*
+a|
+`Specify -host _new_db_host_`
+|===
+
+. To view the target database host name of the profile, enter the following command:
++
+`*smsap profile show*`

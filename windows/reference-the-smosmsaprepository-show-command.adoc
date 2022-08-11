@@ -1,0 +1,81 @@
+---
+permalink: windows/reference-the-smosmsaprepository-show-command.html
+sidebar: sidebar
+keywords: command, display, information, repository, smsap
+summary: "This command displays information about the repository."
+---
+= The smsap repository show command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command displays information about the repository.
+
+== Syntax
+
+----
+
+smsap repository show
+-repository
+-dbname repo_service_name
+-host repo_host
+-port repo_port
+-login -username repo_username
+[-quiet | -verbose]
+----
+
+== Parameters
+
+* *`-repository`*
++
+The options that follow `-repository` specify the details of the database for the repository.
+
+* *`-dbname _repo_service_name_`*
++
+Specifies the name of the database that stores the repository. Use either the global name or the SID.
+
+* *`-host _repo_host_`*
++
+Specifies the name or IP address of the host computer the repository database runs on.
+
+* *`-login`*
++
+Starts the repository login details.
+
+* *`-username _repo_username_`*
++
+Specifies the user name needed to access the database that stores the repository.
+
+* *`-port _repo_port_`*
++
+Specifies the TCP port number used to access the database that stores the repository.
+
+* *`-quiet`*
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* *`-verbose`*
++
+Displays error, warning, and informational messages on the console.
+
+== Command example
+
+The following example shows details about the repository in the SALESDB database.
+
+----
+smsap repository show -repository -dbname SALESDB  -host server1
+-port 1521 -login -username admin
+Repository Definition:
+User Name: admin
+Host Name: server1
+Database Name: SALESDB
+Database Port: 1521
+Version: 28
+Hosts that have run operations using this repository: 2
+server2
+server3
+Profiles defined in this repository: 2
+GSF5A
+GSF3A
+Incomplete Operations: 0
+----

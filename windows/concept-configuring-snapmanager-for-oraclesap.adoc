@@ -1,0 +1,12 @@
+---
+permalink: windows/concept-configuring-snapmanager-for-oraclesap.html
+sidebar: sidebar
+keywords: install, snapmanager, perform, configuration, task, environment, use, configure
+summary: "After installing SnapManager, you must perform some additional configuration tasks depending on the environment that you are using."
+---
+= Configuring SnapManager
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After installing SnapManager, you must perform some additional configuration tasks depending on the environment that you are using.

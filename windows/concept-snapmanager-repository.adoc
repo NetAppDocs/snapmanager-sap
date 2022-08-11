@@ -1,0 +1,16 @@
+---
+permalink: windows/concept-snapmanager-repository.html
+sidebar: sidebar
+keywords: repository, store, information, snapmanager, operation, time, backup, tablespace, data, data, file, storage, system, clone, snapshot, copies, copy, create
+summary: "The repository stores information related to different SnapManager operations, for example, the time of backups, tablespaces and data files backed up, storage systems used, clones made, and Snapshot copies created."
+---
+= SnapManager repository
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The repository stores information related to different SnapManager operations, for example, the time of backups, tablespaces and data files backed up, storage systems used, clones made, and Snapshot copies created.
+
+The repository database cannot exist in the same database and also cannot be a part of the same database that SnapManager is backing up. This is because the repository stores the names of the database Snapshot copies created during the backup operations. The repository must be created in a different database than the database that is being backed up. This means that you must have at least two databases: the SnapManager repository database and the target database managed by SnapManager. When you run the SnapManager services, both the databases must be up and running.
+
+NOTE: You must not perform any SnapManager operations by using the GUI or CLI when the repository database is down.

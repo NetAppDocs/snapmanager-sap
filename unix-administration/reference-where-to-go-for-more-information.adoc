@@ -1,0 +1,51 @@
+---
+permalink: unix-administration/reference-where-to-go-for-more-information.html
+sidebar: sidebar
+keywords: information, basic, task, install, snapmanager, where, to, go
+summary: "You can find information about the basic tasks involved in installing and using SnapManager."
+---
+= Where to go for more information
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can find information about the basic tasks involved in installing and using SnapManager.
+
+[cols="2a,3a",options="header"]
+|===
+| Document| Description
+a|
+SnapManager description page
+a|
+This page provides information about SnapManager, pointers to online documentation, and a link to the SnapManager download page, from which you can download the software.
+a|
+_Data ONTAP SAN Configuration Guide for 7-Mode_
+a|
+This document is available at http://mysupport.netapp.com/[NetApp Support^].
+
+It is a dynamic, online document that contains the most up-to-date information about the requirements for setting up a system in a SAN environment. It provides the current details about storage systems and host platforms, cabling issues, switch issues, and configurations.
+
+a|
+SnapManager and SnapDrive Compatibility Matrix
+a|
+This document is available in the Interoperability section at http://mysupport.netapp.com/matrix[Interoperability Matrix Tool^].
+
+It is a dynamic, online document that contains the most up-to-date information specific to SnapManager and its platform requirements.
+
+a|
+SnapManager Release Notes
+a|
+This document comes with SnapManager. You can also download a copy from http://mysupport.netapp.com/[NetApp Support^].
+
+It contains any last-minute information that you need to get the configuration up and running smoothly.
+
+a|
+NetApp host attach and support kits documentation
+a|
+http://mysupport.netapp.com/[NetApp Support^].
+
+a|
+Host operating system and database information
+a|
+These documents provide information about your host operating system and database software.
+|===

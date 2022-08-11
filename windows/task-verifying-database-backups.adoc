@@ -1,0 +1,26 @@
+---
+permalink: windows/task-verifying-database-backups.html
+sidebar: sidebar
+keywords: backup, verify, command, block, database, corrupt, operation, invoke, oracle, utility, data, file, backup
+summary: You can use the backup verify command to verify that the blocks in the database backup are not corrupted. The verify operation invokes the Oracle Database Verify utility for each data file in the backup.
+---
+= Verifying database backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use the backup verify command to verify that the blocks in the database backup are not corrupted. The verify operation invokes the Oracle Database Verify utility for each data file in the backup.
+
+SnapManager enables you to perform the verify operation at any time that is convenient for you and the users on your system. You can perform the verification immediately after creating the backup. You must specify the profile containing the backup and either the label or the ID of the backup you created.
+
+NOTE: The backup verify operation fails in a Windows environment if you are using SnapManager 3.0 and Oracle database 11.1.0.7. You must use Oracle database 11.2.0.1 or later.
+
+NOTE: You can specify -dump to collect the dump files after the backup verify operation.
+
+. Enter the following command:
++
+`smsap backup verify -profile profile_name [-label label | -id id] [-force] [ -dump] [-quiet | -verbose]`
+
+*Related information*
+
+xref:reference-the-smosmsapbackup-verify-command.adoc[The smsap backup verify command]

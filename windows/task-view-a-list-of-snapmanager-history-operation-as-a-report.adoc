@@ -1,0 +1,18 @@
+---
+permalink: windows/task-view-a-list-of-snapmanager-history-operation-as-a-report.html
+sidebar: sidebar
+keywords: view, history, snapmanager, operation, report, base, retention, set, list
+summary: "You can view the history of a specific or all SnapManager operations as a report based on the retention settings."
+---
+= View a list of SnapManager operation history
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can view the history of a specific or all SnapManager operations as a report based on the retention settings.
+
+.Step
+
+. To view a list of SnapManager history operations, enter the following command:
++
+`*smsap history list -profile {_-name, profile_name [profile_name1,profile_name2_] | -_all_ -repository -login [-password _repo_password_] -username _repo_username_ -dbname _repo_dbname_ -host _repo_host_ -port _repo_port_} -operation {-operations _operation_name_ [_operation_name1, operation_name2_] | -all} [-delimiter _delimiter_] [-quiet | -verbose]*`

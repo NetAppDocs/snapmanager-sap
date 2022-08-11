@@ -1,0 +1,19 @@
+---
+permalink: unix-administration/concept-snapmanger-limitations-for-clustered-data-ontap.html
+sidebar: sidebar
+keywords: limitation, functionality, functionalities, snapmanager, cluster, data, ontap
+summary: "You must know the limitations for some functionalities and SnapManager operations if you are using clustered Data ONTAP."
+---
+= SnapManager limitations for clustered Data ONTAP
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must know the limitations for some functionalities and SnapManager operations if you are using clustered Data ONTAP.
+
+The following functionalities are not supported if you are using SnapManager on clustered Data ONTAP:
+
+* Data protection capabilities if SnapManager is integrated with OnCommand Unified Manager
+* A database in which one LUN belongs to a system running Data ONTAP operating in 7-Mode and the other LUN belongs to a system running clustered Data ONTAP
+* SnapManager for SAP does not support migration of a Vserver, which is not supported by clustered Data ONTAP
+* SnapManager for SAP does not support the clustered Data ONTAP 8.2.1 functionality to specify different export policies for volumes and qtrees

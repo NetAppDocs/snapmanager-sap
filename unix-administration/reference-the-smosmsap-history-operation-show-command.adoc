@@ -1,0 +1,46 @@
+---
+permalink: unix-administration/reference-the-smosmsap-history-operation-show-command.html
+sidebar: sidebar
+keywords: command, enable, history, snapmanager, operation, associated, profile, smsap, operation-show
+summary: "This command enables you to view the history of a specific SnapManager operation associated with a profile."
+---
+= The smsap history operation-show command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command enables you to view the history of a specific SnapManager operation associated with a profile.
+
+== Syntax
+
+[subs=+macros]
+----
+pass:quotes[smsap history operation-show
+-profile _profile_ {-label _label_ | -id _id_} [-quiet | -verbose\]]
+----
+
+== Parameters
+
+* `*-profile _profile_*`
++
+Specifies the name of the profile. This name can be up to 30 characters long and must be unique within the host.
+
+* `*-label _label_ | -id _id_*`
++
+Specifies the SnapManager operation ID or label for which you want to view the history.
+
+* `*-quiet*`
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* `*-verbose*`
++
+Displays error, warning, and informational messages on the console.
+
+---
+== Example command
+
+----
+ smsap history operation-show -profile PROFILE1 -label backup1 -verbose
+----
+---

@@ -1,0 +1,87 @@
+---
+permalink: unix-administration/task-create-a-task-specification-file.html
+sidebar: sidebar
+keywords: create, task, specification, file, graphical, user, interface, gui, command-line, interface, cli, text, editor, preprocessing, post-processing, activity, backup, resotre, clone, operation, creating
+summary: "You can create the task specification files by using graphical user interface (GUI), command-line interface (CLI), or a text editor. These files are used for performing preprocessing or post-processing activity of the backup, restore, or clone operations."
+---
+= Create a task specification file
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can create the task specification files by using graphical user interface (GUI), command-line interface (CLI), or a text editor. These files are used for performing preprocessing or post-processing activity of the backup, restore, or clone operations.
+
+.Steps
+
+. Create a task specification file by using GUI, CLI, or a text editor.
++
+*Example*
++
+You can create the specification file based on the structure of the following sample task specification file:
++
+----
+
+<task-specification>
+  <pre-tasks>
+				<task>
+      <name>name</name>
+      <parameter>
+          <name>name</name>
+          <value>value</value>
+       </parameter>
+    </task>
+  </pre-tasks>
+  <post-tasks>
+    <task>
+      <name>name</name>
+      <parameter>
+          <name>name</name>
+          <value>value</value>
+       </parameter>
+    </task>
+  </post-tasks>
+</task-specification>
+----
+
+. Enter the script name.
+. Enter the parameter name and the value assigned to the parameter.
+. Save the XML file in the correct installation directory.
+
+---
+== Task specification example
+
+----
+
+  <task-specification>
+    <pre-tasks>
+      <task>
+        <name>clone cleanup</name>
+        <description>pre tasks for cleaning up the target system</description>
+        </task>
+    </pre-tasks>
+    <post-tasks>
+      <task>
+        <name>SystemCopy follow-up activities</name>
+        <description>SystemCopy follow-up activities</description>
+        <parameter>
+          <name>SCHEMAOWNER</name>
+          <value>SAMSR3</value>
+        </parameter>
+      </task>
+      <task>
+        <name>Oracle Users for OS based DB authentication</name>
+        <description>Oracle Users for OS based DB authentication</description>
+        <parameter>
+          <name>SCHEMAOWNER</name>
+          <value>SAMSR3</value>
+        </parameter>
+        <parameter>
+          <name>ORADBUSR_FILE</name>
+          <value\>/mnt/sam/oradbusr.sql</value\>
+
+        </parameter>
+      </task>
+      </post-tasks>
+  </task-specification>
+----
+---

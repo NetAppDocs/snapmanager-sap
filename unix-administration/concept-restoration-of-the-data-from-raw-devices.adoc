@@ -1,0 +1,14 @@
+---
+permalink: unix-administration/concept-restoration-of-the-data-from-raw-devices.html
+sidebar: sidebar
+keywords: restore, alternate, location, connect, necessary, raw, device, exist, local, host, restoration
+summary: "Before you restore from an alternate location, you need to connect to the necessary raw devices that exist on the local host."
+---
+= Restoration of the data from raw devices
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before you restore from an alternate location, you need to connect to the necessary raw devices that exist on the local host.
+
+You can invoke the restore from an alternate location operation to copy the blocks of data from alternate raw devices to active raw devices. To perform this operation, you need to specify the alternate raw device from which to restore the original raw device by creating a restore specification.

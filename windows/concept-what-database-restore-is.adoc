@@ -1,0 +1,52 @@
+---
+permalink: windows/concept-what-database-restore-is.html
+sidebar: sidebar
+keywords: snapmanager, enable, perform, file-based, backup, restore, operation, database
+summary: "SnapManager enables you to perform file-based backup and restore operations."
+---
+= What database restore is
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager enables you to perform file-based backup and restore operations.
+
+The following table describes the restore methods:
+
+[options="header"]
+|===
+| Restore process| Details
+a|
+File-based restores
+a|
+Storage-side full file system restore (from primary or secondary): SnapManager performs a full logical unit number (LUN) restore.
+a|
+Host-side file copy restore (from primary or secondary): SnapManager clones the local backup using either a LUN or a FlexClone. The clone is mounted and then SnapManager copies the host files from the clone into the active file system.
+|===
+
+== Storage-side full file system restore
+
+A storage-side full file system restore is performed when a volume restore cannot be performed, but the entire files system can be restored on the storage system.
+
+When a storage-side file system restore is performed, the following occurs:
+
+* In a SAN environment, all the LUNs used by the file system (and underlying volume group if any) are restored on the storage system.
+
+When a storage-side file system restore is performed, the following occurs, depending on the storage location:
+
+* When SnapManager restores from primary storage systems, the LUNs (SAN) are restored in place via SFSR.
+* When SnapManager restores from secondary storage systems, the LUNs (SAN) are copied from secondary storage systems back to the primary storage system over the network.
+
+Because the file system is fully restored, files that are not part of the backup are reverted as well. An override is required if files, which are not part of the restore, exist in the file system that is being restored.
+
+== Host-side file restore
+
+A host-side file copy restore is used as a last resort in SAN environments when storage-side file system restore and storage-side file restore cannot be performed.
+
+A host-side file copy restore involves the following tasks:
+
+* Cloning the storage
+* Connecting the cloned storage to the host
+* Copying files out of the clone file systems back into the active file systems
+* Disconnecting the clone storage from the host
+* Deleting the clone storage

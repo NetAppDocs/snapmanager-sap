@@ -1,0 +1,47 @@
+---
+permalink: windows/concept-error-handling-in-custom-scripts.html
+sidebar: sidebar
+keywords: snapmanager, custom, script, return, code, clone, process, influence, standard, output, execution, error, handle
+summary: "SnapManager processes the custom script based on the specific return codes. For example, if your custom script returns a value of 0, 1, 2, or 3, SnapManager continues with the clone process. The return code also influences how SnapManager processes and returns the standard output of your script execution."
+---
+= Error handling in custom scripts
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapManager processes the custom script based on the specific return codes. For example, if your custom script returns a value of 0, 1, 2, or 3, SnapManager continues with the clone process. The return code also influences how SnapManager processes and returns the standard output of your script execution.
+
+[options="header"]
+|===
+| Return code| Description| Continue processing the operation
+a|
+0
+a|
+The script completed successfully.
+a|
+Yes
+a|
+1
+a|
+The script completed successfully, with informational messages.
+a|
+Yes
+a|
+2
+a|
+The script completed, but includes warnings
+a|
+Yes
+a|
+3
+a|
+The script fails, but the operation continues.
+a|
+Yes
+a|
+4 or >4
+a|
+The script fails and the operation stops.
+a|
+No
+|===

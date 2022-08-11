@@ -1,0 +1,49 @@
+---
+permalink: windows/task-configure-e-mail-notification-for-a-new-profile.html
+sidebar: sidebar
+keywords: create, profile, configure, receive, email, notification, completion, database, operation, profile
+summary: "When you are creating a new profile, you can configure to receive an email notification on completion of the database operation."
+---
+= Configure email notification for a new profile
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you are creating a new profile, you can configure to receive an email notification on completion of the database operation.
+
+== What you'll need
+
+* You must configure the email address from which the alerts are sent.
+* You must use a comma-separated list for multiple email addresses.
++
+You must ensure that there is no space between the comma and the next email address.
++
+NOTE: You must ensure you enter the set of email addresses within double quotation marks.
+
+.Step
+
+. Enter the following command:
++
+`*smsap profile create -profile _profile_ [-profile-password _profile_password_] -repository -dbname _repo_service_name_ -host _repo_host_ -port _repo_port_ -login -username _repo_username_ -database -dbname _db_dbname_ -host _db_host_ [-sid _db_sid_] [-login -username _db_username_ -password _db_password_ -port _db_port_] [-rman {-controlfile | {-login -username _rman_username_ -password _rman_password_ -tnsname _rman_tnsname_} } ] [-retain [-hourly [-count _n_] [-duration _m_]] [-daily [-count _n_] [-duration _m_]] [-weekly [-count _n_] [-duration _m_]] [-monthly [-count _n_] [-duration _m_]]] [-comment _comment_][-snapname-pattern _pattern_][-protect [ ]][-notification [-success-email _email_address1_,_email_address2_ -subject _subject_pattern_] [-failure -email _email_address1_,_email_address2_ -subject _subject_pattern_]]*`
++
+Other options for this command are as follows:
++
+[`-force`]
++
+[`quiet` | `-verbose`]
++
+NOTE: SnapManager supports up to 1000 characters for email addresses.
++
+When you create a backup of data files and archive log files together using the profile (for creating separate archive log backups), and the data file backup creation fails, the email notification is sent with the data backup as the operation name instead of data backup and archive logs backup. When the data file and archive log file backup operation is successful, you see the output as follows:
++
+----
+
+Profile Name    : PROF_31
+Operation Name 	: Data Backup and Archive Logs Backup
+Database SID   	: TENDB1
+Database Host 	 : repo1.rtp.org.com
+Start Date 	    : Fri Sep 23 13:37:21 EDT 2011
+End Date 	      : Fri Sep 23 13:45:24 EDT 2011
+Status 	        : SUCCESS
+Error messages 	:
+----

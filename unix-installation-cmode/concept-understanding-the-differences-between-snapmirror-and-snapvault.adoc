@@ -1,0 +1,24 @@
+---
+permalink: unix-installation-cmode/concept-understanding-the-differences-between-snapmirror-and-snapvault.html
+sidebar: sidebar
+keywords: snapmirror, disaster, recovery, technology, design, failover, primary, storage, secondary, geographical, remote, site, snapvault, disk-to-disk, replication, design, standard, compliance, governance-related, purpose, snapvault,
+summary: "SnapMirror is disaster recovery technology, designed for failover from primary storage to secondary storage at a geographically remote site. SnapVault is disk-to-disk backup replication technology, designed for standards compliance and other governance-related purposes."
+---
+= Understanding the differences between SnapMirror and SnapVault
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapMirror is disaster recovery technology, designed for failover from primary storage to secondary storage at a geographically remote site. SnapVault is disk-to-disk backup replication technology, designed for standards compliance and other governance-related purposes.
+
+These objectives account for the different balance each technology strikes between the goals of backup currency and backup retention:
+
+* SnapMirror stores _only_ the Snapshot copies that reside in primary storage, because, in the event of a disaster, you need to be able to fail over to the most recent version of primary data you know to be good.
++
+Your organization, for example, might mirror hourly copies of production data over a ten-day span. As the failover use case implies, the equipment on the secondary system must be equivalent or nearly equivalent to the equipment on the primary system to serve data efficiently from mirrored storage.
+
+* SnapVault, in contrast, stores Snapshot copies _whether or not_ they currently reside in primary storage, because, in the event of an audit, access to historical data is likely to be as important as access to current data.
++
+You might want to keep monthly Snapshot copies of your data over a 20-year span, for example, to comply with government accounting regulations for your business. Because there is no requirement to serve data from secondary storage, you can use slower, less expensive disks on the vault system.
+
+The different weights that SnapMirror and SnapVault give to backup currency and backup retention ultimately derive from the limit of 255 Snapshot copies for each volume. While SnapMirror retains the most recent copies, SnapVault retains the copies made over the longest period of time.

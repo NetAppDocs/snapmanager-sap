@@ -1,0 +1,12 @@
+---
+permalink: unix-installation-cmode/task-set-up-snapmanager.html
+sidebar: sidebar
+keywords: start, snapmanager, access, user, interface, ui, command-line, cli, repository, operation, set up
+summary: "You can start SnapManager and access it by using either the user interface (UI) or the command-line interface (CLI). After accessing SnapManager, you must create the SnapManager repository before performing any SnapManager operations."
+---
+= Set up SnapManager
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can start SnapManager and access it by using either the user interface (UI) or the command-line interface (CLI). After accessing SnapManager, you must create the SnapManager repository before performing any SnapManager operations.

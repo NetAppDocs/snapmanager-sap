@@ -1,0 +1,50 @@
+---
+permalink: unix-administration/task-create-task-scripts.html
+sidebar: sidebar
+keywords: create, pretask, post-task, policy, task, script, backup, restore, clone,  operation, predefined, environment, variable, parameter, snapmanager, sample, creating
+summary: "You can create the pretask, post-task, and policy task scripts for backup, restore, and clone operations, write your script, and include the predefined environment variables in your parameters. You can either create a new script or modify one of the SnapManager sample scripts."
+---
+= Create task scripts
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can create the pretask, post-task, and policy task scripts for backup, restore, and clone operations, write your script, and include the predefined environment variables in your parameters. You can either create a new script or modify one of the SnapManager sample scripts.
+
+*What you'll need*
+
+Before you start creating the script, ensure that:
+
+* You must structure the script in a particular manner for it to be run in the context of a SnapManager operation.
+* You must create the script based on the expected operations, available input parameters, and return code conventions.
+* You must include log messages and redirect the messages to user-defined log files.
+
+. Create the task script by customizing the sample script.
++
+Perform the following:
+
+ .. Locate a sample script in the following installation directory:
++
+`<default_install_directory>/plugins/examples/backup/create`
++
+`<default_install_directory>/plugins/examples/clone/create`
+
+ .. Open the script in your script editor.
+ .. Save the script with a different name.
+
+. Modify the functions, variables, and parameters as needed.
+. Save the script in one of the following directories:
++
+*Backup operations scripts*
+
+ ** <default_install_directory>/plugins/backup/create/pre: Executes the script before the backup operation occurs. Use it optionally when you specify the backup creation.
+ ** <default_install_directory>/plugins/backup/create/post: Executes the script after the backup operation occurs. Use it optionally when you specify the backup creation.
+ ** <default_install_directory>/plugins/backup/create/policy: Always executes the script before the backup operation occurs. SnapManager always uses this script for all the backups in the repository.
+*Restore operation scripts*
+ ** <default_install_directory>/plugins/restore/create/pre: Executes the script before the backup operation occurs. Use it optionally when you specify the backup creation.
+ ** <default_install_directory>/plugins/restore/create/post: Executes the script after the backup operation occurs. Use it optionally when you specify the backup creation.
+ ** <default_install_directory>/plugins/restore/create/policy: Always executes the script before the backup operation occurs. SnapManager always uses this script for all the backups in the repository.
+*Clone operation scripts*
+ ** <default_install_directory>/plugins/clone/create/pre: Executes the script before the backup operation occurs. Use it optionally when you specify the backup creation.
+ ** <default_install_directory>/plugins/clone/create/post: Executes the script after the backup operation occurs. Use it optionally when you specify the backup creation.
+ ** <default_install_directory>/plugins/clone/create/policy: Always executes the script before the backup operation occurs. SnapManager always uses this script for all the backups in the repository.

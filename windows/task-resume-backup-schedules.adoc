@@ -1,0 +1,22 @@
+---
+permalink: windows/task-resume-backup-schedules.html
+sidebar: sidebar
+keywords: administrator, option, resume, suspend, backup, schedule
+summary: "Administrators have the option to resume the suspended backup schedule."
+---
+= Resume backup schedules
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Administrators have the option to resume the suspended backup schedule.
+
+== About this task
+
+If you try to resume the active schedules, you might encounter the error message: `"Cannot resume: schedule <schedulename> already in resume state"`.
+
+.Step
+
+. To resume the suspended backup schedule, enter this command:
++
+`*smsap schedule resume -profile _profile_name_ -schedule-name _schedulename_ [-quiet | -verbose]*`

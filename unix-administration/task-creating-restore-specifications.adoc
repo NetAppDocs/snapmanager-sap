@@ -1,0 +1,94 @@
+---
+permalink: unix-administration/task-create-restore-specifications.html
+sidebar: sidebar
+keywords: restore, specification, file, xml, original, alternate, location, file, restore, snapmanager, specification, location, creating, create
+summary: "The restore specification file is an XML file that contains the original and alternate locations from which the file can be restored. SnapManager uses this specification file to restore files from the specified location."
+---
+= Create restore specifications
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The restore specification file is an XML file that contains the original and alternate locations from which the file can be restored. SnapManager uses this specification file to restore files from the specified location.
+
+*About this task*
+
+You can create the restore specification file by using any text editor. You must use a .xml extension for the file.
+
+.Steps
+
+. Open a text file.
+. Enter the following:
++
+`*<restore-specification xmlns="http://www.netapp.com">*`
+. Enter any file mapping information using the format shown in the following example:
++
+----
+<file-mapping>
+    <original-location>/path/dbfilename.dbf</original-location>
+    <alternate-location>/path/dbfilename1.dbf</alternate-location>
+</file-mapping>
+----
++
+File mapping specifies where a file is restored from. The original location is the location of the file on the active file system at the time of backup. The alternate location is the location from where the file is restored.
+
+. Enter any mounted file system mapping information using the format shown in the example:
++
+----
+<mountpoint-mapping>
+     <original-location>/path/db_name</original-location>
+     <snapname>snapname</snapname>
+     <alternate-location>/path/vaultlocation</alternate-location>
+</mountpoint-mapping>
+<mountpoint-mapping>
+     <original-location>+DiskGroup_1</original-location>
+     <snapname>snapname</snapname>
+     <alternate-location>+DiskGroup_2</alternate-location>
+</mountpoint-mapping>
+----
++
+Mountpoint refers to directory path `/mnt/myfs/`). The mountpoint mapping specifies the mountpoint from which the files are restored. The original location is the location of the mountpoint in the active file system at the time of backup. The alternate location is the mountpoint from which the files in the original location are restored. The `_snapname_` is the name of the Snapshot copy in which the original files were backed up.
++
+NOTE: The Snapshot copy name is a necessary component because the same file system can be used multiple times in a single backup operation (for example, once for the data files and once for the logs).
+
+. Enter raw device mapping tags and locations using the format shown in the example:
++
+----
+<raw-device-mapping>
+     <original-location>/path/raw_device_name</original-location>
+     <alternate-location>/path/raw_device_name</alternate-location>
+</raw-device-mapping>
+----
++
+Raw device mapping specifies the location from which a raw device is restored.
+
+. Enter the following:
++
+`*</restore-specification>*`
+. Save the file as a .xml file and close the specification.
+
+== Restore specification example
+
+The following example shows the restore specification structure:
+
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<restore-specification xmlns="http://www.netapp.com">
+<!-- "Restore from file(s)" -->
+     <file-mapping>
+          <original-location>/mnt/pathname/dbname/users01.dbf</original-location>
+          <alternate-location>/mnt/vault/users01.dbf</alternate-location>
+     </file-mapping>
+<!-- "Restore from host mounted file system(s)" -->
+     <mountpoint-mapping>
+          <original-location>/mnt/pathname/dbname/fs</original-location>
+          <snapname>Snapshotname</snapname>
+          <alternate-location>/mnt/vaultlocation</alternate-location>
+     </mountpoint-mapping>
+<!-- "Restore from raw device" -->
+     <raw-device-mapping>
+          <original-location>/pathname/devicename</original-location>
+          <alternate-location>/pathname/devicename</alternate-location>
+     </raw-device-mapping>
+</restore-specification>
+----

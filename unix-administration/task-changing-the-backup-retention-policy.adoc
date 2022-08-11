@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/task-change-the-backup-retention-policy.html
+sidebar: sidebar
+keywords: change, properties, backup, eligible, ineligible, deletion, retention, policy, changing
+summary: "You can change properties of a backup so it is eligible or ineligible for deletion according to the retention policy."
+---
+= Change the backup retention policy
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can change properties of a backup so it is eligible or ineligible for deletion according to the retention policy.
+
+*About this task*
+
+When you create a backup, you can set its retention policy. You can later choose to either keep that backup for a longer period than the retention policy allows or specify that you no longer need the backup and want the retention policy to manage it.

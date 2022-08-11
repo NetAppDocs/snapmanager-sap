@@ -1,0 +1,78 @@
+---
+permalink: unix-administration/task-preview-backup-restore-information.html
+sidebar: sidebar
+keywords: preview, information, backup, restore, process, snapmanager, sap, successful
+summary: "You can preview information about a backup restore process before it occurs to see information about restore eligibility that SnapManager for SAP found on your backup. SnapManager analyzes data on your backup to determine whether the restore process can be completed successfully."
+---
+= Preview backup restore information
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can preview information about a backup restore process before it occurs to see information about restore eligibility that SnapManager for SAP found on your backup. SnapManager analyzes data on your backup to determine whether the restore process can be completed successfully.
+
+*About this task*
+
+The restore preview provides the following information:
+
+* Which restore mechanism (fast restore,storage-side file system restore, storage-side file restore, or host-side file copy restore) can be used to restore each file.
+* Why more efficient mechanisms were not used to restore each file, when you specify the `-verbose` option.
+
+If you specify the `-preview` option in the `backup restore` command, SnapManager does not restore anything, but lists the files to be restored and indicates how they will be restored.
+
+NOTE: You can preview all types of restore mechanisms. The preview shows information about up to 20 files.
+
+.Steps
+
+. Enter the following command:
++
+`*smsap backup restore -profile _profile_name_ -label _label_ -complete -preview -verbose*`
++
+*Example*
++
+For example, enter:
++
+----
+smsap backup restore -profile targetdb1_prof1
+      -label full_bkup_sales_nov_08  -complete -preview -verbose
+----
++
+The following example shows some files being restored by using the host-side file copy restore process and also explains why some files cannot be restored by using the fast restore option. If you specify the `-verbose` option, SnapManager displays a preview section and an analysis section that explains why each file cannot be restored via the fast restore process.
++
+----
+PREVIEW:
+The following files will be restored via host side file copy restore:
++DG2/sid/datafile10.dbf
++DG2/sid/datafile11.dbf
+
+ANALYSIS:
+The following reasons prevent certain files from being restored via fast restore:
+Reasons:
+ Newer snapshots of /vol/volume2 have volume clones: SNAP_1
+*Newer backups will be freed: nightly2, nightly3
+Files to Restore:
+/mnt/systemB/volume2/system.dbf
+/mnt/systemB/volume2/users.dbf
+/mnt/systemB/volume2/sysaux.dbf
+/mnt/systemB/volume2/datafile04.dbf
+/mnt/systemB/volume2/datafile05.dbf
+
+The following reasons prevent certain files from being restored via fast restore:
+Reasons:
+* Newer snapshots of /vol/adm_disks will be lost: ADM_SNAP_5
+* Luns present which were created after snapshot SNAP_0 was created: /vol/adm_disks/disk5.lun
+* Files not part of the restore scope will be reverted in file system: +DG2
+
+Files Not in Restore Scope: +DG2/someothersid/data01.dbf
++DG2/someothersid/data02.dbf
+Files to Restore:
++DG2/sid/datafile08.dbf +DG2/sid/datafile09.dbf
++DG2/sid/datafile10.dbf +DG2/sid/datafile11.dbf
+
+* Reasons denoted with an asterisk (*) are overridable.
+----
+
+. Review any reasons why other restore processes cannot be used.
+. Begin the restore operation without the `-preview` option, if only reasons that are overridable are displayed.
++
+You can still override non-mandatory checks.

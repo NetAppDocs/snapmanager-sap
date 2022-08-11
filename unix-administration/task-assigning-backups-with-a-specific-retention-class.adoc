@@ -1,0 +1,18 @@
+---
+permalink: unix-administration/task-assign-backups-with-a-specific-retention-class.html
+sidebar: sidebar
+keywords: dba, assign, specific, retention, class, hourly, daily, weekly, monthly, backup, eligible, deletion
+summary: "DBAs can assign a specific retention class of hourly, daily, weekly, or monthly to backups. Assigning a specific retention class makes the backups performed under this change eligible for deletion."
+---
+= Assign backups with a specific retention class
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+DBAs can assign a specific retention class of hourly, daily, weekly, or monthly to backups. Assigning a specific retention class makes the backups performed under this change eligible for deletion.
+
+.Step
+
+. To assign a specific backup retention class, enter this command:
++
+`*smsap backup update -profile _profile_name_ {-label _label_ [data | -archivelogs] | -id _id_} -retain [-hourly | -daily | -weekly | -monthly ]*`

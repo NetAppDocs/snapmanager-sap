@@ -1,0 +1,126 @@
+---
+permalink: unix-installation-7mode/task-smsap-isg-create-a-profile-for-your-database.html
+sidebar: sidebar
+keywords: create, profile, database, information, reference, multiple, creating
+summary: "You must create a profile for your database to perform any operation on that database. The profile contains information about the database and can reference only one database; however, a database can be referenced by multiple profiles. A backup that is created using one profile cannot be accessed from a different profile, even if both profiles are associated with the same database."
+---
+= Create a profile for your database
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must create a profile for your database to perform any operation on that database. The profile contains information about the database and can reference only one database; however, a database can be referenced by multiple profiles. A backup that is created using one profile cannot be accessed from a different profile, even if both profiles are associated with the same database.
+
+*What you'll need*
+
+You must ensure that target database details are included in the `/etc/oratab` file.
+
+*About this task*
+
+These steps show how to create a profile for your database using the SnapManager UI. You can also use the CLI if you prefer.
+
+For information about how to create profiles using the CLI, see the _SnapManager for SAP Administration guide for UNIX_.
+
+.Steps
+
+. From the Repositories tree, right-click the repository or the host and select *Create Profile*.
+. On the *Profile Configuration Information* page, enter the custom name and password for the profile.
+. On the *Database Configuration Information* page, enter the following information:
++
+[options="header"]
+|===
+| In this field...| Do this...
+a|
+*Database Name*
+a|
+Enter the name of the database you want to backup.
+a|
+*Database SID*
+a|
+Enter the secure ID (SID) of the database.    The database name and the database SID can be the same.
+a|
+*Host*
+a|
+Enter the IP address of the host where the target database resides.    You can also specify the host name if the host name is specified in the Domain Name System (DNS).
+a|
+*Host Account*
+a|
+Enter the Oracle user name of the target database.    The default value for the user is oracle.
+a|
+*Host Group*
+a|
+Enter the Oracle user group name.    The default value is dba.
+|===
+
+. On the Database Connection Information page, select one of the following:
++
+[cols="1a,3a",options="header"]
+|===
+| Choose this...| If you want to...
+a|
+*Use O/S Authentication*
+a|
+Use the credentials maintained by the operating system to authenticate users who access the database.
+a|
+*Use Database Authentication*
+a|
+Allow Oracle to authenticate an administrative user using password file authentication. Enter the appropriate database connection information.
+
+ ** In the *SYSDBA Privileged User Name* field, enter the name of the database administrator with administrative privileges.
+ ** In the *Password* field, enter the password of the database administrator.
+ ** In the *Port* field, enter the port number used to connect to the host where the database resides.
++
+The default value is 1527.
+
+a|
+*Use ASM Instance Authentication*
+a|
+Allow Automatic Storage Management (ASM) database instance to authenticate an administrative user. Enter the appropriate ASM instance authentication information.
+
+ ** In the *SYSDBA/SYSASM Privileged User Name* field, enter the user name of the ASM instance administrator with administrative privileges.
+ ** In the *Password* field, enter password of the administrator.
++
+|===
+
+NOTE: You can select the ASM authentication mode only if you have an ASM instance on the database host.
+
+[start=5]
+. On the RMAN Configuration Information page, select one of the following:
++
+[options="header"]
+|===
+| Choose this...| If...
+a|
+***Do not use RMAN***
+a|
+You are not using RMAN to manage backup and restore operations.
+a|
+***Use RMAN via the control file***
+a|
+You are managing the RMAN repository using control files.
+a|
+***Use RMAN via Recovery Catalog***
+a|
+You are managing the RMAN repository using recovery catalog database.     Enter the user name who has access to recovery catalog database, password, and the Oracle net service name of the database that manages the Transparent Network Substrate (TNS) connection.
+|===
+
+. On the *Snapshot Naming Information* page, select the variables to specify a naming format for the Snapshot copy.
++
+You must include the `_smid_` variable in the naming format. The `_smid_` variable creates a unique Snapshot identifier.
+
+. On the *Policy Settings* page, perform the following:
+ .. Enter the retention count and duration for each retention class.
+ .. From the *Protection Policy* drop-down list, select the Protection Manager policy.
+ .. If you want to back up archive logs separately, select the *Backup Archivelogs Separately* checkbox, specify the retention, and select the protection policy.
++
+You can select a policy which is different from the policy associated for datafiles. For example, if you have selected one of the Protection Manager policy for datafiles, you can select a different Protection Manager policy for archive logs.
+. On the *Configure Notification Settings* page, specify the email notification settings.
+. On the *History Configuration Information* page, select one of the options to maintain the history of SnapManager operations.
+. On the *Perform Profile Create Operation* page, verify the information and click *Create*.
+. Click *Finish* to close the wizard.
++
+If the operation fails, click *Operation Details* to view what caused the operation to fail.
+
+*Related information*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12481453[SnapManager 3.4.1 for SAP Administration Guide for UNIX^]

@@ -1,0 +1,20 @@
+---
+permalink: windows/task-stopping-the-snapmanager-host-server.html
+sidebar: sidebar
+keywords: finish, snapmanager, stop, server, host
+summary: When you have finished using SnapManager, you might want to stop the server.
+---
+= Stopping the SnapManager host server
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you have finished using SnapManager, you might want to stop the server.
+
+. To stop the server, enter the following command, as a root user:
++
+`smsap_server stop`
+
+*Related information*
+
+xref:reference-the-smosmsap-server-stop-command.adoc[The smsap_server stop command]

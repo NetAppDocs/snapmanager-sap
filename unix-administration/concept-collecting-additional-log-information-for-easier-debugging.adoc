@@ -1,0 +1,36 @@
+---
+permalink: unix-administration/concept-collecting-additional-log-information-for-easier-debugging.html
+sidebar: sidebar
+keywords: log, debug, snapmanager, fail, operation, external, environment, variable, server
+summary: "If you need additional logs to debug a failed SnapManager operation, you must set an external environment variable server.log.level. This variable overrides the default log level and dumps all the log messages in the log file. For example, you can change the log level to DEBUG, which logs additional messages and can assist in debugging issues."
+---
+= Collecting additional log information for easier debugging
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you need additional logs to debug a failed SnapManager operation, you must set an external environment variable server.log.level. This variable overrides the default log level and dumps all the log messages in the log file. For example, you can change the log level to DEBUG, which logs additional messages and can assist in debugging issues.
+
+The SnapManager logs can be found at the following locations:
+
+* `/var/log/smsap`
+
+To override the default log level, you must perform the following steps:
+
+. Create a `platform.override` text file in the SnapManager installation directory.
+. Add the `server.log.level` parameter in the `platform.override` text file.
+. Assign a value (_TRACE, DEBUG, INFO, WARN, ERROR, FATAL, or PROGRESS_) to the `server.log.level` parameter.
++
+For example, to change the log level to _ERROR_, set the value of `server.log.level` to _ERROR_.
++
+`*server.log.level=ERROR*`
+
+. Restart the SnapManager server.
+
+NOTE: If the additional log information is not required, you can delete the `server.log.level` parameter from the `platform.override` text file.
+
+SnapManager manages the volume of server log files based on the user-defined values of the following parameters in the `smsap.config` file:
+
+* `log.max_log_files`
+* `log.max_log_file_size`
+* `log.max_rolling_operation_factory_logs`

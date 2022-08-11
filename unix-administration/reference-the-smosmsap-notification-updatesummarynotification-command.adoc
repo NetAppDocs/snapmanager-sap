@@ -1,0 +1,100 @@
+---
+permalink: unix-administration/reference-the-smosmsap-notification-updatesummarynotification-command.html
+sidebar: sidebar
+keywords: run, notification, update-summary-notification, command, enable, summary, repository, database, smsap
+summary: "You can run the notification update-summary-notification command to enable summary notification for a repository database."
+---
+= The smsap notification update-summary-notification command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can run the notification update-summary-notification command to enable summary notification for a repository database.
+
+== Syntax
+
+[subs=+macros]
+----
+pass:quotes[smsap notification update-summary-notification
+-repository
+-port _repo_port_
+-dbname  _repo_service_name_
+-host _repo_host_
+-login -username _repo_username_
+-email _email-address1,email-address2_
+-subject _subject-pattern_
+-frequency
+[-daily –time _daily_time_ |
+-hourly –time _hourly_time_ |
+-monthly –time _monthly_time_ -date [_1_|_2_|_3_|...|_31_\] |
+-weekly  –time _weekly_time_ -day [_1_|_2_|_3_|_4_|_5_|_6_|_7_\]\]
+-profiles _profile1,profile2_ -notification-host _notification-host_
+[-quiet | -verbose]]
+
+----
+
+== Parameters
+
+* `*-repository*`
++
+Specifies the details of the repository database.
+
+* `*-port _repo_port_*`
++
+Specifies the TCP port number used to access the repository database.
+
+* `*-dbname _repo_service_name_*`
++
+Specifies the name of the repository database. You can use either the global name or the system identifier.
+
+* `*-host _repo_host_*`
++
+Specifies the name or IP address of the host on which the repository database resides.
+
+* `*-login*`
++
+Specifies the repository login details. This is optional. If not specified, SnapManager defaults to OS Authentication Connection Mode.
+
+* `*-username _repo_username_*`
++
+Specifies the user name required to access the repository database.
+
+* `*-email _email-address1,e-mail-address2_*`
++
+Specifies email addresses of the recipients.
+
+* `*-subject _subject-pattern_*`
++
+Specifies the email subject pattern.
+
+* `*-frequency { -daily --time _daily_time_  | -hourly --time _hourly_time_  | -monthly --time _monthly_time_ -date  {_1_|_2_|_3_...|_31_ } | -weekly --time _weekly_time_ -day {_1_|_2_|_3_|_4_|_5_|_6_|_7_ } }*`
++
+Specifies schedule type and schedule time when you want the email notification.
+
+* `*-profiles _profile1, profile2_*`
++
+Specifies profile names that require email notification.
+
+* `*-notification-host _notification-host_*`
++
+Specifies SnapManager server host from which the summary notification email is sent to the recipients. You can provide host name, or IP address for the notification host. You can also update the host IP or host name.
+
+* `*-quiet*`
++
+Displays only error messages in the console. The default is to display error and warning messages.
+
+* `*-verbose*`
++
+Displays error, warning, and informational messages in the console.
+
+---
+
+== Example
+
+The following example enables summary notification for a repository database:
+
+----
+
+smsap notification update-summary-notification –repository –port 1521 –dbname repo2 –host 10.72.197.133 –login –username oba5 –email admin@org.com –subject success –frequency -daily -time 19:30:45 –profiles sales1
+----
+---

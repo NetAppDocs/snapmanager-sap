@@ -1,0 +1,30 @@
+---
+permalink: windows/task-freeing-backups.html
+sidebar: sidebar
+keywords: free, backup, delete, snapshot, copies, copy, deleting, metadata, function, space, smsap
+summary: You can free backups, which deletes the Snapshot copies without deleting the backup metadata. This function frees the space occupied by the backup. You can use the smsap backup free command to free the backups.
+---
+= Freeing backups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can free backups, which deletes the Snapshot copies without deleting the backup metadata. This function frees the space occupied by the backup. You can use the smsap backup free command to free the backups.
+
+For a backup to be eligible for freeing, you must ensure the following:
+
+* Backup was successful
+* Backup is not to be mounted
+* Backup does not have clones
+* Backup is not to be retained by using an unlimited retention policy
+* Backup is not already freed
+
+You can specify the -dump option as an optional parameter to collect the dump files after the successful or failed backup free operation.
+
+. Enter the following command:
++
+`smsap backup free -profile profile_name {-label label [data | -archivelogs] | -id id | -all} -force[-dump] [-quiet] [-force]`
+
+*Related information*
+
+xref:reference-the-smosmsapbackup-free-command.adoc[The smsap backup free command]

@@ -1,0 +1,147 @@
+---
+permalink: windows/reference-troubleshooting-known-issues.html
+sidebar: sidebar
+keywords: aware, issue, snapmanager, troubleshoot
+summary: "You should be aware of some known issues that might occur when you use SnapManager, and how to work around them."
+---
+= Troubleshooting known issues
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You should be aware of some known issues that might occur when you use SnapManager, and how to work around them.
+
+== SnapManager for SAP fails to identify the profile as a Cluster-Mode profile
+
+If the Cluster-Mode profile name is not present in the `cmode_profiles.config` file in the SnapManager for SAP installation directory, the following error message might trigger:
+
+`Please configure DFM server using snapdrive config set -dfm user_name appliance_name`.
+
+Also, while upgrading the SnapManager for SAP, if you delete the `/opt/NetApp/smsap/`* folder, then the `cmode_profiles.config` file that has the Cluster-Mode profile names also get deleted. This issue also triggers the same error message.
+
+*Workaround*
+
+Update the profile: `smsap profile update-profile <profile_name\>`
+
+NOTE: If SnapManager for SAP is installed in the `/opt/NetApp/smsap/` path, then the file location will be `/opt/NetApp/smsap/cmode_profile/cmode_profiles.config`.
+
+== The server fails to start
+
+When starting the server, you might see an error message similar to the following:
+
+`SMSAP-01104: Error invoking command: SMSAP-17107: SnapManager Server failed to start on port 8074 because of the following errors: java.net.BindException: Address already in use`
+
+This might be because the SnapManager listening ports (27314 and 27315, by default) are currently in use by another application.
+
+This error can also occur if the `smsap_server` command is already running, but SnapManager does not detect the existing process.
+
+*Workaround*
+
+You can reconfigure either SnapManager or the other application to use different ports.
+
+To reconfigure SnapManager, edit the following file: `C:\Program Files\NetApp\SnapManager for SAP\properties\smsap.config`
+
+You assign the following values:
+
+* SMSAP Server.port=27314
+* SMSAP Server.rmiRegistry.port=27315
+* remote.registry.ocijdbc.port= 27315
++
+The remote.registry.ocijdbc.port must be the same as Server.rmiRegistry.port.
+
+To start the SnapManager server, perform the following steps:
+
+.Steps
+
+. Click *Start* > *Control Panel* > *Administrative Tools* > *Services*.
+. In the Services window open, select NetApp SnapManager 3.3 for SAP.
+. You can start the server in one of three ways:
+ ** In the left panel, click *Start*.
+ ** Right-click NetApp SnapManager 3.3 for SAP and select *Start* from the drop-down menu.
+ ** Double-click NetApp SnapManager 3.3 for SAP and in the Properties window that opens, click *Start*.
+
+== Unable to manage archive log file destination names if the destination names are part of other destination names
+
+While creating an archive log backup, if the user excludes a destination that is part of other destination names, then the other destination names are also excluded.
+
+For example, assume that there are three destinations available to be excluded: `E:\\arch`, `G:\\arch`, and `H:\\arch`. While creating the archive log file backup, if you exclude `E:\\arch` by using the command
+
+----
+smsap backup create -profile almsamp1 -data -online -archivelogs  -exclude-dest E:\\arch
+----
+
+, SnapManager for SAP excludes all the destinations starting with `E:\\arch`.
+
+*Workaround*
+
+* Add a path separator after destinations are configured in `v$archive_dest`. For example, change the `E:\\arch` to `E:\\arch\`.
+* While creating a backup, include destinations instead of excluding any destination.
+
+== Repository database size grows with time and not with the number of backups
+
+The repository database size grows with time because SnapManager operations insert or delete data within the schema in the repository database tables, which results in high index space usage.
+
+*Workaround*
+
+You must monitor and rebuild the indexes according to the Oracle guidelines to control the space consumed by the repository schema.
+
+== The SnapManager GUI cannot be accessed and SnapManager operations fail when the repository database is down
+
+SnapManager operations fail and you cannot access the GUI when the repository database is down.
+
+The following table lists the different actions you might want to perform, and their exceptions:
+
+[options="header"]
+|===
+| Operations| Exceptions
+a|
+Opening a closed repository
+a|
+The following error message is logged in `sm_gui.log: [WARN ]: SMSAP-01106: Error occurred while querying the repository: Closed Connection java.sql.SQLException: Closed Connection`.
+a|
+Refreshing an opened repository by pressing F5
+a|
+A repository exception is displayed in the GUI and also logs a NullPointerException in the `sm_gui.log` file.
+a|
+Refreshing the host server
+a|
+A NullPointerException is logged in the `sumo_gui.log` file.
+a|
+Creating a new profile
+a|
+A NullPointerException is displayed in the Profile Configuration window.
+a|
+Refreshing a profile
+a|
+The following SQL exception is logged in `sm_gui.log: [WARN ]: SMSAP-01106: Error occurred while querying the repository: Closed Connection`.
+a|
+Accessing a backup
+a|
+The following error message is logged in `sm_gui.log: Failed to lazily initialize a collection`.
+a|
+Viewing clone properties
+a|
+The following error message is logged in `sm_gui.log` and `sumo_gui.log: Failed to lazily initialize a collection`.
+|===
+*Workaround*
+
+You must ensure that the repository database is running when you want to access the GUI or want to perform any SnapManager operations.
+
+== Unable to create temporary files for the cloned database
+
+When temporary tablespace files of the target database are placed in mount points different from the mount point of the data files, the clone create operation is successful but SnapManager fails to create temporary files for the cloned database.
+
+*Workaround*
+
+You must perform either of the following:
+
+* Ensure that the target database is laid out so that temporary files are placed in the same mount point as that of the data files.
+* Manually create or add temporary files in the cloned database.
+
+== Back up of Data Guard Standby database fails
+
+If any archive log location is configured with the service name of the primary database, the back up of Data Guard Standby database fails.
+
+*Workaround*
+
+In the GUI, you must clear *Specify External Archive Log location* corresponding to the service name of the primary database.

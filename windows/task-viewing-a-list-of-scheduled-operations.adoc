@@ -1,0 +1,17 @@
+---
+permalink: windows/task-viewing-a-list-of-scheduled-operations.html
+sidebar: sidebar
+keywords: view, list, schedule, operation, profile
+summary: You can view a list of scheduled operations for a profile.
+---
+= Viewing a list of scheduled operations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can view a list of scheduled operations for a profile.
+
+.Step
+. To display information about scheduled operation, enter this command:
++
+`smsap schedule list -profile profile_name[-quiet | -verbose]`

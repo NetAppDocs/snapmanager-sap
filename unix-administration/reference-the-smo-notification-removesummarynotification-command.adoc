@@ -1,0 +1,65 @@
+---
+permalink: unix-administration/reference-the-smo-notification-removesummarynotification-command.html
+sidebar: sidebar
+keywords: command, disable, summary, notification, profile, repository, database, smsap, remove-summary-notification
+summary: "This command disables summary notification for multiple profiles on a repository database."
+---
+= The smsap notification remove-summary-notification command
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This command disables summary notification for multiple profiles on a repository database.
+
+== Syntax
+
+[subs=+macros]
+----
+pass:quotes[smsap notification remove-summary-notification
+-repository
+-dbname _repo_service_name_
+-port _repo_port_
+-host _repo_host_
+-login -username _repo_username_
+[-quiet | -verbose]]
+----
+
+
+== Parameters
+
+* `*-repository*`
++
+The options that follow `-repository` specify the details of the database for the repository.
+
+* `*-port _repo_port_*`
++
+Specifies the TCP port number used to access the database that stores the repository.
+
+* `*-dbname _repo_service_name_*`
++
+Specifies the name of the database that stores the repository. Use either the global name or the SID.
+
+* `*-host _repo_host_*`
++
+Specifies the name or IP address of the host computer the repository database runs on.
+
+* `*-login _repo_username_*`
++
+Specifies the login name needed to access the database that stores the repository.
+
+* `*-quiet*`
++
+Displays only error messages on the console. The default is to display error and warning messages.
+
+* `*-verbose*`
++
+Displays error, warning, and informational messages on the console.
+
+---
+The following example disables summary notification for multiple profiles on a repository database.
+
+[subs=+macros]
+----
+pass:quotes[smsap notification remove-summary-notification –repository –port 1521 –dbname repo2 –host 10.72.197.133 –login -username oba5]
+----
+---
