@@ -1,9 +1,8 @@
----
 settings:
   name: SnapManager for SAP
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
+    harmony_enabled: true
 sidebar:
-  
