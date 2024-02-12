@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="295.667" height="208.27" viewBox="0 0 295.667 208.27" overflow="visible" enable-background="new 0 0 295.667 208.27" xml:space="preserve" preserveAspectRatio="xMidYMid meet" zoomAndPan="magnify" contentScriptType="application/ecmascript" contentStyleType="text/css">
+<g id="Lines">
+	<polyline fill="none" stroke="#000000" stroke-dasharray="3 3" points="94.667,35.603 44.333,35.936 44.333,154.269 93,154.269     "/>
+	<polyline fill="none" stroke="#000000" stroke-dasharray="3 3" points="92.333,98.269 264.334,98.269 264.334,67.269  "/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" x1="134.333" y1="124.269" x2="134.333" y2="63.603"/>
+	
+		<line fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" x1="165.667" y1="35.603" x2="220.334" y2="35.603"/>
+	<polygon points="134.334,69.27 132.366,69.27 133.35,65.937 134.334,62.603 135.317,65.937 136.301,69.27  "/>
+	<polygon points="264.001,68.937 262.033,68.937 263.017,65.604 264.001,62.27 264.984,65.604 265.968,68.937  "/>
+	<polygon points="214.334,35.603 214.334,33.635 217.667,34.619 221,35.603 217.667,36.586 214.334,37.57  "/>
+	<polygon points="91,35.603 91,33.635 94.333,34.619 97.666,35.603 94.333,36.586 91,37.57  "/>
+	<polygon points="91,153.937 91,151.969 94.333,152.952 97.666,153.937 94.333,154.92 91,155.903  "/>
+</g>
+<g id="boxes">
+	
+		<rect x="222.667" y="11.269" fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" width="66.667" height="50.334"/>
+	
+		<rect x="11" y="68.069" fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" width="80" height="55.2"/>
+</g>
+<g id="text">
+	<rect x="227" y="16.602" fill="none" width="59" height="42.333"/>
+	<text transform="matrix(1 0 0 1 227.4883 23.0635)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Resource pool </tspan><tspan x="14.509" y="10.8" font-family="'Helvetica'" font-size="9">in Lima  </tspan><tspan x="9.504" y="21.6" font-family="'Helvetica'" font-size="9">time zone </tspan><tspan x="3.263" y="32.4" font-family="'Helvetica'" font-size="9">(GMT -5 hrs)</tspan></text>
+	
+		<rect x="98" y="124.602" fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" width="66.667" height="50.334"/>
+	<rect x="104.667" y="128.602" fill="none" width="53.333" height="44.667"/>
+	<text transform="matrix(1 0 0 1 111.0747 135.064)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Dataset in </tspan><tspan x="8.001" y="10.8" font-family="'Helvetica'" font-size="9">Lagos  </tspan><tspan x="0.751" y="21.6" font-family="'Helvetica'" font-size="9">time zone </tspan><tspan x="-4.369" y="32.4" font-family="'Helvetica'" font-size="9">(GMT +1 hr)</tspan></text>
+	<rect x="11" y="163.602" fill="none" width="90.668" height="44.668"/>
+	<text transform="matrix(1 0 0 1 10.9995 168.6274)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="7">Create schedule using </tspan><tspan x="0" y="8.4" font-family="'Helvetica'" font-size="7">server default time zone: </tspan><tspan x="0" y="16.8" font-family="'Helvetica'" font-size="7">- Daily local backup 8 PM </tspan><tspan x="0" y="25.201" font-family="'Helvetica'" font-size="7">- Daily remote backup 11 PM </tspan><tspan x="0" y="33.6" font-family="'Helvetica'" font-size="7">- Weekly mirror 6:30 PM</tspan></text>
+	<polygon fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" points="   165.001,35.936 165.001,61.603 98.334,61.603 98.334,11.269 165.001,11.269  "/>
+	<rect x="101" y="16.27" fill="none" width="61.668" height="43.667"/>
+	<text transform="matrix(1 0 0 1 102.8223 22.7314)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Resource pool </tspan><tspan x="-0.504" y="10.8" font-family="'Helvetica'" font-size="9">in Los Angeles </tspan><tspan x="9.504" y="21.6" font-family="'Helvetica'" font-size="9">time zone </tspan><tspan x="3.262" y="32.4" font-family="'Helvetica'" font-size="9">(GMT -8 hrs)</tspan></text>
+	<rect x="92.333" y="1.269" fill="none" width="80" height="7.667"/>
+	<text transform="matrix(1 0 0 1 92.3335 7.731)" font-family="'Helvetica'" font-size="9">Destination storage</text>
+	<rect x="215.666" y="1.269" fill="none" width="80.001" height="7.667"/>
+	<text transform="matrix(1 0 0 1 215.666 7.731)" font-family="'Helvetica'" font-size="9">Destination storage</text>
+	<rect x="104.667" y="177.936" fill="none" width="52.668" height="7.667"/>
+	<text transform="matrix(1 0 0 1 104.667 184.3984)" font-family="'Helvetica'" font-size="9">Primary data</text>
+	<rect x="167.333" y="40.603" fill="none" width="54.667" height="38.333"/>
+	<text transform="matrix(1 0 0 1 167.3335 45.6289)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="7">Weekly mirror to </tspan><tspan x="0" y="8.4" font-family="'Helvetica'" font-size="7">tertiary storage - </tspan><tspan x="0" y="16.8" font-family="'Helvetica'" font-size="7">Starts at 2:30 AM  </tspan><tspan x="0" y="25.2" font-family="'Helvetica'" font-size="7">Los Angeles time</tspan></text>
+	<rect x="139.667" y="105.269" fill="none" width="154.333" height="17.333"/>
+	<text transform="matrix(1 0 0 1 139.667 111.0127)"><tspan x="0" y="0" font-family="'Helvetica-Bold'" font-size="8">Daily remote backup to secondary </tspan><tspan x="0" y="9.6" font-family="'Helvetica-Bold'" font-size="8">storage - Starts at 4:00 PM Lagos time</tspan></text>
+	<rect x="170.667" y="158.936" fill="none" width="121.667" height="20.667"/>
+	<text transform="matrix(1 0 0 1 170.667 164.6797)"><tspan x="0" y="0" font-family="'Helvetica-Bold'" font-size="8">Daily local backup on primary - </tspan><tspan x="0" y="9.6" font-family="'Helvetica-Bold'" font-size="8">Starts at 1:00 PM Lagos time</tspan></text>
+	<rect x="16.833" y="70.103" fill="none" width="66.333" height="53"/>
+	<text transform="matrix(1 0 0 1 27.9951 76.5645)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">DataFabric </tspan><tspan x="-9.504" y="10.8" font-family="'Helvetica'" font-size="9">Manager server  </tspan><tspan x="-5.261" y="21.6" font-family="'Helvetica'" font-size="9">in Hong Kong  </tspan><tspan x="2.497" y="32.4" font-family="'Helvetica'" font-size="9">time zone  </tspan><tspan x="-4.874" y="43.2" font-family="'Helvetica'" font-size="9">(GMT +8 hrs)</tspan></text>
+</g>
+</svg>

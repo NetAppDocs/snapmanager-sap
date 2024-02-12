@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="289.584" height="182.15" viewBox="0 0 289.584 182.15" overflow="visible" enable-background="new 0 0 289.584 182.15" xml:space="preserve" preserveAspectRatio="xMidYMid meet" zoomAndPan="magnify" contentScriptType="application/ecmascript" contentStyleType="text/css">
+<g id="Lines">
+	<polyline fill="none" stroke="#000000" stroke-dasharray="3 3" points="110.333,36.064 44.333,36.064 44.333,148.731    108.667,148.731  "/>
+	<polyline fill="none" stroke="#000000" stroke-dasharray="3 3" points="159.667,92.731 264.334,92.731 264.334,60.064  "/>
+	<polygon points="106.667,35.731 106.667,33.763 110,34.747 113.333,35.731 110,36.714 106.667,37.698  "/>
+	<polygon points="105.001,148.397 105.001,146.43 108.334,147.413 111.667,148.397 108.334,149.381 105.001,150.364  "/>
+	<polygon points="264.002,64.063 262.034,64.063 263.018,60.73 264.002,57.397 264.985,60.73 265.969,64.063  "/>
+</g>
+<g id="boxes">
+	
+		<rect x="222.667" y="5.73" fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" width="66.667" height="50.334"/>
+	
+		<rect x="115.334" y="5.73" fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" width="66.667" height="50.334"/>
+	
+		<rect x="113" y="119.064" fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" width="66.667" height="50.334"/>
+	
+		<rect x="11" y="62.531" fill="#BCBEC0" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" width="80" height="55.2"/>
+</g>
+<g id="text">
+	<rect x="118" y="10.731" fill="none" width="61.668" height="43.667"/>
+	<text transform="matrix(1 0 0 1 119.8223 17.1934)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Resource pool </tspan><tspan x="-0.504" y="10.8" font-family="'Helvetica'" font-size="9">in Los Angeles </tspan><tspan x="9.504" y="21.6" font-family="'Helvetica'" font-size="9">time zone </tspan><tspan x="3.262" y="32.4" font-family="'Helvetica'" font-size="9">(GMT -8 hrs)</tspan></text>
+	<rect x="227" y="11.064" fill="none" width="59" height="42.333"/>
+	<text transform="matrix(1 0 0 1 227.4883 17.5254)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Resource pool </tspan><tspan x="14.509" y="10.8" font-family="'Helvetica'" font-size="9">in Lima  </tspan><tspan x="9.504" y="21.6" font-family="'Helvetica'" font-size="9">time zone </tspan><tspan x="3.263" y="32.4" font-family="'Helvetica'" font-size="9">(GMT -5 hrs)</tspan></text>
+	<rect x="119.667" y="123.064" fill="none" width="53.333" height="44.667"/>
+	<text transform="matrix(1 0 0 1 126.0747 129.5259)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Dataset in </tspan><tspan x="8.001" y="10.8" font-family="'Helvetica'" font-size="9">Lagos  </tspan><tspan x="0.751" y="21.6" font-family="'Helvetica'" font-size="9">time zone </tspan><tspan x="-4.369" y="32.4" font-family="'Helvetica'" font-size="9">(GMT +1 hr)</tspan></text>
+	<rect x="22.333" y="2.73" fill="none" width="90.667" height="29"/>
+	<text transform="matrix(1 0 0 1 22.3325 9.1924)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Create resource pool,  </tspan><tspan x="0" y="10.8" font-family="'Helvetica-Oblique'" font-size="9">select server default  </tspan><tspan x="0" y="21.6" font-family="'Helvetica-Oblique'" font-size="9">time zone</tspan></text>
+	<rect x="23" y="152.063" fill="none" width="71.001" height="30"/>
+	<text transform="matrix(1 0 0 1 22.9995 158.5254)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Create dataset,  </tspan><tspan x="0" y="10.8" font-family="'Helvetica-Oblique'" font-size="9">select server  </tspan><tspan x="0" y="21.601" font-family="'Helvetica-Oblique'" font-size="9">default time zone</tspan></text>
+	<rect x="173.666" y="61.731" fill="none" width="89.001" height="30"/>
+	<text transform="matrix(1 0 0 1 173.666 68.1934)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">Create resource pool,  </tspan><tspan x="0" y="10.8" font-family="'Helvetica-Oblique'" font-size="9">select server default  </tspan><tspan x="0" y="21.6" font-family="'Helvetica-Oblique'" font-size="9">time zone</tspan></text>
+	<rect x="94.333" y="65.397" fill="none" width="69" height="51.667"/>
+	<text transform="matrix(1 0 0 1 94.3335 71.8594)"><tspan x="0" y="0" font-family="'Helvetica-Bold'" font-size="9">Create all </tspan><tspan x="0" y="10.8" font-family="'Helvetica-Bold'" font-size="9">resource pools, </tspan><tspan x="0" y="21.6" font-family="'Helvetica-Bold'" font-size="9">datasets, and </tspan><tspan x="0" y="32.4" font-family="'Helvetica-Bold'" font-size="9">schedules from </tspan><tspan x="0" y="43.2" font-family="'Helvetica-Bold'" font-size="9">here</tspan></text>
+	<rect x="18.5" y="64.898" fill="none" width="66.333" height="53"/>
+	<text transform="matrix(1 0 0 1 29.6626 71.3599)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="9">DataFabric </tspan><tspan x="-9.504" y="10.8" font-family="'Helvetica'" font-size="9">Manager server  </tspan><tspan x="-5.261" y="21.6" font-family="'Helvetica'" font-size="9">in Hong Kong  </tspan><tspan x="2.497" y="32.4" font-family="'Helvetica'" font-size="9">time zone  </tspan><tspan x="-4.874" y="43.2" font-family="'Helvetica'" font-size="9">(GMT +8 hrs)</tspan></text>
+</g>
+</svg>
