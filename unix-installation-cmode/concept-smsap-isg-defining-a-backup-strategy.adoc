@@ -110,7 +110,3 @@ NOTE: For long-term retention of backup copies, you should use SnapVault.
 == Do you want to verify backup copies using the source volume or a destination volume?
 
 If you use SnapMirror or SnapVault, you can verify backup copies using the Snapshot copy on the SnapMirror or SnapVault destination volume rather than the Snapshot copy on the primary storage system. Using a destination volume for verification reduces the load on the primary storage system.
-
-*Related information*
-
-http://www.netapp.com/us/media/tr-3761.pdf[NetApp Technical Report 3761: SnapManager for Oracle: Best Practices^]

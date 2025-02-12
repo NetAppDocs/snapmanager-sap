@@ -27,17 +27,9 @@ Describes the step-by-step procedures for performing different SnapManager opera
 +
 NOTE: The _Online Help_ is integrated with the SnapManager UI and is not available on the Support Site.
 
-* http://www.netapp.com/us/media/tr-3761.pdf[NetApp Technical Report 3761: SnapManager for Oracle: Best Practices^]
-+
-Describes SnapManager for Oracle best practices.
-
 * http://www.netapp.com/us/media/tr-3633.pdf[NetApp Technical Report 3633: Best Practices for Oracle Databases on NetApp Storage^]
 +
 Describes best practices to configure Oracle databases on NetApp storage system.
-
-* http://www.netapp.com/us/media/tr-3442.pdf[NetApp Technical Report 3442: SAP with Oracle on UNIX and NFS and NetApp Storage^]
-+
-Describes best practices for deploying NetApp storage to support SAP solutions.
 
 *Related information*
 
